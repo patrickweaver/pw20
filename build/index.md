@@ -1,5 +1,5 @@
 ---
-layout: layout.md
+layout: layout.hbs
 title: Patrick Weaver
 ---
 
