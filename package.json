@@ -4,11 +4,10 @@
   "description": "A simple Node app built on Express, instantly up and running.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "npx @11ty/eleventy --serve --port=3000"
   },
   "dependencies": {
-    "@11ty/eleventy": "^0.9.0",
-    "express": "^4.16.4"
+    "@11ty/eleventy": "^0.9.0"
   },
   "engines": {
     "node": "10.x"
