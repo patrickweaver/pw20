@@ -8,4 +8,5 @@ permalink: /posts/
 
 <h1>Archive</h1>
 
-{% include "postslist.hbs" %}
+{% set postslist = collections.posts %}
+{% include "postslist.njk" %}
