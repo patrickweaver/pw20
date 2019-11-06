@@ -5,6 +5,7 @@ module.exports = {
   },
   templateFormats: [
     'md',
-    'css'
+    'css',
+    'hbs'
   ]
 };
