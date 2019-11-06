@@ -1,13 +1,18 @@
-module.exports = {
-  dir: {
-    input: "build",
-    output: "dist"
-  },
-  templateFormats: [
-    'md',
-    'css',
-    'hbs',
-    'njk',
-    'json'
-  ]
+const pluginRss = require("@11ty/eleventy-plugin-rss");
+
+module.exports = function(eleventyConfig) {
+  eleventyConfig.addPlugin(pluginRss);
+  return {
+    dir: {
+      input: "build",
+      output: "dist"
+    },
+    templateFormats: [
+      'md',
+      'css',
+      'hbs',
+      'njk',
+      'json'
+    ]
+  }
 };
