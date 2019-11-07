@@ -4,9 +4,11 @@ title: Patrick Weaver
 pagination:
   data: testdata
   size: 1
+  alias: pageName
 testdata:
-  - abcd
-permalink: different/{{ pagination.items[0] }}/index.html
+  - index
+  - about/index
+permalink: /{{pageName}}.html
 ---
 
 ## About
