@@ -3,10 +3,10 @@
   <li>
     <a href="{{ this.url }}">
       {{#if this.data.title }}
-        {{ post.data.title }}!
-      {{#else }}
+        {{ this.data.title }}
+      {{else }}
         <code>
-          {{ post.url }}
+          {{ this.url }}
         </code>
       {{/if}}
     </a>
