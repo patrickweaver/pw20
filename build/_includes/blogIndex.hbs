@@ -27,6 +27,44 @@
     </p>
     
     {{#each this.data }}
+    
+      <hr /><hr />
+        {{#each this }}
+      
+    
+           {{#each this }}
+    
+    
+            {{#each this }}
+
+
+
+
+              {{@../../key}}/{{@../key}}/{{@key}}<br/>
+              {{ this }}
+              <p>
+                +++++++++++ 
+              </p>
+            {{/each }}
+          
+    
+
+            {{@key}}<br/>
+            <p>
+              ////////// 
+            </p>
+          {{/each }}
+          
+    
+    
+          {{@key}}<br/>
+          <p>
+            ******  
+          </p>
+        {{/each }}
+      <hr /><hr />
+    
+      {{@key}}!<br/>
       {{ this }}
       <hr />
     {{/each }}
