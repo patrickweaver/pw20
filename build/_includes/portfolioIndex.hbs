@@ -1,15 +1,24 @@
 <ol class="postlist">
 {{#each collections.projects }}
-  <li>
-    <a href="{{ this.url }}">
-      {{#if this.data.name }}
-        {{ this.data.name }}
-      {{else }}
-        <code>
-          {{ this.url }}
-        </code>
-      {{/if}}
-    </a>
+  <li class="project">
+    
+    <div class="project-header">
+      
+      <h3 class="project-name">
+        <a href="{{ this.url }}">
+          {{#if this.data.title }}
+            {{ this.data.title }}
+          {{else }}
+            <code>
+              {{ this.url }}
+            </code>
+          {{/if}}
+        </a>
+      </h3>
+        
+    </div>
+    
+    
   </li>
 {{/each}}
 </ol>

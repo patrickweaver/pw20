@@ -20,7 +20,7 @@ module.exports = function(eleventyConfig) {
     var filter = collection.getFilteredByTag("projects");
     for (var i in filter) {
       var j = filter[i];
-      console.log(i, j);
+      //console.log(i, j);
     }
     
     

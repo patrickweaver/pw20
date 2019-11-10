@@ -1,15 +1,21 @@
 <ol class="postlist">
 {{#each collections.postsReversed }}
-  <li>
-    <a href="{{ this.url }}">
-      {{#if this.data.title }}
-        {{ this.data.title }}
-      {{else }}
-        <code>
-          {{ this.url }}
-        </code>
-      {{/if}}
-    </a>
+  <li class="post">
+      
+    <h3>
+      <a href="{{ this.url }}">
+        {{#if this.data.title }}
+          {{ this.data.title }}
+        {{else }}
+          <code>
+            {{ this.url }}
+          </code>
+        {{/if}}
+      </a>
+    </h3>
+      
+      
+      
   </li>
 {{/each}}
 </ol>
