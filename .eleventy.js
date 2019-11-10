@@ -17,14 +17,15 @@ module.exports = function(eleventyConfig) {
   // In progress, create custom start_date, end_date filter
   eleventyConfig.addCollection("portfolioSorted", function(collection) {
    
-    var filter = collection.getFilteredByTag("projects");
+    var filter = collection.getFilteredByTag("posts");
     for (var i in filter) {
       var j = filter[i];
-      //console.log(i, j);
+      console.log(i, j);
+      break
     }
     
     
-    return collection.getFilteredByTag("projects");
+    return collection.getFilteredByTag("posts");
   });
 
   
