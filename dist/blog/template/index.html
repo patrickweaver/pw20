@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Patrick Weaver</title>
+    <meta name="description" content="Patrick Weaver's Website">
+    <link id="favicon" rel="icon" href="https://cdn.glitch.com/d8a6ddb0-ed72-4645-8e34-43cc07e3bc57%2Fpw20.png?v=1573008096924" type="image/png">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Yantramanav" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <h1 id="site-title">
+      <a href="/about">Patrick Weaver</a>
+    </h1>
+    
+    <ul id="menu">
+      <li><a href="/about">About</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/portfolio">Portfolio</a></li>
+      <li><a href="/now">Now</a></li>
+    </ul>
+    
+    
+    <p>This fall <a href="https://medium.com/@mouse_org">Mouse</a> (<a href="http://mouse.org">mouse.org</a>) launched our brand new <a href="https://mouse.org/mouse-courses">Sewable Tech Course</a>! The course introduces learners to circuitry and electronics without the abstraction of a breadboard. In the final two projects in the course we use a wearable Arduino to prototype a DIY activity tracker.</p>
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*gfNKPipgo0Yp_bZLJLg7MQ.png" alt=""></p>
+<h6>Sew-matic for DIY Wearable Goal Tracker from Mouse Create</h6>
+<p>The big question we ran into when I was helping my colleague <a href="https://twitter.com/katermouse">Kate</a> prototype the course was, which wearable Arduino to use. Along the way we tested 7 Arduino compatible microcontrollers and settled on recommending a <a href="https://www.sparkfun.com/products/12049">LilyPad Arduino USB</a>, but there are advantages to each of the Arduinos we tested and different kinds projects would benefit from including each of them.</p>
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*nxNOfE_aAIHrgXcgX8GSLQ.jpeg" alt=""></p>
+<h6>Our collection of wearable arduinos</h6>
+<ol>
+<li><a href="https://www.sparkfun.com/products/12049">Sparkfun LilyPad Arduino USB</a></li>
+<li><a href="https://www.ebay.com/sch/i.html?_nkw=LilyPad+Arduino+USB+ATmega32U4">Generic LilyPad Arduino USB</a></li>
+<li><a href="https://www.adafruit.com/product/659">Adafruit FLORA</a></li>
+<li><a href="https://www.ebay.com/sch/i.html?_nkw=LilyTiny">Generic LilyTiny</a></li>
+<li><a href="https://www.adafruit.com/product/2470">Arduino GEMMA</a> (Discontinued)</li>
+<li><a href="https://www.adafruit.com/product/1222">Adafruit GEMMA v2</a></li>
+<li><a href="https://www.adafruit.com/product/3501">Adafruit GEMMA M0</a></li>
+</ol>
+<p>All of the boards work with the <a href="https://www.arduino.cc/en/Main/Software">Arduino IDE</a> (most with some extra steps), are roughly circular, and most run on 3.3 Volts, but there are slight differences that make certain boards better for some types of projects.</p>
+<h4>[1] &amp; [2] Sparkfun/Generic LilyPad Arduino USB</h4>
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*FWirsLamzgR-H2Wbht2ZYg.jpeg" alt=""></p>
+<ul>
+<li>[1] From <a href="https://www.sparkfun.com/products/12049">Sparkfun: $25</a>, [2] <a href="https://www.ebay.com/sch/i.html?_nkw=LilyPad+Arduino+USB+ATmega32U4">Generic: $6 to $20</a></li>
+<li>5 Digital Pins</li>
+<li>4 Analog Pins</li>
+<li>Onboard LED (D13)</li>
+<li>On/Charge Switch and Reset Button</li>
+<li>JST battery connector</li>
+<li>2&quot;/5 cm</li>
+<li><a href="https://www.arduino.cc/en/Reference/Serial">Supports Serial Communication</a></li>
+</ul>
+<p>The LilyPad Arduinos are the only boards on this list that work with the Arduino IDE without any extra steps, this is the main reason why we recommend this board on Mouse Create. If this board will be your first experience with Arduino or you will need a few analog pins the LilyPad would be a great choice.</p>
+<p>The SparkFun model costs a bit more but a portion of the sales go to <a href="http://leahbuechley.com/">Leah Buechley</a> to support open source e-textiles and e-textiles education development.</p>
+<p>Be careful when buying to get the LilyPad Arduino USB if you need a USB connection. The original <a href="https://www.sparkfun.com/products/13342">LilyPad Arduino 328 Main Board</a> (not pictured), requires an FTDI connection to upload code (but that one has more pins!).</p>
+<h4>[3] Adafruit FLORA</h4>
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*WOH8dSMPKiHUzYIAU4WerQ.jpeg" alt=""></p>
+<ul>
+<li>From <a href="https://www.adafruit.com/product/659">Adafruit $15</a></li>
+<li>8 Digital Pins</li>
+<li>4 Analog Pins (D6, D9, D10, D12)</li>
+<li>Onboard LED (D7), Onboard RGB LED (D8)</li>
+<li>On/Off Switch and Reset Button</li>
+<li>JST battery connector</li>
+<li>1.75&quot;/4.5 cm</li>
+<li><a href="https://www.arduino.cc/en/Reference/Serial">Supports Serial Communication</a></li>
+</ul>
+<p>The Adafruit Flora is a great board and can handle any project. It’s smaller than the LilyPad but has 3 more pins, and the onboard RGB LED is very useful as a Hello, World. The only drawback to this board is <a href="https://learn.adafruit.com/add-boards-arduino-v164/overview">adding the board in the Arduino IDE</a> and installing the <a href="https://learn.adafruit.com/adafruit-arduino-ide-setup/windows-driver-installation">Adafruit drivers on Windows</a>, but both of these are one-time steps and don’t take more than a few minutes. We did have some issues uploading code via a USB 3.0 port, but this can be avoided by using a USB 2.0 hub.</p>
+<h4>[4] Generic LilyTiny</h4>
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*6Cx0oeFjZ0aGB6ek2vzCtQ.jpeg" alt=""></p>
+<ul>
+<li><a href="https://www.ebay.com/sch/i.html?_nkw=LilyTiny">Generic $2 to $5</a></li>
+<li>6 Digital Pins</li>
+<li>Onboard LED (D1)</li>
+<li>1&quot;/2.5 cm</li>
+</ul>
+<p>We found this board when researching and thought it might be useful for large groups with a limited budget to give every learner a board. This board has two easy to recognize advantages, it is both the smallest and the least expensive board on this list. The disadvantages are a little bit harder to spot so if you are thinking of using this board with a large group I would buy one to test with first.</p>
+<p>This board is the only one on this list that does not have alligator clip friendly pins. When testing we were still able to attach alligator clips, but it is easy to accidentally clip two pins and create a short circuit. This board also lacks both an on/off switch and a JST battery connector which means it has to be powered via USB or the 5V pin (this is the only board on this list that runs on 5V).</p>
+<p>The biggest disadvantage of this board is the upload process. <a href="https://digistump.com/wiki/digispark/tutorials/connecting">Following these instructions</a>, we had to add the board to the Arduino IDE, install Digistump drivers, and hit the plug in the board to USB at a specific point in the process. We also had issues with this board on USB 3.0 ports.</p>
+<p>If you have a lot of experience with Arduino or have a very small budget but a lot of patience this board might be for you.</p>
+<h4>[5] &amp; [6] Arduino GEMMA and Adafruit GEMMA v2</h4>
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*MyLI2jE1Oo2yA6sYbYQKCA.jpeg" alt=""></p>
+<ul>
+<li>[6] From <a href="https://www.adafruit.com/product/1222">Adafruit $10</a>, [5] From <a href="https://www.adafruit.com/product/2470">Adafruit (Discontinued)</a></li>
+<li>3 Digital Pins</li>
+<li>1 Analog Pin (D2)</li>
+<li>Onboard LED (D1)</li>
+<li>On/Off Switch and Reset Button</li>
+<li>JST battery connector</li>
+<li>1.25&quot;/2.75 cm</li>
+</ul>
+<p>Both of these boards (along with the Gemma M0) are manufactured by Adafruit, and are visually and functionally very similar. The Arduino Gemma is teal and has the Adafruit logo on the back, the Adafruit Gemma v2 is black and has the Adafruit logo on the front. Both have an ATtiny85 chip that does not support serial communication.</p>
+<p>Both the Gemma boards are great small wearable Arduinos. The small number of pins and small size make this board very approachable for a beginner, and would make the perfect tool for a simple sewable tech project. We initially were going to recommend the Adafruit Gemma v2 on Mouse Create, but we had enough <a href="https://learn.adafruit.com/introducing-gemma/about-the-bootloader">issues with uploading via USB 3.0</a> that instead of shipping a USB 2.0 hub along with the boards we decided to opt for the LilyPad.</p>
+<p>If you already have a USB 2.0 hub or computers with USB 2.0 ports this board will work great. It does not have serial communication so it is best suited for simpler projects. Like the Adafruit Flora you will have to <a href="https://learn.adafruit.com/add-boards-arduino-v164/overview">add the board to the Arduino IDE</a> and <a href="https://learn.adafruit.com/adafruit-arduino-ide-setup/windows-driver-installation">install the Adafruit drivers on Windows</a> (for the Gemma V2).</p>
+<h4>[7] Adafruit GEMMA M0</h4>
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*Qyf4eRy8XKT-_OwYjHu9xw.jpeg" alt=""></p>
+<ul>
+<li>From <a href="https://www.adafruit.com/product/3501">Adafruit $10</a></li>
+<li>3 Digital Pins</li>
+<li>3 Analog Pins (D0, D1, D2)</li>
+<li>Onbaord LED (D13), Onboard RGB LED (D?)</li>
+<li>On/Off Switch and Reset Button</li>
+<li>JST battery connector</li>
+<li>1.25&quot;/2.75 cm</li>
+<li>Supports <a href="https://www.arduino.cc/en/Reference/Serial">Serial Communication</a></li>
+<li>Supports <a href="https://blog.adafruit.com/2017/01/09/welcome-to-the-adafruit-circuitpython-beta/">Circuit Python</a></li>
+</ul>
+<p>The Adafruit GEMMA M0 was released just as we were finishing up our Sewable Tech course, a little too late to include in the kits we were putting together, but I still highly recommend this board. The Gemma M0 does everything the older Gemmas can and a lot more. I haven’t had any issues with USB 3.0 using this board, and the ATSAMD21E18 chip supports serial communication.</p>
+<p>The big step forward with the Gemma M0 and the reason Mouse might include this board in future kits is <a href="https://blog.adafruit.com/2017/01/09/welcome-to-the-adafruit-circuitpython-beta/">Circuit Python</a>. A frequent question from schools interested in circuitry and electronics and sewable tech is “Will this Arduino work with my Chromebook?” Until now the answer has always been no (though the <a href="https://www.arduino.cc/en/Main/Software">online Arduino IDE</a> now works with Arduino Uno).</p>
+<p>Circuit Python allows you to use the Gemma M0 to bypass the Arduino IDE completely (but still works with the IDE if you prefer that). The board will show up as a drive when you plug it in to your computer (yes, even a Chromebook), and adding the following code to a file called <code>code.py</code> will produce the familiar “Blink” Hello, World example.</p>
+<pre><code>import digitalio
+import board
+import time
+led = digitalio.DigitalInOut(board.D13)
+led.direction = digitalio.Direction.OUTPUT
+while True:
+    led.value = not led.value
+    time.sleep(0.5)
+</code></pre>
+<p>As with other Adafruit Boards if you are using the Arduino IDE instead of Python you will have to <a href="https://learn.adafruit.com/add-boards-arduino-v164/overview">add the board to the IDE</a> and <a href="https://learn.adafruit.com/adafruit-arduino-ide-setup/windows-driver-installation">install the Adafruit drivers on Windows</a>. You may also have to <a href="https://learn.adafruit.com/adafruit-gemma-m0/circuitpython">reinstall Circuit Python</a> if you go back and forth between the IDE and Circuit Python, but this is a simple drag and drop process. I’m also not sure how to control the RGB LED but I haven’t spent much time trying to figure it out.</p>
+<p>All the boards we tested worked great once we figured out the tricks of each and any will work for most sewable tech projects. Once you decide on a board, check out <a href="https://mouse.org/work">Mouse Create</a> to find some fun projects!</p>
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*dNpQjlUdHIzaTusjw9ERRw.jpeg" alt=""></p>
+<h6>Making a light up phone case at <a href="https://medium.com/@mouse_org">Mouse</a> <a href="https://mouse.org/makernight">Maker Night</a></h6>
+
+    
+  </body>
+</html>
