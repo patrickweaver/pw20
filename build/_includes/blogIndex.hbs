@@ -1,5 +1,5 @@
 <ol class="postlist">
-{{#each Array.from(collections.posts).reverse() }}
+{{#each collections.posts }}
   <li>
     <a href="{{ this.url }}">
       {{#if this.data.title }}
