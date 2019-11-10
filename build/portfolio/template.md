@@ -10,4 +10,5 @@ cover_image_alt:
 images:
   - 
 layout: layout.hbs
+eleventyExcludeFromCollections: true
 ---
