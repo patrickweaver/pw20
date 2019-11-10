@@ -6,7 +6,7 @@ end_date:
 project_url: https://ocr-email.glitch.me/
 source_url: https://glitch.com/edit/#!/ocr-email
 cover_image_url: https://pwapi.s3.amazonaws.com/uploads/6e467e0a-6c08-4dc8-9b95-262e1c05befa
-cover_image_alt: 
+cover_image_alt: A photograph of email text written on a white board.
 images:
   - https://pwapi.s3.amazonaws.com/uploads/6e467e0a-6c08-4dc8-9b95-262e1c05befa
   - https://pwapi.s3.amazonaws.com/uploads/48f205e4-1dea-4503-bde2-048215b05648
