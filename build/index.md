@@ -2,10 +2,10 @@
 layout: layout.hbs
 title: Patrick Weaver
 pagination:
-  data: testdata
+  data: pageAliases
   size: 1
   alias: pageName
-testdata:
+pageAliases:
   - index
   - about/index
 permalink: /{{pageName}}.html

@@ -1,7 +1,11 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function(eleventyConfig) {
+  
+  // Rss
   eleventyConfig.addPlugin(pluginRss);
+  
+  // Merge data in .json files in diretories with data in each file
   eleventyConfig.setDataDeepMerge(true);
   
   // Create postsReversed tag with posts tag in reverse order
@@ -9,6 +13,8 @@ module.exports = function(eleventyConfig) {
    return collection.getFilteredByTag("posts").reverse();
   });
   
+  
+  // In progress, create custom start_date, end_date filter
   eleventyConfig.addCollection("portfolioSorted", function(collection) {
    
     var filter = collection.getFilteredByTag("projects");
