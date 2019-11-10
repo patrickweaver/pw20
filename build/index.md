@@ -1,6 +1,14 @@
 ---
 layout: layout.hbs
 title: Patrick Weaver
+pagination:
+  data: testdata
+  size: 1
+  alias: pageName
+testdata:
+  - index
+  - about/index
+permalink: /{{pageName}}.html
 ---
 
 ## About

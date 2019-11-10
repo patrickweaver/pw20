@@ -1,0 +1,15 @@
+<ol class="postlist">
+{{#each collections.projects }}
+  <li>
+    <a href="{{ this.url }}">
+      {{#if this.data.name }}
+        {{ this.data.name }}
+      {{else }}
+        <code>
+          {{ this.url }}
+        </code>
+      {{/if}}
+    </a>
+  </li>
+{{/each}}
+</ol>
