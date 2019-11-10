@@ -6,8 +6,8 @@
       
       <h3 class="project-name">
         <a href="{{ this.url }}">
-          {{#if this.data.title }}
-            {{ this.data.title }}
+          {{#if this.data.name }}
+            {{ this.data.name }}
           {{else }}
             <code>
               {{ this.url }}
@@ -15,6 +15,8 @@
           {{/if}}
         </a>
       </h3>
+      
+      <p class="project-date-range">{{ this.data.start_date}}{{#if this.data.end_date }} - {{ this.data.end_date}}{{/if }}</p>
         
     </div>
     
