@@ -14,17 +14,22 @@
       </a>
     </h3>
     
-    {{#if cover_image_url }}
-    <img src="{{ cover_image_url }}" alt="{{ cover_image_alt_text }}" />
+    {{#if this.data.cover_image_url }}
+    <img src="{{ this.data.cover_image_url }}" alt="{{ this.data.cover_image_alt }}" />
     {{/if }}
     
     <p>
-      {{ this.date }}
+      {{ this.data.date }}
     </p>
     
     <p>
-      
+      {{ this.data.preview }}
     </p>
+    
+    {{#each this.data }}
+      {{ this }}
+      <hr />
+    {{/each }}
       
       
       
