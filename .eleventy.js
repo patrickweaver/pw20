@@ -1,4 +1,5 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const moment = require("moment");
 
 module.exports = function(eleventyConfig) {
   
@@ -14,6 +15,12 @@ module.exports = function(eleventyConfig) {
   });
   
   
+  // Shortcodes/Helpers:
+  eleventyConfig.addShortcode("date", function(firstName, lastName) {
+    
+  });
+  
+  
   // In progress, create custom start_date, end_date filter
   eleventyConfig.addCollection("portfolioSorted", function(collection) {
    
@@ -23,8 +30,6 @@ module.exports = function(eleventyConfig) {
       //console.log(i, j);
       break
     }
-    
-    
     return collection.getFilteredByTag("posts");
   });
 

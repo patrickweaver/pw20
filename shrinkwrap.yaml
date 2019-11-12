@@ -1,6 +1,7 @@
 dependencies:
   '@11ty/eleventy': 0.9.0
   '@11ty/eleventy-plugin-rss': 1.0.7
+  moment: 2.24.0
 packages:
   /@11ty/eleventy-plugin-rss/1.0.7:
     dependencies:
@@ -2350,6 +2351,10 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-uxHCj5Pw9psZiC1znjU2qPsubt6haCSsN9m7xmIdoTciEgfxUkE1vhtDvjHPuOXEZrVJhjKgkmkP+w73rRuelQ==
+  /moment/2.24.0:
+    dev: false
+    resolution:
+      integrity: sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
   /moo/0.5.1:
     dev: false
     resolution:
@@ -4031,3 +4036,4 @@ shrinkwrapVersion: 3
 specifiers:
   '@11ty/eleventy': ^0.9.0
   '@11ty/eleventy-plugin-rss': ^1.0.7
+  moment: ^2.24.0
