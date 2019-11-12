@@ -1,7 +1,7 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 // Helpers:
-const dates = require("./helpers/date");
+const dates = require("./helpers/dates");
 
 module.exports = function(eleventyConfig) {
   
@@ -19,6 +19,7 @@ module.exports = function(eleventyConfig) {
   
   // Shortcodes/Helpers:
   eleventyConfig.addShortcode("readableDate", dates.readableDate);
+  eleventyConfig.addShortcode("projectDate", dates.projectDate);
   
   
   // In progress, create custom start_date, end_date filter
