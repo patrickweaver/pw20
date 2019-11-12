@@ -2,6 +2,7 @@ dependencies:
   '@11ty/eleventy': 0.9.0
   '@11ty/eleventy-plugin-rss': 1.0.7
   html-to-text: 5.1.1
+  marked: 0.6.3
   moment: 2.24.0
 packages:
   /@11ty/eleventy-plugin-rss/1.0.7:
@@ -2225,6 +2226,13 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-GcRz3AWTqSUphY3vsUqQSFMbgR38a4Lh3GWlHRh/7MRwz8mcu9n2IO7HOh+bXHrR9kOPDl5RNCaEsrneb+xhHQ==
+  /marked/0.6.3:
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-Fqa7eq+UaxfMriqzYLayfqAE40WN03jf+zHjT18/uXNuzjq3TY0XTbrAoPeqSJrAmPz11VuUA+kBPYOhHt9oOQ==
   /maximatch/0.1.0:
     dependencies:
       array-differ: 1.0.0
@@ -4055,4 +4063,5 @@ specifiers:
   '@11ty/eleventy': ^0.9.0
   '@11ty/eleventy-plugin-rss': ^1.0.7
   html-to-text: ^5.1.1
+  marked: ^0.6.3
   moment: ^2.24.0
