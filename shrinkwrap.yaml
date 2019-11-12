@@ -1,6 +1,8 @@
 dependencies:
   '@11ty/eleventy': 0.9.0
   '@11ty/eleventy-plugin-rss': 1.0.7
+  html-to-text: 5.1.1
+  marked: 0.6.3
   moment: 2.24.0
 packages:
   /@11ty/eleventy-plugin-rss/1.0.7:
@@ -992,13 +994,13 @@ packages:
     dev: false
     resolution:
       integrity: sha1-6oCxBqh1OHdOijpKWv4pPeSJ4Kk=
-  /dom-serializer/0.2.1:
+  /dom-serializer/0.2.2:
     dependencies:
       domelementtype: 2.0.1
       entities: 2.0.0
     dev: false
     resolution:
-      integrity: sha512-sK3ujri04WyjwQXVoK4PU3y8ula1stq10GJZpqHIUgoGZdsGzAGu65BnU3d08aTVSvO7mGPZUc0wTEDL+qGE0Q==
+      integrity: sha512-2/xPb3ORsQ42nHYiSunXkDjPLBaEj/xTwUO4B7XCZQTRk7EBtTOPaygh10YAAh2OI1Qrp6NWfpAhzswj0ydt9g==
   /domelementtype/1.3.1:
     dev: false
     resolution:
@@ -1015,7 +1017,7 @@ packages:
       integrity: sha512-JiK04h0Ht5u/80fdLMCEmV4zkNh2BcoMFBmZ/91WtYZ8qVXSKjiw7fXMgFPnHcSZgOo3XdinHvmnDUeMf5R4wA==
   /domutils/1.7.0:
     dependencies:
-      dom-serializer: 0.2.1
+      dom-serializer: 0.2.2
       domelementtype: 1.3.1
     dev: false
     resolution:
@@ -1615,10 +1617,27 @@ packages:
       node: '>= 0.4.0'
     resolution:
       integrity: sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==
+  /he/1.2.0:
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
   /hosted-git-info/2.8.5:
     dev: false
     resolution:
       integrity: sha512-kssjab8CvdXfcXMXVcvsXum4Hwdq9XGtRD3TteMEvEbq0LXyiNQr6AprqKqfeaDXze7SxWvRxdpwE6ku7ikLkg==
+  /html-to-text/5.1.1:
+    dependencies:
+      he: 1.2.0
+      htmlparser2: 3.10.1
+      lodash: 4.17.15
+      minimist: 1.2.0
+    dev: false
+    engines:
+      node: '>= 4.0.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-Bci6bD/JIfZSvG4s0gW/9mMKwBRoe/1RWLxUME/d6WUSZCdY7T60bssf/jFf7EYXRyqU4P5xdClVqiYU0/ypdA==
   /htmlparser2/3.10.1:
     dependencies:
       domelementtype: 1.3.1
@@ -2207,6 +2226,13 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-GcRz3AWTqSUphY3vsUqQSFMbgR38a4Lh3GWlHRh/7MRwz8mcu9n2IO7HOh+bXHrR9kOPDl5RNCaEsrneb+xhHQ==
+  /marked/0.6.3:
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-Fqa7eq+UaxfMriqzYLayfqAE40WN03jf+zHjT18/uXNuzjq3TY0XTbrAoPeqSJrAmPz11VuUA+kBPYOhHt9oOQ==
   /maximatch/0.1.0:
     dependencies:
       array-differ: 1.0.0
@@ -4036,4 +4062,6 @@ shrinkwrapVersion: 3
 specifiers:
   '@11ty/eleventy': ^0.9.0
   '@11ty/eleventy-plugin-rss': ^1.0.7
+  html-to-text: ^5.1.1
+  marked: ^0.6.3
   moment: ^2.24.0

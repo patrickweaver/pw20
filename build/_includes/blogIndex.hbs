@@ -1,4 +1,4 @@
-<ol class="postlist">
+<ul class="postlist">
 {{#each collections.postsReversed }}
   <li class="post">
       
@@ -23,54 +23,8 @@
     </p>
     
     <p>
-      {{ this.data.preview }}
-    </p>
-    
-    {{#each this.data }}
-    
-      <hr /><hr />
-        {{#each this }}
-      
-    
-           {{#each this }}
-    
-    
-            {{#each this }}
-
-
-
-
-              {{@../../key}}/{{@../key}}/{{@key}}<br/>
-              {{ this }}
-              <p>
-                +++++++++++ 
-              </p>
-            {{/each }}
-          
-    
-
-            {{@key}}<br/>
-            <p>
-              ////////// 
-            </p>
-          {{/each }}
-          
-    
-    
-          {{@key}}<br/>
-          <p>
-            ******  
-          </p>
-        {{/each }}
-      <hr /><hr />
-    
-      {{@key}}!<br/>
-      {{ this }}
-      <hr />
-    {{/each }}
-      
-      
-      
+      {{ blogPreview this.templateContent }}… <a href="{{ this.outputPath }}">Read More →</a>
+    </p>      
   </li>
 {{/each}}
-</ol>
+</ul>
