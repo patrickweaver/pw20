@@ -19,11 +19,11 @@
     {{/if }}
     
     <p>
-      {{ readableDate this.data.date }}
+      !!{{ readableDate this.data.date }}
     </p>
     
     <p>
-      {{ this.templateContent }}
+      {{ blogPreview this.templateContent }}
     </p>      
   </li>
 {{/each}}

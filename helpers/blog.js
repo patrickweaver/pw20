@@ -1,8 +1,8 @@
-const sanitizeHtml = require("sanitize-html");
+const htmlToText = require("html-to-text");
 
 
 module.exports = {
   preview: function(body) {
-    return sanitizeHtml(body).substring(0, 239);
+    return htmlToText.fromString(body).substring(0, 239);
   }
 }

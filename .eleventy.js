@@ -24,8 +24,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addShortcode("blogPreview", blog.preview);
   
   
-  
-  
   // In progress, create custom start_date, end_date filter
   eleventyConfig.addCollection("portfolioSorted", function(collection) {
    
