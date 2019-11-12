@@ -1,6 +1,6 @@
 ---
 title: How we used a chatbot to teach writing and coding!
-description: 
+preview: hello 
 date: 2016-06-15
 cover_image: https://pwapi.s3.amazonaws.com/uploads/a9ecd491-adc0-4f59-8eb3-8654d055a020
 cover_image_alt: A screenshot of the chatbot

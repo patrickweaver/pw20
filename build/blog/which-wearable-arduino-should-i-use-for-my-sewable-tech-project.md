@@ -1,6 +1,6 @@
 ---
 title: Which Wearable Arduino Should I Use For My Sewable Tech Project?
-description: 
+preview: goodbye
 date: 2017-09-29
 cover_image: https://pwapi.s3.amazonaws.com/uploads/1218000f-5621-4d6c-8d19-2de6c9670946
 cover_image_alt: A picture of 7 different sewable microcontrollers and a Mouse sticker

@@ -1,7 +1,7 @@
 {
-  "name": "hello-express",
+  "name": "pw20",
   "version": "0.0.1",
-  "description": "A simple Node app built on Express, instantly up and running.",
+  "description": "A personal website made with eleventy",
   "main": "server.js",
   "scripts": {
     "build": "npx @11ty/eleventy",
@@ -9,13 +9,14 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^0.9.0",
-    "@11ty/eleventy-plugin-rss": "^1.0.7"
+    "@11ty/eleventy-plugin-rss": "^1.0.7",
+    "moment": "^2.24.0"
   },
   "engines": {
     "node": "10.x"
   },
   "repository": {
-    "url": "https://glitch.com/edit/#!/hello-express"
+    "url": "https://github.com/patrickweaver/pw20"
   },
   "license": "MIT"
 }
