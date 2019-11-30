@@ -9,7 +9,7 @@ cover_image_url: https://pwapi-dev.s3.amazonaws.com/uploads/b4fb5c6e-e3a5-44ae-b
 cover_image_alt: A screenshot of the app
 images:
   - https://pwapi-dev.s3.amazonaws.com/uploads/b4fb5c6e-e3a5-44ae-ba62-f0e080df745a
-layout: portfolioProjectLayout.hbs
+layout: layouts/portfolioProjectLayout.hbs
 ---
 
 A website that turns the captcha test on its head and asks users to confirm they are robots.

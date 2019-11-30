@@ -9,5 +9,5 @@ cover_image_url:
 cover_image_alt: 
 images:
   - 
-layout: layout.hbs
+layout: layouts/portfolioProjectLayout.hbs
 ---
