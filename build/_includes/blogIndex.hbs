@@ -1,6 +1,15 @@
 <ul class="postlist">
 {{#each collections.postsReversed }}
   <li class="post">
+    
+    <ul>
+      {{#each this}}
+        
+      
+      {{/each}}
+    </ul>
+    
+    
       
     <h3>
       <a href="{{ this.url }}">
@@ -19,7 +28,7 @@
     {{/if }}
     
     <p>
-      {{ readableDate this.data.date }}
+      {{ readableDate this.data.date }}!!!!
     </p>
     
     <p>
