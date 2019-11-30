@@ -1,6 +1,7 @@
 ---
-layout: layout.hbs
+layout: layouts/blob.hbs
 title: Patrick Weaver
+pageHeader: Aboutttt
 pagination:
   data: pageAliases
   size: 1
@@ -11,7 +12,7 @@ pageAliases:
 permalink: /{{pageName}}.html
 ---
 
-## About
+## Aboutt
 
 <div class="blob">
   
