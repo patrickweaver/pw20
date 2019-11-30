@@ -1,5 +1,5 @@
 ---
-layout: layouts/main.hbs
+layout: layout.hbs
 title: Patrick Weaver
 pagination:
   data: pageAliases

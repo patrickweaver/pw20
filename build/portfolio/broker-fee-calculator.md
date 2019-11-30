@@ -9,7 +9,7 @@ cover_image_url: https://pwapi.s3.amazonaws.com/uploads/7941e61a-0136-4395-8226-
 cover_image_alt: A screnshot of the app
 images:
   - https://pwapi.s3.amazonaws.com/uploads/7941e61a-0136-4395-8226-1dfa56067b59
-layout: layouts/portfolioProject.hbs
+layout: layout.hbs
 ---
 
 A calculator that shows what the effective rent would be for an apartment with the broker fee added to the rent.

@@ -1,5 +1,5 @@
 ---
-layout: layouts/blob.hbs
+layout: layout.hbs
 title: Patrick Weaver | Now
 ---
 

@@ -10,7 +10,7 @@ cover_image_alt: A photograph of email text written on a white board.
 images:
   - https://pwapi.s3.amazonaws.com/uploads/6e467e0a-6c08-4dc8-9b95-262e1c05befa
   - https://pwapi.s3.amazonaws.com/uploads/48f205e4-1dea-4503-bde2-048215b05648
-layout: layouts/portfolioProject.hbs
+layout: layout.hbs
 ---
 
 An experiment in composing email, write your message on a whiteboard and end it with "send" to send the message.

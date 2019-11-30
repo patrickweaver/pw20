@@ -9,7 +9,7 @@ cover_image_url: https://pwapi-dev.s3.amazonaws.com/uploads/243fc473-6476-4231-b
 cover_image_alt: A screenshot of the control panel in the game
 images:
   - https://pwapi-dev.s3.amazonaws.com/uploads/243fc473-6476-4231-b9d1-6cee39653e65
-layout: layouts/portfolioProject.hbs
+layout: layout.hbs
 ---
 
 This game is part of [Mouse's](https://mouse.org) Serious Games course. It teaches game design concepts by letting players edit parameters in real time to design their own version of Space Invaders.
