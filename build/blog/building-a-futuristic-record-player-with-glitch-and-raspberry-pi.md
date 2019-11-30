@@ -5,7 +5,7 @@ date: 2018-10-23
 cover_image: https://pwapi.s3.amazonaws.com/uploads/6fa2e0b0-9602-4d14-b500-d5b615a133f2
 cover_image_alt: A screenshot of the app
 tags:
-layout: blogPost.hbs
+layout: blogPostLayout.hbs
 ---
 
 ![A screenshot of the record-player app](https://pwapi.s3.amazonaws.com/uploads/6fa2e0b0-9602-4d14-b500-d5b615a133f2)

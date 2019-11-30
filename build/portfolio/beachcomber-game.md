@@ -9,7 +9,7 @@ cover_image_url: https://pwapi-dev.s3.amazonaws.com/uploads/23b8bd25-e412-4d66-9
 cover_image_alt: A screenshot of the game
 images:
   - https://pwapi-dev.s3.amazonaws.com/uploads/23b8bd25-e412-4d66-99d8-49c0b62c7333
-layout: layout.hbs
+layout: portfolioProjectLayout.hbs
 ---
 
 You a beachcomber on the hunt for treasure! You can dig to try to find some hints, but don't reveal the treasure now while the beach is full, put a flag on all of the treasure you find so you can come back for it later. Right click to place a flag or click the flag/reveal toggle at the top-right. Good luck!

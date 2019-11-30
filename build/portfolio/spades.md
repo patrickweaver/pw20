@@ -9,7 +9,7 @@ cover_image_url: https://pwapi-dev.s3.amazonaws.com/uploads/d1c585c3-1659-41cf-a
 cover_image_alt: A screenshot of a prototype interface for the game
 images:
   - https://pwapi-dev.s3.amazonaws.com/uploads/d1c585c3-1659-41cf-a1cb-3b12cde8ae09
-layout: layout.hbs
+layout: portfolioProjectLayout.hbs
 ---
 
 The game can be played as single player with bot opponents and as real time multi-player (with optional bots).
