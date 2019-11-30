@@ -20,6 +20,16 @@
         
     </div>
     
+    <ul class="links">
+      <li>Project URL: {{this.data.project_url}}</li>
+      <li>Source URL: {{this.data.source_url}}</li>
+    </ul>
+    
+    {{{this.templateContent}}}
+    
+    {{#each this.data.images}}
+      {{this}}
+    {{/each}}
     
   </li>
 {{/each}}

@@ -1,11 +1,12 @@
 ---
+layout: layouts/blogPost.hbs
 title: Which Wearable Arduino Should I Use For My Sewable Tech Project?
 preview: goodbye
 date: 2017-09-29
 cover_image: https://pwapi.s3.amazonaws.com/uploads/1218000f-5621-4d6c-8d19-2de6c9670946
 cover_image_alt: A picture of 7 different sewable microcontrollers and a Mouse sticker
 tags:
-layout: blogPostLayout.hbs
+
 ---
 
 This fall [Mouse](https://medium.com/@mouse_org) ([mouse.org](http://mouse.org)) launched our brand new [Sewable Tech Course](https://mouse.org/mouse-courses)! The course introduces learners to circuitry and electronics without the abstraction of a breadboard. In the final two projects in the course we use a wearable Arduino to prototype a DIY activity tracker.

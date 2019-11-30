@@ -1,4 +1,5 @@
 ---
+layout: layouts/portfolioProject.hbs
 name: Emoji City Transit
 short_description: A subway dashboard that shows train statuses using emoji.
 start_date: 2019-07-16
@@ -9,7 +10,7 @@ cover_image_url: https://pwapi.s3.amazonaws.com/uploads/e42ca7c1-fa08-4f43-9907-
 cover_image_alt: A screenshot of the app
 images:
   - https://pwapi.s3.amazonaws.com/uploads/e42ca7c1-fa08-4f43-9907-a37002a97ba8
-layout: portfolioProjectLayout.hbs
+
 ---
 
 A subway dashboard that shows train statuses using emoji.

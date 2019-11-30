@@ -1,4 +1,5 @@
 ---
+layout: layouts/portfolioProject.hbs
 name: 
 short_description: 
 start_date: 
@@ -8,6 +9,5 @@ source_url:
 cover_image_url: 
 cover_image_alt: 
 images:
-  - 
-layout: layout.hbs
+
 ---
