@@ -2,34 +2,7 @@
 {{#each collections.projects }}
   <li class="project">
     
-    <div class="project-header">
-      
-      <h3 class="project-name">
-        <a href="{{ this.url }}">
-          {{#if this.data.name }}
-            {{ this.data.name }}
-          {{else }}
-            <code>
-              {{ this.url }}
-            </code>
-          {{/if}}
-        </a>
-      </h3>
-      
-      <p class="project-date-range">{{ projectDate this.data.start_date this.data.end_date }}</p>
-        
-    </div>
-    
-    <ul class="links">
-      <li>Project URL: {{this.data.project_url}}</li>
-      <li>Source URL: {{this.data.source_url}}</li>
-    </ul>
-    
-    {{{this.templateContent}}}
-    
-    {{#each this.data.images}}
-      {{this}}
-    {{/each}}
+    {{> projectHeader }}
     
   </li>
 {{/each}}

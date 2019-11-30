@@ -5,7 +5,21 @@
     {{> boilerplate/siteHeader }}
     
     <div class="post">
+      
+      
+      
+      <ul class="links">
+        <li>Project URL: <a href="{{project_url}}" target="_blank">{{project_url}}</a></li>
+        <li>Source URL: <a href="{{source_url}}" target="_blank">{{source_url}}</a></li>
+      </ul>
+      
       {{{ content }}}
+      
+      <ul>
+      {{#each data.images}}
+        <li>{{this}}</li>
+      {{/each}}
+      </ul>
     </div>
     
   </body>
