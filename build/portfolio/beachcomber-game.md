@@ -1,13 +1,18 @@
 ---
 layout: layouts/portfolioProject.hbs
 name: Beachcomber Game
+cover_image_url: https://pwapi-dev.s3.amazonaws.com/uploads/23b8bd25-e412-4d66-99d8-49c0b62c7333
+cover_image_alt: A screenshot of the game
 short_description: A beach themed minesweeper clone made with React.
 start_date: 2018-03-28
 end_date: 2018-03-30
 project_url: https://beachcomber.glitch.me/
 source_url: https://glitch.com/edit/#!/beachcomber
-cover_image_url: https://pwapi-dev.s3.amazonaws.com/uploads/23b8bd25-e412-4d66-99d8-49c0b62c7333
-cover_image_alt: A screenshot of the game
+status: Complete
+tags:
+  - games
+  - javascript
+  - react
 images:
   - https://pwapi-dev.s3.amazonaws.com/uploads/23b8bd25-e412-4d66-99d8-49c0b62c7333
   
