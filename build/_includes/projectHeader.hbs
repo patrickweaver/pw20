@@ -11,6 +11,10 @@
     </a>
   </h3>
   
+  <div class="cover">
+    <img src="{{this.cover_image_url}}" alt="{{ this.cover_image_alt}}"/>
+  </div>
+  
   {{#if this.status}}
     <div class="tag-container status-tag">
       <div class="tag" style="background-color: {{ statusColor this.status}};">

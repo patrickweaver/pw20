@@ -4,6 +4,10 @@
   <body>
     {{> boilerplate/siteHeader }}
     
+    <h2>
+      Portfolio
+    </h2>
+    
     <div class="post">
       
       {{> projectHeader }}
@@ -15,20 +19,10 @@
       
       {{{ content }}}
       
-      <ul>
+      <ul class="project-images">
       {{#each images}}
-        <li>{{this}}</li>
+        <li><img src="{{this}}" /></li>
       {{/each}}
-      </ul>
-      
-      <hr>
-      
-      <ul>
-        {{#each}}        
-          <li>{{@key}}</li>
-          <li>{{@value}}</li>
-          <li></li>
-        {{/each}}
       </ul>
       
     </div>
