@@ -1,9 +1,13 @@
 <ul class="postlist">
 {{#each collections.portfolioSorted }}
-  <li class="project">
-    
-    {{> projectHeader this.data url=this.url index=true}}
-    
-  </li>
+  
+  {{#if (eq this.data.name '/portfolio/template/')}}
+  {{else}}
+    <li class="project">
+
+      {{> projectHeader this.data url=this.url index=true}}
+
+    </li>
+  {{/if}}
 {{/each}}
 </ul>

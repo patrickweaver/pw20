@@ -20,15 +20,13 @@ module.exports = {
     
     function compare(a, b) {
       
-      const aStart = new Date(a.data.startDate)
-      const aEnd = new Date(a.data.endDate)
-      const bStart = moment(new Date(b.data.startDate)
-      const bEnd = moment(new Date(b.data.endDate)
+      const aSort = a.data.end_date ? new Date(a.data.end_date) : (a.data.start_date ? new Date(a.data.start_date) : 0);
+      const bSort = b.data.end_date ? new Date(b.data.end_date) : (b.data.start_date ? new Date(b.data.start_date) : 0);
       
-      if (a.data.name > b.data.name) {
+      if (aSort > bSort) {
         return -1;
       }
-      if (b.data.name > a.data.name) {
+      if (bSort > aSort) {
         return 1;
       }
       return 0;
