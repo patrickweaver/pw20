@@ -11,11 +11,13 @@
     </a>
   </h3>
   
-  <div class="tag-container status-tag">
-    <div class="tag" style="background-color: #FF6186;">
-      complete
+  {{#if this.data.status}}
+    <div class="tag-container status-tag">
+      <div class="tag" style="background-color: {{ statusColor this.data.status}};">
+        {{ this.data.status }}
+      </div>
     </div>
-  </div>
+  {{/if}}
 
   <p class="project-date-range">{{ projectDate this.data.start_date this.data.end_date }}</p>
 
