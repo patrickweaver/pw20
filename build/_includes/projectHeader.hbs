@@ -29,7 +29,9 @@
   
   <ul class="tags project-tag-list">
     {{#each this.tags}}
-      <li class="tag-container">{{(this === 'projects' ? '' : this)}}</li>
+        {{#if isProject this}}
+        <li class="tag-container">{{this}}</li>
+        {{/if}}
     {{/each}}
   </ul>
   

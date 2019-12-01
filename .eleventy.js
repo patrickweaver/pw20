@@ -24,6 +24,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addShortcode("projectDate", dateHelpers.projectDate);
   eleventyConfig.addShortcode("blogPreview", blogHelpers.preview);
   eleventyConfig.addShortcode("statusColor", portfolioHelpers.statusColor);
+  eleventyConfig.addShortcode("isProject", portfolioHelpers.isProject);
   
   
   // In progress, create custom start_date, end_date filter

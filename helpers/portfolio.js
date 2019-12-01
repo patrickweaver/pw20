@@ -13,6 +13,14 @@ module.exports = {
       default:
         return '#5F5F5F';
     }
+  },
+  
+  isProject: function(tag, options) {
+    if (tag === 'project') {
+      return options.fn(this);
+    } else {
+      return options.inverse(this);
+    }
   }
   
 }
