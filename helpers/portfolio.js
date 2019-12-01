@@ -1,7 +1,7 @@
 module.exports = {
   
   statusColor: function(status) {
-    
+    console.log("&#&#&#&#&#&#&#&", status)
     switch(status) {
       case 'Complete':
         return '#FF6186';
@@ -15,11 +15,14 @@ module.exports = {
     }
   },
   
-  isProject: function(tag, options) {
-    if (tag === 'project') {
-      return options.fn(this);
+  isProject: function() {
+    
+    console.log("**********", this);
+    
+    if (this === 'project') {
+      return true;
     } else {
-      return options.inverse(this);
+      return false;
     }
   }
   
