@@ -1,26 +1,12 @@
 <ul class="postlist">
-{{#each collections.projects }}
-  <li class="project">
-    
-    <div class="project-header">
-      
-      <h3 class="project-name">
-        <a href="{{ this.url }}">
-          {{#if this.data.name }}
-            {{ this.data.name }}
-          {{else }}
-            <code>
-              {{ this.url }}
-            </code>
-          {{/if}}
-        </a>
-      </h3>
-      
-      <p class="project-date-range">{{ projectDate this.data.start_date this.data.end_date }}</p>
-        
-    </div>
-    
-    
-  </li>
+{{#each collections.portfolioSorted }}
+  
+  {{#if this.data.name}}
+    <li class="project">
+
+      {{> projectHeader this.data url=this.url index=true}}
+
+    </li>
+  {{/if}}
 {{/each}}
 </ul>

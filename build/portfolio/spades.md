@@ -1,4 +1,5 @@
 ---
+layout: layouts/portfolioProject.hbs
 name: Spades
 short_description: A multiplayer online version of the card game spades with bot players.
 start_date: 2017-03-09
@@ -9,7 +10,7 @@ cover_image_url: https://pwapi-dev.s3.amazonaws.com/uploads/d1c585c3-1659-41cf-a
 cover_image_alt: A screenshot of a prototype interface for the game
 images:
   - https://pwapi-dev.s3.amazonaws.com/uploads/d1c585c3-1659-41cf-a1cb-3b12cde8ae09
-layout: layout.hbs
+
 ---
 
 The game can be played as single player with bot opponents and as real time multi-player (with optional bots).
