@@ -1,6 +1,7 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 // Helpers:
+const generalHelpers = require('./helpers/general');
 const dateHelpers = require("./helpers/dates");
 const blogHelpers = require("./helpers/blog");
 const portfolioHelpers = require("./helpers/portfolio");
@@ -25,6 +26,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addShortcode("blogPreview", blogHelpers.preview);
   eleventyConfig.addShortcode("statusColor", portfolioHelpers.statusColor);
   eleventyConfig.addShortcode("isProject", portfolioHelpers.isProject);
+  eleventyConfig.addShortcode("eq", generalHelpers.eq);
   
   
   // In progress, create custom start_date, end_date filter

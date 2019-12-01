@@ -12,7 +12,9 @@
   </h3>
   
   <div class="cover">
-    <img src="{{this.cover_image_url}}" alt="{{ this.cover_image_alt}}"/>
+    <a href="{{ this.url }}">
+      <img src="{{this.cover_image_url}}" alt="{{ this.cover_image_alt}}"/>
+    </a>
   </div>
   
   {{#if this.status}}
@@ -29,9 +31,10 @@
   
   <ul class="tags project-tag-list">
     {{#each this.tags}}
-        {{#if isProject}}
+      {{#if (eq this 'projects')}}
+      {{else}}
         <li class="tag-container">{{this}}</li>
-        {{/if}}
+      {{/if}}
     {{/each}}
   </ul>
   
