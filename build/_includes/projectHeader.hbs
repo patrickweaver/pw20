@@ -1,8 +1,8 @@
 <div class="project-header">
   <h3 class="project-name">
     <a href="{{ this.url }}">
-      {{#if this.data.name }}
-        {{ this.data.name }}
+      {{#if this.name }}
+        {{ this.name }}
       {{else }}
         <code>
           {{ this.url }}
@@ -11,14 +11,14 @@
     </a>
   </h3>
   
-  {{#if this.data.status}}
+  {{#if this.status}}
     <div class="tag-container status-tag">
-      <div class="tag" style="background-color: {{ statusColor this.data.status}};">
-        {{ this.data.status }}
+      <div class="tag" style="background-color: {{ statusColor this.status}};">
+        {{ this.status }}
       </div>
     </div>
   {{/if}}
 
-  <p class="project-date-range">{{ projectDate this.data.start_date this.data.end_date }}</p>
+  <p class="project-date-range">{{ projectDate this.start_date this.end_date }}</p>
 
 </div>

@@ -6,7 +6,7 @@
     
     <div class="post">
       
-      
+      {{> projectHeader }}
       
       <ul class="links">
         <li>Project URL: <a href="{{project_url}}" target="_blank">{{project_url}}</a></li>
@@ -16,10 +16,21 @@
       {{{ content }}}
       
       <ul>
-      {{#each data.images}}
+      {{#each images}}
         <li>{{this}}</li>
       {{/each}}
       </ul>
+      
+      <hr>
+      
+      <ul>
+        {{#each}}        
+          <li>{{@key}}</li>
+          <li>{{@value}}</li>
+          <li></li>
+        {{/each}}
+      </ul>
+      
     </div>
     
   </body>

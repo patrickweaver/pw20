@@ -2,7 +2,7 @@
 {{#each collections.portfolioSorted }}
   <li class="project">
     
-    {{> projectHeader }}
+    {{> projectHeader this.data url=this.url}}
     
   </li>
 {{/each}}
