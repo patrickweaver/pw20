@@ -10,7 +10,13 @@
       {{/if}}
     </a>
   </h3>
+  
+  <div class="tag-container status-tag">
+    <div class="tag" style="background-color: #FF6186;">
+      {{ this.status }}
+    </div>
+  </div>
 
-<p class="project-date-range">{{ projectDate this.data.start_date this.data.end_date }}</p>
+  <p class="project-date-range">{{ projectDate this.data.start_date this.data.end_date }}</p>
 
 </div>
