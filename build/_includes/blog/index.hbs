@@ -1,0 +1,12 @@
+<ul class="postlist">
+{{#each collections.postsReversed }}
+  <li class="post">
+      
+    {{> blog/postHeader this.data url=this.url templateContent=this.templateContent index=true}}
+    
+    <p>
+      {{ previewText this.templateContent }}… <a href="{{ this.url }}">Read More →</a>
+    </p>      
+  </li>
+{{/each}}
+</ul>

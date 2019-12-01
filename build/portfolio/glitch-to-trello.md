@@ -1,13 +1,18 @@
 ---
 layout: layouts/portfolioProject.hbs
 name: Glitch to Trello
+cover_image_url: https://pwapi-dev.s3.amazonaws.com/uploads/8268bfd9-b146-4946-b802-7b42100ec4d1
+cover_image_alt: A screenshot of the app
 short_description: An experiment with the Trello API that will create boards for your existing Glitch projects.
 start_date: 2018-04-01
 end_date: 2018-04-02
 project_url: https://glitch-to-trello.glitch.me/
 source_url: https://github.com/patrickweaver/glitch-to-trello/
-cover_image_url: https://pwapi-dev.s3.amazonaws.com/uploads/8268bfd9-b146-4946-b802-7b42100ec4d1
-cover_image_alt: A screenshot of the app
+status: Complete
+tags:
+  - coffeescript
+  - experiments
+  - node
 images:
   - https://pwapi-dev.s3.amazonaws.com/uploads/8268bfd9-b146-4946-b802-7b42100ec4d1
 

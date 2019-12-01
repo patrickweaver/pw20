@@ -1,0 +1,21 @@
+<h3>
+  <a href="{{ this.url }}">
+    {{#if this.title }}
+      {{ this.title }}
+    {{else }}
+      <code>
+        {{ this.url }}
+      </code>
+    {{/if}}
+  </a>
+</h3>
+
+{{#if this.cover_image_url }}
+  <a href="{{ this.url }}">
+    <img class="blog-cover-image" src="{{ this.cover_image_url }}" alt="{{ this.cover_image_alt }}" />
+  </a>
+{{/if }}
+
+<p>
+  {{ readableDate this.date }}
+</p>
