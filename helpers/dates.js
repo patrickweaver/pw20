@@ -7,14 +7,20 @@ module.exports = {
   },
   
   projectDate: function(startDate, endDate) {
-    if (endDate) {
-      if (endDate != startDate) {
-        const startYear = moment(new Date(startDate)).format("YYYY");
-        const endYear = moment(new Date(endDate)).format("YYYY");
+    const startYear = startDate ? moment(new Date(startDate)).format("YYYY") : null;
+    const endYear = endDate ? moment(new Date(endDate)).format("YYYY") : null;
+    if (endYear) {
+      if (endYear != startYear) {
         return  startYear + " - " + endYear;
       }
     }
-    return moment(new Date(startDate)).format("YYYY");
+    
+    if (startYear) {
+      return startYear;
+    }
+    
+    return '';
+    
   }
   
 }

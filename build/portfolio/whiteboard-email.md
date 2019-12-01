@@ -3,7 +3,7 @@ layout: layouts/portfolioProject.hbs
 name: Whiteboard Email
 short_description: 
 start_date: 2019-08-17
-end_date: 
+end_date:
 project_url: https://ocr-email.glitch.me/
 source_url: https://glitch.com/edit/#!/ocr-email
 cover_image_url: https://pwapi.s3.amazonaws.com/uploads/6e467e0a-6c08-4dc8-9b95-262e1c05befa
