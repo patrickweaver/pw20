@@ -1,13 +1,22 @@
 ---
 layout: layouts/portfolioProject.hbs
 name: Spades
+cover_image_url: https://pwapi-dev.s3.amazonaws.com/uploads/d1c585c3-1659-41cf-a1cb-3b12cde8ae09
+cover_image_alt: A screenshot of a prototype interface for the game
 short_description: A multiplayer online version of the card game spades with bot players.
 start_date: 2017-03-09
 end_date: 
 project_url: http://spades.glitch.me/
 source_url: https://github.com/patrickweaver/spades
-cover_image_url: https://pwapi-dev.s3.amazonaws.com/uploads/d1c585c3-1659-41cf-a1cb-3b12cde8ae09
-cover_image_alt: A screenshot of a prototype interface for the game
+status: In Progress
+tags:
+  - flask
+  - games
+  - javascript
+  - machine learning
+  - node
+  - python
+  - react
 images:
   - https://pwapi-dev.s3.amazonaws.com/uploads/d1c585c3-1659-41cf-a1cb-3b12cde8ae09
 
