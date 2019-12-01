@@ -11,14 +11,14 @@ module.exports = {
   },
   
   previewText: function(body) {
-    
-    console.log('******', body.substr(0, ))
-    
-    const options = {
-      ignoreHref: true,
-      ignoreImage: true,
-      uppercaseHeadings: false
+    if (body){
+      const options = {
+        ignoreHref: true,
+        ignoreImage: true,
+        uppercaseHeadings: false
+      }
+      return htmlToText.fromString(marked(body), options).substring(0, 349);
     }
-    return htmlToText.fromString(marked(body), options).substring(0, 349);
+    return '';
   }
 }
