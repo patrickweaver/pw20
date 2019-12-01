@@ -2,7 +2,7 @@
 {{#each collections.postsReversed }}
   <li class="post">
       
-    {{> blogPostHeader this.data url=this.url templateContent=this.templateContent index=true}}
+    {{> blog/postHeader this.data url=this.url templateContent=this.templateContent index=true}}
     
     <p>
       {{ previewText this.templateContent }}… <a href="{{ this.url }}">Read More →</a>
