@@ -3,7 +3,6 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 // Helpers:
 const generalHelpers = require('./helpers/general');
 const dateHelpers = require("./helpers/dates");
-const blogHelpers = require("./helpers/blog");
 const portfolioHelpers = require("./helpers/portfolio");
 
 module.exports = function(eleventyConfig) {
@@ -23,7 +22,7 @@ module.exports = function(eleventyConfig) {
   // Shortcodes/Helpers:
   eleventyConfig.addShortcode("readableDate", dateHelpers.readableDate);
   eleventyConfig.addShortcode("projectDate", dateHelpers.projectDate);
-  eleventyConfig.addShortcode("blogPreview", blogHelpers.preview);
+  eleventyConfig.addShortcode("previewText", generalHelpers.previewText);
   eleventyConfig.addShortcode("statusColor", portfolioHelpers.statusColor);
   eleventyConfig.addShortcode("isProject", portfolioHelpers.isProject);
   eleventyConfig.addShortcode("eq", generalHelpers.eq);

@@ -39,9 +39,15 @@
   </ul>
   
   {{#if this.index}}
-  <p>
-    {{this.short_description}}
-  </p>
+    <p>
+      
+ 
+      {{#if this.short_description}}
+        {{this.short_description}}
+      {{else}}
+        {{previewText this.templateContent}}
+      {{/if}}
+    </p>
   {{/if}}
 
 </div>
