@@ -1,15 +1,30 @@
-<ol class="postlist">
+<ul class="postlist">
 {{#each collections.postsReversed }}
-  <li>
-    <a href="{{ this.url }}">
-      {{#if this.data.title }}
-        {{ this.data.title }}
-      {{else }}
-        <code>
-          {{ this.url }}
-        </code>
-      {{/if}}
-    </a>
+  <li class="post">
+      
+    <h3>
+      <a href="{{ this.url }}">
+        {{#if this.data.title }}
+          {{ this.data.title }}
+        {{else }}
+          <code>
+            {{ this.url }}
+          </code>
+        {{/if}}
+      </a>
+    </h3>
+    
+    {{#if this.data.cover_image_url }}
+    <img src="{{ this.data.cover_image_url }}" alt="{{ this.data.cover_image_alt }}" />
+    {{/if }}
+    
+    <p>
+      {{ readableDate this.data.date }}
+    </p>
+    
+    <p>
+      {{ blogPreview this.templateContent }}… <a href="{{ this.url }}">Read More →</a>
+    </p>      
   </li>
 {{/each}}
-</ol>
+</ul>

@@ -1,5 +1,11 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
+// Helpers:
+const generalHelpers = require('./helpers/general');
+const dateHelpers = require("./helpers/dates");
+const blogHelpers = require("./helpers/blog");
+const portfolioHelpers = require("./helpers/portfolio");
+
 module.exports = function(eleventyConfig) {
   
   // Rss
@@ -14,18 +20,17 @@ module.exports = function(eleventyConfig) {
   });
   
   
+  // Shortcodes/Helpers:
+  eleventyConfig.addShortcode("readableDate", dateHelpers.readableDate);
+  eleventyConfig.addShortcode("projectDate", dateHelpers.projectDate);
+  eleventyConfig.addShortcode("blogPreview", blogHelpers.preview);
+  eleventyConfig.addShortcode("statusColor", portfolioHelpers.statusColor);
+  eleventyConfig.addShortcode("isProject", portfolioHelpers.isProject);
+  eleventyConfig.addShortcode("eq", generalHelpers.eq);
+  
+  
   // In progress, create custom start_date, end_date filter
-  eleventyConfig.addCollection("portfolioSorted", function(collection) {
-   
-    var filter = collection.getFilteredByTag("projects");
-    for (var i in filter) {
-      var j = filter[i];
-      console.log(i, j);
-    }
-    
-    
-    return collection.getFilteredByTag("projects");
-  });
+  eleventyConfig.addCollection("portfolioSorted", portfolioHelpers.sort);
 
   
   

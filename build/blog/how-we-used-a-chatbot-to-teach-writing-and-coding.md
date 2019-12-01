@@ -1,11 +1,12 @@
 ---
+layout: layouts/blogPost.hbs
 title: How we used a chatbot to teach writing and coding!
-description: 
+preview: hello 
 date: 2016-06-15
 cover_image: https://pwapi.s3.amazonaws.com/uploads/a9ecd491-adc0-4f59-8eb3-8654d055a020
 cover_image_alt: A screenshot of the chatbot
 tags:
-layout: layout.hbs
+
 ---
 
 When [Mouse](https://mouse.org/) moved into our new office in early 2015, we were excited to have space for our high school [Design League](https://mouse.org/mouse-design-league) program to spread out and work on assistive technology projects like [1derphone](https://www.instagram.com/p/BGiUJ8awRJp/), a motorized headphone for a DJ with limited mobility. We also quickly realized we had the chance to reach more students in more ways by hosting flexible open events that any NYC students could attend.

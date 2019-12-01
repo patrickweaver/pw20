@@ -1,0 +1,47 @@
+<div class="project-header">
+  <h3 class="project-name">
+    <a href="{{ this.url }}">
+      {{#if this.name }}
+        {{ this.name }}
+      {{else }}
+        <code>
+          {{ this.url }}
+        </code>
+      {{/if}}
+    </a>
+  </h3>
+  
+  <div class="cover">
+    <a href="{{ this.url }}">
+      <img src="{{this.cover_image_url}}" alt="{{ this.cover_image_alt}}"/>
+    </a>
+  </div>
+  
+  {{#if this.status}}
+    <div class="tag-container status-tag">
+      <div class="tag" style="background-color: {{ statusColor this.status}};">
+        {{ this.status }}
+      </div>
+    </div>
+  {{/if}}
+
+  <p class="project-date-range">
+    {{ projectDate this.start_date this.end_date }}
+  </p>
+  
+  <ul class="tags project-tag-list">
+    {{#each this.tags}}
+      {{#if (eq this 'projects')}}
+      {{else}}
+        <li class="tag-container">{{this}}</li>
+      {{/if}}
+    {{/each}}
+  </ul>
+  
+  {{#if this.index}}
+  <p>
+    {{this.short_description}}
+  </p>
+  {{/if}}
+
+</div>
