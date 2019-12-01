@@ -3,6 +3,7 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 // Helpers:
 const dates = require("./helpers/dates");
 const blog = require("./helpers/blog");
+const portfolio = require("./helpers/portfolio");
 
 module.exports = function(eleventyConfig) {
   
