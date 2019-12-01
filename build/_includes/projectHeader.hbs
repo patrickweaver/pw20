@@ -23,6 +23,20 @@
     </div>
   {{/if}}
 
-  <p class="project-date-range">{{ projectDate this.start_date this.end_date }}</p>
+  <p class="project-date-range">
+    {{ projectDate this.start_date this.end_date }}
+  </p>
+  
+  <ul class="tags project-tag-list">
+    {{#each this.tags}}
+      <li class="tag-container">{{(this === 'projects' ? '' : this)}}</li>
+    {{/each}}
+  </ul>
+  
+  {{#if this.index}}
+  <p>
+    {{this.short_description}}
+  </p>
+  {{/if}}
 
 </div>
