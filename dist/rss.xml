@@ -4,7 +4,7 @@
   <subtitle></subtitle>
   <link href="https://patrickweaver.net/feed.xml" rel="self"/>
   <link href="https://patrickweaver.net/blog/"/>
-  <updated>2018-10-23T00:00:00-00:00</updated>
+  <updated>2018-10-22T20:00:00-04:00</updated>
   <id>https://patrickweaver.net/</id>
   <author>
     <name>Patrick Weaver</name>
@@ -14,7 +14,7 @@
   <entry>
     <title>How we used a chatbot to teach writing and coding!</title>
     <link href="https://patrickweaver.net/blog/how-we-used-a-chatbot-to-teach-writing-and-coding/"/>
-    <updated>2016-06-15T00:00:00-00:00</updated>
+    <updated>2016-06-14T20:00:00-04:00</updated>
     <id>https://patrickweaver.net/blog/how-we-used-a-chatbot-to-teach-writing-and-coding/</id>
     <content type="html">&lt;p&gt;When &lt;a href=&quot;https://mouse.org/&quot;&gt;Mouse&lt;/a&gt; moved into our new office in early 2015, we were excited to have space for our high school &lt;a href=&quot;https://mouse.org/mouse-design-league&quot;&gt;Design League&lt;/a&gt; program to spread out and work on assistive technology projects like &lt;a href=&quot;https://www.instagram.com/p/BGiUJ8awRJp/&quot;&gt;1derphone&lt;/a&gt;, a motorized headphone for a DJ with limited mobility. We also quickly realized we had the chance to reach more students in more ways by hosting flexible open events that any NYC students could attend.&lt;/p&gt;
 &lt;p&gt;We hosted our first open &lt;a href=&quot;https://mouse.org/makernight&quot;&gt;Maker Night&lt;/a&gt; in March 2015 and it quickly became a space where students showed up and could work on anything creative and innovative. Every month, we saw new projects emerge from crafting, coding, and anything in between:&lt;/p&gt;
@@ -37,7 +37,7 @@
   <entry>
     <title>Which Wearable Arduino Should I Use For My Sewable Tech Project?</title>
     <link href="https://patrickweaver.net/blog/which-wearable-arduino-should-i-use-for-my-sewable-tech-project/"/>
-    <updated>2017-09-29T00:00:00-00:00</updated>
+    <updated>2017-09-28T20:00:00-04:00</updated>
     <id>https://patrickweaver.net/blog/which-wearable-arduino-should-i-use-for-my-sewable-tech-project/</id>
     <content type="html">&lt;p&gt;This fall &lt;a href=&quot;https://medium.com/@mouse_org&quot;&gt;Mouse&lt;/a&gt; (&lt;a href=&quot;http://mouse.org/&quot;&gt;mouse.org&lt;/a&gt;) launched our brand new &lt;a href=&quot;https://mouse.org/mouse-courses&quot;&gt;Sewable Tech Course&lt;/a&gt;! The course introduces learners to circuitry and electronics without the abstraction of a breadboard. In the final two projects in the course we use a wearable Arduino to prototype a DIY activity tracker.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*gfNKPipgo0Yp_bZLJLg7MQ.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
@@ -144,7 +144,7 @@ while True:
   <entry>
     <title>Building a futuristic Record Player with Glitch and Raspberry Pi</title>
     <link href="https://patrickweaver.net/blog/building-a-futuristic-record-player-with-glitch-and-raspberry-pi/"/>
-    <updated>2018-10-23T00:00:00-00:00</updated>
+    <updated>2018-10-22T20:00:00-04:00</updated>
     <id>https://patrickweaver.net/blog/building-a-futuristic-record-player-with-glitch-and-raspberry-pi/</id>
     <content type="html">&lt;p&gt;Earlier this year I wanted to explore the new &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/async_function&quot;&gt;async/await&lt;/a&gt; functionality in Javascript so I started playing around with &lt;a href=&quot;https://async-await-machine.glitch.me/&quot;&gt;a project&lt;/a&gt; on Glitch (&lt;a href=&quot;https://glitch.com/&quot;&gt;glitch.com&lt;/a&gt;) that would call one API after another, then generate new API call options from each cycle. I compiled a long list of potential APIs to use, but didn’t get past chaining together an &lt;a href=&quot;https://dog.ceo/dog-api/&quot;&gt;API that will respond with a picture of a specific breed of dog&lt;/a&gt;, and the &lt;a href=&quot;https://www.mediawiki.org/wiki/API:Main_page&quot;&gt;Wikipedia API&lt;/a&gt; which could respond with the pages that came up in a search for the name of the breed.&lt;/p&gt;
 &lt;div class=&quot;glitch-embed-wrap&quot; style=&quot;height: 420px; width: 100%;&quot;&gt;
