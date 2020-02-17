@@ -1,3 +1,7 @@
 node_modules
 .env
 .DS_Store
+
+# Keys:
+gh-pages
+gh-pages.pub
