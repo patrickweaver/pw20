@@ -16,6 +16,6 @@ Hi, I'm Patrick Weaver, an artist, educator, writer, programmer, musician, and d
 
 You can reach me via email at [hello.patrickw@gmail.com](mailto:hello.patrickw@gmail.com) or on Twitter at [@patrickweave_r](https://twitter.com/patrickweave_r).
 
-Here is a drawing of 100 eyes:
+Here is a drawing of some lines:
 
-![A drawing of 100 eyes](https://pwapi.s3.amazonaws.com/uploads/1f42dd81-9ebc-4b13-a80f-b3ec54ad38d3)
+![A drawing of overlapping lines](/images/lines.jpg)

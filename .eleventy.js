@@ -41,8 +41,15 @@ module.exports = function(eleventyConfig) {
     templateFormats: [
       'md',
       'css',
+      'js',
       'hbs',
-      'njk'
+      'njk',
+      'gif',
+      'jpg',
+      'jpeg',
+      'png',
+      'mp3',
+      'mp4'
     ]
   }
 };
