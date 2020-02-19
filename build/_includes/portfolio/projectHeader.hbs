@@ -39,14 +39,15 @@
   </ul>
   
   {{#if this.index}}
-    <p>
-      
- 
+    <p class="project-short-description">
       {{#if this.short_description}}
         {{this.short_description}}
       {{else}}
         {{previewText this.templateContent}}
       {{/if}}
+    </p>
+    <p class="read-more">
+      <a href="{{ this.url }}">Read More -></a>
     </p>
   {{/if}}
 
