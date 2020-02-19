@@ -216,6 +216,20 @@ form textarea {
   grid-column-end: span 1;
   grid-row-start: 5;
   grid-row-end: 6;
+  margin-bottom: .25em;
+}
+
+.read-more {
+  grid-column-start: 1;
+  grid-column-end: span 1;
+  grid-row-start: 6;
+  grid-row-end: 7;
+  margin-top: .25em;
+  font-size: 18px;
+}
+
+.read-more a {
+  color: black;
 }
 
 /* End project header */
@@ -268,5 +282,10 @@ ul.project-images, ul.links {
   .project-short-description {
     grid-row-start: 6;
     grid-row-end: 7;
+  }
+
+  .read-more {
+    grid-row-start: 7;
+    grid-row-end: 8;
   }
 }
