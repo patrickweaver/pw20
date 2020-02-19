@@ -1,0 +1,12 @@
+<ul class="postlist">
+{{#each collections.portfolioSorted }}
+  
+  {{#if this.data.name}}
+    <li class="project">
+
+      {{> portfolio/projectHeader this.data url=this.url templateContent=this.templateContent index=true}}
+
+    </li>
+  {{/if}}
+{{/each}}
+</ul>
