@@ -1,7 +1,6 @@
 ---
 layout: layouts/blogPost.hbs
 title: Building a futuristic Record Player with Glitch and Raspberry Pi
-preview: Earlier this year I wanted to explore the new [async/await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/async_function) functionality in Javascript so I started playing around with [a project](https://async-await-machine.glitch.me/) on Glitch ([glitch.com](https://glitch.com/)) that would call one API after another, then generate new API call options from each cycle. I compiled a long list of potential
 date: 2018-10-23
 cover_image_url: https://pwapi.s3.amazonaws.com/uploads/6fa2e0b0-9602-4d14-b500-d5b615a133f2
 cover_image_alt: A screenshot of the app
