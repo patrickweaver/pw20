@@ -14,7 +14,7 @@ tags:
   - nyc
 images:
   - https://pwapi.s3.amazonaws.com/uploads/7941e61a-0136-4395-8226-1dfa56067b59
-
+eleventyExcludeFromCollections: true
 ---
 
 A calculator that shows what the effective rent would be for an apartment with the broker fee added to the rent.
