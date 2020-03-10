@@ -31,8 +31,12 @@ module.exports = {
       }
       return 0;
     }
+    if (tag) {
+      return collection.getFilteredByTag("projects").sort(portfolioCompare);
+    } else {
+      return collection.getFilteredByTag("projects", tag).sort(portfolioCompare);
+    }
     
-    return collection.getFilteredByTag(tag).sort(portfolioCompare);
   }
   
 }

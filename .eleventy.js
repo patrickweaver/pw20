@@ -18,7 +18,6 @@ module.exports = function(eleventyConfig) {
    return collection.getFilteredByTag("posts").reverse();
   });
   
-  
   // Shortcodes/Helpers:
   eleventyConfig.addShortcode("readableDate", dateHelpers.readableDate);
   eleventyConfig.addShortcode("projectDate", dateHelpers.projectDate);
@@ -29,7 +28,7 @@ module.exports = function(eleventyConfig) {
   
   
   // In progress, create custom start_date, end_date filter
-  eleventyConfig.addCollection("portfolioSorted", portfolioHelpers.sort.bind(this, "projects"));
+  eleventyConfig.addCollection("portfolioSorted", portfolioHelpers.sort.bind(this, false));
 
   
   
