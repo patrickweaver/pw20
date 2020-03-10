@@ -16,9 +16,9 @@ module.exports = {
     }
   },
   
-  sort: function(collection) {
+  sort: function(tag, collection) {
     
-    function compare(a, b) {
+    function portfolioCompare(a, b) {
       
       const aSort = a.data.end_date ? new Date(a.data.end_date) : (a.data.start_date ? new Date(a.data.start_date) : 0);
       const bSort = b.data.end_date ? new Date(b.data.end_date) : (b.data.start_date ? new Date(b.data.start_date) : 0);
@@ -32,7 +32,7 @@ module.exports = {
       return 0;
     }
     
-    return collection.getFilteredByTag("projects").sort(compare);
+    return collection.getFilteredByTag(tag).sort(portfolioCompare);
   }
   
 }

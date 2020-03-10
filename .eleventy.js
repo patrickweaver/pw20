@@ -29,7 +29,7 @@ module.exports = function(eleventyConfig) {
   
   
   // In progress, create custom start_date, end_date filter
-  eleventyConfig.addCollection("portfolioSorted", portfolioHelpers.sort);
+  eleventyConfig.addCollection("portfolioSorted", portfolioHelpers.sort.bind(this, "projects"));
 
   
   
