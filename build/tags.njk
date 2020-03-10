@@ -13,6 +13,8 @@ pagination:
 layout: layouts/blob.hbs
 renderData:
   title: Tagged “{{ tag }}”
-permalink: /tags-list/{{ tag }}/
+permalink: /tags/{{ tag }}/
 ---
 <h1>Tagged “{{ tag }}”</h1>
+
+<p>See <a href="{{ '/tags/' | url }}">all tags</a>.</p>
