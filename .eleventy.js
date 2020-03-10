@@ -13,6 +13,11 @@ module.exports = function(eleventyConfig) {
   // Merge data in .json files in diretories with data in each file
   eleventyConfig.setDataDeepMerge(true);
   
+  // Collections
+  
+  // List of Tags
+  eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
+  
   // Create postsReversed tag with posts tag in reverse order
   eleventyConfig.addCollection("postsReversed", function(collection) {
    return collection.getFilteredByTag("posts").reverse();

@@ -1,0 +1,18 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - nav
+    - post
+    - posts
+    - tagList
+  addAllPagesToCollections: true
+layout: layouts/blob.hbs
+renderData:
+  title: Tagged “{{ tag }}”
+permalink: /tags-list/{{ tag }}/
+---
+<h1>Tagged “{{ tag }}”</h1>

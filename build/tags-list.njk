@@ -5,9 +5,11 @@ pageHeader: Tags
 ---
 <h1>Tags</h1>
 <h3>{{page.inputPath}}</h3>
-<p>|{{ JSON.stringify(collections) }}|</p>
 <ul>
-{% for tag in collections %}
-  <li>* {{JSON.stringify(tag)}}</li>
+{% for tag in collections.posts %}
+  <li>* {{ tag.title }} #
+  {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+  <a href="{{ tagUrl | url }}" class="tag">{{ tag.title }}</a>
+  </li>
 {% endfor %}
 </ul>
