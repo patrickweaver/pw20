@@ -1,0 +1,12 @@
+---
+layout: layouts/blob.hbs
+title: Patrick Weaver | Tags
+pageHeader: Tags
+permalink: /tags/
+---
+<ul>
+  {{#each collections.tagList }}
+    <li><a href="/tags/{{ this }}" class="tag">{{ this }}</a></li>
+  {{/each}}
+</ul>
+
