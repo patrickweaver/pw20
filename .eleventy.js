@@ -16,7 +16,7 @@ module.exports = function(eleventyConfig) {
   // Collections
   
   // List of Tags
-  eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
+  eleventyConfig.addCollection("portfolioTagList", require("./_11ty/getPortfolioTagList"));
   
   // Create postsReversed tag with posts tag in reverse order
   eleventyConfig.addCollection("postsReversed", function(collection) {
