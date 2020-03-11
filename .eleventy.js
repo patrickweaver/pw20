@@ -53,7 +53,8 @@ module.exports = function(eleventyConfig) {
       'jpeg',
       'png',
       'mp3',
-      'mp4'
+      'mp4',
+      'pdf'
     ]
   }
 };
