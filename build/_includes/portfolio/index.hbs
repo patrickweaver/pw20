@@ -1,12 +1,15 @@
 <ul class="postlist">
-{{#each collection }}
-  
-  {{#if this.data.name}}
-    <li class="project">
-
-      {{> portfolio/projectHeader this.data url=this.url templateContent=this.templateContent index=true}}
-
-    </li>
+  {{#if tag}}
+    {{#each (lookup collections tag)}}
+      {{#if this.data.name}}
+        <li class="project">
+          {{> portfolio/projectHeader this.data url=this.url templateContent=this.templateContent index=true}}
+        </li>
+      {{/if}}
+    {{/each}} 
+  {{else}}
+    {{#each collection }}
+      
+    {{/each}}
   {{/if}}
-{{/each}}
 </ul>
