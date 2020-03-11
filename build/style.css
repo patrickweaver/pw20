@@ -126,8 +126,19 @@ ul.tags li, .tag {
   margin: 5px 10px 5px 0;
 }
 
-ul.tags li {
+ul.tags li, .blob-tag {
   background-color: white;
+}
+
+ul.tags > li > a {
+  text-decoration: none;
+  color: black;
+}
+
+ul.tags > li:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  border: 1px solid #999;
 }
 
 
@@ -170,6 +181,7 @@ form textarea {
 
 .project-name a:hover {
   text-decoration: underline;
+  text-decoration-thickness: 1.5px;
 }
 
 .cover {
