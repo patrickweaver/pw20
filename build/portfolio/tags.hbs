@@ -15,9 +15,7 @@ renderData:
   title: Tagged “{{ tag }}”
 permalink: /portfolio/tags/{{ tag }}/
 ---
-<div class="blob">
-  <h3>Projects tagged <span class="tag blob-tag">{{ tag }}</span></h3>
-</div>
+<h2>Portfolio: projects tagged <span class="tag blob-tag">{{ tag }}</span></h2>
 
 {{> portfolio/index collection=collections.portfolioSorted }}
 
