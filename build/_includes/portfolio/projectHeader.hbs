@@ -33,8 +33,7 @@
     {{#each this.tags}}
       {{#if (eq this 'projects')}}
       {{else}}
-        <li class="tag-container">
-          <a href="/portfolio/tags/{{this}}">{{this}}</a></li>
+        <li class="tag-container">{{this}}</li>
       {{/if}}
     {{/each}}
   </ul>

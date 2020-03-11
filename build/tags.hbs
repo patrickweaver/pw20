@@ -10,13 +10,13 @@ pagination:
     - posts
     - tagList
   addAllPagesToCollections: true
-layout: layouts/main.hbs
+layout: layouts/blob.hbs
 renderData:
   title: Tagged “{{ tag }}”
-permalink: /portfolio/tags/{{ tag }}/
+permalink: /tags/{{ tag }}/
 ---
-<h2>Portfolio: projects tagged <span class="tag blob-tag">{{ tag }}</span></h2>
+<h1>Tagged “{{ tag }}”</h1>
 
 {{> portfolio/index collection=collections.portfolioSorted }}
 
-<p>See <a href="/tags/">all tags</a>.</p>
+<p>See <a href="{{ '/tags/' | url }}">all tags</a>.</p>
