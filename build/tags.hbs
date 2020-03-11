@@ -17,4 +17,6 @@ permalink: /tags/{{ tag }}/
 ---
 <h1>Tagged “{{ tag }}”</h1>
 
+{{> portfolio/index collection=collections.portfolioSorted }}
+
 <p>See <a href="{{ '/tags/' | url }}">all tags</a>.</p>
