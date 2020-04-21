@@ -58,7 +58,7 @@
       <p>
         April 21, 2020
       </p>      
-      <p>Whenever I start a new web project there is an ominous literal, figurative, &quot;cloud&quot; lurking on the horizon: Will this project get complicated enough to need to be connected to S3 for file upload?</p>
+      <p>Whenever I start a new web project there is an ominous, literal, figurative, &quot;cloud&quot; lurking on the horizon: Will this project get complicated enough to need to be connected to S3 for file upload?</p>
 <p>More often than I'd like the answer is yes, and at this point I've re-learned how to connect a Node.js app to S3 more times than I'd like. Rather than keep learning just enough S3 to get a project working, and then instantly forgetting it, I decided to write the process down so I can follow my own instructions.</p>
 <p>I'm sure this will also find its way to people who know more than I do and might be able to alert me to anything I'm doing wrong. If this is you, <a href="https://twitter.com/patrickweave_r">please reach out</a>!</p>
 <h2>Setting Up AWS Authentication</h2>
@@ -292,17 +292,12 @@ var bucketName = process.env.S3BUCKET;
 
     // Send the object with success and the key back to server.js
     return(s3Data)
-``
-
-It's important to note that the `id` we pass back to `server.js` isn't returned to us from the `s3.putObject()` method. `s3()` returns an `ETag`, which isn't of much use for what we're doing, but it's enough to confirm that the upload completed successfully (What are ETags? [teppen.io/2018/06/23/aws_s3_etags/](https://teppen.io/2018/06/23/aws_s3_etags/)).
-
-Going back to server.js, this is where we would want to store our `id` somewhere. This string is what we will need to retrieve the file from s3. In this app we're just demoing the upload functionality so we don't store it anywhere. We access it once though to show the user that it worked. This is where we will use the other function in the `aws` module, `getSignedUrl`. Because our S3 bucket permissions only let our AWS user access objects, and otherwise our bucket permissions are &quot;No public access&quot;, we need to create a temporary signed URL to access the file.
-
-Using the id returned from the `upload()` function we call the `getSignedUrl()` function. When we get the signed url, we put it into some simple HTML to display it to the user (this is the main difference between the two `server.js` routes):
-
-**server.js**
-```javascript
-    // Confirm upload succeeded:
+</code></pre>
+<p>It's important to note that the <code>id</code> we pass back to <code>server.js</code> isn't returned to us from the <code>s3.putObject()</code> method. <code>s3()</code> returns an <code>ETag</code>, which isn't of much use for what we're doing, but it's enough to confirm that the upload completed successfully (What are ETags? <a href="https://teppen.io/2018/06/23/aws_s3_etags/">teppen.io/2018/06/23/aws_s3_etags/</a>).</p>
+<p>Going back to server.js, this is where we would want to store our <code>id</code> somewhere. This string is what we will need to retrieve the file from s3. In this app we're just demoing the upload functionality so we don't store it anywhere. We access it once though to show the user that it worked. This is where we will use the other function in the <code>aws</code> module, <code>getSignedUrl</code>. Because our S3 bucket permissions only let our AWS user access objects, and otherwise our bucket permissions are &quot;No public access&quot;, we need to create a temporary signed URL to access the file.</p>
+<p>Using the id returned from the <code>upload()</code> function we call the <code>getSignedUrl()</code> function. When we get the signed url, we put it into some simple HTML to display it to the user (this is the main difference between the two <code>server.js</code> routes):</p>
+<p><strong>server.js</strong></p>
+<pre><code class="language-javascript">    // Confirm upload succeeded:
     if (!response.success || response.error) {
       throw &quot;Reponse Error: &quot; + response.error;
     }

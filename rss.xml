@@ -193,7 +193,7 @@ while True:
     <link href="https://patrickweaver.net/blog/i-could-never-remember-how-to-make-a-simple-s3-upload-feature-so-i-wrote-it-down/"/>
     <updated>2020-04-21T00:00:00-00:00</updated>
     <id>https://patrickweaver.net/blog/i-could-never-remember-how-to-make-a-simple-s3-upload-feature-so-i-wrote-it-down/</id>
-    <content type="html">&lt;p&gt;Whenever I start a new web project there is an ominous literal, figurative, &amp;quot;cloud&amp;quot; lurking on the horizon: Will this project get complicated enough to need to be connected to S3 for file upload?&lt;/p&gt;
+    <content type="html">&lt;p&gt;Whenever I start a new web project there is an ominous, literal, figurative, &amp;quot;cloud&amp;quot; lurking on the horizon: Will this project get complicated enough to need to be connected to S3 for file upload?&lt;/p&gt;
 &lt;p&gt;More often than I&#39;d like the answer is yes, and at this point I&#39;ve re-learned how to connect a Node.js app to S3 more times than I&#39;d like. Rather than keep learning just enough S3 to get a project working, and then instantly forgetting it, I decided to write the process down so I can follow my own instructions.&lt;/p&gt;
 &lt;p&gt;I&#39;m sure this will also find its way to people who know more than I do and might be able to alert me to anything I&#39;m doing wrong. If this is you, &lt;a href=&quot;https://twitter.com/patrickweave_r&quot;&gt;please reach out&lt;/a&gt;!&lt;/p&gt;
 &lt;h2&gt;Setting Up AWS Authentication&lt;/h2&gt;
@@ -423,17 +423,12 @@ var bucketName = process.env.S3BUCKET;
 
     // Send the object with success and the key back to server.js
     return(s3Data)
-``
-
-It&#39;s important to note that the `id` we pass back to `server.js` isn&#39;t returned to us from the `s3.putObject()` method. `s3()` returns an `ETag`, which isn&#39;t of much use for what we&#39;re doing, but it&#39;s enough to confirm that the upload completed successfully (What are ETags? [teppen.io/2018/06/23/aws_s3_etags/](https://teppen.io/2018/06/23/aws_s3_etags/)).
-
-Going back to server.js, this is where we would want to store our `id` somewhere. This string is what we will need to retrieve the file from s3. In this app we&#39;re just demoing the upload functionality so we don&#39;t store it anywhere. We access it once though to show the user that it worked. This is where we will use the other function in the `aws` module, `getSignedUrl`. Because our S3 bucket permissions only let our AWS user access objects, and otherwise our bucket permissions are &amp;quot;No public access&amp;quot;, we need to create a temporary signed URL to access the file.
-
-Using the id returned from the `upload()` function we call the `getSignedUrl()` function. When we get the signed url, we put it into some simple HTML to display it to the user (this is the main difference between the two `server.js` routes):
-
-**server.js**
-```javascript
-    // Confirm upload succeeded:
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It&#39;s important to note that the &lt;code&gt;id&lt;/code&gt; we pass back to &lt;code&gt;server.js&lt;/code&gt; isn&#39;t returned to us from the &lt;code&gt;s3.putObject()&lt;/code&gt; method. &lt;code&gt;s3()&lt;/code&gt; returns an &lt;code&gt;ETag&lt;/code&gt;, which isn&#39;t of much use for what we&#39;re doing, but it&#39;s enough to confirm that the upload completed successfully (What are ETags? &lt;a href=&quot;https://teppen.io/2018/06/23/aws_s3_etags/&quot;&gt;teppen.io/2018/06/23/aws_s3_etags/&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Going back to server.js, this is where we would want to store our &lt;code&gt;id&lt;/code&gt; somewhere. This string is what we will need to retrieve the file from s3. In this app we&#39;re just demoing the upload functionality so we don&#39;t store it anywhere. We access it once though to show the user that it worked. This is where we will use the other function in the &lt;code&gt;aws&lt;/code&gt; module, &lt;code&gt;getSignedUrl&lt;/code&gt;. Because our S3 bucket permissions only let our AWS user access objects, and otherwise our bucket permissions are &amp;quot;No public access&amp;quot;, we need to create a temporary signed URL to access the file.&lt;/p&gt;
+&lt;p&gt;Using the id returned from the &lt;code&gt;upload()&lt;/code&gt; function we call the &lt;code&gt;getSignedUrl()&lt;/code&gt; function. When we get the signed url, we put it into some simple HTML to display it to the user (this is the main difference between the two &lt;code&gt;server.js&lt;/code&gt; routes):&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;server.js&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;    // Confirm upload succeeded:
     if (!response.success || response.error) {
       throw &amp;quot;Reponse Error: &amp;quot; + response.error;
     }
