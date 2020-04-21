@@ -8,7 +8,7 @@ tags:
 
 ---
 
-Whenever I start a new web project there is an ominous literal, figurative, "cloud" lurking on the horizon: Will this project get complicated enough to need to be connected to S3 for file upload?
+Whenever I start a new web project there is an ominous, literal, figurative, "cloud" lurking on the horizon: Will this project get complicated enough to need to be connected to S3 for file upload?
 
 More often than I'd like the answer is yes, and at this point I've re-learned how to connect a Node.js app to S3 more times than I'd like. Rather than keep learning just enough S3 to get a project working, and then instantly forgetting it, I decided to write the process down so I can follow my own instructions.
 
@@ -268,7 +268,7 @@ This is all wrapped in a `try` / `catch` block so if there aren't any errors we 
 
     // Send the object with success and the key back to server.js
     return(s3Data)
-``
+```
 
 It's important to note that the `id` we pass back to `server.js` isn't returned to us from the `s3.putObject()` method. `s3()` returns an `ETag`, which isn't of much use for what we're doing, but it's enough to confirm that the upload completed successfully (What are ETags? [teppen.io/2018/06/23/aws_s3_etags/](https://teppen.io/2018/06/23/aws_s3_etags/)).
 
