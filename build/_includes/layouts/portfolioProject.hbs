@@ -13,8 +13,12 @@
       {{> portfolio/projectHeader }}
       
       <ul class="links">
-        <li>Project URL: <a href="{{project_url}}" target="_blank">{{project_url}}</a></li>
-        <li>Source URL: <a href="{{source_url}}" target="_blank">{{source_url}}</a></li>
+        {{#if project_url}}
+          <li>Project URL: <a href="{{project_url}}" target="_blank">{{project_url}}</a></li>
+        {{/if}}
+        {{#if source_url}}
+          <li>Source URL: <a href="{{source_url}}" target="_blank">{{source_url}}</a></li>
+        {{/if}}
       </ul>
       
       {{{ content }}}
