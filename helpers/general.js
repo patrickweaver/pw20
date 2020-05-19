@@ -17,7 +17,17 @@ module.exports = {
         ignoreImage: true,
         uppercaseHeadings: false
       }
-      return htmlToText.fromString(marked(body), options).substring(0, 349);
+      
+      let previewText = htmlToText.fromString(marked(body), options).substring(0, 349);
+      let lastChar = previewText.substring(348, 349);
+      
+      if (lastChar === '.' || lastChar === ',') {
+        previewText = previewText.substring(0, 348);
+      }
+      
+      previewText += '…';
+      
+      return previewText;
     }
     return '';
   }

@@ -16,7 +16,6 @@ tags:
   - nyc
 images:
   - https://pwapi.s3.amazonaws.com/uploads/e42ca7c1-fa08-4f43-9907-a37002a97ba8
-
 ---
 
 A subway dashboard that shows train statuses using emoji.

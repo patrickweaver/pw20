@@ -13,11 +13,15 @@ module.exports = function(eleventyConfig) {
   // Merge data in .json files in diretories with data in each file
   eleventyConfig.setDataDeepMerge(true);
   
+  // Collections
+  
+  // List of Tags
+  eleventyConfig.addCollection("portfolioTagList", require("./_11ty/getPortfolioTagList"));
+  
   // Create postsReversed tag with posts tag in reverse order
   eleventyConfig.addCollection("postsReversed", function(collection) {
    return collection.getFilteredByTag("posts").reverse();
   });
-  
   
   // Shortcodes/Helpers:
   eleventyConfig.addShortcode("readableDate", dateHelpers.readableDate);
@@ -29,7 +33,7 @@ module.exports = function(eleventyConfig) {
   
   
   // In progress, create custom start_date, end_date filter
-  eleventyConfig.addCollection("portfolioSorted", portfolioHelpers.sort);
+  eleventyConfig.addCollection("portfolioSorted", portfolioHelpers.sort.bind(this, false));
 
   
   
@@ -41,8 +45,16 @@ module.exports = function(eleventyConfig) {
     templateFormats: [
       'md',
       'css',
+      'js',
       'hbs',
-      'njk'
+      'njk',
+      'gif',
+      'jpg',
+      'jpeg',
+      'png',
+      'mp3',
+      'mp4',
+      'pdf'
     ]
   }
 };

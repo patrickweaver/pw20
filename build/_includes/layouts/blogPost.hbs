@@ -2,8 +2,9 @@
 <html lang="en">
   {{> boilerplate/head }}
   <body>
-    {{> boilerplate/siteHeader }}
-    
+    <head>
+      {{> boilerplate/siteHeader }}
+    </head>
     <h2>
       Blog
     </h2>
@@ -14,6 +15,6 @@
       
       {{{ content }}}
     </div>
-    
+    {{> boilerplate/analytics }}
   </body>
 </html>

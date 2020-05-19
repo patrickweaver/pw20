@@ -33,18 +33,22 @@
     {{#each this.tags}}
       {{#if (eq this 'projects')}}
       {{else}}
-        <li class="tag-container">{{this}}</li>
+        <li class="tag-container">
+          <a href="/portfolio/tags/{{this}}">{{this}}</a></li>
       {{/if}}
     {{/each}}
   </ul>
   
   {{#if this.index}}
-    <p>
+    <p class="project-short-description">
       {{#if this.short_description}}
         {{this.short_description}}
       {{else}}
         {{previewText this.templateContent}}
       {{/if}}
+    </p>
+    <p class="read-more">
+      <a href="{{ this.url }}">Read More →</a>
     </p>
   {{/if}}
 

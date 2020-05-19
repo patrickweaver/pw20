@@ -1,18 +1,18 @@
 {
   "name": "pw20",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A personal website made with eleventy",
   "main": "server.js",
   "scripts": {
     "build": "npx @11ty/eleventy",
-    "start": "npx @11ty/eleventy --serve --port=3000"
+    "start": "rm -rf dist && npx @11ty/eleventy --serve --port=3000"
   },
   "dependencies": {
-    "@11ty/eleventy": "^0.9.0",
+    "@11ty/eleventy": "^0.10.0",
     "@11ty/eleventy-plugin-rss": "^1.0.7",
     "moment": "^2.24.0",
     "html-to-text": "^5.1.1",
-    "marked": "^0.6.3"
+    "marked": "^0.8.0"
   },
   "engines": {
     "node": "10.x"

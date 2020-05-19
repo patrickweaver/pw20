@@ -7,7 +7,7 @@ short_description: DIY Encryption is a web app that encrypts text in 3 different
 start_date: 2017-05-01
 end_date: 2017-10-25
 project_url: https://diy-encryption.glitch.me/
-source_url: https://github.com/patrickweaver/encryption-flask/
+source_url: https://github.com/patrickweaver/diy-encryption/
 status: Complete
 tags:
   - education
