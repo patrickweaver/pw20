@@ -1,21 +1,6 @@
 const moment = require("moment");
 
 module.exports = {
-  
-  statusColor: function(status) {
-    switch(status) {
-      case 'Complete':
-        return '#FF6186';
-        break;
-      case 'In Progress':
-        return '#d0ccff';
-        break;
-        
-      default:
-        return '#5F5F5F';
-    }
-  },
-  
   sort: function(tag, collection) {
     
     function portfolioCompare(a, b) {
@@ -37,6 +22,29 @@ module.exports = {
       return collection.getFilteredByTag("projects", tag).sort(portfolioCompare);
     }
     
+  },
+
+  shortUrl: function(url) {
+    if (url.substring(0, 4) === "http") {
+      return url.substring(url.indexOf("//") + 2, url.length);
+    } else {
+      return url;
+    }
+  },
+
+  statusColor: function(status) {
+    switch(status) {
+      case 'Complete':
+        return '#FF6186';
+        break;
+      case 'In Progress':
+        return '#d0ccff';
+        break;
+      case 'On Hold':
+        return '#EFAF8F'
+        
+      default:
+        return '#AFAFBF';
+    }
   }
-  
 }

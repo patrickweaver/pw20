@@ -27,6 +27,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addShortcode("readableDate", dateHelpers.readableDate);
   eleventyConfig.addShortcode("projectDate", dateHelpers.projectDate);
   eleventyConfig.addShortcode("previewText", generalHelpers.previewText);
+  eleventyConfig.addShortcode("shortUrl", portfolioHelpers.shortUrl);
   eleventyConfig.addShortcode("statusColor", portfolioHelpers.statusColor);
   eleventyConfig.addShortcode("isProject", portfolioHelpers.isProject);
   eleventyConfig.addShortcode("eq", generalHelpers.eq);
