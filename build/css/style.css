@@ -259,23 +259,15 @@ ul.project-images, ul.links {
 
 /* links */
 
-#links ul {
+.links ul {
   padding-left: 25px;
   list-style-type: square;
 }
 
-#links a {
+.links a {
   color: black;
-  text-decoration: underline dotted;
+  word-break: break-word;
 }
-
-#links a:hover {
-  text-decoration: underline;
-}
-
-
-
-
 
 /* # # # # # # # # # # # */
 /* Responsive            */
