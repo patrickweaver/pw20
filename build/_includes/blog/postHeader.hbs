@@ -10,12 +10,31 @@
   </a>
 </h3>
 
-{{#if this.cover_image_url }}
-  <a href="{{ this.url }}">
-    <img class="blog-cover-image" src="{{ this.cover_image_url }}" alt="{{ this.cover_image_alt }}" />
-  </a>
-{{/if }}
+<div class="blog-cover">
+  {{#if this.index}}
+    <div class="post-preview-text">
+      <p class="post-preview-date">
+        {{ readableDate this.date }}
+      </p>
+      
+      <p class="blog-post-preview">
+        {{ previewText this.templateContent }} <a href="{{ this.url }}">Read More →</a>
+      </p>
+    </div>
+  {{/if}}
 
-<p>
-  {{ readableDate this.date }}
-</p>
+
+  {{#if this.cover_image_url }}
+    <div class="post-header-image">
+      <a href="{{ this.url }}">
+        <img class="blog-cover-image" src="{{ this.cover_image_url }}" alt="{{ this.cover_image_alt }}" />
+      </a>
+    </div>
+  {{/if }}
+
+  {{#unless this.index}}
+    <p>
+      {{ readableDate this.date }}
+    </p>
+  {{/unless}}
+</div>
