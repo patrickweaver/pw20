@@ -1,4 +1,4 @@
-<h3>
+<h3 class="post-title">
   <a href="{{ this.url }}">
     {{#if this.title }}
       {{ this.title }}
@@ -11,18 +11,10 @@
 </h3>
 
 <div class="blog-cover">
-  {{#if this.index}}
-    <div class="post-preview-text">
-      <p class="post-preview-date">
-        {{ readableDate this.date }}
-      </p>
-      
-      <p class="blog-post-preview">
-        {{ previewText this.templateContent }} <a href="{{ this.url }}">Read More →</a>
-      </p>
-    </div>
-  {{/if}}
-
+  
+  <p class="post-preview-date">
+    {{ readableDate this.date }}
+  </p>
 
   {{#if this.cover_image_url }}
     <div class="post-header-image">
@@ -32,9 +24,9 @@
     </div>
   {{/if }}
 
-  {{#unless this.index}}
-    <p>
-      {{ readableDate this.date }}
+  {{#if this.index}}
+    <p class="blog-post-preview-text">
+      {{ previewText this.templateContent }} <a href="{{ this.url }}">Read More →</a>
     </p>
-  {{/unless}}
+  {{/if}}
 </div>
