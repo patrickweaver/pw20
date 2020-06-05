@@ -4,12 +4,13 @@ title: Patrick Weaver | Links
 pageHeader: Links
 ---
 
-<div id="links">
+<ul id="links">
+  <li><a href="/rss.xml">Blog RSS Feed</a></li>
+  <hr />
+  <li><a href="https://dev.to/patrickweaver" target="blank">Dev.to</a></li>
+  <li><a href="https://github.com/patrickweaver" target="blank">Github</a></li>
+  <li><a href="https://www.instagram.com/patrickweave_r/" target="blank">Instagram</a></li>
+  <li><a href="https://www.linkedin.com/in/patrickjweaver/" target="blank">LinkedIn</a></li>
+  <li><a href="https://twitter.com/patrickweave_r" target="blank">Twitter</a></li>
 
-  - <a href="https://dev.to/patrickweaver" target="blank">Dev.to</a>
-  - <a href="https://github.com/patrickweaver" target="blank">Github</a>
-  - <a href="https://www.instagram.com/patrickweave_r/" target="blank">Instagram</a>
-  - <a href="https://www.linkedin.com/in/patrickjweaver/" target="blank">LinkedIn</a>
-  - <a href="https://twitter.com/patrickweave_r" target="blank">Twitter</a>
-
-</div>
+</ul>
