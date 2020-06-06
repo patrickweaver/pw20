@@ -42,6 +42,16 @@ img {
   max-width: 100%;
 }
 
+pre {
+  white-space: pre-wrap;
+}
+
+pre {
+  background-color: #def0fc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
 p.s img {
   display: block;
   max-width: 100%;
