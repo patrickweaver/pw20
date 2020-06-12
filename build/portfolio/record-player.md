@@ -7,7 +7,7 @@ short_description: Play your old records by taking a picture with this computer 
 start_date: 2018-04-28
 end_date: 2018-05-03
 project_url: https://record-player.glitch.me
-source_url: https://github.com/PatrickWeaver/record-player/
+source_url: https://github.com/PatrickWeaver/record-player
 status: Complete
 tags:
   - javascript
