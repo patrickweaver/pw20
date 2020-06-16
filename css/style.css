@@ -133,11 +133,25 @@ ul.tags li, .tag {
   display: inline-block;
   text-decoration: none;
   color: #333;
-  margin: 5px 10px 5px 0;
+  margin: 5px 10px 5px 5px;
+  box-shadow: -5px 5px 5px #DFDFDF;
+}
+
+ul.tags li:hover, .tag:hover {
+  box-shadow: -5px 5px 5px #CFCFCF;
+}
+
+ul.tags li:active, .tag:active {
+  margin: 5px 13px 2px 2px;
+  box-shadow: -2px 2px 5px #CFCFCF;
 }
 
 ul.tags li, .blob-tag {
   background-color: white;
+}
+
+.tag a:hover {
+  text-decoration: underline;
 }
 
 .blob-tag {
@@ -145,7 +159,7 @@ ul.tags li, .blob-tag {
   font-weight: normal;
 }
 
-ul.tags > li > a {
+ul.tags > li > a, .tag a {
   text-decoration: none;
   color: black;
 }
@@ -252,6 +266,12 @@ form textarea {
 
 .cover img {
   max-height: 400px;
+  box-shadow: -7px 7px 5px #DFDFDF;
+  margin-top: 7px;
+}
+
+.cover img:hover {
+  box-shadow: -7px 7px 5px #CFCFCF;
 }
 
 .status-tag {
