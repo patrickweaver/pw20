@@ -10,6 +10,7 @@ project_url: http://pleaseconfirmyouarearobot.glitch.me
 source_url: https://github.com/patrickweaver/please-confirm-you-are-a-robot
 status: Complete
 tags:
+  - Complete
   - art
   - javascript
   - node

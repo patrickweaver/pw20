@@ -10,6 +10,7 @@ project_url: https://lostnyc-staging.glitch.me
 source_url: https://github.com/patrickweaver/lostnyc
 status: On Hold
 tags:
+  - On Hold
   - javascript
   - svelte
   - nyc

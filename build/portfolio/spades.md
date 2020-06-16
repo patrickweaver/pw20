@@ -10,6 +10,7 @@ project_url: http://spades.glitch.me/
 source_url: https://github.com/patrickweaver/spades
 status: In Progress
 tags:
+  - In Progress
   - flask
   - games
   - javascript

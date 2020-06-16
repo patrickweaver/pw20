@@ -10,6 +10,7 @@ project_url: http://remixable-space-invaders.glitch.me
 source_url: https://github.com/patrickweaver/space-invaders-remixable
 status: Complete
 tags:
+  - Complete
   - education
   - games
   - javascript

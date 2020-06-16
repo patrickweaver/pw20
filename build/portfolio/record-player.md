@@ -10,6 +10,7 @@ project_url: https://record-player.glitch.me
 source_url: https://github.com/PatrickWeaver/record-player
 status: Complete
 tags:
+  - Complete
   - javascript
   - node
   - python

@@ -10,6 +10,7 @@ project_url: https://diy-encryption.glitch.me
 source_url: https://github.com/patrickweaver/diy-encryption
 status: Complete
 tags:
+  - Complete
   - education
   - flask
   - python

@@ -10,6 +10,7 @@ project_url: http://emojiwallpaper.glitch.me
 source_url: https://github.com/patrickweaver/emoji-wallpaper
 status: Complete
 tags:
+  - Complete
   - art
   - javascript
 images:

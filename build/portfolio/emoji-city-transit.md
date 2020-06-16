@@ -10,6 +10,7 @@ project_url: https://emojicitytransit.glitch.me
 source_url: https://glitch.com/edit/#!/emojicitytransit
 status: Complete
 tags:
+  - Complete
   - experiments
   - javascript
   - node

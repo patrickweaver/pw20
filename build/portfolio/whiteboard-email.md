@@ -8,8 +8,9 @@ start_date: 2019-08-17
 end_date:
 project_url: https://ocr-email.glitch.me/
 source_url: https://glitch.com/edit/#!/ocr-email
-status: In Progress
+status: On Hold
 tags:
+  - On Hold
   - experiments
   - javascript
   - machine learning

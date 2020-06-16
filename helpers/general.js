@@ -2,6 +2,10 @@ const htmlToText = require("html-to-text");
 const marked = require("marked");
 
 module.exports = {
+
+  isSameString: function(stringA, stringB) {
+    return stringA.toUpperCase() === stringB.toUpperCase();
+  },
   
   eq: function() {
     const args = Array.prototype.slice.call(arguments, 0, -1);

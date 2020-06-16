@@ -10,6 +10,7 @@ project_url: https://glitch-to-trello.glitch.me
 source_url: https://github.com/patrickweaver/glitch-to-trello
 status: Complete
 tags:
+  - Complete
   - coffeescript
   - experiments
   - node

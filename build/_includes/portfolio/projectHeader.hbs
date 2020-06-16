@@ -20,7 +20,7 @@
   {{#if this.status}}
     <div class="tag-container status-tag">
       <div class="tag" style="background-color: {{ statusColor this.status}};">
-        {{ this.status }}
+        <a href="/portfolio/tags/{{this.status}}">{{ this.status }}</a>
       </div>
     </div>
   {{/if}}
@@ -31,11 +31,12 @@
   
   <ul class="tags project-tag-list">
     {{#each this.tags}}
-      {{#if (eq this 'projects')}}
-      {{else}}
+      {{#unless (eq this 'projects')}}
+      {{#unless (isSameString this ../this.status)}}
         <li class="tag-container">
           <a href="/portfolio/tags/{{this}}">{{this}}</a></li>
-      {{/if}}
+      {{/unless}}
+      {{/unless}}
     {{/each}}
   </ul>
   

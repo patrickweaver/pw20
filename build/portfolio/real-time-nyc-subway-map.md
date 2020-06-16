@@ -10,6 +10,7 @@ project_url: null
 source_url: https://github.com/patrickweaver/nyc-subway
 status: In Progress
 tags:
+  - In Progress
   - javascript
   - svelte
   - nyc

@@ -10,6 +10,7 @@ project_url: https://broker-fee.glitch.me
 source_url: https://glitch.com/edit/#!/broker-fee
 status: Complete
 tags:
+  - Complete
   - javascript
   - nyc
 images:

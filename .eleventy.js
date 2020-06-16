@@ -30,6 +30,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addShortcode("shortUrl", portfolioHelpers.shortUrl);
   eleventyConfig.addShortcode("statusColor", portfolioHelpers.statusColor);
   eleventyConfig.addShortcode("isProject", portfolioHelpers.isProject);
+  eleventyConfig.addShortcode("isSameString", generalHelpers.isSameString);
   eleventyConfig.addShortcode("eq", generalHelpers.eq);
   
   

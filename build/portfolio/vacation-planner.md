@@ -10,6 +10,7 @@ project_url: https://wintercal.glitch.me
 source_url: https://github.com/patrickweaver/vacation-planner
 status: Complete
 tags:
+  - Complete
   - javascript
   - react
 images:

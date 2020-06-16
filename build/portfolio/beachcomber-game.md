@@ -10,6 +10,7 @@ project_url: https://beachcomber.glitch.me
 source_url: https://glitch.com/edit/#!/beachcomber
 status: Complete
 tags:
+  - Complete
   - games
   - javascript
   - react
