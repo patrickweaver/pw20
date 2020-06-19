@@ -4,7 +4,7 @@ title: Patrick Weaver | Now
 pageHeader: Now
 ---
 
-#### 1/22/19: A bookmarklet to download images from a Google Doc
+#### 11/22/19: A bookmarklet to download images from a Google Doc
 
 [![A screenshot of the bookmarklet install page](https://pwapi.s3.amazonaws.com/uploads/3ed94c07-e8d4-4752-8a71-39e458b6cef4.png)](https://gdoc-image-dl.glitch.me/)
 
