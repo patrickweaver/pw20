@@ -4,7 +4,7 @@
   <subtitle></subtitle>
   <link href="https://patrickweaver.net/feed.xml" rel="self"/>
   <link href="https://patrickweaver.net/blog/"/>
-  <updated>2020-04-21T00:00:00-00:00</updated>
+  <updated>2020-07-16T00:00:00-00:00</updated>
   <id>https://patrickweaver.net/</id>
   <author>
     <name>Patrick Weaver</name>
@@ -482,6 +482,42 @@ async function getSignedUrl(key) {
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;That&#39;s it! Try out the app (in this example uploads are limited in size to 4KB for safety). You can &lt;a href=&quot;https://glitch.com/edit/#!/aws-s3-example&quot;&gt;remix the app on Glitch&lt;/a&gt; or &lt;a href=&quot;https://github.com/patrickweaver/aws-s3-example&quot;&gt;fork it on GitHub&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>How to Download an Image from a Google Doc</title>
+    <link href="https://patrickweaver.net/blog/how-to-download-an-image-from-a-google-doc/"/>
+    <updated>2020-07-16T00:00:00-00:00</updated>
+    <id>https://patrickweaver.net/blog/how-to-download-an-image-from-a-google-doc/</id>
+    <content type="html">&lt;p&gt;For some reason Google hasn&#39;t built in a way for you to download images in Google docs! There are workarounds to get those image files like &lt;a href=&quot;https://twitter.com/corduroy/status/1184758335934849025&quot;&gt;using Google Keep&lt;/a&gt;, or &lt;a href=&quot;https://twitter.com/tonyvincent/status/1021726699178708993&quot;&gt;downloading your whole doc as a .zip file&lt;/a&gt;, but these have always felt like too many steps.&lt;/p&gt;
+&lt;p&gt;And this is something that people really want!&lt;/p&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;a href=&quot;https://twitter.com/user/status/1190182191520788480&quot;&gt;&lt;/a&gt;&lt;/blockquote&gt; &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;a href=&quot;https://twitter.com/user/status/1277776054380265478&quot;&gt;&lt;/a&gt;&lt;/blockquote&gt; &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;a href=&quot;https://twitter.com/user/status/710516705303384068&quot;&gt;&lt;/a&gt;&lt;/blockquote&gt; &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;a href=&quot;https://twitter.com/user/status/1227582581350240257&quot;&gt;&lt;/a&gt;&lt;/blockquote&gt; &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;a href=&quot;https://twitter.com/user/status/1225516004375179265&quot;&gt;&lt;/a&gt;&lt;/blockquote&gt; &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;a href=&quot;https://twitter.com/user/status/1249761603559378945&quot;&gt;&lt;/a&gt;&lt;/blockquote&gt; &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;a href=&quot;https://twitter.com/user/status/990395429383622656&quot;&gt;&lt;/a&gt;&lt;/blockquote&gt; &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;p&gt;As Steve Krouse points out here, it is possible to get the real URL of the image in your doc (but confusingly, as soon as you click on the image to select it the URL becomes obfuscated!).&lt;/p&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;a href=&quot;https://twitter.com/user/status/1190358282877186050&quot;&gt;&lt;/a&gt;&lt;/blockquote&gt; &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;p&gt;I also noticed the URLs in the source, and decided to make an easy way to access it. The one trick ended up being, because clicking on the image made it disappear, finding a way to tell the code which image you wanted!&lt;/p&gt;
+&lt;p&gt;I looked through some JavaScript documentation and realized I could use the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseover_event&quot;&gt;mouseover&lt;/a&gt; event to detect when someone was hovering over the image. Unfortunately this means that it won&#39;t work on a touchscreen device, but I&#39;m guessing that most people who want to download an image are on a traditional computer.&lt;/p&gt;
+&lt;h2&gt;How does it work?&lt;/h2&gt;
+&lt;p&gt;I needed a way to run my code on any Google Doc, there&#39;s probably a way to make Google Doc or Chrome extension to do this, but since I was asking people to run code in their potentially private docs I wanted to make the code as short and open source as possible.&lt;/p&gt;
+&lt;p&gt;I decided that the best way to do this was a &lt;a href=&quot;https://support.mozilla.org/en-US/kb/bookmarklets-perform-common-web-page-tasks&quot;&gt;bookmarklet&lt;/a&gt;. If you&#39;re unfamiliar with bookmarklets, they&#39;re bookmarks (usually placed in your bookmarks toolbar (Cmd-Shift-B to toggle this on and off on a Mac), that instead of navigating to a webpage, run JavaScript when you click them.&lt;/p&gt;
+&lt;h2&gt;Great! Tell me how to do it!&lt;/h2&gt;
+&lt;p&gt;To get started you&#39;ll have to &amp;quot;install&amp;quot; the bookmarklet. This is easy to do, and just means dragging a button into your bookmarks toolbar. &lt;a href=&quot;https://gdoc-image-dl.glitch.me/&quot;&gt;I&#39;ve hosted it on Glitch here&lt;/a&gt;. You can even drag it straight from one of the buttons on the embed below:&lt;/p&gt;
+&lt;div class=&quot;glitch-embed-wrap&quot; style=&quot;height: 420px; width: 100%;&quot;&gt;&lt;iframe allow=&quot;geolocation; microphone; camera; midi; encrypted-media&quot; src=&quot;https://glitch.com/embed/#!/embed/gdoc-image-dl?path=README.md&amp;previewSize=100&quot; alt=&quot;record-player on Glitch&quot; style=&quot;height: 100%; width: 100%; border: 0;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+&lt;p&gt;The instructions are simple!&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Drag one of the bookmarklets below to your bookmarks toolbar. The text displayed is what will be show on the toolbar:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;🖼⤵️ GDoc Image DL
+2. Then, when you&#39;re on a Google Doc, click the bookmarklet, then hover over an image embeded in the doc. Depending on your browser settings it will either download immediately, or open the actual image in a new tab.&lt;/p&gt;
+&lt;h2&gt;Great my problems are solved forever!&lt;/h2&gt;
+&lt;p&gt;No guarantees that this will work long term, a quick look at the source code for any Google Doc will show that they&#39;re very complex! I wouldn&#39;t be surprised if Google changes the way these URLs work in the future, but this tool has worked for 6 months so maybe not!&lt;/p&gt;
+&lt;p&gt;Long term I hope that they build in a way for people to download their images, but for now I hope this is helpful!&lt;/p&gt;
 </content>
   </entry>
 </feed>
