@@ -216,6 +216,8 @@ form textarea {
   grid-column: 1 / 2;
   margin-top: 0;
   text-align: justify;
+  font-size: 90%;
+  line-height: 130%;
 }
 
 .post-preview .post-header-image, .post-preview .blog-post-preview-text {
