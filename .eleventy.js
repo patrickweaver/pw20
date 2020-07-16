@@ -4,6 +4,7 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const generalHelpers = require('./helpers/general');
 const dateHelpers = require("./helpers/dates");
 const portfolioHelpers = require("./helpers/portfolio");
+const embedHelpers = require("./helpers/embed");
 
 module.exports = function(eleventyConfig) {
   
@@ -22,6 +23,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("postsReversed", function(collection) {
    return collection.getFilteredByTag("posts").reverse();
   });
+
+  eleventyConfig.setLiquidOptions({
+    dynamicPartials: true,
+    strict_filters: true
+  });
   
   // Shortcodes/Helpers:
   eleventyConfig.addShortcode("readableDate", dateHelpers.readableDate);
@@ -32,6 +38,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addShortcode("isProject", portfolioHelpers.isProject);
   eleventyConfig.addShortcode("isSameString", generalHelpers.isSameString);
   eleventyConfig.addShortcode("eq", generalHelpers.eq);
+  eleventyConfig.addShortcode("twitter", embedHelpers.twitter);
+  eleventyConfig.addShortcode("glitch", embedHelpers.glitch);
   
   
   // In progress, create custom start_date, end_date filter
