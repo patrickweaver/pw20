@@ -21,8 +21,8 @@ module.exports = {
         ignoreImage: true,
         uppercaseHeadings: false
       }
-      
-      let previewText = htmlToText.fromString(marked(body), options).substring(0, 349);
+      const plainText = htmlToText.fromString(marked(body), options)
+      let previewText = plainText.substring(0, 349);
       // Make this more general
       weirdCharIndex = previewText.indexOf(">");
       if (weirdCharIndex >=0) {
@@ -38,8 +38,10 @@ module.exports = {
       if (lastChar === '.' || lastChar === ',' || lastChar === "!") {
         previewText = previewText.substring(0, 348);
       }
-      
-      previewText += '…';
+
+      if (plainText.length > previewText.length) {
+        previewText += '…';
+      }
       
       return previewText;
     }

@@ -26,7 +26,7 @@
 
   {{#if this.index}}
     <p class="blog-post-preview-text">
-      {{ previewText this.templateContent }} <a href="{{ this.url }}">Read More →</a>
+      {{ previewText this.templateContent }} <a href="{{ this.url }}"> {{ readMore this.templateContent }} →</a>
     </p>
   {{/if}}
 </div>
