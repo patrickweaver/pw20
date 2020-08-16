@@ -17,7 +17,11 @@ We hosted our first open [Maker Night](https://mouse.org/makernight) in March 20
 
 ![](https://cdn-images-1.medium.com/max/800/1*eku7Cc10Y9NSFAm7MP7tYA.jpeg)![](https://cdn-images-1.medium.com/max/400/1*hA1_vnNXOvLg0WCWt6PluA.jpeg)![](https://cdn-images-1.medium.com/max/1200/1*ieyZhs_PDEsjWpTP8sDWaw.jpeg)
 
-<figcaption>Pictures from Maker Night at [Mouse](http://mouse.org)</figcaption>
+<figcaption>
+
+Pictures from Maker Night at [Mouse](http://mouse.org)
+
+</figcaption>
 
 </figure>
 

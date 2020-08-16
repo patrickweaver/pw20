@@ -146,6 +146,10 @@ All the boards we tested worked great once we figured out the tricks of each and
 
 ![](https://cdn-images-1.medium.com/max/1600/1*dNpQjlUdHIzaTusjw9ERRw.jpeg)
  
-<figcaption>Making a light up phone case at [Mouse](https://medium.com/@mouse_org) [Maker Night](https://mouse.org/makernight)</figcaption>
+<figcaption>
+
+Making a light up phone case at [Mouse](https://medium.com/@mouse_org) [Maker Night](https://mouse.org/makernight)
+
+</figcaption>
 
 </figure>
