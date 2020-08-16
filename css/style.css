@@ -52,6 +52,14 @@ pre {
   border-radius: 5px;
 }
 
+figure p {
+  margin: 0;
+}
+
+figcaption {
+  font-size: 18px;
+}
+
 p.s img {
   display: block;
   max-width: 100%;
@@ -188,6 +196,11 @@ form textarea {
 /* # # # # # # # # # # # */
 /* Blog                  */
 /* # # # # # # # # # # # */
+
+.post ul {
+  list-style-type: disc;
+  padding-inline-start: 40px;
+}
 
 .post-title {
   margin: .5em 0;
