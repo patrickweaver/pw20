@@ -22,7 +22,7 @@ module.exports = function(eleventyConfig) {
   
   // Create postsReversed tag with posts tag in reverse order
   eleventyConfig.addCollection("postsReversed", function(collection) {
-   return collection.getFilteredByTag("posts").reverse();
+    return collection.getFilteredByTag("posts").reverse();
   });
 
   eleventyConfig.setLiquidOptions({
@@ -37,6 +37,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addShortcode("previewText", generalHelpers.previewText);
   eleventyConfig.addShortcode("isSameString", generalHelpers.isSameString);
   eleventyConfig.addShortcode("eq", generalHelpers.eq);
+  eleventyConfig.addShortcode("or", generalHelpers.or);
+  eleventyConfig.addShortcode("not", generalHelpers.not);
 
   eleventyConfig.addShortcode("shortUrl", portfolioHelpers.shortUrl);
   eleventyConfig.addShortcode("statusColor", portfolioHelpers.statusColor);

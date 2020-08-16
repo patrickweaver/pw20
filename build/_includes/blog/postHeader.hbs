@@ -16,12 +16,14 @@
     {{ readableDate this.date }}
   </p>
 
-  {{#if this.cover_image_url }}
-    <div class="post-header-image">
-      <a href="{{ this.url }}">
-        <img class="blog-cover-image" src="{{ this.cover_image_url }}" alt="{{ this.cover_image_alt }}" />
-      </a>
-    </div>
+  {{#if (or this.index (not this.do_not_show_cover_at_top)) }}
+    {{#if this.cover_image_url }}
+      <div class="post-header-image">
+        <a href="{{ this.url }}">
+          <img class="blog-cover-image" src="{{ this.cover_image_url }}" alt="{{ this.cover_image_alt }}" />
+        </a>
+      </div>
+    {{/if }}
   {{/if }}
 
   {{#if this.index}}

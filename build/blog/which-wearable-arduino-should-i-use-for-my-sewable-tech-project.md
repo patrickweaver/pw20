@@ -4,21 +4,30 @@ title: Which Wearable Arduino Should I Use For My Sewable Tech Project?
 date: 2017-09-29
 cover_image_url: https://pwapi.s3.amazonaws.com/uploads/1218000f-5621-4d6c-8d19-2de6c9670946
 cover_image_alt: A picture of 7 different sewable microcontrollers and a Mouse sticker
+do_not_show_cover_at_top: true
 tags:
 
 ---
 
 This fall [Mouse](https://medium.com/@mouse_org) ([mouse.org](http://mouse.org)) launched our brand new [Sewable Tech Course](https://mouse.org/mouse-courses)! The course introduces learners to circuitry and electronics without the abstraction of a breadboard. In the final two projects in the course we use a wearable Arduino to prototype a DIY activity tracker.
  
+ <figure>
+
 ![](https://cdn-images-1.medium.com/max/1600/1*gfNKPipgo0Yp_bZLJLg7MQ.png)
  
-###### Sew-matic for DIY Wearable Goal Tracker from Mouse Create
+<figcaption>Sew-matic for DIY Wearable Goal Tracker from Mouse Create</figcaption>
+
+</figure>
  
 The big question we ran into when I was helping my colleague [Kate](https://twitter.com/katermouse) prototype the course was, which wearable Arduino to use. Along the way we tested 7 Arduino compatible microcontrollers and settled on recommending a [LilyPad Arduino USB](https://www.sparkfun.com/products/12049), but there are advantages to each of the Arduinos we tested and different kinds projects would benefit from including each of them.
  
+ <figure>
+
 ![](https://cdn-images-1.medium.com/max/1600/1*nxNOfE_aAIHrgXcgX8GSLQ.jpeg)
  
-###### Our collection of wearable arduinos
+<figcaption>Our collection of wearable arduinos</figcaption>
+
+</figure>
  
 1. [Sparkfun LilyPad Arduino USB](https://www.sparkfun.com/products/12049)
 2. [Generic LilyPad Arduino USB](https://www.ebay.com/sch/i.html?_nkw=LilyPad+Arduino+USB+ATmega32U4)
@@ -133,6 +142,10 @@ As with other Adafruit Boards if you are using the Arduino IDE instead of Python
  
 All the boards we tested worked great once we figured out the tricks of each and any will work for most sewable tech projects. Once you decide on a board, check out [Mouse Create](https://mouse.org/work) to find some fun projects!
  
+ <figure>
+
 ![](https://cdn-images-1.medium.com/max/1600/1*dNpQjlUdHIzaTusjw9ERRw.jpeg)
  
-###### Making a light up phone case at [Mouse](https://medium.com/@mouse_org) [Maker Night](https://mouse.org/makernight)
+<figcaption>Making a light up phone case at [Mouse](https://medium.com/@mouse_org) [Maker Night](https://mouse.org/makernight)</figcaption>
+
+</figure>

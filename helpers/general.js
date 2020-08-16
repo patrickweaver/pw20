@@ -9,10 +9,18 @@ module.exports = {
   
   eq: function() {
     const args = Array.prototype.slice.call(arguments, 0, -1);
-    return args.every(function (expression) {
-      return args[0] === expression;
-    });
+    return args.every(expression => args[0] === expression);
   },
+
+  or: function() {
+    const args = Array.prototype.slice.call(arguments, 0, -1);
+    for (let i in args) {
+      if (args[i]) return true;
+    }
+    return false;
+  },
+
+  not: a => !a,
   
   previewText: function(body) {
     if (body){

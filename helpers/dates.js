@@ -3,7 +3,7 @@ const moment = require("moment");
 module.exports = {
   
   readableDate: function(date) {
-    return moment(new Date(date)).format("MMMM D, YYYY"); 
+    return moment(new Date(date)).utcOffset(0).format("MMMM D, YYYY"); 
   },
   
   projectDate: function(startDate, endDate) {

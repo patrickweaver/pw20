@@ -10,6 +10,8 @@ tags:
 
 Earlier this year I wanted to explore the new [async/await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/async_function) functionality in Javascript so I started playing around with [a project](https://async-await-machine.glitch.me/) on Glitch ([glitch.com](https://glitch.com/)) that would call one API after another, then generate new API call options from each cycle. I compiled a long list of potential APIs to use, but didn’t get past chaining together an [API that will respond with a picture of a specific breed of dog](https://dog.ceo/dog-api/), and the [Wikipedia API](https://www.mediawiki.org/wiki/API:Main_page) which could respond with the pages that came up in a search for the name of the breed.
 
+<figure>
+
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
   <iframe
     allow="geolocation; microphone; camera; midi; encrypted-media"
@@ -19,7 +21,9 @@ Earlier this year I wanted to explore the new [async/await](https://developer.mo
   </iframe>
 </div>
 
-###### A Glitch embed of my Dog → Wikipedia API prototype: click on the name of a dog and you will get a picture of that dog, and a list of pages linked from that dog’s Wikipedia page.
+<figcaption>A Glitch embed of my Dog → Wikipedia API prototype: click on the name of a dog and you will get a picture of that dog, and a list of pages linked from that dog’s Wikipedia page.</figcaption>
+
+</figure>
 
 I started exploring what other APIs I could connect and realized that most of them seemed to enforce a relatively strict internal type system. Even from the many connections Wikipedia could provide it was hard to think of a potential next link that would always match up with the mishmash Wikipedia returned. While it might be easy to match up the Google Maps API to a weather API, connecting more abstract concepts was much more difficult.
 
@@ -31,6 +35,8 @@ I decided that this spark of an idea was already a lot more interesting than my 
 
 Thanks to Glitch’s embed feature you can take a look at the app (and the code!) below:
 
+<figure>
+
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
   <iframe
     allow="geolocation; microphone; camera; midi; encrypted-media"
@@ -40,9 +46,13 @@ Thanks to Glitch’s embed feature you can take a look at the app (and the code!
   </iframe>
 </div>
 
-###### A Glitch embed of the Record Player app
+<figcaption>A Glitch embed of the Record Player app</figcaption>
+
+</figure>
 
 The ‘final’ version of the project, “[Record Player](http://record-player.glitch.me/)” was surprisingly simple. When given a reasonably well lit image of an even somewhat popular album the Google Vision API is able to identify the name of the album (occasionally just the artist). There were a few words I hard coded to ignore (things like “vinyl”, “cd”, or “import”), but other than that I was able to send Google Vision’s “best guess” to Spotify, and play the first result. I designed a goofy front end (with every music related emoji) and shared it on Twitter thinking that a few people would try it.
+
+<figure>
 
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
   <iframe
@@ -53,7 +63,9 @@ The ‘final’ version of the project, “[Record Player](http://record-player.
   </iframe>
 </div>
 
-###### A Glitch embed with my surprisingly short list of censored words
+<figcaption>A Glitch embed with my surprisingly short list of censored words</figcaption>
+
+</figure>
 
 [Anil Dash](https://twitter.com/anildash/) unexpectedly shared, and quickly it it started showing up [in](https://pitchfork.com/news/new-app-is-basically-shazam-for-album-covers/) [a](https://www.pastemagazine.com/articles/2018/05/new-app-automatically-recognizes-album-covers.html) [lot](https://www.nme.com/news/music/app-album-cover-shazam-2306795) [of](https://www.engadget.com/2018/05/04/record-player-app-image-based-spotify-search/) [strange](https://www.altpress.com/news/app_matches_album_covers_spotify/) [corners](https://www.androidauthority.com/record-player-spotify-google-861977/) [of](https://www.rollingstone.it/musica/news-musica/ora-esiste-uno-shazam-per-le-copertine-degli-album/410773/) [the](https://lifehacker.com/stream-a-vinyl-album-by-snapping-a-pic-of-its-cover-art-1825800020) [internet](https://www.thecurrent.org/feature/2018/05/02/app-album-covers). I was flattered by the coverage, but a few people were pointing out, “why would you take a picture instead of just typing in the name of the album?” First of all, it’s fun, which should be reason enough. But beyond that, there’s really no reason to right now, there are too many barriers and restrictions in place in the tools we use every day like Spotify and Google, that making a mashup like this will usually require an engineer instead of just an imagination.
 
