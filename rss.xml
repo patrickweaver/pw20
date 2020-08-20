@@ -541,7 +541,7 @@ async function getSignedUrl(key) {
   </entry>
   
   <entry>
-    <title>Week 1 at Recurse Center: Two approaches to learning</title>
+    <title>Week 1 at Recurse Center: Two Approaches to Learning</title>
     <link href="https://patrickweaver.net/blog/recurse-center-week-1/"/>
     <updated>2020-08-16T22:22:13.781-00:00</updated>
     <id>https://patrickweaver.net/blog/recurse-center-week-1/</id>
@@ -593,7 +593,7 @@ async function getSignedUrl(key) {
 &lt;figcaption&gt;The first prototype of the subway map app&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;I started looking into SwiftUI because I&#39;m interested in making my own home screen widgets once I update my phone to iOS 14, and these widgets are built using the framework. Knowing I would have time to experiment during my batch at RC, and wanting to avoid my usual new tool mess phenomenon, I prioritized giving myself a good understanding of how SwiftUI works, what it can and can&#39;t do, and a general review of Swift. Once my batch started I found it more and more difficult to keep going through the tutorials instead of jumping into an original idea, but throughout the week, spending time figuring out what I was even thinking reviewing the code for the subway map project re-motivated me to get through it.&lt;/p&gt;
-&lt;p&gt;In the first week at RC the return to a daily routine has also put me back in the frame of mind I spent a lot of my last job in, where I would come up with ideas for about 3 apps a day that would solve tiny problems. One example is, after a particular session of an RC event for pair programming on software job interview style questions where we selecting a problem that ended up being very difficult in the language we chose to work in, I thought that maybe I should create a mini app for the group where we could rate problems for each other. A lot of these ideas that are generated through trying to solve small problems in my routine end up being apps that organize data into text boxes, which are often not very interesting, so I&#39;m conflicted on whether or not to spend time following these threads that will likely continue to appear.&lt;/p&gt;
+&lt;p&gt;In the first week at RC the return to a daily routine has also put me back in the frame of mind I spent a lot of my last job in, where I would come up with ideas for about 3 apps a day that would solve tiny problems. One example is, after a particular session of an RC event for pair programming on software job interview style questions where we selected a problem that ended up being very difficult in the language we chose to work in, I thought that maybe I should create a mini app for the group where we could rate problems for each other. A lot of these ideas that are generated through trying to solve small problems in my routine end up being apps that organize data into text boxes, which are often not very interesting, so I&#39;m conflicted on whether or not to spend time following these threads that will likely continue to appear.&lt;/p&gt;
 &lt;p&gt;A few other things that are slightly more interesting, or at least broadly useful that I want to get done during my time at RC are:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The real time subway map&lt;/li&gt;
