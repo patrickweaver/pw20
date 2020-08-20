@@ -11,7 +11,7 @@ tags:
 
 I just finished my first week as part of the Fall 1 '20 batch at [Recurse Center](https://www.recurse.com). I tried to split my time between being social and building skills that I want to use for future projects. The social aspect of RC is interesting because this batch is being conducted remotely.
 
-My batch at RC started exactly 5 months after my last day in an office, and something I had been thinking about over the last few months, is that I haven't met anyone new since early March when NYC shut down because of the pandemic. It's been very refreshing to meet people again, even if it's via video calls and chat. RC has created an online representation of their physical space we call "Virtual RC". Each of us have avatars we can move around the space, and there are permanent link to video call rooms that we can pop into for events or impromptu conversations. The Virtual RC experience pairs well with group chat organized into streams on different topics.
+My batch at RC started exactly 5 months after my last day in an office, and something I had been thinking about over the last few months, is that I haven't met anyone new since early March when NYC shut down because of the pandemic. It's been very refreshing to meet people again, even if it's via video calls and chat. RC has created an online representation of their physical space we call "Virtual RC". Each of us have avatars we can move around the space, and there are permanent links to video call rooms that we can pop into for events or impromptu conversations. The Virtual RC experience pairs well with group chat organized into streams on different topics.
 
 <figure>
 
