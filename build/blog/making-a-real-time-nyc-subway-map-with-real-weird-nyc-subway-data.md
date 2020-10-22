@@ -152,7 +152,7 @@ After trying to approach the parallel lines problem geometrically I was pointed 
 
 ### A Prototype
 
-My map is online at [nyc-subway.glitch.me](https://nyc-subway.glitch.me/), bugs and all. I did most of the work on the map using only the G train API endpoint. This was a helpful limitation when i was first experimenting with what was possible using the data, but may have led to more bugs because of the slight differences in the data available for each set of lines.
+My map is online at [nyc-subway.glitch.me](https://nyc-subway.glitch.me/), bugs and all. I did most of the work on the map using only the G train API endpoint. This was a helpful limitation when I was first experimenting with what was possible using the data, but may have led to more bugs because of the slight differences in the data available for each set of lines.
 
 A common complaint about the new official real-time map is that it seems to use as much computer power as it can. My map isn't much better because it is doing all of the geographic calculations in the user's browser, my guess is that the MTA's map is also. One update I might take on over the next week and a half as my time at RC winds down is moving these calculations to a server, and sending only train position changes to the map visualization. This may also help with the bug my current prototype exhibits where leaving and coming back to the tab a few minutes later will cause trains to fly around the map without regard for the lines or stations.
 
