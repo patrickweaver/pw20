@@ -10,7 +10,7 @@
 <!-- Social -->
 {{#if this.title }}
   <meta property="og:title" content="{{ this.title }}"/>
-  <meta property="og:description" content="{{ previewText this.templateContent }}" />
+  <meta property="og:description" content="{{ this.description }}" />
 {{else}}
   <meta property="og:title" content="Patrick Weaver"/>
   <meta property="og:description" content="Patrick Weaver's Website" />
@@ -28,7 +28,7 @@
 <meta name="twitter:creator" content="@patrickweave_r" />
 {{#if this.title }}
   <meta name="twitter:title" content="{{ this.title }}"/>
-  <meta name="twitter:description" content="{{ previewText this.templateContent }}" />
+  <meta name="twitter:description" content="{{ this.description }}" />
 {{else}}
   <meta name="twitter:title" content="Patrick Weaver" />
   <meta name="twitter:description" content="Patrick Weaver's Website" />

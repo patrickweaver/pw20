@@ -1,6 +1,7 @@
 ---
 layout: layouts/blogPost.hbs
 title: Making a Real-Time NYC Subway Map with Real Weird NYC Subway Data
+description: Data mysteries of the subway revealed!
 date: 2020-10-21
 cover_image_url: https://www.patrickweaver.net/images/blog/nyc-subway/nyc-subway.png
 cover_image_alt: A screenshot of the map

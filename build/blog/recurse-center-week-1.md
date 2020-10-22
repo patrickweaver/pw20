@@ -1,6 +1,7 @@
 ---
 layout: layouts/blogPost.hbs
 title: ! "Week 1 at Recurse Center: Two Approaches to Learning"
+description: "My plan for Fall 1 '20 at RC"
 date: "2020-08-16T22:22:13.781Z"
 cover_image_url: https://www.patrickweaver.net/images/blog/rc/virtual-rc.png
 cover_image_alt: A screenshot of my avatar in Virtual RC
