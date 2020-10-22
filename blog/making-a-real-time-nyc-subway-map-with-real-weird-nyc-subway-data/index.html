@@ -101,7 +101,7 @@
 <p>The next step was plotting the stations on a map. To start off, as with the diagram version, I just placed each train at the midpoint between the station it was travelling from and the station it was travelling towards.</p>
 <p>A goal I had for the project was not just to show real-time train locations, but to animate them as they moved around the map. To determine how long each I should expect each train to take to travel between each station I logged updates from the MTA API for a few hours and noted both the average time for each pair of stations, and the longest time I had seen. I'm still experimenting a little bit with what values to use as the baseline, but from looking at the logged numbers there does seem to be an expected amount of time for most stations.</p>
 <figure>
-<p><strong>G Train Stop Time Distances</strong></p>
+<div class="data">
 <pre><code class="language-javascript">G: {
    G22: { N: { avg: 60, max: 71 }, S: null },
    G24: { N: { avg: 123, max: 180 }, S: { avg: 60, max: 106 } },
@@ -126,6 +126,7 @@
    F27: { N: null, S: { avg: 81, max: 120 } },
  }
 </code></pre>
+</div>
 <figcaption>Average and max wait times in seconds for stops on the G line.</figcaption>
 </figure>
 <figure>

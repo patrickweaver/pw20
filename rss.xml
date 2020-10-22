@@ -646,7 +646,7 @@ async function getSignedUrl(key) {
 &lt;p&gt;The next step was plotting the stations on a map. To start off, as with the diagram version, I just placed each train at the midpoint between the station it was travelling from and the station it was travelling towards.&lt;/p&gt;
 &lt;p&gt;A goal I had for the project was not just to show real-time train locations, but to animate them as they moved around the map. To determine how long each I should expect each train to take to travel between each station I logged updates from the MTA API for a few hours and noted both the average time for each pair of stations, and the longest time I had seen. I&#39;m still experimenting a little bit with what values to use as the baseline, but from looking at the logged numbers there does seem to be an expected amount of time for most stations.&lt;/p&gt;
 &lt;figure&gt;
-&lt;p&gt;&lt;strong&gt;G Train Stop Time Distances&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;data&quot;&gt;
 &lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;G: {
    G22: { N: { avg: 60, max: 71 }, S: null },
    G24: { N: { avg: 123, max: 180 }, S: { avg: 60, max: 106 } },
@@ -671,6 +671,7 @@ async function getSignedUrl(key) {
    F27: { N: null, S: { avg: 81, max: 120 } },
  }
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;figcaption&gt;Average and max wait times in seconds for stops on the G line.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;figure&gt;
