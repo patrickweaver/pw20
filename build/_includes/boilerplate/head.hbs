@@ -8,8 +8,13 @@
 <link id="favicon" rel="icon" href="/images/favicon.png" type="image/png">
 
 <!-- Social -->
-<meta property="og:title" content="Patrick Weaver"/>
-<meta property="og:description" content="Patrick Weaver's Website" />
+{{#if this.title }}
+  <meta property="og:title" content="{{ this.title }}"/>
+  <meta property="og:description" content="{{ previewText this.templateContent }}" />
+{{else}}
+  <meta property="og:title" content="Patrick Weaver"/>
+  <meta property="og:description" content="Patrick Weaver's Website" />
+{{/if}}
 {{#if this.cover_image_url }}
   <meta property="og:image" content="{{ this.cover_image_url }}" />
 {{else}}
@@ -21,8 +26,13 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@patrickweave_r" />
 <meta name="twitter:creator" content="@patrickweave_r" />
-<meta name="twitter:title" content="Patrick Weaver" />
-<meta name="twitter:description" content="Patrick Weaver's Website" />
+{{#if this.title }}
+  <meta name="twitter:title" content="{{ this.title }}"/>
+  <meta name="twitter:description" content="{{ previewText this.templateContent }}" />
+{{else}}
+  <meta name="twitter:title" content="Patrick Weaver" />
+  <meta name="twitter:description" content="Patrick Weaver's Website" />
+{{/if}}
 {{#if this.cover_image_url }}
   <meta name="twitter:image" content="{{ this.cover_image_url }}" />
   <meta name="twitter:image:alt" content="{{ this.cover_image_alt }}" />
