@@ -227,7 +227,7 @@ form textarea {
   margin: .5em 0;
 }
 
-.post-preview .blog-cover {
+.post-preview > .blog-cover {
   display: grid;
   column-gap: 20px;
   grid-template-columns: 1fr 1fr;
@@ -425,8 +425,7 @@ ul.project-images, ul.links {
 
   /* Blog */
 
-  .blog-cover {
-    display: grid;
+  .post-preview > .blog-cover {
     grid-template-columns: 1fr;
   }
   
