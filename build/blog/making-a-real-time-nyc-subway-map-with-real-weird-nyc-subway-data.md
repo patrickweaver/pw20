@@ -65,7 +65,8 @@ A goal I had for the project was not just to show real-time train locations, but
 
 <figure>
 
-**G Train Stop Time Distances**
+<div class="data">
+
 ```javascript
 G: {
    G22: { N: { avg: 60, max: 71 }, S: null },
@@ -91,6 +92,8 @@ G: {
    F27: { N: null, S: { avg: 81, max: 120 } },
  }
 ```
+
+</div>
 
 <figcaption>Average and max wait times in seconds for stops on the G line.</figcaption>
 
