@@ -48,7 +48,7 @@ I had never heard of Protocol Buffers before starting this project, so I was exc
 
 ### Calculating Train Locations
 
-The subway real-time API doesn’t have latitude and longitude data because it is designed to feed data to countdown clock style applications that show when the train will be at a specific station. One of the earliest features that I built into the real-time map was a way to translate these station-by-station countdown clocks into an approximation of  the location of each train. My first attempt at this was to just show a list of stations and display an icon for a train between the names of the station it had been at previously and the station it was approaching.
+The subway real-time API doesn’t have latitude and longitude data because it is designed to feed data to countdown clock style applications that show when the train will be at a specific station. One of the earliest features that I built into the real-time map was a way to translate these station-by-station countdown clocks into an approximation of the location of each train. My first attempt at this was to just show a list of stations and display an icon for a train between the names of the station it had been at previously and the station it was approaching.
 
 <figure>
 
@@ -62,7 +62,7 @@ The subway real-time API doesn’t have latitude and longitude data because it i
 
 The next step was plotting the stations on a map. To start off, as with the diagram version, I just placed each train at the midpoint between the station it was travelling from and the station it was travelling towards.
 
-A goal I had for the project was not just to show real-time train locations, but to animate them as they moved around the map. To determine how long each I should expect each train to take to travel between each station I logged updates from the MTA API for a few hours and noted both the average time for each pair of stations, and the longest time I had seen. I'm still experimenting a little bit with what values to use as the baseline, but from looking at the logged numbers there does seem to be an expected amount of time for most stations.
+A goal I had for the project was not just to show real-time train locations, but to animate them as they moved around the map. To determine how long I should expect a train to take to travel between each station I logged updates from the MTA API for a few hours and noted both the average time for a pair of stations, and the longest time I had seen for the pair. I'm still experimenting a little bit with what values to use as the baseline, but from looking at the logged numbers there does seem to be an expected amount of time for most stations.
 
 <figure>
 
