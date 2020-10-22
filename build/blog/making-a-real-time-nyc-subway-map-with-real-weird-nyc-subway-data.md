@@ -1,7 +1,7 @@
 ---
 layout: layouts/blogPost.hbs
 title: Making a Real-Time NYC Subway Map with Real Weird NYC Subway Data
-date: "2020-10-22T01:53:09.059Z"
+date: 2020-10-21
 cover_image_url: /images/blog/nyc-subway/nyc-subway.png
 cover_image_alt: A screenshot of the map
 tags:
