@@ -10,7 +10,12 @@
 <!-- Social -->
 <meta property="og:title" content="Patrick Weaver"/>
 <meta property="og:description" content="Patrick Weaver's Website" />
-<meta property="og:image" content="https://pwapi.s3.amazonaws.com/uploads/twitter-card.png" />
+{{#if this.cover_image_url }}
+  <meta property="og:image" content="{{ this.cover_image_url }}" />
+{{else}}
+  <meta property="og:image" content="https://pwapi.s3.amazonaws.com/uploads/twitter-card.png" />
+{{/if }}
+
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
@@ -18,8 +23,13 @@
 <meta name="twitter:creator" content="@patrickweave_r" />
 <meta name="twitter:title" content="Patrick Weaver" />
 <meta name="twitter:description" content="Patrick Weaver's Website" />
-<meta name="twitter:image" content="https://pwapi.s3.amazonaws.com/uploads/twitter-card.png" />
-<meta name="twitter:image:alt" content="A screenshot of the website" />
+{{#if this.cover_image_url }}
+  <meta name="twitter:image" content="{{ this.cover_image_url }}" />
+  <meta name="twitter:image:alt" content="{{ this.cover_image_alt }}" />
+{{else}}
+  <meta name="twitter:image" content="https://pwapi.s3.amazonaws.com/uploads/twitter-card.png" />
+  <meta name="twitter:image:alt" content="A screenshot of the website" />
+{{/if}}
 
 <link href="https://fonts.googleapis.com/css?family=Yantramanav" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css">
