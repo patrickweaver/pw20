@@ -3,7 +3,7 @@ layout: layouts/blogPost.hbs
 title: ! "Week 1 at Recurse Center: Two Approaches to Learning"
 description: "My plan for Fall 1 '20 at RC"
 date: "2020-08-16T22:22:13.781Z"
-cover_image_url: https://www.patrickweaver.net/images/blog/rc/virtual-rc.png
+cover_image_url: /images/blog/rc/virtual-rc.png
 cover_image_alt: A screenshot of my avatar in Virtual RC
 do_not_show_cover_at_top: true
 tags:
@@ -88,7 +88,7 @@ I started looking into SwiftUI because I'm interested in making my own home scre
 
 In the first week at RC the return to a daily routine has also put me back in the frame of mind I spent a lot of my last job in, where I would come up with ideas for about 3 apps a day that would solve tiny problems. One example is, after a particular session of an RC event for pair programming on software job interview style questions where we selected a problem that ended up being very difficult in the language we chose to work in, I thought that maybe I should create a mini app for the group where we could rate problems for each other. A lot of these ideas that are generated through trying to solve small problems in my routine end up being apps that organize data into text boxes, which are often not very interesting, so I'm conflicted on whether or not to spend time following these threads that will likely continue to appear.
 
-A few other things that are slightly more interesting, or at least broadly useful that I want to get done during my time at RC are:
+<span id="rc-goals">A few other things that are slightly more interesting, or at least broadly useful that I want to get done during my time at RC are:</span>
 
 - The real time subway map
 - A simple checklist app with a home screen widget made with SwiftUI
