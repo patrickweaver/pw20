@@ -815,7 +815,7 @@ async function getSignedUrl(key) {
   </entry>
   
   <entry>
-    <title>Participating in a remote batch at the Recurse Center</title>
+    <title>Participating in a Remote Batch at the Recurse Center</title>
     <link href="https://patrickweaver.net/blog/a-recurse-center-remote-batch/"/>
     <updated>2021-01-25T16:33:26.655-00:00</updated>
     <id>https://patrickweaver.net/blog/a-recurse-center-remote-batch/</id>
