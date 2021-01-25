@@ -1,6 +1,6 @@
 ---
 layout: layouts/blogPost.hbs
-title: ! "Participating in a remote batch at the Recurse Center"
+title: ! "Participating in a Remote Batch at the Recurse Center"
 description: "Refelctions on my Fall 1 '20 remote batch at RC"
 date: "2021-01-25T16:33:26.655Z"
 cover_image_url: "/images/blog/rc2/parallel-lines-curve.png"
