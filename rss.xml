@@ -530,10 +530,13 @@ async function getSignedUrl(key) {
 &lt;div class=&quot;glitch-embed-wrap&quot; style=&quot;height: 420px; width: 100%;&quot;&gt;&lt;iframe allow=&quot;geolocation; microphone; camera; midi; encrypted-media&quot; src=&quot;https://glitch.com/embed/#!/embed/gdoc-image-dl?path=README.md&amp;previewSize=100&quot; alt=&quot;record-player on Glitch&quot; style=&quot;height: 100%; width: 100%; border: 0;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 &lt;p&gt;The instructions are simple!&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Drag one of the bookmarklets below to your bookmarks toolbar. The text displayed is what will be show on the toolbar:&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Drag one of the bookmarklets below  =(see the embed above) to your bookmarks toolbar. The text displayed is what will be show on the toolbar:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Then, when you&#39;re on a Google Doc, click the bookmarklet, then hover over an image embeded in the doc. Depending on your browser settings it will either download immediately, or open the actual image in a new tab.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;🖼⤵️ GDoc Image DL
-2. Then, when you&#39;re on a Google Doc, click the bookmarklet, then hover over an image embeded in the doc. Depending on your browser settings it will either download immediately, or open the actual image in a new tab.&lt;/p&gt;
 &lt;h2&gt;Great my problems are solved forever!&lt;/h2&gt;
 &lt;p&gt;No guarantees that this will work long term, a quick look at the source code for any Google Doc will show that they&#39;re very complex! I wouldn&#39;t be surprised if Google changes the way these URLs work in the future, but this tool has worked for 6 months so maybe not!&lt;/p&gt;
 &lt;p&gt;Long term I hope that they build in a way for people to download their images, but for now I hope this is helpful!&lt;/p&gt;
