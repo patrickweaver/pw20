@@ -48,9 +48,8 @@ To get started you'll have to "install" the bookmarklet. This is easy to do, and
 
 The instructions are simple!
 
-1. Drag one of the bookmarklets below to your bookmarks toolbar. The text displayed is what will be show on the toolbar:
+1. Drag one of the bookmarklets below  =(see the embed above) to your bookmarks toolbar. The text displayed is what will be show on the toolbar:
 
-🖼⤵️ GDoc Image DL
 2. Then, when you're on a Google Doc, click the bookmarklet, then hover over an image embeded in the doc. Depending on your browser settings it will either download immediately, or open the actual image in a new tab.
 
 ## Great my problems are solved forever!
