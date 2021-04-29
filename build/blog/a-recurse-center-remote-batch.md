@@ -1,6 +1,6 @@
 ---
 layout: layouts/blogPost.hbs
-title: ! "Participating in a remote batch at the Recurse Center"
+title: ! "Participating in a Remote Batch at the Recurse Center"
 description: "Refelctions on my Fall 1 '20 remote batch at RC"
 date: "2021-01-25T16:33:26.655Z"
 cover_image_url: "/images/blog/rc2/parallel-lines-curve.png"
@@ -10,7 +10,7 @@ tags:
 
 ---
 
-Participating in a batch at [The Recurse Center](https://www.recurse.com/) is something that I’ve thought on-and-off about doing since I found out about it (then called Hacker School) sometime between 2013 and 2015, but it just never seemed like the right time to leave my job and its subsidized health insurance until I was laid off (what turned out to be) early on in the pandemic. I had as recently as January 2020 been thinking, “maybe now is the right time to finally quit and do it,” and though I’m relieved I was able to get a few more months of savings and health insurance into 2020, participating in RC was the perfect change of pace and a motivating bridge between employment and the job search.
+Participating in a batch at the [Recurse Center](https://www.recurse.com/) is something that I’ve thought on-and-off about doing since I found out about it (then called Hacker School) sometime between 2013 and 2015, but it just never seemed like the right time to leave my job and its subsidized health insurance until I was laid off (what turned out to be) early on in the pandemic. I had as recently as January 2020 been thinking, “maybe now is the right time to finally quit and do it,” and though I’m relieved I was able to get a few more months of savings and health insurance into 2020, participating in RC was the perfect change of pace and a motivating bridge between employment and the job search.
 
 <figure>
 
