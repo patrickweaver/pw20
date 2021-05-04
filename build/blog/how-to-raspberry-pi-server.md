@@ -7,9 +7,9 @@ cover_image_alt: A photo of a Raspberry Pi on an iPad
 tags:
 ---
 
-Like most of the world, I've been spending a lot of time at home lately. Over the winter I was experimenting with building my own web-based digital tools like an app to track articles and books I was reading. I initially thought I would need to buy hosting space to have the app accessible, but realized I mostly needed to use it when I was at home anyway so a URL that only existed on my local network work also work.
+Like most of the world, I’ve been spending a lot of time at home lately. Over the winter I was experimenting with building my own web-based digital tools, like an app to track articles and books I was reading. I initially thought I would need to buy hosting space to have the app accessible, but realized I mostly needed to use it when I was at home anyway, so a URL that only existed on my local network work also work.
 
-I have done a few projects with Raspberry Pis before, most notably a [computer vision “record player”](https://www.patrickweaver.net/blog/building-a-futuristic-record-player-with-glitch-and-raspberry-pi/), but always found myself looking up the same things like how to set up Wi-Fi and ssh access. I seemed to need to do the same handful of things every time, but they were spread across various documentation and how-tos. This time while setting up the Pi webserver I took notes so I would have it all in one place.
+I have done a few projects with Raspberry Pis before, most notably a [computer vision “record player”](https://www.patrickweaver.net/blog/building-a-futuristic-record-player-with-glitch-and-raspberry-pi/), but always found myself looking up the same things like how to set up Wi-Fi and SSH access. I seemed to need to do the same handful of things every time, but they were spread across various documentation and how-tos. This time while setting up the Pi webserver I took notes so I would have it all in one place.
 
 To follow along with these steps you will need a second computer to set up the SD card (though you could probably start with a [preformatted SD card also](https://www.adafruit.com/product/4266)), and any kind of Raspberry Pi. I have run webservers on Pi Zeros before, though it can be a challenge to install newer versions of Node.js on ARMv6 based Pis (Zero and the original Raspberry Pi), and sometimes when building a large client app I’ve had to move to a faster Pi from a Pi Zero.
 
@@ -57,7 +57,7 @@ network={
 
 #### Note on Text Encoding
 
-> [Setting up a Raspberry Pi headless](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md): "Depending on the OS and editor you are creating this on, the file could have incorrect newlines or the wrong file extension so make sure you use an editor that accounts for this. Linux expects the line feed (LF) newline character."
+> [Setting up a Raspberry Pi headless](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md): “Depending on the OS and editor you are creating this on, the file could have incorrect newlines or the wrong file extension so make sure you use an editor that accounts for this. Linux expects the line feed (LF) newline character.”
 
 > Learn More: [Scott Hanselman on CR/LF](https://www.youtube.com/watch?v=TtiBhktB4Qg)
 
@@ -91,7 +91,7 @@ You can also skip this step and open the Terminal app on the Pi if using a displ
 
 If you have previously connected via SSH to a Raspberry Pi with the default hostname on the computer you are using you may see a message about the remote host identification changing. To successfully connect via SSH you will need to update the `known_hosts` file to remove the key stored for the other Raspberry Pi.
 
-On Linux or macOS the `known_hosts` file will be at `/Users/USERNAME/.ssh/known_hosts`. Find the line in this file that starts with either `raspberrypi.local` or the Raspberry Pi’s IP address and remove it.
+On Linux or macOS the `known_hosts` file will be at `/Users/[YOUR USERNAME]/.ssh/known_hosts`. Find the line in this file that starts with either `raspberrypi.local` or the Raspberry Pi’s IP address and remove it.
 
 > **4. Connect via SSH:** Connect to the Raspberry Pi via ssh: `ssh pi@raspberrypi.local` or `ssh pi@192.168.XXX.XXX` (and enter the default password `raspberry`). You may need to remove a previous `raspberrypi.local` from `/Users/USERNAME/.ssh/known_hosts`.
 
@@ -210,7 +210,7 @@ You can now edit your server block file:
 sudo nano /etc/nginx/sites-available/[YOUR SITE].conf
 ```
 
-The server block below will proxy processes running on port 8080 to port 80 (but you can substitute any port on the `proxy_pass` line). Make sure to replace the `[HOSTNAME]` sections with your Raspberry Pi's hostname (or omit this line if accessing via IP Address):
+The server block below will proxy processes running on port 8080 to port 80 (but you can substitute any port on the `proxy_pass` line). Make sure to replace the `[HOSTNAME]` sections with your Raspberry Pi’s hostname (or omit this line if accessing via IP Address):
 
 ```conf
 server {
@@ -246,7 +246,7 @@ The last step cloning your project and running it on port 8080, your app should 
 
 > **11. Set Up Reverse Proxy:** Remove default: `sudo rm /etc/nginx/sites-enabled/default`, Create config file: `sudo touch /etc/nginx/sites-available/[YOUR SITE].conf`, Edit config file (see above): `sudo nano /etc/nginx/sites-available/[YOUR SITE].conf`, Link to sites-enabled: `sudo ln -s /etc/nginx/sites-available/[YOUR-SITE].conf /etc/nginx/sites-enabled/[YOUR-SITE].conf`, Reload Nginx: `sudo systemctl reload nginx`. [source](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-debian-10)
 
-![A screenshot of a "Hello, World" page hosted on a Raspberry Pi](/images/blog/how-to-raspberry-pi-server/hello-world.png)
+![A screenshot of a “Hello, World” page hosted on a Raspberry Pi](/images/blog/how-to-raspberry-pi-server/hello-world.png)
 
 ---
 
