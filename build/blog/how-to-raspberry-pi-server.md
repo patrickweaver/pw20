@@ -246,6 +246,8 @@ The last step cloning your project and running it on port 8080, your app should 
 
 > **11. Set Up Reverse Proxy:** Remove default: `sudo rm /etc/nginx/sites-enabled/default`, Create config file: `sudo touch /etc/nginx/sites-available/[YOUR SITE].conf`, Edit config file (see above): `sudo nano /etc/nginx/sites-available/[YOUR SITE].conf`, Link to sites-enabled: `sudo ln -s /etc/nginx/sites-available/[YOUR-SITE].conf /etc/nginx/sites-enabled/[YOUR-SITE].conf`, Reload Nginx: `sudo systemctl reload nginx`. [source](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-debian-10)
 
+![A screenshot of a "Hello, World" page hosted on a Raspberry Pi](/images/blog/how-to-raspberry-pi-server/hello-world.png)
+
 ---
 
 ## All Steps:
