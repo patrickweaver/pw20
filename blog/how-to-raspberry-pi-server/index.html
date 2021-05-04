@@ -134,8 +134,8 @@ network={
 <h3>5. Change the Password</h3>
 <p>After connecting to the Raspberry Pi via SSH the login message will suggest that you change the default password:</p>
 <blockquote>
-<p>SSH is enabled and the default password for the 'pi' user has not been changed.
-This is a security risk - please login as the 'pi' user and type 'passwd' to set a new password.</p>
+<p><code>SSH is enabled and the default password for the 'pi' user has not been changed.</code>
+<code>This is a security risk - please login as the 'pi' user and type 'passwd' to set a new password.</code></p>
 </blockquote>
 <p>Following the instructions you can type <code>passwd</code> which will prompt you first for your current password (<code>raspberry</code>), then for a new password twice.</p>
 <blockquote>
@@ -176,7 +176,7 @@ This is a security risk - please login as the 'pi' user and type 'passwd' to set
 <p><strong>8. Install Git:</strong> Install git to manage your source code with <code>sudo apt install git</code>.</p>
 </blockquote>
 <h2>9. Install Nginx</h2>
-<p>You can now run a webserver (with <code>sudo</code>) on port 80 and have it be available at your IP address or <code>[YOUR_HOSTNAME].local</code>, but that might require more configuration. It will be easier to manager your app if you install a webserver/reverse proxy like Nginx. You can install Nginx with <code>apt</code>:</p>
+<p>You can now run a webserver (with <code>sudo</code>) on port 80 and have it be available at your IP address or <code>[YOUR_HOSTNAME].local</code>, but that might require more configuration. It will be easier to manage your app if you install a webserver/reverse proxy like Nginx. You can install Nginx with <code>apt</code>:</p>
 <pre><code class="language-bash">sudo apt install nginx
 </code></pre>
 <p>Once Nginx is installed you should be able to access the default Nginx webpage at your Rapsberry Pi’s IP Address or <code>[YOUR_HOSTNAME].local</code>. Make sure to type in the <code>http://</code> the first time if you are using the <code>.local</code> TLD to avoid triggering search in your browser.</p>

@@ -942,8 +942,8 @@ network={
 &lt;h3&gt;5. Change the Password&lt;/h3&gt;
 &lt;p&gt;After connecting to the Raspberry Pi via SSH the login message will suggest that you change the default password:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;SSH is enabled and the default password for the &#39;pi&#39; user has not been changed.
-This is a security risk - please login as the &#39;pi&#39; user and type &#39;passwd&#39; to set a new password.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;SSH is enabled and the default password for the &#39;pi&#39; user has not been changed.&lt;/code&gt;
+&lt;code&gt;This is a security risk - please login as the &#39;pi&#39; user and type &#39;passwd&#39; to set a new password.&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Following the instructions you can type &lt;code&gt;passwd&lt;/code&gt; which will prompt you first for your current password (&lt;code&gt;raspberry&lt;/code&gt;), then for a new password twice.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -984,7 +984,7 @@ This is a security risk - please login as the &#39;pi&#39; user and type &#39;pa
 &lt;p&gt;&lt;strong&gt;8. Install Git:&lt;/strong&gt; Install git to manage your source code with &lt;code&gt;sudo apt install git&lt;/code&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2&gt;9. Install Nginx&lt;/h2&gt;
-&lt;p&gt;You can now run a webserver (with &lt;code&gt;sudo&lt;/code&gt;) on port 80 and have it be available at your IP address or &lt;code&gt;[YOUR_HOSTNAME].local&lt;/code&gt;, but that might require more configuration. It will be easier to manager your app if you install a webserver/reverse proxy like Nginx. You can install Nginx with &lt;code&gt;apt&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;You can now run a webserver (with &lt;code&gt;sudo&lt;/code&gt;) on port 80 and have it be available at your IP address or &lt;code&gt;[YOUR_HOSTNAME].local&lt;/code&gt;, but that might require more configuration. It will be easier to manage your app if you install a webserver/reverse proxy like Nginx. You can install Nginx with &lt;code&gt;apt&lt;/code&gt;:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;sudo apt install nginx
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Once Nginx is installed you should be able to access the default Nginx webpage at your Rapsberry Pi’s IP Address or &lt;code&gt;[YOUR_HOSTNAME].local&lt;/code&gt;. Make sure to type in the &lt;code&gt;http://&lt;/code&gt; the first time if you are using the &lt;code&gt;.local&lt;/code&gt; TLD to avoid triggering search in your browser.&lt;/p&gt;
