@@ -1033,7 +1033,7 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 &lt;p&gt;To enable the configuration reload the Nginx config:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;sudo systemctl reload nginx
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The last step cloning your project and running it on port 8080, your app should now be available at &lt;code&gt;[HOSTNAME].local&lt;/code&gt;!&lt;/p&gt;
+&lt;p&gt;The last step is cloning your project to the Raspberry Pi and running it on port 8080, your app should now be available at &lt;code&gt;[HOSTNAME].local&lt;/code&gt;!&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;11. Set Up Reverse Proxy:&lt;/strong&gt; Remove default: &lt;code&gt;sudo rm /etc/nginx/sites-enabled/default&lt;/code&gt;, Create config file: &lt;code&gt;sudo touch /etc/nginx/sites-available/[YOUR SITE].conf&lt;/code&gt;, Edit config file (see above): &lt;code&gt;sudo nano /etc/nginx/sites-available/[YOUR SITE].conf&lt;/code&gt;, Link to sites-enabled: &lt;code&gt;sudo ln -s /etc/nginx/sites-available/[YOUR-SITE].conf /etc/nginx/sites-enabled/[YOUR-SITE].conf&lt;/code&gt;, Reload Nginx: &lt;code&gt;sudo systemctl reload nginx&lt;/code&gt;. &lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-debian-10&quot;&gt;source&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
