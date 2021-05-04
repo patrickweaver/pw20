@@ -99,8 +99,8 @@ On Linux or macOS the `known_hosts` file will be at `/Users/[YOUR USERNAME]/.ssh
 
 After connecting to the Raspberry Pi via SSH the login message will suggest that you change the default password:
 
-> SSH is enabled and the default password for the 'pi' user has not been changed.
-> This is a security risk - please login as the 'pi' user and type 'passwd' to set a new password.
+> `SSH is enabled and the default password for the 'pi' user has not been changed.`
+> `This is a security risk - please login as the 'pi' user and type 'passwd' to set a new password.`
 
 Following the instructions you can type `passwd` which will prompt you first for your current password (`raspberry`), then for a new password twice.
 
@@ -160,7 +160,7 @@ You may also want to install another text editor if you want something more cust
 
 ## 9. Install Nginx
 
-You can now run a webserver (with `sudo`) on port 80 and have it be available at your IP address or `[YOUR_HOSTNAME].local`, but that might require more configuration. It will be easier to manager your app if you install a webserver/reverse proxy like Nginx. You can install Nginx with `apt`:
+You can now run a webserver (with `sudo`) on port 80 and have it be available at your IP address or `[YOUR_HOSTNAME].local`, but that might require more configuration. It will be easier to manage your app if you install a webserver/reverse proxy like Nginx. You can install Nginx with `apt`:
 
 ```bash
 sudo apt install nginx
