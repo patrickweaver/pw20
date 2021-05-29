@@ -6,3 +6,6 @@ node_modules
 # Keys:
 gh-pages
 gh-pages.pub
+
+# Local:
+*.code-workspace

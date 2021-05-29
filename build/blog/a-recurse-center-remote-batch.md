@@ -7,7 +7,6 @@ cover_image_url: "/images/blog/rc2/parallel-lines-curve.png"
 cover_image_alt: "A screenshot of a prototype of my real-time subway map"
 do_not_show_cover_at_top: true
 tags:
-
 ---
 
 Participating in a batch at the [Recurse Center](https://www.recurse.com/) is something that I’ve thought on-and-off about doing since I found out about it (then called Hacker School) sometime between 2013 and 2015, but it just never seemed like the right time to leave my job and its subsidized health insurance until I was laid off (what turned out to be) early on in the pandemic. I had as recently as January 2020 been thinking, “maybe now is the right time to finally quit and do it,” and though I’m relieved I was able to get a few more months of savings and health insurance into 2020, participating in RC was the perfect change of pace and a motivating bridge between employment and the job search.
@@ -15,7 +14,10 @@ Participating in a batch at the [Recurse Center](https://www.recurse.com/) is so
 <figure>
 
 <div style="text-align: center;">
-  <img src="/images/blog/rc2/rc-website.png" alt="A screenshot from the Recurse Center website with a notice about operating remotely" style="max-width: 500px; margin: 0 auto;" />
+  <img
+    src="/images/blog/rc2/rc-website.png"
+    alt="A screenshot from the Recurse Center website with a notice about operating remotely"
+    style="max-width: 500px; margin: 0 auto;" />
 </div>
 
 <figcaption>Screenshot from recurse.com</figcaption>
