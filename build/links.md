@@ -5,7 +5,7 @@ pageHeader: Links
 ---
 
 <ul id="links">
-  <li><a href="/resume" target="blank">Resume</a></li>
+  <li><a href="/resume">Resume</a></li>
   <li><a href="/rss.xml" target="blank">Blog RSS Feed</a></li>
   <hr />
   <li><a href="https://dev.to/patrickweaver" target="blank">Dev.to</a></li>
