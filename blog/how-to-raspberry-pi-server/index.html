@@ -134,8 +134,7 @@ network={
 <h3>5. Change the Password</h3>
 <p>After connecting to the Raspberry Pi via SSH the login message will suggest that you change the default password:</p>
 <blockquote>
-<p><code>SSH is enabled and the default password for the 'pi' user has not been changed.</code>
-<code>This is a security risk - please login as the 'pi' user and type 'passwd' to set a new password.</code></p>
+<p><code>SSH is enabled and the default password for the 'pi' user has not been changed.</code> &gt; <code>This is a security risk - please login as the 'pi' user and type 'passwd' to set a new password.</code></p>
 </blockquote>
 <p>Following the instructions you can type <code>passwd</code> which will prompt you first for your current password (<code>raspberry</code>), then for a new password twice.</p>
 <blockquote>
@@ -189,10 +188,10 @@ network={
 <p>I make most of my web apps these days in JavaScript, there are lots of ways to install node and npm, but one easy way to manage versions is with nvm, which can be installed with the script below:</p>
 <pre><code class="language-bash">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 </code></pre>
-<p>Then reload your terminal with <code>. ~/bashrc</code> and install the current LTS version of node with <code>nvm install lts</code>.</p>
+<p>Then reload your terminal with <code>. ~/.bashrc</code> and install the current LTS version of node with <code>nvm install lts</code>.</p>
 <p><strong>Note:</strong> On an original Raspberry Pi, or a Raspberry Pi Zero, the ARMv6 chip is no longer supported by current versions of node. “Unofficial” ARMv6 builds of node are available at: <a href="https://unofficial-builds.nodejs.org/">unofficial-builds.nodejs.org</a>.</p>
 <blockquote>
-<p><strong>10. Install nvm and npm:</strong> <code>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash</code>, <code>. ~/bashrc</code>, <code>nvm install lts</code>.</p>
+<p><strong>10. Install nvm and npm:</strong> <code>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash</code>, <code>. ~/.bashrc</code>, <code>nvm install lts</code>.</p>
 </blockquote>
 <h2>11. Set Up Reverse Proxy</h2>
 <p>In order to access your app on your local network without a port number in the URL it will need to be accessible on port 80, but it will be eaiser to run your app on another port locally. This can be done with an Nginx reverse proxy.</p>
@@ -242,7 +241,7 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 <li><strong>Change the Prompt:</strong> Update the <code>PS1</code> variable in <code>~/.bashrc</code> to make it look different. Add a pie emoji with <code>echo 'PS1=&quot;🥧 ${PS1}&quot;' &gt;&gt; ~/.bashrc</code>.</li>
 <li><strong>Install Git:</strong> Install git to manage your source code with <code>sudo apt install git</code>.</li>
 <li><strong>Install Nginx:</strong> Install with <code>apt install nginx</code>, then put a static webpage in <code>/var/www/html</code>.</li>
-<li><strong>Install nvm and npm:</strong> <code>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash</code>, <code>. ~/bashrc</code>, <code>nvm install lts</code>.</li>
+<li><strong>Install nvm and npm:</strong> <code>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash</code>, <code>. ~/.bashrc</code>, <code>nvm install lts</code>.</li>
 <li><strong>Set Up Reverse Proxy:</strong> Remove default: <code>sudo rm /etc/nginx/sites-enabled/default</code>, Create config file: <code>sudo touch /etc/nginx/sites-available/[YOUR SITE].conf</code>, Edit config file (see above): <code>sudo nano /etc/nginx/sites-available/[YOUR SITE].conf</code>, Link to sites-enabled: <code>sudo ln -s /etc/nginx/sites-available/[YOUR-SITE].conf /etc/nginx/sites-enabled/[YOUR-SITE].conf</code>, Reload Nginx: <code>sudo systemctl reload nginx</code>. <a href="https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-debian-10">source</a></li>
 </ol>
 
