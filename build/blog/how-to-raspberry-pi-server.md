@@ -99,8 +99,7 @@ On Linux or macOS the `known_hosts` file will be at `/Users/[YOUR USERNAME]/.ssh
 
 After connecting to the Raspberry Pi via SSH the login message will suggest that you change the default password:
 
-> `SSH is enabled and the default password for the 'pi' user has not been changed.`
-> `This is a security risk - please login as the 'pi' user and type 'passwd' to set a new password.`
+> `SSH is enabled and the default password for the 'pi' user has not been changed.` > `This is a security risk - please login as the 'pi' user and type 'passwd' to set a new password.`
 
 Following the instructions you can type `passwd` which will prompt you first for your current password (`raspberry`), then for a new password twice.
 
@@ -182,11 +181,11 @@ I make most of my web apps these days in JavaScript, there are lots of ways to i
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 ```
 
-Then reload your terminal with `. ~/bashrc` and install the current LTS version of node with `nvm install lts`.
+Then reload your terminal with `. ~/.bashrc` and install the current LTS version of node with `nvm install lts`.
 
 **Note:** On an original Raspberry Pi, or a Raspberry Pi Zero, the ARMv6 chip is no longer supported by current versions of node. “Unofficial” ARMv6 builds of node are available at: [unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/).
 
-> **10. Install nvm and npm:** `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash`, `. ~/bashrc`, `nvm install lts`.
+> **10. Install nvm and npm:** `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash`, `. ~/.bashrc`, `nvm install lts`.
 
 ## 11. Set Up Reverse Proxy
 
@@ -261,5 +260,5 @@ The last step is cloning your project to the Raspberry Pi and running it on port
 7. **Change the Prompt:** Update the `PS1` variable in `~/.bashrc` to make it look different. Add a pie emoji with `echo 'PS1="🥧 ${PS1}"' >> ~/.bashrc`.
 8. **Install Git:** Install git to manage your source code with `sudo apt install git`.
 9. **Install Nginx:** Install with `apt install nginx`, then put a static webpage in `/var/www/html`.
-10. **Install nvm and npm:** `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash`, `. ~/bashrc`, `nvm install lts`.
+10. **Install nvm and npm:** `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash`, `. ~/.bashrc`, `nvm install lts`.
 11. **Set Up Reverse Proxy:** Remove default: `sudo rm /etc/nginx/sites-enabled/default`, Create config file: `sudo touch /etc/nginx/sites-available/[YOUR SITE].conf`, Edit config file (see above): `sudo nano /etc/nginx/sites-available/[YOUR SITE].conf`, Link to sites-enabled: `sudo ln -s /etc/nginx/sites-available/[YOUR-SITE].conf /etc/nginx/sites-enabled/[YOUR-SITE].conf`, Reload Nginx: `sudo systemctl reload nginx`. [source](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-debian-10)
