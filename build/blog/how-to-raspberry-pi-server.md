@@ -185,7 +185,7 @@ Then reload your terminal with `. ~/.bashrc` and install the current LTS version
 
 **Note:** On an original Raspberry Pi, or a Raspberry Pi Zero, the ARMv6 chip is no longer supported by current versions of node. “Unofficial” ARMv6 builds of node are available at: [unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/). To install a version using an unofficial build use:
 
-```
+```bash
 NVM_NODEJS_ORG_MIRROR=https://unofficial-builds.nodejs.org/download/release nvm install lts
 ```
 
