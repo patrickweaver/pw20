@@ -998,7 +998,7 @@ network={
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Then reload your terminal with &lt;code&gt;. ~/.bashrc&lt;/code&gt; and install the current LTS version of node with &lt;code&gt;nvm install lts&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; On an original Raspberry Pi, or a Raspberry Pi Zero, the ARMv6 chip is no longer supported by current versions of node. “Unofficial” ARMv6 builds of node are available at: &lt;a href=&quot;https://unofficial-builds.nodejs.org/&quot;&gt;unofficial-builds.nodejs.org&lt;/a&gt;. To install a version using an unofficial build use:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;NVM_NODEJS_ORG_MIRROR=https://unofficial-builds.nodejs.org/download/release nvm install lts
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;NVM_NODEJS_ORG_MIRROR=https://unofficial-builds.nodejs.org/download/release nvm install lts
 &lt;/code&gt;&lt;/pre&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;10. Install nvm and npm:&lt;/strong&gt; &lt;code&gt;curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash&lt;/code&gt;, &lt;code&gt;. ~/.bashrc&lt;/code&gt;, &lt;code&gt;nvm install lts&lt;/code&gt;.&lt;/p&gt;
