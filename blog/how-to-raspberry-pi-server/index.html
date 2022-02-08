@@ -43,32 +43,33 @@
       </ul>
       
     </header>
-    <h2>
-      Blog
-    </h2>
-    
-    <div class="post">
+    <main>
+      <h2>
+        Blog
+      </h2>
       
-      <h3 class="post-title">
-        <a href="">
-            How to Set Up a Raspberry Pi as a Home Webserver
-        </a>
-      </h3>
-      
-      <div class="blog-cover">
+      <div class="post">
         
-        <p class="post-preview-date">
-          May 3, 2021
-        </p>
-      
-            <div class="post-header-image">
-              <a href="">
-                <img class="blog-cover-image" src="/images/blog/how-to-raspberry-pi-server/pi-on-ipad.jpg" alt="A photo of a Raspberry Pi on an iPad" />
-              </a>
-            </div>
-      
-      </div>      
-      <p>Like most of the world, I’ve been spending a lot of time at home lately. Over the winter I was experimenting with building my own web-based digital tools, like an app to track articles and books I was reading. I initially thought I would need to buy hosting space to have the app accessible, but realized I mostly needed to use it when I was at home anyway, so a URL that only existed on my local network work also work.</p>
+        <h3 class="post-title">
+          <a href="">
+              How to Set Up a Raspberry Pi as a Home Webserver
+          </a>
+        </h3>
+        
+        <div class="blog-cover">
+          
+          <p class="post-preview-date">
+            May 3, 2021
+          </p>
+        
+              <div class="post-header-image">
+                <a href="">
+                  <img class="blog-cover-image" src="/images/blog/how-to-raspberry-pi-server/pi-on-ipad.jpg" alt="A photo of a Raspberry Pi on an iPad" />
+                </a>
+              </div>
+        
+        </div>        
+        <p>Like most of the world, I’ve been spending a lot of time at home lately. Over the winter I was experimenting with building my own web-based digital tools, like an app to track articles and books I was reading. I initially thought I would need to buy hosting space to have the app accessible, but realized I mostly needed to use it when I was at home anyway, so a URL that only existed on my local network work also work.</p>
 <p>I have done a few projects with Raspberry Pis before, most notably a <a href="https://www.patrickweaver.net/blog/building-a-futuristic-record-player-with-glitch-and-raspberry-pi/">computer vision “record player”</a>, but always found myself looking up the same things like how to set up Wi-Fi and SSH access. I seemed to need to do the same handful of things every time, but they were spread across various documentation and how-tos. This time while setting up the Pi webserver I took notes so I would have it all in one place.</p>
 <p>To follow along with these steps you will need a second computer to set up the SD card (though you could probably start with a <a href="https://www.adafruit.com/product/4266">preformatted SD card also</a>), and any kind of Raspberry Pi. I have run webservers on Pi Zeros before, though it can be a challenge to install newer versions of Node.js on ARMv6 based Pis (Zero and the original Raspberry Pi), and sometimes when building a large client app I’ve had to move to a faster Pi from a Pi Zero.</p>
 <h2>SD Card Setup</h2>
@@ -247,7 +248,8 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 <li><strong>Set Up Reverse Proxy:</strong> Remove default: <code>sudo rm /etc/nginx/sites-enabled/default</code>, Create config file: <code>sudo touch /etc/nginx/sites-available/[YOUR SITE].conf</code>, Edit config file (see above): <code>sudo nano /etc/nginx/sites-available/[YOUR SITE].conf</code>, Link to sites-enabled: <code>sudo ln -s /etc/nginx/sites-available/[YOUR-SITE].conf /etc/nginx/sites-enabled/[YOUR-SITE].conf</code>, Reload Nginx: <code>sudo systemctl reload nginx</code>. <a href="https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-debian-10">source</a></li>
 </ol>
 
-    </div>
+      </div>
+    </main>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-9178162-8"></script>
     <script>
