@@ -7,16 +7,18 @@
     <header>
       {{> boilerplate/siteHeader }}
     </header>
-    <h2>
-      Blog
-    </h2>
-    
-    <div class="post">
+    <main>
+      <h2>
+        Blog
+      </h2>
       
-      {{> blog/postHeader }}
-      
-      {{{ content }}}
-    </div>
+      <div class="post">
+        
+        {{> blog/postHeader }}
+        
+        {{{ content }}}
+      </div>
+    </main>
     {{> boilerplate/analytics }}
   </body>
 </html>

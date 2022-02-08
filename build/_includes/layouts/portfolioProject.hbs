@@ -7,36 +7,38 @@
     <header>
       {{> boilerplate/siteHeader }}
     </header>
-    <h2>
-      Portfolio
-    </h2>
-    
-    <div class="project">
+    <main>
+      <h2>
+        Portfolio
+      </h2>
       
-      {{> portfolio/projectHeader }}
-      
-      <ul class="links">
-        {{#if project_url}}
-          <li>Project URL: <a href="{{project_url}}" target="_blank">
-            {{ shortUrl project_url }}
-          </a></li>
-        {{/if}}
-        {{#if source_url}}
-          <li>Source URL: <a href="{{source_url}}" target="_blank">
-            {{ shortUrl source_url }}
-          </a></li>
-        {{/if}}
-      </ul>
-      
-      {{{ content }}}
-      
-      <ul class="project-images">
-      {{#each images}}
-        <li><img src="{{this}}" /></li>
-      {{/each}}
-      </ul>
-      
-    </div>
+      <div class="project">
+        
+        {{> portfolio/projectHeader }}
+        
+        <ul class="links">
+          {{#if project_url}}
+            <li>Project URL: <a href="{{project_url}}" target="_blank">
+              {{ shortUrl project_url }}
+            </a></li>
+          {{/if}}
+          {{#if source_url}}
+            <li>Source URL: <a href="{{source_url}}" target="_blank">
+              {{ shortUrl source_url }}
+            </a></li>
+          {{/if}}
+        </ul>
+        
+        {{{ content }}}
+        
+        <ul class="project-images">
+        {{#each images}}
+          <li><img src="{{this}}" /></li>
+        {{/each}}
+        </ul>
+        
+      </div>
+    </main>
     {{> boilerplate/analytics }}
   </body>
 </html>
