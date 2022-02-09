@@ -68,8 +68,8 @@
                 </a>
               </div>
         
-        </div>        
-        <p>Earlier this week the NYC MTA released a new <a href="https://map.mta.info/">digital-first map</a>. The <a href="https://www.curbed.com/2020/10/first-look-new-yorks-digital-subway-map-comes-alive-today.html">Curbed exclusive</a> that announced its release accurately portrays it as a strange child of both the 1972 map design by Massimo Vignelli and the current <a href="https://new.mta.info/map/5256">“paper” map</a>. One feature of the new map (though it's harder than it should be to notice at first) is real-time visualizations of each train in the system.</p>
+        </div>        <article>
+          <p>Earlier this week the NYC MTA released a new <a href="https://map.mta.info/">digital-first map</a>. The <a href="https://www.curbed.com/2020/10/first-look-new-yorks-digital-subway-map-comes-alive-today.html">Curbed exclusive</a> that announced its release accurately portrays it as a strange child of both the 1972 map design by Massimo Vignelli and the current <a href="https://new.mta.info/map/5256">“paper” map</a>. One feature of the new map (though it's harder than it should be to notice at first) is real-time visualizations of each train in the system.</p>
 <p>I've been working on a similar concept, starting in February 2020, on which progress stalled once I stopped riding the subway regularly in March. But, when I started my batch at <a href="https://www.recurse.com/">Recurse Center</a> I decided to pick up the project again. My inspiration for the map was the large TV screens that the MTA has installed in stations over the last few years, which frustratingly display the “paper” version of the map.</p>
 <figure>
 <div style="text-align: center;">
@@ -269,6 +269,7 @@
 <p>A common complaint about the new official real-time map is that it seems to use as much computer power as it can. My map isn't much better because it is doing all of the geographic calculations in the user's browser, my guess is that the MTA's map is also. One update I might take on over the next week and a half as my time at RC winds down is moving these calculations to a server, and sending only train position changes to the map visualization. This may also help with the bug my current prototype exhibits where leaving and coming back to the tab a few minutes later will cause trains to fly around the map without regard for the lines or stations.</p>
 <p>The MTA data is weird because it's created by a system that could never have anticipated the kind of systems that now try to contain it. Overall, working with and working around the weirdness in the data has been challenging, but a great reminder that the most interesting real-world problems are often hard to jam into our brittle computer systems, and that's probably a good thing.</p>
 
+        </article>
       </div>
     </main>
     <!-- Global site tag (gtag.js) - Google Analytics -->
