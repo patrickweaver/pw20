@@ -4,7 +4,7 @@
   <subtitle></subtitle>
   <link href="https://patrickweaver.net/feed.xml" rel="self"/>
   <link href="https://patrickweaver.net/blog/"/>
-  <updated>2021-05-03T00:00:00-00:00</updated>
+  <updated>2021-05-03T00:00:00Z</updated>
   <id>https://patrickweaver.net/</id>
   <author>
     <name>Patrick Weaver</name>
@@ -14,12 +14,12 @@
   <entry>
     <title>How we used a chatbot to teach writing and coding!</title>
     <link href="https://patrickweaver.net/blog/how-we-used-a-chatbot-to-teach-writing-and-coding/"/>
-    <updated>2016-06-15T00:00:00-00:00</updated>
+    <updated>2016-06-15T00:00:00Z</updated>
     <id>https://patrickweaver.net/blog/how-we-used-a-chatbot-to-teach-writing-and-coding/</id>
     <content type="html">&lt;p&gt;When &lt;a href=&quot;https://mouse.org/&quot;&gt;Mouse&lt;/a&gt; moved into our new office in early 2015, we were excited to have space for our high school &lt;a href=&quot;https://mouse.org/mouse-design-league&quot;&gt;Design League&lt;/a&gt; program to spread out and work on assistive technology projects like &lt;a href=&quot;https://www.instagram.com/p/BGiUJ8awRJp/&quot;&gt;1derphone&lt;/a&gt;, a motorized headphone for a DJ with limited mobility. We also quickly realized we had the chance to reach more students in more ways by hosting flexible open events that any NYC students could attend.&lt;/p&gt;
 &lt;p&gt;We hosted our first open &lt;a href=&quot;https://mouse.org/makernight&quot;&gt;Maker Night&lt;/a&gt; in March 2015 and it quickly became a space where students showed up and could work on anything creative and innovative. Every month, we saw new projects emerge from crafting, coding, and anything in between:&lt;/p&gt;
 &lt;figure&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*eku7Cc10Y9NSFAm7MP7tYA.jpeg&quot; alt=&quot;&quot;&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/400/1*hA1_vnNXOvLg0WCWt6PluA.jpeg&quot; alt=&quot;&quot;&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1200/1*ieyZhs_PDEsjWpTP8sDWaw.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*eku7Cc10Y9NSFAm7MP7tYA.jpeg&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/400/1*hA1_vnNXOvLg0WCWt6PluA.jpeg&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1200/1*ieyZhs_PDEsjWpTP8sDWaw.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;figcaption&gt;
 &lt;p&gt;Pictures from Maker Night at &lt;a href=&quot;http://mouse.org/&quot;&gt;Mouse&lt;/a&gt;&lt;/p&gt;
 &lt;/figcaption&gt;
@@ -27,7 +27,7 @@
 &lt;p&gt;We often test ideas for new creative activities at Maker Nights and one new project I had been playing around with was &lt;a href=&quot;https://forest-noodle.glitch.me/&quot;&gt;a simple chatbot&lt;/a&gt; that students could remix. We love teaching any new tech skill through activities that are quick and easy to jump into and have created a few introduction to &lt;a href=&quot;https://zircon-porch.glitch.me/&quot;&gt;coding&lt;/a&gt; &lt;a href=&quot;https://distinct-zoo.glitch.me/&quot;&gt;activities&lt;/a&gt; using remixable JavaScript arrays (Check out a few of &lt;a href=&quot;https://automatic-triangle.glitch.me/&quot;&gt;Mouse’s Web Making activities&lt;/a&gt; created through our partnership with Mozilla).&lt;/p&gt;
 &lt;p&gt;We usually have students start out by quickly &lt;a href=&quot;https://efficacious-hook.glitch.me/&quot;&gt;remixing the chatbot’s script&lt;/a&gt;: have the bot ask about your day, or give the chatbot a unique personality. Then they can move on to second level challenges: &lt;a href=&quot;https://smart-raincoat.glitch.me/&quot;&gt;remix the interface CSS&lt;/a&gt;, &lt;a href=&quot;https://possible-boot.glitch.me/&quot;&gt;teach the bot to repeat a user’s name back to them&lt;/a&gt;, or &lt;a href=&quot;https://obtainable-mosquito.glitch.me/&quot;&gt;teach the bot to respond to yes or no questions&lt;/a&gt;. All the linked examples are real student work, created between pizza slices at a Mouse Maker Night!&lt;/p&gt;
 &lt;figure&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*R7wDi-aaq56c6scszMkT9g.png&quot; alt=&quot;&quot;&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*4frB9lA0wqCuoQMb_lLdHQ.png&quot; alt=&quot;&quot;&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*B2IS5kkuK6FaQjmIsPJ3CA.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*R7wDi-aaq56c6scszMkT9g.png&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*4frB9lA0wqCuoQMb_lLdHQ.png&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*B2IS5kkuK6FaQjmIsPJ3CA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;figcaption&gt;3 remixes of the chatbot&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;I tried out the chatbot at our March Maker Night with a few students from &lt;a href=&quot;http://lespnyc.com/&quot;&gt;Lower East Side Prep&lt;/a&gt;. Many LESP students are recent immigrants and as their principal notes on their website, their “student body represents more than 50 countries including the United States.” I sat down with a few LESP students, showed them the basics of editing the script and they instantly started creating.&lt;/p&gt;
@@ -43,16 +43,16 @@
   <entry>
     <title>Which Wearable Arduino Should I Use For My Sewable Tech Project?</title>
     <link href="https://patrickweaver.net/blog/which-wearable-arduino-should-i-use-for-my-sewable-tech-project/"/>
-    <updated>2017-09-29T00:00:00-00:00</updated>
+    <updated>2017-09-29T00:00:00Z</updated>
     <id>https://patrickweaver.net/blog/which-wearable-arduino-should-i-use-for-my-sewable-tech-project/</id>
     <content type="html">&lt;p&gt;This fall &lt;a href=&quot;https://medium.com/@mouse_org&quot;&gt;Mouse&lt;/a&gt; (&lt;a href=&quot;http://mouse.org/&quot;&gt;mouse.org&lt;/a&gt;) launched our brand new &lt;a href=&quot;https://mouse.org/mouse-courses&quot;&gt;Sewable Tech Course&lt;/a&gt;! The course introduces learners to circuitry and electronics without the abstraction of a breadboard. In the final two projects in the course we use a wearable Arduino to prototype a DIY activity tracker.&lt;/p&gt;
  &lt;figure&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*gfNKPipgo0Yp_bZLJLg7MQ.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*gfNKPipgo0Yp_bZLJLg7MQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;figcaption&gt;Sew-matic for DIY Wearable Goal Tracker from Mouse Create&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;The big question we ran into when I was helping my colleague &lt;a href=&quot;https://twitter.com/katermouse&quot;&gt;Kate&lt;/a&gt; prototype the course was, which wearable Arduino to use. Along the way we tested 7 Arduino compatible microcontrollers and settled on recommending a &lt;a href=&quot;https://www.sparkfun.com/products/12049&quot;&gt;LilyPad Arduino USB&lt;/a&gt;, but there are advantages to each of the Arduinos we tested and different kinds projects would benefit from including each of them.&lt;/p&gt;
  &lt;figure&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*nxNOfE_aAIHrgXcgX8GSLQ.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*nxNOfE_aAIHrgXcgX8GSLQ.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;figcaption&gt;Our collection of wearable arduinos&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;ol&gt;
@@ -66,7 +66,7 @@
 &lt;/ol&gt;
 &lt;p&gt;All of the boards work with the &lt;a href=&quot;https://www.arduino.cc/en/Main/Software&quot;&gt;Arduino IDE&lt;/a&gt; (most with some extra steps), are roughly circular, and most run on 3.3 Volts, but there are slight differences that make certain boards better for some types of projects.&lt;/p&gt;
 &lt;h4&gt;[1] &amp;amp; [2] Sparkfun/Generic LilyPad Arduino USB&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*FWirsLamzgR-H2Wbht2ZYg.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*FWirsLamzgR-H2Wbht2ZYg.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;[1] From &lt;a href=&quot;https://www.sparkfun.com/products/12049&quot;&gt;Sparkfun: $25&lt;/a&gt;, [2] &lt;a href=&quot;https://www.ebay.com/sch/i.html?_nkw=LilyPad+Arduino+USB+ATmega32U4&quot;&gt;Generic: $6 to $20&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;5 Digital Pins&lt;/li&gt;
@@ -81,7 +81,7 @@
 &lt;p&gt;The SparkFun model costs a bit more but a portion of the sales go to &lt;a href=&quot;http://leahbuechley.com/&quot;&gt;Leah Buechley&lt;/a&gt; to support open source e-textiles and e-textiles education development.&lt;/p&gt;
 &lt;p&gt;Be careful when buying to get the LilyPad Arduino USB if you need a USB connection. The original &lt;a href=&quot;https://www.sparkfun.com/products/13342&quot;&gt;LilyPad Arduino 328 Main Board&lt;/a&gt; (not pictured), requires an FTDI connection to upload code (but that one has more pins!).&lt;/p&gt;
 &lt;h4&gt;[3] Adafruit FLORA&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*WOH8dSMPKiHUzYIAU4WerQ.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*WOH8dSMPKiHUzYIAU4WerQ.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;From &lt;a href=&quot;https://www.adafruit.com/product/659&quot;&gt;Adafruit $15&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;8 Digital Pins&lt;/li&gt;
@@ -94,7 +94,7 @@
 &lt;/ul&gt;
 &lt;p&gt;The Adafruit Flora is a great board and can handle any project. It’s smaller than the LilyPad but has 3 more pins, and the onboard RGB LED is very useful as a Hello, World. The only drawback to this board is &lt;a href=&quot;https://learn.adafruit.com/add-boards-arduino-v164/overview&quot;&gt;adding the board in the Arduino IDE&lt;/a&gt; and installing the &lt;a href=&quot;https://learn.adafruit.com/adafruit-arduino-ide-setup/windows-driver-installation&quot;&gt;Adafruit drivers on Windows&lt;/a&gt;, but both of these are one-time steps and don’t take more than a few minutes. We did have some issues uploading code via a USB 3.0 port, but this can be avoided by using a USB 2.0 hub.&lt;/p&gt;
 &lt;h4&gt;[4] Generic LilyTiny&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*6Cx0oeFjZ0aGB6ek2vzCtQ.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*6Cx0oeFjZ0aGB6ek2vzCtQ.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.ebay.com/sch/i.html?_nkw=LilyTiny&quot;&gt;Generic $2 to $5&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;6 Digital Pins&lt;/li&gt;
@@ -106,7 +106,7 @@
 &lt;p&gt;The biggest disadvantage of this board is the upload process. &lt;a href=&quot;https://digistump.com/wiki/digispark/tutorials/connecting&quot;&gt;Following these instructions&lt;/a&gt;, we had to add the board to the Arduino IDE, install Digistump drivers, and hit the plug in the board to USB at a specific point in the process. We also had issues with this board on USB 3.0 ports.&lt;/p&gt;
 &lt;p&gt;If you have a lot of experience with Arduino or have a very small budget but a lot of patience this board might be for you.&lt;/p&gt;
 &lt;h4&gt;[5] &amp;amp; [6] Arduino GEMMA and Adafruit GEMMA v2&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*MyLI2jE1Oo2yA6sYbYQKCA.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*MyLI2jE1Oo2yA6sYbYQKCA.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;[6] From &lt;a href=&quot;https://www.adafruit.com/product/1222&quot;&gt;Adafruit $10&lt;/a&gt;, [5] From &lt;a href=&quot;https://www.adafruit.com/product/2470&quot;&gt;Adafruit (Discontinued)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;3 Digital Pins&lt;/li&gt;
@@ -120,7 +120,7 @@
 &lt;p&gt;Both the Gemma boards are great small wearable Arduinos. The small number of pins and small size make this board very approachable for a beginner, and would make the perfect tool for a simple sewable tech project. We initially were going to recommend the Adafruit Gemma v2 on Mouse Create, but we had enough &lt;a href=&quot;https://learn.adafruit.com/introducing-gemma/about-the-bootloader&quot;&gt;issues with uploading via USB 3.0&lt;/a&gt; that instead of shipping a USB 2.0 hub along with the boards we decided to opt for the LilyPad.&lt;/p&gt;
 &lt;p&gt;If you already have a USB 2.0 hub or computers with USB 2.0 ports this board will work great. It does not have serial communication so it is best suited for simpler projects. Like the Adafruit Flora you will have to &lt;a href=&quot;https://learn.adafruit.com/add-boards-arduino-v164/overview&quot;&gt;add the board to the Arduino IDE&lt;/a&gt; and &lt;a href=&quot;https://learn.adafruit.com/adafruit-arduino-ide-setup/windows-driver-installation&quot;&gt;install the Adafruit drivers on Windows&lt;/a&gt; (for the Gemma V2).&lt;/p&gt;
 &lt;h4&gt;[7] Adafruit GEMMA M0&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*Qyf4eRy8XKT-_OwYjHu9xw.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*Qyf4eRy8XKT-_OwYjHu9xw.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;From &lt;a href=&quot;https://www.adafruit.com/product/3501&quot;&gt;Adafruit $10&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;3 Digital Pins&lt;/li&gt;
@@ -147,7 +147,7 @@ while True:
 &lt;p&gt;As with other Adafruit Boards if you are using the Arduino IDE instead of Python you will have to &lt;a href=&quot;https://learn.adafruit.com/add-boards-arduino-v164/overview&quot;&gt;add the board to the IDE&lt;/a&gt; and &lt;a href=&quot;https://learn.adafruit.com/adafruit-arduino-ide-setup/windows-driver-installation&quot;&gt;install the Adafruit drivers on Windows&lt;/a&gt;. You may also have to &lt;a href=&quot;https://learn.adafruit.com/adafruit-gemma-m0/circuitpython&quot;&gt;reinstall Circuit Python&lt;/a&gt; if you go back and forth between the IDE and Circuit Python, but this is a simple drag and drop process. I’m also not sure how to control the RGB LED but I haven’t spent much time trying to figure it out.&lt;/p&gt;
 &lt;p&gt;All the boards we tested worked great once we figured out the tricks of each and any will work for most sewable tech projects. Once you decide on a board, check out &lt;a href=&quot;https://mouse.org/work&quot;&gt;Mouse Create&lt;/a&gt; to find some fun projects!&lt;/p&gt;
  &lt;figure&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*dNpQjlUdHIzaTusjw9ERRw.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*dNpQjlUdHIzaTusjw9ERRw.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;figcaption&gt;
 &lt;p&gt;Making a light up phone case at &lt;a href=&quot;https://medium.com/@mouse_org&quot;&gt;Mouse&lt;/a&gt; &lt;a href=&quot;https://mouse.org/makernight&quot;&gt;Maker Night&lt;/a&gt;&lt;/p&gt;
 &lt;/figcaption&gt;
@@ -157,7 +157,7 @@ while True:
   <entry>
     <title>Building a futuristic Record Player with Glitch and Raspberry Pi</title>
     <link href="https://patrickweaver.net/blog/building-a-futuristic-record-player-with-glitch-and-raspberry-pi/"/>
-    <updated>2018-10-23T00:00:00-00:00</updated>
+    <updated>2018-10-23T00:00:00Z</updated>
     <id>https://patrickweaver.net/blog/building-a-futuristic-record-player-with-glitch-and-raspberry-pi/</id>
     <content type="html">&lt;p&gt;Earlier this year I wanted to explore the new &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/async_function&quot;&gt;async/await&lt;/a&gt; functionality in Javascript so I started playing around with &lt;a href=&quot;https://async-await-machine.glitch.me/&quot;&gt;a project&lt;/a&gt; on Glitch (&lt;a href=&quot;https://glitch.com/&quot;&gt;glitch.com&lt;/a&gt;) that would call one API after another, then generate new API call options from each cycle. I compiled a long list of potential APIs to use, but didn’t get past chaining together an &lt;a href=&quot;https://dog.ceo/dog-api/&quot;&gt;API that will respond with a picture of a specific breed of dog&lt;/a&gt;, and the &lt;a href=&quot;https://www.mediawiki.org/wiki/API:Main_page&quot;&gt;Wikipedia API&lt;/a&gt; which could respond with the pages that came up in a search for the name of the breed.&lt;/p&gt;
 &lt;figure&gt;
@@ -210,7 +210,7 @@ while True:
   <entry>
     <title>I Could Never Remember How to Make a Simple S3 Upload Feature So I Wrote It Down</title>
     <link href="https://patrickweaver.net/blog/i-could-never-remember-how-to-make-a-simple-s3-upload-feature-so-i-wrote-it-down/"/>
-    <updated>2020-04-21T00:00:00-00:00</updated>
+    <updated>2020-04-21T00:00:00Z</updated>
     <id>https://patrickweaver.net/blog/i-could-never-remember-how-to-make-a-simple-s3-upload-feature-so-i-wrote-it-down/</id>
     <content type="html">&lt;p&gt;Whenever I start a new web project there is an ominous, literal, figurative, &amp;quot;cloud&amp;quot; lurking on the horizon: Will this project get complicated enough to need to be connected to S3 for file upload?&lt;/p&gt;
 &lt;p&gt;More often than I&#39;d like the answer is yes, and at this point I&#39;ve re-learned how to connect a Node.js app to S3 more times than I&#39;d like. Rather than keep learning just enough S3 to get a project working, and then instantly forgetting it, I decided to write the process down so I can follow my own instructions.&lt;/p&gt;
@@ -223,11 +223,11 @@ while True:
 &lt;ol&gt;
 &lt;li&gt;Log into AWS and click on &amp;quot;Services&amp;quot; in the top left. Select &amp;quot;S3&amp;quot; in the &amp;quot;Storage&amp;quot; section, then click on &amp;quot;Create Bucket&amp;quot; on the main S3 screen.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/i/wzb11or02x3fgsdlobl1.png&quot; alt=&quot;A screenshot of the main S3 screen&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/i/wzb11or02x3fgsdlobl1.png&quot; alt=&quot;A screenshot of the main S3 screen&quot; /&gt;&lt;/p&gt;
 &lt;ol start=&quot;2&quot;&gt;
 &lt;li&gt;Give your bucket a name (this will be visible to users so something related to your app is best), and select a region (probably whichever is closest to your users), leave &amp;quot;Block all public access&amp;quot; checked, then click &amp;quot;Create bucket&amp;quot;.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/i/jqobhso6ba8idwecff7l.png&quot; alt=&quot;A screenshot of the Create bucket screen&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/i/jqobhso6ba8idwecff7l.png&quot; alt=&quot;A screenshot of the Create bucket screen&quot; /&gt;&lt;/p&gt;
 &lt;ol start=&quot;3&quot;&gt;
 &lt;li&gt;Note your bucket name (probably in an ENV variable), it&#39;s now ready to receive uploads!&lt;/li&gt;
 &lt;/ol&gt;
@@ -246,11 +246,11 @@ while True:
 &lt;p&gt;You want to add 3 specific actions: &amp;quot;PutObject&amp;quot; which allows uploading files, &amp;quot;GetObject&amp;quot; which allows reading files, and &amp;quot;DeleteObject&amp;quot; (I think you can figure this one out). &amp;quot;GetObject&amp;quot; is in the &amp;quot;Read&amp;quot; section, check the checkbox there. &amp;quot;PutObject&amp;quot; and &amp;quot;DeleteObject&amp;quot; are both in the &amp;quot;Write&amp;quot; section. At the end you should have 3 objects selected:&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/i/xq9fza7qlzaxb9s2uwxx.png&quot; alt=&quot;A screenshot of the Create Policy actions selection&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/i/xq9fza7qlzaxb9s2uwxx.png&quot; alt=&quot;A screenshot of the Create Policy actions selection&quot; /&gt;&lt;/p&gt;
 &lt;ol start=&quot;5&quot;&gt;
 &lt;li&gt;In the Resources section click on &amp;quot;Add ARN&amp;quot;, then fill in your Bucket Name, and click on &amp;quot;Any&amp;quot; for Object name. This means that users with this policy can only perform the actions above on one bucket, but can perform those actions on any of the objects in that bucket.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/i/n99mhoauau96yg2fp6j2.png&quot; alt=&quot;A screenshot of the Add ARN screen when creating a policy&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/i/n99mhoauau96yg2fp6j2.png&quot; alt=&quot;A screenshot of the Add ARN screen when creating a policy&quot; /&gt;&lt;/p&gt;
 &lt;ol start=&quot;6&quot;&gt;
 &lt;li&gt;If you click over to the JSON editor you should see the code below. You can also just copy this in. Note that you should edit the &amp;quot;Resource&amp;quot; property to have your actual bucket name:&lt;/li&gt;
 &lt;/ol&gt;
@@ -277,7 +277,7 @@ while True:
 &lt;ol&gt;
 &lt;li&gt;Click on Users in the left sidebar, then the &amp;quot;Add user&amp;quot; button at the top of the screen, give your user a name and select the checkbox for &amp;quot;Programmatic Access&amp;quot;.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/i/gi90azo1auvxzjdbamyz.png&quot; alt=&quot;A screenshot of the Add User screen&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/i/gi90azo1auvxzjdbamyz.png&quot; alt=&quot;A screenshot of the Add User screen&quot; /&gt;&lt;/p&gt;
 &lt;ol start=&quot;2&quot;&gt;
 &lt;li&gt;
 &lt;p&gt;In the &amp;quot;Set permissions&amp;quot; section at the top of the page, click on &amp;quot;Attach existing policies directly&amp;quot;. Search for the policy you just created, then select it and click &amp;quot;Next: Tags&amp;quot;. You can skip Tags, and click &amp;quot;Next: Review&amp;quot;, then click &amp;quot;Create user&amp;quot;.&lt;/p&gt;
@@ -286,7 +286,7 @@ while True:
 &lt;p&gt;You will now save your user&#39;s credentials. This is the only time you will be able to do this, so make sure you save them somewhere safe. You will also need to add the credentials as ENV variables in your app. I recommend clicking the &amp;quot;Download .csv&amp;quot; button and saving the file, at least until you get your app set up.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/i/3rqbznl2dlvif555eorn.png&quot; alt=&quot;A screenshot of the attach policy section of the create user screen&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/i/3rqbznl2dlvif555eorn.png&quot; alt=&quot;A screenshot of the attach policy section of the create user screen&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;A simple example app&lt;/h2&gt;
 &lt;p&gt;Congratulations! You are done with the AWS setup, now you can work on your app. I have a simple and heavily commented &lt;a href=&quot;https://aws-s3-example.glitch.me/&quot;&gt;example app&lt;/a&gt; I use to add this functionality to new projects:&lt;/p&gt;
 &lt;!-- Copy and Paste Me --&gt;
@@ -507,7 +507,7 @@ async function getSignedUrl(key) {
   <entry>
     <title>How to Download an Image from a Google Doc</title>
     <link href="https://patrickweaver.net/blog/how-to-download-an-image-from-a-google-doc/"/>
-    <updated>2020-07-16T00:00:00-00:00</updated>
+    <updated>2020-07-16T00:00:00Z</updated>
     <id>https://patrickweaver.net/blog/how-to-download-an-image-from-a-google-doc/</id>
     <content type="html">&lt;p&gt;For some reason Google hasn&#39;t built in a way for you to download images in Google docs! There are workarounds to get those image files like &lt;a href=&quot;https://twitter.com/corduroy/status/1184758335934849025&quot;&gt;using Google Keep&lt;/a&gt;, or &lt;a href=&quot;https://twitter.com/tonyvincent/status/1021726699178708993&quot;&gt;downloading your whole doc as a .zip file&lt;/a&gt;, but these have always felt like too many steps.&lt;/p&gt;
 &lt;p&gt;And this is something that people really want!&lt;/p&gt;
@@ -546,12 +546,12 @@ async function getSignedUrl(key) {
   <entry>
     <title>Week 1 at Recurse Center: Two Approaches to Learning</title>
     <link href="https://patrickweaver.net/blog/recurse-center-week-1/"/>
-    <updated>2020-08-16T22:22:13.781-00:00</updated>
+    <updated>2020-08-16T22:22:13Z</updated>
     <id>https://patrickweaver.net/blog/recurse-center-week-1/</id>
     <content type="html">&lt;p&gt;I just finished my first week as part of the Fall 1 &#39;20 batch at &lt;a href=&quot;https://www.recurse.com/&quot;&gt;Recurse Center&lt;/a&gt;. I tried to split my time between being social and building skills that I want to use for future projects. The social aspect of RC is interesting because this batch is being conducted remotely.&lt;/p&gt;
 &lt;p&gt;My batch at RC started exactly 5 months after my last day in an office, and something I had been thinking about over the last few months, is that I haven&#39;t met anyone new since early March when NYC shut down because of the pandemic. It&#39;s been very refreshing to meet people again, even if it&#39;s via video calls and chat. RC has created an online representation of their physical space we call &amp;quot;Virtual RC&amp;quot;. Each of us have avatars we can move around the space, and there are permanent links to video call rooms that we can pop into for events or impromptu conversations. The Virtual RC experience pairs well with group chat organized into streams on different topics.&lt;/p&gt;
 &lt;figure&gt;
-&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/rc/virtual-rc.png&quot; alt=&quot;A screenshot of Virtual RC&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/rc/virtual-rc.png&quot; alt=&quot;A screenshot of Virtual RC&quot; /&gt;&lt;/p&gt;
 &lt;figcaption&gt;My avatar hanging out in the &quot;Shannon&quot; room at Virtual RC&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;Other than social events I spent my first week at RC focused on two projects. The first was going through the &lt;a href=&quot;https://www.hackingwithswift.com/100/swiftui&quot;&gt;100 Days of SwiftUI tutorials&lt;/a&gt; (at many more than one a day), which I had started before the batch. The second was reviewing the &lt;a href=&quot;https://github.com/patrickweaver/nyc-subway&quot;&gt;real time NYC Subway map&lt;/a&gt; project I first started in January.&lt;/p&gt;
@@ -592,7 +592,7 @@ async function getSignedUrl(key) {
 &lt;/figure&gt;
 &lt;p&gt;In order to gauge the feasibility of the project I wanted to get started quickly, throwing a map together and adding some markers for stations and individual trains at fixed times. Because I had limited experience working with transit data (which is provided in a &lt;a href=&quot;https://developers.google.com/transit/gtfs&quot;&gt;very complex format&lt;/a&gt;), or maps, this left me with both the sense that the project is possible, and a big spaghetti code mess.&lt;/p&gt;
 &lt;figure&gt;
-&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/rc/nyc-subway-v1.png&quot; alt=&quot;A screenshot of the first prototype of my subway map app&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/rc/nyc-subway-v1.png&quot; alt=&quot;A screenshot of the first prototype of my subway map app&quot; /&gt;&lt;/p&gt;
 &lt;figcaption&gt;The first prototype of the subway map app&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;I started looking into SwiftUI because I&#39;m interested in making my own home screen widgets once I update my phone to iOS 14, and these widgets are built using the framework. Knowing I would have time to experiment during my batch at RC, and wanting to avoid my usual new tool mess phenomenon, I prioritized giving myself a good understanding of how SwiftUI works, what it can and can&#39;t do, and a general review of Swift. Once my batch started I found it more and more difficult to keep going through the tutorials instead of jumping into an original idea, but throughout the week, spending time figuring out what I was even thinking reviewing the code for the subway map project re-motivated me to get through it.&lt;/p&gt;
@@ -613,13 +613,13 @@ async function getSignedUrl(key) {
   <entry>
     <title>Making a Real-Time NYC Subway Map with Real Weird NYC Subway Data</title>
     <link href="https://patrickweaver.net/blog/making-a-real-time-nyc-subway-map-with-real-weird-nyc-subway-data/"/>
-    <updated>2020-10-21T00:00:00-00:00</updated>
+    <updated>2020-10-21T00:00:00Z</updated>
     <id>https://patrickweaver.net/blog/making-a-real-time-nyc-subway-map-with-real-weird-nyc-subway-data/</id>
     <content type="html">&lt;p&gt;Earlier this week the NYC MTA released a new &lt;a href=&quot;https://map.mta.info/&quot;&gt;digital-first map&lt;/a&gt;. The &lt;a href=&quot;https://www.curbed.com/2020/10/first-look-new-yorks-digital-subway-map-comes-alive-today.html&quot;&gt;Curbed exclusive&lt;/a&gt; that announced its release accurately portrays it as a strange child of both the 1972 map design by Massimo Vignelli and the current &lt;a href=&quot;https://new.mta.info/map/5256&quot;&gt;“paper” map&lt;/a&gt;. One feature of the new map (though it&#39;s harder than it should be to notice at first) is real-time visualizations of each train in the system.&lt;/p&gt;
 &lt;p&gt;I&#39;ve been working on a similar concept, starting in February 2020, on which progress stalled once I stopped riding the subway regularly in March. But, when I started my batch at &lt;a href=&quot;https://www.recurse.com/&quot;&gt;Recurse Center&lt;/a&gt; I decided to pick up the project again. My inspiration for the map was the large TV screens that the MTA has installed in stations over the last few years, which frustratingly display the “paper” version of the map.&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;text-align: center;&quot;&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/nyc-subway/tv-screen-map.jpg&quot; alt=&quot;A photograph of a TV in a subway station with the “paper” map displayed.&quot; style=&quot;max-height: 400px; margin: 0 auto;&quot;&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/nyc-subway/tv-screen-map.jpg&quot; alt=&quot;A photograph of a TV in a subway station with the “paper” map displayed.&quot; style=&quot;max-height: 400px; margin: 0 auto;&quot; /&gt;
 &lt;/div&gt;
 &lt;figcaption&gt;Subway station TV (This is not a good photo, but it’s hard to take a picture of a screen underground)&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -642,7 +642,7 @@ async function getSignedUrl(key) {
 &lt;p&gt;The subway real-time API doesn’t have latitude and longitude data because it is designed to feed data to countdown clock style applications that show when the train will be at a specific station. One of the earliest features that I built into the real-time map was a way to translate these station-by-station countdown clocks into an approximation of the location of each train. My first attempt at this was to just show a list of stations and display an icon for a train between the names of the station it had been at previously and the station it was approaching.&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;text-align: center;&quot;&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/nyc-subway/prototype-diagram.png&quot; alt=&quot;An early prototype diagram of G train positions.&quot; style=&quot;max-height: 400px; margin: 0 auto;&quot;&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/nyc-subway/prototype-diagram.png&quot; alt=&quot;An early prototype diagram of G train positions.&quot; style=&quot;max-height: 400px; margin: 0 auto;&quot; /&gt;
 &lt;/div&gt;
 &lt;figcaption&gt;A first prototype, still available at: &lt;a href=&quot;https://nyc-subway-g.glitch.me/&quot;&gt;nyc-subway-g.glitch.me&lt;/a&gt;&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -804,9 +804,9 @@ async function getSignedUrl(key) {
 &lt;p&gt;After trying to approach the parallel lines problem geometrically I was pointed in the right direction by a fellow RC participant and was able to draw great looking lines by treating the Latitude/Longitude points in the shape arrays as vectors (More on this in my &lt;a href=&quot;https://doodles.patrickweaver.net/drawing-parallel-lines-on-a-map/&quot;&gt;interactive slides on this problem&lt;/a&gt; and more on the &lt;a href=&quot;https://medium.com/transit-app/how-we-built-the-worlds-prettiest-auto-generated-transit-maps-12d0c6fa502f&quot;&gt;challenge of drawing nice train lines from the Transit app&lt;/a&gt;).&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;display: flex; max-width: 100%;&quot;&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/nyc-subway/nyc-subway-f-g.png&quot; alt=&quot;A screenshot of my map.&quot; style=&quot;max-height: 500px; max-width: 49%; margin: 0 auto;&quot;&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/nyc-subway/nyc-subway-f-g.png&quot; alt=&quot;A screenshot of my map.&quot; style=&quot;max-height: 500px; max-width: 49%; margin: 0 auto;&quot; /&gt;
   &lt;span style=&quot;width: 5px;&quot;&gt;&lt;/span&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/nyc-subway/mta-f-g.png&quot; alt=&quot;A screenshot of the MTA map.&quot; style=&quot;max-height: 500px; max-width: 49%; margin: 0 auto;&quot;&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/nyc-subway/mta-f-g.png&quot; alt=&quot;A screenshot of the MTA map.&quot; style=&quot;max-height: 500px; max-width: 49%; margin: 0 auto;&quot; /&gt;
 &lt;/div&gt;
 &lt;figcaption&gt;Similar sections of my map and the MTA map&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -820,12 +820,12 @@ async function getSignedUrl(key) {
   <entry>
     <title>Participating in a Remote Batch at the Recurse Center</title>
     <link href="https://patrickweaver.net/blog/a-recurse-center-remote-batch/"/>
-    <updated>2021-01-25T16:33:26.655-00:00</updated>
+    <updated>2021-01-25T16:33:26Z</updated>
     <id>https://patrickweaver.net/blog/a-recurse-center-remote-batch/</id>
     <content type="html">&lt;p&gt;Participating in a batch at the &lt;a href=&quot;https://www.recurse.com/&quot;&gt;Recurse Center&lt;/a&gt; is something that I’ve thought on-and-off about doing since I found out about it (then called Hacker School) sometime between 2013 and 2015, but it just never seemed like the right time to leave my job and its subsidized health insurance until I was laid off (what turned out to be) early on in the pandemic. I had as recently as January 2020 been thinking, “maybe now is the right time to finally quit and do it,” and though I’m relieved I was able to get a few more months of savings and health insurance into 2020, participating in RC was the perfect change of pace and a motivating bridge between employment and the job search.&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;text-align: center;&quot;&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/rc2/rc-website.png&quot; alt=&quot;A screenshot from the Recurse Center website with a notice about operating remotely&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot;&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/rc2/rc-website.png&quot; alt=&quot;A screenshot from the Recurse Center website with a notice about operating remotely&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot; /&gt;
 &lt;/div&gt;
 &lt;figcaption&gt;Screenshot from recurse.com&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -833,7 +833,7 @@ async function getSignedUrl(key) {
 &lt;p&gt;There are a few different pieces to the experience of a remote batch at RC. &lt;a href=&quot;https://www.recurse.com/virtual-rc&quot;&gt;Virtual RC&lt;/a&gt; is a fun game-like experience where each participant (and visiting alumni) has an avatar on the map. One corner of the map is more organized, and designed with a layout intended to mimic the physical RC space in Brooklyn, but the rest of the map is open for creative world building or experiments (there is even a Virual RC API now!). Each of the “rooms” in the structured corner of the map has a persistant video call link in it, and you can see which other participants are in the room on a call. Since I’ve started my new job I’ve missed being able to see who is already in a zoom call before deciding to join an optional meeting! Participants are encouaged to create a desk, where you can set an emoji status and leave a short note describing what you are up to that day. There are also audio rooms, which are great for more informal, or group conversations, and I’m only realizing now how much easier it is to start a call when you don’t have to open a new link and wait for a video call service to connect. A lot of the day-to-day conversation at remote RC happens via text on &lt;a href=&quot;https://zulip.com/&quot;&gt;Zulip&lt;/a&gt; (though this was the case for in-person RC also). It’s easy to reach out for help or to look for a pairing buddy on Zuip, and one of the most active streams (like channels in other chat apps) is Checkins where in-batch Recursers regularly post about what they’re working on.&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;text-align: center;&quot;&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/rc2/virtual-rc.png&quot; alt=&quot;A screenshot from Virtual RC with my avatar on top of the RC logo drawn with wall blocks&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot;&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/rc2/virtual-rc.png&quot; alt=&quot;A screenshot from Virtual RC with my avatar on top of the RC logo drawn with wall blocks&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot; /&gt;
 &lt;/div&gt;
 &lt;figcaption&gt;Hanging out on top of the RC logo in Virutal RC&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -842,21 +842,21 @@ async function getSignedUrl(key) {
 &lt;p&gt;After speeding through the SwiftUI tutorials in my first week (and getting kind of tired of working in an unfamiliar language), I decided to spend most of my time working on my &lt;a href=&quot;https://patrickweaver.net/blog/making-a-real-time-nyc-subway-map-with-real-weird-nyc-subway-data/&quot;&gt;real-time NYC subway map project&lt;/a&gt; that I had first prototyped in early 2020. I eventually was able to get a mostly working prototype of the full system, coincidentally on almost the exact day that the MTA &lt;a href=&quot;https://www.curbed.com/2020/10/first-look-new-yorks-digital-subway-map-comes-alive-today.html&quot;&gt;released&lt;/a&gt; their own version. I thought that the subway map would be one of a few medium sized projects that I would be able to spend 2 to 3 weeks on during my RC time, but I had already spent more than half of my 12 week batch on it. I had done a few other one-off projects like an &lt;a href=&quot;https://10-print-video-game.glitch.me/&quot;&gt;abstract “video game”&lt;/a&gt; based on the 10 Print pattern and a few explorations into techincal topics like &lt;a href=&quot;https://doodles.patrickweaver.net/canvas-lines/&quot;&gt;the browser JavaScript canvas API&lt;/a&gt;, but I decided that I should try to find a real medium-sized project for my last few weeks at RC.&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;text-align: center;&quot;&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/rc2/canvas-lines.png&quot; alt=&quot;A screenshot from my slides on drawing pixel perfect lines on the JS canvas&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot;&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/rc2/canvas-lines.png&quot; alt=&quot;A screenshot from my slides on drawing pixel perfect lines on the JS canvas&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot; /&gt;
 &lt;/div&gt;
 &lt;figcaption&gt;It&#39;s hard to draw crisp lines on the JS canvas!&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;I felt like I had mostly been working though a big challenge with technologies that were pretty familiar so far (JavaScript and the &lt;a href=&quot;https://leafletjs.com/&quot;&gt;Leaflet.js mapping library&lt;/a&gt;), so I wanted to find a project that I could use to learn something new, but not spend all my time on implementation details like I had been doing learning SwiftUI. I had created a static website on the &lt;a href=&quot;https://doodles.patrickweaver.net/&quot;&gt;doodles subdomain&lt;/a&gt; of my website that I wanted to keep filling out, so a useful constraint was to make something on the web that wouldn’t need a backend (the doodles website is static and built with &lt;a href=&quot;https://www.11ty.dev/&quot;&gt;Eleventy&lt;/a&gt; , as are this website, and most of the doodles)). In the last year at my job, and through collaborating with other RC participants during my batch I had gotten pretty quick with prototyping things with React, but I hadn’t used either &lt;a href=&quot;https://reactjs.org/docs/hooks-intro.html&quot;&gt;React Hooks&lt;/a&gt;, or &lt;a href=&quot;https://www.typescriptlang.org/&quot;&gt;TypeScript&lt;/a&gt; for anything. I decided to try learning both and created a &lt;a href=&quot;https://doodles.patrickweaver.net/crossword/editor&quot;&gt;web-based Crossword Puzzle composer&lt;/a&gt;.&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;text-align: center;&quot;&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/rc2/crossword.png&quot; alt=&quot;A screenshot of the crossword puzzle app with symmetrical squares blacked out&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot;&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/rc2/crossword.png&quot; alt=&quot;A screenshot of the crossword puzzle app with symmetrical squares blacked out&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot; /&gt;
 &lt;/div&gt;
 &lt;figcaption&gt;A crossword puzzle with multiple kids of symmetries&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;The crossword puzzle app was a fun mix of small challenges and interesting design decisions. One of the first things that stood out to me was that I had never really thought about the algorithm that is used to number crossword puzzle answers on the board, the kind of thing that is immediately understandable, but more complex that you would expect it to be when represented with a programming language. React Hooks were immediately very useful since most of the components for the app needed a sprinkling of state, but not too much, and TypeScript was helpful, especially in the context of RC because I paired with a few people on certain self-contained parts of the app like the symmetry for square toggling, and the defined types help people quickly pick up what the code we were writing would do. My favorite part of the crossword puzzle app is that to store a composed puzzle without a backend, I encode the whole puzzle state into the URL (here is a &lt;a href=&quot;https://doodles.patrickweaver.net/crossword/play/#eyJzdGF0ZSI6W1tbWyJmIiwiIiwiZmYiLG51bGwsbnVsbCwwXSxbImYiLCIiLCJ-mZiIsbnVsbCxudWxsLDFdLFsidCIsIlIiLCJ0dCIsMSwxLDJdLFsidCIsIkMiLC-JmdCIsMSwyLDNdXSxbWyJ0IiwiRiIsInR0IiwzLDMsNF0sWyJ0IiwiSSIsImZ0I-iwzLDQsNV0sWyJ0IiwiRiIsImZmIiwzLDEsNl0sWyJ0IiwiTyIsImZmIiwzLDIs-N11dLFtbInQiLCJBIiwidGYiLDUsMyw4XSxbInQiLCJNIiwiZmYiLDUsNCw5XSx-bInQiLCJJIiwiZmYiLDUsMSwxMF0sWyJ0IiwiRCIsImZmIiw1LDIsMTFdXSxbWy-J0IiwiTiIsInRmIiw2LDMsMTJdLFsidCIsIk8iLCJmZiIsNiw0LDEzXSxbInQiL-CJEIiwiZmYiLDYsMSwxNF0sWyJ0IiwiRSIsImZmIiw2LDIsMTVdXV0sW1tbImEi-LDEsIkZLQSBIYWNrZXIgU2NoLiIsIlJDIiwyXSxbImEiLDMsIk9yZGVyIGluIGE-gcXVldWUiLCJGSUZPIiw0XSxbImEiLDUsIkluIHRoZSBtaWRkbGUgb2YiLCJBTU-lEIiw4XSxbImEiLDYsIkphdmFTY3JpcHQgcnVudGltZSIsIk5PREUiLDEyXV0sW-1siZCIsMSwiV2lyZWxlc3MgdGVjaCB3aXRoIHRhZ3MiLCJSRklEIiwyXSxbImQi-LDIsIldoYXQgYSBwcm9ncmFtbWVyIHdyaXRlcyIsIkNPREUiLDNdLFsiZCIsMyw-iQ29tcHV0ZXIgYWlyIG1vdmVyIiwiRkFOIiw0XSxbImQiLDQsIlNob3J0aGFuZC-Bmb3Igb25lJ3MgcHJlZmVyZW5jZSIsIklNTyIsNV1dXV19&quot;&gt;small RC themed puzzle&lt;/a&gt;). I even discovered seemingly documented nowhere else bug in iMessage when prototyping this feature. When I first sent a friend a link to a puzzle as a test, iMessage wouldn’t parse it as a link, so they just got a wall of what looked like random characters. I looked around at other long tracking links I’d received in my emails and noticed they frequently had hyphen characters every so often. I added hyphens to my urls and all of a sudden iMessage could parse them as links!&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;text-align: center;&quot;&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/rc2/imessage.png&quot; alt=&quot;A screenshot of a message in iMessage with a long stiring of seemingly random characters&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot;&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/rc2/imessage.png&quot; alt=&quot;A screenshot of a message in iMessage with a long stiring of seemingly random characters&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot; /&gt;
 &lt;/div&gt;
 &lt;figcaption&gt;A failed attempt to send a crossword&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -864,7 +864,7 @@ async function getSignedUrl(key) {
 &lt;p&gt;When I first applied to RC I had been feeling nervous about committing such a long period of time to not working before (hopefully!) starting a new job, I considered just doing a 1 week mini batch, or a 6 week half-batch, but the 12 weeks went by way more quikly than I had anticipated, and I was fortunately able to hit my idealistic goal of starting a new job in the new calendar year! The 12 weeks helped me feel free to dive into weird corners of the problems I wanted to work on like &lt;a href=&quot;https://doodles.patrickweaver.net/drawing-parallel-lines-on-a-map/&quot;&gt;drawing parallel lines on a map&lt;/a&gt; (lines were a big theme in my projects), without worrying that it would keep me from “finishing” my projects (author’s note: I still didn’t “finish” most of them). In the spirit of “never graduate” I hope to someday participate in another batch at the physical RC space, but in the meantime, anyone who like me has been sitting on the fence on applying to RC for years should take the opportunity to participate remotely and start the programming project you’ve always been meaning to get to!&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;text-align: center;&quot;&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/rc2/parallel-lines-curve.png&quot; alt=&quot;A screenshot of a prototype of my real-time subway map&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot;&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/rc2/parallel-lines-curve.png&quot; alt=&quot;A screenshot of a prototype of my real-time subway map&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot; /&gt;
 &lt;/div&gt;
 &lt;figcaption&gt;An early attempt to draw MTA track geography data as parallel tracks on a map&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -874,7 +874,7 @@ async function getSignedUrl(key) {
   <entry>
     <title>How to Set Up a Raspberry Pi as a Home Webserver</title>
     <link href="https://patrickweaver.net/blog/how-to-raspberry-pi-server/"/>
-    <updated>2021-05-03T00:00:00-00:00</updated>
+    <updated>2021-05-03T00:00:00Z</updated>
     <id>https://patrickweaver.net/blog/how-to-raspberry-pi-server/</id>
     <content type="html">&lt;p&gt;Like most of the world, I’ve been spending a lot of time at home lately. Over the winter I was experimenting with building my own web-based digital tools, like an app to track articles and books I was reading. I initially thought I would need to buy hosting space to have the app accessible, but realized I mostly needed to use it when I was at home anyway, so a URL that only existed on my local network work also work.&lt;/p&gt;
 &lt;p&gt;I have done a few projects with Raspberry Pis before, most notably a &lt;a href=&quot;https://www.patrickweaver.net/blog/building-a-futuristic-record-player-with-glitch-and-raspberry-pi/&quot;&gt;computer vision “record player”&lt;/a&gt;, but always found myself looking up the same things like how to set up Wi-Fi and SSH access. I seemed to need to do the same handful of things every time, but they were spread across various documentation and how-tos. This time while setting up the Pi webserver I took notes so I would have it all in one place.&lt;/p&gt;
@@ -885,7 +885,7 @@ async function getSignedUrl(key) {
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;1. Install the OS:&lt;/strong&gt; Use Raspberry Pi Imager tool to write the OS to the SD card &lt;a href=&quot;https://www.raspberrypi.org/software/&quot;&gt;source&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/how-to-raspberry-pi-server/raspberry-pi-imager.png&quot; alt=&quot;A screenshot of the Raspberry Pi Imager Tool&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/how-to-raspberry-pi-server/raspberry-pi-imager.png&quot; alt=&quot;A screenshot of the Raspberry Pi Imager Tool&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;2. Set up Wi-Fi&lt;/h3&gt;
 &lt;p&gt;The RPi Imager tool will likely eject the SD card for you when it’s finished writing, but you want to do two more things before booting up the Pi. You may need to remove the SD card and re-insert it into your computer to see the “Boot” filesystem. First, to enable Wi-Fi you will need to create a file with your network credentials. If you will be plugging the Pi into an eithernet cord you can skip this step.&lt;/p&gt;
 &lt;p&gt;Create a file called &lt;code&gt;wpa_supplicant.conf&lt;/code&gt; in the root directory of the SD card. Open the file in a text editor and paste in the following:&lt;/p&gt;
@@ -961,9 +961,9 @@ network={
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;I like the following prompt which adds colors that are different than the ones that I use locally, and a pie emoji:&lt;/p&gt;
 &lt;div class=&quot;fake-code&quot;&gt;
-&lt;span style=&quot;color: white; background-color: silver;&quot;&gt;&amp;nbsp;Mon May &amp;nbsp;03 23:41:09&amp;nbsp;&lt;/span&gt;&lt;br&gt;
-&lt;span style=&quot;color: black; background-color: cyan;&quot;&gt;&amp;nbsp;pi@b:&amp;nbsp;&lt;/span&gt; &lt;span style=&quot;color: white; background-color: lightGrey;&quot;&gt;&amp;nbsp;~&amp;nbsp;&lt;/span&gt;&lt;br&gt;
-🥧 $&lt;br&gt;
+&lt;span style=&quot;color: white; background-color: silver;&quot;&gt;&amp;nbsp;Mon May &amp;nbsp;03 23:41:09&amp;nbsp;&lt;/span&gt;&lt;br /&gt;
+&lt;span style=&quot;color: black; background-color: cyan;&quot;&gt;&amp;nbsp;pi@b:&amp;nbsp;&lt;/span&gt; &lt;span style=&quot;color: white; background-color: lightGrey;&quot;&gt;&amp;nbsp;~&amp;nbsp;&lt;/span&gt;&lt;br /&gt;
+🥧 $&lt;br /&gt;
 &lt;/div&gt;
 &lt;p&gt;Update your prompt by editing your &lt;code&gt;~/.bashrc&lt;/code&gt; file with &lt;code&gt;sudo nano ~/.bashrc&lt;/code&gt;. The bash prompt is set with the &lt;code&gt;PS1&lt;/code&gt; variable, which has two versions in the default Raspberry Pi &lt;code&gt;~/.bashrc&lt;/code&gt;, one for when &lt;code&gt;color_prompt&lt;/code&gt; is set to &lt;code&gt;yes&lt;/code&gt;, another for otherwise. The default in Raspberry Pi OS is that &lt;code&gt;color_prompt&lt;/code&gt; is set to yes, so feel free to overwrite only the first &lt;code&gt;PS1&lt;/code&gt; variable.&lt;/p&gt;
 &lt;p&gt;The value to set the prompt I showed above is (the sections with &lt;code&gt;[\033 ...&lt;/code&gt; and &lt;code&gt;\[$(tput...&lt;/code&gt; control turning on and off the colors):&lt;/p&gt;
@@ -987,7 +987,7 @@ network={
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;sudo apt install nginx
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Once Nginx is installed you should be able to access the default Nginx webpage at your Rapsberry Pi’s IP Address or &lt;code&gt;[YOUR_HOSTNAME].local&lt;/code&gt;. Make sure to type in the &lt;code&gt;http://&lt;/code&gt; the first time if you are using the &lt;code&gt;.local&lt;/code&gt; TLD to avoid triggering search in your browser.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/how-to-raspberry-pi-server/nginx-default.png&quot; alt=&quot;A screenshot of the default Nginx page&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/how-to-raspberry-pi-server/nginx-default.png&quot; alt=&quot;A screenshot of the default Nginx page&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;You can now serve any static website from &lt;code&gt;/var/www/html&lt;/code&gt;, if you look there you will see an &lt;code&gt;index.html&lt;/code&gt; or &lt;code&gt;index.nginx-debian.html&lt;/code&gt; file that is generating the current page.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;9. Install Nginx:&lt;/strong&gt; Install with &lt;code&gt;apt install nginx&lt;/code&gt;, then put a static webpage in &lt;code&gt;/var/www/html&lt;/code&gt;.&lt;/p&gt;
@@ -1038,8 +1038,8 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;11. Set Up Reverse Proxy:&lt;/strong&gt; Remove default: &lt;code&gt;sudo rm /etc/nginx/sites-enabled/default&lt;/code&gt;, Create config file: &lt;code&gt;sudo touch /etc/nginx/sites-available/[YOUR SITE].conf&lt;/code&gt;, Edit config file (see above): &lt;code&gt;sudo nano /etc/nginx/sites-available/[YOUR SITE].conf&lt;/code&gt;, Link to sites-enabled: &lt;code&gt;sudo ln -s /etc/nginx/sites-available/[YOUR-SITE].conf /etc/nginx/sites-enabled/[YOUR-SITE].conf&lt;/code&gt;, Reload Nginx: &lt;code&gt;sudo systemctl reload nginx&lt;/code&gt;. &lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-debian-10&quot;&gt;source&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/how-to-raspberry-pi-server/hello-world.png&quot; alt=&quot;A screenshot of a “Hello, World” page hosted on a Raspberry Pi&quot;&gt;&lt;/p&gt;
-&lt;hr&gt;
+&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/how-to-raspberry-pi-server/hello-world.png&quot; alt=&quot;A screenshot of a “Hello, World” page hosted on a Raspberry Pi&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 &lt;h2&gt;All Steps:&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Install the OS:&lt;/strong&gt; Use Raspberry Pi Imager tool to write the OS to the SD card &lt;a href=&quot;https://www.raspberrypi.org/software/&quot;&gt;source&lt;/a&gt;&lt;/li&gt;
