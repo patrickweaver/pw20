@@ -1,7 +1,7 @@
 {
   "default": true,
   "MD033": {
-    "allowed_elements": ["div", "span", "figure", "figcaption", "img"]
+    "allowed_elements": ["div", "span", "figure", "figcaption", "img", "code"]
   },
   "MD013": false
 }
