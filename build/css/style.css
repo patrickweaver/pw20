@@ -1,3 +1,19 @@
+:root {
+  /* 
+    Colors
+  */
+
+  --primary-background: hsl(180, 100%, 75%);
+  --primary-text: hsl(0, 30%, 10%);
+  --secondary-background: hsl(220, 75%, 95%);
+  --off-white: hsl(0, 0%, 95%);
+  --very-light-grey: hsl(0, 0%, 90%);
+  --gray: hsl(0, 0%, 45%);
+  --dark-grey: hsl(0, 0%, 20%);
+
+  --med-light-blue-grey: hsl(220, 15%, 80%);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -10,7 +26,7 @@ body {
   font-family: "Yantramanav", sans-serif;
   margin: 2em auto;
   max-width: 800px;
-  background-color: #85fff8;
+  background-color: var(--primary-background);
   font-size: 150%;
   line-height: 150%;
 }
@@ -21,7 +37,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: black;
+  color: var(--primary-text);
 }
 
 h1 a,
@@ -30,7 +46,7 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
-  color: black;
+  color: var(--primary-text);
 }
 
 h1 a,
@@ -60,18 +76,18 @@ pre {
 }
 
 pre {
-  background-color: #e8f0fc;
+  background-color: var(--secondary-background);
   padding: 10px;
   border-radius: 5px;
 }
 
 code {
-  background-color: #e8f0fc;
+  background-color: var(--secondary-background);
   padding: 2px 4px;
 }
 
 .fake-code {
-  background-color: #e8f0fc;
+  background-color: var(--secondary-background);
   padding: 10px;
   border-radius: 5px;
 }
@@ -82,7 +98,7 @@ code {
 }
 
 table {
-  background-color: white;
+  background-color: var(--off-white);
   overflow-x: scroll;
   max-width: 100%;
   display: inline-block;
@@ -90,7 +106,7 @@ table {
 
 th,
 td {
-  border: 1px solid #6f6f6f;
+  border: 1px solid var(--gray);
 }
 
 figure {
@@ -106,9 +122,9 @@ figcaption {
 }
 
 blockquote {
-  background-color: #fff;
+  background-color: var(--off-white);
   padding: 5px 10px;
-  border: 1px solid #f5f5f5;
+  border: 1px solid var(--very-light-grey);
   border-radius: 5px;
 }
 
@@ -127,7 +143,7 @@ ul#menu {
 }
 
 ul#menu li {
-  background-color: #fbfbfb;
+  background-color: var(--off-white);
   padding: 5px 10px;
   margin: 5px 5px;
   border-radius: 3px;
@@ -136,7 +152,7 @@ ul#menu li {
 
 ul#menu li a {
   text-decoration: none;
-  color: black;
+  color: var(--primary-text);
 }
 
 ul#menu li a:hover {
@@ -160,14 +176,14 @@ ul#menu li a:hover {
 .page-number {
   border-radius: 5px;
   padding: 0.125em 0.5em;
-  background-color: #fbfbfb;
+  background-color: var(--off-white);
   text-decoration: none;
-  color: #000000;
-  border: 2px solid #fbfbfb;
+  color: var(--primary-text);
+  border: 2px solid var(--very-light-grey);
 }
 
 .active-page {
-  border: 2px solid #bfbfcf;
+  border: 2px solid var(--med-light-blue-grey);
 }
 
 .inactive-page:hover {
@@ -177,7 +193,7 @@ ul#menu li a:hover {
 .blob,
 .project,
 .post {
-  background-color: #fbfbfb;
+  background-color: var(--very-light-grey);
   margin: 1em 0;
   padding: 10px 15px;
   border-radius: 10px;
@@ -194,30 +210,30 @@ ul.tags {
 
 ul.tags li,
 .tag {
-  border: 1px solid #ccc;
+  border: 1px solid var(--med-light-blue-grey);
   border-radius: 3px;
   padding: 0px 5px;
   display: inline-block;
   text-decoration: none;
-  color: #333;
+  color: var(--dark-grey);
   margin: 5px 10px 5px 5px;
-  box-shadow: -5px 5px 5px #dfdfdf;
+  box-shadow: -5px 5px 5px var(--very-light-grey);
 }
 
 ul.tags li:hover,
 .tag:hover {
-  box-shadow: -5px 5px 5px #cfcfcf;
+  box-shadow: -5px 5px 5px var(--med-light-blue-grey);
 }
 
 ul.tags li:active,
 .tag:active {
   margin: 5px 13px 2px 2px;
-  box-shadow: -2px 2px 5px #cfcfcf;
+  box-shadow: -2px 2px 5px var(--med-light-blue-grey);
 }
 
 ul.tags li,
 .blob-tag {
-  background-color: white;
+  background-color: var(--off-white);
 }
 
 .tag a:hover {
@@ -238,7 +254,7 @@ ul.tags > li > a,
 ul.tags > li:hover {
   text-decoration: underline;
   text-decoration-thickness: 1.5px;
-  border: 1px solid #999;
+  border: 1px solid var(--gray);
 }
 
 form label,
@@ -257,9 +273,9 @@ form textarea {
   max-width: 400px;
 }
 
-/* # # # # # # # # # # # */
+/* - - - - - - - - - - - */
 /* Blog                  */
-/* # # # # # # # # # # # */
+/* - - - - - - - - - - - */
 
 .post ul {
   list-style-type: disc;
@@ -303,9 +319,9 @@ form textarea {
   vertical-align: top;
 }
 
-/* # # # # # # # # # # # */
+/* - - - - - - - - - - - */
 /* Portfolio             */
-/* # # # # # # # # # # # */
+/* - - - - - - - - - - - */
 
 /* Project Header */
 
@@ -325,7 +341,7 @@ form textarea {
 }
 
 .project-name a {
-  color: #000;
+  color: var(--primary-text);
   text-decoration: none;
 }
 
@@ -344,12 +360,12 @@ form textarea {
 
 .cover img {
   max-height: 400px;
-  box-shadow: -7px 7px 5px #dfdfdf;
+  box-shadow: -7px 7px 5px var(--very-light-grey);
   margin-top: 7px;
 }
 
 .cover img:hover {
-  box-shadow: -7px 7px 5px #cfcfcf;
+  box-shadow: -7px 7px 5px var(--med-light-blue-grey);
 }
 
 .status-tag {
@@ -365,7 +381,7 @@ form textarea {
   grid-row-start: 3;
   grid-row-end: 4;
   margin: 0.5em 0;
-  color: #333;
+  color: var(--dark-grey);
 }
 
 .project-tag-list {
@@ -420,9 +436,9 @@ ul.links {
   word-break: break-word;
 }
 
-/* # # # # # # # # # # # */
+/* - - - - - - - - - - - */
 /* Responsive            */
-/* # # # # # # # # # # # */
+/* - - - - - - - - - - - */
 
 @media (max-width: 768px) {
   /* Project Header */
