@@ -6,7 +6,7 @@
   --primary-background: hsl(180, 100%, 75%);
   --primary-text: hsl(0, 30%, 10%);
   --secondary-background: hsl(220, 75%, 95%);
-  --off-white: hsl(0, 0%, 95%);
+  --off-white: hsl(0, 0%, 98%);
   --very-light-grey: hsl(0, 0%, 90%);
   --gray: hsl(0, 0%, 45%);
   --dark-grey: hsl(0, 0%, 20%);
@@ -193,7 +193,7 @@ ul#menu li a:hover {
 .blob,
 .project,
 .post {
-  background-color: var(--very-light-grey);
+  background-color: var(--off-white);
   margin: 1em 0;
   padding: 10px 15px;
   border-radius: 10px;
