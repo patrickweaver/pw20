@@ -3,7 +3,7 @@ layout: layouts/blogPost.hbs
 title: A Blog Post With Every HTML Element
 date: 2022-02-19
 # cover_image_url: 
-# cover_image_alt: A photo of a Raspberry Pi on an iPad
+# cover_image_alt: 
 tags:
 ---
 
@@ -12,27 +12,31 @@ After learning a little bit more about web accessibility this year I have been e
 I had previously done some work to make sure that <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> elements were layed out nicely for images with associated captions, and I had been impressed with various [Recurser’s](https://www.recurse.com/) implementation of footnotes or sidenotes<sup id="footnote-1-link">[1](#footnote-1)</sup>, and have been thinking it would be interesting to see what other interesting layouts were possible with just HTML.
 
 I could continue to add support (mostly in my CSS so they display nicely in the context of the rest of my style choices) for additional elements as I came across specific needs for them, but not one to shy away from an exhaustive exploration, I decided to write this post and attempt to use every element, which should also help avoid delaying future posts while I update the site to support a new element it uses. I am using the [MDN Web Docs list of HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) as a refence which has more than 100 tags divdied into a few categories, which I will also use in this post. Many of the tags like <code>&lt;html&gt;</code> don’t make sense to include in the text of a blog post, but I’ll be updating the website’s layout as I go, so if you’re viewing this post on [patrickweaver.net](https://www.patrickweaver.net), then every one of the elements is used somewhere on this page.
-
+## The Elements
 ### Main Root
 
-- [&lt;html&gt;](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html)
+- <code>[&lt;html&gt;](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html)</code>
 
 I didn’t have to make any changes to the <code>&lt;html&gt;</code> tag for this post, but one thing I don’t alway sremember to include is the <code>lang</code> property (in this case <code>lang="en"</code>).
 
 ### Document metadata
 
-- [&lt;base&gt;](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
-- &lt;&gt;
-- &lt;&gt;
-- &lt;&gt;
-- &lt;&gt;
-- &lt;&gt;
-- &lt;&gt;
-- &lt;&gt;
-- &lt;&gt;
-- &lt;&gt;
-- &lt;&gt;
-- &lt;&gt;
+- <code>[&lt;base&gt;](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base)</code>
+- <code>[&lt;head&gt;](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head)</code>
+- <code>[&lt;link&gt;](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link)</code>
+- <code>[&lt;meta&gt;](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta)</code>
+- <code>[&lt;style&gt;](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style)</code>
+- <code>[&lt;title&gt;](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title)</code>
+
+I wasn’t familiar with the &lt;base&gt; tag before writing this post, though I've now added &lt;base href="https://www.patrickweaver.net"&gt; to my layout templates.
+
+### Sectioning root
+
+- <code>[&lt;&gt;](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)</code>
+- <code>[&lt;&gt;](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)</code>
+- <code>[&lt;&gt;](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)</code>
+
+
 
 
 <ol>
