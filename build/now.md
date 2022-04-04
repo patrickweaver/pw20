@@ -4,7 +4,9 @@ title: Patrick Weaver | Now
 pageHeader: Now
 ---
 
-#￼## 3/17/22: URL Hosted Bookmarklet
+<h4>
+3/17/22: URL Hosted Bookmarklet
+</h4>
 
 I made a website that can host a bookmarklet in the URL, which is handy for times when you want to share a small code snippet to run locally.
 
