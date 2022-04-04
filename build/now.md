@@ -1,4 +1,4 @@
---- '
+---
 layout: layouts/blob.hbs
 title: Patrick Weaver | Now
 pageHeader: Now
