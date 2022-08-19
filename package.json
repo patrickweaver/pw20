@@ -8,14 +8,14 @@
     "start": "rm -rf dist && npx @11ty/eleventy --serve --port=3000"
   },
   "dependencies": {
-    "@11ty/eleventy": "~1.0.0",
-    "@11ty/eleventy-plugin-rss": "~1.1.2",
-    "html-to-text": "~8.1.0",
-    "marked": "~4.0.12",
-    "moment": "~2.29.1"
+    "@11ty/eleventy": "~1.0.2",
+    "@11ty/eleventy-plugin-rss": "~1.2.0",
+    "html-to-text": "~8.2.0",
+    "marked": "~4.0.18",
+    "moment": "~2.29.4"
   },
   "engines": {
-    "node": "16.14.0"
+    "node": "18.7.0"
   },
   "repository": {
     "url": "https://github.com/patrickweaver/pw20"
