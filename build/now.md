@@ -4,16 +4,13 @@ title: Patrick Weaver | Now
 pageHeader: Now
 ---
 
-<h4>
-3/17/22: URL Hosted Bookmarklet
-</h4>
+#### Aug 18, 2022: Simmering
 
-I made a website that can host a bookmarklet in the URL, which is handy for times when you want to share a small code snippet to run locally.
+I’m currently working slowly on a few projects, more to come!
 
-[url-hosted-bookmarklet.glitch.me](https://url-hosted-bookmarklet.glitch.me/)
+Here is some recently unearthed childhood art:
 
-
-![A screenshot of the website](/images/now/bookmarklet.jpeg)
+![A photograph of a child’s painting](/images/now/childhood-art.jpeg)
 
 
 
