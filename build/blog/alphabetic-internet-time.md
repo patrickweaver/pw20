@@ -8,11 +8,11 @@ tags:
 
 ---
 
-In the Fall of 2020 I [participated in a 12 week batch](https://www.patrickweaver.net/blog/a-recurse-center-remote-batch/) at the [Recurse Center](https://recurse.com). While I had a lot of previous experience *working* remotely, both before and during the pandemic, RC was the first time where I was communicating with people in more than 1 or 2 other time zones. I now work at a fully remote company, mostly spread over the 4(ish) U.S. time zones, but with a few people permanantly or temporarily in other places.
+In the Fall of 2020 I [participated in a 12 week batch](https://www.patrickweaver.net/blog/a-recurse-center-remote-batch/) at the [Recurse Center](https://recurse.com). While I had a lot of previous experience *working* remotely, both before and during the pandemic, RC was the first time where I was communicating with people in more than 1 or 2 other time zones. I now work at a fully remote company, mostly spread over the 4(ish) U.S. time zones, but with a few people permanently or temporarily in other places.
 
-## Communicating accross time zones
+## Communicating across time zones
 
-RC when I was there (mostly I would guess because their software was designed and configured for in person retreats in NYC) operated for the most part in Eastern Time, although I see from my limited participation in the community as an alum that this may have shifted, especially thanks to [Zulip’s time-zone-relative timestamp support](https://zulip.com/help/format-your-message-using-markdown#global-times). RC had transitioned to hosting Recursers remotely a few months before my batch, which is how they continue to operate now in Summer 2022. At my current job we often default to either Eastern Time or Pacific Time, but some people will also just use thier local time and let others figure it out.
+RC when I was there (mostly I would guess because their software was designed and configured for in person retreats in NYC) operated for the most part in Eastern Time, although I see from my limited participation in the community as an alum that this may have shifted, especially thanks to [Zulip’s time-zone-relative timestamp support](https://zulip.com/help/format-your-message-using-markdown#global-times). RC had transitioned to hosting Recursers remotely a few months before my batch, which is how they continue to operate now in Summer 2022. At my current job we often default to either Eastern Time or Pacific Time, but some people will also just use their local time and let others figure it out.
 
 Out of politeness and miscalculation-anxiety reducing redundancy I often will use multiple time zones, for example when proposing a meeting I might say, *“Let’s meet at 🗽 12:30 PM ET / 🏔 10:30 AM MT / 🌁 9:30 AM PT,”* (I’m still searching for a good Central Time emoji, 🛣 🌽 🌪 are the best I've got), but time zone based confusion often takes more thinking than it should.
 
@@ -47,7 +47,7 @@ If AIT were to work it wouldn’t rely on people manually calculating the curren
 
 ## Why not just use UTC?
 
-People who are already used to using UTC might look at AIT and think that it’s just a confusing extra layer on top of a system that works pretty well, but in my opinion, moving whole communities of people to UTC would likely be very difficult because doing so asks them to do the same mental math as coordianting between time zones, but often with larger numbers.
+People who are already used to using UTC might look at AIT and think that it’s just a confusing extra layer on top of a system that works pretty well, but in my opinion, moving whole communities of people to UTC would likely be very difficult because doing so asks them to do the same mental math as coordinating between time zones, but often with larger numbers.
 
 Even after changing my phone to use a 24 hour clock for weeks while spending time in countries where that is common I still found myself translating 16:00 to *“16 - 2 - 10 = 4 PM”* in my head. My guess is that for most people it would be easier to convert between two separate concepts, their local time with numbers, and AIT with letters, but I may be wrong. The other advantage is clarity, even if the known best practice is to use UTC, a message like “Let’s meet at 15:30” can still be unclear, potentially UTC, the sender’s local time, or your own!
 
@@ -57,13 +57,13 @@ The closest thing to AIT that currently exists is the [Military Time Zones](http
 
 The military time zone names do seem useful, and are possibly too similar to AIT for my idea to catch on, but out of sequence order make the concept seem too confusing for anyone using it for much beyond just “time zone names.”
 
-One interesting (and further confusing thing) about the military time zone names is that “Mike”, UTC+12 and “Yankee”, UTC-12 are the same time, but on different dates because the border straddles the international date line. It’s quirks like this that make me think that any improvement on time zone related communciation is likely to fail.
+One interesting (and further confusing thing) about the military time zone names is that “Mike”, UTC+12 and “Yankee”, UTC-12 are the same time, but on different dates because the border straddles the international date line. It’s quirks like this that make me think that any improvement on time zone related communication is likely to fail.
 
 ![A map of military time zones from the ACP 121(I) standard](/images/blog/ait/military-time-zones.png)
 
 ## Reasons why AIT will never work
 
-As good an idea as I think this is, I have no hopes of AIT catching on mostly because I think that most people wouldn’t be able to get over the ridiculousness of saying “M:45” (and not being worried people would think they’re talking about a bus). But beyond the sillyness, it’s still Daylight Saving Time that makes communicating accross time zones unlikely to be improved on.
+As good an idea as I think this is, I have no hopes of AIT catching on mostly because I think that most people wouldn’t be able to get over the ridiculousness of saying “M:45” (and not being worried people would think they’re talking about a bus). But beyond the silliness, it’s still Daylight Saving Time that makes communicating across time zones unlikely to be improved on.
 
 If your own time zone stayed the same relative to AIT year round I think there would be a chance that, with tools like an AIT display next to your local time, or calendar integrations, that it would work for a lot of people who frequently communicate with people in other time zones, but having to switch recurring times back and forth by one letter twice a year seems like friction that would dampen most people’s enthusiasm.
 
