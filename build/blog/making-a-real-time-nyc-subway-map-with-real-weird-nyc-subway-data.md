@@ -6,12 +6,11 @@ date: 2020-10-21
 cover_image_url: /images/blog/nyc-subway/nyc-subway.png
 cover_image_alt: A screenshot of the map
 tags:
-
 ---
 
-Earlier this week the NYC MTA released a new [digital-first map](https://map.mta.info/). The [Curbed exclusive](https://www.curbed.com/2020/10/first-look-new-yorks-digital-subway-map-comes-alive-today.html) that announced its release accurately portrays it as a strange child of both the 1972 map design by Massimo Vignelli and the current [“paper” map](https://new.mta.info/map/5256). One feature of the new map (though it's harder than it should be to notice at first) is real-time visualizations of each train in the system.
+Earlier this week the NYC MTA released a new [digital-first map](https://map.mta.info/). The [Curbed exclusive](https://www.curbed.com/2020/10/first-look-new-yorks-digital-subway-map-comes-alive-today.html) that announced its release accurately portrays it as a strange child of both the 1972 map design by Massimo Vignelli and the current [“paper” map](https://new.mta.info/map/5256). One feature of the new map (though it’s harder than it should be to notice at first) is real-time visualizations of each train in the system.
 
-I've been working on a similar concept, starting in February 2020, on which progress stalled once I stopped riding the subway regularly in March. But, when I started my batch at [Recurse Center](https://www.recurse.com/) I decided to pick up the project again. My inspiration for the map was the large TV screens that the MTA has installed in stations over the last few years, which frustratingly display the “paper” version of the map.
+I’ve been working on a similar concept, starting in February 2020, on which progress stalled once I stopped riding the subway regularly in March. But, when I started my batch at [Recurse Center](https://www.recurse.com/) I decided to pick up the project again. My inspiration for the map was the large TV screens that the MTA has installed in stations over the last few years, which frustratingly display the “paper” version of the map.
 
 <figure>
 
@@ -23,7 +22,7 @@ I've been working on a similar concept, starting in February 2020, on which prog
 
 </figure>
 
-Over the past few weeks at RC the subway map has been my main focus, which is longer than I expected the project to take (and though I have a prototype, I wouldn’t say I’m close to “done”). A big factor in the time the project has taken is some of the quirks in working with MTA data, which based on some of the bugs I've seen in the "official" version I'd say the team working on that version had to grapple with as well.  I'm not sure I will ever finish this project to a state that would look great on a subway station tv, or be useful, but I do want to point out [The Weekendest](https://www.theweekendest.com/trains) by [Sunny Ng](https://sunny.ng/) (who also made [goodservice.io](https://www.goodservice.io/)), which is a great take on the concept, and handles some of the challenges of this kind of project much better than the MTA map does.
+Over the past few weeks at RC the subway map has been my main focus, which is longer than I expected the project to take (and though I have a prototype, I wouldn’t say I’m close to “done”). A big factor in the time the project has taken is some of the quirks in working with MTA data, which based on some of the bugs I’ve seen in the "official" version I’d say the team working on that version had to grapple with as well. I’m not sure I will ever finish this project to a state that would look great on a subway station tv, or be useful, but I do want to point out [The Weekendest](https://www.theweekendest.com/trains) by [Sunny Ng](https://sunny.ng/) (who also made [goodservice.io](https://www.goodservice.io/)), which is a great take on the concept, and handles some of the challenges of this kind of project much better than the MTA map does.
 
 For a long time the NYC Subway was almost [completely lacking in real-time data](https://www.theatlantic.com/technology/archive/2015/11/why-dont-we-know-where-all-the-trains-are/415152/). For many years the only line that had even countdown clocks in stations was the L, which seems to be the line the MTA tries out new technology on, likely because it never shares tracks with any other line. Over the last 5 years the MTA has slowly installed countdown clocks in every station, and made the data that powers the countdown clocks available on their website, in apps, and as data online.
 
@@ -33,18 +32,18 @@ That MTA Bustime website was the other inspiration for what became my map idea. 
 
 ### Real-Time Transit Data
 
-Transit data for most transit systems is available in formats called [GTFS](https://developers.google.com/transit/gtfs) (General Transit Feed Specification) and [GTFS Realtime](https://developers.google.com/transit/gtfs-realtime), which were developed by Google (makes you wonder what the “G” originally stood for), but are now widely used. A GTFS file is, “a collection of at least six, and up to 13 CSV files (with extension .txt) contained within a .zip file.” and “The GTFS Realtime data exchange format is based on Protocol Buffers” (which are [“Google's language-neutral, platform-neutral, extensible mechanism for serializing structured data”](https://developers.google.com/protocol-buffers)).
+Transit data for most transit systems is available in formats called [GTFS](https://developers.google.com/transit/gtfs) (General Transit Feed Specification) and [GTFS Realtime](https://developers.google.com/transit/gtfs-realtime), which were developed by Google (makes you wonder what the “G” originally stood for), but are now widely used. A GTFS file is, “a collection of at least six, and up to 13 CSV files (with extension .txt) contained within a .zip file.” and “The GTFS Realtime data exchange format is based on Protocol Buffers” (which are [“Google’s language-neutral, platform-neutral, extensible mechanism for serializing structured data”](https://developers.google.com/protocol-buffers)).
 
 The GTFS Realtime feeds are available through 9 different API endpoints from the MTA. These 9 endpoints roughly correspond to the line colors, with Shuttles combined with trains they share tracks or stations with, and the 1/2/3 and 4/5/6 sharing one endpoint. This list of separate endpoints is another challenge with working with the entirety of the MTA data.
 
 I have exclusively worked with the NYC MTA’s GTFS Realtime feeds through the [npm module](https://www.npmjs.com/package/gtfs-realtime-bindings) maintained by Google. It is very possible that some of the challenges I’ve encountered are due to trying to squeeze the “extensible mechanism for serializing structured data” into JSON. Each API response is mostly composed of an array of "Feed Entity" objects like [these](/notes/nyc-subway-feed-entity/), but there are a few quirks to working with this data (some maybe because of the JSON conversion).
 
-- Each item in the array has an `id` property, but unfortunately these ids do not consistently refer to the same train between each update, it's best to ignore it.
-- The array consists of pairs of objects that either have a `tripUpdate` property or a `vehicle` property. Each of these have a sub-property called `tripId` that allows you to unite the pairs, but there are also some that don't have a corresponding item (usually these represent trips that recently ended or haven't yet begun).
-- The data mixes together HH:MM:SS timestamps for data about when a train's trip started, and [Unix timestamps](https://en.wikipedia.org/wiki/Unix_time) for data about the current time (according to the API) and when a train will arrive at a station (the API provides both arrival and departure times but as far as I have seen they are always identical).
+- Each item in the array has an `id` property, but unfortunately these ids do not consistently refer to the same train between each update, it’s best to ignore it.
+- The array consists of pairs of objects that either have a `tripUpdate` property or a `vehicle` property. Each of these have a sub-property called `tripId` that allows you to unite the pairs, but there are also some that don’t have a corresponding item (usually these represent trips that recently ended or haven’t yet begun).
+- The data mixes together HH:MM:SS timestamps for data about when a train’s trip started, and [Unix timestamps](https://en.wikipedia.org/wiki/Unix_time) for data about the current time (according to the API) and when a train will arrive at a station (the API provides both arrival and departure times but as far as I have seen they are always identical).
 - `tripUpdate` items show information about the stops a train will make in the future (stopTimeUpdates) and vehicle items show information about the current status of the train, but the first `stopTimeUpdate` is usually in the past.
 
-I had never heard of Protocol Buffers before starting this project, so I was excited to learn more about them while reading through [Designing Data Intensive Applications](https://dataintensive.net) with fellow Recursers.  In the book Martin Kleppmann notes that a, "curious detail of Protocol Buffers is that it does not have a list or array datatype, but instead has a repeated marker for fields (which is a third option alongside required and optional)." This could be the reason for the strange organization of the `tripUpdate` and `vehicle` properties.
+I had never heard of Protocol Buffers before starting this project, so I was excited to learn more about them while reading through [Designing Data Intensive Applications](https://dataintensive.net) with fellow Recursers. In the book Martin Kleppmann notes that a, "curious detail of Protocol Buffers is that it does not have a list or array datatype, but instead has a repeated marker for fields (which is a third option alongside required and optional)." This could be the reason for the strange organization of the `tripUpdate` and `vehicle` properties.
 
 ### Calculating Train Locations
 
@@ -62,7 +61,7 @@ The subway real-time API doesn’t have latitude and longitude data because it i
 
 The next step was plotting the stations on a map. To start off, as with the diagram version, I just placed each train at the midpoint between the station it was travelling from and the station it was travelling towards.
 
-A goal I had for the project was not just to show real-time train locations, but to animate them as they moved around the map. To determine how long I should expect a train to take to travel between each station I logged updates from the MTA API for a few hours and noted both the average time for a pair of stations, and the longest time I had seen for the pair. I'm still experimenting a little bit with what values to use as the baseline, but from looking at the logged numbers there does seem to be an expected amount of time for most stations.
+A goal I had for the project was not just to show real-time train locations, but to animate them as they moved around the map. To determine how long I should expect a train to take to travel between each station I logged updates from the MTA API for a few hours and noted both the average time for a pair of stations, and the longest time I had seen for the pair. I’m still experimenting a little bit with what values to use as the baseline, but from looking at the logged numbers there does seem to be an expected amount of time for most stations.
 
 <figure>
 
@@ -103,15 +102,15 @@ G: {
 <figure>
 
 | Trip Id     | Trip Start Time | Trip Date | Route | Stop1 Arrival | Stop1 Id | Stop2 Arrival | Stop2 Id | Seconds |
-|-------------|-----------------|-----------|-------|---------------|----------|---------------|----------|----|
-| 073476_G..N |        12:14:46 |  20200818 | G     |    1597768631 | G33N     |    1597768692 | G32N     | 61 |
-| 074600_G..N |        12:26:00 |  20200818 | G     |    1597769103 | G33N     |    1597769172 | G32N     | 69 |
-| 075000_G..N |        12:30:00 |  20200818 | G     |    1597769531 | G33N     |    1597769596 | G32N     | 65 |
-| 076501_G..N |        12:45:01 |  20200818 | G     |    1597770333 | G33N     |    1597770396 | G32N     | 63 |
-| 077700_G..N |        12:57:00 |  20200818 | G     |    1597771043 | G33N     |    1597771104 | G32N     | 61 |
-| 078403_G..N |        13:04:02 |  20200818 | G     |    1597771443 | G33N     |    1597771524 | G32N     | 81 |
-| 079600_G..N |        13:16:00 |  20200818 | G     |    1597772051 | G33N     |    1597772112 | G32N     | 61 |
-| 080550_G..N |        13:25:30 |  20200818 | G     |    1597772711 | G33N     |    1597772776 | G32N     | 65 |
+| ----------- | --------------- | --------- | ----- | ------------- | -------- | ------------- | -------- | ------- |
+| 073476_G..N | 12:14:46        | 20200818  | G     | 1597768631    | G33N     | 1597768692    | G32N     | 61      |
+| 074600_G..N | 12:26:00        | 20200818  | G     | 1597769103    | G33N     | 1597769172    | G32N     | 69      |
+| 075000_G..N | 12:30:00        | 20200818  | G     | 1597769531    | G33N     | 1597769596    | G32N     | 65      |
+| 076501_G..N | 12:45:01        | 20200818  | G     | 1597770333    | G33N     | 1597770396    | G32N     | 63      |
+| 077700_G..N | 12:57:00        | 20200818  | G     | 1597771043    | G33N     | 1597771104    | G32N     | 61      |
+| 078403_G..N | 13:04:02        | 20200818  | G     | 1597771443    | G33N     | 1597771524    | G32N     | 81      |
+| 079600_G..N | 13:16:00        | 20200818  | G     | 1597772051    | G33N     | 1597772112    | G32N     | 61      |
+| 080550_G..N | 13:25:30        | 20200818  | G     | 1597772711    | G33N     | 1597772776    | G32N     | 65      |
 
 <figcaption>Logged travel Times between the Bedford - Nostrand stop and the Myrtle - Willoughby stop on the G train</figcaption>
 
@@ -119,7 +118,7 @@ G: {
 
 ### Secret Stations
 
-One thing I discovered while logging updates from the MTA API was that it contained secret stations! The MTA provides a [list of all of the stations in the system](http://web.mta.info/developers/data/nyct/subway/Stations.csv) with data like latitude and longitude. Each station has an ID (see Stop1 and Stop2 id in the diagram above and called "GTFS Stop ID" in the list). The stop IDs are a letter and 2 numbers, with the letter often corresponding to the line it serves (or used to historically), and the numbers mostly occurring in sequence. but some trains would have planned "stops" at stations that weren't in the list! My best guess is that these stations are something station-like in the MTA's infrastructure, which usually appear near the end of a line.
+One thing I discovered while logging updates from the MTA API was that it contained secret stations! The MTA provides a [list of all of the stations in the system](http://web.mta.info/developers/data/nyct/subway/Stations.csv) with data like latitude and longitude. Each station has an ID (see Stop1 and Stop2 id in the diagram above and called "GTFS Stop ID" in the list). The stop IDs are a letter and 2 numbers, with the letter often corresponding to the line it serves (or used to historically), and the numbers mostly occurring in sequence. but some trains would have planned "stops" at stations that weren’t in the list! My best guess is that these stations are something station-like in the MTA’s infrastructure, which usually appear near the end of a line.
 
 - "H17" is between Howard Beach/JFK Airport and Broad Channel on the A and Rockaway Shuttle and is likely where the Shuttle trains go to turn around.
 - "H19" is before the Broad Channel stop on the A and Rockaway Shuttle and may also be related to Shuttle turnaround?
@@ -134,7 +133,7 @@ One thing I discovered while logging updates from the MTA API was that it contai
 
 ### Drawing the Static Map
 
-I wasn't quite satisfied with the angular paths that drawing lines directly between stations created, and I was fortunately able to find [Sunny Ng's advice](https://github.com/blahblahblah-/theweekendest) on extracting shape arrays from the non real-time GTFS MTA data. Using these shape arrays I could draw route maps with smooth curves, and even animate trains along those curves. But one of the things that makes a subway map a subway map is seeing lines that run on the same tracks as parallel lines. I also wanted to double these lines and show Northbound and Southbound trains on separate tracks (something that the new MTA map fails to do).
+I wasn’t quite satisfied with the angular paths that drawing lines directly between stations created, and I was fortunately able to find [Sunny Ng’s advice](https://github.com/blahblahblah-/theweekendest) on extracting shape arrays from the non real-time GTFS MTA data. Using these shape arrays I could draw route maps with smooth curves, and even animate trains along those curves. But one of the things that makes a subway map a subway map is seeing lines that run on the same tracks as parallel lines. I also wanted to double these lines and show Northbound and Southbound trains on separate tracks (something that the new MTA map fails to do).
 
 After trying to approach the parallel lines problem geometrically I was pointed in the right direction by a fellow RC participant and was able to draw great looking lines by treating the Latitude/Longitude points in the shape arrays as vectors (More on this in my [interactive slides on this problem](https://doodles.patrickweaver.net/drawing-parallel-lines-on-a-map/) and more on the [challenge of drawing nice train lines from the Transit app](https://medium.com/transit-app/how-we-built-the-worlds-prettiest-auto-generated-transit-maps-12d0c6fa502f)).
 
@@ -154,6 +153,6 @@ After trying to approach the parallel lines problem geometrically I was pointed 
 
 My map is online at [nyc-subway.glitch.me](https://nyc-subway.glitch.me/), bugs and all. I did most of the work on the map using only the G train API endpoint. This was a helpful limitation when I was first experimenting with what was possible using the data, but may have led to more bugs because of the slight differences in the data available for each set of lines.
 
-A common complaint about the new official real-time map is that it seems to use as much computer power as it can. My map isn't much better because it is doing all of the geographic calculations in the user's browser, my guess is that the MTA's map is also. One update I might take on over the next week and a half as my time at RC winds down is moving these calculations to a server, and sending only train position changes to the map visualization. This may also help with the bug my current prototype exhibits where leaving and coming back to the tab a few minutes later will cause trains to fly around the map without regard for the lines or stations.
+A common complaint about the new official real-time map is that it seems to use as much computer power as it can. My map isn’t much better because it is doing all of the geographic calculations in the user’s browser, my guess is that the MTA’s map is also. One update I might take on over the next week and a half as my time at RC winds down is moving these calculations to a server, and sending only train position changes to the map visualization. This may also help with the bug my current prototype exhibits where leaving and coming back to the tab a few minutes later will cause trains to fly around the map without regard for the lines or stations.
 
-The MTA data is weird because it's created by a system that could never have anticipated the kind of systems that now try to contain it. Overall, working with and working around the weirdness in the data has been challenging, but a great reminder that the most interesting real-world problems are often hard to jam into our brittle computer systems, and that's probably a good thing.
+The MTA data is weird because it’s created by a system that could never have anticipated the kind of systems that now try to contain it. Overall, working with and working around the weirdness in the data has been challenging, but a great reminder that the most interesting real-world problems are often hard to jam into our brittle computer systems, and that’s probably a good thing.
