@@ -14,7 +14,7 @@ In the Fall of 2020 I [participated in a 12 week batch](https://www.patrickweave
 
 RC when I was there (mostly I would guess because their software was designed and configured for in person retreats in NYC) operated for the most part in Eastern Time, although I see from my limited participation in the community as an alum that this may have shifted, especially thanks to [Zulip’s time-zone-relative timestamp support](https://zulip.com/help/format-your-message-using-markdown#global-times). RC had transitioned to hosting Recursers remotely a few months before my batch, which is how they continue to operate now in Summer 2022. At my current job we often default to either Eastern Time or Pacific Time, but some people will also just use their local time and let others figure it out.
 
-Out of politeness and miscalculation-anxiety reducing redundancy I often will use multiple time zones, for example when proposing a meeting I might say, *“Let’s meet at 🗽 12:30 PM ET / 🏔 10:30 AM MT / 🌁 9:30 AM PT,”* (I’m still searching for a good Central Time emoji, 🛣 🌽 🌪 are the best I've got), but time zone based confusion often takes more thinking than it should.
+Out of politeness and miscalculation-anxiety reducing redundancy I often will use multiple time zones, for example when proposing a meeting I might say, *“Let’s meet at 🗽 12:30 PM ET / 🏔 10:30 AM MT / 🌁 9:30 AM PT,”* (I’m still searching for a good Central Time emoji, 🛣 🌽 🌪 are the best I’ve got), but time zone based confusion often takes more thinking than it should.
 
 (Side note, it bewilders me that Slack still doesn’t have something similar to Zulip’s *“you write in your time zone, they read in their time zone”* timestamp support in 2022. 🙃)
 

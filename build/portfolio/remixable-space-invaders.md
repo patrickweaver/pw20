@@ -19,8 +19,8 @@ images:
 
 ---
 
-This game is part of [Mouse's](https://mouse.org) Serious Games course. It teaches game design concepts by letting players edit parameters in real time to design their own version of Space Invaders.
+This game is part of [Mouse’s](https://mouse.org) Serious Games course. It teaches game design concepts by letting players edit parameters in real time to design their own version of Space Invaders.
 
-Editable parameters include the speed of the invaders, or player, the frequency of shots by the invaders, or player, the shape and color of the invaders or player, and the randomness of the invader's shots.
+Editable parameters include the speed of the invaders, or player, the frequency of shots by the invaders, or player, the shape and color of the invaders or player, and the randomness of the invader’s shots.
 
-Based on [Mary Rose Cook's](https://maryrosecook.com/) version of Space Invaders.
+Based on [Mary Rose Cook’s](https://maryrosecook.com/) version of Space Invaders.
