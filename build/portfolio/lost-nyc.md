@@ -24,7 +24,7 @@ Lost NYC is a map of places in New York City that have closed or been shut down.
 
 #### Why this matters:
 
-NYC is losing it’s treasured places at an alarming rate. There is lots of talk about a "vacancy crisis", but vacancy is caused by spaces closing, losing their leases, or being priced out.
+NYC is losing its treasured places at an alarming rate. There is lots of talk about a "vacancy crisis", but vacancy is caused by spaces closing, losing their leases, or being priced out.
 
 In November 2019 Council Member Stephen Levin introduced a bill to create Commercial Rent Stabilization. This map is evidence that we need to pass this bill and stop the cultural displacement that NYC is experiencing.
 
