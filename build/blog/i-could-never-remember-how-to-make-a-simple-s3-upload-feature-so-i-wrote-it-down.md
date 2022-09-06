@@ -10,17 +10,17 @@ tags:
 
 Whenever I start a new web project there is an ominous, literal, figurative, "cloud" lurking on the horizon: Will this project get complicated enough to need to be connected to S3 for file upload?
 
-More often than I'd like the answer is yes, and at this point I've re-learned how to connect a Node.js app to S3 more times than I'd like. Rather than keep learning just enough S3 to get a project working, and then instantly forgetting it, I decided to write the process down so I can follow my own instructions.
+More often than I’d like the answer is yes, and at this point I’ve re-learned how to connect a Node.js app to S3 more times than I’d like. Rather than keep learning just enough S3 to get a project working, and then instantly forgetting it, I decided to write the process down so I can follow my own instructions.
 
-I'm sure this will also find its way to people who know more than I do and might be able to alert me to anything I'm doing wrong. If this is you, [please reach out](https://twitter.com/patrickweave_r)!
+I’m sure this will also find its way to people who know more than I do and might be able to alert me to anything I’m doing wrong. If this is you, [please reach out](https://twitter.com/patrickweave_r)!
 
 ## Setting Up AWS Authentication
 
-Connecting an app isn't usually the most difficult part of setting up S3. Where I always have to go back to documentation is setting up user and bucket permissions correctly. When I first started using S3 around 2013 a common recommendation was to just set buckets to public and link to objects directly. More recently though, many people (including Amazon), recommend not making buckets public.
+Connecting an app isn’t usually the most difficult part of setting up S3. Where I always have to go back to documentation is setting up user and bucket permissions correctly. When I first started using S3 around 2013 a common recommendation was to just set buckets to public and link to objects directly. More recently though, many people (including Amazon), recommend not making buckets public.
 
-In my experience, it's best to create both a user and a policy when setting up AWS permissions. The keys you will use in your app will be associated with the user, and the permissions you want your user to have will be associated with the policy. This way, if your credentials are compromised you can create a new user, and all you have to do is add the policy to the new user.
+In my experience, it’s best to create both a user and a policy when setting up AWS permissions. The keys you will use in your app will be associated with the user, and the permissions you want your user to have will be associated with the policy. This way, if your credentials are compromised you can create a new user, and all you have to do is add the policy to the new user.
 
-I've also found it's a best practice to create a new bucket for each of the small apps that I make. If you're working on a bigger project or want to set up a general purpose place to upload you may want to do this differently, but creating a unique bucket and user for each project helps me keep an eye on things, and not worry too much about credentials getting compromised. Because I only need one bucket for my app it's easier to create it in the AWS web interface than to build functionality to create buckets into my app.
+I’ve also found it’s a best practice to create a new bucket for each of the small apps that I make. If you’re working on a bigger project or want to set up a general purpose place to upload you may want to do this differently, but creating a unique bucket and user for each project helps me keep an eye on things, and not worry too much about credentials getting compromised. Because I only need one bucket for my app it’s easier to create it in the AWS web interface than to build functionality to create buckets into my app.
 
 #### Creating a Bucket
 
@@ -32,13 +32,13 @@ I've also found it's a best practice to create a new bucket for each of the smal
 
 ![A screenshot of the Create bucket screen](https://dev-to-uploads.s3.amazonaws.com/i/jqobhso6ba8idwecff7l.png)
 
-3. Note your bucket name (probably in an ENV variable), it's now ready to receive uploads!
+3. Note your bucket name (probably in an ENV variable), it’s now ready to receive uploads!
 
 #### Creating a Policy
 
 1.  Click on your name in the top right. In the dropdown select "My Security Credentials", then in the "Identity and Access Management (IAM)" sidebar on the left, click on "Policies".
 
-2. Click on the "Create policy" button. There are 2 ways to give your policy permissions, with the Visual Editor, and with JSON. We'll use the Visual Editor here, but you can probably just pate the JSON at the end with minor edits.
+2. Click on the "Create policy" button. There are 2 ways to give your policy permissions, with the Visual Editor, and with JSON. We’ll use the Visual Editor here, but you can probably just pate the JSON at the end with minor edits.
 
 3. The Visual Editor has 4 sections: Service, Actions, Resources, and Request Conditions. Start in Service and click on S3.
 
@@ -80,7 +80,7 @@ I've also found it's a best practice to create a new bucket for each of the smal
 
 2. In the "Set permissions" section at the top of the page, click on "Attach existing policies directly". Search for the policy you just created, then select it and click "Next: Tags". You can skip Tags, and click "Next: Review", then click "Create user".
 
-3. You will now save your user's credentials. This is the only time you will be able to do this, so make sure you save them somewhere safe. You will also need to add the credentials as ENV variables in your app. I recommend clicking the "Download .csv" button and saving the file, at least until you get your app set up.
+3. You will now save your user’s credentials. This is the only time you will be able to do this, so make sure you save them somewhere safe. You will also need to add the credentials as ENV variables in your app. I recommend clicking the "Download .csv" button and saving the file, at least until you get your app set up.
 
 ![A screenshot of the attach policy section of the create user screen](https://dev-to-uploads.s3.amazonaws.com/i/3rqbznl2dlvif555eorn.png)
 
@@ -153,12 +153,12 @@ Then, we create an object to send to the `aws` module (this is custom to this ap
     
     fieldname: 'file' // This was specified in the file input field in the HTML
     originalname:     // The original name of the file
-    encoding:         // The encoding of the file, don't worry about
+    encoding:         // The encoding of the file, don’t worry about
                          this unless you want to look at the bytes.
     mimetype:         // This will tell you what the filetype is, even if there
-                         is no extension, or if it's wrong.
+                         is no extension, or if it’s wrong.
     buffer:           // This is the actual data from the file
-    size:             // Only some files will have this, the file's size in bytes
+    size:             // Only some files will have this, the file’s size in bytes
     */
     
     
@@ -170,7 +170,7 @@ Then, we create an object to send to the `aws` module (this is custom to this ap
     const upload = {
       file: file,
       
-      /* You may want to store this metadata in S3, but it's optional */
+      /* You may want to store this metadata in S3, but it’s optional */
       filetype: file.mimetype,
       
       /* You may want to add this to the filename */
@@ -179,7 +179,7 @@ Then, we create an object to send to the `aws` module (this is custom to this ap
       /* You may want to use the original filename */
       //filename: file.originalname,
       
-      /* We're going to use a random UUID file name in this example.
+      /* We’re going to use a random UUID file name in this example.
          One thing that this does is makes sure it is unique.
          If you upload a file with the same name it will overwrite the
          existing file! */
@@ -207,15 +207,15 @@ AWS.config.update({
     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
 });
 
-// Your bucket isn't secret, but you may want to use
-// different buckets for dev and production so it's
+// Your bucket isn’t secret, but you may want to use
+// different buckets for dev and production so it’s
 // helpful to store in an ENV variable.
 var bucketName = process.env.S3BUCKET;
 ```
 
-There are also 2 functions: `upload()`, which takes one `uploadObject()` parameter, uploads a file to S3, and returns confirmation and the S3 object's key, and `getSignedUrl`, which takes an S3 key, and returns the file (more on this later).
+There are also 2 functions: `upload()`, which takes one `uploadObject()` parameter, uploads a file to S3, and returns confirmation and the S3 object’s key, and `getSignedUrl`, which takes an S3 key, and returns the file (more on this later).
 
-`upload()` is what we passed our `file` object from `server.js` to. This function is essentially a wrapper around the `aws-sdk`'s `S3.putObject()` method. We collect the necessary parameters in an object, then pass that object to the method which we've defined as `s3.putObject()`:
+`upload()` is what we passed our `file` object from `server.js` to. This function is essentially a wrapper around the `aws-sdk`'s `S3.putObject()` method. We collect the necessary parameters in an object, then pass that object to the method which we’ve defined as `s3.putObject()`:
 
 **aws.js**
 ```javascript
@@ -231,7 +231,7 @@ There are also 2 functions: `upload()`, which takes one `uploadObject()` paramet
       // This is the contents of the file.
       Body: uploadObject.file.buffer,
 
-      // This is optional, but your file in S3 won't have Content-Type
+      // This is optional, but your file in S3 won’t have Content-Type
       // metadata unless you include it.
       ContentType: uploadObject.filetype
     };
@@ -240,24 +240,24 @@ There are also 2 functions: `upload()`, which takes one `uploadObject()` paramet
     const responseData = await s3.putObject(params).promise();
 ```
 
-This is all wrapped in a `try` / `catch` block so if there aren't any errors we can pass the key back to `server.js`:
+This is all wrapped in a `try` / `catch` block so if there aren’t any errors we can pass the key back to `server.js`:
 
 **aws.js**
 ```javascript
-    // Likely this won't happen because an error will be thrown,
-    // but it's good to check just in case. ¯\_(ツ)_/¯ 
+    // Likely this won’t happen because an error will be thrown,
+    // but it’s good to check just in case. ¯\_(ツ)_/¯ 
     if (!responseData) {
       throw "Upload failed"
     }
       
     // The response data has a single property, "ETag",
-    // you probably won't need to do anything with it.
+    // you probably won’t need to do anything with it.
 
     const s3Data = {
       success: true,
 
-      // This key is what you would store in a DB, we didn't
-      // get this back from S3, but since there wasn't an error
+      // This key is what you would store in a DB, we didn’t
+      // get this back from S3, but since there wasn’t an error
       // we trust that it is saved.
       key: params.Key
 
@@ -270,9 +270,9 @@ This is all wrapped in a `try` / `catch` block so if there aren't any errors we 
     return(s3Data)
 ```
 
-It's important to note that the `id` we pass back to `server.js` isn't returned to us from the `s3.putObject()` method. `s3()` returns an `ETag`, which isn't of much use for what we're doing, but it's enough to confirm that the upload completed successfully (What are ETags? [teppen.io/2018/06/23/aws_s3_etags/](https://teppen.io/2018/06/23/aws_s3_etags/)).
+It’s important to note that the `id` we pass back to `server.js` isn’t returned to us from the `s3.putObject()` method. `s3()` returns an `ETag`, which isn’t of much use for what we’re doing, but it’s enough to confirm that the upload completed successfully (What are ETags? [teppen.io/2018/06/23/aws_s3_etags/](https://teppen.io/2018/06/23/aws_s3_etags/)).
 
-Going back to server.js, this is where we would want to store our `id` somewhere. This string is what we will need to retrieve the file from s3. In this app we're just demoing the upload functionality so we don't store it anywhere. We access it once though to show the user that it worked. This is where we will use the other function in the `aws` module, `getSignedUrl`. Because our S3 bucket permissions only let our AWS user access objects, and otherwise our bucket permissions are "No public access", we need to create a temporary signed URL to access the file.
+Going back to server.js, this is where we would want to store our `id` somewhere. This string is what we will need to retrieve the file from s3. In this app we’re just demoing the upload functionality so we don’t store it anywhere. We access it once though to show the user that it worked. This is where we will use the other function in the `aws` module, `getSignedUrl`. Because our S3 bucket permissions only let our AWS user access objects, and otherwise our bucket permissions are "No public access", we need to create a temporary signed URL to access the file.
 
 Using the id returned from the `upload()` function we call the `getSignedUrl()` function. When we get the signed url, we put it into some simple HTML to display it to the user (this is the main difference between the two `server.js` routes):
 
@@ -308,7 +308,7 @@ Using the id returned from the `upload()` function we call the `getSignedUrl()` 
       <p>
         <strong>Signed URL:</strong> <a href="${url}">${url}</a>
       </p>
-      <h4>If it's an image:</h4>
+      <h4>If it’s an image:</h4>
       <img src="${url}" width="400" />
     `); 
 ```
@@ -323,7 +323,7 @@ The `getSignedUrl()` function in `aws` is a wrapper around the `S3.getSignedUrl`
 async function getSignedUrl(key) {
   
   // We are already authenticated so we just need the
-  // bucket name and the object's key.
+  // bucket name and the object’s key.
   var params = {
     Bucket: bucketName,
     Key: key
@@ -335,5 +335,5 @@ async function getSignedUrl(key) {
 }
 ```
 
-That's it! Try out the app (in this example uploads are limited in size to 4KB for safety). You can [remix the app on Glitch](https://glitch.com/edit/#!/aws-s3-example) or [fork it on GitHub](https://github.com/patrickweaver/aws-s3-example)
+That’s it! Try out the app (in this example uploads are limited in size to 4KB for safety). You can [remix the app on Glitch](https://glitch.com/edit/#!/aws-s3-example) or [fork it on GitHub](https://github.com/patrickweaver/aws-s3-example)
 
