@@ -17,28 +17,31 @@
     </a>
   </div>
   
-  {{#if this.status}}
-    <div class="tag-container status-tag">
-      <div class="tag" style="background-color: {{ statusColor this.status}};">
-        <a href="/portfolio/tags/{{this.status}}">{{ this.status }}</a>
+  <div class="project-details">
+    {{#if this.status}}
+      <div class="tag-container status-tag">
+        <div class="tag" style="background-color: {{ statusColor this.status}};">
+          <a href="/portfolio/tags/{{this.status}}">{{ this.status }}</a>
+        </div>
       </div>
-    </div>
-  {{/if}}
+    {{/if}}
 
-  <p class="project-date-range">
-    {{ projectDate this.start_date this.end_date }}
-  </p>
-  
-  <ul class="tags project-tag-list">
-    {{#each this.tags}}
-      {{#unless (eq this 'projects')}}
-      {{#unless (isSameString this ../this.status)}}
-        <li class="tag-container">
-          <a href="/portfolio/tags/{{this}}">{{this}}</a></li>
-      {{/unless}}
-      {{/unless}}
-    {{/each}}
-  </ul>
+    <p class="project-date-range">
+      {{ projectDate this.start_date this.end_date }}
+    </p>
+    
+    <ul class="tags project-tag-list tag-container">
+      {{#each this.tags}}
+        {{#unless (eq this 'projects')}}
+        {{#unless (isSameString this ../this.status)}}
+          <li>
+            <a href="/portfolio/tags/{{this}}">{{this}}</a></li>
+        {{/unless}}
+        {{/unless}}
+      {{/each}}
+    </ul>
+
+  </div>
   
   {{#if this.index}}
     <p class="project-short-description">

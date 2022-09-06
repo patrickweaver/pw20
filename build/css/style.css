@@ -3,13 +3,14 @@
     Colors
   */
 
-  --primary-background: hsl(0, 100%, 100%);
-  --very-light-grey: hsl(0, 0%, 95%);
-  --secondary-background: hsl(0, 0%, 90%);
-  --med-light-grey: hsl(0, 0%, 80%);
-  --gray: hsl(0, 0%, 45%);
-  --dark-grey: hsl(0, 0%, 20%);
-  --primary-text: hsl(0, 0%, 0%);
+  --bg-1: #ffffff;
+  --bg-2: #fff4bf;
+  --bg-3: #e0c438;
+  --text-1: #000000;
+  --text-2: #104040;
+  --text-link: #407fff;
+  --acc-1: #ffd500;
+  --acc-2: #ffe79e;
 }
 
 * {
@@ -21,12 +22,12 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Helvetica", Arial, sans-serif;
   margin: 2em auto;
   max-width: 800px;
-  background-color: var(--primary-background);
-  font-size: 150%;
-  line-height: 170%;
+  background-color: var(--bg-1);
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 h1,
@@ -35,37 +36,69 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--primary-text);
+  color: var(--text-1);
 }
 
-/* h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a {
-  color: var(--primary-text);
-} */
+h1 {
+  line-height: 3rem;
+}
 
-/* h1 a,
-h2 a,
-h3 a {
-  text-decoration: none;
-} */
+a {
+  color: var(--text-link);
+}
 
-/* h1 a:hover,
-h2 a:hover,
-h3 a:hover {
-  text-decoration: underline;
-} */
+hr {
+  background-color: var(--acc-1);
+  height: 0.5rem;
+  border: none;
+}
 
-/* ul {
+h3.post-title {
+  margin-top: 0.25rem;
+}
+
+ul.menu,
+ul.postlist {
   margin: 0;
   padding: 0;
   list-style-type: none;
-} */
+}
 
-img {
+.project-header .cover,
+.project-header .project-details {
+  display: inline-block;
+  width: Calc(50% - 0.5rem);
+  vertical-align: top;
+}
+
+.project-header .cover {
+  text-align: center;
+}
+
+.project-header .cover img {
+  max-height: 400px;
+  position: relative;
+  top: 3px;
+  left: 3px;
+  box-shadow: -3px -3px 6px 2px var(--acc-2);
+}
+
+.project-header .project-details {
+  margin-left: 0.5rem;
+}
+
+ul.project-images {
+  margin: 2rem 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+ul.postlist .post-preview,
+ul.postlist .project {
+  margin-bottom: 4rem;
+}
+
+ul.menu a img {
   max-width: 100%;
 }
 
@@ -74,18 +107,18 @@ pre {
 }
 
 pre {
-  background-color: var(--very-light-grey);
+  background-color: var(--bg-2);
   padding: 10px;
   border-radius: 5px;
 }
 
 code {
-  background-color: var(--med-light-grey);
+  background-color: var(--bg-2);
   padding: 2px 4px;
 }
 
 .fake-code {
-  background-color: var(--med-light-grey);
+  background-color: var(--bg-2);
   padding: 10px;
   border-radius: 5px;
 }
@@ -96,7 +129,7 @@ code {
 }
 
 table {
-  background-color: var(--secondary-background);
+  background-color: var(--bg-3);
   overflow-x: scroll;
   max-width: 100%;
   display: inline-block;
@@ -104,7 +137,7 @@ table {
 
 th,
 td {
-  border: 1px solid var(--gray);
+  border: 1px solid var(--accent-1);
 }
 
 figure {
@@ -120,9 +153,9 @@ figcaption {
 }
 
 blockquote {
-  background-color: var(--primary-background);
+  background-color: var(--bg-1);
   padding: 5px 10px;
-  border: 1px solid var(--gray);
+  border: 1px solid var(--accent-1);
   border-radius: 5px;
 }
 
@@ -141,14 +174,86 @@ p.s img {
 }
 
 .blob,
-.project,
-.post {
-  background-color: var(--secondary-background);
-  margin: 1em 0;
-  padding: 10px 15px;
-  border-radius: 10px;
+.post,
+.project {
+  margin: 1em 0 f;
+  max-width: 100%;
 }
 
-.blob img {
+.blob img,
+.post img,
+.project img,
+.blob figure,
+.post figure,
+.project figure,
+iframe {
+  max-width: 100%;
+}
+
+.blob img,
+ul.project-images img {
   max-height: 400px;
+}
+
+ul.project-images {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+ul.project-images li {
+  flex-basis: Calc(50% - 5px);
+  padding: 0.75rem;
+  background-color: var(--bg-2);
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+}
+
+.cover img {
+  border-radius: 3px;
+}
+
+.post-date {
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+.tag {
+  padding: 0.5rem;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.tag a {
+  color: var(--text-1);
+  text-decoration: none;
+}
+
+ul.links {
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .project-header .cover,
+  .project-header .project-details {
+    width: 100%;
+  }
+
+  .project-header .cover {
+    margin-bottom: 0.5rem;
+  }
+
+  .project-header .project-details {
+    margin: 0;
+  }
 }

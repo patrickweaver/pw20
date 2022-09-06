@@ -50,7 +50,7 @@ After speeding through the SwiftUI tutorials in my first week (and getting kind 
   <img src="/images/blog/rc2/canvas-lines.png" alt="A screenshot from my slides on drawing pixel perfect lines on the JS canvas" style="max-width: 500px; margin: 0 auto;" />
 </div>
 
-<figcaption>It's hard to draw crisp lines on the JS canvas!</figcaption>
+<figcaption>It’s hard to draw crisp lines on the JS canvas!</figcaption>
 
 </figure>
 

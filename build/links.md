@@ -4,10 +4,18 @@ title: Patrick Weaver | Links
 pageHeader: Links
 ---
 
-<ul id="links">
+
+
+<ul class="links">
   <li><a href="/resume">Resume</a></li>
   <li><a href="/rss.xml" target="blank">Blog RSS Feed</a></li>
-  <hr />
+</ul>
+
+<hr />
+
+<h3>Social</h3>
+
+<ul class="links">
   <li><a href="https://dev.to/patrickweaver" target="blank">DEV</a></li>
   <li><a href="https://github.com/patrickweaver" target="blank">GitHub</a></li>
   <li><a href="https://www.instagram.com/patrickweave_r/" target="blank">Instagram</a></li>

@@ -4,7 +4,7 @@ title: Patrick Weaver | Now
 pageHeader: Now
 ---
 
-#### Aug 18, 2022: Simmering
+### Aug 18, 2022: Simmering
 
 I’m currently working slowly on a few projects, more to come!
 
