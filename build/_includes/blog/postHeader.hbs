@@ -41,8 +41,14 @@
 
   {{#if (not this.index)}}
     {{#if this.editors_note}}
-      <h4>Note</h4>
-      <p><em>{{this.editors_note}}</em></p>
+      <h4 class="editors-note-header">
+        {{#if this.editors_note_header}}
+          {{this.editors_note_header}}
+        {{else}}
+          Note
+        {{/if}}
+      </h4>
+      <p class="editors-note"><em>{{this.editors_note}}</em></p>
     {{/if}}
   {{/if}}
 </div>

@@ -319,6 +319,14 @@ form textarea {
   vertical-align: top;
 }
 
+.editors-note-header {
+  margin-bottom: 0.25rem;
+}
+
+.editors-note {
+  margin-top: 0;
+}
+
 /* - - - - - - - - - - - */
 /* Portfolio             */
 /* - - - - - - - - - - - */

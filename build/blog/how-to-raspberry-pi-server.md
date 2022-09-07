@@ -13,19 +13,19 @@ I have done a few projects with Raspberry Pis before, most notably a [computer v
 
 To follow along with these steps you will need a second computer to set up the SD card (though you could probably start with a [preformatted SD card also](https://www.adafruit.com/product/4266)), and any kind of Raspberry Pi. I have run web servers on Pi Zeros before, though it can be a challenge to install newer versions of Node.js on ARMv6 based Pis (Zero and the original Raspberry Pi), and sometimes when building a large client app I’ve had to move to a faster Pi from a Pi Zero.
 
-## SD Card Setup
+#### SD Card Setup
 
-### 1. Install the OS
+##### 1. Install the OS
 
 Raspberry Pi recently released their own tool for formatting SD cards, [Raspberry Pi Imager](https://www.raspberrypi.org/software/). It makes the process a lot easier than it had been previously. The first step is picking an OS to format the card with. Any of the Debian-based OSes should work, though the smallest download is Raspberry Pi OS Lite, which is all you need if you won’t be connecting a display. After that, select the SD card you want to install onto (there will probably only be one choice), and click “Write”.
 
-#### Step 1 Summary
+##### Step 1 Summary
 
 > **1. Install the OS:** Use Raspberry Pi Imager tool to write the OS to the SD card [source](https://www.raspberrypi.org/software/)
 
 ![A screenshot of the Raspberry Pi Imager Tool](/images/blog/how-to-raspberry-pi-server/raspberry-pi-imager.png)
 
-### 2. Set up Wi-Fi
+#### 2. Set up Wi-Fi
 
 The RPi Imager tool will likely eject the SD card for you when it’s finished writing, but you want to do two more things before booting up the Pi. You may need to remove the SD card and re-insert it into your computer to see the “Boot” filesystem. First, to enable Wi-Fi you will need to create a file with your network credentials. If you will be plugging the Pi into an ethernet cable you can skip this step.
 
@@ -57,11 +57,11 @@ network={
 }
 ```
 
-#### Note on Text Encoding
+##### Note on Text Encoding
 
 > [Setting up a Raspberry Pi headless](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md): “Depending on the OS and editor you are creating this on, the file could have incorrect newlines or the wrong file extension so make sure you use an editor that accounts for this. Linux expects the line feed (LF) newline character.”
 
-#### Learn More
+##### Learn More
 
 > [Scott Hanselman on CR/LF](https://www.youtube.com/watch?v=TtiBhktB4Qg)
 
@@ -69,7 +69,7 @@ network={
 
 > **2. Set up Wi-Fi:** Create a `wpa_supplicant.conf` file in the root directory of the SD card, and populate it with your Wi-Fi credentials to enable Wi-Fi on boot. [source](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md)
 
-### 3. Set up SSH
+#### 3. Set up SSH
 
 By default SSH access is disabled on a Raspberry Pi, the usual way of enabling it is either through the GUI or `raspi-config`, but there is also a simple way to pre-setup on the SD card. Create an empty file called `ssh` (without a file extension) in the root directory of the SD card, this will enable SSH on boot.
 
@@ -77,11 +77,11 @@ By default SSH access is disabled on a Raspberry Pi, the usual way of enabling i
 
 > **3. Set up SSH:** Create an empty `ssh` file in the root directory of the SD card to enable SSH access on boot. [source](https://www.raspberrypi.org/documentation/remote-access/ssh/README.md)
 
-## Raspberry Pi Setup
+#### Raspberry Pi Setup
 
 You are now ready to boot the Raspberry Pi, insert the SD card and power up the Pi. After a minute or two of boot time it should automatically connect to your network.
 
-### 4. Connect via SSH
+#### 4. Connect via SSH
 
 In a terminal on a second computer and connect to the Raspberry Pi via SSH. The default username and password will be `pi` and `raspberry`, and the default hostname will be `raspberrypi`. If your local network supports the `.local` TLD you may be able to connect using:
 
@@ -105,7 +105,7 @@ On Linux or macOS the `known_hosts` file will be at `/Users/[YOUR USERNAME]/.ssh
 
 > **4. Connect via SSH:** Connect to the Raspberry Pi via ssh: `ssh pi@raspberrypi.local` or `ssh pi@192.168.XXX.XXX` (and enter the default password `raspberry`). You may need to remove a previous `raspberrypi.local` from `/Users/USERNAME/.ssh/known_hosts`.
 
-### 5. Change the Password
+#### 5. Change the Password
 
 After connecting to the Raspberry Pi via SSH the login message will suggest that you change the default password:
 
@@ -117,7 +117,7 @@ Following the instructions you can type `passwd` which will prompt you first for
 
 > **5. Change the password:** Run `passwd` to have the system prompt you for a new, more secure password.
 
-### 6. Change the Hostname
+#### 6. Change the Hostname
 
 The default hostname of your Raspberry Pi is `raspberrypi`. You may want to change this for a few reasons. If you have more than one Raspberry Pi on your network this will let you tell them apart, and if your network supports the .local TLD you can use the hostname as the URL to your app.
 
@@ -127,7 +127,7 @@ You will need to update two files to change your hostname. First open `/etc/host
 
 > **6. Change the Hostname:** Open `sudo nano /etc/hostname` and change `raspberrypi` to your new hostname, then `sudo nano /etc/hosts` and change `raspberrypi` to your new hostname. Then reboot, `sudo reboot now`. [source](https://pimylifeup.com/raspberry-pi-hostname/)
 
-### 7. Change the Prompt
+#### 7. Change the Prompt
 
 I also like the change the default bash prompt whenever I am going to be SSHing into a remote computer so that I can tell the difference at a glance between a local and remote terminal window.
 
@@ -161,7 +161,7 @@ Run `source ~/.bashrc` (or `. ~/.bashrc`) to reload your terminal and see your n
 
 > **7. Change the Prompt:** Update the `PS1` variable in `~/.bashrc` to make it look different. Add a pie emoji with `echo 'PS1="🥧 ${PS1}"' >> ~/.bashrc`.
 
-### 8. Install Git
+#### 8. Install Git
 
 You will probably want to use Git to manage the source code for your app. It is not installed by default on Raspberry Pi OS so you will need to install it now with `apt`:
 
@@ -177,7 +177,7 @@ You may also want to install another text editor if you want something more cust
 
 > **8. Install Git:** Install git to manage your source code with `sudo apt install git`.
 
-### 9. Install Nginx
+#### 9. Install Nginx
 
 You can now run a web server (with `sudo`) on port 80 and have it be available at your IP address or `[YOUR_HOSTNAME].local`, but that might require more configuration. It will be easier to manage your app if you install a web server/reverse proxy like Nginx. You can install Nginx with `apt`:
 
@@ -195,7 +195,7 @@ You can now serve any static website from `/var/www/html`, if you look there you
 
 > **9. Install Nginx:** Install with `apt install nginx`, then put a static webpage in `/var/www/html`.
 
-### 10. Install nvm and npm
+#### 10. Install nvm and npm
 
 I make most of my web apps these days in JavaScript, there are lots of ways to install node and npm, but one easy way to manage versions is with nvm, which can be installed with the script below:
 
@@ -215,7 +215,7 @@ NVM_NODEJS_ORG_MIRROR=https://unofficial-builds.nodejs.org/download/release nvm 
 
 > **10. Install nvm and npm:** `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash`, `. ~/.bashrc`, `nvm install lts`.
 
-### 11. Set Up Reverse Proxy
+#### 11. Set Up Reverse Proxy
 
 In order to access your app on your local network without a port number in the URL it will need to be accessible on port 80, but it will be easier to run your app on another port locally. This can be done with an Nginx reverse proxy.
 
@@ -279,7 +279,7 @@ The last step is cloning your project to the Raspberry Pi and running it on port
 
 ---
 
-## All Steps:
+#### All Steps:
 
 1. **Install the OS:** Use Raspberry Pi Imager tool to write the OS to the SD card [source](https://www.raspberrypi.org/software/)
 2. **Set up Wi-Fi:** Create a `wpa_supplicant.conf` file in the root directory of the SD card, and populate it with your Wi-Fi credentials to enable Wi-Fi on boot. [source](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md)

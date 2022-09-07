@@ -9,7 +9,7 @@ editors_note: Originally written for the Mouse blog
 tags:
 ---
 
-This fall [Mouse](https://medium.com/@mouse_org) ([mouse.org](http://mouse.org)) launched our brand new [Sewable Tech Course](https://mouse.org/mouse-courses)! The course introduces learners to circuitry and electronics without the abstraction of a breadboard. In the final two projects in the course we use a wearable Arduino to prototype a DIY activity tracker.
+This fall [Mouse](http://mouse.org) launched our brand new [Sewable Tech Course](https://mouse.org/mouse-courses)! The course introduces learners to circuitry and electronics without the abstraction of a breadboard. In the final two projects in the course we use a wearable Arduino to prototype a DIY activity tracker.
 
  <figure>
 
