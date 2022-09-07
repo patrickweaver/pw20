@@ -4,8 +4,9 @@ title: How to Download an Image from a Google Doc
 date: 2020-07-16
 cover_image_url: /images/blog/gdoc-image-dl-cover.png
 cover_image_alt: A screenshot of the bookmarklet buttons
+editors_note_header: 2022 Update
+editors_note: "This no longer works, and will not be maintained, but might be still be interesting to read about."
 tags:
-
 ---
 
 For some reason Google hasn’t built in a way for you to download images in Google docs! There are workarounds to get those image files like [using Google Keep](https://twitter.com/corduroy/status/1184758335934849025), or [downloading your whole doc as a .zip file](https://twitter.com/tonyvincent/status/1021726699178708993), but these have always felt like too many steps.
@@ -48,9 +49,9 @@ To get started you’ll have to "install" the bookmarklet. This is easy to do, a
 
 The instructions are simple!
 
-1. Drag one of the bookmarklets below  =(see the embed above) to your bookmarks toolbar. The text displayed is what will be show on the toolbar:
+1. Drag one of the bookmarklets (see the embed above) to your bookmarks toolbar. The text displayed is what will be show on the toolbar:
 
-2. Then, when you’re on a Google Doc, click the bookmarklet, then hover over an image embeded in the doc. Depending on your browser settings it will either download immediately, or open the actual image in a new tab.
+2. Then, when you’re on a Google Doc, click the bookmarklet, then hover over an image embedded in the doc. Depending on your browser settings it will either download immediately, or open the actual image in a new tab.
 
 ## Great my problems are solved forever!
 

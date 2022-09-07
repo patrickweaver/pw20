@@ -17,7 +17,6 @@ tags:
   - raspberry pi
 images:
   - https://pwapi.s3.amazonaws.com/uploads/780ba2c5-d792-4cfc-89be-09b4c1d8a853
-
 ---
 
 Record Player is a Rube Goldberg Machine of the Google Cloud Vision API and the Spotify API. After logging into Spotify, upload an image. The image will be sent to the Google Vision API, which will guess what it is. The app will then search Spotify for an album using Google’s guess, and give you the first result to play.

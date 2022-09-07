@@ -1,13 +1,19 @@
 const moment = require("moment");
 
 module.exports = {
-  sort: function(tag, collection) {
-    
+  sort: function (tag, collection) {
     function portfolioCompare(a, b) {
-      
-      const aSort = a.data.end_date ? new Date(a.data.end_date) : (a.data.start_date ? new Date(a.data.start_date) : 0);
-      const bSort = b.data.end_date ? new Date(b.data.end_date) : (b.data.start_date ? new Date(b.data.start_date) : 0);
-      
+      const aSort = a.data.end_date
+        ? new Date(a.data.end_date)
+        : a.data.start_date
+        ? new Date(a.data.start_date)
+        : 0;
+      const bSort = b.data.end_date
+        ? new Date(b.data.end_date)
+        : b.data.start_date
+        ? new Date(b.data.start_date)
+        : 0;
+
       if (aSort > bSort) {
         return -1;
       }
@@ -19,12 +25,13 @@ module.exports = {
     if (tag) {
       return collection.getFilteredByTag("projects").sort(portfolioCompare);
     } else {
-      return collection.getFilteredByTag("projects", tag).sort(portfolioCompare);
+      return collection
+        .getFilteredByTag("projects", tag)
+        .sort(portfolioCompare);
     }
-    
   },
 
-  shortUrl: function(url) {
+  shortUrl: function (url) {
     if (url.substring(0, 4) === "http") {
       return url.substring(url.indexOf("//") + 2, url.length);
     } else {
@@ -32,19 +39,19 @@ module.exports = {
     }
   },
 
-  statusColor: function(status) {
-    switch(status) {
-      case 'Complete':
-        return '#FF6186';
+  statusColor: function (status) {
+    switch (status) {
+      case "Complete":
+        return "#FF6186";
         break;
-      case 'In Progress':
-        return '#d0ccff';
+      case "In Progress":
+        return "#d0ccff";
         break;
-      case 'On Hold':
-        return '#EFAF8F'
-        
+      case "On Hold":
+        return "#EFAF8F";
+
       default:
-        return '#AFAFBF';
+        return "#AFAFBF";
     }
-  }
-}
+  },
+};

@@ -15,5 +15,4 @@ tags:
   - javascript
 images:
   - https://pwapi-dev.s3.amazonaws.com/uploads/c21e9801-f76d-46e7-a93c-ba558908b4b8
-
 ---

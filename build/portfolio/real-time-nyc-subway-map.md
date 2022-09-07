@@ -2,7 +2,7 @@
 layout: layouts/portfolioProject.hbs
 name: Real Time NYC Subway Map
 cover_image_url: /images/portfolio/nyc-subway/feb-20-screenshot.png
-cover_image_alt: A screnshot of an early prototype
+cover_image_alt: A screenshot of an early prototype
 short_description: A map that shows where all the cars in the NYC Subway system are.
 start_date: 2020-01-11
 end_date: null

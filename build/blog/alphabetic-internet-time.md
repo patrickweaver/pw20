@@ -5,18 +5,17 @@ date: 2022-08-18
 cover_image_url: /images/blog/ait/ait-clock-screenshot.png
 cover_image_alt: A screenshot of an AIT clock
 tags:
-
 ---
 
-In the Fall of 2020 I [participated in a 12 week batch](https://www.patrickweaver.net/blog/a-recurse-center-remote-batch/) at the [Recurse Center](https://recurse.com). While I had a lot of previous experience *working* remotely, both before and during the pandemic, RC was the first time where I was communicating with people in more than 1 or 2 other time zones. I now work at a fully remote company, mostly spread over the 4(ish) U.S. time zones, but with a few people permanently or temporarily in other places.
+In the Fall of 2020 I [participated in a 12 week batch](https://www.patrickweaver.net/blog/a-recurse-center-remote-batch/) at the [Recurse Center](https://recurse.com). While I had a lot of previous experience _working_ remotely, both before and during the pandemic, RC was the first time where I was communicating with people in more than 1 or 2 other time zones. I now work at a fully remote company, mostly spread over the 4(ish) U.S. time zones, but with a few people permanently or temporarily in other places.
 
 ## Communicating across time zones
 
 RC when I was there (mostly I would guess because their software was designed and configured for in person retreats in NYC) operated for the most part in Eastern Time, although I see from my limited participation in the community as an alum that this may have shifted, especially thanks to [Zulip’s time-zone-relative timestamp support](https://zulip.com/help/format-your-message-using-markdown#global-times). RC had transitioned to hosting Recursers remotely a few months before my batch, which is how they continue to operate now in Summer 2022. At my current job we often default to either Eastern Time or Pacific Time, but some people will also just use their local time and let others figure it out.
 
-Out of politeness and miscalculation-anxiety reducing redundancy I often will use multiple time zones, for example when proposing a meeting I might say, *“Let’s meet at 🗽 12:30 PM ET / 🏔 10:30 AM MT / 🌁 9:30 AM PT,”* (I’m still searching for a good Central Time emoji, 🛣 🌽 🌪 are the best I’ve got), but time zone based confusion often takes more thinking than it should.
+Out of politeness and miscalculation-anxiety reducing redundancy I often will use multiple time zones, for example when proposing a meeting I might say, _“Let’s meet at 🗽 12:30 PM ET / 🏔 10:30 AM MT / 🌁 9:30 AM PT,”_ (I’m still searching for a good Central Time emoji, 🛣 🌽 🌪 are the best I’ve got), but time zone based confusion often takes more thinking than it should.
 
-(Side note, it bewilders me that Slack still doesn’t have something similar to Zulip’s *“you write in your time zone, they read in their time zone”* timestamp support in 2022. 🙃)
+(Side note, it bewilders me that Slack still doesn’t have something similar to Zulip’s _“you write in your time zone, they read in their time zone”_ timestamp support in 2022. 🙃)
 
 ## Time zones are pretty confusing, DST makes them worse
 
@@ -26,12 +25,11 @@ Even Google search seems to get this wrong as searching [“current time MST”]
 
 ## A time zone for the internet
 
-All of this leads to my Alphabetic Internet Time (AIT), which I consider *“A Great Idea That Will Never Work.”* AIT is essentially UTC, but with the letters A through X of the (English) alphabet replacing the hour digits. Midnight UTC is A:00, Noon UTC is M:00, 1:34 PM UTC is N:34. Just like UTC, these times are not local, S:00 is the same moment everywhere (18:00 UTC). For someone in New York in August 2022 observing EDT, it is 2:00 PM, for the same person in January 2023 S:00 is 1:00 PM. For someone in San Francisco in August, S:00 is 11:00 AM.
+All of this leads to my Alphabetic Internet Time (AIT), which I consider _“A Great Idea That Will Never Work.”_ AIT is essentially UTC, but with the letters A through X of the (English) alphabet replacing the hour digits. Midnight UTC is A:00, Noon UTC is M:00, 1:34 PM UTC is N:34. Just like UTC, these times are not local, S:00 is the same moment everywhere (18:00 UTC). For someone in New York in August 2022 observing EDT, it is 2:00 PM, for the same person in January 2023 S:00 is 1:00 PM. For someone in San Francisco in August, S:00 is 11:00 AM.
 
 This may all sound confusing, but it’s mostly because AIT is not really useful at all for knowing what time it is somewhere else. The main goal of AIT is reducing the amount of time you spend thinking about what time it is somewhere else (though it is likely still polite to make sure you’re not trying to schedule something in the middle of someone else’s night). AIT starts to make sense when you think about people in different time zones communicating about something that will happen online. As someone who works normal business hours in NYC, my work day goes from N:00 (9 AM EDT) to V:00 (5 PM EDT), with lunch usually at Q:30 (though during the Winter it would be O:00 to W:00). If I’m planning with someone in San Francisco who also works normal business hours (Q:00 - A:00) and we want at least an hour, we could easily see that any time between R:00 and V:00 would work, and we would both know what time that was for us.
 
 If AIT were to work it wouldn’t rely on people manually calculating the current time, they would need clocks that display AIT like this reference implementation I made: <a href="https://doodles.patrickweaver.net/ait/" target="_blank">doodles.patrickweaver.net/ait/</a>
-
 
 <figure style="text-align: center; width: 100%;">
   <iframe
@@ -49,7 +47,7 @@ If AIT were to work it wouldn’t rely on people manually calculating the curren
 
 People who are already used to using UTC might look at AIT and think that it’s just a confusing extra layer on top of a system that works pretty well, but in my opinion, moving whole communities of people to UTC would likely be very difficult because doing so asks them to do the same mental math as coordinating between time zones, but often with larger numbers.
 
-Even after changing my phone to use a 24 hour clock for weeks while spending time in countries where that is common I still found myself translating 16:00 to *“16 - 2 - 10 = 4 PM”* in my head. My guess is that for most people it would be easier to convert between two separate concepts, their local time with numbers, and AIT with letters, but I may be wrong. The other advantage is clarity, even if the known best practice is to use UTC, a message like “Let’s meet at 15:30” can still be unclear, potentially UTC, the sender’s local time, or your own!
+Even after changing my phone to use a 24 hour clock for weeks while spending time in countries where that is common I still found myself translating 16:00 to _“16 - 2 - 10 = 4 PM”_ in my head. My guess is that for most people it would be easier to convert between two separate concepts, their local time with numbers, and AIT with letters, but I may be wrong. The other advantage is clarity, even if the known best practice is to use UTC, a message like “Let’s meet at 15:30” can still be unclear, potentially UTC, the sender’s local time, or your own!
 
 ## Does anything like this exist?
 

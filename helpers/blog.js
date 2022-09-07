@@ -1,9 +1,8 @@
 module.exports = {
-  readMore: function(body) {
-
+  readMore: function (body) {
     if (body.length > 348) {
-      return "Read More"
+      return "Read More";
     }
-    return "Post Link"
-  }
-}
+    return "Post Link";
+  },
+};
