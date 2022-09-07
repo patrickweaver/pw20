@@ -16,7 +16,6 @@ tags:
   - javascript
 images:
   - https://pwapi-dev.s3.amazonaws.com/uploads/243fc473-6476-4231-b9d1-6cee39653e65
-
 ---
 
 This game is part of [Mouse’s](https://mouse.org) Serious Games course. It teaches game design concepts by letting players edit parameters in real time to design their own version of Space Invaders.

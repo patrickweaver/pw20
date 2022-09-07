@@ -8,9 +8,11 @@
       "figure",
       "iframe",
       "img",
+      "pre",
       "span"
     ]
   },
   "line-length": false,
-  "no-trailing-punctuation": false
+  "no-trailing-punctuation": false,
+  "first-line-h1": false
 }

@@ -15,7 +15,7 @@ We hosted our first open [Maker Night](https://mouse.org/makernight) in March 20
 
 <figure>
 
-![A photo of two girls working at a laptop](/images/chatbot/chatbot-1.jpg)![A photo of a boy making a paper prototype](/images/chatbot/chatbot-2.jpg)![A photo of a boy using a Makey Makey](/images/chatbot/chatbot-3.jpg)
+![A photo of two girls working at a laptop](/images/blog/chatbot/chatbot-1.jpg)![A photo of a boy making a paper prototype](/images/blog/chatbot/chatbot-2.jpg)![A photo of a boy using a Makey Makey](/images/blog/chatbot/chatbot-3.jpg)
 
 <figcaption>
 
@@ -31,7 +31,7 @@ We usually have students start out by quickly [remixing the chatbot’s script](
 
 <figure>
 
-![A screenshot of a chatbot with a short conversation](/images/chatbot-4.png)![A screenshot of the chatbot start page](/images/chatbot/chatbot-5.png)![A screenshot of a chatbot that has incorporated user input into its responses](/images/chatbot/chatbot-6.png)
+![A screenshot of a chatbot with a short conversation](/images/blog/chatbot/chatbot-4.png)![A screenshot of the chatbot start page](/images/blog/chatbot/chatbot-5.png)![A screenshot of a chatbot that has incorporated user input into its responses](/images/blog/chatbot/chatbot-6.png)
 
 <figcaption>3 remixes of the chatbot</figcaption>
 

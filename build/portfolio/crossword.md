@@ -21,6 +21,6 @@ images:
   - /images/portfolio/crossword/play-mode.png
 ---
 
-This app provides a customizable template for creating crossword puzzles. Easily toggle on and off black squares by double clicking, see answers both on the board and paired with accross and down clues as you add them to the puzle. Puzzles are easily sharable with a (long) URL that contains a hashed version of all the clues and answers.
+This app provides a customizable template for creating crossword puzzles. Easily toggle on and off black squares by double clicking, see answers both on the board and paired with across and down clues as you add them to the puzzle. Puzzles are easily sharable with a (long) URL that contains a hashed version of all the clues and answers.
 
 A future goal for this project is to add a list of all English words so that the composer can provide suggestions for tough to fill answers.
