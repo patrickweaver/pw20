@@ -115,7 +115,7 @@ If you already have a USB 2.0 hub or computers with USB 2.0 ports this board wil
 - From [Adafruit $10](https://www.adafruit.com/product/3501)
 - 3 Digital Pins
 - 3 Analog Pins (D0, D1, D2)
-- Onbaord LED (D13), Onboard RGB LED (D?)
+- Onboard LED (D13), Onboard RGB LED (D?)
 - On/Off Switch and Reset Button
 - JST battery connector
 - 1.25"/2.75 cm

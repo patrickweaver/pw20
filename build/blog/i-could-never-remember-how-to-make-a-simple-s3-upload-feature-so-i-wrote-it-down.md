@@ -299,7 +299,7 @@ if (!response.success || response.error) {
       response.url here.
     - - - - - */
 
-// Because our bucket is not publically viewable we need to
+// Because our bucket is not publicly viewable we need to
 // get a signed URL to view the uploaded file. You DO NOT want
 // to store this signed URL in a DB, it will expire. You will
 // want to store either the key or url from the AWS response
