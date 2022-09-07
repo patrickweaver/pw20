@@ -57,13 +57,15 @@
         </h3>
         
         <div class="blog-cover">
-          
+        
           <p class="post-preview-date">
             August 16, 2020
           </p>
         
         
-        </div>        <article>
+        
+        </div>
+        <article>
           <p>I just finished my first week as part of the Fall 1 '20 batch at <a href="https://www.recurse.com">Recurse Center</a>. I tried to split my time between being social and building skills that I want to use for future projects. The social aspect of RC is interesting because this batch is being conducted remotely.</p>
 <p>My batch at RC started exactly 5 months after my last day in an office, and something I had been thinking about over the last few months, is that I haven’t met anyone new since early March when NYC shut down because of the pandemic. It’s been very refreshing to meet people again, even if it’s via video calls and chat. RC has created an online representation of their physical space we call &quot;Virtual RC&quot;. Each of us have avatars we can move around the space, and there are permanent links to video call rooms that we can pop into for events or impromptu conversations. The Virtual RC experience pairs well with group chat organized into streams on different topics.</p>
 <figure>
@@ -75,7 +77,8 @@
 <p>When I first started the subway map project in early 2020 I was excited about finishing it quickly, but in March when I also stopped taking the subway I lost enthusiasm for the project. Starting at RC has helped rekindle the excitement I had for it, I think partly because even though the batch is remote and there are participants from around the world, there is also a strong NYC contingent.</p>
 <p>An interesting aspect of building a map from MTA data is that the data structures that the MTA publishes are designed for building countdown clock style apps. I would imagine that the MTA calculates this per-station data from the location of each train, but in order to build an app that is more focused on location than time, I need to reverse engineer the location data from the distance in time each train from the next station. There are also other weird quirks, like train trip start times being provided in &quot;HH:MM:SS&quot; format, but station arrival times being provided in Unix time format.</p>
 <figure>
-<pre><code>{ &quot;id&quot;: &quot;000001G&quot;,
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;000001G&quot;,
   &quot;tripUpdate&quot;: {
     &quot;trip&quot;: {
       &quot;tripId&quot;: &quot;126481_G..N&quot;,
@@ -84,13 +87,17 @@
       &quot;routeId&quot;: &quot;G&quot;
     },
     &quot;stopTimeUpdate&quot;: [
-      { &quot;arrival&quot;: { &quot;time&quot;: &quot;1597541836&quot; },
+      {
+        &quot;arrival&quot;: { &quot;time&quot;: &quot;1597541836&quot; },
         &quot;departure&quot;: { &quot;time&quot;: &quot;1597541836&quot; },
-        &quot;stopId&quot;: &quot;G28N&quot; },
-      { &quot;arrival&quot;: { &quot;time&quot;: &quot;1597541904&quot; },
+        &quot;stopId&quot;: &quot;G28N&quot;
+      },
+      {
+        &quot;arrival&quot;: { &quot;time&quot;: &quot;1597541904&quot; },
         &quot;departure&quot;: { &quot;time&quot;: &quot;1597541904&quot; },
-        &quot;stopId&quot;: &quot;G26N&quot; }
-        
+        &quot;stopId&quot;: &quot;G26N&quot;
+      }
+
       /* More stations below in real data */
     ]
   }
@@ -101,7 +108,9 @@
 <p>Splitting my programming time between learning SwiftUI and trying to wrap my head around the subway map again has felt like two different approaches to learning. In the past I have often jumped into building my own projects with a new tool or technology as soon as I feel like I had learned enough to do so, but I’ve often realized later that I spent a lot of time figuring out answers that I might have gotten to more quickly by completing a more thorough overview before starting.</p>
 <p>The subway map is one example of that type of project, but for good reason. It’s a project that when I started, I wasn’t sure was possible. It was inspired by a similar (but much simpler) map in the underground MUNI stations in San Francisco. The MUNI maps I remember from 15 years ago only showed trains in &quot;the tunnel,&quot; which although many lines run through, has a single trunk, that lines branch out from after going above ground (newer maps as seen below seem to show the whole system). Since these MUNI maps had existed since at least the early 00s I figured if one hadn’t been made (I’ve since found <a href="https://tracker.geops.ch/?z=13&amp;s=1&amp;x=-8232001.0970&amp;y=4969606.7622&amp;l=transport">NYC maps that have been made</a>) for NY there must be a technical reason (it may just be that because until relatively recently <a href="https://www.theatlantic.com/technology/archive/2015/11/why-dont-we-know-where-all-the-trains-are/415152/">per station data wasn’t available</a> in NYC).</p>
 <figure>
+<!-- markdownlint-disable no-inline-html -->
 <blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr"><a href="https://twitter.com/MBTA?ref_src=twsrc%5Etfw">@MBTA</a> <a href="https://twitter.com/sfmta_muni?ref_src=twsrc%5Etfw">@sfmta_muni</a> <a href="https://twitter.com/d_tribe?ref_src=twsrc%5Etfw">@d_tribe</a> <a href="https://twitter.com/universalhub?ref_src=twsrc%5Etfw">@universalhub</a> closer zoom. Incredibly useful. <a href="https://t.co/jqHuGyZrJR">pic.twitter.com/jqHuGyZrJR</a></p>&mdash; Ari Ofsevit (@ofsevit) <a href="https://twitter.com/ofsevit/status/720301082899918850?ref_src=twsrc%5Etfw">April 13, 2016</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<!-- markdownlint-enable no-inline-html -->
 <figcaption>
 <p>A photo of the real time MUNI map in a tweet by <a href="https://twitter.com/ofsevit/status/720301082899918850">@ofsevit</a></p>
 </figcaption>
