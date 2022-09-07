@@ -6,7 +6,6 @@ date: 2020-10-21
 cover_image_url: /images/blog/nyc-subway/nyc-subway.png
 cover_image_alt: A screenshot of the map
 tags:
-
 ---
 
 Earlier this week the NYC MTA released a new [digital-first map](https://map.mta.info/). The [Curbed exclusive](https://www.curbed.com/2020/10/first-look-new-yorks-digital-subway-map-comes-alive-today.html) that announced its release accurately portrays it as a strange child of both the 1972 map design by Massimo Vignelli and the current [“paper” map](https://new.mta.info/map/5256). One feature of the new map (though it’s harder than it should be to notice at first) is real-time visualizations of each train in the system.
@@ -23,7 +22,7 @@ I’ve been working on a similar concept, starting in February 2020, on which pr
 
 </figure>
 
-Over the past few weeks at RC the subway map has been my main focus, which is longer than I expected the project to take (and though I have a prototype, I wouldn’t say I’m close to “done”). A big factor in the time the project has taken is some of the quirks in working with MTA data, which based on some of the bugs I’ve seen in the "official" version I’d say the team working on that version had to grapple with as well.  I’m not sure I will ever finish this project to a state that would look great on a subway station tv, or be useful, but I do want to point out [The Weekendest](https://www.theweekendest.com/trains) by [Sunny Ng](https://sunny.ng/) (who also made [goodservice.io](https://www.goodservice.io/)), which is a great take on the concept, and handles some of the challenges of this kind of project much better than the MTA map does.
+Over the past few weeks at RC the subway map has been my main focus, which is longer than I expected the project to take (and though I have a prototype, I wouldn’t say I’m close to “done”). A big factor in the time the project has taken is some of the quirks in working with MTA data, which based on some of the bugs I’ve seen in the "official" version I’d say the team working on that version had to grapple with as well. I’m not sure I will ever finish this project to a state that would look great on a subway station tv, or be useful, but I do want to point out [The Weekendest](https://www.theweekendest.com/trains) by [Sunny Ng](https://sunny.ng/) (who also made [goodservice.io](https://www.goodservice.io/)), which is a great take on the concept, and handles some of the challenges of this kind of project much better than the MTA map does.
 
 For a long time the NYC Subway was almost [completely lacking in real-time data](https://www.theatlantic.com/technology/archive/2015/11/why-dont-we-know-where-all-the-trains-are/415152/). For many years the only line that had even countdown clocks in stations was the L, which seems to be the line the MTA tries out new technology on, likely because it never shares tracks with any other line. Over the last 5 years the MTA has slowly installed countdown clocks in every station, and made the data that powers the countdown clocks available on their website, in apps, and as data online.
 
@@ -44,7 +43,7 @@ I have exclusively worked with the NYC MTA’s GTFS Realtime feeds through the [
 - The data mixes together HH:MM:SS timestamps for data about when a train’s trip started, and [Unix timestamps](https://en.wikipedia.org/wiki/Unix_time) for data about the current time (according to the API) and when a train will arrive at a station (the API provides both arrival and departure times but as far as I have seen they are always identical).
 - `tripUpdate` items show information about the stops a train will make in the future (stopTimeUpdates) and vehicle items show information about the current status of the train, but the first `stopTimeUpdate` is usually in the past.
 
-I had never heard of Protocol Buffers before starting this project, so I was excited to learn more about them while reading through [Designing Data Intensive Applications](https://dataintensive.net) with fellow Recursers.  In the book Martin Kleppmann notes that a, "curious detail of Protocol Buffers is that it does not have a list or array datatype, but instead has a repeated marker for fields (which is a third option alongside required and optional)." This could be the reason for the strange organization of the `tripUpdate` and `vehicle` properties.
+I had never heard of Protocol Buffers before starting this project, so I was excited to learn more about them while reading through [Designing Data Intensive Applications](https://dataintensive.net) with fellow Recursers. In the book Martin Kleppmann notes that a, "curious detail of Protocol Buffers is that it does not have a list or array datatype, but instead has a repeated marker for fields (which is a third option alongside required and optional)." This could be the reason for the strange organization of the `tripUpdate` and `vehicle` properties.
 
 ### Calculating Train Locations
 
@@ -60,7 +59,7 @@ The subway real-time API doesn’t have latitude and longitude data because it i
 
 </figure>
 
-The next step was plotting the stations on a map. To start off, as with the diagram version, I just placed each train at the midpoint between the station it was travelling from and the station it was travelling towards.
+The next step was plotting the stations on a map. To start off, as with the diagram version, I just placed each train at the midpoint between the station it was traveling from and the station it was traveling towards.
 
 A goal I had for the project was not just to show real-time train locations, but to animate them as they moved around the map. To determine how long I should expect a train to take to travel between each station I logged updates from the MTA API for a few hours and noted both the average time for a pair of stations, and the longest time I had seen for the pair. I’m still experimenting a little bit with what values to use as the baseline, but from looking at the logged numbers there does seem to be an expected amount of time for most stations.
 
@@ -103,15 +102,15 @@ G: {
 <figure>
 
 | Trip Id     | Trip Start Time | Trip Date | Route | Stop1 Arrival | Stop1 Id | Stop2 Arrival | Stop2 Id | Seconds |
-|-------------|-----------------|-----------|-------|---------------|----------|---------------|----------|----|
-| 073476_G..N |        12:14:46 |  20200818 | G     |    1597768631 | G33N     |    1597768692 | G32N     | 61 |
-| 074600_G..N |        12:26:00 |  20200818 | G     |    1597769103 | G33N     |    1597769172 | G32N     | 69 |
-| 075000_G..N |        12:30:00 |  20200818 | G     |    1597769531 | G33N     |    1597769596 | G32N     | 65 |
-| 076501_G..N |        12:45:01 |  20200818 | G     |    1597770333 | G33N     |    1597770396 | G32N     | 63 |
-| 077700_G..N |        12:57:00 |  20200818 | G     |    1597771043 | G33N     |    1597771104 | G32N     | 61 |
-| 078403_G..N |        13:04:02 |  20200818 | G     |    1597771443 | G33N     |    1597771524 | G32N     | 81 |
-| 079600_G..N |        13:16:00 |  20200818 | G     |    1597772051 | G33N     |    1597772112 | G32N     | 61 |
-| 080550_G..N |        13:25:30 |  20200818 | G     |    1597772711 | G33N     |    1597772776 | G32N     | 65 |
+| ----------- | --------------- | --------- | ----- | ------------- | -------- | ------------- | -------- | ------- |
+| 073476_G..N | 12:14:46        | 20200818  | G     | 1597768631    | G33N     | 1597768692    | G32N     | 61      |
+| 074600_G..N | 12:26:00        | 20200818  | G     | 1597769103    | G33N     | 1597769172    | G32N     | 69      |
+| 075000_G..N | 12:30:00        | 20200818  | G     | 1597769531    | G33N     | 1597769596    | G32N     | 65      |
+| 076501_G..N | 12:45:01        | 20200818  | G     | 1597770333    | G33N     | 1597770396    | G32N     | 63      |
+| 077700_G..N | 12:57:00        | 20200818  | G     | 1597771043    | G33N     | 1597771104    | G32N     | 61      |
+| 078403_G..N | 13:04:02        | 20200818  | G     | 1597771443    | G33N     | 1597771524    | G32N     | 81      |
+| 079600_G..N | 13:16:00        | 20200818  | G     | 1597772051    | G33N     | 1597772112    | G32N     | 61      |
+| 080550_G..N | 13:25:30        | 20200818  | G     | 1597772711    | G33N     | 1597772776    | G32N     | 65      |
 
 <figcaption>Logged travel Times between the Bedford - Nostrand stop and the Myrtle - Willoughby stop on the G train</figcaption>
 

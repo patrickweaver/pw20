@@ -7,7 +7,6 @@ cover_image_url: /images/blog/rc/virtual-rc.png
 cover_image_alt: A screenshot of my avatar in Virtual RC
 do_not_show_cover_at_top: true
 tags:
-
 ---
 
 I just finished my first week as part of the Fall 1 '20 batch at [Recurse Center](https://www.recurse.com). I tried to split my time between being social and building skills that I want to use for future projects. The social aspect of RC is interesting because this batch is being conducted remotely.
@@ -17,6 +16,7 @@ My batch at RC started exactly 5 months after my last day in an office, and some
 <figure>
 
 ![A screenshot of Virtual RC](/images/blog/rc/virtual-rc.png)
+
 <figcaption>My avatar hanging out in the "Shannon" room at Virtual RC</figcaption>
 
 </figure>
@@ -31,8 +31,9 @@ An interesting aspect of building a map from MTA data is that the data structure
 
 <figure>
 
-```
-{ "id": "000001G",
+```json
+{
+  "id": "000001G",
   "tripUpdate": {
     "trip": {
       "tripId": "126481_G..N",
@@ -41,13 +42,17 @@ An interesting aspect of building a map from MTA data is that the data structure
       "routeId": "G"
     },
     "stopTimeUpdate": [
-      { "arrival": { "time": "1597541836" },
+      {
+        "arrival": { "time": "1597541836" },
         "departure": { "time": "1597541836" },
-        "stopId": "G28N" },
-      { "arrival": { "time": "1597541904" },
+        "stopId": "G28N"
+      },
+      {
+        "arrival": { "time": "1597541904" },
         "departure": { "time": "1597541904" },
-        "stopId": "G26N" }
-        
+        "stopId": "G26N"
+      }
+
       /* More stations below in real data */
     ]
   }
@@ -64,7 +69,9 @@ The subway map is one example of that type of project, but for good reason. Itâ€
 
 <figure>
 
+<!-- markdownlint-disable no-inline-html -->
 <blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr"><a href="https://twitter.com/MBTA?ref_src=twsrc%5Etfw">@MBTA</a> <a href="https://twitter.com/sfmta_muni?ref_src=twsrc%5Etfw">@sfmta_muni</a> <a href="https://twitter.com/d_tribe?ref_src=twsrc%5Etfw">@d_tribe</a> <a href="https://twitter.com/universalhub?ref_src=twsrc%5Etfw">@universalhub</a> closer zoom. Incredibly useful. <a href="https://t.co/jqHuGyZrJR">pic.twitter.com/jqHuGyZrJR</a></p>&mdash; Ari Ofsevit (@ofsevit) <a href="https://twitter.com/ofsevit/status/720301082899918850?ref_src=twsrc%5Etfw">April 13, 2016</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<!-- markdownlint-enable no-inline-html -->
 
 <figcaption>
 

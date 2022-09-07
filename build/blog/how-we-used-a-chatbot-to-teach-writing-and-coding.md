@@ -5,8 +5,8 @@ date: 2016-06-15
 cover_image_url: https://pwapi.s3.amazonaws.com/uploads/a9ecd491-adc0-4f59-8eb3-8654d055a020
 cover_image_alt: A screenshot of the chatbot
 do_not_show_cover_at_top: true
+editors_note: Originally written for the Mouse blog
 tags:
-
 ---
 
 When [Mouse](https://mouse.org/) moved into our new office in early 2015, we were excited to have space for our high school [Design League](https://mouse.org/mouse-design-league) program to spread out and work on assistive technology projects like [1derphone](https://www.instagram.com/p/BGiUJ8awRJp/), a motorized headphone for a DJ with limited mobility. We also quickly realized we had the chance to reach more students in more ways by hosting flexible open events that any NYC students could attend.
@@ -15,7 +15,7 @@ We hosted our first open [Maker Night](https://mouse.org/makernight) in March 20
 
 <figure>
 
-![](https://cdn-images-1.medium.com/max/800/1*eku7Cc10Y9NSFAm7MP7tYA.jpeg)![](https://cdn-images-1.medium.com/max/400/1*hA1_vnNXOvLg0WCWt6PluA.jpeg)![](https://cdn-images-1.medium.com/max/1200/1*ieyZhs_PDEsjWpTP8sDWaw.jpeg)
+![A photo of two girls working at a laptop](/images/chatbot/chatbot-1.jpg)![A photo of a boy making a paper prototype](/images/chatbot/chatbot-2.jpg)![A photo of a boy using a Makey Makey](/images/chatbot/chatbot-3.jpg)
 
 <figcaption>
 
@@ -31,7 +31,7 @@ We usually have students start out by quickly [remixing the chatbot’s script](
 
 <figure>
 
-![](https://cdn-images-1.medium.com/max/800/1*R7wDi-aaq56c6scszMkT9g.png)![](https://cdn-images-1.medium.com/max/800/1*4frB9lA0wqCuoQMb_lLdHQ.png)![](https://cdn-images-1.medium.com/max/800/1*B2IS5kkuK6FaQjmIsPJ3CA.png)
+![A screenshot of a chatbot with a short conversation](/images/chatbot-4.png)![A screenshot of the chatbot start page](/images/chatbot/chatbot-5.png)![A screenshot of a chatbot that has incorporated user input into its responses](/images/chatbot/chatbot-6.png)
 
 <figcaption>3 remixes of the chatbot</figcaption>
 
