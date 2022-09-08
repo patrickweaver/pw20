@@ -9,10 +9,6 @@ editors_note: "This no longer works, and will not be maintained, but might be st
 tags:
 ---
 
-#### 2022 Update
-
-_This no longer works, and will not be maintained, but might be still be interesting to read about._
-
 For some reason Google hasn’t built in a way for you to download images in Google docs! There are workarounds to get those image files like [using Google Keep](https://twitter.com/corduroy/status/1184758335934849025), or [downloading your whole doc as a .zip file](https://twitter.com/tonyvincent/status/1021726699178708993), but these have always felt like too many steps.
 
 And this is something that people really want!

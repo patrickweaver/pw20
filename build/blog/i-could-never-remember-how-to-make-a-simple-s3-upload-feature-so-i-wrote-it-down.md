@@ -21,7 +21,7 @@ In my experience, it’s best to create both a user and a policy when setting up
 
 I’ve also found it’s a best practice to create a new bucket for each of the small apps that I make. If you’re working on a bigger project or want to set up a general purpose place to upload you may want to do this differently, but creating a unique bucket and user for each project helps me keep an eye on things, and not worry too much about credentials getting compromised. Because I only need one bucket for my app it’s easier to create it in the AWS web interface than to build functionality to create buckets into my app.
 
-##### Creating a Bucket
+#### Creating a Bucket
 
 <!-- markdownlint-disable ol-prefix -->
 
@@ -36,7 +36,7 @@ I’ve also found it’s a best practice to create a new bucket for each of the 
 3. Note your bucket name (probably in an ENV variable), it’s now ready to receive uploads!
 <!-- markdownlint-enable ol-prefix -->
 
-##### Creating a Policy
+#### Creating a Policy
 
 <!-- markdownlint-disable ol-prefix -->
 
@@ -73,7 +73,7 @@ I’ve also found it’s a best practice to create a new bucket for each of the 
 7. Click on "Review policy", then give your policy a name and a description. Then click "Create policy".
 <!-- markdownlint-enable ol-prefix -->
 
-##### Creating a User
+#### Creating a User
 
 <!-- markdownlint-disable ol-prefix -->
 

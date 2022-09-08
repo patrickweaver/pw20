@@ -1,11 +1,11 @@
 <div class="project-header">
   <h3 class="project-name">
     <a href="{{ this.url }}">
-      {{#if this.name }}
-        {{ this.name }}
-      {{else }}
+      {{#if this.name}}
+        {{this.name}}
+      {{else}}
         <code>
-          {{ this.url }}
+          {{this.url}}
         </code>
       {{/if}}
     </a>
@@ -13,30 +13,31 @@
   
   <div class="cover">
     <a href="{{ this.url }}">
-      <img src="{{this.cover_image_url}}" alt="{{ this.cover_image_alt}}"/>
+      <img src="{{this.cover_image_url}}" alt="{{this.cover_image_alt}}"/>
     </a>
   </div>
   
   <div class="project-details">
     {{#if this.status}}
       <div class="tag-container status-tag">
-        <div class="tag" style="background-color: {{ statusColor this.status}};">
-          <a href="/portfolio/tags/{{this.status}}">{{ this.status }}</a>
+        <div class="tag" style="background-color: {{statusColor this.status}};">
+          <a href="/portfolio/tags/{{this.status}}">{{this.status}}</a>
         </div>
       </div>
     {{/if}}
 
     <p class="project-date-range">
-      {{ projectDate this.start_date this.end_date }}
+      {{projectDate this.start_date this.end_date}}
     </p>
     
     <ul class="tags project-tag-list tag-container">
       {{#each this.tags}}
         {{#unless (eq this 'projects')}}
-        {{#unless (isSameString this ../this.status)}}
-          <li>
-            <a href="/portfolio/tags/{{this}}">{{this}}</a></li>
-        {{/unless}}
+          {{#unless (isSameString this ../this.status)}}
+            <li>
+              <a href="/portfolio/tags/{{this}}">{{this}}</a>
+            </li>
+          {{/unless}}
         {{/unless}}
       {{/each}}
     </ul>
