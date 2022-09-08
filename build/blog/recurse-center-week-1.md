@@ -31,8 +31,9 @@ An interesting aspect of building a map from MTA data is that the data structure
 
 <figure>
 
-```
-{ "id": "000001G",
+```json
+{
+  "id": "000001G",
   "tripUpdate": {
     "trip": {
       "tripId": "126481_G..N",
@@ -41,12 +42,16 @@ An interesting aspect of building a map from MTA data is that the data structure
       "routeId": "G"
     },
     "stopTimeUpdate": [
-      { "arrival": { "time": "1597541836" },
+      {
+        "arrival": { "time": "1597541836" },
         "departure": { "time": "1597541836" },
-        "stopId": "G28N" },
-      { "arrival": { "time": "1597541904" },
+        "stopId": "G28N"
+      },
+      {
+        "arrival": { "time": "1597541904" },
         "departure": { "time": "1597541904" },
-        "stopId": "G26N" }
+        "stopId": "G26N"
+      }
 
       /* More stations below in real data */
     ]
@@ -64,7 +69,9 @@ The subway map is one example of that type of project, but for good reason. Itâ€
 
 <figure>
 
+<!-- markdownlint-disable no-inline-html -->
 <blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr"><a href="https://twitter.com/MBTA?ref_src=twsrc%5Etfw">@MBTA</a> <a href="https://twitter.com/sfmta_muni?ref_src=twsrc%5Etfw">@sfmta_muni</a> <a href="https://twitter.com/d_tribe?ref_src=twsrc%5Etfw">@d_tribe</a> <a href="https://twitter.com/universalhub?ref_src=twsrc%5Etfw">@universalhub</a> closer zoom. Incredibly useful. <a href="https://t.co/jqHuGyZrJR">pic.twitter.com/jqHuGyZrJR</a></p>&mdash; Ari Ofsevit (@ofsevit) <a href="https://twitter.com/ofsevit/status/720301082899918850?ref_src=twsrc%5Etfw">April 13, 2016</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<!-- markdownlint-enable no-inline-html -->
 
 <figcaption>
 

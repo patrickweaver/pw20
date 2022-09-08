@@ -58,7 +58,7 @@ h3.post-title {
 }
 
 ul.menu,
-ul.postlist {
+ul.post-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -93,8 +93,8 @@ ul.project-images {
   list-style-type: none;
 }
 
-ul.postlist .post-preview,
-ul.postlist .project {
+ul.post-list .post-preview,
+ul.post-list .project {
   margin-bottom: 4rem;
 }
 
@@ -218,6 +218,14 @@ ul.project-images li {
 .post-date {
   font-size: 1rem;
   line-height: 1rem;
+}
+
+.editors-note-header {
+  margin-bottom: 0.25rem;
+}
+
+.editors-note {
+  margin-top: 0;
 }
 
 .tag {

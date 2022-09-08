@@ -23,6 +23,8 @@ I’ve also found it’s a best practice to create a new bucket for each of the 
 
 ##### Creating a Bucket
 
+<!-- markdownlint-disable ol-prefix -->
+
 1. Log into AWS and click on "Services" in the top left. Select "S3" in the "Storage" section, then click on "Create Bucket" on the main S3 screen.
 
 ![A screenshot of the main S3 screen](https://dev-to-uploads.s3.amazonaws.com/i/wzb11or02x3fgsdlobl1.png)
@@ -32,16 +34,19 @@ I’ve also found it’s a best practice to create a new bucket for each of the 
 ![A screenshot of the Create bucket screen](https://dev-to-uploads.s3.amazonaws.com/i/jqobhso6ba8idwecff7l.png)
 
 3. Note your bucket name (probably in an ENV variable), it’s now ready to receive uploads!
+<!-- markdownlint-enable ol-prefix -->
 
 ##### Creating a Policy
 
-1.  Click on your name in the top right. In the dropdown select "My Security Credentials", then in the "Identity and Access Management (IAM)" sidebar on the left, click on "Policies".
+<!-- markdownlint-disable ol-prefix -->
 
-2.  Click on the "Create policy" button. There are 2 ways to give your policy permissions, with the Visual Editor, and with JSON. We’ll use the Visual Editor here, but you can probably just pate the JSON at the end with minor edits.
+1. Click on your name in the top right. In the dropdown select "My Security Credentials", then in the "Identity and Access Management (IAM)" sidebar on the left, click on "Policies".
 
-3.  The Visual Editor has 4 sections: Service, Actions, Resources, and Request Conditions. Start in Service and click on S3.
+2. Click on the "Create policy" button. There are 2 ways to give your policy permissions, with the Visual Editor, and with JSON. We’ll use the Visual Editor here, but you can probably just pate the JSON at the end with minor edits.
 
-4.  You want to add 3 specific actions: "PutObject" which allows uploading files, "GetObject" which allows reading files, and "DeleteObject" (I think you can figure this one out). "GetObject" is in the "Read" section, check the checkbox there. "PutObject" and "DeleteObject" are both in the "Write" section. At the end you should have 3 objects selected:
+3. The Visual Editor has 4 sections: Service, Actions, Resources, and Request Conditions. Start in Service and click on S3.
+
+4. You want to add 3 specific actions: "PutObject" which allows uploading files, "GetObject" which allows reading files, and "DeleteObject" (I think you can figure this one out). "GetObject" is in the "Read" section, check the checkbox there. "PutObject" and "DeleteObject" are both in the "Write" section. At the end you should have 3 objects selected:
 
 ![A screenshot of the Create Policy actions selection](https://dev-to-uploads.s3.amazonaws.com/i/xq9fza7qlzaxb9s2uwxx.png)
 
@@ -65,9 +70,12 @@ I’ve also found it’s a best practice to create a new bucket for each of the 
 }
 ```
 
-6. Click on "Review policy", then give your policy a name and a description. Then click "Create policy".
+7. Click on "Review policy", then give your policy a name and a description. Then click "Create policy".
+<!-- markdownlint-enable ol-prefix -->
 
 ##### Creating a User
+
+<!-- markdownlint-disable ol-prefix -->
 
 1. Click on Users in the left sidebar, then the "Add user" button at the top of the screen, give your user a name and select the checkbox for "Programmatic Access".
 
@@ -78,6 +86,8 @@ I’ve also found it’s a best practice to create a new bucket for each of the 
 3. You will now save your user’s credentials. This is the only time you will be able to do this, so make sure you save them somewhere safe. You will also need to add the credentials as ENV variables in your app. I recommend clicking the "Download .csv" button and saving the file, at least until you get your app set up.
 
 ![A screenshot of the attach policy section of the create user screen](https://dev-to-uploads.s3.amazonaws.com/i/3rqbznl2dlvif555eorn.png)
+
+<!-- markdownlint-enable ol-prefix -->
 
 #### A simple example app
 
@@ -99,7 +109,7 @@ The index page is a plain HTML file, but there are two POST routes in server.js:
 
 Lines 1 through 24 of server.js are setting up the dependencies:
 
-**server.js**
+##### server.js
 
 ```javascript
 // The regular Node/Express stuff:
@@ -121,8 +131,8 @@ var memoryStorage = multer.memoryStorage();
 var memoryUpload = multer({
   storage: memoryStorage,
   limits: {
-    fileSize: 4 * 1024, // 4KB filesize limit
-    //fileSize: 10*1024*1024, // 10 Mb filesize limit
+    fileSize: 4 * 1024, // 4KB file size limit
+    //fileSize: 10*1024*1024, // 10 Mb file size limit
     files: 1,
   },
 }).single("file");
@@ -132,7 +142,9 @@ The uploading to S3 happens in the two POST routes, and in an isolated `aws` mod
 
 The route uses the previously defined `memoryUpload` to capture a file object in req.body.
 
-**server.js**
+<!-- markdownlint-disable no-duplicate-heading -->
+
+##### server.js
 
 ```javascript
 app.post('/upload-image-form', memoryUpload, async function(req, res) {
@@ -140,7 +152,7 @@ app.post('/upload-image-form', memoryUpload, async function(req, res) {
 
 Then, we create an object to send to the `aws` module (this is custom to this app, not the `aws-sdk` npm package) with req.file. Most of the code below is comments, but the short version of what we need to send to the aws is an object with the properties `file` and `id`. `file` is the contents of the file, `id` is what the file will be called in our AWS bucket:
 
-**server.js**
+##### server.js
 
 ```javascript
 const file = req.file;
@@ -188,7 +200,7 @@ const response = await aws.upload(upload);
 
 In the `aws.js` module first there is some general configuration. This is where we will access our `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `S3BUCKET` ENV variables.
 
-**aws.js**
+##### aws.js
 
 ```javascript
 // The AWS package is used for all AWS services,
@@ -214,7 +226,7 @@ There are also 2 functions: `upload()`, which takes one `uploadObject()` paramet
 
 `upload()` is what we passed our `file` object from `server.js` to. This function is essentially a wrapper around the `aws-sdk`’s `S3.putObject()` method. We collect the necessary parameters in an object, then pass that object to the method which we’ve defined as `s3.putObject()`:
 
-**aws.js**
+##### aws.js
 
 ```javascript
 // AWS S3 Upload params:
@@ -239,7 +251,7 @@ const responseData = await s3.putObject(params).promise();
 
 This is all wrapped in a `try` / `catch` block so if there aren’t any errors we can pass the key back to `server.js`:
 
-**aws.js**
+##### aws.js
 
 ```javascript
 // Likely this won’t happen because an error will be thrown,
@@ -260,7 +272,7 @@ const s3Data = {
   key: params.Key,
 
   // Or, the url below could be stored if the permissions on the bucket
-  // or the upload are publically viewable.
+  // or the upload are publicly viewable.
   //url: "https://" + bucketName + ".s3.amazonaws.com/" + params.Key
 };
 
@@ -274,12 +286,12 @@ Going back to server.js, this is where we would want to store our `id` somewhere
 
 Using the id returned from the `upload()` function we call the `getSignedUrl()` function. When we get the signed url, we put it into some simple HTML to display it to the user (this is the main difference between the two `server.js` routes):
 
-**server.js**
+##### server.js
 
 ```javascript
 // Confirm upload succeeded:
 if (!response.success || response.error) {
-  throw "Reponse Error: " + response.error;
+  throw "Response Error: " + response.error;
 }
 
 /* - - - - -
@@ -287,7 +299,7 @@ if (!response.success || response.error) {
       response.url here.
     - - - - - */
 
-// Because our bucket is not publically viewable we need to
+// Because our bucket is not publicly viewable we need to
 // get a signed URL to view the uploaded file. You DO NOT want
 // to store this signed URL in a DB, it will expire. You will
 // want to store either the key or url from the AWS response
@@ -313,7 +325,7 @@ res.status(200).send(`
 
 The `getSignedUrl()` function in `aws` is a wrapper around the `S3.getSignedUrl` method (mostly putting it in our `aws` module allows us to avoid passing the Bucket Name from our routes:
 
-**aws.js**
+##### aws.js
 
 ```javascript
 // This function will get a signed URL which allows
@@ -332,5 +344,7 @@ async function getSignedUrl(key) {
   return url;
 }
 ```
+
+<!-- markdownlint-enable no-duplicate-heading -->
 
 That’s it! Try out the app (in this example uploads are limited in size to 4KB for safety). You can [remix the app on Glitch](https://glitch.com/edit/#!/aws-s3-example) or [fork it on GitHub](https://github.com/patrickweaver/aws-s3-example)

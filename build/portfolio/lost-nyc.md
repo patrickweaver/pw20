@@ -2,7 +2,7 @@
 layout: layouts/portfolioProject.hbs
 name: Lost NYC
 cover_image_url: /images/portfolio/lost-nyc/cover.png
-cover_image_alt: A screnshot of the app
+cover_image_alt: A screenshot of the app
 short_description: A collaborative web app to document closed and shut down small businesses in NYC.
 start_date: 2019-11-12
 end_date: 2019-12-04

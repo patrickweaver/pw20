@@ -15,7 +15,6 @@
 </h3>
 
 <div class="blog-cover">
-
   {{#if (or this.index (not this.do_not_show_cover_at_top))}}
     {{#if this.cover_image_url}}
       <div class="post-header-image">
@@ -37,5 +36,18 @@
       <a href="{{this.url}}" aria-label="Read more about {{this.title}}">
         {{readMore this.templateContent}}&nbsp;→</a>
     </p>
+  {{/if}}
+
+  {{#if (not this.index)}}
+    {{#if this.editors_note}}
+      <h4 class="editors-note-header">
+        {{#if this.editors_note_header}}
+          {{this.editors_note_header}}
+        {{else}}
+          Note
+        {{/if}}
+      </h4>
+      <p class="editors-note"><em>{{this.editors_note}}</em></p>
+    {{/if}}
   {{/if}}
 </div>
