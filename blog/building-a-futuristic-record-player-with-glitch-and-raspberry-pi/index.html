@@ -3,52 +3,54 @@
   <head>
     <title>Patrick Weaver</title>
     
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-    <meta name="description" content="Patrick Weaver’s Website">
-    <link id="favicon" rel="icon" href="/images/favicon.png" type="image/png">
+    <meta name="description" content="Patrick Weaver’s Website" />
+    <link id="favicon" rel="icon" href="/images/favicon.png" type="image/png" />
     
     <!-- Social -->
-      <meta property="og:title" content="Building a futuristic Record Player with Glitch and Raspberry Pi"/>
+      <meta property="og:title" content="Building a futuristic Record Player with Glitch and Raspberry Pi" />
       <meta property="og:description" content="" />
       <meta property="og:image" content="https://pwapi.s3.amazonaws.com/uploads/6fa2e0b0-9602-4d14-b500-d5b615a133f2" />
-    
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@patrickweave_r" />
     <meta name="twitter:creator" content="@patrickweave_r" />
-      <meta name="twitter:title" content="Building a futuristic Record Player with Glitch and Raspberry Pi"/>
+      <meta name="twitter:title" content="Building a futuristic Record Player with Glitch and Raspberry Pi" />
       <meta name="twitter:description" content="" />
       <meta name="twitter:image" content="https://pwapi.s3.amazonaws.com/uploads/6fa2e0b0-9602-4d14-b500-d5b615a133f2" />
       <meta name="twitter:image:alt" content="A screenshot of the app" />
     
-    <link href="https://fonts.googleapis.com/css?family=Yantramanav" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
     <header>
       <h1 id="site-title">
-        <a href="/about">Patrick Weaver</a>
+        <a href="/">Patrick Weaver</a>
       </h1>
       
-      <ul id="menu">
-        <li><a href="/about">About</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/portfolio">Portfolio</a></li>
-        <li><a href="/now">Now</a></li>
-        <li><a href="/links">Links</a></li>
+      <ul class="menu">
+        <li class="menu-about"><a href="/">About</a></li>
+        <li class="menu-blog"><a href="/blog">Blog</a></li>
+        <li class="menu-portfolio"><a href="/portfolio">Portfolio</a></li>
+        <li class="menu-now"><a href="/now">Now</a></li>
+        <li class="menu-links"><a href="/links">Links</a></li>
       </ul>
       
     </header>
     <main>
-      <h2>
-        Blog
+      <h2 class="page-header">
+        <a href="/blog">Blog</a>
       </h2>
       
       <div class="post">
+        
+        <div class="post-date">
+          October 23, 2018
+        </div>
         
         <h3 class="post-title">
           <a href="">
@@ -56,16 +58,11 @@
           </a>
         </h3>
         
-        <div class="blog-cover">
-        
-          <p class="post-preview-date">
-            October 23, 2018
-          </p>
-        
+        <div class="index-item-preview">
               <div class="post-header-image">
                 <a href="">
                   <img
-                    class="blog-cover-image"
+                    class="index-item-preview-image"
                     src="https://pwapi.s3.amazonaws.com/uploads/6fa2e0b0-9602-4d14-b500-d5b615a133f2"
                     alt="A screenshot of the app"
                     aria-label="Link to post for Building a futuristic Record Player with Glitch and Raspberry Pi"
@@ -89,7 +86,7 @@
 <figcaption>A Glitch embed of my Dog → Wikipedia API prototype: click on the name of a dog and you will get a picture of that dog, and a list of pages linked from that dog’s Wikipedia page.</figcaption>
 </figure>
 <p>I started exploring what other APIs I could connect and realized that most of them seemed to enforce a relatively strict internal type system. Even from the many connections Wikipedia could provide it was hard to think of a potential next link that would always match up with the mishmash Wikipedia returned. While it might be easy to match up the Google Maps API to a weather API, connecting more abstract concepts was much more difficult.</p>
-<h2>The ‘Record Player’ app</h2>
+<h4>The ‘Record Player’ app</h4>
 <p>While thinking through this an idea jumped out at me. I could connect the Google Vision API to Spotify to find albums based on pictures of a record cover. The idea seemed so obvious that I figured someone else had already done it (with more thorough research later I found a few similar projects but none that were fully implemented).</p>
 <p>I decided that this spark of an idea was already a lot more interesting than my infinite API art project, but it still had the Rube Goldberg-esque quality I was going for. Even so, I still might have abandoned it without a tool like Glitch, which to me says, “your wacky idea is worth making (and it won’t take very long).” Using the skeleton of my previous project, I was able to put together (in about an hour) an app that bounced an image off of the Google Vision API then brought up search results from Spotify. I sent it to a friend who works at Spotify, and when she confirmed that it didn’t already exist I decided to spend a few hours putting together a more polished version (the hardest part turned out to be drag and drop file upload).</p>
 <p>Thanks to Glitch’s embed feature you can take a look at the app (and the code!) below:</p>
@@ -117,12 +114,14 @@
 <figcaption>A Glitch embed with my surprisingly short list of censored words</figcaption>
 </figure>
 <p><a href="https://twitter.com/anildash/">Anil Dash</a> unexpectedly shared, and quickly it it started showing up <a href="https://pitchfork.com/news/new-app-is-basically-shazam-for-album-covers/">in</a> <a href="https://www.pastemagazine.com/articles/2018/05/new-app-automatically-recognizes-album-covers.html">a</a> <a href="https://www.nme.com/news/music/app-album-cover-shazam-2306795">lot</a> <a href="https://www.engadget.com/2018/05/04/record-player-app-image-based-spotify-search/">of</a> <a href="https://www.altpress.com/news/app_matches_album_covers_spotify/">strange</a> <a href="https://www.androidauthority.com/record-player-spotify-google-861977/">corners</a> <a href="https://www.rollingstone.it/musica/news-musica/ora-esiste-uno-shazam-per-le-copertine-degli-album/410773/">of</a> <a href="https://lifehacker.com/stream-a-vinyl-album-by-snapping-a-pic-of-its-cover-art-1825800020">the</a> <a href="https://www.thecurrent.org/feature/2018/05/02/app-album-covers">internet</a>. I was flattered by the coverage, but a few people were pointing out, “why would you take a picture instead of just typing in the name of the album?” First of all, it’s fun, which should be reason enough. But beyond that, there’s really no reason to right now, there are too many barriers and restrictions in place in the tools we use every day like Spotify and Google, that making a mashup like this will usually require an engineer instead of just an imagination.</p>
-<h2>Getting Record Player working on a Raspberry Pi</h2>
+<h4>Getting Record Player working on a Raspberry Pi</h4>
 <p>From the beginning I wanted to create a physical version of Record Player (inspired by the amazing things they seem to be doing at <a href="https://dynamicland.org/">Dynamicland</a> without “traditional” input and output devices). It would be a machine that could detect when you put a record cover in front of it, and automatically start playing the first song. No screens, no searching, no curated playlist to distract from the physical thing in my hands.</p>
 <p>For the second time I was pleasantly surprised that by finding the right tools, a proof of concept was much easier than I expected. Using a Raspberry Pi with a camera module attached made a simple way to capture images. This left only the challenge of identifying when to start playing music. At first I thought that this might be easy to do by taking advantage of Google’s advanced image processing again, but I realized that the cost of the Google Vision API queries (you only get a certain amount free per month) would be prohibitive if I wanted the device to respond automatically.</p>
 <p>I decided to see if a simple algorithm running on the Raspberry Pi could identify when something new was placed in front of the camera, which seemed to work well enough. Connecting this to a slightly modified version of the Node.js server that runs the original Record Player Glitch app created exactly the machine I had imagined. The video below shows my “Record Player” automatically starting playback when it sees a record cover. This prototype has screens, but they’re only used to start the app and troubleshoot.</p>
-<iframe src="https://player.vimeo.com/video/288443309" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<p>A video of the Record Player machine running on a Raspberry Pi</p>
+<figure>
+  <iframe src="https://player.vimeo.com/video/288443309" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <figcaption>A video of the Record Player machine running on a Raspberry Pi</figcaption>
+</figure>
 <p>Anil’s suggestion for using “Record Player” when he shared the Glitch app, was to see what song came up when you take a selfie, or “Shazam for your face” as he put it. Of course this was hilarious, and this is the kind of play and dynamic interactions that can happen when we start to break down the strict parameters and physical barriers that currently constrain our interactions with technology.</p>
 <p>Browsing Spotify is infinitely less interesting than browsing a friend’s record collection, but the convenience of any song ever recorded will usually win over the joy of discovering something unexpected. If we want this kind of ‘magic’ to bring technology like Google Vision out of prepackaged apps in our phones and laptops we need to allow for new ways of communicating with computers, and each other, that allow for experimentation, weirdness and imagination.</p>
 <p>When we start to join the interesting parts of the real world (for example: everything created before 1997) with the conveniences that smartphones have brought we can start to imagine dynamic digital experiences like the analog ones we have thought up for hundreds of years. Vinyl records themselves were designed as a static medium, but creative musicians saw a way to interact and started sampling and scratching them to create hip-hop.</p>

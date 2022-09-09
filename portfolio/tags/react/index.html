@@ -3,18 +3,20 @@
   <head>
     <title>Patrick Weaver</title>
     
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-    <meta name="description" content="Patrick Weaver’s Website">
-    <link id="favicon" rel="icon" href="/images/favicon.png" type="image/png">
+    <meta name="description" content="Patrick Weaver’s Website" />
+    <link id="favicon" rel="icon" href="/images/favicon.png" type="image/png" />
     
     <!-- Social -->
-      <meta property="og:title" content="Patrick Weaver"/>
+      <meta property="og:title" content="Patrick Weaver" />
       <meta property="og:description" content="Patrick Weaver’s Website" />
-      <meta property="og:image" content="https://pwapi.s3.amazonaws.com/uploads/twitter-card.png" />
-    
+      <meta
+        property="og:image"
+        content="https://pwapi.s3.amazonaws.com/uploads/twitter-card.png"
+      />
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -22,24 +24,26 @@
     <meta name="twitter:creator" content="@patrickweave_r" />
       <meta name="twitter:title" content="Patrick Weaver" />
       <meta name="twitter:description" content="Patrick Weaver’s Website" />
-      <meta name="twitter:image" content="https://pwapi.s3.amazonaws.com/uploads/twitter-card.png" />
+      <meta
+        name="twitter:image"
+        content="https://pwapi.s3.amazonaws.com/uploads/twitter-card.png"
+      />
       <meta name="twitter:image:alt" content="A screenshot of the website" />
     
-    <link href="https://fonts.googleapis.com/css?family=Yantramanav" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
     <header>
       <h1 id="site-title">
-        <a href="/about">Patrick Weaver</a>
+        <a href="/">Patrick Weaver</a>
       </h1>
       
-      <ul id="menu">
-        <li><a href="/about">About</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/portfolio">Portfolio</a></li>
-        <li><a href="/now">Now</a></li>
-        <li><a href="/links">Links</a></li>
+      <ul class="menu">
+        <li class="menu-about"><a href="/">About</a></li>
+        <li class="menu-blog"><a href="/blog">Blog</a></li>
+        <li class="menu-portfolio"><a href="/portfolio">Portfolio</a></li>
+        <li class="menu-now"><a href="/now">Now</a></li>
+        <li class="menu-links"><a href="/links">Links</a></li>
       </ul>
       
     </header>
@@ -48,7 +52,7 @@
   <h3>Projects tagged <span class="tag blob-tag">react</span></h3>
 </div>
 
-<ul class="postlist">
+<ul class="post-list">
         <li class="project">
           <div class="project-header">
             <h3 class="project-name">
@@ -57,37 +61,47 @@
               </a>
             </h3>
             
-            <div class="cover">
-              <a href="/portfolio/beachcomber-game/">
-                <img src="https://pwapi-dev.s3.amazonaws.com/uploads/23b8bd25-e412-4d66-99d8-49c0b62c7333" alt="A screenshot of the game"/>
-              </a>
-            </div>
-            
-              <div class="tag-container status-tag">
-                <div class="tag" style="background-color: #FF6186;">
-                  <a href="/portfolio/tags/Complete">Complete</a>
-                </div>
+            <div class="index-item-preview">
+              <div class="cover">
+                <a href="/portfolio/beachcomber-game/">
+                  <img src="https://pwapi-dev.s3.amazonaws.com/uploads/23b8bd25-e412-4d66-99d8-49c0b62c7333" alt="A screenshot of the game"/>
+                </a>
               </div>
+              
+              <div>
+                <div class="project-details">
+                    <div class="tag-container status-tag">
+                      <div class="tag" style="background-color: #00FF80;">
+                        <a href="/portfolio/tags/Complete">Complete</a>
+                      </div>
+                    </div>
           
-            <p class="project-date-range">
-              2018
-            </p>
-            
-            <ul class="tags project-tag-list">
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/games">games</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/javascript">javascript</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/react">react</a></li>
-            </ul>
-            
-              <p class="project-short-description">
-                  A beach themed minesweeper clone made with React.
-              </p>
-              <p class="read-more">
-                <a href="/portfolio/beachcomber-game/">Read More →</a>
-              </p>
+                  <p class="project-date-range">
+                    2018
+                  </p>
+                  
+                  <ul class="tags project-tag-list tag-container">
+                          <li>
+                            <a href="/portfolio/tags/games">games</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/javascript">javascript</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/react">react</a>
+                          </li>
+                  </ul>
+          
+                </div>
+                
+                  <p class="project-short-description">
+                      A beach themed minesweeper clone made with React.
+                  </p>
+                  <p class="read-more">
+                    <a href="/portfolio/beachcomber-game/">Read More →</a>
+                  </p>
+              </div>
+            </div>
           
           </div>  </li>
         <li class="project">
@@ -98,39 +112,50 @@
               </a>
             </h3>
             
-            <div class="cover">
-              <a href="/portfolio/crossword/">
-                <img src="/images/portfolio/crossword/crossword-screenshot.png" alt="A screenshot of the app"/>
-              </a>
-            </div>
-            
-              <div class="tag-container status-tag">
-                <div class="tag" style="background-color: #FF6186;">
-                  <a href="/portfolio/tags/Complete">Complete</a>
-                </div>
+            <div class="index-item-preview">
+              <div class="cover">
+                <a href="/portfolio/crossword/">
+                  <img src="/images/portfolio/crossword/crossword-screenshot.png" alt="A screenshot of the app"/>
+                </a>
               </div>
+              
+              <div>
+                <div class="project-details">
+                    <div class="tag-container status-tag">
+                      <div class="tag" style="background-color: #00FF80;">
+                        <a href="/portfolio/tags/Complete">Complete</a>
+                      </div>
+                    </div>
           
-            <p class="project-date-range">
-              2020
-            </p>
-            
-            <ul class="tags project-tag-list">
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/javascript">javascript</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/typescript">typescript</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/react">react</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/games">games</a></li>
-            </ul>
-            
-              <p class="project-short-description">
-                  An app that makes it easy (or at least easier) to create original crossword puzzles.
-              </p>
-              <p class="read-more">
-                <a href="/portfolio/crossword/">Read More →</a>
-              </p>
+                  <p class="project-date-range">
+                    2020
+                  </p>
+                  
+                  <ul class="tags project-tag-list tag-container">
+                          <li>
+                            <a href="/portfolio/tags/javascript">javascript</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/typescript">typescript</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/react">react</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/games">games</a>
+                          </li>
+                  </ul>
+          
+                </div>
+                
+                  <p class="project-short-description">
+                      An app that makes it easy (or at least easier) to create original crossword puzzles.
+                  </p>
+                  <p class="read-more">
+                    <a href="/portfolio/crossword/">Read More →</a>
+                  </p>
+              </div>
+            </div>
           
           </div>  </li>
         <li class="project">
@@ -141,45 +166,59 @@
               </a>
             </h3>
             
-            <div class="cover">
-              <a href="/portfolio/spades/">
-                <img src="https://pwapi-dev.s3.amazonaws.com/uploads/d1c585c3-1659-41cf-a1cb-3b12cde8ae09" alt="A screenshot of a prototype interface for the game"/>
-              </a>
-            </div>
-            
-              <div class="tag-container status-tag">
-                <div class="tag" style="background-color: #d0ccff;">
-                  <a href="/portfolio/tags/In Progress">In Progress</a>
-                </div>
+            <div class="index-item-preview">
+              <div class="cover">
+                <a href="/portfolio/spades/">
+                  <img src="https://pwapi-dev.s3.amazonaws.com/uploads/d1c585c3-1659-41cf-a1cb-3b12cde8ae09" alt="A screenshot of a prototype interface for the game"/>
+                </a>
               </div>
+              
+              <div>
+                <div class="project-details">
+                    <div class="tag-container status-tag">
+                      <div class="tag" style="background-color: #BD61FF;">
+                        <a href="/portfolio/tags/In Progress">In Progress</a>
+                      </div>
+                    </div>
           
-            <p class="project-date-range">
-              2017
-            </p>
-            
-            <ul class="tags project-tag-list">
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/flask">flask</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/games">games</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/javascript">javascript</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/machine learning">machine learning</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/node">node</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/python">python</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/react">react</a></li>
-            </ul>
-            
-              <p class="project-short-description">
-                  A multiplayer online version of the card game spades with bot players.
-              </p>
-              <p class="read-more">
-                <a href="/portfolio/spades/">Read More →</a>
-              </p>
+                  <p class="project-date-range">
+                    2017
+                  </p>
+                  
+                  <ul class="tags project-tag-list tag-container">
+                          <li>
+                            <a href="/portfolio/tags/flask">flask</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/games">games</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/javascript">javascript</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/machine learning">machine learning</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/node">node</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/python">python</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/react">react</a>
+                          </li>
+                  </ul>
+          
+                </div>
+                
+                  <p class="project-short-description">
+                      A multiplayer online version of the card game spades with bot players.
+                  </p>
+                  <p class="read-more">
+                    <a href="/portfolio/spades/">Read More →</a>
+                  </p>
+              </div>
+            </div>
           
           </div>  </li>
         <li class="project">
@@ -190,35 +229,44 @@
               </a>
             </h3>
             
-            <div class="cover">
-              <a href="/portfolio/vacation-planner/">
-                <img src="https://pwapi.s3.amazonaws.com/uploads/02ad58e9-4ebd-484f-ba02-db400e09edd0" alt="A screenshot of the app"/>
-              </a>
-            </div>
-            
-              <div class="tag-container status-tag">
-                <div class="tag" style="background-color: #FF6186;">
-                  <a href="/portfolio/tags/Complete">Complete</a>
-                </div>
+            <div class="index-item-preview">
+              <div class="cover">
+                <a href="/portfolio/vacation-planner/">
+                  <img src="https://pwapi.s3.amazonaws.com/uploads/02ad58e9-4ebd-484f-ba02-db400e09edd0" alt="A screenshot of the app"/>
+                </a>
               </div>
+              
+              <div>
+                <div class="project-details">
+                    <div class="tag-container status-tag">
+                      <div class="tag" style="background-color: #00FF80;">
+                        <a href="/portfolio/tags/Complete">Complete</a>
+                      </div>
+                    </div>
           
-            <p class="project-date-range">
-              2019
-            </p>
-            
-            <ul class="tags project-tag-list">
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/javascript">javascript</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/react">react</a></li>
-            </ul>
-            
-              <p class="project-short-description">
-                  A visual calendar that helps map out how to use vacation time.
-              </p>
-              <p class="read-more">
-                <a href="/portfolio/vacation-planner/">Read More →</a>
-              </p>
+                  <p class="project-date-range">
+                    2019
+                  </p>
+                  
+                  <ul class="tags project-tag-list tag-container">
+                          <li>
+                            <a href="/portfolio/tags/javascript">javascript</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/react">react</a>
+                          </li>
+                  </ul>
+          
+                </div>
+                
+                  <p class="project-short-description">
+                      A visual calendar that helps map out how to use vacation time.
+                  </p>
+                  <p class="read-more">
+                    <a href="/portfolio/vacation-planner/">Read More →</a>
+                  </p>
+              </div>
+            </div>
           
           </div>  </li>
 </ul>

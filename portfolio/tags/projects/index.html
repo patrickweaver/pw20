@@ -3,18 +3,20 @@
   <head>
     <title>Patrick Weaver</title>
     
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-    <meta name="description" content="Patrick Weaver’s Website">
-    <link id="favicon" rel="icon" href="/images/favicon.png" type="image/png">
+    <meta name="description" content="Patrick Weaver’s Website" />
+    <link id="favicon" rel="icon" href="/images/favicon.png" type="image/png" />
     
     <!-- Social -->
-      <meta property="og:title" content="Patrick Weaver"/>
+      <meta property="og:title" content="Patrick Weaver" />
       <meta property="og:description" content="Patrick Weaver’s Website" />
-      <meta property="og:image" content="https://pwapi.s3.amazonaws.com/uploads/twitter-card.png" />
-    
+      <meta
+        property="og:image"
+        content="https://pwapi.s3.amazonaws.com/uploads/twitter-card.png"
+      />
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -22,24 +24,26 @@
     <meta name="twitter:creator" content="@patrickweave_r" />
       <meta name="twitter:title" content="Patrick Weaver" />
       <meta name="twitter:description" content="Patrick Weaver’s Website" />
-      <meta name="twitter:image" content="https://pwapi.s3.amazonaws.com/uploads/twitter-card.png" />
+      <meta
+        name="twitter:image"
+        content="https://pwapi.s3.amazonaws.com/uploads/twitter-card.png"
+      />
       <meta name="twitter:image:alt" content="A screenshot of the website" />
     
-    <link href="https://fonts.googleapis.com/css?family=Yantramanav" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
     <header>
       <h1 id="site-title">
-        <a href="/about">Patrick Weaver</a>
+        <a href="/">Patrick Weaver</a>
       </h1>
       
-      <ul id="menu">
-        <li><a href="/about">About</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/portfolio">Portfolio</a></li>
-        <li><a href="/now">Now</a></li>
-        <li><a href="/links">Links</a></li>
+      <ul class="menu">
+        <li class="menu-about"><a href="/">About</a></li>
+        <li class="menu-blog"><a href="/blog">Blog</a></li>
+        <li class="menu-portfolio"><a href="/portfolio">Portfolio</a></li>
+        <li class="menu-now"><a href="/now">Now</a></li>
+        <li class="menu-links"><a href="/links">Links</a></li>
       </ul>
       
     </header>
@@ -48,7 +52,7 @@
   <h3>Projects tagged <span class="tag blob-tag">projects</span></h3>
 </div>
 
-<ul class="postlist">
+<ul class="post-list">
         <li class="project">
           <div class="project-header">
             <h3 class="project-name">
@@ -57,37 +61,47 @@
               </a>
             </h3>
             
-            <div class="cover">
-              <a href="/portfolio/beachcomber-game/">
-                <img src="https://pwapi-dev.s3.amazonaws.com/uploads/23b8bd25-e412-4d66-99d8-49c0b62c7333" alt="A screenshot of the game"/>
-              </a>
-            </div>
-            
-              <div class="tag-container status-tag">
-                <div class="tag" style="background-color: #FF6186;">
-                  <a href="/portfolio/tags/Complete">Complete</a>
-                </div>
+            <div class="index-item-preview">
+              <div class="cover">
+                <a href="/portfolio/beachcomber-game/">
+                  <img src="https://pwapi-dev.s3.amazonaws.com/uploads/23b8bd25-e412-4d66-99d8-49c0b62c7333" alt="A screenshot of the game"/>
+                </a>
               </div>
+              
+              <div>
+                <div class="project-details">
+                    <div class="tag-container status-tag">
+                      <div class="tag" style="background-color: #00FF80;">
+                        <a href="/portfolio/tags/Complete">Complete</a>
+                      </div>
+                    </div>
           
-            <p class="project-date-range">
-              2018
-            </p>
-            
-            <ul class="tags project-tag-list">
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/games">games</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/javascript">javascript</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/react">react</a></li>
-            </ul>
-            
-              <p class="project-short-description">
-                  A beach themed minesweeper clone made with React.
-              </p>
-              <p class="read-more">
-                <a href="/portfolio/beachcomber-game/">Read More →</a>
-              </p>
+                  <p class="project-date-range">
+                    2018
+                  </p>
+                  
+                  <ul class="tags project-tag-list tag-container">
+                          <li>
+                            <a href="/portfolio/tags/games">games</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/javascript">javascript</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/react">react</a>
+                          </li>
+                  </ul>
+          
+                </div>
+                
+                  <p class="project-short-description">
+                      A beach themed minesweeper clone made with React.
+                  </p>
+                  <p class="read-more">
+                    <a href="/portfolio/beachcomber-game/">Read More →</a>
+                  </p>
+              </div>
+            </div>
           
           </div>  </li>
         <li class="project">
@@ -98,35 +112,44 @@
               </a>
             </h3>
             
-            <div class="cover">
-              <a href="/portfolio/broker-fee-calculator/">
-                <img src="https://pwapi.s3.amazonaws.com/uploads/7941e61a-0136-4395-8226-1dfa56067b59" alt="A screenshot of the app"/>
-              </a>
-            </div>
-            
-              <div class="tag-container status-tag">
-                <div class="tag" style="background-color: #FF6186;">
-                  <a href="/portfolio/tags/Complete">Complete</a>
-                </div>
+            <div class="index-item-preview">
+              <div class="cover">
+                <a href="/portfolio/broker-fee-calculator/">
+                  <img src="https://pwapi.s3.amazonaws.com/uploads/7941e61a-0136-4395-8226-1dfa56067b59" alt="A screenshot of the app"/>
+                </a>
               </div>
+              
+              <div>
+                <div class="project-details">
+                    <div class="tag-container status-tag">
+                      <div class="tag" style="background-color: #00FF80;">
+                        <a href="/portfolio/tags/Complete">Complete</a>
+                      </div>
+                    </div>
           
-            <p class="project-date-range">
-              2019
-            </p>
-            
-            <ul class="tags project-tag-list">
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/javascript">javascript</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/nyc">nyc</a></li>
-            </ul>
-            
-              <p class="project-short-description">
-                  A calculator that shows what the effective rent would be for an apartment with the broker fee added to the rent.
-              </p>
-              <p class="read-more">
-                <a href="/portfolio/broker-fee-calculator/">Read More →</a>
-              </p>
+                  <p class="project-date-range">
+                    2019
+                  </p>
+                  
+                  <ul class="tags project-tag-list tag-container">
+                          <li>
+                            <a href="/portfolio/tags/javascript">javascript</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/nyc">nyc</a>
+                          </li>
+                  </ul>
+          
+                </div>
+                
+                  <p class="project-short-description">
+                      A calculator that shows what the effective rent would be for an apartment with the broker fee added to the rent.
+                  </p>
+                  <p class="read-more">
+                    <a href="/portfolio/broker-fee-calculator/">Read More →</a>
+                  </p>
+              </div>
+            </div>
           
           </div>  </li>
         <li class="project">
@@ -137,39 +160,50 @@
               </a>
             </h3>
             
-            <div class="cover">
-              <a href="/portfolio/crossword/">
-                <img src="/images/portfolio/crossword/crossword-screenshot.png" alt="A screenshot of the app"/>
-              </a>
-            </div>
-            
-              <div class="tag-container status-tag">
-                <div class="tag" style="background-color: #FF6186;">
-                  <a href="/portfolio/tags/Complete">Complete</a>
-                </div>
+            <div class="index-item-preview">
+              <div class="cover">
+                <a href="/portfolio/crossword/">
+                  <img src="/images/portfolio/crossword/crossword-screenshot.png" alt="A screenshot of the app"/>
+                </a>
               </div>
+              
+              <div>
+                <div class="project-details">
+                    <div class="tag-container status-tag">
+                      <div class="tag" style="background-color: #00FF80;">
+                        <a href="/portfolio/tags/Complete">Complete</a>
+                      </div>
+                    </div>
           
-            <p class="project-date-range">
-              2020
-            </p>
-            
-            <ul class="tags project-tag-list">
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/javascript">javascript</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/typescript">typescript</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/react">react</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/games">games</a></li>
-            </ul>
-            
-              <p class="project-short-description">
-                  An app that makes it easy (or at least easier) to create original crossword puzzles.
-              </p>
-              <p class="read-more">
-                <a href="/portfolio/crossword/">Read More →</a>
-              </p>
+                  <p class="project-date-range">
+                    2020
+                  </p>
+                  
+                  <ul class="tags project-tag-list tag-container">
+                          <li>
+                            <a href="/portfolio/tags/javascript">javascript</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/typescript">typescript</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/react">react</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/games">games</a>
+                          </li>
+                  </ul>
+          
+                </div>
+                
+                  <p class="project-short-description">
+                      An app that makes it easy (or at least easier) to create original crossword puzzles.
+                  </p>
+                  <p class="read-more">
+                    <a href="/portfolio/crossword/">Read More →</a>
+                  </p>
+              </div>
+            </div>
           
           </div>  </li>
         <li class="project">
@@ -180,37 +214,47 @@
               </a>
             </h3>
             
-            <div class="cover">
-              <a href="/portfolio/diy-encryption/">
-                <img src="https://pwapi.s3.amazonaws.com/uploads/0791c813-6c9c-4f3a-b313-167205f866f0" alt="A screenshot of the app showing 3 options, Offset Encryption, Shared Key Encryption, and Public Key Encryption"/>
-              </a>
-            </div>
-            
-              <div class="tag-container status-tag">
-                <div class="tag" style="background-color: #FF6186;">
-                  <a href="/portfolio/tags/Complete">Complete</a>
-                </div>
+            <div class="index-item-preview">
+              <div class="cover">
+                <a href="/portfolio/diy-encryption/">
+                  <img src="https://pwapi.s3.amazonaws.com/uploads/0791c813-6c9c-4f3a-b313-167205f866f0" alt="A screenshot of the app showing 3 options, Offset Encryption, Shared Key Encryption, and Public Key Encryption"/>
+                </a>
               </div>
+              
+              <div>
+                <div class="project-details">
+                    <div class="tag-container status-tag">
+                      <div class="tag" style="background-color: #00FF80;">
+                        <a href="/portfolio/tags/Complete">Complete</a>
+                      </div>
+                    </div>
           
-            <p class="project-date-range">
-              2017
-            </p>
-            
-            <ul class="tags project-tag-list">
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/education">education</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/flask">flask</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/python">python</a></li>
-            </ul>
-            
-              <p class="project-short-description">
-                  DIY Encryption is a web app that encrypts text in 3 different ways. It uses small prime numbers to generate public and private keys for public key encryption.
-              </p>
-              <p class="read-more">
-                <a href="/portfolio/diy-encryption/">Read More →</a>
-              </p>
+                  <p class="project-date-range">
+                    2017
+                  </p>
+                  
+                  <ul class="tags project-tag-list tag-container">
+                          <li>
+                            <a href="/portfolio/tags/education">education</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/flask">flask</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/python">python</a>
+                          </li>
+                  </ul>
+          
+                </div>
+                
+                  <p class="project-short-description">
+                      DIY Encryption is a web app that encrypts text in 3 different ways. It uses small prime numbers to generate public and private keys for public key encryption.
+                  </p>
+                  <p class="read-more">
+                    <a href="/portfolio/diy-encryption/">Read More →</a>
+                  </p>
+              </div>
+            </div>
           
           </div>  </li>
         <li class="project">
@@ -221,39 +265,50 @@
               </a>
             </h3>
             
-            <div class="cover">
-              <a href="/portfolio/emoji-city-transit/">
-                <img src="https://pwapi.s3.amazonaws.com/uploads/e42ca7c1-fa08-4f43-9907-a37002a97ba8" alt="A screenshot of the app"/>
-              </a>
-            </div>
-            
-              <div class="tag-container status-tag">
-                <div class="tag" style="background-color: #FF6186;">
-                  <a href="/portfolio/tags/Complete">Complete</a>
-                </div>
+            <div class="index-item-preview">
+              <div class="cover">
+                <a href="/portfolio/emoji-city-transit/">
+                  <img src="https://pwapi.s3.amazonaws.com/uploads/e42ca7c1-fa08-4f43-9907-a37002a97ba8" alt="A screenshot of the app"/>
+                </a>
               </div>
+              
+              <div>
+                <div class="project-details">
+                    <div class="tag-container status-tag">
+                      <div class="tag" style="background-color: #00FF80;">
+                        <a href="/portfolio/tags/Complete">Complete</a>
+                      </div>
+                    </div>
           
-            <p class="project-date-range">
-              2019
-            </p>
-            
-            <ul class="tags project-tag-list">
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/experiments">experiments</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/javascript">javascript</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/node">node</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/nyc">nyc</a></li>
-            </ul>
-            
-              <p class="project-short-description">
-                  A subway dashboard that shows train statuses using emoji.
-              </p>
-              <p class="read-more">
-                <a href="/portfolio/emoji-city-transit/">Read More →</a>
-              </p>
+                  <p class="project-date-range">
+                    2019
+                  </p>
+                  
+                  <ul class="tags project-tag-list tag-container">
+                          <li>
+                            <a href="/portfolio/tags/experiments">experiments</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/javascript">javascript</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/node">node</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/nyc">nyc</a>
+                          </li>
+                  </ul>
+          
+                </div>
+                
+                  <p class="project-short-description">
+                      A subway dashboard that shows train statuses using emoji.
+                  </p>
+                  <p class="read-more">
+                    <a href="/portfolio/emoji-city-transit/">Read More →</a>
+                  </p>
+              </div>
+            </div>
           
           </div>  </li>
         <li class="project">
@@ -264,35 +319,44 @@
               </a>
             </h3>
             
-            <div class="cover">
-              <a href="/portfolio/emoji-wallpaper/">
-                <img src="https://pwapi-dev.s3.amazonaws.com/uploads/c21e9801-f76d-46e7-a93c-ba558908b4b8" alt="A screenshot of the default wallpaper with all emojis on Windows"/>
-              </a>
-            </div>
-            
-              <div class="tag-container status-tag">
-                <div class="tag" style="background-color: #FF6186;">
-                  <a href="/portfolio/tags/Complete">Complete</a>
-                </div>
+            <div class="index-item-preview">
+              <div class="cover">
+                <a href="/portfolio/emoji-wallpaper/">
+                  <img src="https://pwapi-dev.s3.amazonaws.com/uploads/c21e9801-f76d-46e7-a93c-ba558908b4b8" alt="A screenshot of the default wallpaper with all emojis on Windows"/>
+                </a>
               </div>
+              
+              <div>
+                <div class="project-details">
+                    <div class="tag-container status-tag">
+                      <div class="tag" style="background-color: #00FF80;">
+                        <a href="/portfolio/tags/Complete">Complete</a>
+                      </div>
+                    </div>
           
-            <p class="project-date-range">
-              2018
-            </p>
-            
-            <ul class="tags project-tag-list">
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/art">art</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/javascript">javascript</a></li>
-            </ul>
-            
-              <p class="project-short-description">
-                  A generative art project that creates a wallpaper style image from emojis.
-              </p>
-              <p class="read-more">
-                <a href="/portfolio/emoji-wallpaper/">Read More →</a>
-              </p>
+                  <p class="project-date-range">
+                    2018
+                  </p>
+                  
+                  <ul class="tags project-tag-list tag-container">
+                          <li>
+                            <a href="/portfolio/tags/art">art</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/javascript">javascript</a>
+                          </li>
+                  </ul>
+          
+                </div>
+                
+                  <p class="project-short-description">
+                      A generative art project that creates a wallpaper style image from emojis.
+                  </p>
+                  <p class="read-more">
+                    <a href="/portfolio/emoji-wallpaper/">Read More →</a>
+                  </p>
+              </div>
+            </div>
           
           </div>  </li>
         <li class="project">
@@ -303,37 +367,47 @@
               </a>
             </h3>
             
-            <div class="cover">
-              <a href="/portfolio/glitch-to-trello/">
-                <img src="https://pwapi-dev.s3.amazonaws.com/uploads/8268bfd9-b146-4946-b802-7b42100ec4d1" alt="A screenshot of the app"/>
-              </a>
-            </div>
-            
-              <div class="tag-container status-tag">
-                <div class="tag" style="background-color: #FF6186;">
-                  <a href="/portfolio/tags/Complete">Complete</a>
-                </div>
+            <div class="index-item-preview">
+              <div class="cover">
+                <a href="/portfolio/glitch-to-trello/">
+                  <img src="https://pwapi-dev.s3.amazonaws.com/uploads/8268bfd9-b146-4946-b802-7b42100ec4d1" alt="A screenshot of the app"/>
+                </a>
               </div>
+              
+              <div>
+                <div class="project-details">
+                    <div class="tag-container status-tag">
+                      <div class="tag" style="background-color: #00FF80;">
+                        <a href="/portfolio/tags/Complete">Complete</a>
+                      </div>
+                    </div>
           
-            <p class="project-date-range">
-              2018
-            </p>
-            
-            <ul class="tags project-tag-list">
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/coffeescript">coffeescript</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/experiments">experiments</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/node">node</a></li>
-            </ul>
-            
-              <p class="project-short-description">
-                  An experiment with the Trello API that will create boards for your existing Glitch projects.
-              </p>
-              <p class="read-more">
-                <a href="/portfolio/glitch-to-trello/">Read More →</a>
-              </p>
+                  <p class="project-date-range">
+                    2018
+                  </p>
+                  
+                  <ul class="tags project-tag-list tag-container">
+                          <li>
+                            <a href="/portfolio/tags/coffeescript">coffeescript</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/experiments">experiments</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/node">node</a>
+                          </li>
+                  </ul>
+          
+                </div>
+                
+                  <p class="project-short-description">
+                      An experiment with the Trello API that will create boards for your existing Glitch projects.
+                  </p>
+                  <p class="read-more">
+                    <a href="/portfolio/glitch-to-trello/">Read More →</a>
+                  </p>
+              </div>
+            </div>
           
           </div>  </li>
         <li class="project">
@@ -344,37 +418,47 @@
               </a>
             </h3>
             
-            <div class="cover">
-              <a href="/portfolio/lost-nyc/">
-                <img src="/images/portfolio/lost-nyc/cover.png" alt="A screenshot of the app"/>
-              </a>
-            </div>
-            
-              <div class="tag-container status-tag">
-                <div class="tag" style="background-color: #EFAF8F;">
-                  <a href="/portfolio/tags/On Hold">On Hold</a>
-                </div>
+            <div class="index-item-preview">
+              <div class="cover">
+                <a href="/portfolio/lost-nyc/">
+                  <img src="/images/portfolio/lost-nyc/cover.png" alt="A screenshot of the app"/>
+                </a>
               </div>
+              
+              <div>
+                <div class="project-details">
+                    <div class="tag-container status-tag">
+                      <div class="tag" style="background-color: #FFBF00;">
+                        <a href="/portfolio/tags/On Hold">On Hold</a>
+                      </div>
+                    </div>
           
-            <p class="project-date-range">
-              2019
-            </p>
-            
-            <ul class="tags project-tag-list">
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/javascript">javascript</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/svelte">svelte</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/nyc">nyc</a></li>
-            </ul>
-            
-              <p class="project-short-description">
-                  A collaborative web app to document closed and shut down small businesses in NYC.
-              </p>
-              <p class="read-more">
-                <a href="/portfolio/lost-nyc/">Read More →</a>
-              </p>
+                  <p class="project-date-range">
+                    2019
+                  </p>
+                  
+                  <ul class="tags project-tag-list tag-container">
+                          <li>
+                            <a href="/portfolio/tags/javascript">javascript</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/svelte">svelte</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/nyc">nyc</a>
+                          </li>
+                  </ul>
+          
+                </div>
+                
+                  <p class="project-short-description">
+                      A collaborative web app to document closed and shut down small businesses in NYC.
+                  </p>
+                  <p class="read-more">
+                    <a href="/portfolio/lost-nyc/">Read More →</a>
+                  </p>
+              </div>
+            </div>
           
           </div>  </li>
         <li class="project">
@@ -385,37 +469,47 @@
               </a>
             </h3>
             
-            <div class="cover">
-              <a href="/portfolio/please-confirm-you-are-a-robot/">
-                <img src="https://pwapi-dev.s3.amazonaws.com/uploads/b4fb5c6e-e3a5-44ae-ba62-f0e080df745a" alt="A screenshot of the app"/>
-              </a>
-            </div>
-            
-              <div class="tag-container status-tag">
-                <div class="tag" style="background-color: #FF6186;">
-                  <a href="/portfolio/tags/Complete">Complete</a>
-                </div>
+            <div class="index-item-preview">
+              <div class="cover">
+                <a href="/portfolio/please-confirm-you-are-a-robot/">
+                  <img src="https://pwapi-dev.s3.amazonaws.com/uploads/b4fb5c6e-e3a5-44ae-ba62-f0e080df745a" alt="A screenshot of the app"/>
+                </a>
               </div>
+              
+              <div>
+                <div class="project-details">
+                    <div class="tag-container status-tag">
+                      <div class="tag" style="background-color: #00FF80;">
+                        <a href="/portfolio/tags/Complete">Complete</a>
+                      </div>
+                    </div>
           
-            <p class="project-date-range">
-              2018
-            </p>
-            
-            <ul class="tags project-tag-list">
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/art">art</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/javascript">javascript</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/node">node</a></li>
-            </ul>
-            
-              <p class="project-short-description">
-                  A website that turns the captcha test on its head and asks users to confirm they are robots.
-              </p>
-              <p class="read-more">
-                <a href="/portfolio/please-confirm-you-are-a-robot/">Read More →</a>
-              </p>
+                  <p class="project-date-range">
+                    2018
+                  </p>
+                  
+                  <ul class="tags project-tag-list tag-container">
+                          <li>
+                            <a href="/portfolio/tags/art">art</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/javascript">javascript</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/node">node</a>
+                          </li>
+                  </ul>
+          
+                </div>
+                
+                  <p class="project-short-description">
+                      A website that turns the captcha test on its head and asks users to confirm they are robots.
+                  </p>
+                  <p class="read-more">
+                    <a href="/portfolio/please-confirm-you-are-a-robot/">Read More →</a>
+                  </p>
+              </div>
+            </div>
           
           </div>  </li>
         <li class="project">
@@ -426,37 +520,47 @@
               </a>
             </h3>
             
-            <div class="cover">
-              <a href="/portfolio/real-time-nyc-subway-map/">
-                <img src="/images/portfolio/nyc-subway/feb-20-screenshot.png" alt="A screenshot of an early prototype"/>
-              </a>
-            </div>
-            
-              <div class="tag-container status-tag">
-                <div class="tag" style="background-color: #d0ccff;">
-                  <a href="/portfolio/tags/In Progress">In Progress</a>
-                </div>
+            <div class="index-item-preview">
+              <div class="cover">
+                <a href="/portfolio/real-time-nyc-subway-map/">
+                  <img src="/images/portfolio/nyc-subway/feb-20-screenshot.png" alt="A screenshot of an early prototype"/>
+                </a>
               </div>
+              
+              <div>
+                <div class="project-details">
+                    <div class="tag-container status-tag">
+                      <div class="tag" style="background-color: #BD61FF;">
+                        <a href="/portfolio/tags/In Progress">In Progress</a>
+                      </div>
+                    </div>
           
-            <p class="project-date-range">
-              2020
-            </p>
-            
-            <ul class="tags project-tag-list">
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/javascript">javascript</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/svelte">svelte</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/nyc">nyc</a></li>
-            </ul>
-            
-              <p class="project-short-description">
-                  A map that shows where all the cars in the NYC Subway system are.
-              </p>
-              <p class="read-more">
-                <a href="/portfolio/real-time-nyc-subway-map/">Read More →</a>
-              </p>
+                  <p class="project-date-range">
+                    2020
+                  </p>
+                  
+                  <ul class="tags project-tag-list tag-container">
+                          <li>
+                            <a href="/portfolio/tags/javascript">javascript</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/svelte">svelte</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/nyc">nyc</a>
+                          </li>
+                  </ul>
+          
+                </div>
+                
+                  <p class="project-short-description">
+                      A map that shows where all the cars in the NYC Subway system are.
+                  </p>
+                  <p class="read-more">
+                    <a href="/portfolio/real-time-nyc-subway-map/">Read More →</a>
+                  </p>
+              </div>
+            </div>
           
           </div>  </li>
         <li class="project">
@@ -467,39 +571,50 @@
               </a>
             </h3>
             
-            <div class="cover">
-              <a href="/portfolio/record-player/">
-                <img src="https://pwapi.s3.amazonaws.com/uploads/780ba2c5-d792-4cfc-89be-09b4c1d8a853" alt="A screenshot of the app"/>
-              </a>
-            </div>
-            
-              <div class="tag-container status-tag">
-                <div class="tag" style="background-color: #FF6186;">
-                  <a href="/portfolio/tags/Complete">Complete</a>
-                </div>
+            <div class="index-item-preview">
+              <div class="cover">
+                <a href="/portfolio/record-player/">
+                  <img src="https://pwapi.s3.amazonaws.com/uploads/780ba2c5-d792-4cfc-89be-09b4c1d8a853" alt="A screenshot of the app"/>
+                </a>
               </div>
+              
+              <div>
+                <div class="project-details">
+                    <div class="tag-container status-tag">
+                      <div class="tag" style="background-color: #00FF80;">
+                        <a href="/portfolio/tags/Complete">Complete</a>
+                      </div>
+                    </div>
           
-            <p class="project-date-range">
-              2018
-            </p>
-            
-            <ul class="tags project-tag-list">
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/javascript">javascript</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/node">node</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/python">python</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/raspberry pi">raspberry pi</a></li>
-            </ul>
-            
-              <p class="project-short-description">
-                  Play your old records by taking a picture with this computer vision enabled record player that streams from Spotify.
-              </p>
-              <p class="read-more">
-                <a href="/portfolio/record-player/">Read More →</a>
-              </p>
+                  <p class="project-date-range">
+                    2018
+                  </p>
+                  
+                  <ul class="tags project-tag-list tag-container">
+                          <li>
+                            <a href="/portfolio/tags/javascript">javascript</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/node">node</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/python">python</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/raspberry pi">raspberry pi</a>
+                          </li>
+                  </ul>
+          
+                </div>
+                
+                  <p class="project-short-description">
+                      Play your old records by taking a picture with this computer vision enabled record player that streams from Spotify.
+                  </p>
+                  <p class="read-more">
+                    <a href="/portfolio/record-player/">Read More →</a>
+                  </p>
+              </div>
+            </div>
           
           </div>  </li>
         <li class="project">
@@ -510,37 +625,47 @@
               </a>
             </h3>
             
-            <div class="cover">
-              <a href="/portfolio/remixable-space-invaders/">
-                <img src="https://pwapi-dev.s3.amazonaws.com/uploads/243fc473-6476-4231-b9d1-6cee39653e65" alt="A screenshot of the control panel in the game"/>
-              </a>
-            </div>
-            
-              <div class="tag-container status-tag">
-                <div class="tag" style="background-color: #FF6186;">
-                  <a href="/portfolio/tags/Complete">Complete</a>
-                </div>
+            <div class="index-item-preview">
+              <div class="cover">
+                <a href="/portfolio/remixable-space-invaders/">
+                  <img src="https://pwapi-dev.s3.amazonaws.com/uploads/243fc473-6476-4231-b9d1-6cee39653e65" alt="A screenshot of the control panel in the game"/>
+                </a>
               </div>
+              
+              <div>
+                <div class="project-details">
+                    <div class="tag-container status-tag">
+                      <div class="tag" style="background-color: #00FF80;">
+                        <a href="/portfolio/tags/Complete">Complete</a>
+                      </div>
+                    </div>
           
-            <p class="project-date-range">
-              2018
-            </p>
-            
-            <ul class="tags project-tag-list">
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/education">education</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/games">games</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/javascript">javascript</a></li>
-            </ul>
-            
-              <p class="project-short-description">
-                  A live editable version of the arcade game space invaders for learning game design concepts.
-              </p>
-              <p class="read-more">
-                <a href="/portfolio/remixable-space-invaders/">Read More →</a>
-              </p>
+                  <p class="project-date-range">
+                    2018
+                  </p>
+                  
+                  <ul class="tags project-tag-list tag-container">
+                          <li>
+                            <a href="/portfolio/tags/education">education</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/games">games</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/javascript">javascript</a>
+                          </li>
+                  </ul>
+          
+                </div>
+                
+                  <p class="project-short-description">
+                      A live editable version of the arcade game space invaders for learning game design concepts.
+                  </p>
+                  <p class="read-more">
+                    <a href="/portfolio/remixable-space-invaders/">Read More →</a>
+                  </p>
+              </div>
+            </div>
           
           </div>  </li>
         <li class="project">
@@ -551,45 +676,59 @@
               </a>
             </h3>
             
-            <div class="cover">
-              <a href="/portfolio/spades/">
-                <img src="https://pwapi-dev.s3.amazonaws.com/uploads/d1c585c3-1659-41cf-a1cb-3b12cde8ae09" alt="A screenshot of a prototype interface for the game"/>
-              </a>
-            </div>
-            
-              <div class="tag-container status-tag">
-                <div class="tag" style="background-color: #d0ccff;">
-                  <a href="/portfolio/tags/In Progress">In Progress</a>
-                </div>
+            <div class="index-item-preview">
+              <div class="cover">
+                <a href="/portfolio/spades/">
+                  <img src="https://pwapi-dev.s3.amazonaws.com/uploads/d1c585c3-1659-41cf-a1cb-3b12cde8ae09" alt="A screenshot of a prototype interface for the game"/>
+                </a>
               </div>
+              
+              <div>
+                <div class="project-details">
+                    <div class="tag-container status-tag">
+                      <div class="tag" style="background-color: #BD61FF;">
+                        <a href="/portfolio/tags/In Progress">In Progress</a>
+                      </div>
+                    </div>
           
-            <p class="project-date-range">
-              2017
-            </p>
-            
-            <ul class="tags project-tag-list">
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/flask">flask</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/games">games</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/javascript">javascript</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/machine learning">machine learning</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/node">node</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/python">python</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/react">react</a></li>
-            </ul>
-            
-              <p class="project-short-description">
-                  A multiplayer online version of the card game spades with bot players.
-              </p>
-              <p class="read-more">
-                <a href="/portfolio/spades/">Read More →</a>
-              </p>
+                  <p class="project-date-range">
+                    2017
+                  </p>
+                  
+                  <ul class="tags project-tag-list tag-container">
+                          <li>
+                            <a href="/portfolio/tags/flask">flask</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/games">games</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/javascript">javascript</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/machine learning">machine learning</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/node">node</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/python">python</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/react">react</a>
+                          </li>
+                  </ul>
+          
+                </div>
+                
+                  <p class="project-short-description">
+                      A multiplayer online version of the card game spades with bot players.
+                  </p>
+                  <p class="read-more">
+                    <a href="/portfolio/spades/">Read More →</a>
+                  </p>
+              </div>
+            </div>
           
           </div>  </li>
         <li class="project">
@@ -600,33 +739,41 @@
               </a>
             </h3>
             
-            <div class="cover">
-              <a href="/portfolio/url-hosted-bookmarklet/">
-                <img src="/images/portfolio/bookmarklet/bookmarklet-website-screenshot.jpeg" alt="A screenshot of the app"/>
-              </a>
-            </div>
-            
-              <div class="tag-container status-tag">
-                <div class="tag" style="background-color: #FF6186;">
-                  <a href="/portfolio/tags/Complete">Complete</a>
-                </div>
+            <div class="index-item-preview">
+              <div class="cover">
+                <a href="/portfolio/url-hosted-bookmarklet/">
+                  <img src="/images/portfolio/bookmarklet/bookmarklet-website-screenshot.jpeg" alt="A screenshot of the app"/>
+                </a>
               </div>
+              
+              <div>
+                <div class="project-details">
+                    <div class="tag-container status-tag">
+                      <div class="tag" style="background-color: #00FF80;">
+                        <a href="/portfolio/tags/Complete">Complete</a>
+                      </div>
+                    </div>
           
-            <p class="project-date-range">
-              2022
-            </p>
-            
-            <ul class="tags project-tag-list">
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/javascript">javascript</a></li>
-            </ul>
-            
-              <p class="project-short-description">
-                  A website that encodes bookmarklet code into a URL hash so that it can be easily shared.
-              </p>
-              <p class="read-more">
-                <a href="/portfolio/url-hosted-bookmarklet/">Read More →</a>
-              </p>
+                  <p class="project-date-range">
+                    2022
+                  </p>
+                  
+                  <ul class="tags project-tag-list tag-container">
+                          <li>
+                            <a href="/portfolio/tags/javascript">javascript</a>
+                          </li>
+                  </ul>
+          
+                </div>
+                
+                  <p class="project-short-description">
+                      A website that encodes bookmarklet code into a URL hash so that it can be easily shared.
+                  </p>
+                  <p class="read-more">
+                    <a href="/portfolio/url-hosted-bookmarklet/">Read More →</a>
+                  </p>
+              </div>
+            </div>
           
           </div>  </li>
         <li class="project">
@@ -637,35 +784,44 @@
               </a>
             </h3>
             
-            <div class="cover">
-              <a href="/portfolio/vacation-planner/">
-                <img src="https://pwapi.s3.amazonaws.com/uploads/02ad58e9-4ebd-484f-ba02-db400e09edd0" alt="A screenshot of the app"/>
-              </a>
-            </div>
-            
-              <div class="tag-container status-tag">
-                <div class="tag" style="background-color: #FF6186;">
-                  <a href="/portfolio/tags/Complete">Complete</a>
-                </div>
+            <div class="index-item-preview">
+              <div class="cover">
+                <a href="/portfolio/vacation-planner/">
+                  <img src="https://pwapi.s3.amazonaws.com/uploads/02ad58e9-4ebd-484f-ba02-db400e09edd0" alt="A screenshot of the app"/>
+                </a>
               </div>
+              
+              <div>
+                <div class="project-details">
+                    <div class="tag-container status-tag">
+                      <div class="tag" style="background-color: #00FF80;">
+                        <a href="/portfolio/tags/Complete">Complete</a>
+                      </div>
+                    </div>
           
-            <p class="project-date-range">
-              2019
-            </p>
-            
-            <ul class="tags project-tag-list">
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/javascript">javascript</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/react">react</a></li>
-            </ul>
-            
-              <p class="project-short-description">
-                  A visual calendar that helps map out how to use vacation time.
-              </p>
-              <p class="read-more">
-                <a href="/portfolio/vacation-planner/">Read More →</a>
-              </p>
+                  <p class="project-date-range">
+                    2019
+                  </p>
+                  
+                  <ul class="tags project-tag-list tag-container">
+                          <li>
+                            <a href="/portfolio/tags/javascript">javascript</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/react">react</a>
+                          </li>
+                  </ul>
+          
+                </div>
+                
+                  <p class="project-short-description">
+                      A visual calendar that helps map out how to use vacation time.
+                  </p>
+                  <p class="read-more">
+                    <a href="/portfolio/vacation-planner/">Read More →</a>
+                  </p>
+              </div>
+            </div>
           
           </div>  </li>
         <li class="project">
@@ -676,40 +832,51 @@
               </a>
             </h3>
             
-            <div class="cover">
-              <a href="/portfolio/whiteboard-email/">
-                <img src="https://pwapi.s3.amazonaws.com/uploads/6e467e0a-6c08-4dc8-9b95-262e1c05befa" alt="A photograph of email text written on a white board."/>
-              </a>
-            </div>
-            
-              <div class="tag-container status-tag">
-                <div class="tag" style="background-color: #EFAF8F;">
-                  <a href="/portfolio/tags/On Hold">On Hold</a>
-                </div>
+            <div class="index-item-preview">
+              <div class="cover">
+                <a href="/portfolio/whiteboard-email/">
+                  <img src="https://pwapi.s3.amazonaws.com/uploads/6e467e0a-6c08-4dc8-9b95-262e1c05befa" alt="A photograph of email text written on a white board."/>
+                </a>
               </div>
+              
+              <div>
+                <div class="project-details">
+                    <div class="tag-container status-tag">
+                      <div class="tag" style="background-color: #FFBF00;">
+                        <a href="/portfolio/tags/On Hold">On Hold</a>
+                      </div>
+                    </div>
           
-            <p class="project-date-range">
-              2019
-            </p>
-            
-            <ul class="tags project-tag-list">
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/experiments">experiments</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/javascript">javascript</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/machine learning">machine learning</a></li>
-                  <li class="tag-container">
-                    <a href="/portfolio/tags/node">node</a></li>
-            </ul>
-            
-              <p class="project-short-description">
-                  An experiment in composing email, write your message on a whiteboard and end it
+                  <p class="project-date-range">
+                    2019
+                  </p>
+                  
+                  <ul class="tags project-tag-list tag-container">
+                          <li>
+                            <a href="/portfolio/tags/experiments">experiments</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/javascript">javascript</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/machine learning">machine learning</a>
+                          </li>
+                          <li>
+                            <a href="/portfolio/tags/node">node</a>
+                          </li>
+                  </ul>
+          
+                </div>
+                
+                  <p class="project-short-description">
+                      An experiment in composing email, write your message on a whiteboard and end it
           with &quot;send&quot; to send the message.
-              </p>
-              <p class="read-more">
-                <a href="/portfolio/whiteboard-email/">Read More →</a>
-              </p>
+                  </p>
+                  <p class="read-more">
+                    <a href="/portfolio/whiteboard-email/">Read More →</a>
+                  </p>
+              </div>
+            </div>
           
           </div>  </li>
 </ul>

@@ -3,52 +3,54 @@
   <head>
     <title>Patrick Weaver</title>
     
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-    <meta name="description" content="Patrick Weaver’s Website">
-    <link id="favicon" rel="icon" href="/images/favicon.png" type="image/png">
+    <meta name="description" content="Patrick Weaver’s Website" />
+    <link id="favicon" rel="icon" href="/images/favicon.png" type="image/png" />
     
     <!-- Social -->
-      <meta property="og:title" content="How to Download an Image from a Google Doc"/>
+      <meta property="og:title" content="How to Download an Image from a Google Doc" />
       <meta property="og:description" content="" />
       <meta property="og:image" content="/images/blog/gdoc-image-dl-cover.png" />
-    
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@patrickweave_r" />
     <meta name="twitter:creator" content="@patrickweave_r" />
-      <meta name="twitter:title" content="How to Download an Image from a Google Doc"/>
+      <meta name="twitter:title" content="How to Download an Image from a Google Doc" />
       <meta name="twitter:description" content="" />
       <meta name="twitter:image" content="/images/blog/gdoc-image-dl-cover.png" />
       <meta name="twitter:image:alt" content="A screenshot of the bookmarklet buttons" />
     
-    <link href="https://fonts.googleapis.com/css?family=Yantramanav" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
     <header>
       <h1 id="site-title">
-        <a href="/about">Patrick Weaver</a>
+        <a href="/">Patrick Weaver</a>
       </h1>
       
-      <ul id="menu">
-        <li><a href="/about">About</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/portfolio">Portfolio</a></li>
-        <li><a href="/now">Now</a></li>
-        <li><a href="/links">Links</a></li>
+      <ul class="menu">
+        <li class="menu-about"><a href="/">About</a></li>
+        <li class="menu-blog"><a href="/blog">Blog</a></li>
+        <li class="menu-portfolio"><a href="/portfolio">Portfolio</a></li>
+        <li class="menu-now"><a href="/now">Now</a></li>
+        <li class="menu-links"><a href="/links">Links</a></li>
       </ul>
       
     </header>
     <main>
-      <h2>
-        Blog
+      <h2 class="page-header">
+        <a href="/blog">Blog</a>
       </h2>
       
       <div class="post">
+        
+        <div class="post-date">
+          July 16, 2020
+        </div>
         
         <h3 class="post-title">
           <a href="">
@@ -56,16 +58,11 @@
           </a>
         </h3>
         
-        <div class="blog-cover">
-        
-          <p class="post-preview-date">
-            July 16, 2020
-          </p>
-        
+        <div class="index-item-preview">
               <div class="post-header-image">
                 <a href="">
                   <img
-                    class="blog-cover-image"
+                    class="index-item-preview-image"
                     src="/images/blog/gdoc-image-dl-cover.png"
                     alt="A screenshot of the bookmarklet buttons"
                     aria-label="Link to post for How to Download an Image from a Google Doc"
@@ -93,10 +90,10 @@
 <blockquote class="twitter-tweet"><a href="https://twitter.com/user/status/1190358282877186050"></a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>I also noticed the URLs in the source, and decided to make an easy way to access it. The one trick ended up being, because clicking on the image made it disappear, finding a way to tell the code which image you wanted!</p>
 <p>I looked through some JavaScript documentation and realized I could use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseover_event">mouseover</a> event to detect when someone was hovering over the image. Unfortunately this means that it won’t work on a touchscreen device, but I’m guessing that most people who want to download an image are on a traditional computer.</p>
-<h2>How does it work?</h2>
+<h4>How does it work?</h4>
 <p>I needed a way to run my code on any Google Doc, there’s probably a way to make Google Doc or Chrome extension to do this, but since I was asking people to run code in their potentially private docs I wanted to make the code as short and open source as possible.</p>
 <p>I decided that the best way to do this was a <a href="https://support.mozilla.org/en-US/kb/bookmarklets-perform-common-web-page-tasks">bookmarklet</a>. If you’re unfamiliar with bookmarklets, they’re bookmarks (usually placed in your bookmarks toolbar (Cmd-Shift-B to toggle this on and off on a Mac), that instead of navigating to a webpage, run JavaScript when you click them.</p>
-<h2>Great! Tell me how to do it!</h2>
+<h4>Great! Tell me how to do it!</h4>
 <p>To get started you’ll have to &quot;install&quot; the bookmarklet. This is easy to do, and just means dragging a button into your bookmarks toolbar. <a href="https://gdoc-image-dl.glitch.me/">I’ve hosted it on Glitch here</a>. You can even drag it straight from one of the buttons on the embed below:</p>
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;"><iframe allow="geolocation; microphone; camera; midi; encrypted-media" src="https://glitch.com/embed/#!/embed/gdoc-image-dl?path=README.md&previewSize=100" alt="record-player on Glitch" style="height: 100%; width: 100%; border: 0;"></iframe></div>
 <p>The instructions are simple!</p>
@@ -108,7 +105,7 @@
 <p>Then, when you’re on a Google Doc, click the bookmarklet, then hover over an image embedded in the doc. Depending on your browser settings it will either download immediately, or open the actual image in a new tab.</p>
 </li>
 </ol>
-<h2>Great my problems are solved forever!</h2>
+<h4>Great my problems are solved forever!</h4>
 <p>No guarantees that this will work long term, a quick look at the source code for any Google Doc will show that they’re very complex! I wouldn’t be surprised if Google changes the way these URLs work in the future, but this tool has worked for 6 months so maybe not!</p>
 <p>Long term I hope that they build in a way for people to download their images, but for now I hope this is helpful!</p>
 

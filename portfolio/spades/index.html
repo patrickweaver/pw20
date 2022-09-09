@@ -3,18 +3,17 @@
   <head>
     <title>Patrick Weaver</title>
     
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-    <meta name="description" content="Patrick Weaver’s Website">
-    <link id="favicon" rel="icon" href="/images/favicon.png" type="image/png">
+    <meta name="description" content="Patrick Weaver’s Website" />
+    <link id="favicon" rel="icon" href="/images/favicon.png" type="image/png" />
     
     <!-- Social -->
-      <meta property="og:title" content="Patrick Weaver"/>
+      <meta property="og:title" content="Patrick Weaver" />
       <meta property="og:description" content="Patrick Weaver’s Website" />
       <meta property="og:image" content="https://pwapi-dev.s3.amazonaws.com/uploads/d1c585c3-1659-41cf-a1cb-3b12cde8ae09" />
-    
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -25,27 +24,26 @@
       <meta name="twitter:image" content="https://pwapi-dev.s3.amazonaws.com/uploads/d1c585c3-1659-41cf-a1cb-3b12cde8ae09" />
       <meta name="twitter:image:alt" content="A screenshot of a prototype interface for the game" />
     
-    <link href="https://fonts.googleapis.com/css?family=Yantramanav" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
     <header>
       <h1 id="site-title">
-        <a href="/about">Patrick Weaver</a>
+        <a href="/">Patrick Weaver</a>
       </h1>
       
-      <ul id="menu">
-        <li><a href="/about">About</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/portfolio">Portfolio</a></li>
-        <li><a href="/now">Now</a></li>
-        <li><a href="/links">Links</a></li>
+      <ul class="menu">
+        <li class="menu-about"><a href="/">About</a></li>
+        <li class="menu-blog"><a href="/blog">Blog</a></li>
+        <li class="menu-portfolio"><a href="/portfolio">Portfolio</a></li>
+        <li class="menu-now"><a href="/now">Now</a></li>
+        <li class="menu-links"><a href="/links">Links</a></li>
       </ul>
       
     </header>
     <main>
-      <h2>
-        Portfolio
+      <h2 class="page-header">
+        <a href="/portfolio">Portfolio</a>
       </h2>
       
       <div class="project">
@@ -57,39 +55,53 @@
             </a>
           </h3>
           
-          <div class="cover">
-            <a href="">
-              <img src="https://pwapi-dev.s3.amazonaws.com/uploads/d1c585c3-1659-41cf-a1cb-3b12cde8ae09" alt="A screenshot of a prototype interface for the game"/>
-            </a>
-          </div>
-          
-            <div class="tag-container status-tag">
-              <div class="tag" style="background-color: #d0ccff;">
-                <a href="/portfolio/tags/In Progress">In Progress</a>
-              </div>
+          <div class="index-item-preview">
+            <div class="cover">
+              <a href="">
+                <img src="https://pwapi-dev.s3.amazonaws.com/uploads/d1c585c3-1659-41cf-a1cb-3b12cde8ae09" alt="A screenshot of a prototype interface for the game"/>
+              </a>
             </div>
+            
+            <div>
+              <div class="project-details">
+                  <div class="tag-container status-tag">
+                    <div class="tag" style="background-color: #BD61FF;">
+                      <a href="/portfolio/tags/In Progress">In Progress</a>
+                    </div>
+                  </div>
         
-          <p class="project-date-range">
-            2017
-          </p>
-          
-          <ul class="tags project-tag-list">
-                <li class="tag-container">
-                  <a href="/portfolio/tags/flask">flask</a></li>
-                <li class="tag-container">
-                  <a href="/portfolio/tags/games">games</a></li>
-                <li class="tag-container">
-                  <a href="/portfolio/tags/javascript">javascript</a></li>
-                <li class="tag-container">
-                  <a href="/portfolio/tags/machine learning">machine learning</a></li>
-                <li class="tag-container">
-                  <a href="/portfolio/tags/node">node</a></li>
-                <li class="tag-container">
-                  <a href="/portfolio/tags/python">python</a></li>
-                <li class="tag-container">
-                  <a href="/portfolio/tags/react">react</a></li>
-          </ul>
-          
+                <p class="project-date-range">
+                  2017
+                </p>
+                
+                <ul class="tags project-tag-list tag-container">
+                        <li>
+                          <a href="/portfolio/tags/flask">flask</a>
+                        </li>
+                        <li>
+                          <a href="/portfolio/tags/games">games</a>
+                        </li>
+                        <li>
+                          <a href="/portfolio/tags/javascript">javascript</a>
+                        </li>
+                        <li>
+                          <a href="/portfolio/tags/machine learning">machine learning</a>
+                        </li>
+                        <li>
+                          <a href="/portfolio/tags/node">node</a>
+                        </li>
+                        <li>
+                          <a href="/portfolio/tags/python">python</a>
+                        </li>
+                        <li>
+                          <a href="/portfolio/tags/react">react</a>
+                        </li>
+                </ul>
+        
+              </div>
+              
+            </div>
+          </div>
         
         </div>        
         <ul class="links">

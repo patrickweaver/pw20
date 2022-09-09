@@ -3,52 +3,54 @@
   <head>
     <title>Patrick Weaver</title>
     
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-    <meta name="description" content="Patrick Weaver’s Website">
-    <link id="favicon" rel="icon" href="/images/favicon.png" type="image/png">
+    <meta name="description" content="Patrick Weaver’s Website" />
+    <link id="favicon" rel="icon" href="/images/favicon.png" type="image/png" />
     
     <!-- Social -->
-      <meta property="og:title" content="I Could Never Remember How to Make a Simple S3 Upload Feature So I Wrote It Down"/>
+      <meta property="og:title" content="I Could Never Remember How to Make a Simple S3 Upload Feature So I Wrote It Down" />
       <meta property="og:description" content="" />
       <meta property="og:image" content="https://pwapi.s3.amazonaws.com/uploads/Screen+Shot+2020-04-21+at+8.43.42+AM.png" />
-    
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@patrickweave_r" />
     <meta name="twitter:creator" content="@patrickweave_r" />
-      <meta name="twitter:title" content="I Could Never Remember How to Make a Simple S3 Upload Feature So I Wrote It Down"/>
+      <meta name="twitter:title" content="I Could Never Remember How to Make a Simple S3 Upload Feature So I Wrote It Down" />
       <meta name="twitter:description" content="" />
       <meta name="twitter:image" content="https://pwapi.s3.amazonaws.com/uploads/Screen+Shot+2020-04-21+at+8.43.42+AM.png" />
       <meta name="twitter:image:alt" content="A screenshot of the app" />
     
-    <link href="https://fonts.googleapis.com/css?family=Yantramanav" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
     <header>
       <h1 id="site-title">
-        <a href="/about">Patrick Weaver</a>
+        <a href="/">Patrick Weaver</a>
       </h1>
       
-      <ul id="menu">
-        <li><a href="/about">About</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/portfolio">Portfolio</a></li>
-        <li><a href="/now">Now</a></li>
-        <li><a href="/links">Links</a></li>
+      <ul class="menu">
+        <li class="menu-about"><a href="/">About</a></li>
+        <li class="menu-blog"><a href="/blog">Blog</a></li>
+        <li class="menu-portfolio"><a href="/portfolio">Portfolio</a></li>
+        <li class="menu-now"><a href="/now">Now</a></li>
+        <li class="menu-links"><a href="/links">Links</a></li>
       </ul>
       
     </header>
     <main>
-      <h2>
-        Blog
+      <h2 class="page-header">
+        <a href="/blog">Blog</a>
       </h2>
       
       <div class="post">
+        
+        <div class="post-date">
+          April 21, 2020
+        </div>
         
         <h3 class="post-title">
           <a href="">
@@ -56,16 +58,11 @@
           </a>
         </h3>
         
-        <div class="blog-cover">
-        
-          <p class="post-preview-date">
-            April 21, 2020
-          </p>
-        
+        <div class="index-item-preview">
               <div class="post-header-image">
                 <a href="">
                   <img
-                    class="blog-cover-image"
+                    class="index-item-preview-image"
                     src="https://pwapi.s3.amazonaws.com/uploads/Screen+Shot+2020-04-21+at+8.43.42+AM.png"
                     alt="A screenshot of the app"
                     aria-label="Link to post for I Could Never Remember How to Make a Simple S3 Upload Feature So I Wrote It Down"
@@ -264,7 +261,7 @@ AWS.config.update({
 var bucketName = process.env.S3BUCKET;
 </code></pre>
 <p>There are also 2 functions: <code>upload()</code>, which takes one <code>uploadObject()</code> parameter, uploads a file to S3, and returns confirmation and the S3 object’s key, and <code>getSignedUrl</code>, which takes an S3 key, and returns the file (more on this later).</p>
-<p><code>upload()</code> is what we passed our <code>file</code> object from <code>server.js</code> to. This function is essentially a wrapper around the <code>aws-sdk</code>'s <code>S3.putObject()</code> method. We collect the necessary parameters in an object, then pass that object to the method which we’ve defined as <code>s3.putObject()</code>:</p>
+<p><code>upload()</code> is what we passed our <code>file</code> object from <code>server.js</code> to. This function is essentially a wrapper around the <code>aws-sdk</code>’s <code>S3.putObject()</code> method. We collect the necessary parameters in an object, then pass that object to the method which we’ve defined as <code>s3.putObject()</code>:</p>
 <h5>aws.js</h5>
 <pre><code class="language-javascript">// AWS S3 Upload params:
 var params = {
