@@ -11,50 +11,54 @@
     </a>
   </h3>
   
-  <div class="cover">
-    <a href="{{ this.url }}">
-      <img src="{{this.cover_image_url}}" alt="{{this.cover_image_alt}}"/>
-    </a>
-  </div>
-  
-  <div class="project-details">
-    {{#if this.status}}
-      <div class="tag-container status-tag">
-        <div class="tag" style="background-color: {{statusColor this.status}};">
-          <a href="/portfolio/tags/{{this.status}}">{{this.status}}</a>
-        </div>
-      </div>
-    {{/if}}
-
-    <p class="project-date-range">
-      {{projectDate this.start_date this.end_date}}
-    </p>
+  <div class="index-item-preview">
+    <div class="cover">
+      <a href="{{ this.url }}">
+        <img src="{{this.cover_image_url}}" alt="{{this.cover_image_alt}}"/>
+      </a>
+    </div>
     
-    <ul class="tags project-tag-list tag-container">
-      {{#each this.tags}}
-        {{#unless (eq this 'projects')}}
-          {{#unless (isSameString this ../this.status)}}
-            <li>
-              <a href="/portfolio/tags/{{this}}">{{this}}</a>
-            </li>
-          {{/unless}}
-        {{/unless}}
-      {{/each}}
-    </ul>
+    <div>
+      <div class="project-details">
+        {{#if this.status}}
+          <div class="tag-container status-tag">
+            <div class="tag" style="background-color: {{statusColor this.status}};">
+              <a href="/portfolio/tags/{{this.status}}">{{this.status}}</a>
+            </div>
+          </div>
+        {{/if}}
 
-  </div>
-  
-  {{#if this.index}}
-    <p class="project-short-description">
-      {{#if this.short_description}}
-        {{this.short_description}}
-      {{else}}
-        {{previewText this.templateContent}}
+        <p class="project-date-range">
+          {{projectDate this.start_date this.end_date}}
+        </p>
+        
+        <ul class="tags project-tag-list tag-container">
+          {{#each this.tags}}
+            {{#unless (eq this 'projects')}}
+              {{#unless (isSameString this ../this.status)}}
+                <li>
+                  <a href="/portfolio/tags/{{this}}">{{this}}</a>
+                </li>
+              {{/unless}}
+            {{/unless}}
+          {{/each}}
+        </ul>
+
+      </div>
+      
+      {{#if this.index}}
+        <p class="project-short-description">
+          {{#if this.short_description}}
+            {{this.short_description}}
+          {{else}}
+            {{previewText this.templateContent}}
+          {{/if}}
+        </p>
+        <p class="read-more">
+          <a href="{{ this.url }}">Read More →</a>
+        </p>
       {{/if}}
-    </p>
-    <p class="read-more">
-      <a href="{{ this.url }}">Read More →</a>
-    </p>
-  {{/if}}
+    </div>
+  </div>
 
 </div>
