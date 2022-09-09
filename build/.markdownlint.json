@@ -1,0 +1,19 @@
+{
+  "default": true,
+  "no-inline-html": {
+    "allowed_elements": [
+      "a",
+      "code",
+      "div",
+      "figcaption",
+      "figure",
+      "iframe",
+      "img",
+      "pre",
+      "span"
+    ]
+  },
+  "line-length": false,
+  "no-trailing-punctuation": false,
+  "first-line-h1": false
+}

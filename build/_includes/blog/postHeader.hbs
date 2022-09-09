@@ -1,34 +1,53 @@
+<div class="post-date">
+  {{readableDate this.date}}
+</div>
+
 <h3 class="post-title">
-  <a href="{{ this.url }}">
-    {{#if this.title }}
-      {{ this.title }}
-    {{else }}
+  <a href="{{this.url}}">
+    {{#if this.title}}
+      {{this.title}}
+    {{else}}
       <code>
-        {{ this.url }}
+        {{this.url}}
       </code>
     {{/if}}
   </a>
 </h3>
 
-<div class="blog-cover">
-  
-  <p class="post-preview-date">
-    {{ readableDate this.date }}
-  </p>
-
-  {{#if (or this.index (not this.do_not_show_cover_at_top)) }}
-    {{#if this.cover_image_url }}
+<div class="index-item-preview">
+  {{#if (or this.index (not this.do_not_show_cover_at_top))}}
+    {{#if this.cover_image_url}}
       <div class="post-header-image">
-        <a href="{{ this.url }}">
-          <img class="blog-cover-image" src="{{ this.cover_image_url }}" alt="{{ this.cover_image_alt }}"  aria-label="Link to post for {{ this.title }}"/>
+        <a href="{{this.url}}">
+          <img
+            class="index-item-preview-image"
+            src="{{this.cover_image_url}}"
+            alt="{{this.cover_image_alt}}"
+            aria-label="Link to post for {{this.title}}"
+          />
         </a>
       </div>
-    {{/if }}
-  {{/if }}
+    {{/if}}
+  {{/if}}
 
   {{#if this.index}}
     <p class="blog-post-preview-text">
-      {{ previewText this.templateContent }} <a href="{{ this.url }}" aria-label="Read more about {{ this.title }}"> {{ readMore this.templateContent }}&nbsp;→</a>
+      {{previewText this.templateContent}}
+      <a href="{{this.url}}" aria-label="Read more about {{this.title}}">
+        {{readMore this.templateContent}}&nbsp;→</a>
     </p>
+  {{/if}}
+
+  {{#if (not this.index)}}
+    {{#if this.editors_note}}
+      <h4 class="editors-note-header">
+        {{#if this.editors_note_header}}
+          {{this.editors_note_header}}
+        {{else}}
+          Note
+        {{/if}}
+      </h4>
+      <p class="editors-note"><em>{{this.editors_note}}</em></p>
+    {{/if}}
   {{/if}}
 </div>

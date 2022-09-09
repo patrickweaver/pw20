@@ -1,35 +1,37 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 // Helpers:
-const generalHelpers = require('./helpers/general');
+const generalHelpers = require("./helpers/general");
 const dateHelpers = require("./helpers/dates");
 const portfolioHelpers = require("./helpers/portfolio");
 const blogHelpers = require("./helpers/blog");
 const embedHelpers = require("./helpers/embed");
 
-module.exports = function(eleventyConfig) {
-  
+module.exports = function (eleventyConfig) {
   // Rss
   eleventyConfig.addPlugin(pluginRss);
-  
-  // Merge data in .json files in diretories with data in each file
+
+  // Merge data in .json files in directories with data in each file
   eleventyConfig.setDataDeepMerge(true);
-  
+
   // Collections
-  
+
   // List of Tags
-  eleventyConfig.addCollection("portfolioTagList", require("./_11ty/getPortfolioTagList"));
-  
+  eleventyConfig.addCollection(
+    "portfolioTagList",
+    require("./_11ty/getPortfolioTagList")
+  );
+
   // Create postsReversed tag with posts tag in reverse order
-  eleventyConfig.addCollection("postsReversed", function(collection) {
+  eleventyConfig.addCollection("postsReversed", function (collection) {
     return collection.getFilteredByTag("posts").reverse();
   });
 
   eleventyConfig.setLiquidOptions({
     dynamicPartials: true,
-    strict_filters: true
+    strict_filters: true,
   });
-  
+
   // Shortcodes/Helpers:
   eleventyConfig.addShortcode("readableDate", dateHelpers.readableDate);
   eleventyConfig.addShortcode("projectDate", dateHelpers.projectDate);
@@ -48,31 +50,31 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addShortcode("twitter", embedHelpers.twitter);
   eleventyConfig.addShortcode("glitch", embedHelpers.glitch);
-  
-  
-  // In progress, create custom start_date, end_date filter
-  eleventyConfig.addCollection("portfolioSorted", portfolioHelpers.sort.bind(this, false));
 
-  
-  
+  // In progress, create custom start_date, end_date filter
+  eleventyConfig.addCollection(
+    "portfolioSorted",
+    portfolioHelpers.sort.bind(this, false)
+  );
+
   return {
     dir: {
       input: "build",
-      output: "dist"
+      output: "dist",
     },
     templateFormats: [
-      'md',
-      'css',
-      'js',
-      'hbs',
-      'njk',
-      'gif',
-      'jpg',
-      'jpeg',
-      'png',
-      'mp3',
-      'mp4',
-      'pdf'
-    ]
-  }
+      "md",
+      "css",
+      "js",
+      "hbs",
+      "njk",
+      "gif",
+      "jpg",
+      "jpeg",
+      "png",
+      "mp3",
+      "mp4",
+      "pdf",
+    ],
+  };
 };
