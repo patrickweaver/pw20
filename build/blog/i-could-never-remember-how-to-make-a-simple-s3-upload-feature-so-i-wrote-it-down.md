@@ -224,7 +224,7 @@ var bucketName = process.env.S3BUCKET;
 
 There are also 2 functions: `upload()`, which takes one `uploadObject()` parameter, uploads a file to S3, and returns confirmation and the S3 object’s key, and `getSignedUrl`, which takes an S3 key, and returns the file (more on this later).
 
-`upload()` is what we passed our `file` object from `server.js` to. This function is essentially a wrapper around the `aws-sdk`'s `S3.putObject()` method. We collect the necessary parameters in an object, then pass that object to the method which we’ve defined as `s3.putObject()`:
+`upload()` is what we passed our `file` object from `server.js` to. This function is essentially a wrapper around the `aws-sdk`’s `S3.putObject()` method. We collect the necessary parameters in an object, then pass that object to the method which we’ve defined as `s3.putObject()`:
 
 ##### aws.js
 

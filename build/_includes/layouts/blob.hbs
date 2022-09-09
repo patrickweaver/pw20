@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {{> boilerplate/head }}
+    {{>boilerplate/head}}
   </head>
   <body>
     <header>
-      {{> boilerplate/siteHeader }}
+      {{>boilerplate/siteHeader}}
     </header>
-    <main>
-      <h2>
-        {{ pageHeader }}
+    <main id="{{pageId}}">
+      <h2 class="page-header">
+        <a href="{{page.url}}">{{pageHeader}}</a>
       </h2>
       
       <div class="blob">
-        {{{ content }}}
+        {{{content}}}
       </div>
     </main>
-    {{> boilerplate/analytics }}
+    {{>boilerplate/analytics}}
   </body>
 </html>

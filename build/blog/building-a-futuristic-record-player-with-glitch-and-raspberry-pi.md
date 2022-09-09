@@ -26,7 +26,7 @@ Earlier this year I wanted to explore the new [async/await](https://developer.mo
 
 I started exploring what other APIs I could connect and realized that most of them seemed to enforce a relatively strict internal type system. Even from the many connections Wikipedia could provide it was hard to think of a potential next link that would always match up with the mishmash Wikipedia returned. While it might be easy to match up the Google Maps API to a weather API, connecting more abstract concepts was much more difficult.
 
-## The ‘Record Player’ app
+#### The ‘Record Player’ app
 
 While thinking through this an idea jumped out at me. I could connect the Google Vision API to Spotify to find albums based on pictures of a record cover. The idea seemed so obvious that I figured someone else had already done it (with more thorough research later I found a few similar projects but none that were fully implemented).
 
@@ -68,7 +68,7 @@ The ‘final’ version of the project, “[Record Player](http://record-player.
 
 [Anil Dash](https://twitter.com/anildash/) unexpectedly shared, and quickly it it started showing up [in](https://pitchfork.com/news/new-app-is-basically-shazam-for-album-covers/) [a](https://www.pastemagazine.com/articles/2018/05/new-app-automatically-recognizes-album-covers.html) [lot](https://www.nme.com/news/music/app-album-cover-shazam-2306795) [of](https://www.engadget.com/2018/05/04/record-player-app-image-based-spotify-search/) [strange](https://www.altpress.com/news/app_matches_album_covers_spotify/) [corners](https://www.androidauthority.com/record-player-spotify-google-861977/) [of](https://www.rollingstone.it/musica/news-musica/ora-esiste-uno-shazam-per-le-copertine-degli-album/410773/) [the](https://lifehacker.com/stream-a-vinyl-album-by-snapping-a-pic-of-its-cover-art-1825800020) [internet](https://www.thecurrent.org/feature/2018/05/02/app-album-covers). I was flattered by the coverage, but a few people were pointing out, “why would you take a picture instead of just typing in the name of the album?” First of all, it’s fun, which should be reason enough. But beyond that, there’s really no reason to right now, there are too many barriers and restrictions in place in the tools we use every day like Spotify and Google, that making a mashup like this will usually require an engineer instead of just an imagination.
 
-## Getting Record Player working on a Raspberry Pi
+#### Getting Record Player working on a Raspberry Pi
 
 From the beginning I wanted to create a physical version of Record Player (inspired by the amazing things they seem to be doing at [Dynamicland](https://dynamicland.org/) without “traditional” input and output devices). It would be a machine that could detect when you put a record cover in front of it, and automatically start playing the first song. No screens, no searching, no curated playlist to distract from the physical thing in my hands.
 
@@ -76,9 +76,10 @@ For the second time I was pleasantly surprised that by finding the right tools, 
 
 I decided to see if a simple algorithm running on the Raspberry Pi could identify when something new was placed in front of the camera, which seemed to work well enough. Connecting this to a slightly modified version of the Node.js server that runs the original Record Player Glitch app created exactly the machine I had imagined. The video below shows my “Record Player” automatically starting playback when it sees a record cover. This prototype has screens, but they’re only used to start the app and troubleshoot.
 
-<iframe src="https://player.vimeo.com/video/288443309" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-A video of the Record Player machine running on a Raspberry Pi
+<figure>
+  <iframe src="https://player.vimeo.com/video/288443309" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <figcaption>A video of the Record Player machine running on a Raspberry Pi</figcaption>
+</figure>
 
 Anil’s suggestion for using “Record Player” when he shared the Glitch app, was to see what song came up when you take a selfie, or “Shazam for your face” as he put it. Of course this was hilarious, and this is the kind of play and dynamic interactions that can happen when we start to break down the strict parameters and physical barriers that currently constrain our interactions with technology.
 

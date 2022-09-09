@@ -1,3 +1,7 @@
+<div class="post-date">
+  {{readableDate this.date}}
+</div>
+
 <h3 class="post-title">
   <a href="{{this.url}}">
     {{#if this.title}}
@@ -10,18 +14,13 @@
   </a>
 </h3>
 
-<div class="blog-cover">
-
-  <p class="post-preview-date">
-    {{readableDate this.date}}
-  </p>
-
+<div class="index-item-preview">
   {{#if (or this.index (not this.do_not_show_cover_at_top))}}
     {{#if this.cover_image_url}}
       <div class="post-header-image">
         <a href="{{this.url}}">
           <img
-            class="blog-cover-image"
+            class="index-item-preview-image"
             src="{{this.cover_image_url}}"
             alt="{{this.cover_image_alt}}"
             aria-label="Link to post for {{this.title}}"

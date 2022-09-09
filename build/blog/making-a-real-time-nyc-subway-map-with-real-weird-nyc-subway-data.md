@@ -30,7 +30,7 @@ Inspired and frustrated by the “paper” maps on the tv screens, I first becam
 
 That MTA Bustime website was the other inspiration for what became my map idea. Though you could only view one route at a time (and the functionality is not available on phone-size devices), the Bustime website showed, in addition to countdowns for each stop, the physical location of each bus on a map. This leads us to the first weird thing about working with NYC Subway data, unlike real-time bus data, the subway data does not contain the latitude and longitude data for each train that would make it easy to show them on a map.
 
-### Real-Time Transit Data
+#### Real-Time Transit Data
 
 Transit data for most transit systems is available in formats called [GTFS](https://developers.google.com/transit/gtfs) (General Transit Feed Specification) and [GTFS Realtime](https://developers.google.com/transit/gtfs-realtime), which were developed by Google (makes you wonder what the “G” originally stood for), but are now widely used. A GTFS file is, “a collection of at least six, and up to 13 CSV files (with extension .txt) contained within a .zip file.” and “The GTFS Realtime data exchange format is based on Protocol Buffers” (which are [“Google’s language-neutral, platform-neutral, extensible mechanism for serializing structured data”](https://developers.google.com/protocol-buffers)).
 
@@ -45,7 +45,7 @@ I have exclusively worked with the NYC MTA’s GTFS Realtime feeds through the [
 
 I had never heard of Protocol Buffers before starting this project, so I was excited to learn more about them while reading through [Designing Data Intensive Applications](https://dataintensive.net) with fellow Recursers. In the book Martin Kleppmann notes that a, "curious detail of Protocol Buffers is that it does not have a list or array datatype, but instead has a repeated marker for fields (which is a third option alongside required and optional)." This could be the reason for the strange organization of the `tripUpdate` and `vehicle` properties.
 
-### Calculating Train Locations
+#### Calculating Train Locations
 
 The subway real-time API doesn’t have latitude and longitude data because it is designed to feed data to countdown clock style applications that show when the train will be at a specific station. One of the earliest features that I built into the real-time map was a way to translate these station-by-station countdown clocks into an approximation of the location of each train. My first attempt at this was to just show a list of stations and display an icon for a train between the names of the station it had been at previously and the station it was approaching.
 
@@ -116,7 +116,7 @@ G: {
 
 </figure>
 
-### Secret Stations
+#### Secret Stations
 
 One thing I discovered while logging updates from the MTA API was that it contained secret stations! The MTA provides a [list of all of the stations in the system](http://web.mta.info/developers/data/nyct/subway/Stations.csv) with data like latitude and longitude. Each station has an ID (see Stop1 and Stop2 id in the diagram above and called "GTFS Stop ID" in the list). The stop IDs are a letter and 2 numbers, with the letter often corresponding to the line it serves (or used to historically), and the numbers mostly occurring in sequence. but some trains would have planned "stops" at stations that weren’t in the list! My best guess is that these stations are something station-like in the MTA’s infrastructure, which usually appear near the end of a line.
 
@@ -131,7 +131,7 @@ One thing I discovered while logging updates from the MTA API was that it contai
 - "R65" is between the Whitehall St. and Court St. stops on the R, and could also be related to the same track stubs as "A39".
 - "B24" is between Bay 50th St and Coney Island on the D, and is probably the MTA Coney Island Yard.
 
-### Drawing the Static Map
+#### Drawing the Static Map
 
 I wasn’t quite satisfied with the angular paths that drawing lines directly between stations created, and I was fortunately able to find [Sunny Ng’s advice](https://github.com/blahblahblah-/theweekendest) on extracting shape arrays from the non real-time GTFS MTA data. Using these shape arrays I could draw route maps with smooth curves, and even animate trains along those curves. But one of the things that makes a subway map a subway map is seeing lines that run on the same tracks as parallel lines. I also wanted to double these lines and show Northbound and Southbound trains on separate tracks (something that the new MTA map fails to do).
 
@@ -149,7 +149,7 @@ After trying to approach the parallel lines problem geometrically I was pointed 
 
 </figure>
 
-### A Prototype
+#### A Prototype
 
 My map is online at [nyc-subway.glitch.me](https://nyc-subway.glitch.me/), bugs and all. I did most of the work on the map using only the G train API endpoint. This was a helpful limitation when I was first experimenting with what was possible using the data, but may have led to more bugs because of the slight differences in the data available for each set of lines.
 

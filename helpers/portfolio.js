@@ -42,13 +42,13 @@ module.exports = {
   statusColor: function (status) {
     switch (status) {
       case "Complete":
-        return "#FF6186";
+        return "#00FF80";
         break;
       case "In Progress":
-        return "#d0ccff";
+        return "#BD61FF";
         break;
       case "On Hold":
-        return "#EFAF8F";
+        return "#FFBF00";
 
       default:
         return "#AFAFBF";
