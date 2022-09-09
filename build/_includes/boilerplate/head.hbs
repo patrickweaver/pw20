@@ -9,10 +9,13 @@
 
 <!-- Social -->
 {{#if this.title}}
-  <meta property="og:title" content="{{this.title || Patrick Weaver}}" />
-  <meta property="og:description" content="{{this.description || Patrick Weaver’s Website}}" />
+  <meta property="og:title" content="{{this.title}}" />
 {{else}}
   <meta property="og:title" content="Patrick Weaver" />
+{{/if}}
+{{#if this.description}}
+  <meta property="og:description" content="{{this.description}}" />
+{{else}}
   <meta property="og:description" content="Patrick Weaver’s Website" />
 {{/if}}
 {{#if this.cover_image_url}}
@@ -29,20 +32,26 @@
 <meta name="twitter:site" content="@patrickweave_r" />
 <meta name="twitter:creator" content="@patrickweave_r" />
 {{#if this.title}}
-  <meta name="twitter:title" content="{{this.title || Patrick Weaver}}" />
-  <meta name="twitter:description" content="{{this.description || Patrick Weaver’s Website}}" />
+  <meta name="twitter:title" content="{{this.title}}" />
 {{else}}
   <meta name="twitter:title" content="Patrick Weaver" />
+{{/if}}
+{{#if this.description}}
+  <meta name="twitter:description" content="{{this.description}}" />
+{{else}}
   <meta name="twitter:description" content="Patrick Weaver’s Website" />
 {{/if}}
 {{#if this.cover_image_url}}
-  <meta name="twitter:image" content="{{this.cover_image_url || https://patrickweaver.net/images/favicon-full.png}}" />
-  <meta name="twitter:image:alt" content="{{this.cover_image_alt || An icon with 10 lines in 5 colors}}" />
+  <meta name="twitter:image" content="{{this.cover_image_url}}" />
 {{else}}
   <meta
     name="twitter:image"
     content="https://patrickweaver.net/images/favicon-full.png"
   />
+{{/if}}
+{{#if this.cover_image_alt}}
+  <meta name="twitter:image:alt" content="{{this.cover_image_alt />
+{{else}}
   <meta name="twitter:image:alt" content="An icon with 10 lines in 5 colors" />
 {{/if}}
 
