@@ -145,8 +145,26 @@ ul.menu > li > a {
   box-shadow: -3px -3px 6px 2px var(--acc-3);
 }
 
-.project-header .project-details {
-  margin-left: 0.5rem;
+.project-tag-list {
+  padding: 0;
+}
+
+.project-tag-list li {
+  display: inline-block;
+  border: 1px solid var(--text-2);
+  margin: 3px 3px 3px 0;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.project-tag-list li a {
+  color: var(--text-1);
+  text-decoration: none;
+}
+
+.project-tag-list li a:hover {
+  color: var(--text-3);
+  text-decoration: underline;
 }
 
 ul.project-images {
