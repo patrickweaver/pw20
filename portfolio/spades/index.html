@@ -13,7 +13,7 @@
     <!-- Social -->
       <meta property="og:title" content="Patrick Weaver" />
       <meta property="og:description" content="Patrick Weaver’s Website" />
-      <meta property="og:image" content="https://pwapi-dev.s3.amazonaws.com/uploads/d1c585c3-1659-41cf-a1cb-3b12cde8ae09" />
+      <meta property="og:image" content="/images/portfolio/spades/screenshot.png" />
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
@@ -21,7 +21,7 @@
     <meta name="twitter:creator" content="@patrickweave_r" />
       <meta name="twitter:title" content="Patrick Weaver" />
       <meta name="twitter:description" content="Patrick Weaver’s Website" />
-      <meta name="twitter:image" content="https://pwapi-dev.s3.amazonaws.com/uploads/d1c585c3-1659-41cf-a1cb-3b12cde8ae09" />
+      <meta name="twitter:image" content="/images/portfolio/spades/screenshot.png" />
       <meta name="twitter:image:alt" content="A screenshot of a prototype interface for the game" />
     
     <link rel="stylesheet" href="/css/style.css" />
@@ -55,18 +55,18 @@
             </a>
           </h3>
           
-          <div class="index-item-preview">
+          <div class="index-item-header">
             <div class="cover">
               <a href="">
-                <img src="https://pwapi-dev.s3.amazonaws.com/uploads/d1c585c3-1659-41cf-a1cb-3b12cde8ae09" alt="A screenshot of a prototype interface for the game"/>
+                <img src="/images/portfolio/spades/screenshot.png" alt="A screenshot of a prototype interface for the game"/>
               </a>
             </div>
             
             <div>
               <div class="project-details">
                   <div class="tag-container status-tag">
-                    <div class="tag" style="background-color: #BD61FF;">
-                      <a href="/portfolio/tags/In Progress">In Progress</a>
+                    <div class="tag" style="background-color: #9ea6ff;">
+                      <a href="/portfolio/tags/Paused">Paused</a>
                     </div>
                   </div>
         
@@ -100,26 +100,43 @@
         
               </div>
               
+                  <h3 id="project-links">Links</h3>
+                
+                  <dl class="links" aria-labelledby="project-links">
+                      <div>
+                        <dt>Project URL</dt>
+                        <dd>
+                          <a href="http://spades.glitch.me/" target="_blank">
+                            spades.glitch.me/
+                          </a>
+                        </dd>
+                      </div>
+                      <div>
+                      <dt>Source URL</dt>
+                      <dd>
+                        <a href="https://github.com/patrickweaver/spades" target="_blank">
+                          github.com/patrickweaver/spades
+                        </a>
+                      </dd>
+                      </div>
+                  </dl>
+        
             </div>
           </div>
         
-        </div>        
-        <ul class="links">
-            <li>Project URL: <a href="http://spades.glitch.me/" target="_blank">
-              spades.glitch.me/
-            </a></li>
-            <li>Source URL: <a href="https://github.com/patrickweaver/spades" target="_blank">
-              github.com/patrickweaver/spades
-            </a></li>
-        </ul>
+        </div>
+        <h3 id="project-description">Description</h3>
         
-        <p>The game can be played as single player with bot opponents and as real time multi-player (with optional bots).</p>
+        <div aria-labelledby="project-description">
+          <p>The game can be played as single player with bot opponents and as real time multi-player (with optional bots).</p>
 <p>Bot opponents are powered by Spades Bot, a Flask app that uses a neural network to generate bot bids. Bot plays are random for now.</p>
 
-        
-        <ul class="project-images">
-          <li><img src="https://pwapi-dev.s3.amazonaws.com/uploads/d1c585c3-1659-41cf-a1cb-3b12cde8ae09" /></li>
-        </ul>
+        </div>
+
+          <h3 id="project-images">Images</h3>
+          <ul class="project-images" aria-labelledby="project-images">
+            <li><img src="/images/portfolio/spades/screenshot.png" /></li>
+          </ul>
         
       </div>
     </main>
