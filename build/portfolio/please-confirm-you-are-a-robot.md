@@ -1,7 +1,7 @@
 ---
 layout: layouts/portfolioProject.hbs
 name: Please Confirm You Are A Robot
-cover_image_url: https://pwapi-dev.s3.amazonaws.com/uploads/b4fb5c6e-e3a5-44ae-ba62-f0e080df745a
+cover_image_url: /images/portfolio/confirm-robot/cover.png
 cover_image_alt: A screenshot of the app
 short_description: A website that turns the captcha test on its head and asks users to confirm they are robots.
 start_date: 2018-09-05
@@ -15,7 +15,7 @@ tags:
   - javascript
   - node
 images:
-  - https://pwapi-dev.s3.amazonaws.com/uploads/b4fb5c6e-e3a5-44ae-ba62-f0e080df745a
+  - /images/portfolio/confirm-robot/cover.png
 ---
 
 A website that turns the captcha test on its head and asks users to confirm they are robots.

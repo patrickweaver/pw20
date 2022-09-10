@@ -8,9 +8,9 @@ start_date: 2019-11-12
 end_date: 2019-12-04
 project_url: https://lostnyc-staging.glitch.me
 source_url: https://github.com/patrickweaver/lostnyc
-status: On Hold
+status: Paused
 tags:
-  - On Hold
+  - Paused
   - javascript
   - svelte
   - nyc

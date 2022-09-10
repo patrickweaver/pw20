@@ -15,27 +15,23 @@
       <div class="project">
         
         {{> portfolio/projectHeader }}
+
+        {{#if content}}
+        <h3 id="project-description">Description</h3>
         
-        <ul class="links">
-          {{#if project_url}}
-            <li>Project URL: <a href="{{project_url}}" target="_blank">
-              {{ shortUrl project_url }}
-            </a></li>
-          {{/if}}
-          {{#if source_url}}
-            <li>Source URL: <a href="{{source_url}}" target="_blank">
-              {{ shortUrl source_url }}
-            </a></li>
-          {{/if}}
-        </ul>
-        
-        {{{ content }}}
-        
-        <ul class="project-images">
-        {{#each images}}
-          <li><img src="{{this}}" /></li>
-        {{/each}}
-        </ul>
+        <div aria-labelledby="project-description">
+          {{{ content }}}
+        </div>
+        {{/if}}
+
+        {{#if images}}
+          <h3 id="project-images">Images</h3>
+          <ul class="project-images" aria-labelledby="project-images">
+          {{#each images}}
+            <li><img src="{{this}}" /></li>
+          {{/each}}
+          </ul>
+        {{/if}}
         
       </div>
     </main>

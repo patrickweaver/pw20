@@ -1,2 +1,3 @@
 - Why are tag pages in weird order?
 - Style tag name in tag page header
+- Portfolio images bigger on click
