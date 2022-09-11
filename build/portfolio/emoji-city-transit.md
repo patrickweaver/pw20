@@ -7,7 +7,7 @@ short_description: A subway dashboard that shows train statuses using emoji.
 start_date: 2019-07-16
 end_date: 2019-07-21
 project_url: https://emojicitytransit.glitch.me
-source_url: https://glitch.com/edit/#!/emojicitytransit
+source_url: https://github.com/patrickweaver/emoji-city-transit/
 status: Complete
 tags:
   - Complete
@@ -17,6 +17,8 @@ tags:
   - nyc
 images:
   - /images/portfolio/emoji-transit/cover.png
+  - /images/portfolio/emoji-transit/prototype.png
+  - /images/portfolio/emoji-transit/key.png
 ---
 
-A subway dashboard that shows train statuses using emoji.
+A subway dashboard that shows train statuses using emoji that represent how you will feel about the current service on each line.
