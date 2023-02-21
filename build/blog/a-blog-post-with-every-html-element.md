@@ -1,7 +1,7 @@
 ---
 layout: layouts/blogPost.hbs
 title: A Blog Post With Every HTML Element
-date: 2022-02-19
+date: 2023-02-20
 # cover_image_url: 
 # cover_image_alt: 
 tags:
