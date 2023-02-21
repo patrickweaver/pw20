@@ -38,11 +38,16 @@ Like the Document metadata tags, this was of course already present before this 
 
 ### Section
 
-- <code>[&lt;&gt;](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)</code>
+- <code>[&lt;address&gt;](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address)</code>
 - <code>[&lt;&gt;](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)</code>
 - <code>[&lt;&gt;](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)</code>
 
+When I first looked at the list I assumed that <code>&lt;address&gt;</code> would be designed exclusively for mailing addresses, but was surprised to see that it can be used for email addresses, and even links. I updated the email address on the About page of site site, but I'll add an <code>&lt;address&gt;</code> below also:
 
+<address>
+    <p>Email Patrick:</p>
+    <a href="mailto:hello.patrickw@gmail.com">hello.patrickw@gmail.com</a>
+</address>
 
 
 <ol>

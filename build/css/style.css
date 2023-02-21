@@ -133,6 +133,10 @@ ul.menu > li > a {
   border-left: 4px solid var(--acc-5);
 }
 
+address.no-decoration-address {
+  font-style: normal;
+}
+
 .project-header .cover {
   text-align: center;
 }

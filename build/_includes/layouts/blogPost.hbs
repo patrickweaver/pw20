@@ -3,7 +3,7 @@
   <head>
     {{> boilerplate/head }}
   </head>
-  <body>
+  <body onhashchange="() => { console.log('test'); scrollBy(0, -100); }">
     <header>
       {{> boilerplate/siteHeader }}
     </header>
