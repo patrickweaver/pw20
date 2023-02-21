@@ -21,4 +21,4 @@ You can reach me via email at [hello.patrickw@gmail.com](mailto:hello.patrickw@g
 
 Here is a drawing of some shapes:
 
-![A drawing of many colorful shapes](/images/about/shapes.jpg)
+![A drawing of many colorful shapes](/images/about/shapes-min.jpg)

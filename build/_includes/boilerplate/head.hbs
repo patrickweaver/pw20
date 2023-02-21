@@ -1,10 +1,6 @@
 <title>Patrick Weaver</title>
 
-{{#if (eq env.NODE_ENV "development")}}
-<base href="http://localhost:3000" />
-{{else }}
-<base href="https://www.patrickweaver.net" />
-{{/if}}
+<base href="{{page.url}}" />
 
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
