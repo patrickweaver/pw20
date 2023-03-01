@@ -55,9 +55,23 @@ a {
 }
 
 hr {
-  background-color: var(--acc-1);
-  height: 0.5rem;
   border: none;
+  border-top: 3px double var(--acc-3);
+  margin: 2rem 30px;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+}
+
+hr:after {
+  background: var(--bg-1);
+  content: '✨';
+  padding: 0 4px;
+  position: relative;
+  top: -0.75rem;
+  border-radius: 2rem;
+  height: 2rem;
+  display: inline-block;
 }
 
 #site-title {
@@ -216,7 +230,7 @@ table {
 
 th,
 td {
-  border: 1px solid var(--accent-1);
+  border: 1px solid var(--acc-1);
 }
 
 figure {
@@ -233,9 +247,13 @@ figcaption {
 
 blockquote {
   background-color: var(--bg-1);
-  padding: 5px 10px;
-  border: 1px solid var(--accent-1);
+  padding: 1rem 1.5rem;
+  border: 1px solid var(--acc-1);
   border-radius: 5px;
+}
+
+blockquote > h4 {
+  margin: 0 0 0.5rem;
 }
 
 blockquote > p {
