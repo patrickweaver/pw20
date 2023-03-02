@@ -159,7 +159,62 @@ I had not encountered `<menu>` before writing this post, and I was initially sur
 
 `<ol>` and `<ul>` are some of the first HTML elements I used, and more recently I try to use `<ol>` with CSS in places that are semantically lists, but might not be styled like a traditional list.
 
+I was surprised not to find more guidance on using `<p>` tags on [the MDN docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p), something I wonder often when adding non long form text to a website is, “is this really a paragraph?” But, it seems like as far as HTML is concerned, if it’s not a heading, then probably!
 
+Before reading the documentation I had really only considered using `<pre>` tags along with `<code>` tags for code blocks, but the example used on MDN is used to show how `<pre>` can display meaningful whitespace for things like:
+
+<figure>
+    <pre role="img" aria-label="An ASCII picture of a house with the label, 'in this house we write semantic HTML'">
+┏┓
+┃┃╱╲ in
+┃╱╱╲╲ this
+╱╱╭╮╲╲house
+▔▏┗┛▕▔ we
+╱▔▔▔▔▔▔▔▔▔▔╲
+write semantic HTML
+╱╱┏┳┓╭╮┏┳┓ ╲╲
+▔▏┗┻┛┃┃┗┻┛▕▔
+  </pre>
+
+<figure>
+
+</section>
+
+<section>
+
+### Inline text semantics
+
+- [`<a>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)
+- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
+- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
+- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
+- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
+- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
+- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
+- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
+- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
+- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
+- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
+- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
+- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
+- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
+- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
+- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
+- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
+- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
+- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
+- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
+- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
+- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
+- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
+- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
+- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
+- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
+- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
+- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
+
+
+As with other very common tags I was curious to get to the documentation for `<a>` to see if there was anything I was unaware of, or had been using incorrectly. I was surprised to discover that `<a href="#">link</a>` links to the top
 
 </section>
 
@@ -175,7 +230,7 @@ Description of section
 
 
 <ol>
-    <li id="footnote-1"><aside>Which I am just now discovering there is no native HTML implementaton for!</aside> <a href="#footnote-1-link">↑ Return to post</a></li>
+    <li id="footnote-1"><aside>Which I am just now discovering there is no native HTML implementation for!</aside> <a href="#footnote-1-link">↑ Return to post</a></li>
 </ol>
 
 <footer role="contentinfo">
