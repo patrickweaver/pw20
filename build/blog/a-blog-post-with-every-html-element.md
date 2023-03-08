@@ -9,12 +9,12 @@ tags:
 
 <section>
 
-After learning a little bit more about web accessibility this year I have been exploring some of the less common HTML elements, and making changes to this website like wrapping the text of the posts on this blog in `<article>` tags and adding a `<main>` tag in the website’s layout templates (this website is built using [11ty](https://www.11ty.dev/)).
+After learning a little bit more about web accessibility this year I have been exploring some of the less common <abbr title="Hyper Text Markup Language">HTML</abbr> elements, and making changes to this website like wrapping the text of the posts on this blog in `<article>` tags and adding a `<main>` tag in the website’s layout templates (this website is built using [11ty](https://www.11ty.dev/)).
 
 
 I had previously done some work to make sure that `<figure>` and `<figcaption>` elements were layed out nicely for images with associated captions, and I had been impressed with various [Recurser’s](https://www.recurse.com/) implementation of footnotes or sidenotes<sup id="footnote-1-link">[1](./#footnote-1)</sup>, and have been thinking it would be interesting to see what other interesting layouts were possible with just HTML.
 
-I could, element by element, continue to add support (mostly by making CSS updates for each element to fit in with the rest of my style choices) as I came across specific needs for them, but not one to shy away from an exhaustive exploration, I decided to write this post and attempt to use every element. A goal was to avoid delaying future posts while I update the site to support a new element it uses, but in reality it took more than a year to make all the updates for just this post! I am using the [MDN Web Docs list of HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) as a reference which has more than 100 tags divided into a few categories, which I will also use in this post. Many of the tags like `<html>` don’t make sense to include in the text of a blog post, but I’ll be updating the website’s layout as I go, so if you’re viewing this post on [patrickweaver.net](https://www.patrickweaver.net), then every one of the elements is used somewhere on this page.
+I could, element by element, continue to add support (mostly by making <abbr title="Cascading Style Sheets">CSS</abbr> updates for each element to fit in with the rest of my style choices) as I came across specific needs for them, but not one to shy away from an exhaustive exploration, I decided to write this post and attempt to use every element. A goal was to avoid delaying future posts while I update the site to support a new element it uses, but in reality it took more than a year to make all the updates for just this post! I am using the [MDN Web Docs list of HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) as a reference which has more than 100 tags divided into a few categories, which I will also use in this post. Many of the tags like `<html>` don’t make sense to include in the text of a blog post, but I’ll be updating the website’s layout as I go, so if you’re viewing this post on [patrickweaver.net](https://www.patrickweaver.net), then every one of the elements is used somewhere on this page.
 
 </section>
 
@@ -185,7 +185,7 @@ write semantic HTML
 ### Inline text semantics
 
 - [`<a>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)
-- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
+- [`<abbr>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr)
 - [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
 - [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
 - [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
@@ -214,7 +214,9 @@ write semantic HTML
 - [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
 
 
-As with other very common tags I was curious to get to the documentation for `<a>` to see if there was anything I was unaware of, or had been using incorrectly. I was surprised to discover that `<a href="#">link</a>` links to the top
+As with other very common tags I was curious to get to the documentation for `<a>` to see if there was anything I was unaware of, or had been using incorrectly. I was surprised to discover that `<a href="#">link</a>` links to the top of the page after years as just using it as a placeholder when I didn’t know the URL yet.
+
+`<abbr>` seems likely to be the least used tag, especially because the MDN documentation doesn’t make a great case for it <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr#default_styling">the purpose of this element is purely for the convenience of the author.</q>
 
 </section>
 
