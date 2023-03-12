@@ -122,7 +122,7 @@ I had previously used `<blockquote>` for embedding tweets into blog posts, but f
         <h4><code>cite</code></h4>
         <p>A URL that designates a source document or message for the information quoted. This attribute is intended to point to information explaining the context or the reference for the quote.</p
     </blockquote>
-    <figcaption><cite>MDN</cite> on <code>blockquote</code></figcaption>
+    <figcaption><cite>MDN</cite> on <code>&lt;blockquote&gt;</code></figcaption>
 </figure>
 
 `<dd>`, `<dl>`, and `<dt>` are elements that, after finding out about them when first looking into more obscure HTML elements, I was very surprised to have not known about sooner. Although, it’s unclear from the documentation whether lists like the links on the current version of my [portfolio page](https://web.archive.org/web/20220628123804/https://www.patrickweaver.net/portfolio/) (currently using `<ul>`). I am curious how `<ol>` and `<ul>` became part of almost every “Intro to HTML” class, but `<dl>` is relatively obscure. It's also strange that `<ol>` and `<ul>` have default margins, but `<dl>` doesn’t.
@@ -186,17 +186,17 @@ write semantic HTML
 
 - [`<a>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)
 - [`<abbr>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr)
-- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
-- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
-- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
-- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
-- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
-- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
-- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
-- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
-- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
-- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
-- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
+- [`<b>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/b)
+- [`<bdi>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bdi)
+- [`<bdo>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bdo)
+- [`<br>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br)
+- [`<cite>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite)
+- [`<code>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code)
+- [`<data>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/data)
+- [`<dfn>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dfn)
+- [`<em>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em)
+- [`<i>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/i)
+- [`<kbd>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd)
 - [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
 - [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
 - [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
@@ -217,6 +217,53 @@ write semantic HTML
 As with other very common tags I was curious to get to the documentation for `<a>` to see if there was anything I was unaware of, or had been using incorrectly. I was surprised to discover that `<a href="#">link</a>` links to the top of the page after years as just using it as a placeholder when I didn’t know the URL yet.
 
 `<abbr>` seems likely to be the least used tag, especially because the MDN documentation doesn’t make a great case for it <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr#default_styling">the purpose of this element is purely for the convenience of the author.</q>
+
+The distinction between `<b>` and `<strong>`, as the docs would have you believe, is not what I had thought it was (that `<strong>` was the HTML5 replacement for `<b>`), and I think is a more nuanced and overlapping than the technical nature of the documentation is really able to convey. The way I will probably explain it to other people in the future is that, for the most part, you should use `<b>` for <b>single words</b> (or compound words), <strong>and `<strong>` for whole sentences or phrases</strong>. This is more a rule of thumb and bypasses the actual distinction. The documentation reads:
+
+<figure>
+    <blockquote>
+        The <code>&lt;strong&gt;</code> element is for content that is of greater importance, while the <code>&lt;b&gt;</code> element is used to draw attention to text without indicating that it’s more important.
+    </blockquote>
+    <figcaption>
+        <cite><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong#b_vs._strong">MDN on “<code class="code-regular">&lt;b&gt;</code> vs. <code class="code-regular">&lt;strong&gt;</code>”</a></cite>
+    </figcaption>
+</figure>
+
+But I can’t think of many instances where I would want to draw attention to word that is not more important than other words, a recommendation that seems to want to live in a world where for the most part all words are of equal importance, which, um, yeah, no.
+
+I’ll probably think of `<b>` from now on as the HTML tag for the quotation marks you might see on signage that can cause intergenerational confusion: Fresh “Semantic” HTML.
+
+`<bdi>` is a tag for a concept that I hadn’t considered until now, text whose direction might (or might not) differ from the direction of the surrounding text. The examples on the documentation are all names, but could stand in for any user inputted text. In the future I will probably try to wrap any tags, like the ones controlled by the input below, that might contain arbitrary user inputted unicode characters in a `<bdi>` tag just to be safe.
+
+<form>
+    <label for="bdi-name-input">What is your name?</input>
+    <input type="text" id="bdi-name-input">
+</form>
+<p>Hello, <bdi id="bdi-name-display">&nbsp;&nbsp;&nbsp;&nbsp;</bdi>, thanks for reading!</p>
+<script>
+    const i = document.getElementById("bdi-name-input");
+    const o = document.getElementById("bdi-name-display");
+    i.addEventListener("input", function(event) {
+        o.innerHTML = event.target?.value || "&nbsp;&nbsp;&nbsp;&nbsp;";
+    })
+</script>
+
+`<bdo>` I will probably use less often because I don’t work with RTL languages often, but it is still good to know how to handle small amounts of RTL text, like this link to the page for HTML on the Farsi Wikipedia: <a href="https://fa.wikipedia.org/wiki/%D8%A7%DA%86%E2%80%8C%D8%AA%DB%8C%E2%80%8C%D8%A7%D9%85%E2%80%8C%D8%A7%D9%84" target="_blank"><bdo dir="rtl">اچ‌تی‌ام‌ال</bdo></a>.
+
+`<br>` is interesting to me, because for a time it seemed to be as misused as `<div>`, but, as CSS has gotten less essential that is probably less often the case, though I wonder if it is still taught early in HTML classes. It’s interesting that the example use case in the docs is poetry because it makes me wonder how the grey area between a paragraph and a standalone line was considered in creating the HTML spec. It also seems like a `<pre>` tag might be a better fit in some cases.
+
+`<cite>` and `<q>` are interesting because they try to add HTML semantic elements for meaning that is also conveyed by visible punctuation in most languages. It’s the kind of redundancy that underscores repetitiousness of working with computers.
+
+I’ve clearly used many `<code>` elements in this post so far, but reading the documentation made me wonder whether the recently released Markdown support in Google Docs uses `<code>` for text, but then I remembered that Google docs uses `<canvas>` to render the document now.
+
+Occasionally the MDN documentation examples are difficult to mentally translate to real-world use cases. `<data>` is one of these, where the ony examples show a `<data>` element with a `value` property with product IDs wrapped around product names, but in that case the IDs seem either user facing, in which case it would probably be better to display them to the user, or non user facing, in which case I’m not sure who the “data” is for. Interestingly, `<data>` doesn’t seem to appear in the [W3C HTML5 specification](https://www.w3.org/TR/2011/WD-html5-20110405/).
+
+`<dfn>` is another strange element because it seems like it is misnamed, as it goes around, not the definition of a term, but around that term within the definition. It does [only seem to have been part of the never officially adopted HTML 2.0 proposal](http://www.martinrinehart.com/frontend-engineering/engineers/html/html-tag-history.html), and it exemplifies the academic nature of the early web. The [HTML Tags: Past, Present, Proposed](http://www.martinrinehart.com/frontend-engineering/engineers/html/html-tag-history.html) page on martinrinehart.com defines <dfn title="Hyper Text Markup Language 2.0">HTML 2.0</dfn> as <q cite="http://www.martinrinehart.com/frontend-engineering/engineers/html/html-tag-history.html">There never was an HTML 2.0 standard, but these all shaped browser development in the late 20th century</q> with references to several RFC documents.
+
+`<em>` and `<i>` bring up similar usage questions as `<b>` and `<strong>`, but in my opinion with even more nuance, especially, as the documentation notes, with other more specific tags like `<cite>` that also by default italicize text in most browsers. The rule of thumb from above also for the most part fits here, `<em>` for single words, and `<i>` for sentences or phrases, though the examples in the documentation seem to mostly use `<i>` for drawing attention to potential confusion, as in, <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em#i_vs._em">The word <i>the</i> is an article</q>.
+
+`<kbd>` is another tag that makes me wonder about the conceptual boundaries of the usage of the tag. It is intended for specifying keys on a computer keyboard, for example: to type th e <code>&lt;</code> character used for (the non escaped) version of the tags in this post, I press <kbd>Shift</kbd> + <kbd>,</kbd> (the styles are applied through CSS). But I’m curious if it would also be appropriate to put a `<kbd>` around something like <i>Right click</i> (in this case I used `<i>` instead).
+
 
 </section>
 

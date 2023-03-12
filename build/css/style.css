@@ -209,6 +209,11 @@ code {
   padding: 2px 4px;
 }
 
+code.code-regular {
+  background-color: transparent;
+  padding: 0;
+}
+
 .fake-code {
   background-color: var(--bg-2);
   padding: 10px;
