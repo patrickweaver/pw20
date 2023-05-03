@@ -13,7 +13,7 @@ permalink: /{{pageName}}.html
 pageId: about
 ---
 
-Hello, I’m Patrick Weaver, this is my website. I’m an artist, programmer, writer, musician, and generally creative person based for the most part in New York City.
+Hello, I’m Patrick Weaver, this is my website. I’m an artist, programmer, writer, musician, and generally creative person based as of 2023 in San Francisco, but previously in NYC.
 
 I grew up in San Francisco, have a degree in Literature and Language Studies from the University of California, Santa Cruz, and have lived in NYC on and off since 2009.
 
