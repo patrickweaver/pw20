@@ -155,8 +155,8 @@ network={
 &lt;/div&gt;
 &lt;!-- markdownlint-enable no-inline-html --&gt;
 &lt;p&gt;Update your prompt by editing your &lt;code&gt;~/.bashrc&lt;/code&gt; file with &lt;code&gt;sudo nano ~/.bashrc&lt;/code&gt;. The bash prompt is set with the &lt;code&gt;PS1&lt;/code&gt; variable, which has two versions in the default Raspberry Pi &lt;code&gt;~/.bashrc&lt;/code&gt;, one for when &lt;code&gt;color_prompt&lt;/code&gt; is set to &lt;code&gt;yes&lt;/code&gt;, another for otherwise. The default in Raspberry Pi OS is that &lt;code&gt;color_prompt&lt;/code&gt; is set to yes, so feel free to overwrite only the first &lt;code&gt;PS1&lt;/code&gt; variable.&lt;/p&gt;
-&lt;p&gt;The value to set the prompt I showed above is (the sections with &lt;code&gt;[\033 ...&lt;/code&gt; and &lt;code&gt;\[$(tput...&lt;/code&gt; control turning on and off the colors):&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;PS1=&amp;quot;\n\[\033[48;5;7m\] \d \t \[$(tput sgr0)\]\n\[$(tput bold)\]\[\033[38;5;0m\]\[\033[48;5;14m\] \u@\H: \[$(tput sgr0)\] \[\033[38;5;0m\]\[\033[48;5;15m\] \w \[$(tput sgr0)\]\n 🥧 \\$ &amp;quot;
+&lt;p&gt;The value to set the prompt I showed above is (the sections with &lt;code&gt;[&#92;033 ...&lt;/code&gt; and &lt;code&gt;&#92;[$(tput...&lt;/code&gt; control turning on and off the colors):&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;PS1=&amp;quot;&#92;n&#92;[&#92;033[48;5;7m&#92;] &#92;d &#92;t &#92;[$(tput sgr0)&#92;]&#92;n&#92;[$(tput bold)&#92;]&#92;[&#92;033[38;5;0m&#92;]&#92;[&#92;033[48;5;14m&#92;] &#92;u@&#92;H: &#92;[$(tput sgr0)&#92;] &#92;[&#92;033[38;5;0m&#92;]&#92;[&#92;033[48;5;15m&#92;] &#92;w &#92;[$(tput sgr0)&#92;]&#92;n 🥧 &#92;&#92;$ &amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Run &lt;code&gt;source ~/.bashrc&lt;/code&gt; (or &lt;code&gt;. ~/.bashrc&lt;/code&gt;) to reload your terminal and see your new prompt.&lt;/p&gt;
 &lt;h4&gt;Step 7 Summary&lt;/h4&gt;
@@ -838,7 +838,7 @@ const responseData = await s3.putObject(params).promise();
 &lt;p&gt;This is all wrapped in a &lt;code&gt;try&lt;/code&gt; / &lt;code&gt;catch&lt;/code&gt; block so if there aren’t any errors we can pass the key back to &lt;code&gt;server.js&lt;/code&gt;:&lt;/p&gt;
 &lt;h5&gt;aws.js&lt;/h5&gt;
 &lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;// Likely this won’t happen because an error will be thrown,
-// but it’s good to check just in case. ¯\_(ツ)_/¯
+// but it’s good to check just in case. ¯&#92;_(ツ)_/¯
 if (!responseData) {
   throw &amp;quot;Upload failed&amp;quot;;
 }
