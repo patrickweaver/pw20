@@ -66,7 +66,7 @@ hr {
 
 hr:after {
   background: var(--bg-1);
-  content: '✨';
+  content: "✨";
   padding: 0 4px;
   position: relative;
   top: -0.75rem;
@@ -226,7 +226,8 @@ pre {
   border-radius: 5px;
 }
 
-code {
+code,
+samp {
   background-color: var(--bg-2);
   padding: 2px 4px;
 }
@@ -424,6 +425,44 @@ blockquote.editors-note {
 }
 
 ul.links {
+}
+
+kbd {
+  border: 1px solid var(--shadow);
+  border-radius: 4px;
+  padding: 2px 5px;
+  display: inline-block;
+  text-align: center;
+}
+
+.figure-with-outline {
+  border: 1px solid var(--shadow);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+u.u-sp {
+  text-decoration: red wavy underline;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/HTML/Element/s */
+s::before,
+s::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+s::before {
+  content: " [start of stricken text] ";
+}
+
+s::after {
+  content: " [end of stricken text] ";
 }
 
 @media (min-width: 800px) {

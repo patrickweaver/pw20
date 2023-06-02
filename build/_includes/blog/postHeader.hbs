@@ -1,6 +1,6 @@
 <header>
   <div class="post-date">
-    {{readableDate this.date}}
+    <time datetime="{{machineReadableDate this.date}}">{{readableDate this.date}}</time>
   </div>
 
   <h3 class="post-title">
@@ -60,6 +60,7 @@
         </a>
       </div>
     {{/if}}
+  {{/if}}
 
   {{#if this.index}}
     <p class="blog-post-preview-text">

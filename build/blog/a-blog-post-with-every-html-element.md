@@ -2,8 +2,8 @@
 layout: layouts/blogPost.hbs
 title: A Blog Post With Every HTML Element
 date: 2023-02-20
-# cover_image_url: 
-# cover_image_alt: 
+# cover_image_url:
+# cover_image_alt:
 tags:
 ---
 
@@ -11,8 +11,7 @@ tags:
 
 After learning a little bit more about web accessibility this year I have been exploring some of the less common <abbr title="Hyper Text Markup Language">HTML</abbr> elements, and making changes to this website like wrapping the text of the posts on this blog in `<article>` tags and adding a `<main>` tag in the website’s layout templates (this website is built using [11ty](https://www.11ty.dev/)).
 
-
-I had previously done some work to make sure that `<figure>` and `<figcaption>` elements were layed out nicely for images with associated captions, and I had been impressed with various [Recurser’s](https://www.recurse.com/) implementation of footnotes or sidenotes<sup id="footnote-1-link">[1](./#footnote-1)</sup>, and have been thinking it would be interesting to see what other interesting layouts were possible with just HTML.
+I had previously done some work to make sure that `<figure>` and `<figcaption>` elements were layed out nicely for images with associated captions, and I had been impressed with various [Recurser’s](https://www.recurse.com/) implementation of footnotes or sidenotes<sub id="footnote-1-link">[1](./#footnote-1)</sub>, and have been thinking it would be interesting to see what other interesting layouts were possible with just HTML.
 
 I could, element by element, continue to add support (mostly by making <abbr title="Cascading Style Sheets">CSS</abbr> updates for each element to fit in with the rest of my style choices) as I came across specific needs for them, but not one to shy away from an exhaustive exploration, I decided to write this post and attempt to use every element. A goal was to avoid delaying future posts while I update the site to support a new element it uses, but in reality it took more than a year to make all the updates for just this post! I am using the [MDN Web Docs list of HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) as a reference which has more than 100 tags divided into a few categories, which I will also use in this post. Many of the tags like `<html>` don’t make sense to include in the text of a blog post, but I’ll be updating the website’s layout as I go, so if you’re viewing this post on [patrickweaver.net](https://www.patrickweaver.net), then every one of the elements is used somewhere on this page.
 
@@ -197,22 +196,22 @@ write semantic HTML
 - [`<em>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em)
 - [`<i>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/i)
 - [`<kbd>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd)
-- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
-- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
-- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
-- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
-- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
-- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
-- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
-- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
-- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
-- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
-- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
-- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
-- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
-- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
-- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
-
+- [`<mark>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark)
+- [`<q>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q)
+- [`<rp>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rp)
+- [`<rt>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rt)
+- [`<ruby>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ruby)
+- [`<s>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/s)
+- [`<samp>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/samp)
+- [`<small>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/small)
+- [`<span>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span)
+- [`<strong>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong)
+- [`<sub>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sub)
+- [`<sup>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sup)
+- [`<time>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time)
+- [`<u>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/u)
+- [`<var>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/var)
+- [`<wbr>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr)
 
 As with other very common tags I was curious to get to the documentation for `<a>` to see if there was anything I was unaware of, or had been using incorrectly. I was surprised to discover that `<a href="#">link</a>` links to the top of the page after years as just using it as a placeholder when I didn’t know the URL yet.
 
@@ -250,11 +249,11 @@ I’ll probably think of `<b>` from now on as the HTML tag for the quotation mar
 
 `<bdo>` I will probably use less often because I don’t work with RTL languages often, but it is still good to know how to handle small amounts of RTL text, like this link to the page for HTML on the Farsi Wikipedia: <a href="https://fa.wikipedia.org/wiki/%D8%A7%DA%86%E2%80%8C%D8%AA%DB%8C%E2%80%8C%D8%A7%D9%85%E2%80%8C%D8%A7%D9%84" target="_blank"><bdo dir="rtl">اچ‌تی‌ام‌ال</bdo></a>.
 
-`<br>` is interesting to me, because for a time it seemed to be as misused as `<div>`, but, as CSS has gotten less essential that is probably less often the case, though I wonder if it is still taught early in HTML classes. It’s interesting that the example use case in the docs is poetry because it makes me wonder how the grey area between a paragraph and a standalone line was considered in creating the HTML spec. It also seems like a `<pre>` tag might be a better fit in some cases.
+`<br>` is interesting to me, because for a time (a long time ago) it seemed to be as misused as `<div>` has been recently, but, as CSS has gotten more robust that is probably less often the case; though I wonder if it is still taught early in HTML classes. It’s interesting that the example use case in the docs is poetry because it makes me wonder how the grey area between a paragraph and a standalone line was considered in creating the HTML spec. It also seems like a `<pre>` tag might be a better fit in some cases.
 
 `<cite>` and `<q>` are interesting because they try to add HTML semantic elements for meaning that is also conveyed by visible punctuation in most languages. It’s the kind of redundancy that underscores repetitiousness of working with computers.
 
-I’ve clearly used many `<code>` elements in this post so far, but reading the documentation made me wonder whether the recently released Markdown support in Google Docs uses `<code>` for text, but then I remembered that Google docs uses `<canvas>` to render the document now.
+I’ve clearly used many `<code>` elements in this post so far, but reading the documentation made me wonder whether the recently released Markdown support in Google Docs uses `<code>` for text, but on inspecting the HTML of a Doc, I remembered that `<canvas>` is used to render the document now.
 
 Occasionally the MDN documentation examples are difficult to mentally translate to real-world use cases. `<data>` is one of these, where the ony examples show a `<data>` element with a `value` property with product IDs wrapped around product names, but in that case the IDs seem either user facing, in which case it would probably be better to display them to the user, or non user facing, in which case I’m not sure who the “data” is for. Interestingly, `<data>` doesn’t seem to appear in the [W3C HTML5 specification](https://www.w3.org/TR/2011/WD-html5-20110405/).
 
@@ -262,8 +261,52 @@ Occasionally the MDN documentation examples are difficult to mentally translate 
 
 `<em>` and `<i>` bring up similar usage questions as `<b>` and `<strong>`, but in my opinion with even more nuance, especially, as the documentation notes, with other more specific tags like `<cite>` that also by default italicize text in most browsers. The rule of thumb from above also for the most part fits here, `<em>` for single words, and `<i>` for sentences or phrases, though the examples in the documentation seem to mostly use `<i>` for drawing attention to potential confusion, as in, <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em#i_vs._em">The word <i>the</i> is an article</q>.
 
-`<kbd>` is another tag that makes me wonder about the conceptual boundaries of the usage of the tag. It is intended for specifying keys on a computer keyboard, for example: to type th e <code>&lt;</code> character used for (the non escaped) version of the tags in this post, I press <kbd>Shift</kbd> + <kbd>,</kbd> (the styles are applied through CSS). But I’m curious if it would also be appropriate to put a `<kbd>` around something like <i>Right click</i> (in this case I used `<i>` instead).
+`<kbd>` is another tag that makes me wonder about the conceptual boundaries of the usage of the tag. It is intended for specifying keys on a computer keyboard, for example: to type the <code>&lt;</code> character used for (the non escaped) version of the tags in this post, I press <kbd>Shift</kbd> + <kbd>,</kbd> (the styles here on <code>&lt;kbd&gt;</code> are applied through CSS). But I’m curious if it would also be appropriate to put a `<kbd>` around something like <i>Right click</i> (in this case I used `<i>` instead).
 
+`<mark>` is interesting because it suggests a 2-way authoring web that was originally envisioned, but failed to come to fruition with usage notes like, <q>Think of this like using a <mark>highlighter pen</mark> in a book to mark passages that you find of interest.</q> The yellow here is the default style in all major browsers.
+
+`<rp>`, `<rt>`, and `<ruby>` all relate to rendering [“ruby” or “agate” fonts](<https://en.wikipedia.org/wiki/Agate_(typography)>), which are the smallest legible text used in print. They are used in HTML to, <q>provide pronunciation, translation, or transliteration information for East Asian typography.</q> Because I don’t read any East Asian languages, I’ll use the same example as the MDN docs do below. Interestingly, `<rp>` is used to hide parentheses characters, which are included in the source. It’s surprising to me that there is an element to hide these characters in a very rare instance, but we still rely on CSS to [hide content visually](https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html#hiding-content-visually) (but still show it to screen readers).
+
+<ruby>
+漢 <rp>(</rp><rt>kan</rt><rp>)</rp>
+字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+</ruby>
+
+`<s>` is the strikethrough element, which should be used to indicate text that is not accurate or relevant, but was previously. Along with `<menu>` it is one of two elements (or [according to MDN 3 with `<u>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/u#usage_notes)) that were [deprecated in HTML 4.01, and un-deprecated and redefined in HTML5](http://www.martinrinehart.com/frontend-engineering/engineers/html/html-tag-history.html). The redefinition changes the use of the tag from presentational, which should now be achieved with CSS, to relevant to the context of the text. However, some screen readers don’t announce the strikethrough, which seems potentially confusing. I’ve added the CSS recommended by the MDN docs to my website, so the strikethrough should be announced here.
+
+<ul>
+  <li><s>HTML 3.0: <code>&lt;s&gt;</code> is used for presentation</s></li>
+  <li>HTML 5: <code>&lt;s&gt;</code> is used for removed text</li>
+</ul>
+
+`<samp>` is another element I wasn’t aware of before reading the MDN docs. It is used for rendering the output of a computer program, which I had previously just used `<code>` for (I just updated my [Raspberry Pi blog post](/blog/how-to-raspberry-pi-server/) to use `<samp>`). Another example is below:
+
+<figure class="figure-with-outline">
+<figcaption>A “Hello, World” program in JavaScript:</figcaption>
+<code>
+console.log("Hello, World")
+</code>
+<br /><br />
+<samp>
+Hello, World
+</samp>
+</figure>
+
+`<small>` is used to render smaller text, which is something I would usually have done with CSS. The MDN docs don’t provide much clarity about which strategy to use: <q>Authors are encouraged to use their best judgement when determining whether to use <code>&lt;small&gt;</code> or CSS.</q>. <small>I will probably continue to use CSS for the most part since the effect seems to be presentational for the most part.</small>
+
+<p><code>&lt;span&gt;</code> is a very familiar element, but reading the documentation made me wonder for the first time why HTML and CSS allow contradictory element styles like a <div style="display: inline"><code>&lt;div style="display: inline" /&gt;</code></div><p>
+
+<p> or a <span style="display: block"><code>&lt;span style="display: block" /&gt;</code></span>. Though the <code>&lt;div&gt;</code> breaks the parent <code>&lt;p&gt;</code> tag, while the <code>&lt;span&gt;</code> does not.</p>
+
+`<sub>` and `<sup>` are more elements I probably have used the CSS implementations of previously (though it is appropriate for presentation only super or subscript.)
+
+`<time>` seems like a helpful element for creating semantic HTML, but even Google doesn’t seem to use it in [search results](https://www.google.com/search?q=%22Patrick+Weaver%22+%22HTML%22). I’ve updated the dates on my blog posts to use it.
+
+`<u>` has probably my favorite quote from the MDN docs, <q>Most of the time, you actually don't want to use <code>&lt;u&gt;</code>.</q> Their strongest recommendation seems to be indicating <u class="u-sp">spellling</u> errors.
+
+`<var>` is a way to indicate semantically that a string is a variable for either math or programming. For example, rendering the pythagorean theorem uses both `<var>` and `<sup>`: <var>a</var><sup>2</sup> + <var>b</var><sup>2</sup> = <var>c</var><sup>2</sup>.
+
+`<wbr>` was also a new element until now, but it solves a problem I have hit many times before, breaking long “words” at certain points, specifically URLs. If I put a `<wbr>` element at clear break points in this URL: [https://www.patrickweaver.net<wbr />/pages<wbr />/a<wbr />very<wbr />long<wbr />url<wbr />without<wbr />any<wbr />punctuation<wbr />but<wbr />still<wbr />made<wbr />up<wbr />of<wbr />words/](https://www.patrickweaver.net/pages/averylongurlwithoutanypunctuationbutstillmadeupofwords/) then it will break at clear points at different screen widths, which is is more readable compared to the same link without the `<wbr>` elements: [https://www.patrickweaver.net/pages/averylongurlwithoutanypunctuationbutstillmadeupofwords/](https://www.patrickweaver.net/pages/averylongurlwithoutanypunctuationbutstillmadeupofwords/), though including hyphen characters in the URL also creates clear breakpoints in modern browsers.
 
 </section>
 
@@ -277,11 +320,10 @@ Description of section
 
 </section>
 
-
 <ol>
     <li id="footnote-1"><aside>Which I am just now discovering there is no native HTML implementation for!</aside> <a href="#footnote-1-link">↑ Return to post</a></li>
 </ol>
 
 <footer role="contentinfo">
-    Written between February 2022 and March 2023.
+    Written between <time datetime="2022-02">February 2022</time> and <time datetime="2023-05">May 2023</time>.
 </footer>

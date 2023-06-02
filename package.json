@@ -16,7 +16,7 @@
     "moment": "~2.29.4"
   },
   "engines": {
-    "node": "18.14.1"
+    "node": "20.2.0"
   },
   "repository": {
     "url": "https://github.com/patrickweaver/pw20"

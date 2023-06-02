@@ -34,6 +34,10 @@ module.exports = function (eleventyConfig) {
 
   // Shortcodes/Helpers:
   eleventyConfig.addShortcode("readableDate", dateHelpers.readableDate);
+  eleventyConfig.addShortcode(
+    "machineReadableDate",
+    dateHelpers.machineReadableDate
+  );
   eleventyConfig.addShortcode("projectDate", dateHelpers.projectDate);
 
   eleventyConfig.addShortcode("previewText", generalHelpers.previewText);
