@@ -2,3 +2,4 @@
 - Style tag name in tag page header
 - Redo headers with h1 as article title
 - https://webaim.org/techniques/skipnav/
+- Portfolio images bigger on click

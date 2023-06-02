@@ -1,7 +1,7 @@
 ---
 layout: layouts/portfolioProject.hbs
 name: Remixable Space Invaders
-cover_image_url: https://pwapi-dev.s3.amazonaws.com/uploads/243fc473-6476-4231-b9d1-6cee39653e65
+cover_image_url: /images/portfolio/space-invaders/cover.png
 cover_image_alt: A screenshot of the control panel in the game
 short_description: A live editable version of the arcade game space invaders for learning game design concepts.
 start_date: 2018-08-01
@@ -15,7 +15,7 @@ tags:
   - games
   - javascript
 images:
-  - https://pwapi-dev.s3.amazonaws.com/uploads/243fc473-6476-4231-b9d1-6cee39653e65
+  - /images/portfolio/space-invaders/cover.png
 ---
 
 This game is part of [Mouse’s](https://mouse.org) Serious Games course. It teaches game design concepts by letting players edit parameters in real time to design their own version of Space Invaders.

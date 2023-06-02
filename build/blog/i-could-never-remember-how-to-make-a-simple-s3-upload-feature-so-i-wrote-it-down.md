@@ -2,7 +2,7 @@
 layout: layouts/blogPost.hbs
 title: I Could Never Remember How to Make a Simple S3 Upload Feature So I Wrote It Down
 date: 2020-04-21
-cover_image_url: https://pwapi.s3.amazonaws.com/uploads/Screen+Shot+2020-04-21+at+8.43.42+AM.png
+cover_image_url: /images/blog/aws/cover.png
 cover_image_alt: A screenshot of the app
 tags:
 ---

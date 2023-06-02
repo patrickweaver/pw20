@@ -8,9 +8,9 @@ start_date: 2020-01-11
 end_date: null
 project_url: null
 source_url: https://github.com/patrickweaver/nyc-subway
-status: In Progress
+status: Paused
 tags:
-  - In Progress
+  - Paused
   - javascript
   - svelte
   - nyc
