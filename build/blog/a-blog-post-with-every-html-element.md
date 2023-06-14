@@ -312,6 +312,43 @@ Hello, World
 
 <section>
 
+### Image and multimedia
+
+- [`<area>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area)
+- [`<audio>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio)
+- [`<img>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img)
+- [`<map>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map)
+- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
+- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
+
+`<area>` and `<map>` are elements that I hadn’t been familiar with previously, even though I had made a few image map type websites in the days before CSS 3. It seems like an indication of how seldom they are used these days that the tools for debugging the boundries of `<area>` elements are hard to use. One `<area>` border at a time will display while using tab focus, but styling the elements does not work (unless there is a `display` hack I couldn’t figure out). It’s also somewhat strange that `<area>` is essentially an `<a>` with a shape.
+
+Here’s a `<map>` (with `<area>`s on each tag linking to MDN) of a handwritten HTML document I made for June 3rd’s [HTML Day Freewrite](https://html.energy/events.html) in SF.
+
+<figure>
+<map name="park-html-map">
+    <area shape="rect" coords="38 20 150 55" alt="HTML tag" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html">
+    <area shape="rect" coords="32 62 143 98" alt="head tag" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head">
+    <area shape="rect" coords="32 107 170 140" alt="title tag" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title">
+    <area shape="rect" coords="28 195 195 230" alt="title closing tag" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title">
+    <area shape="rect" coords="25 240 178 275" alt="head closing tag" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head">
+    <area shape="rect" coords="22 287 130 325" alt="body tag" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body">
+    <area shape="rect" coords="201 285 297 320" alt="body closing tag" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body">
+    <area shape="rect" coords="30 334 160 374" alt="html tag" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html">
+</map>
+<img usemap="#park-html-map" src="/images/blog/html/park-html.jpg" alt="A processed photograph of handwritten HTML in a notebook" style="width: 300px;">
+</figure>
+
+`<audio>` is one of the classic HTML 5 tags so I’ve used it before, but thinking about it now it’s surprising I don’t see them more often in the 2020s. I would guess that there are more in use than I thought though, for example, the [Bandcamp](https://bandcamp.com) player uses an `<audio>` element even though the UI is a custom mix of `<a>` and `<div>`s inside a `<table>` oddly enough.
+
+`<img>` is of course one of the first elements I used.
+
+<img src="/images/blog/html/srcset-700.jpg" srcset="/images/blog/html/srcset-700.jpg 1400w, /images/blog/html/srcset-500.jpg 1000w /images/blog/html/srcset-300.jpg 600w" sizes="(max-width: 1200px) 600px, (max-width: 1800px) 1000px, 1400px" style="max-width: 700px; width: 100%;">
+
+Description of section
+
+</section>
+
 ### Section
 
 - [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
