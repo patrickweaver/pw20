@@ -341,9 +341,17 @@ Here’s a `<map>` (with `<area>`s on each tag linking to MDN) of a handwritten 
 
 `<audio>` is one of the classic HTML 5 tags so I’ve used it before, but thinking about it now it’s surprising I don’t see them more often in the 2020s. I would guess that there are more in use than I thought though, for example, the [Bandcamp](https://bandcamp.com) player uses an `<audio>` element even though the UI is a custom mix of `<a>` and `<div>`s inside a `<table>` oddly enough.
 
-`<img>` is of course one of the first elements I used.
+`<img>` is of course one of the first elements I used, but I was curious what properties could be used with it that I might not have heard of. `srcset`, used for specifying multiple sizes of the same image to load at different screen resolutions, was one of those. I’ve created a demo below, which goes against the spirit of `srcset`. The image below has 3 images provided to its `srcset` property, one with a yellow background and a monospace font that is 300 pixels wide and should render when the page is less than 520 pixels wide, one with a blue background and a serifed font that should render when the page is between 520 and 800 pixels wide, and one with a green background and a script font that should render when the page is greater than 800 pixels wide.
 
-<img src="/images/blog/html/srcset-700.jpg" srcset="/images/blog/html/srcset-700.jpg 1400w, /images/blog/html/srcset-500.jpg 1000w /images/blog/html/srcset-300.jpg 600w" sizes="(max-width: 1200px) 600px, (max-width: 1800px) 1000px, 1400px" style="max-width: 700px; width: 100%;">
+<img
+    src="/images/blog/html/srcset-700.png"
+    srcset="/images/blog/html/srcset-300.png 300w, /images/blog/html/srcset-500.png 500w, /images/blog/html/srcset-700.png 700w"
+    sizes="(max-width: 520px) 300px, (max-width: 800px) 500px, 700px"
+    style="max-width: 700px; width: 100%;"
+    alt="A demo of the srcset property of the HTML <img> tag that loads different images at different sizes"
+ />
+
+ I have tested it, and it does work, but it takes a lot of forethought to make sure that you will be able to load the correct image. Things like the browser’s cache, and scaled displays will change the behavior. If you want to see the effect you will probably need to load the page in a private window on a non scaled or “retina” display.
 
 Description of section
 
