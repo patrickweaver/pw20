@@ -366,20 +366,76 @@ It’s interesting that while both `<audio>` and `<video>` are less widely used 
         poster="/images/blog/html/audio-and-video-tags-poster.jpg"
         preload="metadata"
         width="495"
+        id="audio-and-video-tags-video"
     >
         <source src="/images/blog/html/audio-and-video-tags.mp4" type="video/mp4" />
         <track default kind="captions" srclang="en" src="/images/blog/html/audio-and-video-tags.vtt" />
         <a href="/images/blog/html/audio-and-video-tags.mp4"> Download the video</a>
     </video>
-    <figcaption>A screen recording of my dev setup while writing the paragraph above.</figcaption>
+
+    <embed
+        type="video/mp4"
+        src="/images/blog/html/audio-and-video-tags.mp4"
+        width="495"
+        height="300"
+        title="A screen recording of my dev setup while writing the paragraph above."
+        style="display: none"
+        id="audio-and-video-tags-embed"
+    />
+    <figcaption>A screen recording of my dev setup while writing the paragraph above. </figcaption>
+
+<fieldset>
+    <legend>Select below to control if the video above is shown in a &lt;video&gt; or &lt;embed&gt; element:</legend>
+    <div>
+        <input type="radio" id="audio-and-video-tags-video-option" name="audio-and-video-tags" value="video" checked />
+        <label for="audio-and-video-tags-video-option">&lt;video&gt;</label>
+    </div>
+    <div>
+        <input type="radio" id="audio-and-video-tags-embed-option" name="audio-and-video-tags" value="embed" />
+        <label for="audio-and-video-tags-embed-option">&lt;embed&gt;</label>
+    </div>
+</fieldset>
+
+<script>
+    const v = document.getElementById('audio-and-video-tags-video');
+    const e = document.getElementById('audio-and-video-tags-embed');
+    document.querySelectorAll("input[name='audio-and-video-tags']").forEach((input) => {
+        input.addEventListener('change', (event) => {
+            const shouldDisplay = event.target.value;
+            if (shouldDisplay === 'video') {
+                v.style.display = 'block';
+                e.style.display = 'none';
+            } else {
+                v.style.display = 'none';
+                e.style.display = 'block';
+            }
+        });
+    });
+</script>
+
 </figure>
 
-One reason for this may be that there are still some quirks with `<video>` elements. For example, there is a `<figcaption>` accompanying the video above, but when I initially tried creating the element with a self closing tag it did not render. Also, as I’m writing this, Safari does not support the video at all, likely because of the development server I am using not supporting the “Range” request header. I am curious to find out whether the hosted version of the site (on GitHub pages) will support playing the video in Safari.
+One reason for this may be that there are still some quirks with `<video>` elements. For example, there is a `<figcaption>` accompanying the video above, but when I initially tried creating the element with a self closing tag it did not render. Also, as I’m writing this, Safari does not support the video at all, likely because of the development server I am using not supporting the “Range” request header. I am curious to find out whether the hosted version of the site (on GitHub pages) will support playing the video in Safari. I thought that I might have a similar issue with `<track>`, but that just turned out to be me not setting up my [Eleventy](https://www.11ty.dev/) build correctly for `.vtt` files.
+
+</section>
+
+<section>
+### Embedded content
+
+- [`<embed>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed)
+- [`<iframe>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe)
+- [`<object>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object)
+- [`<picture>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture)
+- [`<portal>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/portal)
+- [`<source>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source)
+
+It is somewhat surprising that `<embed>` has not been deprecated since most of its uses have been superceded by specific tags like `<video>` and `<iframe>`. Maybe eventually it will be, or it will just live on in the name of backwards compatibility.
 
 Description of section
 
 </section>
 
+<section>
 ### Section
 
 - [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
