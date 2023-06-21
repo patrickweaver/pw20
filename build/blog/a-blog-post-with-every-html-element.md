@@ -341,6 +341,9 @@ Here’s a `<map>` (with `<area>`s on each tag linking to MDN) of a handwritten 
 
 `<audio>` is one of the classic HTML 5 tags so I’ve used it before, but thinking about it now it’s surprising I don’t see them more often in the 2020s. I would guess that there are more in use than I thought though, for example, the [Bandcamp](https://bandcamp.com) player uses an `<audio>` element even though the UI is a custom mix of `<a>` and `<div>`s inside a `<table>` oddly enough.
 
+TODO
+<audio>
+
 `<img>` is of course one of the first elements I used, but I was curious what properties could be used with it that I might not have heard of. `srcset`, used for specifying multiple sizes of the same image to load at different screen resolutions, was one of those. I’ve created a demo below, which goes against the spirit of `srcset`. The image below has 3 images provided to its `srcset` property, one with a yellow background and a monospace font that is 300 pixels wide and should render when the page is less than 520 pixels wide, one with a blue background and a serifed font that should render when the page is between 520 and 800 pixels wide, and one with a green background and a script font that should render when the page is greater than 800 pixels wide.
 
 <img
@@ -351,7 +354,27 @@ Here’s a `<map>` (with `<area>`s on each tag linking to MDN) of a handwritten 
     alt="A demo of the srcset property of the HTML <img> tag that loads different images at different sizes"
  />
 
- I have tested it, and it does work, but it takes a lot of forethought to make sure that you will be able to load the correct image. Things like the browser’s cache, and scaled displays will change the behavior. If you want to see the effect you will probably need to load the page in a private window on a non scaled or “retina” display.
+I have tested it, and it does work, but it takes a lot of forethought to make sure that you will be able to load the correct image. Things like the browser’s cache, and scaled displays will change the behavior. If you want to see the effect you will probably need to load the page in a private window on a non scaled or “retina” display.
+
+It’s interesting that while both `<audio>` and `<video>` are less widely used than `<img>` even after their introduction in HTML 5, the distribution of videos online seems to be centralized, mostly on YouTube, while audio is more decentralized, with people serving individual files when distributing things like podcasts, even though the audio player that is often used is not on the web.
+
+<figure>
+    <video
+        controls
+        height="300"
+        muted
+        poster="/images/blog/html/audio-and-video-tags-poster.jpg"
+        preload="metadata"
+        width="495"
+    >
+        <source src="/images/blog/html/audio-and-video-tags.mp4" type="video/mp4" />
+        <track default kind="captions" srclang="en" src="/images/blog/html/audio-and-video-tags.vtt" />
+        <a href="/images/blog/html/audio-and-video-tags.mp4"> Download the video</a>
+    </video>
+    <figcaption>A screen recording of my dev setup while writing the paragraph above.</figcaption>
+</figure>
+
+One reason for this may be that there are still some quirks with `<video>` elements. For example, there is a `<figcaption>` accompanying the video above, but when I initially tried creating the element with a self closing tag it did not render. Also, as I’m writing this, Safari does not support the video at all, likely because of the development server I am using not supporting the “Range” request header. I am curious to find out whether the hosted version of the site (on GitHub pages) will support playing the video in Safari.
 
 Description of section
 

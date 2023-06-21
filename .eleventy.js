@@ -79,6 +79,7 @@ module.exports = function (eleventyConfig) {
       "mp3",
       "mp4",
       "pdf",
+      "vtt",
     ],
   };
 };
