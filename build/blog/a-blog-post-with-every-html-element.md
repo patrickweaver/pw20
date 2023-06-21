@@ -318,8 +318,8 @@ Hello, World
 - [`<audio>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio)
 - [`<img>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img)
 - [`<map>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map)
-- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
-- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
+- [`<track>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track)
+- [`<video>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video)
 
 `<area>` and `<map>` are elements that I hadn’t been familiar with previously, even though I had made a few image map type websites in the days before CSS 3. It seems like an indication of how seldom they are used these days that the tools for debugging the boundries of `<area>` elements are hard to use. One `<area>` border at a time will display while using tab focus, but styling the elements does not work (unless there is a `display` hack I couldn’t figure out). It’s also somewhat strange that `<area>` is essentially an `<a>` with a shape.
 
@@ -352,6 +352,7 @@ TODO
     sizes="(max-width: 520px) 300px, (max-width: 800px) 500px, 700px"
     style="max-width: 700px; width: 100%;"
     alt="A demo of the srcset property of the HTML <img> tag that loads different images at different sizes"
+    id="image-with-srcset"
  />
 
 I have tested it, and it does work, but it takes a lot of forethought to make sure that you will be able to load the correct image. Things like the browser’s cache, and scaled displays will change the behavior. If you want to see the effect you will probably need to load the page in a private window on a non scaled or “retina” display.
@@ -359,60 +360,76 @@ I have tested it, and it does work, but it takes a lot of forethought to make su
 It’s interesting that while both `<audio>` and `<video>` are less widely used than `<img>` even after their introduction in HTML 5, the distribution of videos online seems to be centralized, mostly on YouTube, while audio is more decentralized, with people serving individual files when distributing things like podcasts, even though the audio player that is often used is not on the web.
 
 <figure>
-    <video
-        controls
-        height="300"
-        muted
-        poster="/images/blog/html/audio-and-video-tags-poster.jpg"
-        preload="metadata"
-        width="495"
-        id="audio-and-video-tags-video"
-    >
-        <source src="/images/blog/html/audio-and-video-tags.mp4" type="video/mp4" />
-        <track default kind="captions" srclang="en" src="/images/blog/html/audio-and-video-tags.vtt" />
-        <a href="/images/blog/html/audio-and-video-tags.mp4"> Download the video</a>
-    </video>
-
-    <embed
-        type="video/mp4"
-        src="/images/blog/html/audio-and-video-tags.mp4"
-        width="495"
-        height="300"
-        title="A screen recording of my dev setup while writing the paragraph above."
-        style="display: none"
-        id="audio-and-video-tags-embed"
-    />
-    <figcaption>A screen recording of my dev setup while writing the paragraph above. </figcaption>
-
+<video
+    controls
+    height="300"
+    muted
+    poster="/images/blog/html/audio-and-video-tags-poster.jpg"
+    preload="metadata"
+    width="495"
+    id="audio-and-video-tags-video"
+>
+    <source src="/images/blog/html/audio-and-video-tags.mp4" type="video/mp4" />
+    <track default kind="captions" srclang="en" src="/images/blog/html/audio-and-video-tags.vtt" />
+    <a href="/images/blog/html/audio-and-video-tags.mp4"> Download the video</a>
+</video>
+<embed
+    type="video/mp4"
+    src="/images/blog/html/audio-and-video-tags.mp4"
+    width="495"
+    height="300"
+    title="A screen recording of my dev setup while writing the paragraph above."
+    style="display: none"
+    id="audio-and-video-tags-embed"
+/>
+<object
+type="video/mp4"
+data="/images/blog/html/audio-and-video-tags.mp4"
+width="495"
+height="300"
+style="display: none;"
+id="audio-and-video-tags-object">
+<img src="/images/blog/html/audio-and-video-tags-poster.jpg" alt="a still of a screen recording" />
+</object>
+<figcaption>A screen recording of my dev setup while writing the paragraph above. </figcaption>
 <fieldset>
-    <legend>Select below to control if the video above is shown in a &lt;video&gt; or &lt;embed&gt; element:</legend>
+    <legend>Select below to control if the video above is shown in a <code>&lt;video&gt;</code>, <code>&lt;embed&gt;</code>, or <code>&lt;object&gt;</code> element:</legend>
     <div>
         <input type="radio" id="audio-and-video-tags-video-option" name="audio-and-video-tags" value="video" checked />
-        <label for="audio-and-video-tags-video-option">&lt;video&gt;</label>
+        <label for="audio-and-video-tags-video-option"><code class="code-regular">&lt;video&gt;</code></label>
     </div>
     <div>
         <input type="radio" id="audio-and-video-tags-embed-option" name="audio-and-video-tags" value="embed" />
-        <label for="audio-and-video-tags-embed-option">&lt;embed&gt;</label>
+        <label for="audio-and-video-tags-embed-option"><code class="code-regular">&lt;embed&gt;</code></label>
+    </div>
+    <div>
+        <input type="radio" id="audio-and-video-tags-object-option" name="audio-and-video-tags" value="object" />
+        <label for="audio-and-video-tags-object-option"><code class="code-regular">&lt;object&gt;</code></label>
     </div>
 </fieldset>
-
 <script>
-    const v = document.getElementById('audio-and-video-tags-video');
-    const e = document.getElementById('audio-and-video-tags-embed');
+    const viEl = document.getElementById('audio-and-video-tags-video');
+    const emEl = document.getElementById('audio-and-video-tags-embed');
+    const obEl = document.getElementById('audio-and-video-tags-object');
     document.querySelectorAll("input[name='audio-and-video-tags']").forEach((input) => {
         input.addEventListener('change', (event) => {
             const shouldDisplay = event.target.value;
             if (shouldDisplay === 'video') {
-                v.style.display = 'block';
-                e.style.display = 'none';
-            } else {
-                v.style.display = 'none';
-                e.style.display = 'block';
+                viEl.style.display = 'block';
+                emEl.style.display = 'none';
+                obEl.style.display = 'none';
+            } else if (shouldDisplay === 'embed') {
+                viEl.style.display = 'none';
+                emEl.style.display = 'block';
+                obEl.style.display = 'none';
+            } else if (shouldDisplay === 'object') {
+                viEl.style.display = 'none';
+                emEl.style.display = 'none';
+                obEl.style.display = 'block';
             }
         });
     });
 </script>
-
 </figure>
 
 One reason for this may be that there are still some quirks with `<video>` elements. For example, there is a `<figcaption>` accompanying the video above, but when I initially tried creating the element with a self closing tag it did not render. Also, as I’m writing this, Safari does not support the video at all, likely because of the development server I am using not supporting the “Range” request header. I am curious to find out whether the hosted version of the site (on GitHub pages) will support playing the video in Safari. I thought that I might have a similar issue with `<track>`, but that just turned out to be me not setting up my [Eleventy](https://www.11ty.dev/) build correctly for `.vtt` files.
@@ -429,7 +446,37 @@ One reason for this may be that there are still some quirks with `<video>` eleme
 - [`<portal>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/portal)
 - [`<source>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source)
 
-It is somewhat surprising that `<embed>` has not been deprecated since most of its uses have been superceded by specific tags like `<video>` and `<iframe>`. Maybe eventually it will be, or it will just live on in the name of backwards compatibility.
+It is somewhat surprising that `<embed>` and `<object>` have not been deprecated since most of their uses have been superseded by specific tags like `<video>` and `<iframe>`. Maybe eventually they will be, or they will just live on in the name of backwards compatibility.
+
+Speaking of `<iframe>` it’s also interesting that the very 90s name “iframe” has survived while `<frame>` was deprecated in HTML 5. I thought that `<iframe>` might be a way to force the `<img>` `srcset` example above to render the smaller images on a high DPI display, but even at 150px wide on my device the large image still renders:
+
+<figure>
+<iframe width="150" height="200" src="/blog/a-blog-post-with-every-html-element/#image-with-srcset"></iframe>
+<figcaption>An embed of this page scrolled to the `<img>` tag with a `srcset` property at 150px wide.
+</figure>
+
+Scrolling down further it’s interesting that a recursive `<iframe>` doesn't render.
+
+`<picture>` is a tag that is actually intended for things like the `srcset` experiment I tried above, rendering different versions of an image in different situations. The image below should show an icon of a computer when used with a mouse/trackpad, or an icon of a phone when used with a touch screen (using the `pointer` media query to determine), and should fall back to an image of a red circle with a line through it when neither media query is appropriate.
+
+<picture>
+    <source
+        srcset="/images/blog/html/no.png"
+        media="(pointer:none)"
+        type="image/png"
+    />
+    <source
+        srcset="/images/blog/html/phone.png"
+        media="(pointer:coarse)"
+        type="image/png"
+    />
+    <source
+        srcset="/images/blog/html/computer.png"
+        media="(pointer:fine)"
+        type="image/png"
+    />
+    <img src="/images/blog/html/no.png" alt="an icon of a computer when used with a mouse/trackpad, an icon of a phone when used with a touch screen, or an image of a red circle with a line through otherwise">
+</picture>
 
 Description of section
 
