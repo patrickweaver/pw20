@@ -457,7 +457,7 @@ Speaking of `<iframe>` it’s also interesting that the very 90s name “iframe�
 
 Scrolling down further it’s interesting that a recursive `<iframe>` doesn't render.
 
-`<picture>` is a tag that is actually intended for things like the `srcset` experiment I tried above, rendering different versions of an image in different situations. The image below should show an icon of a computer when used with a mouse/trackpad, or an icon of a phone when used with a touch screen (using the `pointer` media query to determine), and should fall back to an image of a red circle with a line through it when neither media query is appropriate.
+`<picture>` is a tag that is, with `<source>` actually intended for layout tricks like the `srcset` experiment I tried above, rendering different versions of an image in different situations. The image below should show an icon of a computer when used with a mouse/trackpad, or an icon of a phone when used with a touch screen (using the `pointer` media query to determine), and should fall back to an image of a red circle with a line through it when neither media query is appropriate. The responsive design developer tools in your browser should trick it, though interestingly, not when inspecting an element.
 
 <picture>
     <source
@@ -477,6 +477,33 @@ Scrolling down further it’s interesting that a recursive `<iframe>` doesn't re
     />
     <img src="/images/blog/html/no.png" alt="an icon of a computer when used with a mouse/trackpad, an icon of a phone when used with a touch screen, or an image of a red circle with a line through otherwise">
 </picture>
+
+`<portal>` is one of the more mysterious sounding elements, and seems intended for the iPad style link previews that I’ve seen implemented on some websites on hover, [but also come with SPA-like performance benefits](https://web.dev/hands-on-portals/). It unfortunately is still an experimental feature and isn’t (as of 2023) enabled by default in any browsers. It seems that it [used to be an available experimental flag in Chrome](https://medium.com/swlh/portals-in-chrome-going-on-a-test-drive-66b16971fb19), but today in 2023 it is not available at [chrome://flags](chrome://flags). I’ll include one below in case it works for future readers! I did try it in an very old Chromium version I still had installed. `<portal>` doesn’t seem to be part of the [HTML 5 Spec](https://www.w3.org/TR/2011/WD-html5-20110405/), I’m not sure why it’s included in the MDN documentation.
+
+<figure>
+<portal id="pw-links-portal" src="https://www.patrickweaver.net/links/#links"></portal>
+<figcaption>
+A <code>&lt;portal&gt;</code> element that should display the <a href="https://www.patrickweaver.net/links/#links">“Links”</a> page on patrickweaver.net, if the feature is ever implemented in browsers.
+</figcaption>
+</figure>
+
+</section>
+
+<section>
+### SVG and MathML
+
+- [`<svg>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/svg)
+- [`<math>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/math)
+
+This section of the documentation because it pairs one of the most ubiquitous elements with one of the most obscure. `<svg>` elements are everywhere, especially that tools like Figma and Sketch have made them easy to prototype and export. Pairing them with `<math>` in the documentation evokes a more artisanal, hand-crafted `<svg>` that is relatively uncommon these days. I’ve gone hand-crafted here and drawn some `<svg>` circles.
+
+<figure>
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" stroke="white" fill="white" width="200"><circle cx="50" cy="50" r="49" fill="red" /><circle cx="47" cy="50" r="42" fill="orange" /><circle cx="50" cy="53" r="35" fill="yellow" /><circle cx="55" cy="52" r="28" fill="green" /><circle cx="52" cy="48" r="21" fill="indigo" /><circle cx="54" cy="50" r="14" fill="blue" /><circle cx="52" cy="55" r="7" fill="violet" /></svg>
+<figcaption>An svg that shows overlapping circles each with a different color of the rainbow.</figcaption>
+</figure>
+
+<p><code>&lt;math&gt;</code> is really a wrapper element for other non HTML elements from the [MathML](https://www.w3.org/TR/MathML3/) namespace, so I guess I don’t have to include every possible child element here. I’ll stick to something simple: <math xmlns='http://www.w3.org/1998/Math/MathML' display="inline"><mrow><mn>2</mn><mo>+</mo><mn>2</mn><mo>=</mo><mn>5</mn></mrow></math>
+</p>
 
 Description of section
 

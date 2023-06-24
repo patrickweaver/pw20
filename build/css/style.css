@@ -237,6 +237,13 @@ code.code-regular {
   padding: 0;
 }
 
+portal {
+  display: block;
+  width: 400px;
+  height: 300px;
+  border: 1px solid black;
+}
+
 .fake-code {
   background-color: var(--bg-2);
   padding: 10px;
@@ -269,7 +276,7 @@ figure p {
 }
 
 figcaption {
-  font-size: 18px;
+  font-size: 1rem;
 }
 
 blockquote {
@@ -443,6 +450,12 @@ kbd {
 
 u.u-sp {
   text-decoration: red wavy underline;
+}
+
+#pw-links-portal {
+  width: 300px;
+  height: 200px;
+  margin: 0.5rem;
 }
 
 /* https://developer.mozilla.org/en-US/docs/Web/HTML/Element/s */
