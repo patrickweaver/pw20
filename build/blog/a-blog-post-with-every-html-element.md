@@ -7,6 +7,8 @@ date: 2023-02-20
 tags:
 ---
 
+<!-- markdownlint-disable MD033 -->
+
 <section>
 
 After learning a little bit more about web accessibility this year I have been exploring some of the less common <abbr title="Hyper Text Markup Language">HTML</abbr> elements, and making changes to this website like wrapping the text of the posts on this blog in `<article>` tags and adding a `<main>` tag in the website’s layout templates (this website is built using [11ty](https://www.11ty.dev/)).
@@ -154,6 +156,9 @@ I had not encountered `<menu>` before writing this post, and I was initially sur
     </script>
     <li><button onclick="balloons()">Balloons</button></li>
     <li><button onclick="sponges()">Sponges</button></li>
+    <noscript>
+        <p>This menu will only be interactive when JavaScript is enabled.</p>
+    </noscript>
 </menu>
 
 `<ol>` and `<ul>` are some of the first HTML elements I used, and more recently I try to use `<ol>` with CSS in places that are semantically lists, but might not be styled like a traditional list.
@@ -246,6 +251,10 @@ I’ll probably think of `<b>` from now on as the HTML tag for the quotation mar
         o.innerHTML = event.target?.value || "&nbsp;&nbsp;&nbsp;&nbsp;";
     })
 </script>
+
+<noscript>
+    <p>This form will only be interactive when JavaScript is enabled.</p>
+</noscript>
 
 `<bdo>` I will probably use less often because I don’t work with RTL languages often, but it is still good to know how to handle small amounts of RTL text, like this link to the page for HTML on the Farsi Wikipedia: <a href="https://fa.wikipedia.org/wiki/%D8%A7%DA%86%E2%80%8C%D8%AA%DB%8C%E2%80%8C%D8%A7%D9%85%E2%80%8C%D8%A7%D9%84" target="_blank"><bdo dir="rtl">اچ‌تی‌ام‌ال</bdo></a>.
 
@@ -430,6 +439,9 @@ id="audio-and-video-tags-object">
         });
     });
 </script>
+<noscript>
+    <p>The embedded video elements will only be toggleable when JavaScript is enabled.</p>
+</noscript>
 </figure>
 
 One reason for this may be that there are still some quirks with `<video>` elements. For example, there is a `<figcaption>` accompanying the video above, but when I initially tried creating the element with a self closing tag it did not render. Also, as I’m writing this, Safari does not support the video at all, likely because of the development server I am using not supporting the “Range” request header. I am curious to find out whether the hosted version of the site (on GitHub pages) will support playing the video in Safari. I thought that I might have a similar issue with `<track>`, but that just turned out to be me not setting up my [Eleventy](https://www.11ty.dev/) build correctly for `.vtt` files.
@@ -504,6 +516,68 @@ This section of the documentation because it pairs one of the most ubiquitous el
 
 <p><code>&lt;math&gt;</code> is really a wrapper element for other non HTML elements from the [MathML](https://www.w3.org/TR/MathML3/) namespace, so I guess I don’t have to include every possible child element here. I’ll stick to something simple: <math xmlns='http://www.w3.org/1998/Math/MathML' display="inline"><mrow><mn>2</mn><mo>+</mo><mn>2</mn><mo>=</mo><mn>5</mn></mrow></math>
 </p>
+
+</section>
+
+<section>
+### Scripting
+
+- [`<canvas>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas)
+- [`<noscript>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript)
+- [`<script>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
+
+I did a deep dive into `<canvas>`, specifically [drawing crisp lines](https://doodles.patrickweaver.net/canvas-lines/) in 2020 while I was at [Recurse Center](https://www.recurse.com/). One thing I wasn’t familiar with before reading the MDN docs though, was that there is a maximum size for a `<canvas>` element in each browser (though all modern browsers it is about 32 thousand pixels in each dimension). Below is a reimplementation of `<marquee>` with `<canvas>` and `<script>` (and `<noscript>`).
+
+<canvas id="marquee-canvas" width="600" height="100"
+style="width: 300px; height: 50px;"></canvas>
+
+<script>
+    const canvasWidth = 300;
+    const canvasHeight = 50;
+    var dpr = window.devicePixelRatio || 1;
+    var canvas = document.getElementById("marquee-canvas");
+    var context = canvas.getContext("2d");
+    canvas.width = canvasWidth*dpr;
+    canvas.height = canvasHeight*dpr;
+    context.scale(dpr, dpr);
+    context.fillStyle = "black";
+    context.font = "bold 40px Arial";
+
+    function drawText(text, x, y) {
+        context.fillText(text, x, y);
+    }
+
+    let timer = 16.6;
+    let xVal = canvasWidth;
+    const text = "<marquee>";
+
+    function draw() {
+        setTimeout(() => {
+            if (xVal < 0) {
+                xVal = canvasWidth;
+            }
+            context.clearRect(0, 0, canvasWidth, canvasHeight);
+            drawText(text, xVal, 42);
+            drawText(text, xVal - canvasWidth, 42);
+            xVal--;
+            draw();
+        }, timer);
+    }
+    draw();
+    
+    // let i = setInterval(() => {
+    //         if (xVal > canvasWidth) {
+    //             xVal = 0;
+    //         }
+    //         context.clearRect(0, 0, canvasWidth, canvasHeight);
+    //         drawText("hello", xVal, 42);
+    //         drawText("hello", xVal - canvasWidth, 42);
+    //         xVal++;
+    //         draw();
+    //     }, timer);
+</script>
+
+<noscript><p>The <code>&lt;marquee&gt;</code> like animation above will only be render when JavaScript is enabled.</p></noscript>
 
 Description of section
 
