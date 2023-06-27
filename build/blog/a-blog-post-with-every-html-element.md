@@ -674,6 +674,7 @@ Another set of <ins>new to me</ins> elements <del>I had never come across before
 </section>
 
 <section>
+
 ### Table content
 
 - [`<caption>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/caption)
@@ -689,7 +690,7 @@ Another set of <ins>new to me</ins> elements <del>I had never come across before
 
 It’s not a new insight that `<table>` elements were overused for layout purposes on the early web, but an irony that I’m only realizing now is that recently, as the web has gotten more and more populated by data, that `<table>` elements have become rarely used, probably mostly due to their clunky default design, but probably also because one main goal of creating a web UI for the data that is otherwise probably stored in database tables, is to create a different view of the same data.
 
-I don’t have any tabular data as this is an exclusively <em>document</em>based blog post, but below I’ve added a table with some custom CSS and “data” on emoji that is likely only accurate for the Apple emoji set in 2023. I wasn’t familiar with `<col>` and `<colgroup>` before, but I don’t know that there are many cases where I would use them rather than a more custom, non `<table>` design.
+I don’t have any tabular data as this is an exclusively <em>document</em> based blog post, but below I’ve added a table with some custom CSS and “data” on emoji that is likely only accurate for the Apple emoji set in 2023. I wasn’t familiar with `<col>` and `<colgroup>` before, but I don’t know that there are many cases where I would use them rather than a more custom, non `<table>` design.
 
 <table id="weird-table">
     <caption>
@@ -760,14 +761,105 @@ I don’t have any tabular data as this is an exclusively <em>document</em>based
             <td>1</td>
         </tr>
     </tfoot>
-
 </table>
+</section>
 
-Description of section
+<section>
+
+### Forms
+
+- [`<button>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
+- [`<datalist>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist)
+- [`<fieldset>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset)
+- [`<form>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)
+- [`<input>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
+- [`<label>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label)
+- [`<legend>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend)
+- [`<meter>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meter)
+- [`<optgroup>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/optgroup)
+- [`<option>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option)
+- [`<output>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output)
+- [`<progress>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress)
+- [`<select>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select)
+- [`<textarea>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea)
+
+I’m
+
+<form id="everything-form">
+<label for="emoji-choice">Choose an emoji type:</label>
+<input list="emoji-types" id="emoji-choice" name="emoji-choice">
+<datalist id="emoji-types">
+<option value="Fruit" />
+<option value="Dessert" />
+<option value="Drinks" />
+<option value="Birds" />
+</datalist>
+<fieldset id="size-choice">
+<legend>Select a size:</legend>
+<input type="radio" name="size-choice" id="small-size-choice" value="small" />
+<label for="small-size-choice">Small</label>
+<input type="radio" name="size-choice" id="medium-size-choice" value="medium" />
+<label for="medium-size-choice">Medium</label>
+<input type="radio" name="size-choice" id="large-size-choice" value="large" />
+<label for="large-size-choice">Large</label>
+</fieldset>
+<label for="color-choice">Color:</label>
+<select id="color-choice">
+    <option value="" disabled selected>--Please choose an option--</option>
+    <optgroup label="Hot">
+        <option>Orange</option>
+        <option>Red</option>
+        <option>Yellow</option>
+    </optgroup>
+    <optgroup label="Cool">
+        <option>Blue</option>
+        <option>Green</option>
+    </optgroup>
+</select>
+<br/>
+<label for="form-completion">Form completion:</label>
+<progress id="form-completion"
+       max="5"
+       value="0">
+       0/5
+</progress>
+<br/>
+<button id="form-submit-button" type="submit" disabled>Submit</button>
+</form>
+
+<noscript>Without JavaScript enabled the form above will not be interactive.</noscript>
+
+<script>
+    const eform = document.getElementById("everything-form");
+    const typeChoice = document.getElementById("emoji-choice");
+    const sizeChoice = document.getElementById("size-choice");
+    const colorChoice = document.getElementById("color-choice");
+    const formCompletion = document.getElementById("form-completion");
+    const eformSubmit = document.getElementById("form-submit-button");
+    eform.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const el = event?.target?.elements;
+        const emoji = el?.["emoji-choice"]?.value;
+        const size = el?.["size-choice"]?.value;
+        console.log({ emoji, size })
+    })
+    eformSubmit.disabled = false;
+    function fillForm(event) {
+        const value = event?.target?.value
+        console.log(value);
+
+        if (value) formCompletion.value++;
+    }
+    typeChoice.addEventListener("input", fillForm);
+    sizeChoice.addEventListener("input", fillForm);
+    colorChoice.addEventListener("input", fillForm);
+
+</script>
 
 </section>
 
 <section>
+
 ### Section
 
 - [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
