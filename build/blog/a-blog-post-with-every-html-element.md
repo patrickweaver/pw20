@@ -9,6 +9,81 @@ tags:
 
 <!-- markdownlint-disable MD033 -->
 
+<style>
+    #pw-links-portal {
+    width: 300px;
+    height: 200px;
+    margin: 0.5rem;
+    }
+
+    #weird-table {
+        border: 5px double #8f8f9f;
+        padding: 5px;
+    }
+
+    #weird-table .low-numbers {
+        background-color: #ff4f2f4f;
+    }
+
+    #weird-table .high-numbers {
+        background-color: #2f4fff4f;
+    }
+
+    #weird-table th {
+        background-color: #2fff2f1f;
+    }
+
+    #weird-table th[scope='row'] {
+    background-color: #2fffff1f;
+    text-align: left;
+}
+
+    #weird-table th,
+    #weird-table td {
+        border: 2px solid black;
+        padding: 5px;
+        min-width: 40px;
+        text-align: center;
+    }
+
+    #weird-table th:nth-child(1),
+    #weird-table td:nth-child(1) {
+        border: none;
+    }
+
+    #weird-table th:nth-child(2),
+    #weird-table td:nth-child(2) {
+        border-radius: 3px;
+    }
+
+    #weird-table th:nth-child(3),
+    #weird-table td:nth-child(3) {
+        border-radius: 6px;
+    }
+
+    #weird-table th:nth-child(4),
+    #weird-table td:nth-child(4) {
+        border-radius: 9px;
+    }
+
+    #weird-table th:nth-child(5),
+    #weird-table td:nth-child(5) {
+        border-radius: 12px;
+    }
+
+    #weird-table th:nth-child(6),
+    #weird-table td:nth-child(6) {
+        border-radius: 15px;
+    }
+
+    #weird-table th:nth-child(7),
+    #weird-table td:nth-child(7) {
+        border-radius: 18px;
+    }
+
+    
+</style>
+
 <section>
 
 After learning a little bit more about web accessibility this year I have been exploring some of the less common <abbr title="Hyper Text Markup Language">HTML</abbr> elements, and making changes to this website like wrapping the text of the posts on this blog in `<article>` tags and adding a `<main>` tag in the website’s layout templates (this website is built using [11ty](https://www.11ty.dev/)).
@@ -147,7 +222,7 @@ The items in the lists of elements on this page are of course `<li>` elements, t
 I had not encountered `<menu>` before writing this post, and I was initially surprised that it survived to HTML 5, while [`<menuitem>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menuitem) didn’t, but researching further [on Wikipedia](https://en.wikipedia.org/wiki/HTML_element#Basic_text) I read <q cite="https://en.wikipedia.org/wiki/HTML_element#Basic_text">MENU existed in HTML Tags, and was standardized in HTML 2.0; deprecated in HTML 4.0 Transitional; invalid in HTML 4.0 Strict; then redefined in HTML5, but removed in HTML 5.2.</q>, and now I don’t know what to think, but here’s a `<menu>`:
 
 <menu id="interactive-menu">
-    <script>
+    <script type="text/javascript">
         const b = '🎈';
         const s = '🧽';
         const m = document.getElementById('interactive-menu');
@@ -244,7 +319,7 @@ I’ll probably think of `<b>` from now on as the HTML tag for the quotation mar
     <input type="text" id="bdi-name-input">
 </form>
 <p>Hello, <bdi id="bdi-name-display">&nbsp;&nbsp;&nbsp;&nbsp;</bdi>, thanks for reading!</p>
-<script>
+<script type="text/javascript">
     const i = document.getElementById("bdi-name-input");
     const o = document.getElementById("bdi-name-display");
     i.addEventListener("input", function(event) {
@@ -416,7 +491,7 @@ id="audio-and-video-tags-object">
         <label for="audio-and-video-tags-object-option"><code class="code-regular">&lt;object&gt;</code></label>
     </div>
 </fieldset>
-<script>
+<script type="text/javascript">
     const viEl = document.getElementById('audio-and-video-tags-video');
     const emEl = document.getElementById('audio-and-video-tags-embed');
     const obEl = document.getElementById('audio-and-video-tags-object');
@@ -531,7 +606,10 @@ I did a deep dive into `<canvas>`, specifically [drawing crisp lines](https://do
 <canvas id="marquee-canvas" width="600" height="100"
 style="width: 300px; height: 50px;"></canvas>
 
-<script>
+<label for="toggleMarqueeButton">Start or Stop the fake `<marquee>`:</label>
+<button onClick="toggleMarquee()" id="toggleMarqueeButton">Stop</button>
+
+<script type="text/javascript">
     const canvasWidth = 300;
     const canvasHeight = 50;
     var dpr = window.devicePixelRatio || 1;
@@ -543,13 +621,24 @@ style="width: 300px; height: 50px;"></canvas>
     context.fillStyle = "black";
     context.font = "bold 40px Arial";
 
+    const defaultTimer = 16.6;
+    let timer = defaultTimer;
+    let xVal = canvasWidth;
+    const text = "<marquee>";
+
+    const toggleMarqueeButton = document.getElementById("toggleMarqueeButton");
+    let marqueeStatus = true;
+    function toggleMarquee() {
+        toggleMarqueeButton.innerHTML = marqueeStatus ? "Start" : "Stop";
+        timer = marqueeStatus ? 0 : defaultTimer;
+        marqueeStatus = !marqueeStatus;
+        if (marqueeStatus) draw();
+    }
+
+
     function drawText(text, x, y) {
         context.fillText(text, x, y);
     }
-
-    let timer = 16.6;
-    let xVal = canvasWidth;
-    const text = "<marquee>";
 
     function draw() {
         setTimeout(() => {
@@ -560,24 +649,119 @@ style="width: 300px; height: 50px;"></canvas>
             drawText(text, xVal, 42);
             drawText(text, xVal - canvasWidth, 42);
             xVal--;
-            draw();
+            if (timer > 0) draw();
         }, timer);
     }
     draw();
-    
-    // let i = setInterval(() => {
-    //         if (xVal > canvasWidth) {
-    //             xVal = 0;
-    //         }
-    //         context.clearRect(0, 0, canvasWidth, canvasHeight);
-    //         drawText("hello", xVal, 42);
-    //         drawText("hello", xVal - canvasWidth, 42);
-    //         xVal++;
-    //         draw();
-    //     }, timer);
 </script>
 
 <noscript><p>The <code>&lt;marquee&gt;</code> like animation above will only be render when JavaScript is enabled.</p></noscript>
+
+There were a lot of tags that I expected to feel a little out of date when I started this post, but `<script>` wasn’t one of them, but now that I have written most of the post, and have created a few `<script>` tags, I’m realizing how little I use them now. For most of the code that I write, even though most of it is JavaScript, all of the “scripting” gets put into on `<script>` tag by build tools and it ends up feeling more like boilerplate than a “markup” tag.
+
+On the other hand, for most of the interactive websites I’ve made, I’ve rarely included a `<noscript>` tag with the exception of those minified and compiled single page apps where the user would likely get a blank page if it weren’t for the `<noscript>` tag (and even then, probably less often than I should have, though I’ve made sure to include one with every `<script>` tag here).
+
+</section>
+
+<section>
+### Demarcating edits
+
+- [`<del>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del)
+- [`<ins>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins)
+
+Another set of <ins>new to me</ins> elements <del>I had never come across before</del> <ins>on</ins> reading the MDN documentation, `<del>` and `<ins>` seem to be intended for <del>creating</del> <ins>use in</ins> a word processor. Reading about them led to yet another round of, “<del>I wonder if these are used in rendering Google Docs?</del> <ins>Oh wait, it’s all `<canvas>`</ins>.”
+
+</section>
+
+<section>
+### Table content
+
+- [`<caption>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/caption)
+- [`<col>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/col)
+- [`<colgroup>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/colgroup)
+- [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)
+- [`<tbody>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody)
+- [`<td>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td)
+- [`<tfoot>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tfoot)
+- [`<th>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th)
+- [`<thead>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/thead)
+- [`<tr>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tr)
+
+It’s not a new insight that `<table>` elements were overused for layout purposes on the early web, but an irony that I’m only realizing now is that recently, as the web has gotten more and more populated by data, that `<table>` elements have become rarely used, probably mostly due to their clunky default design, but probably also because one main goal of creating a web UI for the data that is otherwise probably stored in database tables, is to create a different view of the same data.
+
+I don’t have any tabular data as this is an exclusively <em>document</em>based blog post, but below I’ve added a table with some custom CSS and “data” on emoji that is likely only accurate for the Apple emoji set in 2023. I wasn’t familiar with `<col>` and `<colgroup>` before, but I don’t know that there are many cases where I would use them rather than a more custom, non `<table>` design.
+
+<table id="weird-table">
+    <caption>
+        A table with a custom CSS
+    </caption>
+    <colgroup>
+        <col>
+        <col span="2" class="low-numbers">
+        <col span="2">
+        <col span="2" class="high-numbers">
+    </colgroup>
+    <thead>
+        <tr>
+            <th scope="row">Number</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Emoji</th>
+            <td>1️⃣</td>
+            <td>2️⃣</td>
+            <td>3️⃣</td>
+            <td>4️⃣</td>
+            <td>5️⃣</td>
+            <td>6️⃣</td>
+        </tr>
+        <tr>
+            <th scope="row">Emoji with leaves</th>
+            <td rowspan="2">🥭</td>
+            <td>🌱</td>
+            <td>🍂</td>
+            <td>🍀</td>
+            <td>🪴</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">Emoji with fruit</th>
+            <td>🍒</td>
+            <td>🫐</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">Emoji with slices</th>
+            <td>🍰</td>
+            <td>🥪</td>
+            <td></td>
+            <td>🥒</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th scope="row">Totals</th>
+            <td>4</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+        </tr>
+    </tfoot>
+
+</table>
 
 Description of section
 

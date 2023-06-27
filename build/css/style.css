@@ -256,10 +256,9 @@ portal {
 }
 
 table {
-  background-color: var(--bg-3);
   overflow-x: scroll;
   max-width: 100%;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 th,
@@ -442,6 +441,45 @@ kbd {
   text-align: center;
 }
 
+del,
+del > code {
+  background-color: #ffbfcf;
+}
+
+ins,
+ins > code {
+  background-color: #bfffcf;
+}
+
+ins::before,
+ins::after,
+del::before,
+del::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+ins::before {
+  content: " [insertion start] ";
+}
+
+ins::after {
+  content: " [insertion end] ";
+}
+
+ins::before {
+  content: " [deletion start] ";
+}
+
+ins::after {
+  content: " [deletion end] ";
+}
+
 .figure-with-outline {
   border: 1px solid var(--shadow);
   border-radius: 5px;
@@ -450,12 +488,6 @@ kbd {
 
 u.u-sp {
   text-decoration: red wavy underline;
-}
-
-#pw-links-portal {
-  width: 300px;
-  height: 200px;
-  margin: 0.5rem;
 }
 
 /* https://developer.mozilla.org/en-US/docs/Web/HTML/Element/s */
