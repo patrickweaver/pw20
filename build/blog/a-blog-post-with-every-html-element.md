@@ -81,6 +81,174 @@ tags:
         border-radius: 18px;
     }
 
+    #everything-form {
+        border: 5px double #080f18;
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+    #everything-form label {
+        display: block;
+    }
+
+    #everything-form {
+        display: grid;
+         grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-rows: 20% 20% 20% 20% 20%;
+    }
+
+    #everything-form > * {
+        margin: 2px;
+    }
+
+    #eform-type {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        background-color: #f8fffa;
+        border-radius: 3px;
+        border: 1px solid #d8dfda;
+        text-align: right;
+        padding: 4px;
+    }
+
+    #eform-size {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 6;
+        text-align: center;
+        margin: 5px 10px 5px 5px;
+    }
+
+    #eform-size-meter {
+        width: 100%;
+    }
+
+    #eform-size > fieldset {
+        width: 100%;
+        background-color: #faeaff;
+    }
+
+    #eform-size > fieldset > legend {
+        width: 100%;
+        background-color: #fcf2ff;
+        border-radius: 10px;
+        border: 1px solid #dcd2df;
+    }
+
+    #eform-size > * {
+        display: inline-block;
+    }
+
+    #eform-color {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        text-align: right;
+        background-color: #fafaef;
+        padding: 6px;
+        border-radius: 5px;
+        border: 2px solid #bf6ff8;
+    }
+
+    #eform-dream {
+        grid-column-start: 5;
+        grid-column-end: 6;
+        grid-row-start: 1;
+        grid-row-end: 6;
+        position: relative;
+        border-radius: 3px;
+        background-color: #e8ffe8;
+    }
+
+    #eform-dream > label {
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        display: inline-block;
+        vertical-align: top;
+        padding: 5px;
+    }
+
+    #dream-secret {
+        text-orientation: sideways;
+        font-size: 0.5rem;
+    }
+
+    #dream-input {
+        resize: none;
+        font-family: cursive;
+        font-size: 2rem;
+        display: block;
+        margin: 4px;
+        font-color: #38789f;
+        writing-mode: vertical-lr;
+        text-orientation: sideways;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    #form-completion-label {
+        display: inline-block;
+        margin-top: 3rem;
+        width: 100%;
+        text-align: center;
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    #form-completion {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    #eform-submit-button {
+        border: 4px solid #6faf38;
+        background-color: #8fcf58;
+        color: #ffeff8;
+        font-size: 20px;
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        border-radius: 4px;
+        box-shadow: -4px -4px 3px #bfbfef;
+        margin: 5px;
+        font-size: 2rem;
+        font-family: serif;
+        position: relative;
+    }
+
+    #eform-submit-button:hover {
+        border-color: #51b578;
+        background-color: #47775A;
+        color: #F0F6FB;
+        border-radius: 6px;
+        font-size: 2.25rem;
+    }
+
+    #eform-submit-button:active {
+        border-color: #54c480;
+        background-color: #4E7E52;
+        color: #F4FAFF;
+        border-radius: 6px;
+        top: -2px;
+        left:-2px;
+        box-shadow: -2px -2px 1px #bfbfef;
+        border-radius: 3px;
+        font-size: 2.5rem;
+    }
     
 </style>
 
@@ -98,7 +266,7 @@ I could, element by element, continue to add support (mostly by making <abbr tit
 
 ## The Elements
 
-<section>
+<section id="main-root">
 
 ### Main Root
 
@@ -108,7 +276,7 @@ I didn’t have to make any changes to the `<html>` tag for this post, but one t
 
 </section>
 
-<section>
+<section id="document-metadata">
 
 ### Document metadata
 
@@ -123,7 +291,7 @@ I wasn’t familiar with the `<base>` tag before writing this post, though I've 
 
 </section>
 
-<section>
+<section id="sectioning-root">
 
 ### Sectioning root
 
@@ -133,7 +301,7 @@ Like the Document metadata tags, this was of course already present before this 
 
 </section>
 
-<section>
+<section id="content-sectioning">
 
 ### Content sectioning
 
@@ -172,7 +340,7 @@ The `<main>` element was one of the initial curiosities that led me down the pat
 
 </section>
 
-<section>
+<section id="text-content">
 
 ### Text content
 
@@ -259,7 +427,7 @@ write semantic HTML
 
 </section>
 
-<section>
+<section id="inline-text-semantics">
 
 ### Inline text semantics
 
@@ -394,7 +562,7 @@ Hello, World
 
 </section>
 
-<section>
+<section id="image-and-multimedia">
 
 ### Image and multimedia
 
@@ -523,7 +691,8 @@ One reason for this may be that there are still some quirks with `<video>` eleme
 
 </section>
 
-<section>
+<section id="embedded-content">
+
 ### Embedded content
 
 - [`<embed>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed)
@@ -576,7 +745,8 @@ A <code>&lt;portal&gt;</code> element that should display the <a href="https://w
 
 </section>
 
-<section>
+<section id="svg-and-mathml">
+
 ### SVG and MathML
 
 - [`<svg>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/svg)
@@ -594,7 +764,8 @@ This section of the documentation because it pairs one of the most ubiquitous el
 
 </section>
 
-<section>
+<section id="scripting">
+
 ### Scripting
 
 - [`<canvas>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas)
@@ -663,7 +834,8 @@ On the other hand, for most of the interactive websites I’ve made, I’ve rare
 
 </section>
 
-<section>
+<section id="demarcating-edits">
+
 ### Demarcating edits
 
 - [`<del>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del)
@@ -673,7 +845,7 @@ Another set of <ins>new to me</ins> elements <del>I had never come across before
 
 </section>
 
-<section>
+<section id="table-content">
 
 ### Table content
 
@@ -764,7 +936,7 @@ I don’t have any tabular data as this is an exclusively <em>document</em> base
 </table>
 </section>
 
-<section>
+<section id="forms">
 
 ### Forms
 
@@ -783,9 +955,10 @@ I don’t have any tabular data as this is an exclusively <em>document</em> base
 - [`<select>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select)
 - [`<textarea>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea)
 
-I’m
+I’m go to <a href="#text-content">text-content</a>.
 
 <form id="everything-form">
+<div id="eform-type">
 <label for="emoji-choice">Choose an emoji type:</label>
 <input list="emoji-types" id="emoji-choice" name="emoji-choice">
 <datalist id="emoji-types">
@@ -794,6 +967,8 @@ I’m
 <option value="Drinks" />
 <option value="Birds" />
 </datalist>
+</div>
+<div id="eform-size">
 <fieldset id="size-choice">
 <legend>Select a size:</legend>
 <input type="radio" name="size-choice" id="small-size-choice" value="small" />
@@ -803,6 +978,14 @@ I’m
 <input type="radio" name="size-choice" id="large-size-choice" value="large" />
 <label for="large-size-choice">Large</label>
 </fieldset>
+<label for="eform-size-meter">Size Meter:</label>
+<meter id="eform-size-meter"
+       min="0" max="3"
+       low="1" high="3" optimum="2"
+>
+</meter>
+</div>
+<div id="eform-color">
 <label for="color-choice">Color:</label>
 <select id="color-choice">
     <option value="" disabled selected>--Please choose an option--</option>
@@ -816,49 +999,82 @@ I’m
         <option>Green</option>
     </optgroup>
 </select>
+</div>
+<div id="eform-dream">
+<label for="dream-input">Share a dream <span id="dream-secret">(secret!)</span></label>
+<textarea id="dream-input" cols="1" rows="10" wrap="hard" name="dream-input" placeholder="😶‍🌫️"></textarea>
+</div>
 <br/>
-<label for="form-completion">Form completion:</label>
+<label for="form-completion" id="form-completion-label">Form completion:</label>
 <progress id="form-completion"
-       max="5"
+       max="4"
        value="0">
-       0/5
+       0/4
 </progress>
 <br/>
-<button id="form-submit-button" type="submit" disabled>Submit</button>
+<button id="eform-submit-button" type="submit" disabled>submit</button>
 </form>
+<output
+id="everything-output"
+form="everything-form"
+for="emoji-choice small-size-choice medium-size-choice large-size-choice color-choice"
+name="everything-output"
+
+> </output>
 
 <noscript>Without JavaScript enabled the form above will not be interactive.</noscript>
 
 <script>
     const eform = document.getElementById("everything-form");
+    const eOutput = document.getElementById("everything-output");
     const typeChoice = document.getElementById("emoji-choice");
     const sizeChoice = document.getElementById("size-choice");
+    const sizeMeter = document.getElementById("eform-size-meter")
     const colorChoice = document.getElementById("color-choice");
+    const dreamInput = document.getElementById("dream-input");
     const formCompletion = document.getElementById("form-completion");
-    const eformSubmit = document.getElementById("form-submit-button");
+    const eformSubmit = document.getElementById("eform-submit-button");
     eform.addEventListener("submit", (event) => {
         event.preventDefault();
         const el = event?.target?.elements;
         const emoji = el?.["emoji-choice"]?.value;
         const size = el?.["size-choice"]?.value;
         console.log({ emoji, size })
+        eOutput.value = `emoji: ${emoji}, size: ${size}`;
     })
+    const fields = {
+        "emoji-choice": 0,
+        "small-size-choice": 1,
+        "medium-size-choice": 1,
+        "large-size-choice": 1,
+        "color-choice": 2,
+        "dream-input": 3,
+    }
+    const complete = [0, 0, 0, 0];
     eformSubmit.disabled = false;
     function fillForm(event) {
         const value = event?.target?.value
-        console.log(value);
-
-        if (value) formCompletion.value++;
+        complete[fields[event?.target?.id]] = event?.target?.value ? 1 : 0;
+        const newCompletion = complete.reduce((a,c) => a + c, 0);
+        formCompletion.value = newCompletion
+        formCompletion.innerHTML = `${newCompletion}/4`
     }
     typeChoice.addEventListener("input", fillForm);
     sizeChoice.addEventListener("input", fillForm);
     colorChoice.addEventListener("input", fillForm);
+    dreamInput.addEventListener("input", fillForm);
+    sizeChoice.addEventListener("input", (event) => {
+        const idShort = event.target.id.slice(0, 3);
+        const v = { sma: 1, med: 2, lar: 3 }
+        sizeMeter.value = v?.[idShort] ?? 0;
+    })
 
+    
 </script>
 
 </section>
 
-<section>
+<section id="">
 
 ### Section
 
