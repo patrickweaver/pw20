@@ -255,10 +255,9 @@ portal {
   overflow-y: scroll;
 }
 
-table {
+.table-wrapper {
   overflow-x: scroll;
   max-width: 100%;
-  /* display: inline-block; */
 }
 
 th,
@@ -268,6 +267,10 @@ td {
 
 figure {
   margin: 0;
+  background-color: var(--shadow-light);
+  padding: 0.5rem;
+  border: 1px solid var(--shadow-med);
+  border-radius: 3px;
 }
 
 figure p {
@@ -326,8 +329,13 @@ h2.page-header a:hover {
 .blob figure,
 .post figure,
 .project figure,
-iframe {
+.post iframe,
+.post video,
+.post embed,
+.post object,
+.post portal {
   max-width: 100%;
+  height: auto;
 }
 
 .blob img,
@@ -534,6 +542,10 @@ s::after {
 }
 
 @media (max-width: 600px) {
+  html {
+    margin: 0 0.5em 0 0.6em;
+  }
+
   h1 {
     font-size: 2.5rem;
     line-height: 2.5rem;
@@ -541,6 +553,10 @@ s::after {
 
   h2 {
     font-size: 2rem;
+  }
+
+  figure {
+    padding: 0.25rem;
   }
 
   .project-header .cover,
@@ -566,6 +582,6 @@ s::after {
   #now .section,
   #links .section,
   #error-404 .blob {
-    padding: 0 1rem 0.5rem;
+    padding: 0 0.5rem 0.5rem;
   }
 }

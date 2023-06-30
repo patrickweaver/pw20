@@ -16,6 +16,12 @@ tags:
     margin: 0.5rem;
     }
 
+    .very-long-url-wrapper {
+        max-width: 100%;
+        overflow: scroll;
+        padding-bottom: 1rem;
+    }
+
     #weird-table {
         border: 5px double #8f8f9f;
         padding: 5px;
@@ -93,7 +99,7 @@ tags:
 
     #everything-form {
         display: grid;
-         grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-columns: 20% 20% 20% 20% 20%;
         grid-template-rows: 20% 20% 20% 20% 20%;
     }
 
@@ -117,7 +123,7 @@ tags:
         grid-column-start: 1;
         grid-column-end: 3;
         grid-row-start: 2;
-        grid-row-end: 6;
+        grid-row-end: 7;
         text-align: center;
         margin: 5px 10px 5px 5px;
     }
@@ -162,14 +168,20 @@ tags:
         position: relative;
         border-radius: 3px;
         background-color: #e8ffe8;
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 33% 34% 33%;
     }
 
     #eform-dream > label {
         writing-mode: vertical-lr;
         text-orientation: upright;
-        display: inline-block;
-        vertical-align: top;
-        padding: 5px;
+        vertical-align: middle;
+        padding: 1rem 0.5rem;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 4;
     }
 
     #dream-secret {
@@ -186,11 +198,10 @@ tags:
         font-color: #38789f;
         writing-mode: vertical-lr;
         text-orientation: sideways;
-        display: inline-block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 4;
     }
 
     #form-completion-label {
@@ -217,7 +228,6 @@ tags:
         border: 4px solid #6faf38;
         background-color: #8fcf58;
         color: #ffeff8;
-        font-size: 20px;
         grid-column-start: 3;
         grid-column-end: 5;
         grid-row-start: 5;
@@ -248,6 +258,117 @@ tags:
         box-shadow: -2px -2px 1px #bfbfef;
         border-radius: 3px;
         font-size: 2.5rem;
+    }
+
+    @media (max-width: 600px) {
+        #everything-form {
+        }
+
+        #everything-form {
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20% 20%;
+            grid-template-rows: 15% 20% 20% 20% 10% 10% 5%;
+        }
+
+        #everything-form label {
+            font-size: 1rem;
+        }
+
+        #eform-type {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+
+        #eform-size {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 3;
+            grid-row-end: 6;
+            text-align: center;
+            margin: 5px 10px 5px 5px;
+        }
+
+        #eform-color {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+
+        #eform-dream {
+            grid-column-start: 5;
+            grid-column-end: 6;
+            grid-row-start: 1;
+            grid-row-end: 4;
+        }
+
+        #eform-dream > label {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        #dream-secret {
+            text-orientation: sideways;
+            font-size: 0.5rem;
+        }
+
+        #dream-input {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+
+        #form-completion-label {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 7;
+            grid-row-end: 8;
+            font-size: 0.75rem;
+            margin: 0;
+        }
+
+        #form-completion {
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 7;
+            grid-row-end: 8;
+            margin-top: 0;
+        }
+
+        #eform-submit-button {
+            grid-column-start: 5;
+            grid-column-end: 6;
+            grid-row-start: 4;
+            grid-row-end: 8;
+            border: 4px solid #6faf38;
+            border-radius: 2px;
+            box-shadow: -4px -4px 3px #bfbfef;
+            margin: 5px;
+            font-size: 1rem;
+            font-family: serif;
+            position: relative;
+            writing-mode: vertical-lr;
+            text-orientation: sideways;
+        }
+
+        #eform-submit-button:hover {
+            border-radius: 4px;
+            font-size: 1.125rem;
+        }
+
+        #eform-submit-button:active {
+            border-radius: 6px;
+            top: -2px;
+            left:-2px;
+            box-shadow: -2px -2px 1px #bfbfef;
+            border-radius: 2px;
+            font-size: 1.25rem;
+        }
     }
     
 </style>
@@ -558,7 +679,11 @@ Hello, World
 
 `<var>` is a way to indicate semantically that a string is a variable for either math or programming. For example, rendering the pythagorean theorem uses both `<var>` and `<sup>`: <var>a</var><sup>2</sup> + <var>b</var><sup>2</sup> = <var>c</var><sup>2</sup>.
 
-`<wbr>` was also a new element until now, but it solves a problem I have hit many times before, breaking long “words” at certain points, specifically URLs. If I put a `<wbr>` element at clear break points in this URL: [https://www.patrickweaver.net<wbr />/pages<wbr />/a<wbr />very<wbr />long<wbr />url<wbr />without<wbr />any<wbr />punctuation<wbr />but<wbr />still<wbr />made<wbr />up<wbr />of<wbr />words/](https://www.patrickweaver.net/pages/averylongurlwithoutanypunctuationbutstillmadeupofwords/) then it will break at clear points at different screen widths, which is is more readable compared to the same link without the `<wbr>` elements: [https://www.patrickweaver.net/pages/averylongurlwithoutanypunctuationbutstillmadeupofwords/](https://www.patrickweaver.net/pages/averylongurlwithoutanypunctuationbutstillmadeupofwords/), though including hyphen characters in the URL also creates clear breakpoints in modern browsers.
+`<wbr>` was also a new element until now, but it solves a problem I have hit many times before, breaking long “words” at certain points, specifically URLs. If I put a `<wbr>` element at clear break points in this URL: [https://www.patrickweaver.net<wbr />/pages<wbr />/a<wbr />very<wbr />long<wbr />url<wbr />without<wbr />any<wbr />punctuation<wbr />but<wbr />still<wbr />made<wbr />up<wbr />of<wbr />words/](https://www.patrickweaver.net/pages/averylongurlwithoutanypunctuationbutstillmadeupofwords/) then it will break at clear points at different screen widths, which is is more readable compared to the same link without the `<wbr>` elements:
+
+<p class="very-long-url-wrapper"><a href="https://www.patrickweaver.net/pages/averylongurlwithoutanypunctuationbutstillmadeupofwords/">https://www.patrickweaver.net/pages/averylongurlwithoutanypunctuationbutstillmadeupofwords/</a></p>
+
+Though including hyphen characters in the URL also creates clear breakpoints in modern browsers. I did have to wrap the URL above in a special scrollable `<p>` to prevent it from breaking the layout of the rest of the page.
 
 </section>
 
@@ -864,6 +989,7 @@ It’s not a new insight that `<table>` elements were overused for layout purpos
 
 I don’t have any tabular data as this is an exclusively <em>document</em> based blog post, but below I’ve added a table with some custom CSS and “data” on emoji that is likely only accurate for the Apple emoji set in 2023. I wasn’t familiar with `<col>` and `<colgroup>` before, but I don’t know that there are many cases where I would use them rather than a more custom, non `<table>` design.
 
+<div class="table-wrapper">
 <table id="weird-table">
     <caption>
         A table with a custom CSS
@@ -934,6 +1060,7 @@ I don’t have any tabular data as this is an exclusively <em>document</em> base
         </tr>
     </tfoot>
 </table>
+</div>
 </section>
 
 <section id="forms">
@@ -956,6 +1083,8 @@ I don’t have any tabular data as this is an exclusively <em>document</em> base
 - [`<textarea>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea)
 
 I’m go to <a href="#text-content">text-content</a>.
+
+<label for="everything-form">Fill out this form to get an emoji surprise!</label>
 
 <form id="everything-form">
 <div id="eform-type">
@@ -1068,8 +1197,6 @@ name="everything-output"
         const v = { sma: 1, med: 2, lar: 3 }
         sizeMeter.value = v?.[idShort] ?? 0;
     })
-
-    
 </script>
 
 </section>
