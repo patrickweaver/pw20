@@ -111,7 +111,7 @@ tags:
         grid-column-start: 1;
         grid-column-end: 3;
         grid-row-start: 1;
-        grid-row-end: 2;
+        grid-row-end: 3;
         background-color: #f8fffa;
         border-radius: 3px;
         border: 1px solid #d8dfda;
@@ -122,7 +122,7 @@ tags:
     #eform-size {
         grid-column-start: 1;
         grid-column-end: 3;
-        grid-row-start: 2;
+        grid-row-start: 3;
         grid-row-end: 7;
         text-align: center;
         margin: 5px 10px 5px 5px;
@@ -238,6 +238,7 @@ tags:
         font-size: 2rem;
         font-family: serif;
         position: relative;
+        cursor: pointer;
     }
 
     #eform-submit-button:hover {
@@ -260,6 +261,17 @@ tags:
         font-size: 2.5rem;
     }
 
+    #everything-output {
+        border: 4px dotted #f47a9e;
+        border-radius: 10px;
+        width: 300px;
+        height: 100px;
+        display: block;
+        margin: 2rem 1rem;
+        text-align: center;
+        padding: 1rem;
+    }
+
     @media (max-width: 600px) {
         #everything-form {
         }
@@ -267,7 +279,7 @@ tags:
         #everything-form {
             display: grid;
             grid-template-columns: 20% 20% 20% 20% 20%;
-            grid-template-rows: 15% 20% 20% 20% 10% 10% 5%;
+            grid-template-rows: 25% 25% 35% 5% 10%;
         }
 
         #everything-form label {
@@ -281,20 +293,20 @@ tags:
             grid-row-end: 2;
         }
 
-        #eform-size {
-            grid-column-start: 1;
-            grid-column-end: 5;
-            grid-row-start: 3;
-            grid-row-end: 6;
-            text-align: center;
-            margin: 5px 10px 5px 5px;
-        }
-
         #eform-color {
             grid-column-start: 1;
             grid-column-end: 5;
             grid-row-start: 2;
             grid-row-end: 3;
+        }
+
+        #eform-size {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            text-align: center;
+            margin: 5px 10px 5px 5px;
         }
 
         #eform-dream {
@@ -308,7 +320,7 @@ tags:
             grid-column-start: 1;
             grid-column-end: 5;
             grid-row-start: 1;
-            grid-row-end: 3;
+            grid-row-end: 2;
         }
 
         #dream-secret {
@@ -319,24 +331,25 @@ tags:
         #dream-input {
             grid-column-start: 1;
             grid-column-end: 5;
-            grid-row-start: 3;
+            grid-row-start: 2;
             grid-row-end: 4;
         }
 
         #form-completion-label {
             grid-column-start: 1;
-            grid-column-end: 4;
-            grid-row-start: 7;
-            grid-row-end: 8;
+            grid-column-end: 5;
+            grid-row-start: 4;
+            grid-row-end: 5;
             font-size: 0.75rem;
             margin: 0;
+            text-align: left;
         }
 
         #form-completion {
-            grid-column-start: 4;
+            grid-column-start: 1;
             grid-column-end: 5;
-            grid-row-start: 7;
-            grid-row-end: 8;
+            grid-row-start: 5;
+            grid-row-end: 6;
             margin-top: 0;
         }
 
@@ -344,7 +357,7 @@ tags:
             grid-column-start: 5;
             grid-column-end: 6;
             grid-row-start: 4;
-            grid-row-end: 8;
+            grid-row-end: 6;
             border: 4px solid #6faf38;
             border-radius: 2px;
             box-shadow: -4px -4px 3px #bfbfef;
@@ -358,7 +371,8 @@ tags:
 
         #eform-submit-button:hover {
             border-radius: 4px;
-            font-size: 1.125rem;
+            font-size: 1rem;
+            writing-mode: vertical-rl;
         }
 
         #eform-submit-button:active {
@@ -1088,13 +1102,13 @@ I’m go to <a href="#text-content">text-content</a>.
 
 <form id="everything-form">
 <div id="eform-type">
-<label for="emoji-choice">Choose an emoji type:</label>
-<input list="emoji-types" id="emoji-choice" name="emoji-choice">
+<label for="type-choice">Choose an emoji type:</label>
+<input list="emoji-types" id="type-choice" name="type-choice">
 <datalist id="emoji-types">
 <option value="Fruit" />
 <option value="Dessert" />
 <option value="Drinks" />
-<option value="Birds" />
+<option value="Animals" />
 </datalist>
 </div>
 <div id="eform-size">
@@ -1102,15 +1116,13 @@ I’m go to <a href="#text-content">text-content</a>.
 <legend>Select a size:</legend>
 <input type="radio" name="size-choice" id="small-size-choice" value="small" />
 <label for="small-size-choice">Small</label>
-<input type="radio" name="size-choice" id="medium-size-choice" value="medium" />
-<label for="medium-size-choice">Medium</label>
 <input type="radio" name="size-choice" id="large-size-choice" value="large" />
 <label for="large-size-choice">Large</label>
 </fieldset>
 <label for="eform-size-meter">Size Meter:</label>
 <meter id="eform-size-meter"
-       min="0" max="3"
-       low="1" high="3" optimum="2"
+       min="0" max="2"
+       low="1" high="2" optimum="2"
 >
 </meter>
 </div>
@@ -1143,12 +1155,12 @@ I’m go to <a href="#text-content">text-content</a>.
 <br/>
 <button id="eform-submit-button" type="submit" disabled>submit</button>
 </form>
+<h4>Your emoji:</h4>
 <output
 id="everything-output"
 form="everything-form"
-for="emoji-choice small-size-choice medium-size-choice large-size-choice color-choice"
+for="type-choice small-size-choice large-size-choice color-choice"
 name="everything-output"
-
 > </output>
 
 <noscript>Without JavaScript enabled the form above will not be interactive.</noscript>
@@ -1156,25 +1168,31 @@ name="everything-output"
 <script>
     const eform = document.getElementById("everything-form");
     const eOutput = document.getElementById("everything-output");
-    const typeChoice = document.getElementById("emoji-choice");
+    const typeChoice = document.getElementById("type-choice");
     const sizeChoice = document.getElementById("size-choice");
     const sizeMeter = document.getElementById("eform-size-meter")
     const colorChoice = document.getElementById("color-choice");
     const dreamInput = document.getElementById("dream-input");
     const formCompletion = document.getElementById("form-completion");
     const eformSubmit = document.getElementById("eform-submit-button");
+    let selectedEmoji = "❌";
+    let selectedEmojiName = "Form Incomplete";
     eform.addEventListener("submit", (event) => {
         event.preventDefault();
         const el = event?.target?.elements;
-        const emoji = el?.["emoji-choice"]?.value;
+        const type = el?.["type-choice"]?.value;
         const size = el?.["size-choice"]?.value;
-        console.log({ emoji, size })
-        eOutput.value = `emoji: ${emoji}, size: ${size}`;
+        const color = el?.["color-choice"]?.value;
+        console.log({ type, size, color})
+        const selected = selectEmoji(type, size, color);
+        console.log(selected)
+        selectedEmoji = selected.emoji;
+        selectedEmojiName = selected.name;
+        eOutput.value = `${selectedEmoji}: ${selectedEmojiName}`;
     })
     const fields = {
-        "emoji-choice": 0,
+        "type-choice": 0,
         "small-size-choice": 1,
-        "medium-size-choice": 1,
         "large-size-choice": 1,
         "color-choice": 2,
         "dream-input": 3,
@@ -1183,10 +1201,12 @@ name="everything-output"
     eformSubmit.disabled = false;
     function fillForm(event) {
         const value = event?.target?.value
+        const idShort = event?.target?.id?.slice(0, 3) ?? null;
         complete[fields[event?.target?.id]] = event?.target?.value ? 1 : 0;
         const newCompletion = complete.reduce((a,c) => a + c, 0);
         formCompletion.value = newCompletion
         formCompletion.innerHTML = `${newCompletion}/4`
+        console.log({ idShort })
     }
     typeChoice.addEventListener("input", fillForm);
     sizeChoice.addEventListener("input", fillForm);
@@ -1194,9 +1214,141 @@ name="everything-output"
     dreamInput.addEventListener("input", fillForm);
     sizeChoice.addEventListener("input", (event) => {
         const idShort = event.target.id.slice(0, 3);
-        const v = { sma: 1, med: 2, lar: 3 }
+        const v = { sma: 1, lar: 2 }
         sizeMeter.value = v?.[idShort] ?? 0;
     })
+    function selectEmoji(type, size, color) {
+        if (type === "Fruit") {
+            if (color === "Orange") {
+                if (size === "small") {
+                    return { emoji: "", name: "" }
+                } else if (size === "large") {
+                    return { emoji: "", name: "" }
+                }
+            } else if (color === "Red") {
+                if (size === "small") {
+                    return { emoji: "", name: "" }
+                } else if (size === "large") {
+                    return { emoji: "", name: "" }
+                }
+            } else if (color === "Yellow") {
+                if (size === "small") {
+                    return { emoji: "", name: "" }
+                } else if (size === "large") {
+                    return { emoji: "", name: "" }
+                }
+            } else if (color === "Blue") {
+                if (size === "small") {
+                    return { emoji: "", name: "" }
+                } else if (size === "large") {
+                    return { emoji: "", name: "" }
+                }
+            } else if (color === "Green") {
+                if (size === "small") {
+                    return { emoji: "", name: "" }
+                } else if (size === "large") {
+                    return { emoji: "", name: "" }
+                }
+            }
+        } else if (type === "Dessert") {
+            if (color === "Orange") {
+                if (size === "small") {
+                    return { emoji: "🥮", name: "Mooncake" }
+                } else if (size === "large") {
+                    return { emoji: "🥧", name: "Pie" }
+                }
+            } else if (color === "Red") {
+                if (size === "small") {
+                    return { emoji: "🍫", name: "Chocolate" }
+                } else if (size === "large") {
+                    return { emoji: "🍧", name: "Shaved Ice" }
+                }
+            } else if (color === "Yellow") {
+                if (size === "small") {
+                    return { emoji: "🍨", name: "Ice Cream" }
+                } else if (size === "large") {
+                    return { emoji: "🍰", name: "Cake" }
+                }
+            } else if (color === "Blue") {
+                if (size === "small") {
+                    return { emoji: "🍬", name: "Candy" }
+                } else if (size === "large") {
+                    return { emoji: "🍭", name: "Lollipop" }
+                }
+            } else if (color === "Green") {
+                if (size === "small") {
+                    return { emoji: "🍡", name: "Dango" }
+                } else if (size === "large") {
+                    return { emoji: "🥗", name: "Dessert Salad" }
+                }
+            }
+        } else if (type === "Drinks") {
+            if (color === "Orange") {
+                if (size === "small") {
+                    return { emoji: "🍺", name: "Beer" }
+                } else if (size === "large") {
+                    return { emoji: "🍻", name: "Two Beers" }
+                }
+            } else if (color === "Red") {
+                if (size === "small") {
+                    return { emoji: "🍷", name: "Wine" }
+                } else if (size === "large") {
+                    return { emoji: "🥤", name: "Big Soda Cup" }
+                }
+            } else if (color === "Yellow") {
+                if (size === "small") {
+                    return { emoji: "🥂", name: "Champagne Flute" }
+                } else if (size === "large") {
+                    return { emoji: "🍹", name: "Cocktail" }
+                }
+            } else if (color === "Blue") {
+                if (size === "small") {
+                    return { emoji: "🍶", name: "Sake" }
+                } else if (size === "large") {
+                    return { emoji: "🍶", name: "Sake" }
+                }
+            } else if (color === "Green") {
+                if (size === "small") {
+                    return { emoji: "🧃", name: "Juice Box" }
+                } else if (size === "large") {
+                    return { emoji: "🍾", name: "Champagne Bottle" }
+                }
+            }
+        } else if (type === "Animals") {
+            if (color === "Orange") {
+                if (size === "small") {
+                    return { emoji: "🦊", name: "Fox" }
+                } else if (size === "large") {
+                    return { emoji: "🐅", name: "Tiger" }
+                }
+            } else if (color === "Red") {
+                if (size === "small") {
+                    return { emoji: "🦀", name: "Crab" }
+                } else if (size === "large") {
+                    return { emoji: "🦑", name: "Squid" }
+                }
+            } else if (color === "Yellow") {
+                if (size === "small") {
+                    return { emoji: "🐝", name: "Bee" }
+                } else if (size === "large") {
+                    return { emoji: "🐱", name: "Cat" }
+                }
+            } else if (color === "Blue") {
+                if (size === "small") {
+                    return { emoji: "🦋", name: "Butterfly" }
+                } else if (size === "large") {
+                    return { emoji: "🐋", name: "Whale" }
+                }
+            } else if (color === "Green") {
+                if (size === "small") {
+                    return { emoji: "🐸", name: "Frog" }
+                } else if (size === "large") {
+                    return { emoji: "🐊", name: "Crocodile" }
+                }
+            }
+        }
+        return { emoji:"❌", name: "Invalid Submission" };
+    }
 </script>
 
 </section>
