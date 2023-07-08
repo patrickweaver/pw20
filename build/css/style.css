@@ -6,6 +6,7 @@
   --bg-1: #ffffff;
   --bg-2: #fff4bf;
   --bg-3: #e0c438;
+  --bg-4: #fffbe8;
   --text-1: #404040;
   --text-2: #606060;
   --text-3: #040404;
@@ -73,6 +74,30 @@ hr:after {
   border-radius: 2rem;
   height: 2rem;
   display: inline-block;
+}
+
+dialog {
+  background-color: var(--bg-4);
+  border-color: var(--text-1);
+}
+
+details {
+  border: 1px solid var(--text-2);
+  margin: 1rem 0;
+
+  border-radius: 2px;
+}
+
+summary {
+  background-color: var(--bg-4);
+}
+
+details > * {
+  padding: 2px 5px 0px;
+}
+
+details > div {
+  border-top: 1px solid var(--text-1);
 }
 
 #site-title {

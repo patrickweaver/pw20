@@ -265,11 +265,18 @@ tags:
         border: 4px dotted #f47a9e;
         border-radius: 10px;
         width: 300px;
+        max-width: 90%;
         height: 100px;
         display: block;
         margin: 2rem 1rem;
         text-align: center;
         padding: 1rem;
+    }
+
+    #palm-sheriff {
+        font-size: 0.75rem;
+        line-height: 0.75rem;
+        margin: 0 40%;
     }
 
     @media (max-width: 600px) {
@@ -383,6 +390,12 @@ tags:
             border-radius: 2px;
             font-size: 1.25rem;
         }
+
+        #palm-sheriff {
+        font-size: 0.75rem;
+        line-height: 0.75rem;
+        margin: 0 30%;
+    }
     }
     
 </style>
@@ -1350,6 +1363,43 @@ name="everything-output"
         return { emoji:"❌", name: "Invalid Submission" };
     }
 </script>
+
+</section>
+
+<section id="">
+
+### Interactive elements
+
+- [`<details>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details)
+- [`<dialog>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)
+- [`<summary>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary)
+
+The `<details>` and `<summary>` combination is probably the most common, “You don’t need JavaScript to…” element. Making this kind of expand/collapse interactive view was one of the first things I used JavaScript for (it was probably jQuery). I remember it being somewhat confusing at the time (2006?), so it’s funny to me to see it so easy with just a couple HTML tags.
+
+<details>
+  <summary>Speculation about <code>&lt;details&gt;</code></summary>
+  <div>I do wonder if <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> were being considered for the HTML spec today, if they would be withdrawn in favor of a similar effect using CSS.</div>
+</details>
+
+I wasn’t aware of the HTML only `<dialog>` before using it here. It requires JavaScript to be useful beyond just its stylistic impact, but it’s an interesting way to create, more custom than `alert()`, but still simple, interactions, because while `alert()` is styled by the browser `<dialog>` can be styled with CSS.
+
+<dialog open>
+  <p>Guess who?!</p>
+  <form method="dialog">
+    <button>Reveal!</button>
+  </form>
+</dialog>
+
+<pre id="palm-sheriff" role="img" aria-label="A sheriff whose body is made of palm trees.">
+       🤠
+     🌴🌴🌴
+   🌴  🌴  🌴
+   👇 🌴 🌴 👇
+　 　 🌴 🌴
+　 　 🌴 🌴
+　 　 👢 👢
+  the palm sheriff
+</pre>
 
 </section>
 
