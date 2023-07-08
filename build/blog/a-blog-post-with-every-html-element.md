@@ -1366,7 +1366,7 @@ name="everything-output"
 
 </section>
 
-<section id="">
+<section id="interactive-elements">
 
 ### Interactive elements
 
@@ -1381,7 +1381,7 @@ The `<details>` and `<summary>` combination is probably the most common, “You 
   <div>I do wonder if <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> were being considered for the HTML spec today, if they would be withdrawn in favor of a similar effect using CSS.</div>
 </details>
 
-I wasn’t aware of the HTML only `<dialog>` before using it here. It requires JavaScript to be useful beyond just its stylistic impact, but it’s an interesting way to create, more custom than `alert()`, but still simple, interactions, because while `alert()` is styled by the browser `<dialog>` can be styled with CSS.
+I wasn’t aware of the HTML only `<dialog>` before using it here. It requires JavaScript to be useful beyond just its stylistic impact, but it’s an interesting way to create interactions that are more custom than `alert()`, but still simple, because while `alert()` is styled by the browser `<dialog>` can be styled with CSS.
 
 <dialog open>
   <p>Guess who?!</p>
@@ -1400,6 +1400,62 @@ I wasn’t aware of the HTML only `<dialog>` before using it here. It requires J
 　 　 👢 👢
   the palm sheriff
 </pre>
+
+</section>
+
+<section id="web-components">
+
+### Web Components
+
+- [`<slot>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot)
+- [`<template>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template)
+
+Native web components had been on a (long) list of “things I should learn more about” for a while, so I was glad to get to this section of the MDN documentation.
+
+<template id="t-card">
+    <style>
+        .card {
+            border: 2px solid var(--text-2);
+            border-radius: 5px;
+            padding: 5px 10px;
+            background-color: #f8f9fa;
+            display: inline-block;
+            min-width: 300px;
+            max-width: 500px;
+            width: 100%;
+        }
+    </style>
+    <div class="card">
+        <h1>Template Card</h1>
+        <p>
+            This is a template card.
+        </p>
+    </div>
+</template>
+
+<script>
+    customElements.define("t-card", class extends HTMLElement {
+        constructor() {
+            super();
+            let template = document.getElementById("t-card");
+            let templateContent = template.content;
+            const shadowRoot = this.attachShadow({ mode: "open" });
+            shadowRoot.appendChild(templateContent.cloneNode(true));
+        }
+    });
+</script>
+
+<div id="template-placeholder" style="display: none;"></div>
+
+<t-card></t-card>
+
+<script>
+    let placeholder = document.getElementById("template-placeholder");
+    let template = document.getElementById("t-card");
+    let templateContent = template.content;
+    // placeholder.insertAdjacentElement("afterend", templateContent);
+    document.body.appendChild(templateContent);
+</script>
 
 </section>
 
