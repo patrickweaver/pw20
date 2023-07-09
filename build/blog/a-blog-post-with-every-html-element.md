@@ -860,7 +860,7 @@ Speaking of `<iframe>` it’s also interesting that the very 90s name “iframe�
 
 <figure>
 <iframe width="150" height="200" src="/blog/a-blog-post-with-every-html-element/#image-with-srcset"></iframe>
-<figcaption>An embed of this page scrolled to the `<img>` tag with a `srcset` property at 150px wide.
+<figcaption>An embed of this page scrolled to the <code>&lt;img&gt;</code> tag with a <code>srcset</code> property at 150px wide.
 </figure>
 
 Scrolling down further it’s interesting that a recursive `<iframe>` doesn't render.
@@ -1543,11 +1543,32 @@ I’ve used web components below to create a table of contents for this post bel
 
 </section>
 
-<section id="">
+<section id="obsolete-and-deprecated-elements">
 
-### Section
+### Obsolete and Deprecated Elements
 
-- [`<>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/)
+- [`<acronym>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/acronym)
+- [`<big>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/big)
+- [`<center>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/center)
+- `<content>`
+- [`<dir>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dir)
+- [`<font>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/font)
+- [`<frame>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/frame)
+- [`<frameset>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/frameset)
+- [`<image>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/image)
+- [`<marquee>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/marquee)
+- [`<menuitem>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menuitem)
+- [`<nobr>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nobr)
+- [`<noembed>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noembed)
+- [`<noframes>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noframes)
+- [`<param>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/param)
+- [`<plaintext>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/plaintext)
+- [`<rb>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rb)
+- [`<rtc>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rtc)
+- `<shadow>`
+- [`<strike>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strike)
+- [`<tt>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tt)
+- [`<xmp>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/xmp)
 
 Description of section
 
