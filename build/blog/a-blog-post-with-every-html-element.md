@@ -426,7 +426,7 @@ I didn’t have to make any changes to the `<html>` tag for this post, but one t
 
 <section id="document-metadata">
 
-### Document metadata
+### Document Metadata
 
 - [`<base>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base)
 - [`<head>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head)
@@ -441,7 +441,7 @@ I wasn’t familiar with the `<base>` tag before writing this post, though I've 
 
 <section id="sectioning-root">
 
-### Sectioning root
+### Sectioning Root
 
 - [`<body>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body)
 
@@ -451,7 +451,7 @@ Like the Document metadata tags, this was of course already present before this 
 
 <section id="content-sectioning">
 
-### Content sectioning
+### Content Sectioning
 
 - [`<address>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address)
 - [`<article>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article)
@@ -490,7 +490,7 @@ The `<main>` element was one of the initial curiosities that led me down the pat
 
 <section id="text-content">
 
-### Text content
+### Text Content
 
 - [`<blockquote>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote)
 - [`<dd>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dd)
@@ -577,7 +577,7 @@ write semantic HTML
 
 <section id="inline-text-semantics">
 
-### Inline text semantics
+### Inline Text Semantics
 
 - [`<a>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)
 - [`<abbr>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr)
@@ -716,7 +716,7 @@ Though including hyphen characters in the URL also creates clear breakpoints in 
 
 <section id="image-and-multimedia">
 
-### Image and multimedia
+### Image and Multimedia
 
 - [`<area>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area)
 - [`<audio>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio)
@@ -845,7 +845,7 @@ One reason for this may be that there are still some quirks with `<video>` eleme
 
 <section id="embedded-content">
 
-### Embedded content
+### Embedded Content
 
 - [`<embed>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed)
 - [`<iframe>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe)
@@ -988,7 +988,7 @@ On the other hand, for most of the interactive websites I’ve made, I’ve rare
 
 <section id="demarcating-edits">
 
-### Demarcating edits
+### Demarcating Edits
 
 - [`<del>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del)
 - [`<ins>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins)
@@ -999,7 +999,7 @@ Another set of <ins>new to me</ins> elements <del>I had never come across before
 
 <section id="table-content">
 
-### Table content
+### Table Content
 
 - [`<caption>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/caption)
 - [`<col>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/col)
@@ -1110,6 +1110,8 @@ I don’t have any tabular data as this is an exclusively <em>document</em> base
 - [`<textarea>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea)
 
 I’m go to <a href="#text-content">text-content</a>.
+
+TODO
 
 <label for="everything-form">Fill out this form to get an emoji surprise!</label>
 
@@ -1368,7 +1370,7 @@ name="everything-output"
 
 <section id="interactive-elements">
 
-### Interactive elements
+### Interactive Elements
 
 - [`<details>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details)
 - [`<dialog>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)
@@ -1410,34 +1412,121 @@ I wasn’t aware of the HTML only `<dialog>` before using it here. It requires J
 - [`<slot>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot)
 - [`<template>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template)
 
-Native web components had been on a (long) list of “things I should learn more about” for a while, so I was glad to get to this section of the MDN documentation.
+Web components had been on a (long) list of “things I should learn more about” for a while, so I was glad to get to this section of the MDN documentation. I was surprised that JavaScript (and `Class` syntax at that) was necessary to get web components to render, but after reading more about the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM">Shadow DOM</a>, it makes sense, because HTML has no built in way to encapsulate styles, though it does seem to be somewhat similar conceptually to `<iframe>` elements.
 
-<template id="t-card">
+I’ve used web components below to create a table of contents for this post below, though I’m not making the best use of them. One thing I couldn’t quickly figure out how to do, when compared to components from frontend frameworks, is pass in properties that are used themselves as properties of elements in the child template, so in the list below I have to pass a full `<a>` element into each child (which renders the `<li>`), to be able to set the correct `href` property. After finishing this post I will someday read more about web components and maybe figure out something I’m missing now.
+
+<template id="table-of-contents-item">
+    <li><slot name="emoji">✅</slot> <slot name="table-of-contents-link">End of List</slot>
+</template>
+
+<template id="table-of-contents">
     <style>
-        .card {
+        .table-of-contents {
             border: 2px solid var(--text-2);
             border-radius: 5px;
             padding: 5px 10px;
-            background-color: #f8f9fa;
+            background: rgb(255,252,234);
+            background: linear-gradient(324deg, rgba(255,252,234,1) 0%, rgba(249,239,255,1) 21%, rgba(255,239,231,1) 100%);
             display: inline-block;
             min-width: 300px;
-            max-width: 500px;
-            width: 100%;
+            width: 80%;
+            margin: 0 10%;
+        }
+        .table-of-contents h4 {
+            margin: 0.5rem 0;
+            font-size: 1.6rem;
+            line-height: 1.8rem;
         }
     </style>
-    <div class="card">
-        <h1>Template Card</h1>
-        <p>
-            This is a template card.
-        </p>
+    <div class="table-of-contents">
+        <h4>Table of Contents</h4>
+        <ul>
+            <table-of-contents-item>
+                <span slot="emoji">📜</span>
+                <a slot="table-of-contents-link" href="#main-root">Main Root</a>
+            </table-of-contents-item>
+            <table-of-contents-item>
+                <span slot="emoji">📑</span>
+                <a slot="table-of-contents-link"  href="#document-metadata">Document Metadata</a>
+            </table-of-contents-item>
+            <table-of-contents-item>
+                <span slot="emoji">📂</span>
+                <a slot="table-of-contents-link"  href="#sectioning-root">Sectioning Root</a>
+            </table-of-contents-item>
+            <table-of-contents-item>
+                <span slot="emoji">🗂</span>
+                <a slot="table-of-contents-link"  href="#content-sectioning">Content Sectioning</a>
+            </table-of-contents-item>
+            <table-of-contents-item>
+                <span slot="emoji">🔡</span>
+                <a slot="table-of-contents-link"  href="#text-content">Text Content</a>
+            </table-of-contents-item>
+            <table-of-contents-item>
+                <span slot="emoji">📝</span>
+                <a slot="table-of-contents-link"  href="#inline-text-semantics">Inline Text Semantics</a>
+            </table-of-contents-item>
+            <table-of-contents-item>
+                <span slot="emoji">🖼</span>
+                <a slot="table-of-contents-link"  href="#image-and-multimedia">Image and Multimedia</a>
+            </table-of-contents-item>
+            <table-of-contents-item>
+                <span slot="emoji">🪟</span>
+                <a slot="table-of-contents-link"  href="#embedded-content">Embedded Content</a>
+            </table-of-contents-item>
+            <table-of-contents-item>
+                <span slot="emoji">🧮</span>
+                <a slot="table-of-contents-link"  href="#svg-and-mathml">SVG and MathML</a>
+            </table-of-contents-item>
+            <table-of-contents-item>
+                <span slot="emoji">🪄</span>
+                <a slot="table-of-contents-link"  href="#scripting">Scripting</a>
+            </table-of-contents-item>
+            <table-of-contents-item>
+                <span slot="emoji">🛠</span>
+                <a slot="table-of-contents-link"  href="#demarcating-edits">Demarcating Edits</a>
+            </table-of-contents-item>
+            <table-of-contents-item>
+                <span slot="emoji">📦</span>
+                <a slot="table-of-contents-link"  href="#table-content">Table Content</a>
+            </table-of-contents-item>
+            <table-of-contents-item>
+                <span slot="emoji">📋</span>
+                <a slot="table-of-contents-link"  href="#forms">Forms</a>
+            </table-of-contents-item>
+            <table-of-contents-item>
+                <span slot="emoji">🛝</span>
+                <a slot="table-of-contents-link"  href="#interactive-elements">Interactive Elements</a>
+            </table-of-contents-item>
+            <table-of-contents-item>
+                <span slot="emoji">🕸</span>
+                <a slot="table-of-contents-link"  href="#web-components">Web Components</a>
+            </table-of-contents-item>
+            <table-of-contents-item>
+                <span slot="emoji">📠</span>
+                <a slot="table-of-contents-link"  href="#"></a>
+            </table-of-contents-item>
+            <table-of-contents-item>
+            </table-of-contents-item>
+        </ul>
     </div>
+
 </template>
 
 <script>
-    customElements.define("t-card", class extends HTMLElement {
+    customElements.define("table-of-contents-item", class extends HTMLElement {
         constructor() {
             super();
-            let template = document.getElementById("t-card");
+            let template = document.getElementById("table-of-contents-item");
+            let templateContent = template.content;
+            const shadowRoot = this.attachShadow({ mode: "open" });
+            shadowRoot.appendChild(templateContent.cloneNode(true));
+        }
+    });
+    customElements.define("table-of-contents", class extends HTMLElement {
+        constructor() {
+            super();
+            let template = document.getElementById("table-of-contents");
             let templateContent = template.content;
             const shadowRoot = this.attachShadow({ mode: "open" });
             shadowRoot.appendChild(templateContent.cloneNode(true));
@@ -1445,17 +1534,12 @@ Native web components had been on a (long) list of “things I should learn more
     });
 </script>
 
-<div id="template-placeholder" style="display: none;"></div>
+<noscript>Without JavaScript enabled components above will not render.</noscript>
 
-<t-card></t-card>
-
-<script>
-    let placeholder = document.getElementById("template-placeholder");
-    let template = document.getElementById("t-card");
-    let templateContent = template.content;
-    // placeholder.insertAdjacentElement("afterend", templateContent);
-    document.body.appendChild(templateContent);
-</script>
+<table-of-contents>
+    <span slot="card-title">HTML</span>
+    <span slot="card-body">Hyper Text Markup Language</span>
+</table-of-contents>
 
 </section>
 
