@@ -615,6 +615,7 @@ As with other very common tags I was curious to get to the documentation for `<a
 
 The distinction between `<b>` and `<strong>`, as the docs would have you believe, is not what I had thought it was (that `<strong>` was the HTML5 replacement for `<b>`), and I think is a more nuanced and overlapping than the technical nature of the documentation is really able to convey. The way I will probably explain it to other people in the future is that, for the most part, you should use `<b>` for <b>single words</b> (or compound words), <strong>and `<strong>` for whole sentences or phrases</strong>. This is more a rule of thumb and bypasses the actual distinction. The documentation reads:
 
+<!-- TODO Should figure be used here? -->
 <figure>
     <blockquote>
         The <code>&lt;strong&gt;</code> element is for content that is of greater importance, while the <code>&lt;b&gt;</code> element is used to draw attention to text without indicating that it’s more important.
@@ -1534,12 +1535,9 @@ I’ve used web components below to create a table of contents for this post bel
     });
 </script>
 
-<noscript>Without JavaScript enabled components above will not render.</noscript>
+<table-of-contents></table-of-contents>
 
-<table-of-contents>
-    <span slot="card-title">HTML</span>
-    <span slot="card-body">Hyper Text Markup Language</span>
-</table-of-contents>
+<noscript>Without JavaScript enabled components above will not render.</noscript>
 
 </section>
 
@@ -1570,7 +1568,69 @@ I’ve used web components below to create a table of contents for this post bel
 - [`<tt>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tt)
 - [`<xmp>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/xmp)
 
-Description of section
+There are of course a few <big>deprecated</big> <acronym title="Hyper Text Markup Language">HTML</acronym> elements, so why not <font color="#2FCF6F" face="times" size="5">include</font> them here at the end.
+
+Everyone’s favorite is of course,
+
+<center><code>&lt;marquee&gt;</code></center>
+
+<marquee>Hello!</marquee>
+
+There are some other strange ones as well though. I couldn’t implement `<content>` here because it is a never fully implemented part of the web components spec. And `<dir>` is a very <em>webserver</em> version of `<ul>` for listing directories. Since my Eleventy static site generator does use directories here’s a list:
+
+<dir>
+    <li><a href="/blog">/blog</a></li>
+    <li><a href="/css">/css</a></li>
+    <li><a href="/images">/images</a></li>
+    <li><a href="/notes">/notes</a></li>
+    <li><a href="/pages">/pages</a></li>
+    <li><a href="/portfolio">/portfolio</a></li>
+    <!-- TODO -->
+</dir>
+
+Some of deprecated elements won’t render without some extra work, for example `<frame>` and `<frameset>` are designed to be used instead of a `<body>`, for I guess some kind of collage web page made up of other pages. I’ve ironically only been able to use them inside of an `<iframe>` below.
+
+<figure>
+<iframe width="300" height="300" src="/pages/frameset"></iframe>
+<figcaption>An embed of a page with <code>&lt;frameset&gt;</code> and <code>&lt;frame&gt;</code> elements that itself embeds the Links page of this site.
+</figure>
+
+I expected that `<image>` wouldn’t work since the MDN documentation says:
+
+<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/image">
+    This does not appear to have been part of any formal specification. It was mentioned in HTML+ Discussion Document - Dave Raggett, November 8, 1993 (Section 5.9 - Images), but was not part of the first revision of HyperText Markup Language Specification - 2.0 in 1994.
+</blockquote>
+
+But it does seem to work in some browsers in 2023, though this might be just a fallback for potential confusion with `<img>`.
+
+<image src="/images/blog/html/fax.png" width="100">An icon of a fax machine</image>
+
+<div id="content-target">
+    <h4>My Content Heading</h4>
+    <p>My content text</p>
+</div>
+<script>
+    // Get the <div> above.
+  var myContent = document.getElementById("content-target");
+  // Create a shadow DOM on the <div>
+  var shadowroot = myContent.createShadowRoot();
+  // Insert into the shadow DOM a new heading and 
+  // part of the original content: the <p> tag.
+  shadowroot.innerHTML =
+   '<h2>A <code>&lt;content&gt;</code> element</h2> <content select="p"></content>';
+</script>
+<content-wrapper></content-wrapper>
+<noscript>Without JavaScript enabled components above will not render.</noscript>
+
+</section>
+
+<section id="other-elements">
+
+### Other Elements
+
+I consulted a few other lists of HTML tags after realizing that the <code>&lt;!-- comment --&gt;</code> tag wasn’t in my list from MDN (there’s one below this paragraph)
+
+<!-- The only reference to HTML comments on MDN seems to be in the web APIs section: https://developer.mozilla.org/en-US/docs/Web/API/Comment -->
 
 </section>
 
