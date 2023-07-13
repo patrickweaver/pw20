@@ -279,6 +279,54 @@ tags:
         margin: 0 40%;
     }
 
+    #menu-button {
+        border: 2px solid #2f2f2f;
+        border-radius: 10px;
+        width: 200px;
+        height: 3rem;
+        padding: 0.5rem;
+        background-color: #2f8fdf;
+        color: #ffffff;
+        text-align: center;
+        box-shadow: -3px -3px 10px #9fcff8;
+    }
+
+    #menu-button:hover {
+        box-shadow: -3px -3px 15px #9fcff8;
+        background-color: #2888d0;
+        cursor: pointer;
+    }
+
+    #menuitem-example {
+        width: 300px;
+        border: 2px solid #2f2f2f;
+        padding: 0;
+        background-color: #78c8fd;
+        margin: 1px 0 0;
+        border-radius: 4px;
+    }
+
+    #menuitem-example > menuitem {
+        display: inline-block;
+        width: 100%;
+        padding: 10px;
+        border-bottom: 1px solid #000000;
+    }
+
+    #menuitem-example > menuitem:last-child {
+        border: none;
+    }
+
+    #nobr-box {
+        width: 170px;
+        border: 2px solid #2f2f2f;
+        border-radius: 3px;
+        padding: 5px;
+        background-color: #fdfaf7;
+        overflow: scroll;
+        margin: 1rem 0;
+    }
+
     @media (max-width: 600px) {
         #everything-form {
         }
@@ -396,8 +444,7 @@ tags:
         line-height: 0.75rem;
         margin: 0 30%;
     }
-    }
-    
+}    
 </style>
 
 <section>
@@ -1621,6 +1668,35 @@ But it does seem to work in some browsers in 2023, though this might be just a f
 </script>
 <content-wrapper></content-wrapper>
 <noscript>Without JavaScript enabled components above will not render.</noscript>
+
+One of the more interesting browser compatibility stories of the deprecated elements is `<menuitem>`, which supposedly was [partially supported in Firefox versions 8 - 84](https://caniuse.com/?search=menuitem), but I couldn't get [an example](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_menuitem) to work in any of the older versions I installed locally (even with editing `about:config`). The examples imply that the `<menu>` (of `type=context`) and child `<menuitem>` elements shouldn’t render until the element whose `contextmenu` property is right clicked, but as you can see below, the items always render:
+
+<div id="menu-button" contextmenu="menuitem-example">Open Menu</div>
+<menu type="context" id="menuitem-example">
+    <menuitem type="radio" radiogroup="group1">Radio Button 1</menuitem>
+    <menuitem type="radio" radiogroup="group1">Radio Button 2</menuitem>
+</menu>
+
+`<nobr>` is another example of layout related functionality that has been moved to CSS rather than have HTML handle it. The narrow box below has an example:
+
+<div id="nobr-box">
+    <nobr>This sentence is wrapped in a <code>&lt;nobr&gt;</code>.</nobr>
+    <p>This sentence is wrapped in a <code>&lt;p&gt;</code>.</p>
+    <p style="white-space: nowrap;">This sentence is wrapped in a <code>&lt;p&gt;</code> with <code>style="white-space: nowrap;"</code>.</p>
+</div>
+<embed type="video/mp4" src="/images/blog/html/audio-and-video-tags.mp4" width="495" height="300" title="A screen recording of my dev setup while writing the paragraph above." style="display: none" id="audio-and-video-tags-embed"><noembed><p>An embed of a screen recording of my dev setup while writing the paragraph above.</p></noembed></embed>
+
+<figure>
+<embed
+    type="video/mp4"
+    src="/images/blog/html/audio-and-video-tags.mp4"
+    width="165"
+    height="100"
+    title="A screen recording of my dev setup while writing the paragraph above."
+    id="audio-and-video-tags-embed"
+><noembed>An embed of a screen recording of my dev setup while writing the paragraph above.</noembed></embed>
+<figcaption>An embed with a <code>&lt;noembed&gt;</code> tag child.</figcaption>
+</figure>
 
 </section>
 
