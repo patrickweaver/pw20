@@ -490,7 +490,7 @@ I didn’t have to make any changes to the `<html>` tag for this post, but one t
 - [`<style>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style)
 - [`<title>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title)
 
-I wasn’t familiar with the `<base>` tag before writing this post, though I've now added one with relative links to my layout templates. This caused a few issues with things like local development, and relative links, though they were easily resolved. The rest of the metadata tags were present before this post.
+I wasn’t familiar with the `<base>` tag before writing this post, though I’ve now added one with relative links to my layout templates. This caused a few issues with things like local development, and relative links, though they were easily resolved. The rest of the metadata tags were present before this post.
 
 </section>
 
@@ -518,14 +518,14 @@ Like the Document metadata tags, this was of course already present before this 
 - [`<nav>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav)
 - [`<section>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section)
 
-When I first looked at the list I assumed that `<address>` would be designed exclusively for mailing addresses, but was surprised to see that it can be used for email addresses, and even links. I updated the email address on the About page of site site, but I'll add an `<address>` below also:
+When I first looked at the list I assumed that `<address>` would be designed exclusively for mailing addresses, but was surprised to see that it can be used for email addresses, and even links. I updated the email address on the About page of site site, but I’ll add an `<address>` below also:
 
 <address>
     <p>Email Patrick:</p>
     <a href="mailto:hello.patrickw@gmail.com">hello.patrickw@gmail.com</a>
 </address>
 
-As I mentioned above, I updated the blog post page template to use the `<article>` tag, but reading the documentation, I'm now wondering if it would fit on every page of the site. I’m now using `<aside>` elements, which represent, “a portion of a document whose content is only indirectly related to the document’s main content”, to wrap around my footnotes at the bottom of this page (though I may try to style them as sidenotes in the future). The current design of this website doesn’t have a `<footer>`, but I’ve added one to this blog post, and while I had a `<header>` element on the page header previously, I now know that more than one is acceptable so there is one around the header section of blog posts.
+As I mentioned above, I updated the blog post page template to use the `<article>` tag, but reading the documentation, I’m now wondering if it would fit on every page of the site. I’m now using `<aside>` elements, which represent, “a portion of a document whose content is only indirectly related to the document’s main content”, to wrap around my footnotes at the bottom of this page (though I may try to style them as sidenotes in the future). The current design of this website doesn’t have a `<footer>`, but I’ve added one to this blog post, and while I had a `<header>` element on the page header previously, I now know that more than one is acceptable so there is one around the header section of blog posts.
 
 #### Heading elements
 
@@ -572,7 +572,7 @@ I had previously used `<blockquote>` for embedding tweets into blog posts, but f
     <figcaption><cite>MDN</cite> on <code>&lt;blockquote&gt;</code></figcaption>
 </figure>
 
-`<dd>`, `<dl>`, and `<dt>` are elements that, after finding out about them when first looking into more obscure HTML elements, I was very surprised to have not known about sooner. Although, it’s unclear from the documentation whether lists like the links on the current version of my [portfolio page](https://web.archive.org/web/20220628123804/https://www.patrickweaver.net/portfolio/) (currently using `<ul>`). I am curious how `<ol>` and `<ul>` became part of almost every “Intro to HTML” class, but `<dl>` is relatively obscure. It's also strange that `<ol>` and `<ul>` have default margins, but `<dl>` doesn’t.
+`<dd>`, `<dl>`, and `<dt>` are elements that, after finding out about them when first looking into more obscure HTML elements, I was very surprised to have not known about sooner. Although, it’s unclear from the documentation whether lists like the links on the current version of my [portfolio page](https://web.archive.org/web/20220628123804/https://www.patrickweaver.net/portfolio/) (currently using `<ul>`). I am curious how `<ol>` and `<ul>` became part of almost every “Intro to HTML” class, but `<dl>` is relatively obscure. It’s also strange that `<ol>` and `<ul>` have default margins, but `<dl>` doesn’t.
 
 #### HTML list elements:
 
@@ -758,7 +758,7 @@ Hello, World
 
 `<time>` seems like a helpful element for creating semantic HTML, but even Google doesn’t seem to use it in [search results](https://www.google.com/search?q=%22Patrick+Weaver%22+%22HTML%22). I’ve updated the dates on my blog posts to use it.
 
-`<u>` has probably my favorite quote from the MDN docs, <q>Most of the time, you actually don't want to use <code>&lt;u&gt;</code>.</q> Their strongest recommendation seems to be indicating <u class="u-sp">spellling</u> errors.
+`<u>` has probably my favorite quote from the MDN docs, <q>Most of the time, you actually don’t want to use <code>&lt;u&gt;</code>.</q> Their strongest recommendation seems to be indicating <u class="u-sp">spellling</u> errors.
 
 `<var>` is a way to indicate semantically that a string is a variable for either math or programming. For example, rendering the pythagorean theorem uses both `<var>` and `<sup>`: <var>a</var><sup>2</sup> + <var>b</var><sup>2</sup> = <var>c</var><sup>2</sup>.
 
@@ -919,7 +919,7 @@ Speaking of `<iframe>` it’s also interesting that the very 90s name “iframe�
 <figcaption>An embed of this page scrolled to the <code>&lt;img&gt;</code> tag with a <code>srcset</code> property at 150px wide.
 </figure>
 
-Scrolling down further it’s interesting that a recursive `<iframe>` doesn't render.
+Scrolling down further it’s interesting that a recursive `<iframe>` doesn’t render.
 
 `<picture>` is a tag that is, with `<source>` actually intended for layout tricks like the `srcset` experiment I tried above, rendering different versions of an image in different situations. The image below should show an icon of a computer when used with a mouse/trackpad, or an icon of a phone when used with a touch screen (using the `pointer` media query to determine), and should fall back to an image of a red circle with a line through it when neither media query is appropriate. The responsive design developer tools in your browser should trick it, though interestingly, not when inspecting an element.
 
@@ -1693,7 +1693,7 @@ But it does seem to work in some browsers in 2023, though this might be just a f
 <content-wrapper></content-wrapper>
 <noscript>Without JavaScript enabled components above will not render.</noscript>
 
-One of the more interesting browser compatibility stories of the deprecated elements is `<menuitem>`, which supposedly was [partially supported in Firefox versions 8 - 84](https://caniuse.com/?search=menuitem), but I couldn't get [an example](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_menuitem) to work in any of the older versions I installed locally (even with editing `about:config`). The examples imply that the `<menu>` (of `type=context`) and child `<menuitem>` elements shouldn’t render until the element whose `contextmenu` property is right clicked, but as you can see below, the items always render:
+One of the more interesting browser compatibility stories of the deprecated elements is `<menuitem>`, which supposedly was [partially supported in Firefox versions 8 - 84](https://caniuse.com/?search=menuitem), but I couldn’t get [an example](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_menuitem) to work in any of the older versions I installed locally (even with editing `about:config`). The examples imply that the `<menu>` (of `type=context`) and child `<menuitem>` elements shouldn’t render until the element whose `contextmenu` property is right clicked, but as you can see below, the items always render:
 
 <div id="menu-button" contextmenu="menuitem-example">Open Menu</div>
 <menu type="context" id="menuitem-example">
