@@ -10,6 +10,21 @@ tags:
 <!-- markdownlint-disable MD033 -->
 
 <style>
+    section > ul {
+        padding-left: 0;
+    }
+    section > ul > li {
+        display: inline-block;
+    }
+
+    section > ul > li::after {
+        content: ', ';
+    }
+
+    section > ul > li:last-child::after {
+        content: '';
+    }
+
     #pw-links-portal {
     width: 300px;
     height: 200px;
@@ -613,8 +628,7 @@ I was surprised not to find more guidance on using `<p>` tags on [the MDN docs](
 
 Before reading the documentation I had really only considered using `<pre>` tags along with `<code>` tags for code blocks, but the example used on MDN is used to show how `<pre>` can display meaningful whitespace for things like:
 
-<figure>
-    <pre role="img" aria-label="An ASCII picture of a house with the label, 'in this house we write semantic HTML'">
+<figure><pre role="img" aria-label="An ASCII picture of a house with the label, 'in this house we write semantic HTML'">
 ┏┓
 ┃┃╱╲ in
 ┃╱╱╲╲ this
@@ -624,9 +638,7 @@ Before reading the documentation I had really only considered using `<pre>` tags
 write semantic HTML
 ╱╱┏┳┓╭╮┏┳┓ ╲╲
 ▔▏┗┻┛┃┃┗┻┛▕▔
-  </pre>
-
-<figure>
+</pre></figure>
 
 </section>
 
@@ -691,12 +703,22 @@ I’ll probably think of `<b>` from now on as the HTML tag for the quotation mar
     <input type="text" id="bdi-name-input">
 </form>
 <p>Hello, <bdi id="bdi-name-display">&nbsp;&nbsp;&nbsp;&nbsp;</bdi>, thanks for reading!</p>
+<div>
+<button id="rtl-fill">Fill with a RTL language name</button> (<a href="https://en.wikipedia.org/wiki/Abdul_Rahman_Munif" target="_blank">عَبْد الرَّحْمٰن بِن إِبْرَاهِيم المُنِيف</a>)
+</div>
 <script type="text/javascript">
-    const i = document.getElementById("bdi-name-input");
-    const o = document.getElementById("bdi-name-display");
-    i.addEventListener("input", function(event) {
-        o.innerHTML = event.target?.value || "&nbsp;&nbsp;&nbsp;&nbsp;";
+    const bdi_i = document.getElementById("bdi-name-input");
+    const bdi_o = document.getElementById("bdi-name-display");
+    const bdi_b = document.getElementById("rtl-fill");
+    bdi_i.addEventListener("input", function(event) {
+        bdi_o.innerHTML = event.target?.value || "&nbsp;&nbsp;&nbsp;&nbsp;";
     })
+    bdi_b.addEventListener("click", function(event) {
+        const rtl_name = 'عَبْد الرَّحْمٰن بِن إِبْرَاهِيم المُنِيف';
+        bdi_o.innerHTML = rtl_name;
+        bdi_i.value = rtl_name;
+    })
+
 </script>
 
 <noscript>
@@ -1676,23 +1698,6 @@ But it does seem to work in some browsers in 2023, though this might be just a f
 
 <image src="/images/blog/html/fax.png" width="100">An icon of a fax machine</image>
 
-<div id="content-target">
-    <h4>My Content Heading</h4>
-    <p>My content text</p>
-</div>
-<script>
-    // Get the <div> above.
-  var myContent = document.getElementById("content-target");
-  // Create a shadow DOM on the <div>
-  var shadowroot = myContent.createShadowRoot();
-  // Insert into the shadow DOM a new heading and 
-  // part of the original content: the <p> tag.
-  shadowroot.innerHTML =
-   '<h2>A <code>&lt;content&gt;</code> element</h2> <content select="p"></content>';
-</script>
-<content-wrapper></content-wrapper>
-<noscript>Without JavaScript enabled components above will not render.</noscript>
-
 One of the more interesting browser compatibility stories of the deprecated elements is `<menuitem>`, which supposedly was [partially supported in Firefox versions 8 - 84](https://caniuse.com/?search=menuitem), but I couldn’t get [an example](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_menuitem) to work in any of the older versions I installed locally (even with editing `about:config`). The examples imply that the `<menu>` (of `type=context`) and child `<menuitem>` elements shouldn’t render until the element whose `contextmenu` property is right clicked, but as you can see below, the items always render:
 
 <div id="menu-button" contextmenu="menuitem-example">Open Menu</div>
@@ -1788,6 +1793,7 @@ And of course `<applet>`, but I’m not even going to try with that one.
 
 </section>
 
+<h4>Footnotes</h4>
 <ol>
     <li id="footnote-1"><aside>Which I am just now discovering there is no native HTML implementation for!</aside> <a href="#footnote-1-link">↑ Return to post</a></li>
 </ol>
