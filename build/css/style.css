@@ -56,18 +56,18 @@ a {
   color: var(--text-link);
 }
 
-hr {
+.post hr {
   border: none;
-  border-top: 3px double var(--acc-3);
+  border-top: 3px double var(--acc-2);
   margin: 2rem 30px;
   overflow: visible;
   text-align: center;
   height: 5px;
 }
 
-hr:after {
+.post hr:after {
   background: var(--bg-1);
-  content: "✨";
+  content: "🦋";
   padding: 0 4px;
   position: relative;
   top: -0.75rem;
@@ -195,7 +195,7 @@ address.no-decoration-address {
   margin: 0;
 }
 
-.project dl div {
+.projhrect dl div {
   margin: 0.25rem;
 }
 
@@ -255,6 +255,7 @@ code,
 samp {
   background-color: var(--bg-2);
   padding: 2px 4px;
+  font-size: 0.9375rem;
 }
 
 code.code-regular {
@@ -361,6 +362,11 @@ h2.page-header a:hover {
 .post portal {
   max-width: 100%;
   height: auto;
+}
+
+.post .footnotes li {
+  padding: 3px;
+  border: 2px solid #00000000;
 }
 
 .blob img,
