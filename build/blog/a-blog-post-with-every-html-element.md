@@ -327,6 +327,14 @@ tags:
         margin: 1rem 0;
     }
 
+    footer {
+        margin: 2rem 0 1rem;
+        border: 1px solid #dfd8df;
+        border-radius: 5px;
+        padding: 1rem 10px;
+        background-color: #fefcfe;
+    }
+
     @media (max-width: 600px) {
         #everything-form {
         }
@@ -1623,7 +1631,23 @@ Everyone’s favorite is of course,
 
 <marquee>Hello!</marquee>
 
-There are some other strange ones as well though. I couldn’t implement `<content>` here because it is a never fully implemented part of the web components spec. And `<dir>` is a very <em>webserver</em> version of `<ul>` for listing directories. Since my Eleventy static site generator does use directories here’s a list:
+Many of the elements, like `<big>`, `<acronym>`, `<font>` (used above), `<nobr>` and `<strike>` are examples of layout related functionality that has been moved to CSS rather than <strike>have HTML handle it</strike>. The narrow box below has an example of `<nobr>`:
+
+<div id="nobr-box">
+    <nobr>This sentence is wrapped in a <code>&lt;nobr&gt;</code>.</nobr>
+    <p>This sentence is wrapped in a <code>&lt;p&gt;</code>.</p>
+    <p style="white-space: nowrap;">This sentence is wrapped in a <code>&lt;p&gt;</code> with <code>style="white-space: nowrap;"</code>.</p>
+</div>
+
+There are some other strange ones as well though. I couldn’t implement `<content>` and `<shadow>` here because they were never fully implemented part of the web components spec. I’ll add some below anyway though.
+
+<figure>
+<shadow></shadow>
+<content></content>
+<figcaption><code>&lt;shadow&gt;</code> and <code>&lt;content&gt;</code> elements (that won’t render).</figcaption>
+</figure>
+
+And `<dir>` is a very <em>webserver</em> version of `<ul>` for listing directories. Since my Eleventy static site generator does use directories here’s a list:
 
 <dir>
     <li><a href="/blog">/blog</a></li>
@@ -1677,14 +1701,7 @@ One of the more interesting browser compatibility stories of the deprecated elem
     <menuitem type="radio" radiogroup="group1">Radio Button 2</menuitem>
 </menu>
 
-`<nobr>` is another example of layout related functionality that has been moved to CSS rather than have HTML handle it. The narrow box below has an example:
-
-<div id="nobr-box">
-    <nobr>This sentence is wrapped in a <code>&lt;nobr&gt;</code>.</nobr>
-    <p>This sentence is wrapped in a <code>&lt;p&gt;</code>.</p>
-    <p style="white-space: nowrap;">This sentence is wrapped in a <code>&lt;p&gt;</code> with <code>style="white-space: nowrap;"</code>.</p>
-</div>
-<embed type="video/mp4" src="/images/blog/html/audio-and-video-tags.mp4" width="495" height="300" title="A screen recording of my dev setup while writing the paragraph above." style="display: none" id="audio-and-video-tags-embed"><noembed><p>An embed of a screen recording of my dev setup while writing the paragraph above.</p></noembed></embed>
+It’s surprising that `<noembed>`, essentially a `<noscript>` style fallback, was deprecated while `<embed>` was kept in the spec. Here’s my `<embed>` from above, but this time with a `<noembed>` child. There is also `<noframes>` which I included above with the `<frame>` element.
 
 <figure>
 <embed
@@ -1693,10 +1710,42 @@ One of the more interesting browser compatibility stories of the deprecated elem
     width="165"
     height="100"
     title="A screen recording of my dev setup while writing the paragraph above."
-    id="audio-and-video-tags-embed"
+    id="audio-and-video-tags-embed-dep"
 ><noembed>An embed of a screen recording of my dev setup while writing the paragraph above.</noembed></embed>
-<figcaption>An embed with a <code>&lt;noembed&gt;</code> tag child.</figcaption>
+<figcaption>An <code>&lt;embed&gt;</code> with a <code>&lt;noembed&gt;</code> tag child.</figcaption>
 </figure>
+
+It’s unclear why `<param>` ever existed instead of just using attributes on the `<object>` element, but just in case, here is one below:
+
+<figure>
+<object
+type="video/mp4"
+data="/images/blog/html/audio-and-video-tags.mp4"
+width="165"
+height="100"
+id="audio-and-video-tags-object-dep">
+<img src="/images/blog/html/audio-and-video-tags-poster.jpg" alt="a still of a screen recording" />
+<param name="cool-param">
+</object>
+<figcaption>An <code>&lt;object&gt;</code> with a <code>&lt;param&gt;</code> tag child.</figcaption>
+</figure>
+
+`<plaintext>` is another weird one, and notable among the deprecated elements in that it works. It is another one I am going to have to wrap in an `<iframe>` because otherwise the rest of the page would be rendered as the source code:
+
+<figure>
+<iframe width="350" height="400" src="/pages/plaintext-element"></iframe>
+<figcaption>An embed of a <a href="/pages/plaintext-element/" target="_blank">page</a> with a <code>&lt;plaintext&gt;</code> element.
+</figure>
+
+However, `<xmp>` and `<tt>`, used in a similar way, have closing tags <xmp><span id="xmp-element">
+so they can be used here for displaying source code
+</span></xmp> or text in a monospace font<tt>
+<span id="tt-element">as it would be shown on a teletype</span>
+</tt> without an `<iframe>`.
+
+A few of the deprecated elements have just been replaced by newer additions to the spec. `<rb>` and `<rtc>` were used for displaying pronunciation of East Asian characters, but it seems like the spec was simplified. Here is the example from MDN:
+
+<ruby xml:lang="zh-Hant" style="ruby-position: under;"><rbc><rb>馬</rb><rp>(</rp><rt>mǎ</rt><rp>)</rp><rb>來</rb><rp>(</rp><rt>lái</rt><rp>)</rp><rb>西</rb><rp>(</rp><rt>xī</rt><rp>)</rp><rb>亞</rb><rp>(</rp><rt>yà</rt><rp>)</rp></rbc><rtc xml:lang="en" style="ruby-position: over;"><rp>(</rp><rt>Malaysia</rt><rp>)</rp></rtc></ruby>
 
 </section>
 
@@ -1708,6 +1757,35 @@ I consulted a few other lists of HTML tags after realizing that the <code>&lt;!-
 
 <!-- The only reference to HTML comments on MDN seems to be in the web APIs section: https://developer.mozilla.org/en-US/docs/Web/API/Comment -->
 
+An <a href="https://web.archive.org/web/20130520111045/https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">older list from MDN in 2013</a> has elements like <code>&lt;blink&gt;</code>, and for accessibility reasons, <q cite="https://web.archive.org/web/20130520111045/https://developer.mozilla.org/en-US/docs/Web/HTML/Element">“almost all browsers currently ignore this element.”</q> I’ll add one hidden below if you can find a very old browser that supports it:
+
+<div style="display: none" id="hidden-blink">
+    <blink>I am in a <code>&lt;blink&gt;</code> tag (but probably not blinking).</blink>
+</div>
+<div id="show-blink-button-container">
+    <button onclick="(() => document.getElementById('hidden-blink').style.display = 'block')();">Show <code class="code-regular">&lt;blink&gt;</code></button>
+</div>
+
+Also on the list is `<spacer>`, which doesn’t work in modern browsers and,
+
+<spacer type="horizontal" size="30"></spacer>
+
+would now be done
+
+<div style="height: 30px;"></div>
+
+with CSS.
+
+Then there’s others like `<bgsound>` (<a href="https://web.archive.org/web/20131004002320/https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bgsound" target="_blank">2013 docs</a>) that seems to have never been implemented (except maybe in Netscape?), but alludes to a vision for a much more <em>multimedia</em> enabled web documents, and `<isindex>` (<a href="https://web.archive.org/web/20130916195848/https://developer.mozilla.org/en-US/docs/Web/HTML/Element/isindex" target="_blank">2013 docs</a>) which seems like it is from a world where JavaScript doesn’t exist.
+
+Another attempt at `<xmp>`, `<tt>`, `<code>` was
+
+<listing><span id="listing-child">listing</span></listing>
+
+I’m surprised it seems to still work!
+
+And of course `<applet>`, but I’m not even going to try with that one.
+
 </section>
 
 <ol>
@@ -1715,5 +1793,5 @@ I consulted a few other lists of HTML tags after realizing that the <code>&lt;!-
 </ol>
 
 <footer role="contentinfo">
-    Written between <time datetime="2022-02">February 2022</time> and <time datetime="2023-05">May 2023</time>.
+    Written between <time datetime="2022-02">February 2022</time> and <time datetime="2023-05">July 2023</time>.
 </footer>
