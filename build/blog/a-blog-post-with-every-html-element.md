@@ -937,8 +937,8 @@ It is somewhat surprising that `<embed>` and `<object>` have not been deprecated
 Speaking of `<iframe>` it’s also interesting that the very 90s name “iframe” has survived while `<frame>` was deprecated in HTML 5. I thought that `<iframe>` might be a way to force the `<img>` `srcset` example above to render the smaller images on a high DPI display, but even at 150px wide on my device the large image still renders:
 
 <figure>
-<iframe width="150" height="200" src="/blog/a-blog-post-with-every-html-element/#image-with-srcset"></iframe>
-<figcaption>An embed of this page scrolled to the <code>&lt;img&gt;</code> tag with a <code>srcset</code> property at 150px wide.
+<iframe width="150" height="200" src="/pages/srcset"></iframe>
+<figcaption>An embed of a page with just the srcset example  from above at 150px wide.
 </figure>
 
 Scrolling down further it’s interesting that a recursive `<iframe>` doesn’t render.
