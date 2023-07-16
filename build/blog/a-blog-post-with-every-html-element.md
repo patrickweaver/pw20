@@ -515,7 +515,7 @@ I wasn’t familiar with the `<base>` tag before writing this post, though I’v
 
 - [`<body>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body)
 
-Like the Document metadata tags, this was of course already present before this post, though it was interesting to read the documentation and learn about attributes like `onbeforeprint` that provides functionality I’ve used more hacky ways to accomplish before, and `onblur` that I’m now wondering about how often is used for annoying popups.
+Like the Document metadata tags, this was already already in use, though it was interesting to read the documentation and learn about attributes like `onbeforeprint` that provides functionality I’ve used more hacky methods to accomplish previously, and `onblur`, about which I’m now wondering if there is any utility beyond annoying popups.
 
 </section>
 
