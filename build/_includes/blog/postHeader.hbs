@@ -1,35 +1,21 @@
-<header>
-  <div class="post-date">
-    <time datetime="{{machineReadableDate this.date}}">{{readableDate this.date}}</time>
-  </div>
 
-  <h3 class="post-title">
-    <a href="{{this.url}}">
-      {{#if this.title}}
-        {{this.title}}
-      {{else}}
-        <code>
-          {{this.url}}
-        </code>
-      {{/if}}
-    </a>
-  </h3>
+<div class="post-date">
+  <time datetime="{{machineReadableDate this.date}}">{{readableDate this.date}}</time>
+</div>
 
-  <div class="index-item-preview">
-    {{#if (or this.index (not this.do_not_show_cover_at_top))}}
-      {{#if this.cover_image_url}}
-        <div class="post-header-image">
-          <a href="{{this.url}}">
-            <img
-              class="index-item-preview-image"
-              src="{{this.cover_image_url}}"
-              alt="{{this.cover_image_alt}}"
-              aria-label="Link to post for {{this.title}}"
-            />
-          </a>
-        </div>
-      {{/if}}
+<h3 class="post-title">
+  <a href="{{this.url}}">
+    {{#if this.title}}
+      {{this.title}}
+    {{else}}
+      <code>
+        {{this.url}}
+      </code>
     {{/if}}
+  </a>
+</h3>
+
+<div class="index-item-preview">
 
 {{#if (not this.index)}}
   {{#if this.editors_note}}
@@ -46,10 +32,12 @@
   {{/if}}
 {{/if}}
 
+</div>
+
 <div class="index-item-header">
   {{#if (or this.index (not this.do_not_show_cover_at_top))}}
     {{#if this.cover_image_url}}
-      <div class="post-header-image {{#if (not this.index)}}full-width{{/if}}">
+      <div class="post-header-image {{#if (not this.index)}}full-width{{/if}}" style="border: 3px solid purple !important;">
         <a href="{{this.url}}">
           <img
             class="index-item-header-image"
