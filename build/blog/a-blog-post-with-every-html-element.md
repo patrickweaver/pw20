@@ -25,6 +25,12 @@ tags:
         content: '';
     }
 
+    .confetti {
+        position: fixed;
+        font-size: 3rem;
+        top: 50px;
+    }
+
     #pw-links-portal {
     width: 300px;
     height: 200px;
@@ -472,11 +478,11 @@ tags:
 
 <section>
 
-After learning a little bit more about web accessibility in 2022 I have been exploring some of the less common <abbr title="Hyper Text Markup Language">HTML</abbr> elements, and making changes to this website, like wrapping the text of the posts on this blog in `<article>` tags and adding a `<main>` tag in the website’s layout templates (this website is built using [Eleventy](https://www.11ty.dev/)).
+After learning a little bit more about web accessibility in 2022 I have been exploring some of the less common <abbr title="Hyper Text Markup Language">HTML</abbr> elements, and making changes to this website, like wrapping the text of the posts on this blog in `<article>` tags and adding a `<main>` tag in the website’s layout templates (this website is built using <a href="https://www.11ty.dev/" target="_blank">Eleventy</a>).
 
-I had previously done some work to make sure that `<figure>` and `<figcaption>` elements were layed out nicely for images with associated captions, and I had been impressed with various [Recurser’s](https://www.recurse.com/) implementation of footnotes or sidenotes<sub id="footnote-1-link">[1](./#footnote-1)</sub>, and have been thinking it would be interesting to see what other interesting layouts were possible with just HTML.
+I had previously done some work to make sure that `<figure>` and `<figcaption>` elements were layed out nicely for images with associated captions, and I had been impressed with various <a href="https://www.recurse.com/" target="_blank">Recurser’s</a> implementation of footnotes or sidenotes<sub id="footnote-1-link">[1](./#footnote-1)</sub>, and have been thinking it would be interesting to see what other interesting layouts were possible with just HTML.
 
-I could, element by element, continue to add support (mostly by making <abbr title="Cascading Style Sheets">CSS</abbr> updates for each element to fit in with the rest of my style choices) as I came across specific needs for them, but not one to shy away from an exhaustive exploration, I decided to write this post and attempt to use every element. A goal was to avoid delaying future posts while I update the site to support a new element it uses, but in reality it took more than a year to make all the updates for just this post! I am using the [MDN Web Docs list of HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) as a reference which has more than 100 tags divided into a few categories, which I will also use in this post. Many of the tags like `<html>` don’t make sense to include in the text of a blog post, but I’ll be updating the website’s layout as I go, so if you’re viewing this post on [patrickweaver.net](https://www.patrickweaver.net), then every one of the elements is used somewhere on this page.
+I could, element by element, continue to add support (mostly by making <abbr title="Cascading Style Sheets">CSS</abbr> updates for each element to fit in with the rest of my style choices) as I came across specific needs for them, but not one to shy away from an exhaustive exploration, I decided to write this post and attempt to use every element. A goal was to avoid delaying future posts while I update the site to support a new element it uses, but in reality it took more than a year to make all the updates for just this post! I am using the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">MDN Web Docs list of HTML elements</a> as a reference which has more than 100 tags divided into a few categories, which I will also use in this post. Many of the tags like `<html>` don’t make sense to include in the text of a blog post, but I’ll be updating the website’s layout as I go, so if you’re viewing this post on [patrickweaver.net](https://www.patrickweaver.net), then every one of the elements is used somewhere on this page.
 
 </section>
 
@@ -515,7 +521,7 @@ I wasn’t familiar with the `<base>` tag before writing this post, though I’v
 
 - [`<body>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body)
 
-Like the Document metadata tags, this was already already in use, though it was interesting to read the documentation and learn about attributes like `onbeforeprint` that provides functionality I’ve used more hacky methods to accomplish previously, and `onblur`, about which I’m now wondering if there is any utility beyond annoying popups.
+Like the Document metadata tags, this was already already in use, though it was interesting to read the documentation and learn about attributes, like `onbeforeprint` that provides functionality I’ve used more hacky methods to accomplish previously, and `onblur`, whose primary utility seems to be annoying popups.
 
 </section>
 
@@ -540,7 +546,9 @@ When I first looked at the list I assumed that `<address>` would be designed exc
     <a href="mailto:hello.patrickw@gmail.com">hello.patrickw@gmail.com</a>
 </address>
 
-As I mentioned above, I updated the blog post page template to use the `<article>` tag, but reading the documentation, I’m now wondering if it would fit on every page of the site. I’m now using `<aside>` elements, which represent, “a portion of a document whose content is only indirectly related to the document’s main content”, to wrap around my footnotes at the bottom of this page (though I may try to style them as sidenotes in the future). The current design of this website doesn’t have a `<footer>`, but I’ve added one to this blog post, and while I had a `<header>` element on the page header previously, I now know that more than one is acceptable so there is one around the header section of blog posts.
+As I mentioned above, I updated the blog post page template to use the `<article>` tag, but reading the documentation, I’m now wondering if it would fit on every page of the site.
+
+I’m now using `<aside>` elements, which represent, <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside">a portion of a document whose content is only indirectly related to the document’s main content</q>, to wrap around my footnotes at the bottom of this page (though I may try to style them as sidenotes in the future). The current design of this website doesn’t have a `<footer>`, but I’ve added one to this blog post, and while I had a `<header>` element on the page header previously, I now know that more than one is acceptable so there is one around the header section of blog posts.
 
 #### Heading elements
 
@@ -587,7 +595,7 @@ I had previously used `<blockquote>` for embedding tweets into blog posts, but f
     <figcaption><cite>MDN</cite> on <code>&lt;blockquote&gt;</code></figcaption>
 </figure>
 
-`<dd>`, `<dl>`, and `<dt>` are elements that, after finding out about them when first looking into more obscure HTML elements, I was very surprised to have not known about sooner. Although, it’s unclear from the documentation whether lists like the links on the current version of my [portfolio page](https://web.archive.org/web/20220628123804/https://www.patrickweaver.net/portfolio/) (currently using `<ul>`). I am curious how `<ol>` and `<ul>` became part of almost every “Intro to HTML” class, but `<dl>` is relatively obscure. It’s also strange that `<ol>` and `<ul>` have default margins, but `<dl>` doesn’t.
+`<dd>`, `<dl>`, and `<dt>` are elements that, after finding out about them when first looking into more obscure HTML elements, I was very surprised to have not known about sooner. Although, it’s unclear from the documentation whether lists like the links on the current version of my [portfolio page](https://web.archive.org/web/20220628123804/https://www.patrickweaver.net/portfolio/) should use `<dl>` (I’m currently using `<ul>`). I am curious how `<ol>` and `<ul>` became part of almost every “Intro to HTML” class, but `<dl>` is relatively obscure. It’s also strange that `<ol>` and `<ul>` have default margins, but for `<dl>` the margin is on `<dd>`.
 
 #### HTML list elements:
 
@@ -597,23 +605,60 @@ I had previously used `<blockquote>` for embedding tweets into blog posts, but f
     <dt><code>ul</code></dt><dd>Unordered list</dd>
 </dl>
 
-`<div>` has acquired a bad reputation on the modern web due to overuse, so I was surprised to see that even only halfway through writing this (and making some updates to layouts as I go), that there is only one `<div>` element on this page (and even that is just a wrapper around the `<article>` element, and could probably be removed with some CSS changes). It shows how unnecessary most `<div>`s probably are, though this site has minimal generic “sections”.
+`<div>` has acquired a bad reputation on the modern web due to overuse, so I was surprised to be using relatively few `<div>` elements, though once I started using elements that I wanted to style together, I ended up with around 20. It shows how unnecessary most `<div>`s probably are, though this site has minimal generic “sections”.
 
-Some of the first more obscure elements that I added to this site were `<figcaption>` and `<figure>` because I was adding some blog posts that had originally been published on Medium, and wanted to add captions below images in a web-semantically correct way. Though after reading the documentation which says `<figure>` can be used for, <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure#usage_notes">image, illustration, diagram, code snippet, etc.</q>, I realized that there are a lot of places where I currently have code blocks that I could be using them.
+Some of the first more obscure elements that I added to this site were `<figcaption>` and `<figure>`. I was adding some blog posts that had originally been published on Medium, and wanted to add captions below images in a web-semantically correct way. Though after reading the documentation which says `<figure>` can be used for, <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure#usage_notes">image, illustration, diagram, code snippet, etc.</q>, I realized that there are a lot of places where I currently have code blocks that I could be using them.
 
 I have always liked `<hr>` elements a lot, but I’m never sure when to use them. The documentation says, <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr#try_it">While it may still be displayed as a horizontal rule in visual browsers, this element is now defined in semantic terms, rather than presentational terms, so if you wish to draw a horizontal line, you should do so using appropriate CSS</q> which made me revisit the `<hr>` styles on this site and I decided to include an emoji in an `hr:after` rule, though I should check how that works on a screen reader.
 
-The items in the lists of elements on this page are of course `<li>` elements, though I had never looked at the documentation until now. It’s interesting that the same `<li>` element is used in both `<ol>` and `<ul>` lists, with quirks like <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li#attributes">The value attribute has no meaning for unordered lists</q>, but is not used to wrap the `<dt>` and `<dd>` elements in a `<dl>`.
+The items in the (inline styled) lists of elements on this page are of course `<li>` elements, though I had never looked at the documentation until now. It’s interesting that the same `<li>` element is used in both `<ol>` and `<ul>` lists, with quirks like <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li#attributes">The value attribute has no meaning for unordered lists</q>, but is not used to wrap the `<dt>` and `<dd>` elements in a `<dl>`.
 
 I had not encountered `<menu>` before writing this post, and I was initially surprised that it survived to HTML 5, while [`<menuitem>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menuitem) didn’t, but researching further [on Wikipedia](https://en.wikipedia.org/wiki/HTML_element#Basic_text) I read <q cite="https://en.wikipedia.org/wiki/HTML_element#Basic_text">MENU existed in HTML Tags, and was standardized in HTML 2.0; deprecated in HTML 4.0 Transitional; invalid in HTML 4.0 Strict; then redefined in HTML5, but removed in HTML 5.2.</q>, and now I don’t know what to think, but here’s a `<menu>`:
 
 <menu id="interactive-menu">
     <script type="text/javascript">
-        const b = '🎈';
-        const s = '🧽';
+        const b = (id) => `
+            <div
+                id="${id}"
+                class="confetti"
+                style="left: ${Math.random() * 1000}px"
+            >
+                🎈
+            </div>
+        `;
+        const s = (id) => `
+            <div
+                id="${id}"
+                class="confetti"
+                style="left: ${Math.random() * 1000}px"
+            >
+                🧽
+            </div>
+        `;
         const m = document.getElementById('interactive-menu');
-        function balloons() { m.insertAdjacentHTML('beforeend', b) };
-        function sponges() { m.insertAdjacentHTML('beforeend', s) };
+        function balloons() { confetti(b) };
+        function sponges() { confetti(s) };
+        function confetti(f) {
+            const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+            for (let i = 0; i < 3; i++) {
+                const id = `c-${String(Math.random()).slice(2, 9)}`
+                m.insertAdjacentHTML('beforeend', f(id))
+                sink(id)
+            }
+            async function sink(id) {
+                const e = document.getElementById(id);
+                const startTop = getComputedStyle(e)?.top ?? '0px';
+                let top = parseInt(startTop.slice(0, startTop.indexOf('p')), 10);
+                console.log({ top, vh })
+                while (top < vh + 100) {
+                    top = top + 2;
+                    e.style.top = `${top}px`;
+                    console.log({ top })
+                    await new Promise(r => setTimeout(r, 16.67));
+                }
+                e.remove();
+            }
+        } 
     </script>
     <li><button onclick="balloons()">Balloons</button></li>
     <li><button onclick="sponges()">Sponges</button></li>

@@ -52,6 +52,32 @@ h1 {
   line-height: 3rem;
 }
 
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+  margin-block-start: 2rem;
+  margin-block-end: 0.5rem;
+}
+
+h5 {
+  font-size: 1.125rem;
+  margin-block-start: 2rem;
+  margin-block-end: 0.5rem;
+}
+
+h6 {
+  font-size: 1rem;
+  margin-block-start: 2rem;
+  margin-block-end: 0.5rem;
+}
+
 a {
   color: var(--text-link);
 }
@@ -415,7 +441,7 @@ ul.project-images li {
 #error-404 .blob {
   box-shadow: -3px -3px 9px 0px var(--shadow);
   padding: 0 1.5rem 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   border-radius: 6px 0 0 0;
 }
 

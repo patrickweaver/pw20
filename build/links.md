@@ -22,9 +22,11 @@ pageId: links
   <dl class="links">
     <dt>Email:</dt>
     <dd>
-      <a href="mailto:hello.patrickw@gmail.com" target="_blank">
-        hello.patrickw@gmail.com
-      </a>
+      <address>
+        <a href="mailto:hello.patrickw@gmail.com" target="_blank">
+          hello.patrickw@gmail.com
+        </a>
+      </address>
   </dl>
 </div>
 
