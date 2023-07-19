@@ -2,8 +2,8 @@
 layout: layouts/blogPost.hbs
 title: A Blog Post With Every HTML Element
 date: 2023-02-20
-# cover_image_url:
-# cover_image_alt:
+cover_image_url: "/images/blog/html/park-html-crop.jpg"
+cover_image_alt: "A photograph of a handwritten HTML document on lined paper"
 tags:
 ---
 
@@ -467,12 +467,12 @@ tags:
         line-height: 0.75rem;
         margin: 0 30%;
     }
-}    
+}
 </style>
 
 <section>
 
-After learning a little bit more about web accessibility this year I have been exploring some of the less common <abbr title="Hyper Text Markup Language">HTML</abbr> elements, and making changes to this website, like wrapping the text of the posts on this blog in `<article>` tags and adding a `<main>` tag in the website’s layout templates (this website is built using [Eleventy](https://www.11ty.dev/)).
+After learning a little bit more about web accessibility in 2022 I have been exploring some of the less common <abbr title="Hyper Text Markup Language">HTML</abbr> elements, and making changes to this website, like wrapping the text of the posts on this blog in `<article>` tags and adding a `<main>` tag in the website’s layout templates (this website is built using [Eleventy](https://www.11ty.dev/)).
 
 I had previously done some work to make sure that `<figure>` and `<figcaption>` elements were layed out nicely for images with associated captions, and I had been impressed with various [Recurser’s](https://www.recurse.com/) implementation of footnotes or sidenotes<sub id="footnote-1-link">[1](./#footnote-1)</sub>, and have been thinking it would be interesting to see what other interesting layouts were possible with just HTML.
 

@@ -1,6 +1,8 @@
 
 <div class="post-date">
-  <time datetime="{{machineReadableDate this.date}}">{{readableDate this.date}}</time>
+  <time datetime="{{machineReadableDate this.date}}">
+    {{readableDate this.date}}
+  </time>
 </div>
 
 <h3 class="post-title">
@@ -15,11 +17,9 @@
   </a>
 </h3>
 
-<div class="index-item-preview">
-
 {{#if (not this.index)}}
   {{#if this.editors_note}}
-    <blockquote class="editors-note">
+    <aside class="editors-note">
       <h4 class="editors-note-header">
         {{#if this.editors_note_header}}
           {{this.editors_note_header}}
@@ -28,16 +28,16 @@
         {{/if}}
       </h4>
       <p><em>{{this.editors_note}}</em></p>
-    </blockquote>
+    </aside>
   {{/if}}
 {{/if}}
-
-</div>
 
 <div class="index-item-header">
   {{#if (or this.index (not this.do_not_show_cover_at_top))}}
     {{#if this.cover_image_url}}
-      <div class="post-header-image {{#if (not this.index)}}full-width{{/if}}" style="border: 3px solid purple !important;">
+      <div
+        class="post-header-image {{#if (not this.index)}}full-width{{/if}}"
+      >
         <a href="{{this.url}}">
           <img
             class="index-item-header-image"
