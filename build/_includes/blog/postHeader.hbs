@@ -52,7 +52,11 @@
 
   {{#if this.index}}
     <p class="blog-post-preview-text">
-      {{previewText this.templateContent}}
+      {{#if this.preview_text }}
+        {{this.preview_text}}
+      {{else}}
+        {{previewText this.templateContent}}
+      {{/if}}
       <a href="{{this.url}}" aria-label="Read more about {{this.title}}">
         {{readMore this.templateContent}}&nbsp;→</a>
     </p>
