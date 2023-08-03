@@ -5,6 +5,10 @@ module.exports = {
     return moment(new Date(date)).utcOffset(0).format("MMMM D, YYYY");
   },
 
+  machineReadableDate: function (date) {
+    return moment(new Date(date)).utcOffset(0).format("YYYY-MM-D");
+  },
+
   projectDate: function (startDate, endDate) {
     const startYear = startDate
       ? moment(new Date(startDate)).format("YYYY")

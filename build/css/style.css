@@ -6,6 +6,7 @@
   --bg-1: #ffffff;
   --bg-2: #fff4bf;
   --bg-3: #e0c438;
+  --bg-4: #fffbe8;
   --text-1: #404040;
   --text-2: #606060;
   --text-3: #040404;
@@ -51,14 +52,91 @@ h1 {
   line-height: 3rem;
 }
 
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+  margin-block-start: 2rem;
+  margin-block-end: 0.5rem;
+}
+
+h5 {
+  font-size: 1.125rem;
+  margin-block-start: 2rem;
+  margin-block-end: 0.5rem;
+}
+
+h6 {
+  font-size: 1rem;
+  margin-block-start: 2rem;
+  margin-block-end: 0.5rem;
+}
+
 a {
   color: var(--text-link);
 }
 
-hr {
-  background-color: var(--acc-1);
-  height: 0.5rem;
+.post article {
+  font-family: Georgia, serif;
+}
+
+.post article h1,
+.post article h2,
+.post article h3,
+.post article h4,
+.post article h5,
+.post article h6 {
+  font-family: "Helvetica", Arial, sans-serif;
+}
+
+.post hr {
   border: none;
+  border-top: 3px double var(--acc-2);
+  margin: 2rem 30px;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+}
+
+.post hr:after {
+  background: var(--bg-1);
+  content: "🪁";
+  padding: 0 4px;
+  position: relative;
+  top: -0.75rem;
+  border-radius: 2rem;
+  height: 2rem;
+  display: inline-block;
+}
+
+dialog {
+  background-color: var(--bg-4);
+  border-color: var(--text-1);
+}
+
+details {
+  border: 1px solid var(--text-2);
+  margin: 1rem 0;
+
+  border-radius: 2px;
+}
+
+summary {
+  background-color: var(--bg-4);
+}
+
+details > * {
+  padding: 2px 5px 0px;
+}
+
+details > div {
+  border-top: 1px solid var(--text-1);
 }
 
 #site-title {
@@ -134,6 +212,10 @@ ul.menu > li > a {
   border-left: 4px solid var(--acc-5);
 }
 
+address.no-decoration-address {
+  font-style: normal;
+}
+
 .project-header .cover {
   text-align: center;
 }
@@ -152,7 +234,7 @@ ul.menu > li > a {
   margin: 0;
 }
 
-.project dl div {
+.projhrect dl div {
   margin: 0.25rem;
 }
 
@@ -204,14 +286,31 @@ pre {
 }
 
 pre {
-  background-color: var(--bg-2);
   padding: 10px;
   border-radius: 5px;
 }
 
-code {
+figure.no-padding-figure > pre {
+  margin: 0;
+}
+
+code,
+samp {
   background-color: var(--bg-2);
   padding: 2px 4px;
+  font-size: 0.9375rem;
+}
+
+code.code-regular {
+  background-color: transparent;
+  padding: 0;
+}
+
+portal {
+  display: block;
+  width: 400px;
+  height: 300px;
+  border: 1px solid black;
 }
 
 .fake-code {
@@ -225,20 +324,37 @@ code {
   overflow-y: scroll;
 }
 
-table {
-  background-color: var(--bg-3);
+.table-wrapper {
   overflow-x: scroll;
   max-width: 100%;
-  display: inline-block;
 }
 
 th,
 td {
-  border: 1px solid var(--accent-1);
+  border: 1px solid var(--acc-1);
 }
 
 figure {
   margin: 0;
+  background-color: var(--shadow-light);
+  padding: 0.5rem;
+  border: 1px solid var(--shadow-med);
+  border-radius: 3px;
+}
+
+figure.blockquote-figure {
+  border: none;
+  background-color: #00000000;
+}
+
+figure.figure-with-outline {
+  border: 1px solid var(--shadow);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+figure.no-padding-figure {
+  padding: 0;
 }
 
 figure p {
@@ -246,14 +362,18 @@ figure p {
 }
 
 figcaption {
-  font-size: 18px;
+  font-size: 1rem;
 }
 
 blockquote {
   background-color: var(--bg-1);
-  padding: 5px 10px;
-  border: 1px solid var(--accent-1);
+  padding: 1rem 1.5rem;
+  border: 1px solid var(--acc-1);
   border-radius: 5px;
+}
+
+blockquote > h4 {
+  margin: 0 0 0.5rem;
 }
 
 blockquote > p {
@@ -293,8 +413,18 @@ h2.page-header a:hover {
 .blob figure,
 .post figure,
 .project figure,
-iframe {
+.post iframe,
+.post video,
+.post embed,
+.post object,
+.post portal {
   max-width: 100%;
+  height: auto;
+}
+
+.post .footnotes li {
+  padding: 3px;
+  border: 2px solid #00000000;
 }
 
 .blob img,
@@ -330,7 +460,7 @@ ul.project-images li {
 #error-404 .blob {
   box-shadow: -3px -3px 9px 0px var(--shadow);
   padding: 0 1.5rem 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   border-radius: 6px 0 0 0;
 }
 
@@ -397,7 +527,91 @@ blockquote.editors-note {
   text-decoration: none;
 }
 
-ul.links {
+dl.links {
+  display: grid;
+  grid-template-columns: max-content auto;
+}
+
+dl.links dt {
+  grid-column-start: 1;
+  text-align: right;
+  min-width: 100px;
+}
+
+dl.links dd {
+  grid-column-start: 2;
+  margin-left: 10px;
+}
+
+kbd {
+  border: 1px solid var(--shadow);
+  border-radius: 4px;
+  padding: 2px 5px;
+  display: inline-block;
+  text-align: center;
+}
+
+del,
+del > code {
+  background-color: #ffbfcf;
+}
+
+ins,
+ins > code {
+  background-color: #bfffcf;
+}
+
+ins::before,
+ins::after,
+del::before,
+del::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+ins::before {
+  content: " [insertion start] ";
+}
+
+ins::after {
+  content: " [insertion end] ";
+}
+
+ins::before {
+  content: " [deletion start] ";
+}
+
+ins::after {
+  content: " [deletion end] ";
+}
+
+u.u-sp {
+  text-decoration: red wavy underline;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/HTML/Element/s */
+s::before,
+s::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+s::before {
+  content: " [start of stricken text] ";
+}
+
+s::after {
+  content: " [end of stricken text] ";
 }
 
 @media (min-width: 800px) {
@@ -424,6 +638,10 @@ ul.links {
 }
 
 @media (max-width: 600px) {
+  html {
+    margin: 0 0.5em 0 0.6em;
+  }
+
   h1 {
     font-size: 2.5rem;
     line-height: 2.5rem;
@@ -456,6 +674,6 @@ ul.links {
   #now .section,
   #links .section,
   #error-404 .blob {
-    padding: 0 1rem 0.5rem;
+    padding: 0 0.5rem 0.5rem;
   }
 }

@@ -3,6 +3,7 @@
   "no-inline-html": {
     "allowed_elements": [
       "a",
+      "code",
       "div",
       "figcaption",
       "figure",

@@ -4,18 +4,19 @@
   "description": "A personal website made with eleventy",
   "main": "server.js",
   "scripts": {
-    "build": "npx @11ty/eleventy",
+    "build": "NODE_ENV=production npx @11ty/eleventy",
     "start": "rm -rf dist && npx @11ty/eleventy --serve --port=3000"
   },
   "dependencies": {
-    "@11ty/eleventy": "~1.0.2",
+    "@11ty/eleventy": "^2.0.0",
     "@11ty/eleventy-plugin-rss": "~1.2.0",
+    "dotenv": "^16.0.3",
     "html-to-text": "~8.2.0",
     "marked": "~4.0.18",
     "moment": "~2.29.4"
   },
   "engines": {
-    "node": "18.7.0"
+    "node": "20.4.0"
   },
   "repository": {
     "url": "https://github.com/patrickweaver/pw20"

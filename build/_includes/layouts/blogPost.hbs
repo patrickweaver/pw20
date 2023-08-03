@@ -3,7 +3,7 @@
   <head>
     {{> boilerplate/head }}
   </head>
-  <body>
+  <body onhashchange="footnoteScroll()">
     <header>
       {{> boilerplate/siteHeader }}
     </header>
@@ -13,13 +13,34 @@
       </h2>
       
       <div class="post">
-        
-        {{> blog/postHeader }}
         <article>
+          <header>
+            {{> blog/postHeader }}
+          </header>
+        
           {{{ content }}}
         </article>
       </div>
     </main>
     {{> boilerplate/analytics }}
+    <script>
+      function footnoteScroll() {
+        const { hash } = window.location;
+        const id = hash.slice(1, hash.length);
+        const isFootnote = hash.includes("footnote");
+        const isReturnLink = isFootnote && hash.includes("link");
+        if (isFootnote && !isReturnLink) {
+          const footnote = document.getElementById(id);
+          console.log({ footnote })
+          if (!footnote) return;
+          footnote.style.borderColor = 'red';
+          setTimeout(() => {
+            footnote.style.transition = 'border-color 4s ease-in-out';
+            footnote.style.borderColor = '#00000000';
+          }, 1000);
+        }
+        scrollBy(0, -20);
+      }
+    </script>
   </body>
 </html>

@@ -1,5 +1,8 @@
+
 <div class="post-date">
-  {{readableDate this.date}}
+  <time datetime="{{machineReadableDate this.date}}">
+    {{readableDate this.date}}
+  </time>
 </div>
 
 <h3 class="post-title">
@@ -16,7 +19,7 @@
 
 {{#if (not this.index)}}
   {{#if this.editors_note}}
-    <blockquote class="editors-note">
+    <aside class="editors-note">
       <h4 class="editors-note-header">
         {{#if this.editors_note_header}}
           {{this.editors_note_header}}
@@ -25,14 +28,16 @@
         {{/if}}
       </h4>
       <p><em>{{this.editors_note}}</em></p>
-    </blockquote>
+    </aside>
   {{/if}}
 {{/if}}
 
 <div class="index-item-header">
   {{#if (or this.index (not this.do_not_show_cover_at_top))}}
     {{#if this.cover_image_url}}
-      <div class="post-header-image {{#if (not this.index)}}full-width{{/if}}">
+      <div
+        class="post-header-image {{#if (not this.index)}}full-width{{/if}}"
+      >
         <a href="{{this.url}}">
           <img
             class="index-item-header-image"
@@ -47,7 +52,11 @@
 
   {{#if this.index}}
     <p class="blog-post-preview-text">
-      {{previewText this.templateContent}}
+      {{#if this.preview_text }}
+        {{this.preview_text}}
+      {{else}}
+        {{previewText this.templateContent}}
+      {{/if}}
       <a href="{{this.url}}" aria-label="Read more about {{this.title}}">
         {{readMore this.templateContent}}&nbsp;→</a>
     </p>
