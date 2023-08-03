@@ -34,6 +34,12 @@ pageId: links
   <h3>Social</h3>
 
   <dl class="links">
+    <dt>Bluesky:</dt>
+    <dd>
+      <a href="https://bsky.app/profile/patrickweaver.bsky.social" target="_blank">
+        @patrickweaver.bsky.social
+      </a>
+    </dd>
     <dt>DEV:</dt>
     <dd>
       <a href="https://dev.to/patrickweaver" target="_blank">
