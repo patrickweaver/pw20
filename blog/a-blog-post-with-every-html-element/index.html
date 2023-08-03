@@ -1,0 +1,1767 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Patrick Weaver</title>
+    
+    <base href="/blog/a-blog-post-with-every-html-element/" />
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <meta name="description" content="Patrick Weaver’s Website" />
+    <link id="favicon" rel="icon" href="/images/favicon.png" type="image/png" />
+    
+    <!-- Social -->
+      <meta property="og:title" content="A Blog Post With Every HTML Element" />
+      <meta property="og:description" content="Patrick Weaver’s Website" />
+      <meta property="og:image" content="/images/blog/html/park-html-crop.jpg" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@patrickweave_r" />
+    <meta name="twitter:creator" content="@patrickweave_r" />
+      <meta name="twitter:title" content="A Blog Post With Every HTML Element" />
+      <meta name="twitter:description" content="Patrick Weaver’s Website" />
+      <meta name="twitter:image" content="/images/blog/html/park-html-crop.jpg" />
+      <meta name="twitter:image:alt" content="A photograph of a handwritten HTML document on lined paper" />
+    
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body onhashchange="footnoteScroll()">
+    <header>
+      <h1 id="site-title">
+        <a href="/">Patrick Weaver</a>
+      </h1>
+      
+      <nav>
+        <ul class="menu">
+          <li class="menu-about"><a href="/">About</a></li>
+          <li class="menu-blog"><a href="/blog">Blog</a></li>
+          <li class="menu-portfolio"><a href="/portfolio">Portfolio</a></li>
+          <li class="menu-now"><a href="/now">Now</a></li>
+          <li class="menu-links"><a href="/links">Links</a></li>
+        </ul>
+      </nav>
+      
+    </header>
+    <main>
+      <h2 class="page-header">
+        <a href="/blog">Blog</a>
+      </h2>
+      
+      <div class="post">
+        <article>
+          <header>
+            
+            <div class="post-date">
+              <time datetime="2023-08-3">
+                August 3, 2023
+              </time>
+            </div>
+            
+            <h3 class="post-title">
+              <a href="">
+                  A Blog Post With Every HTML Element
+              </a>
+            </h3>
+            
+            
+            <div class="index-item-header">
+                  <div
+                    class="post-header-image full-width"
+                  >
+                    <a href="">
+                      <img
+                        class="index-item-header-image"
+                        src="/images/blog/html/park-html-crop.jpg"
+                        alt="A photograph of a handwritten HTML document on lined paper"
+                        aria-label="Link to post for A Blog Post With Every HTML Element"
+                      />
+                    </a>
+                  </div>
+            
+            </div>
+          </header>
+        
+          <!-- markdownlint-disable MD033 -->
+<style>
+    section > ul {
+        padding-left: 0;
+    }
+    section > ul > li {
+        display: inline-block;
+    }
+
+    section > ul > li::after {
+        content: ', ';
+    }
+
+    section > ul > li:last-child::after {
+        content: '';
+    }
+
+    .confetti {
+        position: fixed;
+        font-size: 3rem;
+        top: 50px;
+    }
+
+    #pw-links-portal {
+    width: 300px;
+    height: 200px;
+    margin: 0.5rem;
+    }
+
+    .very-long-url-wrapper {
+        max-width: 100%;
+        overflow: scroll;
+        padding-bottom: 1rem;
+    }
+
+    #weird-table {
+        border: 5px double #8f8f9f;
+        padding: 5px;
+    }
+
+    #weird-table .low-numbers {
+        background-color: #ff4f2f4f;
+    }
+
+    #weird-table .high-numbers {
+        background-color: #2f4fff4f;
+    }
+
+    #weird-table th {
+        background-color: #2fff2f1f;
+    }
+
+    #weird-table th[scope='row'] {
+    background-color: #2fffff1f;
+    text-align: left;
+}
+
+    #weird-table th,
+    #weird-table td {
+        border: 2px solid black;
+        padding: 5px;
+        min-width: 40px;
+        text-align: center;
+    }
+
+    #weird-table th:nth-child(1),
+    #weird-table td:nth-child(1) {
+        border: none;
+    }
+
+    #weird-table th:nth-child(2),
+    #weird-table td:nth-child(2) {
+        border-radius: 3px;
+    }
+
+    #weird-table th:nth-child(3),
+    #weird-table td:nth-child(3) {
+        border-radius: 6px;
+    }
+
+    #weird-table th:nth-child(4),
+    #weird-table td:nth-child(4) {
+        border-radius: 9px;
+    }
+
+    #weird-table th:nth-child(5),
+    #weird-table td:nth-child(5) {
+        border-radius: 12px;
+    }
+
+    #weird-table th:nth-child(6),
+    #weird-table td:nth-child(6) {
+        border-radius: 15px;
+    }
+
+    #weird-table th:nth-child(7),
+    #weird-table td:nth-child(7) {
+        border-radius: 18px;
+    }
+
+    #everything-form {
+        border: 5px double #080f18;
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+    #everything-form label {
+        display: block;
+    }
+
+    #everything-form {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-rows: 20% 20% 20% 20% 20%;
+    }
+
+    #everything-form > * {
+        margin: 2px;
+    }
+
+    #eform-type {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        background-color: #f8fffa;
+        border-radius: 3px;
+        border: 1px solid #d8dfda;
+        text-align: right;
+        padding: 4px;
+    }
+
+    #eform-size {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 7;
+        text-align: center;
+        margin: 5px 10px 5px 5px;
+    }
+
+    #eform-size-meter {
+        width: 100%;
+    }
+
+    #eform-size > fieldset {
+        width: 100%;
+        background-color: #faeaff;
+    }
+
+    #eform-size > fieldset > legend {
+        width: 100%;
+        background-color: #fcf2ff;
+        border-radius: 10px;
+        border: 1px solid #dcd2df;
+    }
+
+    #eform-size > * {
+        display: inline-block;
+    }
+
+    #eform-color {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        text-align: right;
+        background-color: #fafaef;
+        padding: 6px;
+        border-radius: 5px;
+        border: 2px solid #bf6ff8;
+    }
+
+    #eform-dream {
+        grid-column-start: 5;
+        grid-column-end: 6;
+        grid-row-start: 1;
+        grid-row-end: 6;
+        position: relative;
+        border-radius: 3px;
+        background-color: #e8ffe8;
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 33% 34% 33%;
+    }
+
+    #eform-dream > label {
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        vertical-align: middle;
+        padding: 1rem 0.5rem;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+
+    #dream-secret {
+        text-orientation: sideways;
+        font-size: 0.5rem;
+    }
+
+    #dream-input {
+        resize: none;
+        font-family: cursive;
+        font-size: 2rem;
+        display: block;
+        margin: 4px;
+        font-color: #38789f;
+        writing-mode: vertical-lr;
+        text-orientation: sideways;
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+
+    #form-completion-label {
+        display: inline-block;
+        margin-top: 3rem;
+        width: 100%;
+        text-align: center;
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    #form-completion {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    #eform-submit-button {
+        border: 4px solid #6faf38;
+        background-color: #8fcf58;
+        color: #ffeff8;
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        border-radius: 4px;
+        box-shadow: -4px -4px 3px #bfbfef;
+        margin: 5px;
+        font-size: 2rem;
+        font-family: serif;
+        position: relative;
+        cursor: pointer;
+    }
+
+    #eform-submit-button:hover {
+        border-color: #51b578;
+        background-color: #47775A;
+        color: #F0F6FB;
+        border-radius: 6px;
+        font-size: 2.25rem;
+    }
+
+    #eform-submit-button:active {
+        border-color: #54c480;
+        background-color: #4E7E52;
+        color: #F4FAFF;
+        border-radius: 6px;
+        top: -2px;
+        left:-2px;
+        box-shadow: -2px -2px 1px #bfbfef;
+        border-radius: 3px;
+        font-size: 2.5rem;
+    }
+
+    #everything-output {
+        border: 4px dotted #f47a9e;
+        border-radius: 10px;
+        width: 300px;
+        max-width: 90%;
+        height: 100px;
+        display: block;
+        margin: 2rem 1rem;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    #palm-sheriff {
+        font-size: 0.75rem;
+        line-height: 0.75rem;
+        margin: 0 40%;
+    }
+
+    #menu-button {
+        border: 2px solid #2f2f2f;
+        border-radius: 10px;
+        width: 200px;
+        height: 3rem;
+        padding: 0.5rem;
+        background-color: #2f8fdf;
+        color: #ffffff;
+        text-align: center;
+        box-shadow: -3px -3px 10px #9fcff8;
+    }
+
+    #menu-button:hover {
+        box-shadow: -3px -3px 15px #9fcff8;
+        background-color: #2888d0;
+        cursor: pointer;
+    }
+
+    #menuitem-example {
+        width: 300px;
+        border: 2px solid #2f2f2f;
+        padding: 0;
+        background-color: #78c8fd;
+        margin: 1px 0 0;
+        border-radius: 4px;
+    }
+
+    #menuitem-example > menuitem {
+        display: inline-block;
+        width: 100%;
+        padding: 10px;
+        border-bottom: 1px solid #000000;
+    }
+
+    #menuitem-example > menuitem:last-child {
+        border: none;
+    }
+
+    #nobr-box {
+        width: 170px;
+        border: 2px solid #2f2f2f;
+        border-radius: 3px;
+        padding: 5px;
+        background-color: #fdfaf7;
+        overflow: scroll;
+        margin: 1rem 0;
+    }
+
+    footer {
+        margin: 2rem 0 1rem;
+        border: 1px solid #dfd8df;
+        border-radius: 5px;
+        padding: 1rem 10px;
+        background-color: #fefcfe;
+    }
+
+    @media (max-width: 600px) {
+        #everything-form {
+        }
+
+        #everything-form {
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20% 20%;
+            grid-template-rows: 25% 25% 35% 5% 10%;
+        }
+
+        #everything-form label {
+            font-size: 1rem;
+        }
+
+        #eform-type {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+
+        #eform-color {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+
+        #eform-size {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            text-align: center;
+            margin: 5px 10px 5px 5px;
+        }
+
+        #eform-dream {
+            grid-column-start: 5;
+            grid-column-end: 6;
+            grid-row-start: 1;
+            grid-row-end: 4;
+        }
+
+        #eform-dream > label {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+
+        #dream-secret {
+            text-orientation: sideways;
+            font-size: 0.5rem;
+        }
+
+        #dream-input {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+
+        #form-completion-label {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 4;
+            grid-row-end: 5;
+            font-size: 0.75rem;
+            margin: 0;
+            text-align: left;
+        }
+
+        #form-completion {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 5;
+            grid-row-end: 6;
+            margin-top: 0;
+        }
+
+        #eform-submit-button {
+            grid-column-start: 5;
+            grid-column-end: 6;
+            grid-row-start: 4;
+            grid-row-end: 6;
+            border: 4px solid #6faf38;
+            border-radius: 2px;
+            box-shadow: -4px -4px 3px #bfbfef;
+            margin: 5px;
+            font-size: 1rem;
+            font-family: serif;
+            position: relative;
+            writing-mode: vertical-lr;
+            text-orientation: sideways;
+        }
+
+        #eform-submit-button:hover {
+            border-radius: 4px;
+            font-size: 1rem;
+            writing-mode: vertical-rl;
+        }
+
+        #eform-submit-button:active {
+            border-radius: 6px;
+            top: -2px;
+            left:-2px;
+            box-shadow: -2px -2px 1px #bfbfef;
+            border-radius: 2px;
+            font-size: 1.25rem;
+        }
+
+        #palm-sheriff {
+        font-size: 0.75rem;
+        line-height: 0.75rem;
+        margin: 0 30%;
+    }
+}
+</style>
+<section>
+<p>After learning a little bit more about web accessibility last year I had been exploring some of the less common <abbr title="Hyper Text Markup Language">HTML</abbr> elements, and making changes to this website, like wrapping the text of the posts on this blog in <code>&lt;article&gt;</code> tags and adding a <code>&lt;main&gt;</code> tag in the website’s layout templates (this website is built using <a href="https://www.11ty.dev/" target="_blank">Eleventy</a>).</p>
+<p>I had previously done some work to make sure that <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> elements were layed out nicely for images with associated captions, and I had been impressed with various <a href="https://www.recurse.com/" target="_blank">Recurser’s</a> implementation of footnotes or sidenotes<sub id="footnote-1-link"><a href="./#footnote-1">1</a></sub>, and have been thinking it would be interesting to see what other interesting layouts were possible with just HTML.</p>
+<p>I could, element by element, continue to add support (mostly by making <abbr title="Cascading Style Sheets">CSS</abbr> updates for each element to fit in with the rest of my style choices) as I came across specific needs for them, but not one to shy away from an exhaustive exploration, I decided to write this post and attempt to use every element.</p>
+<p>A goal of the post, was to avoid delaying other future posts with CSS updates on a previously unused element, but in reality it took a year and a half to make all the updates for just this post! I am using the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">MDN Web Docs list of HTML elements</a> as a reference which has more than 100 tags divided into a few categories, which I will also use in this post. Many of the tags like <code>&lt;html&gt;</code> don’t make sense to include in the text of a blog post, but if you’re viewing this post on <a href="https://www.patrickweaver.net">patrickweaver.net</a>, then every one of the elements is used somewhere on this page.</p>
+</section>
+<hr />
+<h2>The Elements</h2>
+<section id="main-root">
+<h3>Main Root</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html"><code>&lt;html&gt;</code></a></li>
+</ul>
+<p>I didn’t have to make any changes to the <code>&lt;html&gt;</code> tag for this post, but one thing I don’t always remember to include is the <code>lang</code> property (in this case <code>lang=&quot;en&quot;</code>).</p>
+</section>
+<section id="document-metadata">
+<h3>Document Metadata</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base"><code>&lt;base&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head"><code>&lt;head&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta"><code>&lt;meta&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style"><code>&lt;style&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title"><code>&lt;title&gt;</code></a></li>
+</ul>
+<p>I wasn’t familiar with the <code>&lt;base&gt;</code> tag before writing this post, though I’ve now added one with relative links to my layout templates. This caused a few issues with things like local development, and relative links, though they were easily resolved. The rest of the metadata tags are familiar and were already here.</p>
+</section>
+<section id="sectioning-root">
+<h3>Sectioning Root</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body"><code>&lt;body&gt;</code></a></li>
+</ul>
+<p>Like the Document metadata tags, in the layout, though it was interesting to read the documentation and learn about attributes, like <code>onbeforeprint</code> that provides functionality I’ve used more hacky methods to accomplish previously, and <code>onblur</code>, whose primary utility seems to be annoying popups.</p>
+</section>
+<section id="content-sectioning">
+<h3>Content Sectioning</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address"><code>&lt;address&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article"><code>&lt;article&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside"><code>&lt;aside&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer"><code>&lt;footer&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header"><code>&lt;header&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"><code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;h4&gt;</code>, <code>&lt;h5&gt;</code>, <code>&lt;h6&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main"><code>&lt;main&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav"><code>&lt;nav&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section"><code>&lt;section&gt;</code></a></li>
+</ul>
+<p>When I first looked at the list I assumed that <code>&lt;address&gt;</code> would be designed exclusively for mailing addresses, but was surprised to see that it can be used for email addresses, and even links. I updated the email address on the About page of site site, but I’ll add an <code>&lt;address&gt;</code> below also:</p>
+<address>
+    <p>Email Patrick:</p>
+    <a href="mailto:hello.patrickw@gmail.com">hello.patrickw@gmail.com</a>
+</address>
+<p>As I mentioned above, I updated the blog post page template to use the <code>&lt;article&gt;</code> tag, but reading the documentation, I’m now wondering if it would fit on every page of the site.</p>
+<p>I’m now using <code>&lt;aside&gt;</code> elements, which represent, <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside">a portion of a document whose content is only indirectly related to the document’s main content</q>, to wrap around my footnotes at the bottom of this page (though I may try to style them as sidenotes in the future). The current design of this website doesn’t have a <code>&lt;footer&gt;</code>, but I’ve added one to this blog post, and while I had a <code>&lt;header&gt;</code> element on the page header previously, I now know that more than one is acceptable so there is one around the header section of each blog posts as well.</p>
+<h4>Heading elements</h4>
+<p>As part of the style update and cleanup of this site that inspired this post I realized I was often using headers with incorrect hierarchy, which I cleaned up. Though I never reached 6 levels of headers, the closest I got was <code>&lt;h3&gt;</code> in some of the blog posts with multiple sections and subsections.</p>
+<h5>How to use top level headings</h5>
+<p>It is a little bit unclear how to use <code>&lt;h1&gt;</code> tags in a post like this from just the MDN documentation. This <a href="https://www.w3.org/QA/Tips/Use_h1_for_Title">tip from the W3C</a> suggests different implementations for pages with standalone, or collection content, which would make it difficult to use the same templates and styles for different pages on this site.</p>
+<h6>How I decided to handle it</h6>
+<p>Before writing this post I had updated the site to use <code>&lt;h1&gt;</code> for the name of the site (my name) at the top, <code>&lt;h2&gt;</code> for the section name, for this page, “Blog”, and <code>&lt;h3&gt;</code> for the title of what would be the <code>&lt;article&gt;</code> on a page. However, after reading the documentation and the tip above, I decided to update the hierarchy and use <code>&lt;h1&gt;</code> for different things on different pages, and use classes for styles, which is probably more in line with the separation of concerns of HTML and CSS (which means this paragraph is below an <code>&lt;h6&gt;</code>).</p>
+<p>The <code>&lt;main&gt;</code> element was one of the initial curiosities that led me down the path of reading about and implementing every element, though it wasn’t until I read through the MDN list that I added a <code>&lt;nav&gt;</code> element around the menu at the top of this page. I’ve added <code>&lt;section&gt;</code> elements to this post, but I’m not sure how often I will use them elsewhere. One reason is that it makes it harder to mix and match HTML and markdown with visually clear nesting in the <a href="https://github.com/patrickweaver/pw20/blob/main/build/blog/a-blog-post-with-every-html-element.md">document where I am writing this post</a>.</p>
+</section>
+<section id="text-content">
+<h3>Text Content</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"><code>&lt;blockquote&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dd"><code>&lt;dd&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div"><code>&lt;div&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl"><code>&lt;dl&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dt"><code>&lt;dt&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption"><code>&lt;figcaption&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure"><code>&lt;figure&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr"><code>&lt;hr&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li"><code>&lt;li&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"><code>&lt;menu&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol"><code>&lt;ol&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p"><code>&lt;p&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre"><code>&lt;pre&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul"><code>&lt;ul&gt;</code></a></li>
+</ul>
+<p>I had previously used <code>&lt;blockquote&gt;</code> for embedding tweets into blog posts, but for this post I decided to add styles for standalone quotes. I didn’t know about the <code>&lt;blockquote&gt;</code> <code>cite</code> property or <code>&lt;cite&gt;</code> element until reading the docs more closely:</p>
+<figure class="blockquote-figure">
+    <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote#attributes">
+        <h4><code>cite</code></h4>
+        <p>A URL that designates a source document or message for the information quoted. This attribute is intended to point to information explaining the context or the reference for the quote.</p
+    </blockquote>
+    <figcaption><cite>MDN</cite> on <code>&lt;blockquote&gt;</code></figcaption>
+</figure>
+<p><code>&lt;dd&gt;</code>, <code>&lt;dl&gt;</code>, and <code>&lt;dt&gt;</code> are elements that, after finding out about them when first looking into more obscure HTML elements, I was very surprised to have not known about sooner. Although, it’s unclear from the documentation whether lists like the links on the current version of my <a href="https://web.archive.org/web/20220628123804/https://www.patrickweaver.net/portfolio/">portfolio page</a> should use <code>&lt;dl&gt;</code> (I’m currently using <code>&lt;ul&gt;</code>). I am curious how <code>&lt;ol&gt;</code> and <code>&lt;ul&gt;</code> became part of almost every “Intro to HTML” class, but <code>&lt;dl&gt;</code> is relatively obscure. It’s also strange that <code>&lt;ol&gt;</code> and <code>&lt;ul&gt;</code> have default margins, but for <code>&lt;dl&gt;</code> the margin is on <code>&lt;dd&gt;</code>.</p>
+<h4>HTML list elements:</h4>
+<dl>
+    <dt><code>dl</code></dt><dd>Description list</dd>
+    <dt><code>ol</code></dt><dd>Ordered list</dd>
+    <dt><code>ul</code></dt><dd>Unordered list</dd>
+</dl>
+<p><code>&lt;div&gt;</code> has acquired a bad reputation on the modern web due to overuse, so I was surprised to be using relatively few <code>&lt;div&gt;</code> elements, though once I started using elements that I wanted to style together, I ended up with around 20. It shows how unnecessary most <code>&lt;div&gt;</code>s probably are, though this site has minimal generic “sections”.</p>
+<p>Among the first more obscure elements that I added to this site were <code>&lt;figcaption&gt;</code> and <code>&lt;figure&gt;</code>. I was adding some blog posts that had originally been published on Medium, and wanted to add captions below images in a web-semantically correct way. Though after reading the documentation, which says <code>&lt;figure&gt;</code> can be used for, <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure#usage_notes">image, illustration, diagram, code snippet, etc.,</q> I realized that there are a lot of places where I currently have code blocks that I could be using them.</p>
+<p>I have always liked <code>&lt;hr&gt;</code> elements a lot, but I’m never sure when to use them. The documentation says, <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr#try_it">While it may still be displayed as a horizontal rule in visual browsers, this element is now defined in semantic terms, rather than presentational terms, so if you wish to draw a horizontal line, you should do so using appropriate CSS</q> which made me revisit the <code>&lt;hr&gt;</code> styles on this site and I decided to include an emoji in an <code>hr:after</code> rule, though I should check how that works on a screen reader.</p>
+<p>The items in the (inline styled) lists of elements on this page are of course <code>&lt;li&gt;</code> elements, though I had never looked at the documentation until now. It’s interesting that the same <code>&lt;li&gt;</code> element is used in both <code>&lt;ol&gt;</code> and <code>&lt;ul&gt;</code> lists, with quirks like <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li#attributes">The value attribute has no meaning for unordered lists</q>, but is not used to wrap the <code>&lt;dt&gt;</code> and <code>&lt;dd&gt;</code> elements in a <code>&lt;dl&gt;</code>.</p>
+<p>I had not encountered <code>&lt;menu&gt;</code> before writing this post, and I was initially surprised that it survived to HTML 5 (while <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menuitem"><code>&lt;menuitem&gt;</code></a> didn’t) because modern browsers treat it as essentially a <code>&lt;ul&gt;</code>. Researching further <a href="https://en.wikipedia.org/wiki/HTML_element#Basic_text">on Wikipedia</a> I read:</p>
+<figure class="blockquote-figure">
+    <blockquote cite="https://en.wikipedia.org/wiki/HTML_element#Basic_text">MENU existed in HTML Tags, and was standardized in HTML 2.0; deprecated in HTML 4.0 Transitional; invalid in HTML 4.0 Strict; then redefined in HTML5, but removed in HTML 5.2,</blockquote>
+</figure
+<p>and now I don’t know what to think, but here’s a <code>&lt;menu&gt;</code>:</p>
+<menu id="interactive-menu">
+    <script type="text/javascript">
+        const b = (id) => `
+            <div
+                id="${id}"
+                class="confetti"
+                style="left: ${Math.random() * 1000}px"
+            >
+                🎈
+            </div>
+        `;
+        const s = (id) => `
+            <div
+                id="${id}"
+                class="confetti"
+                style="left: ${Math.random() * 1000}px"
+            >
+                🧽
+            </div>
+        `;
+        const m = document.getElementById('interactive-menu');
+        function balloons() { confetti(b) };
+        function sponges() { confetti(s) };
+        function confetti(f) {
+            const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+            for (let i = 0; i < 3; i++) {
+                const id = `c-${String(Math.random()).slice(2, 9)}`
+                m.insertAdjacentHTML('beforeend', f(id))
+                sink(id)
+            }
+            async function sink(id) {
+                const e = document.getElementById(id);
+                const startTop = getComputedStyle(e)?.top ?? '0px';
+                let top = parseInt(startTop.slice(0, startTop.indexOf('p')), 10);
+                console.log({ top, vh })
+                while (top < vh + 100) {
+                    top = top + 2;
+                    e.style.top = `${top}px`;
+                    console.log({ top })
+                    await new Promise(r => setTimeout(r, 16.67));
+                }
+                e.remove();
+            }
+        } 
+    </script>
+    <li><button onclick="balloons()">Balloons</button></li>
+    <li><button onclick="sponges()">Sponges</button></li>
+    <noscript>
+        <p>This menu will only be interactive when JavaScript is enabled.</p>
+    </noscript>
+</menu>
+<p><code>&lt;ol&gt;</code> and <code>&lt;ul&gt;</code> are some of the HTML elements I used in my earliest web pages, and more recently I try to use <code>&lt;ul&gt;</code> with CSS in places that are semantically lists, but might not be styled like a traditional list.</p>
+<p>I was surprised not to find more guidance on using <code>&lt;p&gt;</code> tags on <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p">the MDN docs</a>, something I wonder often when adding non long form text to a website is, “is this really a paragraph?” But, it seems like as far as HTML is concerned, if it’s not a heading, then probably!</p>
+<p>Before reading the documentation I had really only considered using <code>&lt;pre&gt;</code> tags along with <code>&lt;code&gt;</code> tags for code blocks, but the example used on MDN is used to show how <code>&lt;pre&gt;</code> can display meaningful whitespace for things like:</p>
+<figure class="no-padding-figure"><pre role="img" aria-label="An ASCII picture of a house with the label, 'in this house we write semantic HTML'">
+  ┏┓
+  ┃┃╱╲ in
+  ┃╱╱╲╲ this
+  ╱╱╭╮╲╲house
+  ▔▏┗┛▕▔ we
+  ╱▔▔▔▔▔▔▔▔▔▔╲
+write semantic HTML
+  ╱╱┏┳┓╭╮┏┳┓ ╲╲
+  ▔▏┗┻┛┃┃┗┻┛▕▔
+</pre></figure>
+</section>
+<section id="inline-text-semantics">
+<h3>Inline Text Semantics</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr"><code>&lt;abbr&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/b"><code>&lt;b&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bdi"><code>&lt;bdi&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bdo"><code>&lt;bdo&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br"><code>&lt;br&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite"><code>&lt;cite&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code"><code>&lt;code&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/data"><code>&lt;data&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dfn"><code>&lt;dfn&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em"><code>&lt;em&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/i"><code>&lt;i&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd"><code>&lt;kbd&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark"><code>&lt;mark&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"><code>&lt;q&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rp"><code>&lt;rp&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rt"><code>&lt;rt&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ruby"><code>&lt;ruby&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/s"><code>&lt;s&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/samp"><code>&lt;samp&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/small"><code>&lt;small&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span"><code>&lt;span&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong"><code>&lt;strong&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sub"><code>&lt;sub&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sup"><code>&lt;sup&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time"><code>&lt;time&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/u"><code>&lt;u&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/var"><code>&lt;var&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr"><code>&lt;wbr&gt;</code></a></li>
+</ul>
+<p>As with other very common tags I was curious to get to the documentation for <code>&lt;a&gt;</code> to see if there was anything I was unaware of, or had been using incorrectly. I was surprised to discover that <code>&lt;a href=&quot;#&quot;&gt;link&lt;/a&gt;</code> links to the top of the page after years as just using it as a placeholder when I didn’t know the URL yet.</p>
+<p><code>&lt;abbr&gt;</code> seems likely to be the least used tag, especially because the MDN documentation doesn’t make a great case for it <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr#default_styling">the purpose of this element is purely for the convenience of the author.</q></p>
+<p>The distinction between <code>&lt;b&gt;</code> and <code>&lt;strong&gt;</code>, as the docs have it, is not what I had previously thought (that <code>&lt;strong&gt;</code> was the HTML5 replacement for <code>&lt;b&gt;</code>). I think the distinction is more nuanced and overlapping than the technical nature of the documentation is really able to convey. The way I will probably explain it to other people in the future is that, for the most part, you should use <code>&lt;b&gt;</code> for <b>single words</b> (or compound words), <strong>and <code>&lt;strong&gt;</code> for whole sentences or phrases</strong>. This is more a rule of thumb and bypasses the actual distinction. The documentation reads:</p>
+<figure>
+    <blockquote>
+        The <code>&lt;strong&gt;</code> element is for content that is of greater importance, while the <code>&lt;b&gt;</code> element is used to draw attention to text without indicating that it’s more important.
+    </blockquote>
+    <figcaption>
+        <cite><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong#b_vs._strong">MDN on “<code class="code-regular">&lt;b&gt;</code> vs. <code class="code-regular">&lt;strong&gt;</code>”</a></cite>
+    </figcaption>
+</figure>
+<p>But I can’t think of many instances where I would want to draw attention to a word, where that word is not more important than other words. The recommendation seems to be from a reality where, for the most part, all words are of equal importance, but deserve different amounts of attention, which doesn’t seem very common.</p>
+<p>I’ll probably think of <code>&lt;b&gt;</code> from now on as the HTML tag with a similar effect as the quotation marks used for “emphasis” you might see on signage that can cause intergenerational confusion.</p>
+<p><code>&lt;bdi&gt;</code> is a tag for a concept that I hadn’t considered until now, text whose direction might (or might not) differ from the direction of the surrounding text. The examples on the documentation are all names, but could stand in for any user inputted text. In the future I will probably try to wrap any tags, like the ones controlled by the input below, that might contain arbitrary user inputted unicode characters in a <code>&lt;bdi&gt;</code> tag just to be safe.</p>
+<form>
+    <label for="bdi-name-input">What is your name?</input>
+    <input type="text" id="bdi-name-input">
+</form>
+<p>Hello, <bdi id="bdi-name-display">&nbsp;&nbsp;&nbsp;&nbsp;</bdi>, thanks for reading!</p>
+<div>
+<button id="rtl-fill" type="button">Fill with a RTL language name</button> (<a href="https://en.wikipedia.org/wiki/Abdul_Rahman_Munif" target="_blank">عَبْد الرَّحْمٰن بِن إِبْرَاهِيم المُنِيف</a>)
+</div>
+<script type="text/javascript">
+    const bdi_i = document.getElementById("bdi-name-input");
+    const bdi_o = document.getElementById("bdi-name-display");
+    const bdi_b = document.getElementById("rtl-fill");
+    bdi_i.addEventListener("input", function(event) {
+        bdi_o.innerHTML = event.target?.value || "&nbsp;&nbsp;&nbsp;&nbsp;";
+    })
+    bdi_b.addEventListener("click", function(event) {
+        const rtl_name = 'عَبْد الرَّحْمٰن بِن إِبْرَاهِيم المُنِيف';
+        bdi_o.innerHTML = rtl_name;
+        bdi_i.value = rtl_name;
+    })
+</script>
+<noscript>
+    <p>This form will only be interactive when JavaScript is enabled.</p>
+</noscript>
+<p><code>&lt;bdo&gt;</code> I will probably use less often because I don’t work with RTL languages often, but it is still good to know how to handle small amounts of RTL text, like this link to the page for HTML on the Farsi Wikipedia: <a href="https://fa.wikipedia.org/wiki/%D8%A7%DA%86%E2%80%8C%D8%AA%DB%8C%E2%80%8C%D8%A7%D9%85%E2%80%8C%D8%A7%D9%84" target="_blank"><bdo dir="rtl">اچ‌تی‌ام‌ال</bdo></a>.</p>
+<p><code>&lt;br&gt;</code> is interesting to me, because for a time (a long time ago) it seemed to be as misused as <code>&lt;div&gt;</code> has been recently, but, as CSS has gotten more robust that is probably less often the case; though I wonder if it is still taught early in HTML classes. It’s interesting that the example use case in the docs is poetry because it makes me wonder how the grey area between a paragraph and a standalone line was considered in creating the HTML spec. It also seems like a <code>&lt;pre&gt;</code> tag might be a better fit in some cases.</p>
+<p><code>&lt;cite&gt;</code> and <code>&lt;q&gt;</code> are interesting because they try to add HTML semantic elements for meaning that is also conveyed by visible punctuation in most languages. It’s the kind of redundancy that underscores repetitiousness of working with computers (the default style for <cite>cite</cite> uses italics while <q cite="this is not really a quotation">q</q> adds quotation marks not in the text.).</p>
+<p>I’ve clearly used many <code>&lt;code&gt;</code> elements in this post so far, but reading the documentation made me wonder whether the recently released Markdown support in Google Docs uses <code>&lt;code&gt;</code> for text, but on inspecting the HTML of a Doc, I remembered that <code>&lt;canvas&gt;</code> is used to render the document now.</p>
+<p>Occasionally the MDN documentation examples are difficult to mentally translate to real-world use cases. <code>&lt;data&gt;</code> is one of these, where the ony examples show a <code>&lt;data&gt;</code> element with a <code>value</code> property with product IDs wrapped around product names In that case the IDs seem either, user facing, in which case it would probably be better to display them to the user, or non user facing, in which case, I’m not sure who the “data” is for. Interestingly, <code>&lt;data&gt;</code> doesn’t seem to appear in the <a href="https://www.w3.org/TR/2011/WD-html5-20110405/">W3C HTML5 specification</a>.</p>
+<p><code>&lt;dfn&gt;</code> is another strange element because it seems like it is misnamed, as it wraps, not the definition of a term, but instead that term within the definition. It does <a href="http://www.martinrinehart.com/frontend-engineering/engineers/html/html-tag-history.html">only seem to have been part of the never officially adopted HTML 2.0 proposal</a>, and it exemplifies the academic nature of the early web. The <a href="http://www.martinrinehart.com/frontend-engineering/engineers/html/html-tag-history.html">HTML Tags: Past, Present, Proposed</a> page on martinrinehart.com defines <dfn title="Hyper Text Markup Language 2.0">HTML 2.0</dfn> as <q cite="http://www.martinrinehart.com/frontend-engineering/engineers/html/html-tag-history.html">There never was an HTML 2.0 standard, but these all shaped browser development in the late 20th century</q> with references to several RFC documents.</p>
+<p><code>&lt;em&gt;</code> and <code>&lt;i&gt;</code> bring up similar usage questions as <code>&lt;b&gt;</code> and <code>&lt;strong&gt;</code>, but in my opinion with even more nuance, especially, as the documentation notes, with other more specific tags like <code>&lt;cite&gt;</code> that also by default italicize text in most browsers. The rule of thumb from above also for the most part fits here, <code>&lt;em&gt;</code> for single words, and <code>&lt;i&gt;</code> for sentences or phrases, though the examples in the documentation seem to mostly use <code>&lt;i&gt;</code> for drawing attention to potential confusion, as in, <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em#i_vs._em">The word <i>the</i> is an article</q>.</p>
+<p><code>&lt;kbd&gt;</code> is another tag that makes me wonder about the conceptual boundaries of the usage of the tag. It is intended for specifying keys on a computer keyboard, for example: to type the <code>&lt;</code> character used for (the non escaped) version of the tags in this post, I press <kbd>Shift</kbd> + <kbd>,</kbd> (the styles here on <code>&lt;kbd&gt;</code> are applied through custom CSS). But I’m curious if it would also be appropriate to put a <code>&lt;kbd&gt;</code> around something like <i>Right click</i> (in this case I used <code>&lt;i&gt;</code> instead).</p>
+<p><code>&lt;mark&gt;</code> is interesting because it suggests a 2-way authoring web that was originally envisioned, but failed to come to fruition with usage notes like, <q>Think of this like using a <mark>highlighter pen</mark> in a book to mark passages that you find of interest.</q> The yellow here is the default style in all major browsers.</p>
+<p><code>&lt;rp&gt;</code>, <code>&lt;rt&gt;</code>, and <code>&lt;ruby&gt;</code> all relate to rendering <a href="https://en.wikipedia.org/wiki/Agate_(typography)">“ruby” or “agate” fonts</a>, which are the smallest legible text used in print. They are used in HTML to, <q>provide pronunciation, translation, or transliteration information for East Asian typography.</q> Because I don’t read any East Asian languages, I’ll use the same example as the MDN docs do below. Interestingly, <code>&lt;rp&gt;</code> is used to hide parentheses characters, which are included in the source. It’s surprising to me that there is an element to hide these characters in a very rare instance, but we still rely on CSS to <a href="https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html#hiding-content-visually">hide content visually</a> (but still show it to screen readers).</p>
+<ruby>
+漢 <rp>(</rp><rt>kan</rt><rp>)</rp>
+字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+</ruby>
+<p><code>&lt;s&gt;</code> is the strikethrough element, which should be used to indicate text that is not accurate or relevant, but was previously. Along with <code>&lt;menu&gt;</code> it is one of two elements (or <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/u#usage_notes">according to MDN 3 with <code>&lt;u&gt;</code></a>) that were <a href="http://www.martinrinehart.com/frontend-engineering/engineers/html/html-tag-history.html">deprecated in HTML 4.01, and un-deprecated and redefined in HTML5</a>. The redefinition changes the use of the tag from presentational, which should now be achieved with CSS, to relevant to the context of the text. However, some screen readers don’t announce the strikethrough, which seems potentially confusing. I’ve added the CSS recommended by the MDN docs to my website, so the strikethrough should be announced here.</p>
+<ul>
+  <li><s>HTML 3.0: <code>&lt;s&gt;</code> is used for presentation</s></li>
+  <li>HTML 5: <code>&lt;s&gt;</code> is used for removed text</li>
+</ul>
+<p><code>&lt;samp&gt;</code> is another element I wasn’t aware of before reading the MDN docs. It is used for rendering the output of a computer program, which I had previously just used <code>&lt;code&gt;</code> for (I just updated my <a href="/blog/how-to-raspberry-pi-server/">Raspberry Pi blog post</a> to use <code>&lt;samp&gt;</code>). Another example is below:</p>
+<figure class="figure-with-outline">
+<figcaption>A “Hello, World” program in JavaScript:</figcaption>
+<code>
+console.log("Hello, World")
+</code>
+<br /><br />
+<samp>
+Hello, World
+</samp>
+</figure>
+<p><code>&lt;small&gt;</code> is used to render smaller text, which is something I would usually have done with CSS. The MDN docs don’t provide much clarity about which strategy to use: <q>Authors are encouraged to use their best judgement when determining whether to use <code>&lt;small&gt;</code> or CSS.</q>. <small>I will probably continue to use CSS for the most part since the effect seems to be presentational for the most part.</small></p>
+<p><code>&lt;span&gt;</code> is a very familiar element, but reading the documentation made me wonder for the first time why HTML and CSS allow contradictory element styles like a <div style="display: inline"><code>&lt;div style="display: inline" /&gt;</code></div><p>
+<p> or a <span style="display: block"><code>&lt;span style="display: block" /&gt;</code></span>. Though the <code>&lt;div&gt;</code> breaks the parent <code>&lt;p&gt;</code> tag, while the <code>&lt;span&gt;</code> does not.</p>
+<p><code>&lt;sub&gt;</code> (used for footnotes here) and <code>&lt;sup&gt;</code> (used in the equation below) are more elements I probably have used the CSS implementations of previously (though it is appropriate for presentation only super or subscript.)</p>
+<p><code>&lt;time&gt;</code> seems like a helpful element for creating semantic HTML, but even Google doesn’t seem to use it in <a href="https://www.google.com/search?q=%22Patrick+Weaver%22+%22HTML%22">search results</a>. I’ve updated the dates on my blog posts to use it.</p>
+<p><code>&lt;u&gt;</code> has probably my favorite quote from the MDN docs, <q>Most of the time, you actually don’t want to use <code>&lt;u&gt;</code>.</q> Their strongest recommendation seems to be indicating <u class="u-sp">spellling</u> errors.</p>
+<p><code>&lt;var&gt;</code> is a way to indicate semantically that a string is a variable for either math or programming. For example, rendering the pythagorean theorem uses both <code>&lt;var&gt;</code> and <code>&lt;sup&gt;</code>: <var>a</var><sup>2</sup> + <var>b</var><sup>2</sup> = <var>c</var><sup>2</sup>.</p>
+<p><code>&lt;wbr&gt;</code> was also a new element until now, but it solves a problem I have hit many times before, breaking long “words” at certain points, specifically URLs. If I put a <code>&lt;wbr&gt;</code> element at clear break points in this URL: <a href="https://www.patrickweaver.net/pages/averylongurlwithoutanypunctuationbutstillmadeupofwords/">https://www.patrickweaver.net<wbr />/pages<wbr />/a<wbr />very<wbr />long<wbr />url<wbr />without<wbr />any<wbr />punctuation<wbr />but<wbr />still<wbr />made<wbr />up<wbr />of<wbr />words/</a> then it will break at clear points at different screen widths, which is is more readable compared to the same link without the <code>&lt;wbr&gt;</code> elements:</p>
+<p class="very-long-url-wrapper"><a href="https://www.patrickweaver.net/pages/averylongurlwithoutanypunctuationbutstillmadeupofwords/">https://www.patrickweaver.net/pages/averylongurlwithoutanypunctuationbutstillmadeupofwords/</a></p>
+<p>Though including hyphen characters in the URL also creates clear breakpoints in modern browsers. I did have to wrap the URL above in a special scrollable <code>&lt;p&gt;</code> to prevent it from breaking the layout of the rest of the page.</p>
+</section>
+<section id="image-and-multimedia">
+<h3>Image and Multimedia</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area"><code>&lt;area&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio"><code>&lt;audio&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img"><code>&lt;img&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map"><code>&lt;map&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track"><code>&lt;track&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a></li>
+</ul>
+<p><code>&lt;area&gt;</code> and <code>&lt;map&gt;</code> are elements that I hadn’t been familiar with previously, even though I had made a few image map type websites in the days before CSS 3. It seems like an indication of how seldom they are used these days that the tools for debugging the boundries of <code>&lt;area&gt;</code> elements are hard to use. One <code>&lt;area&gt;</code> border at a time will display while using tab focus, but styling the elements does not work (unless there is a <code>display</code> hack I couldn’t figure out). It’s also somewhat strange that <code>&lt;area&gt;</code> is essentially an <code>&lt;a&gt;</code> with a shape.</p>
+<p>Here’s a <code>&lt;map&gt;</code> (with <code>&lt;area&gt;</code>s on each tag linking to MDN) of a handwritten HTML document I made for June 3rd’s <a href="https://html.energy/events.html">HTML Day Freewrite</a> in SF.</p>
+<figure>
+<map name="park-html-map">
+    <area shape="rect" coords="38 20 150 55" alt="HTML tag" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html">
+    <area shape="rect" coords="32 62 143 98" alt="head tag" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head">
+    <area shape="rect" coords="32 107 170 140" alt="title tag" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title">
+    <area shape="rect" coords="28 195 195 230" alt="title closing tag" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title">
+    <area shape="rect" coords="25 240 178 275" alt="head closing tag" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head">
+    <area shape="rect" coords="22 287 130 325" alt="body tag" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body">
+    <area shape="rect" coords="201 285 297 320" alt="body closing tag" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body">
+    <area shape="rect" coords="30 334 160 374" alt="html tag" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html">
+</map>
+<img usemap="#park-html-map" src="/images/blog/html/park-html.jpg" alt="A processed photograph of handwritten HTML in a notebook" style="width: 300px;">
+</figure>
+<p><code>&lt;audio&gt;</code> is one of the classic multimedia HTML 5 tags so I’ve used it before, but thinking about it now, it’s surprising I don’t see them more often in the 2020s. I would guess that there are more in use than I thought, for example, the <a href="https://bandcamp.com">Bandcamp</a> player uses a hidden <code>&lt;audio&gt;</code> element even though the UI is a custom mix of <code>&lt;a&gt;</code> and <code>&lt;div&gt;</code>s inside a <code>&lt;table&gt;</code> oddly enough.</p>
+<figure>
+<p><audio controls src="/images/blog/html/audio-element.m4a"></audio></p>
+<figcaption>A recording of me reading the paragraph above. (Excuse my scratchy late night voice)</figcaption>
+</figure>
+<p><code>&lt;img&gt;</code> is of course one of the first elements I used, but I was curious what properties could be used with it that I might not have heard of. <code>srcset</code>, used for specifying multiple sizes of the same image to load at different screen resolutions, was one of those. I’ve created a demo below, which goes against the spirit of <code>srcset</code>.</p>
+<p>The image below has 3 images provided to its <code>srcset</code> property:</p>
+<ol>
+<li>A yellow background and a monospace font that is 300 pixels wide and should render when the page is less than 520 pixels wide</li>
+<li>A blue background and a serifed font that should render when the page is between 520 and 800 pixels wide</li>
+<li>A green background and a script font that should render when the page is greater than 800 pixels wide.</li>
+</ol>
+<p><img
+    src="/images/blog/html/srcset-700.png"
+    srcset="/images/blog/html/srcset-300.png 300w, /images/blog/html/srcset-500.png 500w, /images/blog/html/srcset-700.png 700w"
+    sizes="(max-width: 520px) 300px, (max-width: 800px) 500px, 700px"
+    style="max-width: 700px; width: 100%;"
+    alt="A demo of the srcset property of the HTML <img> tag that loads different images at different sizes"
+    id="image-with-srcset"
+ /></p>
+<p>I have tested it, and it does work, but it takes a lot of forethought to make sure that you will be able to load the correct image. Things like the browser’s cache, and scaled displays will change the behavior. If you want to see the effect you will probably need to load the page in a private window on a non scaled or “retina” display.</p>
+<p>It’s interesting that while both <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> are less widely used than <code>&lt;img&gt;</code> even after their introduction in HTML 5, the distribution of videos online seems to be centralized, mostly on YouTube, while audio is more decentralized, with people serving individual files when distributing things like podcasts, even though the audio player that is often used is not on the web.</p>
+<figure>
+<video
+    controls
+    height="300"
+    muted
+    poster="/images/blog/html/audio-and-video-tags-poster.jpg"
+    preload="metadata"
+    width="495"
+    id="audio-and-video-tags-video"
+>
+    <source src="/images/blog/html/audio-and-video-tags.mp4" type="video/mp4" />
+    <track default kind="captions" srclang="en" src="/images/blog/html/audio-and-video-tags.vtt" />
+    <a href="/images/blog/html/audio-and-video-tags.mp4"> Download the video</a>
+</video>
+<embed
+    type="video/mp4"
+    src="/images/blog/html/audio-and-video-tags.mp4"
+    width="495"
+    height="300"
+    title="A screen recording of my dev setup while writing the paragraph above."
+    style="display: none"
+    id="audio-and-video-tags-embed"
+/>
+<object
+type="video/mp4"
+data="/images/blog/html/audio-and-video-tags.mp4"
+width="495"
+height="300"
+style="display: none;"
+id="audio-and-video-tags-object">
+<img src="/images/blog/html/audio-and-video-tags-poster.jpg" alt="a still of a screen recording" />
+</object>
+<figcaption>A screen recording of my dev setup while writing the paragraph above. </figcaption>
+<fieldset>
+    <legend>Select below to control if the video above is shown in a <code>&lt;video&gt;</code>, <code>&lt;embed&gt;</code>, or <code>&lt;object&gt;</code> element:</legend>
+    <div>
+        <input type="radio" id="audio-and-video-tags-video-option" name="audio-and-video-tags" value="video" checked />
+        <label for="audio-and-video-tags-video-option"><code class="code-regular">&lt;video&gt;</code></label>
+    </div>
+    <div>
+        <input type="radio" id="audio-and-video-tags-embed-option" name="audio-and-video-tags" value="embed" />
+        <label for="audio-and-video-tags-embed-option"><code class="code-regular">&lt;embed&gt;</code></label>
+    </div>
+    <div>
+        <input type="radio" id="audio-and-video-tags-object-option" name="audio-and-video-tags" value="object" />
+        <label for="audio-and-video-tags-object-option"><code class="code-regular">&lt;object&gt;</code></label>
+    </div>
+</fieldset>
+<script type="text/javascript">
+    const viEl = document.getElementById('audio-and-video-tags-video');
+    const emEl = document.getElementById('audio-and-video-tags-embed');
+    const obEl = document.getElementById('audio-and-video-tags-object');
+    document.querySelectorAll("input[name='audio-and-video-tags']").forEach((input) => {
+        input.addEventListener('change', (event) => {
+            const shouldDisplay = event.target.value;
+            if (shouldDisplay === 'video') {
+                viEl.style.display = 'block';
+                emEl.style.display = 'none';
+                obEl.style.display = 'none';
+            } else if (shouldDisplay === 'embed') {
+                viEl.style.display = 'none';
+                emEl.style.display = 'block';
+                obEl.style.display = 'none';
+            } else if (shouldDisplay === 'object') {
+                viEl.style.display = 'none';
+                emEl.style.display = 'none';
+                obEl.style.display = 'block';
+            }
+        });
+    });
+</script>
+<noscript>
+    <p>The embedded video elements will only be toggleable when JavaScript is enabled.</p>
+</noscript>
+</figure>
+<p>One reason for this may be that there are still some quirks with <code>&lt;video&gt;</code> elements. For example, there is a <code>&lt;figcaption&gt;</code> accompanying the video above, but when I initially tried creating the element with a self closing tag it did not render. Also, as I’m writing this, Safari does not support the video at all, likely because of the development server I am using not supporting the “Range” request header. I am curious to find out whether the hosted version of the site (on GitHub pages) will support playing the video in Safari. I thought that I might have a similar issue with <code>&lt;track&gt;</code>, but that just turned out to be me not setting up my <a href="https://www.11ty.dev/">Eleventy</a> build correctly for <code>.vtt</code> files.</p>
+</section>
+<section id="embedded-content">
+<h3>Embedded Content</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed"><code>&lt;embed&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object"><code>&lt;object&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture"><code>&lt;picture&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/portal"><code>&lt;portal&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source"><code>&lt;source&gt;</code></a></li>
+</ul>
+<p>It is somewhat surprising that <code>&lt;embed&gt;</code> and <code>&lt;object&gt;</code> have not been deprecated since most of their uses have been superseded by specific tags like <code>&lt;video&gt;</code> and <code>&lt;iframe&gt;</code>. Maybe eventually they will be, or they will just live on in the name of backwards compatibility.</p>
+<p>Speaking of <code>&lt;iframe&gt;</code> it’s also interesting that the very 90s name “iframe” (“inline frame”, not “iPod Frame” or something, and I was surprised to learn does render <code>display: inline</code>) has survived while <code>&lt;frame&gt;</code> was deprecated in HTML 5. I thought that <code>&lt;iframe&gt;</code> might be a way to force the <code>&lt;img&gt;</code> <code>srcset</code> example above to render the smaller images on a high DPI display, but even at 150px wide on my device the large image still renders:</p>
+<figure>
+<iframe width="150" height="200" src="/pages/srcset"></iframe>
+<figcaption>An embed of a page with just the srcset example  from above at 150px wide.
+</figure>
+<p><code>&lt;picture&gt;</code> is a tag that is, with <code>&lt;source&gt;</code> actually intended for layout tricks like the <code>srcset</code> experiment I tried above, rendering different versions of an image in different situations. The image below should show an icon of a computer when used with a mouse/trackpad, or an icon of a phone when used with a touch screen (using the <code>pointer</code> media query to determine), and should fall back to an image of a red circle with a line through it when neither media query is appropriate. The responsive design developer tools in your browser should trick it, though interestingly, not when inspecting an element.</p>
+<picture>
+    <source
+        srcset="/images/blog/html/no.png"
+        media="(pointer:none)"
+        type="image/png"
+    />
+    <source
+        srcset="/images/blog/html/phone.png"
+        media="(pointer:coarse)"
+        type="image/png"
+    />
+    <source
+        srcset="/images/blog/html/computer.png"
+        media="(pointer:fine)"
+        type="image/png"
+    />
+    <img src="/images/blog/html/no.png" alt="an icon of a computer when used with a mouse/trackpad, an icon of a phone when used with a touch screen, or an image of a red circle with a line through otherwise">
+</picture>
+<p><code>&lt;portal&gt;</code> is one of the more mysterious sounding elements, and seems intended for the iPad-style link previews that I’ve seen implemented on some websites on hover, <a href="https://web.dev/hands-on-portals/">but also come with SPA-like performance benefits</a>. It unfortunately is still an experimental feature and isn’t (as of 2023) enabled by default in any browsers. It seems that it <a href="https://medium.com/swlh/portals-in-chrome-going-on-a-test-drive-66b16971fb19">used to be an available experimental flag in Chrome</a>, but today in 2023 it is not available at <a href="chrome://flags">chrome://flags</a>. I’ll include one below in case it works for future readers! I did try it in an very old Chromium version I still had installed. <code>&lt;portal&gt;</code> doesn’t seem to be part of the <a href="https://www.w3.org/TR/2011/WD-html5-20110405/">HTML 5 Spec</a>, I’m not sure why it’s included in the MDN documentation.</p>
+<figure>
+<portal id="pw-links-portal" src="https://www.patrickweaver.net/links/#links"></portal>
+<figcaption>
+A <code>&lt;portal&gt;</code> element that should display the <a href="https://www.patrickweaver.net/links/#links">“Links”</a> page on patrickweaver.net, if the feature is ever implemented in browsers.
+</figcaption>
+</figure>
+</section>
+<section id="svg-and-mathml">
+<h3>SVG and MathML</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/svg"><code>&lt;svg&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/math"><code>&lt;math&gt;</code></a></li>
+</ul>
+<p>This section of the documentation because it pairs one of the most ubiquitous elements with one of the most obscure. <code>&lt;svg&gt;</code> elements are everywhere, especially that tools like Figma and Sketch have made them easy to prototype and export. Pairing them with <code>&lt;math&gt;</code> in the documentation evokes a more artisanal, hand-crafted <code>&lt;svg&gt;</code> that is relatively uncommon these days. I’ve gone hand-crafted here and drawn some <code>&lt;svg&gt;</code> circles.</p>
+<figure>
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" stroke="white" fill="white" width="200"><circle cx="50" cy="50" r="49" fill="red" /><circle cx="47" cy="50" r="42" fill="orange" /><circle cx="50" cy="53" r="35" fill="yellow" /><circle cx="55" cy="52" r="28" fill="green" /><circle cx="52" cy="48" r="21" fill="indigo" /><circle cx="54" cy="50" r="14" fill="blue" /><circle cx="52" cy="55" r="7" fill="violet" /></svg>
+<figcaption>An svg that shows overlapping circles each with a different color of the rainbow.</figcaption>
+</figure>
+<p><code>&lt;math&gt;</code> is really a wrapper element for other non HTML elements from the [MathML](https://www.w3.org/TR/MathML3/) namespace, so I guess I don’t have to include every possible child element here. I’ll stick to something simple: <math xmlns='http://www.w3.org/1998/Math/MathML' display="inline"><mrow><mn>2</mn><mo>+</mo><mn>2</mn><mo>=</mo><mn>5</mn></mrow></math>
+</p>
+</section>
+<section id="scripting">
+<h3>Scripting</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas"><code>&lt;canvas&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript"><code>&lt;noscript&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script"><code>&lt;script&gt;</code></a></li>
+</ul>
+<p>I did a deep dive into <code>&lt;canvas&gt;</code>, specifically <a href="https://doodles.patrickweaver.net/canvas-lines/">drawing crisp lines</a> in 2020 while I was at <a href="https://www.recurse.com/">Recurse Center</a>. One thing I wasn’t familiar with before reading the MDN docs though, was that there is a maximum size for a <code>&lt;canvas&gt;</code> element in each browser (though all modern browsers it is about 32 thousand pixels in each dimension). Below is a reimplementation of <code>&lt;marquee&gt;</code> with <code>&lt;canvas&gt;</code> and <code>&lt;script&gt;</code> (and <code>&lt;noscript&gt;</code>).</p>
+<p><canvas id="marquee-canvas" width="600" height="100"
+style="width: 300px; height: 50px;"></canvas></p>
+<p><label for="toggleMarqueeButton">Start or Stop the fake <code>&lt;marquee&gt;</code>:</label>
+<button onClick="toggleMarquee()" id="toggleMarqueeButton">Stop</button></p>
+<script type="text/javascript">
+    const canvasWidth = 300;
+    const canvasHeight = 50;
+    var dpr = window.devicePixelRatio || 1;
+    var canvas = document.getElementById("marquee-canvas");
+    var context = canvas.getContext("2d");
+    canvas.width = canvasWidth*dpr;
+    canvas.height = canvasHeight*dpr;
+    context.scale(dpr, dpr);
+    context.fillStyle = "black";
+    context.font = "bold 40px Arial";
+
+    const defaultTimer = 16.6;
+    let timer = defaultTimer;
+    let xVal = canvasWidth;
+    const text = "<marquee>";
+
+    const toggleMarqueeButton = document.getElementById("toggleMarqueeButton");
+    let marqueeStatus = true;
+    function toggleMarquee() {
+        toggleMarqueeButton.innerHTML = marqueeStatus ? "Start" : "Stop";
+        timer = marqueeStatus ? 0 : defaultTimer;
+        marqueeStatus = !marqueeStatus;
+        if (marqueeStatus) draw();
+    }
+
+
+    function drawText(text, x, y) {
+        context.fillText(text, x, y);
+    }
+
+    function draw() {
+        setTimeout(() => {
+            if (xVal < 0) {
+                xVal = canvasWidth;
+            }
+            context.clearRect(0, 0, canvasWidth, canvasHeight);
+            drawText(text, xVal, 42);
+            drawText(text, xVal - canvasWidth, 42);
+            xVal--;
+            if (timer > 0) draw();
+        }, timer);
+    }
+    draw();
+</script>
+<p><noscript><p>The <code>&lt;marquee&gt;</code> like animation above will only be render when JavaScript is enabled.</p></noscript></p>
+<p>There were a lot of tags that I expected to feel a little out of date when I started this post, but <code>&lt;script&gt;</code> wasn’t one of them, but now that I have written most of the post, and have created a few <code>&lt;script&gt;</code> tags, I’m realizing how little I use them now. For most of the code that I write, even though most of it is JavaScript, all of the “scripting” gets put into on <code>&lt;script&gt;</code> tag by build tools and it ends up feeling more like boilerplate than a “markup” tag.</p>
+<p>On the other hand, for most of the interactive websites I’ve made, I’ve rarely included a <code>&lt;noscript&gt;</code> tag with the exception of those minified and compiled single page apps where the user would likely get a blank page if it weren’t for the <code>&lt;noscript&gt;</code> tag (and even then, probably less often than I should have, though I’ve made sure to include one with every <code>&lt;script&gt;</code> tag here).</p>
+</section>
+<section id="demarcating-edits">
+<h3>Demarcating Edits</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del"><code>&lt;del&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins"><code>&lt;ins&gt;</code></a></li>
+</ul>
+<p>Another set of <ins>new to me</ins> elements <del>I had never come across before</del> <ins>on</ins> reading the MDN documentation, <code>&lt;del&gt;</code> and <code>&lt;ins&gt;</code> seem to be intended for <del>creating</del> <ins>use in</ins> a word processor. Reading about them led to yet another round of, “<del>I wonder if these are used in rendering Google Docs?</del> <ins>Oh wait, it’s all <code>&lt;canvas&gt;</code></ins>.”</p>
+</section>
+<section id="table-content">
+<h3>Table Content</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/caption"><code>&lt;caption&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/col"><code>&lt;col&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/colgroup"><code>&lt;colgroup&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table"><code>&lt;table&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody"><code>&lt;tbody&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td"><code>&lt;td&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tfoot"><code>&lt;tfoot&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th"><code>&lt;th&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/thead"><code>&lt;thead&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tr"><code>&lt;tr&gt;</code></a></li>
+</ul>
+<p>It’s not a new insight that <code>&lt;table&gt;</code> elements were overused for layout purposes on the early web, but an irony that I’m only realizing now is that recently, as the web has gotten more and more populated by data, that <code>&lt;table&gt;</code> elements have become rarely used, probably mostly due to their clunky default design, but probably also because one main goal of creating a web UI for the data that is otherwise probably stored in database tables, is to create a <i>different</i> view of the same data.</p>
+<p>I don’t have any tabular data as this is an exclusively <em>document</em> based blog post, but below I’ve added a table with some custom CSS and “data” on emoji that is likely only accurate for the Apple emoji set in 2023. I wasn’t familiar with <code>&lt;col&gt;</code> and <code>&lt;colgroup&gt;</code> before, but I don’t know that there are many cases where I would use them rather than a more custom, non <code>&lt;table&gt;</code> design.</p>
+<div class="table-wrapper">
+<table id="weird-table">
+    <caption>
+        A table with a custom CSS
+    </caption>
+    <colgroup>
+        <col>
+        <col span="2" class="low-numbers">
+        <col span="2">
+        <col span="2" class="high-numbers">
+    </colgroup>
+    <thead>
+        <tr>
+            <th scope="row">Number</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Emoji</th>
+            <td>1️⃣</td>
+            <td>2️⃣</td>
+            <td>3️⃣</td>
+            <td>4️⃣</td>
+            <td>5️⃣</td>
+            <td>6️⃣</td>
+        </tr>
+        <tr>
+            <th scope="row">Emoji with leaves</th>
+            <td rowspan="2">🥭</td>
+            <td>🌱</td>
+            <td>🍂</td>
+            <td>🍀</td>
+            <td>🪴</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">Emoji with fruit</th>
+            <td>🍒</td>
+            <td>🫐</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">Emoji with slices</th>
+            <td>🍰</td>
+            <td>🥪</td>
+            <td></td>
+            <td>🥒</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th scope="row">Totals</th>
+            <td>4</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+        </tr>
+    </tfoot>
+</table>
+</div>
+</section>
+<section id="forms">
+<h3>Forms</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button"><code>&lt;button&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist"><code>&lt;datalist&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset"><code>&lt;fieldset&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form"><code>&lt;form&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label"><code>&lt;label&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend"><code>&lt;legend&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meter"><code>&lt;meter&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/optgroup"><code>&lt;optgroup&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option"><code>&lt;option&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output"><code>&lt;output&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress"><code>&lt;progress&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea"><code>&lt;textarea&gt;</code></a></li>
+</ul>
+<p>I have usually used <code>&lt;form&gt;</code> and it’s associated elements when submitting the form would redirect to a new page, not for in-page user interaction, but either is valid. I would guess the form elements are probably the most important for accessibility so I will likely refer to the documentation whenever implementing one in the future.</p>
+<p><label for="everything-form">Fill out this form and scroll down to get an emoji surprise below!</label></p>
+<form id="everything-form">
+<div id="eform-type">
+<label for="type-choice">Choose an emoji type:</label>
+<input list="emoji-types" id="type-choice" name="type-choice">
+<datalist id="emoji-types">
+<option value="Fruit" />
+<option value="Dessert" />
+<option value="Drinks" />
+<option value="Animals" />
+</datalist>
+</div>
+<div id="eform-size">
+<fieldset id="size-choice">
+<legend>Select a size:</legend>
+<input type="radio" name="size-choice" id="small-size-choice" value="small" />
+<label for="small-size-choice">Small</label>
+<input type="radio" name="size-choice" id="large-size-choice" value="large" />
+<label for="large-size-choice">Large</label>
+</fieldset>
+<label for="eform-size-meter">Size Meter:</label>
+<meter id="eform-size-meter"
+       min="0" max="2"
+       low="1" high="2" optimum="2"
+>
+</meter>
+</div>
+<div id="eform-color">
+<label for="color-choice">Color:</label>
+<select id="color-choice">
+    <option value="" disabled selected>--Please choose an option--</option>
+    <optgroup label="Hot">
+        <option>Orange</option>
+        <option>Red</option>
+        <option>Yellow</option>
+    </optgroup>
+    <optgroup label="Cool">
+        <option>Blue</option>
+        <option>Green</option>
+    </optgroup>
+</select>
+</div>
+<div id="eform-dream">
+<label for="dream-input">Share a dream <span id="dream-secret">(secret!)</span></label>
+<textarea id="dream-input" cols="1" rows="10" wrap="hard" name="dream-input" placeholder="😶‍🌫️"></textarea>
+</div>
+<br/>
+<label for="form-completion" id="form-completion-label">Form completion:</label>
+<progress id="form-completion"
+       max="4"
+       value="0">
+       0/4
+</progress>
+<br/>
+<button id="eform-submit-button" type="submit" disabled>submit</button>
+</form>
+<h4>Your emoji:</h4>
+<output
+id="everything-output"
+form="everything-form"
+for="type-choice small-size-choice large-size-choice color-choice"
+name="everything-output"
+> </output>
+<p><noscript>Without JavaScript enabled the form above will not be interactive.</noscript></p>
+<script>
+    const eform = document.getElementById("everything-form");
+    const eOutput = document.getElementById("everything-output");
+    const typeChoice = document.getElementById("type-choice");
+    const sizeChoice = document.getElementById("size-choice");
+    const sizeMeter = document.getElementById("eform-size-meter")
+    const colorChoice = document.getElementById("color-choice");
+    const dreamInput = document.getElementById("dream-input");
+    const formCompletion = document.getElementById("form-completion");
+    const eformSubmit = document.getElementById("eform-submit-button");
+    let selectedEmoji = "❌";
+    let selectedEmojiName = "Form Incomplete";
+    eform.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const el = event?.target?.elements;
+        const type = el?.["type-choice"]?.value;
+        const size = el?.["size-choice"]?.value;
+        const color = el?.["color-choice"]?.value;
+        console.log({ type, size, color})
+        const selected = selectEmoji(type, size, color);
+        console.log(selected)
+        selectedEmoji = selected.emoji;
+        selectedEmojiName = selected.name;
+        eOutput.value = `${selectedEmoji}: ${selectedEmojiName}`;
+    })
+    const fields = {
+        "type-choice": 0,
+        "small-size-choice": 1,
+        "large-size-choice": 1,
+        "color-choice": 2,
+        "dream-input": 3,
+    }
+    const complete = [0, 0, 0, 0];
+    eformSubmit.disabled = false;
+    function fillForm(event) {
+        const value = event?.target?.value
+        const idShort = event?.target?.id?.slice(0, 3) ?? null;
+        complete[fields[event?.target?.id]] = event?.target?.value ? 1 : 0;
+        const newCompletion = complete.reduce((a,c) => a + c, 0);
+        formCompletion.value = newCompletion
+        formCompletion.innerHTML = `${newCompletion}/4`
+        console.log({ idShort })
+    }
+    typeChoice.addEventListener("input", fillForm);
+    sizeChoice.addEventListener("input", fillForm);
+    colorChoice.addEventListener("input", fillForm);
+    dreamInput.addEventListener("input", fillForm);
+    sizeChoice.addEventListener("input", (event) => {
+        const idShort = event.target.id.slice(0, 3);
+        const v = { sma: 1, lar: 2 }
+        sizeMeter.value = v?.[idShort] ?? 0;
+    })
+    function selectEmoji(type, size, color) {
+        if (type === "Fruit") {
+            if (color === "Orange") {
+                if (size === "small") {
+                    return { emoji: "", name: "" }
+                } else if (size === "large") {
+                    return { emoji: "", name: "" }
+                }
+            } else if (color === "Red") {
+                if (size === "small") {
+                    return { emoji: "", name: "" }
+                } else if (size === "large") {
+                    return { emoji: "", name: "" }
+                }
+            } else if (color === "Yellow") {
+                if (size === "small") {
+                    return { emoji: "", name: "" }
+                } else if (size === "large") {
+                    return { emoji: "", name: "" }
+                }
+            } else if (color === "Blue") {
+                if (size === "small") {
+                    return { emoji: "", name: "" }
+                } else if (size === "large") {
+                    return { emoji: "", name: "" }
+                }
+            } else if (color === "Green") {
+                if (size === "small") {
+                    return { emoji: "", name: "" }
+                } else if (size === "large") {
+                    return { emoji: "", name: "" }
+                }
+            }
+        } else if (type === "Dessert") {
+            if (color === "Orange") {
+                if (size === "small") {
+                    return { emoji: "🥮", name: "Mooncake" }
+                } else if (size === "large") {
+                    return { emoji: "🥧", name: "Pie" }
+                }
+            } else if (color === "Red") {
+                if (size === "small") {
+                    return { emoji: "🍫", name: "Chocolate" }
+                } else if (size === "large") {
+                    return { emoji: "🍧", name: "Shaved Ice" }
+                }
+            } else if (color === "Yellow") {
+                if (size === "small") {
+                    return { emoji: "🍨", name: "Ice Cream" }
+                } else if (size === "large") {
+                    return { emoji: "🍰", name: "Cake" }
+                }
+            } else if (color === "Blue") {
+                if (size === "small") {
+                    return { emoji: "🍬", name: "Candy" }
+                } else if (size === "large") {
+                    return { emoji: "🍭", name: "Lollipop" }
+                }
+            } else if (color === "Green") {
+                if (size === "small") {
+                    return { emoji: "🍡", name: "Dango" }
+                } else if (size === "large") {
+                    return { emoji: "🥗", name: "Dessert Salad" }
+                }
+            }
+        } else if (type === "Drinks") {
+            if (color === "Orange") {
+                if (size === "small") {
+                    return { emoji: "🍺", name: "Beer" }
+                } else if (size === "large") {
+                    return { emoji: "🍻", name: "Two Beers" }
+                }
+            } else if (color === "Red") {
+                if (size === "small") {
+                    return { emoji: "🍷", name: "Wine" }
+                } else if (size === "large") {
+                    return { emoji: "🥤", name: "Big Soda Cup" }
+                }
+            } else if (color === "Yellow") {
+                if (size === "small") {
+                    return { emoji: "🥂", name: "Champagne Flute" }
+                } else if (size === "large") {
+                    return { emoji: "🍹", name: "Cocktail" }
+                }
+            } else if (color === "Blue") {
+                if (size === "small") {
+                    return { emoji: "🍶", name: "Sake" }
+                } else if (size === "large") {
+                    return { emoji: "🍶", name: "Sake" }
+                }
+            } else if (color === "Green") {
+                if (size === "small") {
+                    return { emoji: "🧃", name: "Juice Box" }
+                } else if (size === "large") {
+                    return { emoji: "🍾", name: "Champagne Bottle" }
+                }
+            }
+        } else if (type === "Animals") {
+            if (color === "Orange") {
+                if (size === "small") {
+                    return { emoji: "🦊", name: "Fox" }
+                } else if (size === "large") {
+                    return { emoji: "🐅", name: "Tiger" }
+                }
+            } else if (color === "Red") {
+                if (size === "small") {
+                    return { emoji: "🦀", name: "Crab" }
+                } else if (size === "large") {
+                    return { emoji: "🦑", name: "Squid" }
+                }
+            } else if (color === "Yellow") {
+                if (size === "small") {
+                    return { emoji: "🐝", name: "Bee" }
+                } else if (size === "large") {
+                    return { emoji: "🐱", name: "Cat" }
+                }
+            } else if (color === "Blue") {
+                if (size === "small") {
+                    return { emoji: "🦋", name: "Butterfly" }
+                } else if (size === "large") {
+                    return { emoji: "🐋", name: "Whale" }
+                }
+            } else if (color === "Green") {
+                if (size === "small") {
+                    return { emoji: "🐸", name: "Frog" }
+                } else if (size === "large") {
+                    return { emoji: "🐊", name: "Crocodile" }
+                }
+            }
+        }
+        return { emoji:"❌", name: "Invalid Submission" };
+    }
+</script>
+</section>
+<section id="interactive-elements">
+<h3>Interactive Elements</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details"><code>&lt;details&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog"><code>&lt;dialog&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary"><code>&lt;summary&gt;</code></a></li>
+</ul>
+<p>The <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> combination is probably the most common, “You don’t need JavaScript to…” element (another <a href="https://catskull.net/html.html" target="_blank">popular blog</a> post making this point promted me to finally finish this one). Making this kind of expand/collapse interactive view was one of the first things I used JavaScript for (it was probably jQuery). I remember it being somewhat confusing at the time (2006?), so it’s funny to me to see it so easy with just a couple HTML tags.</p>
+<details>
+  <summary>Speculation about <code>&lt;details&gt;</code></summary>
+  <div>I do wonder if <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> were being considered for the HTML spec today, if they would be withdrawn in favor of a similar effect using CSS.</div>
+</details>
+<p>I wasn’t aware of the HTML only <code>&lt;dialog&gt;</code> before using it here. It requires JavaScript to be useful beyond just its stylistic impact, but it’s an interesting way to create interactions that are more custom than <code>alert()</code>, but still simple, because while <code>alert()</code> is styled by the browser <code>&lt;dialog&gt;</code> can be styled with CSS.</p>
+<dialog open>
+  <p>Guess who?!</p>
+  <form method="dialog">
+    <button>Reveal!</button>
+  </form>
+</dialog>
+<pre id="palm-sheriff" role="img" aria-label="A sheriff whose body is made of palm trees.">
+       🤠
+     🌴🌴🌴
+   🌴  🌴  🌴
+   👇 🌴 🌴 👇
+　 　 🌴 🌴
+　 　 🌴 🌴
+　 　 👢 👢
+  the palm sheriff
+</pre>
+</section>
+<section id="web-components">
+<h3>Web Components</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot"><code>&lt;slot&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template"><code>&lt;template&gt;</code></a></li>
+</ul>
+<p>Web components had been on a (long) list of “things I should learn more about” for a while, so I was glad to get to this section of the MDN documentation. I was surprised that JavaScript (and <code>Class</code> syntax at that) was necessary to get web components to render, but after reading more about the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM">Shadow DOM</a>, it makes sense, because HTML has no built in way to encapsulate styles, though it does seem to be somewhat similar conceptually to <code>&lt;iframe&gt;</code> elements.</p>
+<p>I’ve used web components below to create a table of contents for this post below, though I’m not making the best use of them. One thing I couldn’t quickly figure out how to do, when compared to components from frontend frameworks, is pass in properties that are themselves used as properties of elements in the child template, so in the list below I have to pass a full <code>&lt;a&gt;</code> element into each child (which renders the <code>&lt;li&gt;</code>), to be able to set the correct <code>href</code> property. Someday after finishing this post I will read more about web components and maybe figure out something I’m missing now.</p>
+<template id="table-of-contents-item">
+    <li><slot name="emoji">✅</slot> <slot name="table-of-contents-link">End of List</slot>
+</template>
+<template id="table-of-contents">
+    <style>
+        .table-of-contents {
+            border: 2px solid var(--text-2);
+            border-radius: 5px;
+            padding: 5px 10px;
+            background: rgb(255,252,234);
+            background: linear-gradient(324deg, rgba(255,252,234,1) 0%, rgba(249,239,255,1) 21%, rgba(255,239,231,1) 100%);
+            display: inline-block;
+            min-width: 300px;
+            width: 80%;
+            margin: 0 10%;
+        }
+        .table-of-contents h4 {
+            margin: 0.5rem 0;
+            font-size: 1.6rem;
+            line-height: 1.8rem;
+        }
+    </style>
+    <div class="table-of-contents">
+        <h4>Table of Contents</h4>
+        <ul>
+            <table-of-contents-item>
+                <span slot="emoji">📜</span>
+                <a slot="table-of-contents-link" href="#main-root">Main Root</a>
+            </table-of-contents-item>
+            <table-of-contents-item>
+                <span slot="emoji">📑</span>
+                <a slot="table-of-contents-link"  href="#document-metadata">Document Metadata</a>
+            </table-of-contents-item>
+            <table-of-contents-item>
+                <span slot="emoji">📂</span>
+                <a slot="table-of-contents-link"  href="#sectioning-root">Sectioning Root</a>
+            </table-of-contents-item>
+            <table-of-contents-item>
+                <span slot="emoji">🗂</span>
+                <a slot="table-of-contents-link"  href="#content-sectioning">Content Sectioning</a>
+            </table-of-contents-item>
+            <table-of-contents-item>
+                <span slot="emoji">🔡</span>
+                <a slot="table-of-contents-link"  href="#text-content">Text Content</a>
+            </table-of-contents-item>
+            <table-of-contents-item>
+                <span slot="emoji">📝</span>
+                <a slot="table-of-contents-link"  href="#inline-text-semantics">Inline Text Semantics</a>
+            </table-of-contents-item>
+            <table-of-contents-item>
+                <span slot="emoji">🖼</span>
+                <a slot="table-of-contents-link"  href="#image-and-multimedia">Image and Multimedia</a>
+            </table-of-contents-item>
+            <table-of-contents-item>
+                <span slot="emoji">🪟</span>
+                <a slot="table-of-contents-link"  href="#embedded-content">Embedded Content</a>
+            </table-of-contents-item>
+            <table-of-contents-item>
+                <span slot="emoji">🧮</span>
+                <a slot="table-of-contents-link"  href="#svg-and-mathml">SVG and MathML</a>
+            </table-of-contents-item>
+            <table-of-contents-item>
+                <span slot="emoji">🪄</span>
+                <a slot="table-of-contents-link"  href="#scripting">Scripting</a>
+            </table-of-contents-item>
+            <table-of-contents-item>
+                <span slot="emoji">🛠</span>
+                <a slot="table-of-contents-link"  href="#demarcating-edits">Demarcating Edits</a>
+            </table-of-contents-item>
+            <table-of-contents-item>
+                <span slot="emoji">📦</span>
+                <a slot="table-of-contents-link"  href="#table-content">Table Content</a>
+            </table-of-contents-item>
+            <table-of-contents-item>
+                <span slot="emoji">📋</span>
+                <a slot="table-of-contents-link"  href="#forms">Forms</a>
+            </table-of-contents-item>
+            <table-of-contents-item>
+                <span slot="emoji">🛝</span>
+                <a slot="table-of-contents-link"  href="#interactive-elements">Interactive Elements</a>
+            </table-of-contents-item>
+            <table-of-contents-item>
+                <span slot="emoji">🕸</span>
+                <a slot="table-of-contents-link"  href="#web-components">Web Components</a>
+            </table-of-contents-item>
+            <table-of-contents-item>
+                <span slot="emoji">📠</span>
+                <a slot="table-of-contents-link"  href="#"></a>
+            </table-of-contents-item>
+            <table-of-contents-item>
+            </table-of-contents-item>
+        </ul>
+    </div>
+</template>
+<script>
+    customElements.define("table-of-contents-item", class extends HTMLElement {
+        constructor() {
+            super();
+            let template = document.getElementById("table-of-contents-item");
+            let templateContent = template.content;
+            const shadowRoot = this.attachShadow({ mode: "open" });
+            shadowRoot.appendChild(templateContent.cloneNode(true));
+        }
+    });
+    customElements.define("table-of-contents", class extends HTMLElement {
+        constructor() {
+            super();
+            let template = document.getElementById("table-of-contents");
+            let templateContent = template.content;
+            const shadowRoot = this.attachShadow({ mode: "open" });
+            shadowRoot.appendChild(templateContent.cloneNode(true));
+        }
+    });
+</script>
+<p><table-of-contents></table-of-contents></p>
+<p><noscript>Without JavaScript enabled components above will not render.</noscript></p>
+</section>
+<section id="obsolete-and-deprecated-elements">
+<h3>Obsolete and Deprecated Elements</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/acronym"><code>&lt;acronym&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/big"><code>&lt;big&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/center"><code>&lt;center&gt;</code></a></li>
+<li><code>&lt;content&gt;</code></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dir"><code>&lt;dir&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/font"><code>&lt;font&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/frame"><code>&lt;frame&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/frameset"><code>&lt;frameset&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/image"><code>&lt;image&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/marquee"><code>&lt;marquee&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menuitem"><code>&lt;menuitem&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nobr"><code>&lt;nobr&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noembed"><code>&lt;noembed&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noframes"><code>&lt;noframes&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/param"><code>&lt;param&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/plaintext"><code>&lt;plaintext&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rb"><code>&lt;rb&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rtc"><code>&lt;rtc&gt;</code></a></li>
+<li><code>&lt;shadow&gt;</code></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strike"><code>&lt;strike&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tt"><code>&lt;tt&gt;</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/xmp"><code>&lt;xmp&gt;</code></a></li>
+</ul>
+<p>There are of course a few <big>deprecated</big> <acronym title="Hyper Text Markup Language">HTML</acronym> elements, so why not <font color="#2FCF6F" face="times" size="5">include</font> them here at the end.</p>
+<p>Everyone’s favorite is of course,</p>
+<center><code>&lt;marquee&gt;</code></center>
+<p><marquee>Hello!</marquee></p>
+<p>Many of the elements, like <code>&lt;big&gt;</code>, <code>&lt;acronym&gt;</code>, <code>&lt;font&gt;</code> (used above), <code>&lt;nobr&gt;</code> and <code>&lt;strike&gt;</code> are examples of layout related functionality that has been moved to CSS rather than <strike>have HTML handle it</strike>. The narrow box below has an example of <code>&lt;nobr&gt;</code>:</p>
+<div id="nobr-box">
+    <nobr>This sentence is wrapped in a <code>&lt;nobr&gt;</code>.</nobr>
+    <p>This sentence is wrapped in a <code>&lt;p&gt;</code>.</p>
+    <p style="white-space: nowrap;">This sentence is wrapped in a <code>&lt;p&gt;</code> with <code>style="white-space: nowrap;"</code>.</p>
+</div>
+<p>There are some other strange ones as well though. I couldn’t implement <code>&lt;content&gt;</code> and <code>&lt;shadow&gt;</code> here because they were never fully implemented part of the web components spec. I’ll add some below anyway though.</p>
+<figure>
+<shadow></shadow>
+<content></content>
+<figcaption><code>&lt;shadow&gt;</code> and <code>&lt;content&gt;</code> elements (that won’t render).</figcaption>
+</figure>
+<p>And <code>&lt;dir&gt;</code> is a very <i>webserver</i> version of <code>&lt;ul&gt;</code> for listing directories. Since my Eleventy static site generator does use directories here’s a list:</p>
+<dir>
+    <li><a href="/blog">/blog</a></li>
+    <li><a href="/css">/css</a></li>
+    <li><a href="/images">/images</a></li>
+    <li><a href="/notes">/notes</a></li>
+    <li><a href="/pages">/pages</a></li>
+    <li><a href="/portfolio">/portfolio</a></li>
+</dir>
+<p>Some of deprecated elements won’t render without some extra work, for example <code>&lt;frame&gt;</code> and <code>&lt;frameset&gt;</code> are designed to be used instead of a <code>&lt;body&gt;</code>, for I guess some kind of collage web page made up of other pages. I’ve ironically only been able to use them inside of an <code>&lt;iframe&gt;</code> below.</p>
+<figure>
+<iframe width="300" height="300" src="/pages/frameset"></iframe>
+<figcaption>An embed of a <a href="/pages/frameset" target="_blank">page</a> with <code>&lt;frameset&gt;</code> and <code>&lt;frame&gt;</code> elements that itself embeds the Links page of this site.
+</figure>
+<p>I expected that <code>&lt;image&gt;</code> wouldn’t work since the MDN documentation says:</p>
+<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/image">
+    This does not appear to have been part of any formal specification. It was mentioned in HTML+ Discussion Document - Dave Raggett, November 8, 1993 (Section 5.9 - Images), but was not part of the first revision of HyperText Markup Language Specification - 2.0 in 1994.
+</blockquote>
+<p>But it does seem to work in some browsers in 2023, though this might be just a fallback for potential confusion with <code>&lt;img&gt;</code>.</p>
+<p><image src="/images/blog/html/fax.png" width="100">An icon of a fax machine</image></p>
+<p>One of the more interesting browser compatibility stories of the deprecated elements is <code>&lt;menuitem&gt;</code>, which supposedly was <a href="https://caniuse.com/?search=menuitem">partially supported in Firefox versions 8 - 84</a>, but I couldn’t get <a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_menuitem">an example</a> to work in any of the older versions I installed locally (even with editing <code>about:config</code>). The examples imply that the <code>&lt;menu&gt;</code> (of <code>type=context</code>) and child <code>&lt;menuitem&gt;</code> elements shouldn’t render until the element whose <code>contextmenu</code> property is right clicked, but as you can see below, the items always render:</p>
+<div id="menu-button" contextmenu="menuitem-example">Open Menu</div>
+<menu type="context" id="menuitem-example">
+    <menuitem type="radio" radiogroup="group1">Radio Button 1</menuitem>
+    <menuitem type="radio" radiogroup="group1">Radio Button 2</menuitem>
+</menu>
+<p>It’s surprising that <code>&lt;noembed&gt;</code>, essentially a <code>&lt;noscript&gt;</code> style fallback, was deprecated while <code>&lt;embed&gt;</code> was kept in the spec. Here’s my <code>&lt;embed&gt;</code> from above, but this time with a <code>&lt;noembed&gt;</code> child. There is also <code>&lt;noframes&gt;</code> which I included above with the <code>&lt;frame&gt;</code> element.</p>
+<figure>
+<embed
+    type="video/mp4"
+    src="/images/blog/html/audio-and-video-tags.mp4"
+    width="165"
+    height="100"
+    title="A screen recording of my dev setup while writing the paragraph above."
+    id="audio-and-video-tags-embed-dep"
+><noembed>An embed of a screen recording of my dev setup while writing the paragraph above.</noembed></embed>
+<figcaption>An <code>&lt;embed&gt;</code> with a <code>&lt;noembed&gt;</code> tag child.</figcaption>
+</figure>
+<p>It’s unclear why <code>&lt;param&gt;</code> ever existed instead of just using attributes on the <code>&lt;object&gt;</code> element, but just in case, here is one below:</p>
+<figure>
+<object
+type="video/mp4"
+data="/images/blog/html/audio-and-video-tags.mp4"
+width="165"
+height="100"
+id="audio-and-video-tags-object-dep">
+<img src="/images/blog/html/audio-and-video-tags-poster.jpg" alt="a still of a screen recording" />
+<param name="cool-param">
+</object>
+<figcaption>An <code>&lt;object&gt;</code> with a <code>&lt;param&gt;</code> tag child.</figcaption>
+</figure>
+<p><code>&lt;plaintext&gt;</code> is another weird one, and notable among the deprecated elements in that it works. It is another one I am going to have to wrap in an <code>&lt;iframe&gt;</code> because otherwise the rest of the page would be rendered as the source code:</p>
+<figure>
+<iframe width="350" height="400" src="/pages/plaintext-element"></iframe>
+<figcaption>An embed of a <a href="/pages/plaintext-element/" target="_blank">page</a> with a <code>&lt;plaintext&gt;</code> element.
+</figure>
+<p>However, <code>&lt;xmp&gt;</code> and <code>&lt;tt&gt;</code>, used in a similar way, have closing tags <xmp><span id="xmp-element">
+so they can be used here for displaying source code
+</span></xmp> or text in a monospace font<tt>
+<span id="tt-element">as it would be shown on a teletype</span>
+</tt> without an <code>&lt;iframe&gt;</code>.</p>
+<p>A few of the deprecated elements have just been replaced by newer additions to the spec. <code>&lt;rb&gt;</code> and <code>&lt;rtc&gt;</code> were used for displaying pronunciation of East Asian characters, but it seems like the spec was simplified. Here is the example from MDN:</p>
+<p><ruby xml:lang="zh-Hant" style="ruby-position: under;"><rbc><rb>馬</rb><rp>(</rp><rt>mǎ</rt><rp>)</rp><rb>來</rb><rp>(</rp><rt>lái</rt><rp>)</rp><rb>西</rb><rp>(</rp><rt>xī</rt><rp>)</rp><rb>亞</rb><rp>(</rp><rt>yà</rt><rp>)</rp></rbc><rtc xml:lang="en" style="ruby-position: over;"><rp>(</rp><rt>Malaysia</rt><rp>)</rp></rtc></ruby></p>
+</section>
+<section id="other-elements">
+<h3>Other Elements</h3>
+<p>I consulted a few other lists of HTML tags after realizing that the <code>&lt;!-- comment --&gt;</code> tag wasn’t in my list from MDN (there’s one below this paragraph)</p>
+<!-- The only reference to HTML comments on MDN seems to be in the web APIs section: https://developer.mozilla.org/en-US/docs/Web/API/Comment -->
+<p>An <a href="https://web.archive.org/web/20130520111045/https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">older list from MDN in 2013</a> has elements like <code>&lt;blink&gt;</code>, and for accessibility reasons, <q cite="https://web.archive.org/web/20130520111045/https://developer.mozilla.org/en-US/docs/Web/HTML/Element">almost all browsers currently ignore this element.</q> I’ll add one hidden below if you can find a very old browser that supports it:</p>
+<div style="display: none" id="hidden-blink">
+    <blink>I am in a <code>&lt;blink&gt;</code> tag (but probably not blinking).</blink>
+</div>
+<div id="show-blink-button-container">
+    <button onclick="(() => document.getElementById('hidden-blink').style.display = 'block')();">Show <code class="code-regular">&lt;blink&gt;</code></button>
+</div>
+<p>Also on the list is <code>&lt;spacer&gt;</code>, which doesn’t work in modern browsers and,</p>
+<p><spacer type="horizontal" size="30"></spacer></p>
+<p>would now be done</p>
+<div style="height: 30px;"></div>
+<p>with CSS.</p>
+<p>Then there’s others like <code>&lt;bgsound&gt;</code> (<a href="https://web.archive.org/web/20131004002320/https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bgsound" target="_blank">2013 docs</a>) that seems to have never been implemented (except maybe in Netscape?), but alludes to a vision for a much more <em>multimedia</em> enabled web documents, and <code>&lt;isindex&gt;</code> (<a href="https://web.archive.org/web/20130916195848/https://developer.mozilla.org/en-US/docs/Web/HTML/Element/isindex" target="_blank">2013 docs</a>) which seems like it is from a world where JavaScript doesn’t exist.</p>
+<p>Another attempt at <code>&lt;xmp&gt;</code>, <code>&lt;tt&gt;</code>, <code>&lt;code&gt;</code> was</p>
+<p><listing><span id="listing-child">listing</span></listing></p>
+<p>I’m surprised it seems to still work!</p>
+<p>And of course <code>&lt;applet&gt;</code>, but I’m not even going to try with that one.</p>
+</section>
+<h4>Footnotes</h4>
+<ol class="footnotes">
+    <li id="footnote-1"><aside>Which I am just now discovering there is no native HTML implementation for!</aside> <a href="#footnote-1-link">↑ Return to post</a></li>
+</ol>
+<footer role="contentinfo">
+    Written between <time datetime="2022-02">February 2022</time> and <time datetime="2023-08">August 2023</time>.
+</footer>
+
+        </article>
+      </div>
+    </main>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-9178162-8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-9178162-8');
+    </script>
+    <script>
+      function footnoteScroll() {
+        const { hash } = window.location;
+        const id = hash.slice(1, hash.length);
+        const isFootnote = hash.includes("footnote");
+        const isReturnLink = isFootnote && hash.includes("link");
+        if (isFootnote && !isReturnLink) {
+          const footnote = document.getElementById(id);
+          console.log({ footnote })
+          if (!footnote) return;
+          footnote.style.borderColor = 'red';
+          setTimeout(() => {
+            footnote.style.transition = 'border-color 4s ease-in-out';
+            footnote.style.borderColor = '#00000000';
+          }, 1000);
+        }
+        scrollBy(0, -20);
+      }
+    </script>
+  </body>
+</html>

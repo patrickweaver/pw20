@@ -3,6 +3,8 @@
   <head>
     <title>Patrick Weaver</title>
     
+    <base href="/blog/alphabetic-internet-time/" />
+    
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -26,19 +28,21 @@
     
     <link rel="stylesheet" href="/css/style.css" />
   </head>
-  <body>
+  <body onhashchange="footnoteScroll()">
     <header>
       <h1 id="site-title">
         <a href="/">Patrick Weaver</a>
       </h1>
       
-      <ul class="menu">
-        <li class="menu-about"><a href="/">About</a></li>
-        <li class="menu-blog"><a href="/blog">Blog</a></li>
-        <li class="menu-portfolio"><a href="/portfolio">Portfolio</a></li>
-        <li class="menu-now"><a href="/now">Now</a></li>
-        <li class="menu-links"><a href="/links">Links</a></li>
-      </ul>
+      <nav>
+        <ul class="menu">
+          <li class="menu-about"><a href="/">About</a></li>
+          <li class="menu-blog"><a href="/blog">Blog</a></li>
+          <li class="menu-portfolio"><a href="/portfolio">Portfolio</a></li>
+          <li class="menu-now"><a href="/now">Now</a></li>
+          <li class="menu-links"><a href="/links">Links</a></li>
+        </ul>
+      </nav>
       
     </header>
     <main>
@@ -47,32 +51,39 @@
       </h2>
       
       <div class="post">
-        
-        <div class="post-date">
-          August 18, 2022
-        </div>
-        
-        <h3 class="post-title">
-          <a href="">
-              Alphabetic Internet Time: A Time Zone for the Internet
-          </a>
-        </h3>
-        
-        
-        <div class="index-item-header">
-              <div class="post-header-image full-width">
-                <a href="">
-                  <img
-                    class="index-item-header-image"
-                    src="/images/blog/ait/ait-clock-screenshot.png"
-                    alt="A screenshot of an AIT clock"
-                    aria-label="Link to post for Alphabetic Internet Time: A Time Zone for the Internet"
-                  />
-                </a>
-              </div>
-        
-        </div>
         <article>
+          <header>
+            
+            <div class="post-date">
+              <time datetime="2022-08-18">
+                August 18, 2022
+              </time>
+            </div>
+            
+            <h3 class="post-title">
+              <a href="">
+                  Alphabetic Internet Time: A Time Zone for the Internet
+              </a>
+            </h3>
+            
+            
+            <div class="index-item-header">
+                  <div
+                    class="post-header-image full-width"
+                  >
+                    <a href="">
+                      <img
+                        class="index-item-header-image"
+                        src="/images/blog/ait/ait-clock-screenshot.png"
+                        alt="A screenshot of an AIT clock"
+                        aria-label="Link to post for Alphabetic Internet Time: A Time Zone for the Internet"
+                      />
+                    </a>
+                  </div>
+            
+            </div>
+          </header>
+        
           <p>In the Fall of 2020 I <a href="https://www.patrickweaver.net/blog/a-recurse-center-remote-batch/">participated in a 12 week batch</a> at the <a href="https://recurse.com">Recurse Center</a>. While I had a lot of previous experience <em>working</em> remotely, both before and during the pandemic, RC was the first time where I was communicating with people in more than 1 or 2 other time zones. I now work at a fully remote company, mostly spread over the 4(ish) U.S. time zones, but with a few people permanently or temporarily in other places.</p>
 <h4>Communicating across time zones</h4>
 <p>RC when I was there (mostly I would guess because their software was designed and configured for in person retreats in NYC) operated for the most part in Eastern Time, although I see from my limited participation in the community as an alum that this may have shifted, especially thanks to <a href="https://zulip.com/help/format-your-message-using-markdown#global-times">Zulip’s time-zone-relative timestamp support</a>. RC had transitioned to hosting Recursers remotely a few months before my batch, which is how they continue to operate now in Summer 2022. At my current job we often default to either Eastern Time or Pacific Time, but some people will also just use their local time and let others figure it out.</p>
@@ -123,6 +134,25 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-9178162-8');
+    </script>
+    <script>
+      function footnoteScroll() {
+        const { hash } = window.location;
+        const id = hash.slice(1, hash.length);
+        const isFootnote = hash.includes("footnote");
+        const isReturnLink = isFootnote && hash.includes("link");
+        if (isFootnote && !isReturnLink) {
+          const footnote = document.getElementById(id);
+          console.log({ footnote })
+          if (!footnote) return;
+          footnote.style.borderColor = 'red';
+          setTimeout(() => {
+            footnote.style.transition = 'border-color 4s ease-in-out';
+            footnote.style.borderColor = '#00000000';
+          }, 1000);
+        }
+        scrollBy(0, -20);
+      }
     </script>
   </body>
 </html>

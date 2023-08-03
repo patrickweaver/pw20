@@ -1,0 +1,29 @@
+WEBVTT - This file has cues.
+
+1
+00:00:00.000 --> 00:00:10.000
+It’s interesting that while both
+
+2
+00:00:10.000 --> 00:00:20.000
+&lt;audio&gt; and &lt;video&gt; are less widely used
+
+3
+00:00:23.000 --> 00:00:35.000
+than &lt;img&gt; even after their introduction in HTML 5,
+
+4
+00:00:45.000 --> 00:00:59.000
+the distribution of videos online seems to be centralized,
+
+5
+00:001:00.000 --> 00:01:15.000
+mostly on YouTube, while audio is more decentralized,
+
+6
+00:001:15.000 --> 00:01:34.000
+with people serving individual files when distributing things like podcasts,
+
+7
+00:001:34.000 --> 00:01:47.000
+even though the audio player that is often used is not on the web.

@@ -3,6 +3,8 @@
   <head>
     <title>Patrick Weaver</title>
     
+    <base href="/blog/building-a-futuristic-record-player-with-glitch-and-raspberry-pi/" />
+    
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -26,19 +28,21 @@
     
     <link rel="stylesheet" href="/css/style.css" />
   </head>
-  <body>
+  <body onhashchange="footnoteScroll()">
     <header>
       <h1 id="site-title">
         <a href="/">Patrick Weaver</a>
       </h1>
       
-      <ul class="menu">
-        <li class="menu-about"><a href="/">About</a></li>
-        <li class="menu-blog"><a href="/blog">Blog</a></li>
-        <li class="menu-portfolio"><a href="/portfolio">Portfolio</a></li>
-        <li class="menu-now"><a href="/now">Now</a></li>
-        <li class="menu-links"><a href="/links">Links</a></li>
-      </ul>
+      <nav>
+        <ul class="menu">
+          <li class="menu-about"><a href="/">About</a></li>
+          <li class="menu-blog"><a href="/blog">Blog</a></li>
+          <li class="menu-portfolio"><a href="/portfolio">Portfolio</a></li>
+          <li class="menu-now"><a href="/now">Now</a></li>
+          <li class="menu-links"><a href="/links">Links</a></li>
+        </ul>
+      </nav>
       
     </header>
     <main>
@@ -47,32 +51,39 @@
       </h2>
       
       <div class="post">
-        
-        <div class="post-date">
-          October 23, 2018
-        </div>
-        
-        <h3 class="post-title">
-          <a href="">
-              Building a futuristic Record Player with Glitch and Raspberry Pi
-          </a>
-        </h3>
-        
-        
-        <div class="index-item-header">
-              <div class="post-header-image full-width">
-                <a href="">
-                  <img
-                    class="index-item-header-image"
-                    src="/images/blog/record-player/cover.png"
-                    alt="A screenshot of the app"
-                    aria-label="Link to post for Building a futuristic Record Player with Glitch and Raspberry Pi"
-                  />
-                </a>
-              </div>
-        
-        </div>
         <article>
+          <header>
+            
+            <div class="post-date">
+              <time datetime="2018-10-23">
+                October 23, 2018
+              </time>
+            </div>
+            
+            <h3 class="post-title">
+              <a href="">
+                  Building a futuristic Record Player with Glitch and Raspberry Pi
+              </a>
+            </h3>
+            
+            
+            <div class="index-item-header">
+                  <div
+                    class="post-header-image full-width"
+                  >
+                    <a href="">
+                      <img
+                        class="index-item-header-image"
+                        src="/images/blog/record-player/cover.png"
+                        alt="A screenshot of the app"
+                        aria-label="Link to post for Building a futuristic Record Player with Glitch and Raspberry Pi"
+                      />
+                    </a>
+                  </div>
+            
+            </div>
+          </header>
+        
           <p>Earlier this year I wanted to explore the new <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/async_function">async/await</a> functionality in Javascript so I started playing around with <a href="https://async-await-machine.glitch.me/">a project</a> on Glitch (<a href="https://glitch.com/">glitch.com</a>) that would call one API after another, then generate new API call options from each cycle. I compiled a long list of potential APIs to use, but didn’t get past chaining together an <a href="https://dog.ceo/dog-api/">API that will respond with a picture of a specific breed of dog</a>, and the <a href="https://www.mediawiki.org/wiki/API:Main_page">Wikipedia API</a> which could respond with the pages that came up in a search for the name of the breed.</p>
 <figure>
 <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
@@ -144,6 +155,25 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-9178162-8');
+    </script>
+    <script>
+      function footnoteScroll() {
+        const { hash } = window.location;
+        const id = hash.slice(1, hash.length);
+        const isFootnote = hash.includes("footnote");
+        const isReturnLink = isFootnote && hash.includes("link");
+        if (isFootnote && !isReturnLink) {
+          const footnote = document.getElementById(id);
+          console.log({ footnote })
+          if (!footnote) return;
+          footnote.style.borderColor = 'red';
+          setTimeout(() => {
+            footnote.style.transition = 'border-color 4s ease-in-out';
+            footnote.style.borderColor = '#00000000';
+          }, 1000);
+        }
+        scrollBy(0, -20);
+      }
     </script>
   </body>
 </html>

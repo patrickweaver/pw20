@@ -3,6 +3,8 @@
   <head>
     <title>Patrick Weaver</title>
     
+    <base href="/blog/how-to-download-an-image-from-a-google-doc/" />
+    
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -26,19 +28,21 @@
     
     <link rel="stylesheet" href="/css/style.css" />
   </head>
-  <body>
+  <body onhashchange="footnoteScroll()">
     <header>
       <h1 id="site-title">
         <a href="/">Patrick Weaver</a>
       </h1>
       
-      <ul class="menu">
-        <li class="menu-about"><a href="/">About</a></li>
-        <li class="menu-blog"><a href="/blog">Blog</a></li>
-        <li class="menu-portfolio"><a href="/portfolio">Portfolio</a></li>
-        <li class="menu-now"><a href="/now">Now</a></li>
-        <li class="menu-links"><a href="/links">Links</a></li>
-      </ul>
+      <nav>
+        <ul class="menu">
+          <li class="menu-about"><a href="/">About</a></li>
+          <li class="menu-blog"><a href="/blog">Blog</a></li>
+          <li class="menu-portfolio"><a href="/portfolio">Portfolio</a></li>
+          <li class="menu-now"><a href="/now">Now</a></li>
+          <li class="menu-links"><a href="/links">Links</a></li>
+        </ul>
+      </nav>
       
     </header>
     <main>
@@ -47,38 +51,45 @@
       </h2>
       
       <div class="post">
-        
-        <div class="post-date">
-          July 16, 2020
-        </div>
-        
-        <h3 class="post-title">
-          <a href="">
-              How to Download an Image from a Google Doc
-          </a>
-        </h3>
-        
-            <blockquote class="editors-note">
-              <h4 class="editors-note-header">
-                  2022 Update
-              </h4>
-              <p><em>This no longer works, and will not be maintained, but might be still be interesting to read about.</em></p>
-            </blockquote>
-        
-        <div class="index-item-header">
-              <div class="post-header-image full-width">
-                <a href="">
-                  <img
-                    class="index-item-header-image"
-                    src="/images/blog/gdoc-image-dl-cover.png"
-                    alt="A screenshot of the bookmarklet buttons"
-                    aria-label="Link to post for How to Download an Image from a Google Doc"
-                  />
-                </a>
-              </div>
-        
-        </div>
         <article>
+          <header>
+            
+            <div class="post-date">
+              <time datetime="2020-07-16">
+                July 16, 2020
+              </time>
+            </div>
+            
+            <h3 class="post-title">
+              <a href="">
+                  How to Download an Image from a Google Doc
+              </a>
+            </h3>
+            
+                <aside class="editors-note">
+                  <h4 class="editors-note-header">
+                      2022 Update
+                  </h4>
+                  <p><em>This no longer works, and will not be maintained, but might be still be interesting to read about.</em></p>
+                </aside>
+            
+            <div class="index-item-header">
+                  <div
+                    class="post-header-image full-width"
+                  >
+                    <a href="">
+                      <img
+                        class="index-item-header-image"
+                        src="/images/blog/gdoc-image-dl-cover.png"
+                        alt="A screenshot of the bookmarklet buttons"
+                        aria-label="Link to post for How to Download an Image from a Google Doc"
+                      />
+                    </a>
+                  </div>
+            
+            </div>
+          </header>
+        
           <p>For some reason Google hasn’t built in a way for you to download images in Google docs! There are workarounds to get those image files like <a href="https://twitter.com/corduroy/status/1184758335934849025">using Google Keep</a>, or <a href="https://twitter.com/tonyvincent/status/1021726699178708993">downloading your whole doc as a .zip file</a>, but these have always felt like too many steps.</p>
 <p>And this is something that people really want!</p>
 <blockquote class="twitter-tweet"><a href="https://twitter.com/user/status/1190182191520788480"></a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -97,7 +108,15 @@
 <p>I decided that the best way to do this was a <a href="https://support.mozilla.org/en-US/kb/bookmarklets-perform-common-web-page-tasks">bookmarklet</a>. If you’re unfamiliar with bookmarklets, they’re bookmarks (usually placed in your bookmarks toolbar (Cmd-Shift-B to toggle this on and off on a Mac), that instead of navigating to a webpage, run JavaScript when you click them.</p>
 <h4>Great! Tell me how to do it!</h4>
 <p>To get started you’ll have to &quot;install&quot; the bookmarklet. This is easy to do, and just means dragging a button into your bookmarks toolbar. <a href="https://gdoc-image-dl.glitch.me/">I’ve hosted it on Glitch here</a>. You can even drag it straight from one of the buttons on the embed below:</p>
-<div class="glitch-embed-wrap" style="height: 420px; width: 100%;"><iframe allow="geolocation; microphone; camera; midi; encrypted-media" src="https://glitch.com/embed/#!/embed/gdoc-image-dl?path=README.md&previewSize=100" alt="record-player on Glitch" style="height: 100%; width: 100%; border: 0;"></iframe></div>
+<p><div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
+<iframe
+              src="https://glitch.com/embed/#!/embed/gdoc-image-dl?path=README.md&previewSize=100"
+              title="An App on Glitch"
+              allow="geolocation; microphone; camera; midi; encrypted-media; xr-spatial-tracking; fullscreen"
+              allowFullScreen
+              style="height: 100%; width: 100%; border: 0;">
+</iframe>
+</div></p>
 <p>The instructions are simple!</p>
 <ol>
 <li>
@@ -122,6 +141,25 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-9178162-8');
+    </script>
+    <script>
+      function footnoteScroll() {
+        const { hash } = window.location;
+        const id = hash.slice(1, hash.length);
+        const isFootnote = hash.includes("footnote");
+        const isReturnLink = isFootnote && hash.includes("link");
+        if (isFootnote && !isReturnLink) {
+          const footnote = document.getElementById(id);
+          console.log({ footnote })
+          if (!footnote) return;
+          footnote.style.borderColor = 'red';
+          setTimeout(() => {
+            footnote.style.transition = 'border-color 4s ease-in-out';
+            footnote.style.borderColor = '#00000000';
+          }, 1000);
+        }
+        scrollBy(0, -20);
+      }
     </script>
   </body>
 </html>
