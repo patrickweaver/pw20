@@ -478,11 +478,13 @@ tags:
 
 <section>
 
-After learning a little bit more about web accessibility in 2022 I have been exploring some of the less common <abbr title="Hyper Text Markup Language">HTML</abbr> elements, and making changes to this website, like wrapping the text of the posts on this blog in `<article>` tags and adding a `<main>` tag in the website’s layout templates (this website is built using <a href="https://www.11ty.dev/" target="_blank">Eleventy</a>).
+After learning a little bit more about web accessibility last year I had been exploring some of the less common <abbr title="Hyper Text Markup Language">HTML</abbr> elements, and making changes to this website, like wrapping the text of the posts on this blog in `<article>` tags and adding a `<main>` tag in the website’s layout templates (this website is built using <a href="https://www.11ty.dev/" target="_blank">Eleventy</a>).
 
 I had previously done some work to make sure that `<figure>` and `<figcaption>` elements were layed out nicely for images with associated captions, and I had been impressed with various <a href="https://www.recurse.com/" target="_blank">Recurser’s</a> implementation of footnotes or sidenotes<sub id="footnote-1-link">[1](./#footnote-1)</sub>, and have been thinking it would be interesting to see what other interesting layouts were possible with just HTML.
 
-I could, element by element, continue to add support (mostly by making <abbr title="Cascading Style Sheets">CSS</abbr> updates for each element to fit in with the rest of my style choices) as I came across specific needs for them, but not one to shy away from an exhaustive exploration, I decided to write this post and attempt to use every element. A goal was to avoid delaying future posts while I update the site to support a new element it uses, but in reality it took more than a year to make all the updates for just this post! I am using the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">MDN Web Docs list of HTML elements</a> as a reference which has more than 100 tags divided into a few categories, which I will also use in this post. Many of the tags like `<html>` don’t make sense to include in the text of a blog post, but I’ll be updating the website’s layout as I go, so if you’re viewing this post on [patrickweaver.net](https://www.patrickweaver.net), then every one of the elements is used somewhere on this page.
+I could, element by element, continue to add support (mostly by making <abbr title="Cascading Style Sheets">CSS</abbr> updates for each element to fit in with the rest of my style choices) as I came across specific needs for them, but not one to shy away from an exhaustive exploration, I decided to write this post and attempt to use every element.
+
+A goal of the post, was to avoid delaying other future posts with CSS updates on a previously unused element, but in reality it took a year and a half to make all the updates for just this post! I am using the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">MDN Web Docs list of HTML elements</a> as a reference which has more than 100 tags divided into a few categories, which I will also use in this post. Many of the tags like `<html>` don’t make sense to include in the text of a blog post, but if you’re viewing this post on [patrickweaver.net](https://www.patrickweaver.net), then every one of the elements is used somewhere on this page.
 
 </section>
 
@@ -511,7 +513,7 @@ I didn’t have to make any changes to the `<html>` tag for this post, but one t
 - [`<style>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style)
 - [`<title>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title)
 
-I wasn’t familiar with the `<base>` tag before writing this post, though I’ve now added one with relative links to my layout templates. This caused a few issues with things like local development, and relative links, though they were easily resolved. The rest of the metadata tags were present before this post.
+I wasn’t familiar with the `<base>` tag before writing this post, though I’ve now added one with relative links to my layout templates. This caused a few issues with things like local development, and relative links, though they were easily resolved. The rest of the metadata tags are familiar and were already here.
 
 </section>
 
@@ -521,7 +523,7 @@ I wasn’t familiar with the `<base>` tag before writing this post, though I’v
 
 - [`<body>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body)
 
-Like the Document metadata tags, this was already already in use, though it was interesting to read the documentation and learn about attributes, like `onbeforeprint` that provides functionality I’ve used more hacky methods to accomplish previously, and `onblur`, whose primary utility seems to be annoying popups.
+Like the Document metadata tags, in the layout, though it was interesting to read the documentation and learn about attributes, like `onbeforeprint` that provides functionality I’ve used more hacky methods to accomplish previously, and `onblur`, whose primary utility seems to be annoying popups.
 
 </section>
 
@@ -548,7 +550,7 @@ When I first looked at the list I assumed that `<address>` would be designed exc
 
 As I mentioned above, I updated the blog post page template to use the `<article>` tag, but reading the documentation, I’m now wondering if it would fit on every page of the site.
 
-I’m now using `<aside>` elements, which represent, <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside">a portion of a document whose content is only indirectly related to the document’s main content</q>, to wrap around my footnotes at the bottom of this page (though I may try to style them as sidenotes in the future). The current design of this website doesn’t have a `<footer>`, but I’ve added one to this blog post, and while I had a `<header>` element on the page header previously, I now know that more than one is acceptable so there is one around the header section of blog posts.
+I’m now using `<aside>` elements, which represent, <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside">a portion of a document whose content is only indirectly related to the document’s main content</q>, to wrap around my footnotes at the bottom of this page (though I may try to style them as sidenotes in the future). The current design of this website doesn’t have a `<footer>`, but I’ve added one to this blog post, and while I had a `<header>` element on the page header previously, I now know that more than one is acceptable so there is one around the header section of each blog posts as well.
 
 #### Heading elements
 
@@ -585,9 +587,9 @@ The `<main>` element was one of the initial curiosities that led me down the pat
 - [`<pre>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre)
 - [`<ul>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul)
 
-I had previously used `<blockquote>` for embedding tweets into blog posts, but for this post I decided to add styles for standalone quotes also, though I didn’t know about the `cite` property or `<cite>` element until reading the docs more closely:
+I had previously used `<blockquote>` for embedding tweets into blog posts, but for this post I decided to add styles for standalone quotes. I didn’t know about the `<blockquote>` `cite` property or `<cite>` element until reading the docs more closely:
 
-<figure>
+<figure class="blockquote-figure">
     <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote#attributes">
         <h4><code>cite</code></h4>
         <p>A URL that designates a source document or message for the information quoted. This attribute is intended to point to information explaining the context or the reference for the quote.</p
@@ -607,13 +609,19 @@ I had previously used `<blockquote>` for embedding tweets into blog posts, but f
 
 `<div>` has acquired a bad reputation on the modern web due to overuse, so I was surprised to be using relatively few `<div>` elements, though once I started using elements that I wanted to style together, I ended up with around 20. It shows how unnecessary most `<div>`s probably are, though this site has minimal generic “sections”.
 
-Some of the first more obscure elements that I added to this site were `<figcaption>` and `<figure>`. I was adding some blog posts that had originally been published on Medium, and wanted to add captions below images in a web-semantically correct way. Though after reading the documentation which says `<figure>` can be used for, <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure#usage_notes">image, illustration, diagram, code snippet, etc.</q>, I realized that there are a lot of places where I currently have code blocks that I could be using them.
+Among the first more obscure elements that I added to this site were `<figcaption>` and `<figure>`. I was adding some blog posts that had originally been published on Medium, and wanted to add captions below images in a web-semantically correct way. Though after reading the documentation, which says `<figure>` can be used for, <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure#usage_notes">image, illustration, diagram, code snippet, etc.,</q> I realized that there are a lot of places where I currently have code blocks that I could be using them.
 
 I have always liked `<hr>` elements a lot, but I’m never sure when to use them. The documentation says, <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr#try_it">While it may still be displayed as a horizontal rule in visual browsers, this element is now defined in semantic terms, rather than presentational terms, so if you wish to draw a horizontal line, you should do so using appropriate CSS</q> which made me revisit the `<hr>` styles on this site and I decided to include an emoji in an `hr:after` rule, though I should check how that works on a screen reader.
 
 The items in the (inline styled) lists of elements on this page are of course `<li>` elements, though I had never looked at the documentation until now. It’s interesting that the same `<li>` element is used in both `<ol>` and `<ul>` lists, with quirks like <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li#attributes">The value attribute has no meaning for unordered lists</q>, but is not used to wrap the `<dt>` and `<dd>` elements in a `<dl>`.
 
-I had not encountered `<menu>` before writing this post, and I was initially surprised that it survived to HTML 5, while [`<menuitem>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menuitem) didn’t, but researching further [on Wikipedia](https://en.wikipedia.org/wiki/HTML_element#Basic_text) I read <q cite="https://en.wikipedia.org/wiki/HTML_element#Basic_text">MENU existed in HTML Tags, and was standardized in HTML 2.0; deprecated in HTML 4.0 Transitional; invalid in HTML 4.0 Strict; then redefined in HTML5, but removed in HTML 5.2.</q>, and now I don’t know what to think, but here’s a `<menu>`:
+I had not encountered `<menu>` before writing this post, and I was initially surprised that it survived to HTML 5 (while [`<menuitem>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menuitem) didn’t) because modern browsers treat it as essentially a `<ul>`. Researching further [on Wikipedia](https://en.wikipedia.org/wiki/HTML_element#Basic_text) I read:
+
+<figure class="blockquote-figure">
+    <blockquote cite="https://en.wikipedia.org/wiki/HTML_element#Basic_text">MENU existed in HTML Tags, and was standardized in HTML 2.0; deprecated in HTML 4.0 Transitional; invalid in HTML 4.0 Strict; then redefined in HTML5, but removed in HTML 5.2,</blockquote>
+</figure
+
+and now I don’t know what to think, but here’s a `<menu>`:
 
 <menu id="interactive-menu">
     <script type="text/javascript">
@@ -667,22 +675,22 @@ I had not encountered `<menu>` before writing this post, and I was initially sur
     </noscript>
 </menu>
 
-`<ol>` and `<ul>` are some of the first HTML elements I used, and more recently I try to use `<ol>` with CSS in places that are semantically lists, but might not be styled like a traditional list.
+`<ol>` and `<ul>` are some of the HTML elements I used in my earliest web pages, and more recently I try to use `<ul>` with CSS in places that are semantically lists, but might not be styled like a traditional list.
 
 I was surprised not to find more guidance on using `<p>` tags on [the MDN docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p), something I wonder often when adding non long form text to a website is, “is this really a paragraph?” But, it seems like as far as HTML is concerned, if it’s not a heading, then probably!
 
 Before reading the documentation I had really only considered using `<pre>` tags along with `<code>` tags for code blocks, but the example used on MDN is used to show how `<pre>` can display meaningful whitespace for things like:
 
-<figure><pre role="img" aria-label="An ASCII picture of a house with the label, 'in this house we write semantic HTML'">
-┏┓
-┃┃╱╲ in
-┃╱╱╲╲ this
-╱╱╭╮╲╲house
-▔▏┗┛▕▔ we
-╱▔▔▔▔▔▔▔▔▔▔╲
+<figure class="no-padding-figure"><pre role="img" aria-label="An ASCII picture of a house with the label, 'in this house we write semantic HTML'">
+  ┏┓
+  ┃┃╱╲ in
+  ┃╱╱╲╲ this
+  ╱╱╭╮╲╲house
+  ▔▏┗┛▕▔ we
+  ╱▔▔▔▔▔▔▔▔▔▔╲
 write semantic HTML
-╱╱┏┳┓╭╮┏┳┓ ╲╲
-▔▏┗┻┛┃┃┗┻┛▕▔
+  ╱╱┏┳┓╭╮┏┳┓ ╲╲
+  ▔▏┗┻┛┃┃┗┻┛▕▔
 </pre></figure>
 
 </section>
@@ -725,9 +733,8 @@ As with other very common tags I was curious to get to the documentation for `<a
 
 `<abbr>` seems likely to be the least used tag, especially because the MDN documentation doesn’t make a great case for it <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr#default_styling">the purpose of this element is purely for the convenience of the author.</q>
 
-The distinction between `<b>` and `<strong>`, as the docs would have you believe, is not what I had thought it was (that `<strong>` was the HTML5 replacement for `<b>`), and I think is a more nuanced and overlapping than the technical nature of the documentation is really able to convey. The way I will probably explain it to other people in the future is that, for the most part, you should use `<b>` for <b>single words</b> (or compound words), <strong>and `<strong>` for whole sentences or phrases</strong>. This is more a rule of thumb and bypasses the actual distinction. The documentation reads:
+The distinction between `<b>` and `<strong>`, as the docs have it, is not what I had previously thought (that `<strong>` was the HTML5 replacement for `<b>`). I think the distinction is more nuanced and overlapping than the technical nature of the documentation is really able to convey. The way I will probably explain it to other people in the future is that, for the most part, you should use `<b>` for <b>single words</b> (or compound words), <strong>and `<strong>` for whole sentences or phrases</strong>. This is more a rule of thumb and bypasses the actual distinction. The documentation reads:
 
-<!-- TODO Should figure be used here? -->
 <figure>
     <blockquote>
         The <code>&lt;strong&gt;</code> element is for content that is of greater importance, while the <code>&lt;b&gt;</code> element is used to draw attention to text without indicating that it’s more important.
@@ -737,9 +744,9 @@ The distinction between `<b>` and `<strong>`, as the docs would have you believe
     </figcaption>
 </figure>
 
-But I can’t think of many instances where I would want to draw attention to word that is not more important than other words, a recommendation that seems to want to live in a world where for the most part all words are of equal importance, which, um, yeah, no.
+But I can’t think of many instances where I would want to draw attention to a word, where that word is not more important than other words. The recommendation seems to be from a reality where, for the most part, all words are of equal importance, but deserve different amounts of attention, which doesn’t seem very common.
 
-I’ll probably think of `<b>` from now on as the HTML tag for the quotation marks you might see on signage that can cause intergenerational confusion: Fresh “Semantic” HTML.
+I’ll probably think of `<b>` from now on as the HTML tag with a similar effect as the quotation marks used for “emphasis” you might see on signage that can cause intergenerational confusion.
 
 `<bdi>` is a tag for a concept that I hadn’t considered until now, text whose direction might (or might not) differ from the direction of the surrounding text. The examples on the documentation are all names, but could stand in for any user inputted text. In the future I will probably try to wrap any tags, like the ones controlled by the input below, that might contain arbitrary user inputted unicode characters in a `<bdi>` tag just to be safe.
 
@@ -749,7 +756,7 @@ I’ll probably think of `<b>` from now on as the HTML tag for the quotation mar
 </form>
 <p>Hello, <bdi id="bdi-name-display">&nbsp;&nbsp;&nbsp;&nbsp;</bdi>, thanks for reading!</p>
 <div>
-<button id="rtl-fill">Fill with a RTL language name</button> (<a href="https://en.wikipedia.org/wiki/Abdul_Rahman_Munif" target="_blank">عَبْد الرَّحْمٰن بِن إِبْرَاهِيم المُنِيف</a>)
+<button id="rtl-fill" type="button">Fill with a RTL language name</button> (<a href="https://en.wikipedia.org/wiki/Abdul_Rahman_Munif" target="_blank">عَبْد الرَّحْمٰن بِن إِبْرَاهِيم المُنِيف</a>)
 </div>
 <script type="text/javascript">
     const bdi_i = document.getElementById("bdi-name-input");
@@ -774,17 +781,17 @@ I’ll probably think of `<b>` from now on as the HTML tag for the quotation mar
 
 `<br>` is interesting to me, because for a time (a long time ago) it seemed to be as misused as `<div>` has been recently, but, as CSS has gotten more robust that is probably less often the case; though I wonder if it is still taught early in HTML classes. It’s interesting that the example use case in the docs is poetry because it makes me wonder how the grey area between a paragraph and a standalone line was considered in creating the HTML spec. It also seems like a `<pre>` tag might be a better fit in some cases.
 
-`<cite>` and `<q>` are interesting because they try to add HTML semantic elements for meaning that is also conveyed by visible punctuation in most languages. It’s the kind of redundancy that underscores repetitiousness of working with computers.
+`<cite>` and `<q>` are interesting because they try to add HTML semantic elements for meaning that is also conveyed by visible punctuation in most languages. It’s the kind of redundancy that underscores repetitiousness of working with computers (the default style for <cite>cite</cite> uses italics while <q cite="this is not really a quotation">q</q> adds quotation marks not in the text.).
 
 I’ve clearly used many `<code>` elements in this post so far, but reading the documentation made me wonder whether the recently released Markdown support in Google Docs uses `<code>` for text, but on inspecting the HTML of a Doc, I remembered that `<canvas>` is used to render the document now.
 
-Occasionally the MDN documentation examples are difficult to mentally translate to real-world use cases. `<data>` is one of these, where the ony examples show a `<data>` element with a `value` property with product IDs wrapped around product names, but in that case the IDs seem either user facing, in which case it would probably be better to display them to the user, or non user facing, in which case I’m not sure who the “data” is for. Interestingly, `<data>` doesn’t seem to appear in the [W3C HTML5 specification](https://www.w3.org/TR/2011/WD-html5-20110405/).
+Occasionally the MDN documentation examples are difficult to mentally translate to real-world use cases. `<data>` is one of these, where the ony examples show a `<data>` element with a `value` property with product IDs wrapped around product names In that case the IDs seem either, user facing, in which case it would probably be better to display them to the user, or non user facing, in which case, I’m not sure who the “data” is for. Interestingly, `<data>` doesn’t seem to appear in the [W3C HTML5 specification](https://www.w3.org/TR/2011/WD-html5-20110405/).
 
-`<dfn>` is another strange element because it seems like it is misnamed, as it goes around, not the definition of a term, but around that term within the definition. It does [only seem to have been part of the never officially adopted HTML 2.0 proposal](http://www.martinrinehart.com/frontend-engineering/engineers/html/html-tag-history.html), and it exemplifies the academic nature of the early web. The [HTML Tags: Past, Present, Proposed](http://www.martinrinehart.com/frontend-engineering/engineers/html/html-tag-history.html) page on martinrinehart.com defines <dfn title="Hyper Text Markup Language 2.0">HTML 2.0</dfn> as <q cite="http://www.martinrinehart.com/frontend-engineering/engineers/html/html-tag-history.html">There never was an HTML 2.0 standard, but these all shaped browser development in the late 20th century</q> with references to several RFC documents.
+`<dfn>` is another strange element because it seems like it is misnamed, as it wraps, not the definition of a term, but instead that term within the definition. It does [only seem to have been part of the never officially adopted HTML 2.0 proposal](http://www.martinrinehart.com/frontend-engineering/engineers/html/html-tag-history.html), and it exemplifies the academic nature of the early web. The [HTML Tags: Past, Present, Proposed](http://www.martinrinehart.com/frontend-engineering/engineers/html/html-tag-history.html) page on martinrinehart.com defines <dfn title="Hyper Text Markup Language 2.0">HTML 2.0</dfn> as <q cite="http://www.martinrinehart.com/frontend-engineering/engineers/html/html-tag-history.html">There never was an HTML 2.0 standard, but these all shaped browser development in the late 20th century</q> with references to several RFC documents.
 
 `<em>` and `<i>` bring up similar usage questions as `<b>` and `<strong>`, but in my opinion with even more nuance, especially, as the documentation notes, with other more specific tags like `<cite>` that also by default italicize text in most browsers. The rule of thumb from above also for the most part fits here, `<em>` for single words, and `<i>` for sentences or phrases, though the examples in the documentation seem to mostly use `<i>` for drawing attention to potential confusion, as in, <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em#i_vs._em">The word <i>the</i> is an article</q>.
 
-`<kbd>` is another tag that makes me wonder about the conceptual boundaries of the usage of the tag. It is intended for specifying keys on a computer keyboard, for example: to type the <code>&lt;</code> character used for (the non escaped) version of the tags in this post, I press <kbd>Shift</kbd> + <kbd>,</kbd> (the styles here on <code>&lt;kbd&gt;</code> are applied through CSS). But I’m curious if it would also be appropriate to put a `<kbd>` around something like <i>Right click</i> (in this case I used `<i>` instead).
+`<kbd>` is another tag that makes me wonder about the conceptual boundaries of the usage of the tag. It is intended for specifying keys on a computer keyboard, for example: to type the <code>&lt;</code> character used for (the non escaped) version of the tags in this post, I press <kbd>Shift</kbd> + <kbd>,</kbd> (the styles here on <code>&lt;kbd&gt;</code> are applied through custom CSS). But I’m curious if it would also be appropriate to put a `<kbd>` around something like <i>Right click</i> (in this case I used `<i>` instead).
 
 `<mark>` is interesting because it suggests a 2-way authoring web that was originally envisioned, but failed to come to fruition with usage notes like, <q>Think of this like using a <mark>highlighter pen</mark> in a book to mark passages that you find of interest.</q> The yellow here is the default style in all major browsers.
 
@@ -821,7 +828,7 @@ Hello, World
 
 <p> or a <span style="display: block"><code>&lt;span style="display: block" /&gt;</code></span>. Though the <code>&lt;div&gt;</code> breaks the parent <code>&lt;p&gt;</code> tag, while the <code>&lt;span&gt;</code> does not.</p>
 
-`<sub>` and `<sup>` are more elements I probably have used the CSS implementations of previously (though it is appropriate for presentation only super or subscript.)
+`<sub>` (used for footnotes here) and `<sup>` (used in the equation below) are more elements I probably have used the CSS implementations of previously (though it is appropriate for presentation only super or subscript.)
 
 `<time>` seems like a helpful element for creating semantic HTML, but even Google doesn’t seem to use it in [search results](https://www.google.com/search?q=%22Patrick+Weaver%22+%22HTML%22). I’ve updated the dates on my blog posts to use it.
 
@@ -866,12 +873,22 @@ Here’s a `<map>` (with `<area>`s on each tag linking to MDN) of a handwritten 
 <img usemap="#park-html-map" src="/images/blog/html/park-html.jpg" alt="A processed photograph of handwritten HTML in a notebook" style="width: 300px;">
 </figure>
 
-`<audio>` is one of the classic HTML 5 tags so I’ve used it before, but thinking about it now it’s surprising I don’t see them more often in the 2020s. I would guess that there are more in use than I thought though, for example, the [Bandcamp](https://bandcamp.com) player uses an `<audio>` element even though the UI is a custom mix of `<a>` and `<div>`s inside a `<table>` oddly enough.
+`<audio>` is one of the classic multimedia HTML 5 tags so I’ve used it before, but thinking about it now, it’s surprising I don’t see them more often in the 2020s. I would guess that there are more in use than I thought, for example, the [Bandcamp](https://bandcamp.com) player uses a hidden `<audio>` element even though the UI is a custom mix of `<a>` and `<div>`s inside a `<table>` oddly enough.
 
-TODO
-<audio>
+<figure>
 
-`<img>` is of course one of the first elements I used, but I was curious what properties could be used with it that I might not have heard of. `srcset`, used for specifying multiple sizes of the same image to load at different screen resolutions, was one of those. I’ve created a demo below, which goes against the spirit of `srcset`. The image below has 3 images provided to its `srcset` property, one with a yellow background and a monospace font that is 300 pixels wide and should render when the page is less than 520 pixels wide, one with a blue background and a serifed font that should render when the page is between 520 and 800 pixels wide, and one with a green background and a script font that should render when the page is greater than 800 pixels wide.
+<audio controls src="/images/blog/html/audio-element.m4a"></audio>
+
+<figcaption>A recording of me reading the paragraph above. (Excuse my scratchy late night voice)</figcaption>
+</figure>
+
+`<img>` is of course one of the first elements I used, but I was curious what properties could be used with it that I might not have heard of. `srcset`, used for specifying multiple sizes of the same image to load at different screen resolutions, was one of those. I’ve created a demo below, which goes against the spirit of `srcset`.
+
+The image below has 3 images provided to its `srcset` property:
+
+1. A yellow background and a monospace font that is 300 pixels wide and should render when the page is less than 520 pixels wide
+2. A blue background and a serifed font that should render when the page is between 520 and 800 pixels wide
+3. A green background and a script font that should render when the page is greater than 800 pixels wide.
 
 <img
     src="/images/blog/html/srcset-700.png"
@@ -979,14 +996,12 @@ One reason for this may be that there are still some quirks with `<video>` eleme
 
 It is somewhat surprising that `<embed>` and `<object>` have not been deprecated since most of their uses have been superseded by specific tags like `<video>` and `<iframe>`. Maybe eventually they will be, or they will just live on in the name of backwards compatibility.
 
-Speaking of `<iframe>` it’s also interesting that the very 90s name “iframe” has survived while `<frame>` was deprecated in HTML 5. I thought that `<iframe>` might be a way to force the `<img>` `srcset` example above to render the smaller images on a high DPI display, but even at 150px wide on my device the large image still renders:
+Speaking of `<iframe>` it’s also interesting that the very 90s name “iframe” (“inline frame”, not “iPod Frame” or something, and I was surprised to learn does render `display: inline`) has survived while `<frame>` was deprecated in HTML 5. I thought that `<iframe>` might be a way to force the `<img>` `srcset` example above to render the smaller images on a high DPI display, but even at 150px wide on my device the large image still renders:
 
 <figure>
 <iframe width="150" height="200" src="/pages/srcset"></iframe>
 <figcaption>An embed of a page with just the srcset example  from above at 150px wide.
 </figure>
-
-Scrolling down further it’s interesting that a recursive `<iframe>` doesn’t render.
 
 `<picture>` is a tag that is, with `<source>` actually intended for layout tricks like the `srcset` experiment I tried above, rendering different versions of an image in different situations. The image below should show an icon of a computer when used with a mouse/trackpad, or an icon of a phone when used with a touch screen (using the `pointer` media query to determine), and should fall back to an image of a red circle with a line through it when neither media query is appropriate. The responsive design developer tools in your browser should trick it, though interestingly, not when inspecting an element.
 
@@ -1009,7 +1024,7 @@ Scrolling down further it’s interesting that a recursive `<iframe>` doesn’t 
     <img src="/images/blog/html/no.png" alt="an icon of a computer when used with a mouse/trackpad, an icon of a phone when used with a touch screen, or an image of a red circle with a line through otherwise">
 </picture>
 
-`<portal>` is one of the more mysterious sounding elements, and seems intended for the iPad style link previews that I’ve seen implemented on some websites on hover, [but also come with SPA-like performance benefits](https://web.dev/hands-on-portals/). It unfortunately is still an experimental feature and isn’t (as of 2023) enabled by default in any browsers. It seems that it [used to be an available experimental flag in Chrome](https://medium.com/swlh/portals-in-chrome-going-on-a-test-drive-66b16971fb19), but today in 2023 it is not available at [chrome://flags](chrome://flags). I’ll include one below in case it works for future readers! I did try it in an very old Chromium version I still had installed. `<portal>` doesn’t seem to be part of the [HTML 5 Spec](https://www.w3.org/TR/2011/WD-html5-20110405/), I’m not sure why it’s included in the MDN documentation.
+`<portal>` is one of the more mysterious sounding elements, and seems intended for the iPad-style link previews that I’ve seen implemented on some websites on hover, [but also come with SPA-like performance benefits](https://web.dev/hands-on-portals/). It unfortunately is still an experimental feature and isn’t (as of 2023) enabled by default in any browsers. It seems that it [used to be an available experimental flag in Chrome](https://medium.com/swlh/portals-in-chrome-going-on-a-test-drive-66b16971fb19), but today in 2023 it is not available at [chrome://flags](chrome://flags). I’ll include one below in case it works for future readers! I did try it in an very old Chromium version I still had installed. `<portal>` doesn’t seem to be part of the [HTML 5 Spec](https://www.w3.org/TR/2011/WD-html5-20110405/), I’m not sure why it’s included in the MDN documentation.
 
 <figure>
 <portal id="pw-links-portal" src="https://www.patrickweaver.net/links/#links"></portal>
@@ -1135,7 +1150,7 @@ Another set of <ins>new to me</ins> elements <del>I had never come across before
 - [`<thead>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/thead)
 - [`<tr>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tr)
 
-It’s not a new insight that `<table>` elements were overused for layout purposes on the early web, but an irony that I’m only realizing now is that recently, as the web has gotten more and more populated by data, that `<table>` elements have become rarely used, probably mostly due to their clunky default design, but probably also because one main goal of creating a web UI for the data that is otherwise probably stored in database tables, is to create a different view of the same data.
+It’s not a new insight that `<table>` elements were overused for layout purposes on the early web, but an irony that I’m only realizing now is that recently, as the web has gotten more and more populated by data, that `<table>` elements have become rarely used, probably mostly due to their clunky default design, but probably also because one main goal of creating a web UI for the data that is otherwise probably stored in database tables, is to create a <i>different</i> view of the same data.
 
 I don’t have any tabular data as this is an exclusively <em>document</em> based blog post, but below I’ve added a table with some custom CSS and “data” on emoji that is likely only accurate for the Apple emoji set in 2023. I wasn’t familiar with `<col>` and `<colgroup>` before, but I don’t know that there are many cases where I would use them rather than a more custom, non `<table>` design.
 
@@ -1232,11 +1247,9 @@ I don’t have any tabular data as this is an exclusively <em>document</em> base
 - [`<select>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select)
 - [`<textarea>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea)
 
-I’m go to <a href="#text-content">text-content</a>.
+I have usually used `<form>` and it’s associated elements when submitting the form would redirect to a new page, not for in-page user interaction, but either is valid. I would guess the form elements are probably the most important for accessibility so I will likely refer to the documentation whenever implementing one in the future.
 
-TODO
-
-<label for="everything-form">Fill out this form to get an emoji surprise!</label>
+<label for="everything-form">Fill out this form and scroll down to get an emoji surprise below!</label>
 
 <form id="everything-form">
 <div id="eform-type">
@@ -1499,7 +1512,7 @@ name="everything-output"
 - [`<dialog>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)
 - [`<summary>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary)
 
-The `<details>` and `<summary>` combination is probably the most common, “You don’t need JavaScript to…” element. Making this kind of expand/collapse interactive view was one of the first things I used JavaScript for (it was probably jQuery). I remember it being somewhat confusing at the time (2006?), so it’s funny to me to see it so easy with just a couple HTML tags.
+The `<details>` and `<summary>` combination is probably the most common, “You don’t need JavaScript to…” element (another <a href="https://catskull.net/html.html" target="_blank">popular blog</a> post making this point promted me to finally finish this one). Making this kind of expand/collapse interactive view was one of the first things I used JavaScript for (it was probably jQuery). I remember it being somewhat confusing at the time (2006?), so it’s funny to me to see it so easy with just a couple HTML tags.
 
 <details>
   <summary>Speculation about <code>&lt;details&gt;</code></summary>
@@ -1537,7 +1550,7 @@ I wasn’t aware of the HTML only `<dialog>` before using it here. It requires J
 
 Web components had been on a (long) list of “things I should learn more about” for a while, so I was glad to get to this section of the MDN documentation. I was surprised that JavaScript (and `Class` syntax at that) was necessary to get web components to render, but after reading more about the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM">Shadow DOM</a>, it makes sense, because HTML has no built in way to encapsulate styles, though it does seem to be somewhat similar conceptually to `<iframe>` elements.
 
-I’ve used web components below to create a table of contents for this post below, though I’m not making the best use of them. One thing I couldn’t quickly figure out how to do, when compared to components from frontend frameworks, is pass in properties that are used themselves as properties of elements in the child template, so in the list below I have to pass a full `<a>` element into each child (which renders the `<li>`), to be able to set the correct `href` property. After finishing this post I will someday read more about web components and maybe figure out something I’m missing now.
+I’ve used web components below to create a table of contents for this post below, though I’m not making the best use of them. One thing I couldn’t quickly figure out how to do, when compared to components from frontend frameworks, is pass in properties that are themselves used as properties of elements in the child template, so in the list below I have to pass a full `<a>` element into each child (which renders the `<li>`), to be able to set the correct `href` property. Someday after finishing this post I will read more about web components and maybe figure out something I’m missing now.
 
 <template id="table-of-contents-item">
     <li><slot name="emoji">✅</slot> <slot name="table-of-contents-link">End of List</slot>
@@ -1714,7 +1727,7 @@ There are some other strange ones as well though. I couldn’t implement `<conte
 <figcaption><code>&lt;shadow&gt;</code> and <code>&lt;content&gt;</code> elements (that won’t render).</figcaption>
 </figure>
 
-And `<dir>` is a very <em>webserver</em> version of `<ul>` for listing directories. Since my Eleventy static site generator does use directories here’s a list:
+And `<dir>` is a very <i>webserver</i> version of `<ul>` for listing directories. Since my Eleventy static site generator does use directories here’s a list:
 
 <dir>
     <li><a href="/blog">/blog</a></li>
@@ -1723,14 +1736,13 @@ And `<dir>` is a very <em>webserver</em> version of `<ul>` for listing directori
     <li><a href="/notes">/notes</a></li>
     <li><a href="/pages">/pages</a></li>
     <li><a href="/portfolio">/portfolio</a></li>
-    <!-- TODO -->
 </dir>
 
 Some of deprecated elements won’t render without some extra work, for example `<frame>` and `<frameset>` are designed to be used instead of a `<body>`, for I guess some kind of collage web page made up of other pages. I’ve ironically only been able to use them inside of an `<iframe>` below.
 
 <figure>
 <iframe width="300" height="300" src="/pages/frameset"></iframe>
-<figcaption>An embed of a page with <code>&lt;frameset&gt;</code> and <code>&lt;frame&gt;</code> elements that itself embeds the Links page of this site.
+<figcaption>An embed of a <a href="/pages/frameset" target="_blank">page</a> with <code>&lt;frameset&gt;</code> and <code>&lt;frame&gt;</code> elements that itself embeds the Links page of this site.
 </figure>
 
 I expected that `<image>` wouldn’t work since the MDN documentation says:
@@ -1807,7 +1819,7 @@ I consulted a few other lists of HTML tags after realizing that the <code>&lt;!-
 
 <!-- The only reference to HTML comments on MDN seems to be in the web APIs section: https://developer.mozilla.org/en-US/docs/Web/API/Comment -->
 
-An <a href="https://web.archive.org/web/20130520111045/https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">older list from MDN in 2013</a> has elements like <code>&lt;blink&gt;</code>, and for accessibility reasons, <q cite="https://web.archive.org/web/20130520111045/https://developer.mozilla.org/en-US/docs/Web/HTML/Element">“almost all browsers currently ignore this element.”</q> I’ll add one hidden below if you can find a very old browser that supports it:
+An <a href="https://web.archive.org/web/20130520111045/https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">older list from MDN in 2013</a> has elements like <code>&lt;blink&gt;</code>, and for accessibility reasons, <q cite="https://web.archive.org/web/20130520111045/https://developer.mozilla.org/en-US/docs/Web/HTML/Element">almost all browsers currently ignore this element.</q> I’ll add one hidden below if you can find a very old browser that supports it:
 
 <div style="display: none" id="hidden-blink">
     <blink>I am in a <code>&lt;blink&gt;</code> tag (but probably not blinking).</blink>
@@ -1844,5 +1856,5 @@ And of course `<applet>`, but I’m not even going to try with that one.
 </ol>
 
 <footer role="contentinfo">
-    Written between <time datetime="2022-02">February 2022</time> and <time datetime="2023-05">July 2023</time>.
+    Written between <time datetime="2022-02">February 2022</time> and <time datetime="2023-08">August 2023</time>.
 </footer>

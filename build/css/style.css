@@ -290,6 +290,10 @@ pre {
   border-radius: 5px;
 }
 
+figure.no-padding-figure > pre {
+  margin: 0;
+}
+
 code,
 samp {
   background-color: var(--bg-2);
@@ -336,6 +340,21 @@ figure {
   padding: 0.5rem;
   border: 1px solid var(--shadow-med);
   border-radius: 3px;
+}
+
+figure.blockquote-figure {
+  border: none;
+  background-color: #00000000;
+}
+
+figure.figure-with-outline {
+  border: 1px solid var(--shadow);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+figure.no-padding-figure {
+  padding: 0;
 }
 
 figure p {
@@ -571,12 +590,6 @@ ins::after {
   content: " [deletion end] ";
 }
 
-.figure-with-outline {
-  border: 1px solid var(--shadow);
-  border-radius: 5px;
-  padding: 10px;
-}
-
 u.u-sp {
   text-decoration: red wavy underline;
 }
@@ -636,10 +649,6 @@ s::after {
 
   h2 {
     font-size: 2rem;
-  }
-
-  figure {
-    padding: 0.25rem;
   }
 
   .project-header .cover,
