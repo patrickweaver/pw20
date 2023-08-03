@@ -1,7 +1,7 @@
 ---
 layout: layouts/blogPost.hbs
 title: A Blog Post With Every HTML Element
-date: 2023-02-20
+date: 2023-08-03
 preview_text: "After learning a little bit more about web accessibility last year I had been exploring some of the less common HTML elements, and making changes to this website, like wrapping the text of the posts on this blog in"
 cover_image_url: "/images/blog/html/park-html-crop.jpg"
 cover_image_alt: "A photograph of a handwritten HTML document on lined paper"
