@@ -689,11 +689,9 @@
                 const e = document.getElementById(id);
                 const startTop = getComputedStyle(e)?.top ?? '0px';
                 let top = parseInt(startTop.slice(0, startTop.indexOf('p')), 10);
-                console.log({ top, vh })
                 while (top < vh + 100) {
                     top = top + 2;
                     e.style.top = `${top}px`;
-                    console.log({ top })
                     await new Promise(r => setTimeout(r, 16.67));
                 }
                 e.remove();
@@ -769,8 +767,8 @@ write semantic HTML
 <p>I’ll probably think of <code>&lt;b&gt;</code> from now on as the HTML tag with a similar effect as the quotation marks used for “emphasis” you might see on signage that can cause intergenerational confusion.</p>
 <p><code>&lt;bdi&gt;</code> is a tag for a concept that I hadn’t considered until now, text whose direction might (or might not) differ from the direction of the surrounding text. The examples on the documentation are all names, but could stand in for any user inputted text. In the future I will probably try to wrap any tags, like the ones controlled by the input below, that might contain arbitrary user inputted unicode characters in a <code>&lt;bdi&gt;</code> tag just to be safe.</p>
 <form>
-    <label for="bdi-name-input">What is your name?</input>
-    <input type="text" id="bdi-name-input">
+<p><label for="bdi-name-input">What is your name?</input>
+<input type="text" id="bdi-name-input"></p>
 </form>
 <p>Hello, <bdi id="bdi-name-display">&nbsp;&nbsp;&nbsp;&nbsp;</bdi>, thanks for reading!</p>
 <div>
@@ -1273,9 +1271,7 @@ name="everything-output"
         const type = el?.["type-choice"]?.value;
         const size = el?.["size-choice"]?.value;
         const color = el?.["color-choice"]?.value;
-        console.log({ type, size, color})
         const selected = selectEmoji(type, size, color);
-        console.log(selected)
         selectedEmoji = selected.emoji;
         selectedEmojiName = selected.name;
         eOutput.value = `${selectedEmoji}: ${selectedEmojiName}`;
@@ -1296,7 +1292,6 @@ name="everything-output"
         const newCompletion = complete.reduce((a,c) => a + c, 0);
         formCompletion.value = newCompletion
         formCompletion.innerHTML = `${newCompletion}/4`
-        console.log({ idShort })
     }
     typeChoice.addEventListener("input", fillForm);
     sizeChoice.addEventListener("input", fillForm);

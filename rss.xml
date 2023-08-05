@@ -619,11 +619,9 @@
                 const e = document.getElementById(id);
                 const startTop = getComputedStyle(e)?.top ?? &#39;0px&#39;;
                 let top = parseInt(startTop.slice(0, startTop.indexOf(&#39;p&#39;)), 10);
-                console.log({ top, vh })
                 while (top &lt; vh + 100) {
                     top = top + 2;
                     e.style.top = `${top}px`;
-                    console.log({ top })
                     await new Promise(r =&gt; setTimeout(r, 16.67));
                 }
                 e.remove();
@@ -699,9 +697,9 @@ write semantic HTML
 &lt;p&gt;I’ll probably think of &lt;code&gt;&amp;lt;b&amp;gt;&lt;/code&gt; from now on as the HTML tag with a similar effect as the quotation marks used for “emphasis” you might see on signage that can cause intergenerational confusion.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;&amp;lt;bdi&amp;gt;&lt;/code&gt; is a tag for a concept that I hadn’t considered until now, text whose direction might (or might not) differ from the direction of the surrounding text. The examples on the documentation are all names, but could stand in for any user inputted text. In the future I will probably try to wrap any tags, like the ones controlled by the input below, that might contain arbitrary user inputted unicode characters in a &lt;code&gt;&amp;lt;bdi&amp;gt;&lt;/code&gt; tag just to be safe.&lt;/p&gt;
 &lt;form&gt;
-    &lt;label for=&quot;bdi-name-input&quot;&gt;What is your name?
-    &lt;input type=&quot;text&quot; id=&quot;bdi-name-input&quot; /&gt;
-&lt;/label&gt;&lt;/form&gt;
+&lt;p&gt;&lt;label for=&quot;bdi-name-input&quot;&gt;What is your name?
+&lt;input type=&quot;text&quot; id=&quot;bdi-name-input&quot; /&gt;&lt;/label&gt;&lt;/p&gt;
+&lt;/form&gt;
 &lt;p&gt;Hello, &lt;bdi id=&quot;bdi-name-display&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/bdi&gt;, thanks for reading!&lt;/p&gt;
 &lt;div&gt;
 &lt;button id=&quot;rtl-fill&quot; type=&quot;button&quot;&gt;Fill with a RTL language name&lt;/button&gt; (&lt;a href=&quot;https://en.wikipedia.org/wiki/Abdul_Rahman_Munif&quot; target=&quot;_blank&quot;&gt;عَبْد الرَّحْمٰن بِن إِبْرَاهِيم المُنِيف&lt;/a&gt;)
@@ -1151,9 +1149,7 @@ A &lt;code&gt;&amp;lt;portal&amp;gt;&lt;/code&gt; element that should display th
         const type = el?.[&quot;type-choice&quot;]?.value;
         const size = el?.[&quot;size-choice&quot;]?.value;
         const color = el?.[&quot;color-choice&quot;]?.value;
-        console.log({ type, size, color})
         const selected = selectEmoji(type, size, color);
-        console.log(selected)
         selectedEmoji = selected.emoji;
         selectedEmojiName = selected.name;
         eOutput.value = `${selectedEmoji}: ${selectedEmojiName}`;
@@ -1174,7 +1170,6 @@ A &lt;code&gt;&amp;lt;portal&amp;gt;&lt;/code&gt; element that should display th
         const newCompletion = complete.reduce((a,c) =&gt; a + c, 0);
         formCompletion.value = newCompletion
         formCompletion.innerHTML = `${newCompletion}/4`
-        console.log({ idShort })
     }
     typeChoice.addEventListener(&quot;input&quot;, fillForm);
     sizeChoice.addEventListener(&quot;input&quot;, fillForm);
