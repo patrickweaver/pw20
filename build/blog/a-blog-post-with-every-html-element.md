@@ -750,9 +750,12 @@ I’ll probably think of `<b>` from now on as the HTML tag with a similar effect
 `<bdi>` is a tag for a concept that I hadn’t considered until now, text whose direction might (or might not) differ from the direction of the surrounding text. The examples on the documentation are all names, but could stand in for any user inputted text. In the future I will probably try to wrap any tags, like the ones controlled by the input below, that might contain arbitrary user inputted unicode characters in a `<bdi>` tag just to be safe.
 
 <form>
+
     <label for="bdi-name-input">What is your name?</input>
     <input type="text" id="bdi-name-input">
+
 </form>
+
 <p>Hello, <bdi id="bdi-name-display">&nbsp;&nbsp;&nbsp;&nbsp;</bdi>, thanks for reading!</p>
 <div>
 <button id="rtl-fill" type="button">Fill with a RTL language name</button> (<a href="https://en.wikipedia.org/wiki/Abdul_Rahman_Munif" target="_blank">عَبْد الرَّحْمٰن بِن إِبْرَاهِيم المُنِيف</a>)
@@ -1333,9 +1336,7 @@ name="everything-output"
         const type = el?.["type-choice"]?.value;
         const size = el?.["size-choice"]?.value;
         const color = el?.["color-choice"]?.value;
-        console.log({ type, size, color})
         const selected = selectEmoji(type, size, color);
-        console.log(selected)
         selectedEmoji = selected.emoji;
         selectedEmojiName = selected.name;
         eOutput.value = `${selectedEmoji}: ${selectedEmojiName}`;
@@ -1356,7 +1357,6 @@ name="everything-output"
         const newCompletion = complete.reduce((a,c) => a + c, 0);
         formCompletion.value = newCompletion
         formCompletion.innerHTML = `${newCompletion}/4`
-        console.log({ idShort })
     }
     typeChoice.addEventListener("input", fillForm);
     sizeChoice.addEventListener("input", fillForm);
