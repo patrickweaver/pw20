@@ -658,11 +658,9 @@ and now I don’t know what to think, but here’s a `<menu>`:
                 const e = document.getElementById(id);
                 const startTop = getComputedStyle(e)?.top ?? '0px';
                 let top = parseInt(startTop.slice(0, startTop.indexOf('p')), 10);
-                console.log({ top, vh })
                 while (top < vh + 100) {
                     top = top + 2;
                     e.style.top = `${top}px`;
-                    console.log({ top })
                     await new Promise(r => setTimeout(r, 16.67));
                 }
                 e.remove();
