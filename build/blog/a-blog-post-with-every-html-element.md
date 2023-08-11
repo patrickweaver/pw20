@@ -570,7 +570,7 @@ It is a little bit unclear how to use `<h1>` tags in a post like this from just 
 
 Before writing this post I had updated the site to use `<h1>` for the name of the site (my name) at the top, `<h2>` for the section name, for this page, “Blog”, and `<h3>` for the title of what would be the `<article>` on a page. However, after reading the documentation and the tip above, I decided to update the hierarchy and use `<h1>` for different things on different pages, and use classes for styles, which is probably more in line with the separation of concerns of HTML and CSS (which means this paragraph is below an `<h6>`).
 
-Sometime between when I started this experiment in early 2022 and when I published it in Summer 2023 `<hgroup>` and `<search>` were added to the MDN documentation (which I realize is not the official spec). I’ve added an `<hgroup>` around the heading of this section, with a subtitle `<p>` element. `<search>` is a semantic element that indicates that an input can be used for search, not for search results (with the exception of quick results that populate within a form ). While a `<search>` element that contains a `<form>` works without HTML on a website that can generate search results on a server, because this website is statically generated the example below requires JavaScript.
+Sometime between when I started this experiment in early 2022 and when I published it in Summer 2023 `<hgroup>` and `<search>` were added to the MDN documentation (which I realize is not the official spec). I’ve added an `<hgroup>` around the heading of this section, with a subtitle `<p>` element. `<search>` is a semantic element that indicates that an input can be used for search, not for search results (with the exception of quick results that populate within a form ). While a `<search>` element that contains a `<form>` works without HTML on a website that can generate search results on a server, because this website is statically generated the example below requires JavaScript. I haven’t seen a `<search>` element anywhere else, neither MDN’s header search, or google.com use it in 2023.
 
 <search>
 <form id="search-form">
@@ -1848,7 +1848,7 @@ It’s surprising that `<noembed>`, essentially a `<noscript>` style fallback, w
 <figcaption>An <code>&lt;embed&gt;</code> with a <code>&lt;noembed&gt;</code> tag child.</figcaption>
 </figure>
 
-It’s unclear why `<param>` ever existed instead of just using attributes on the `<object>` element, but just in case, here is one below:
+It’s unclear why `<param>` ever existed instead of just using attributes on the `<object>` element. When I started this blog post [it was listed in the “Embedding Content” section](https://web.archive.org/web/20220330125752/https://developer.mozilla.org/en-US/docs/Web/HTML/Element), but by the time I finished it was deprecated. Here is one below:
 
 <figure>
 <object
