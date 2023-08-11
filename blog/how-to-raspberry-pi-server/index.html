@@ -249,10 +249,12 @@ network={
 <pre><code class="language-bash">sudo ln -s /etc/nginx/sites-available/[YOUR-SITE].conf /etc/nginx/sites-enabled/[YOUR-SITE].conf
 </code></pre>
 <p>Test your Nginx config with <code>sudo nginx -t</code>. You should see a success confirmation message:</p>
+<!-- markdownlint-disable no-inline-html -->
 <samp>
 nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
 nginx: configuration file /etc/nginx/nginx.conf test is successful
 </samp>
+<!-- markdownlint-enable no-inline-html -->
 <p>To enable the configuration reload the Nginx config:</p>
 <pre><code class="language-bash">sudo systemctl reload nginx
 </code></pre>

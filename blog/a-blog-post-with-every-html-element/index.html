@@ -84,7 +84,7 @@
             </div>
           </header>
         
-          <!-- markdownlint-disable MD033 -->
+          <!-- markdownlint-disable MD033 MD013 -->
 <style>
     section > ul {
         padding-left: 0;
@@ -617,6 +617,7 @@
 <h6>How I decided to handle it</h6>
 <p>Before writing this post I had updated the site to use <code>&lt;h1&gt;</code> for the name of the site (my name) at the top, <code>&lt;h2&gt;</code> for the section name, for this page, “Blog”, and <code>&lt;h3&gt;</code> for the title of what would be the <code>&lt;article&gt;</code> on a page. However, after reading the documentation and the tip above, I decided to update the hierarchy and use <code>&lt;h1&gt;</code> for different things on different pages, and use classes for styles, which is probably more in line with the separation of concerns of HTML and CSS (which means this paragraph is below an <code>&lt;h6&gt;</code>).</p>
 <p>Sometime between when I started this experiment in early 2022 and when I published it in Summer 2023 <code>&lt;hgroup&gt;</code> and <code>&lt;search&gt;</code> were added to the MDN documentation (which I realize is not the official spec). I’ve added an <code>&lt;hgroup&gt;</code> around the heading of this section, with a subtitle <code>&lt;p&gt;</code> element. <code>&lt;search&gt;</code> is a semantic element that indicates that an input can be used for search, not for search results (with the exception of quick results that populate within a form ). While a <code>&lt;search&gt;</code> element that contains a <code>&lt;form&gt;</code> works without HTML on a website that can generate search results on a server, because this website is statically generated the example below requires JavaScript. I haven’t seen a <code>&lt;search&gt;</code> element anywhere else, neither MDN’s header search, or google.com use it in 2023.</p>
+<!-- markdownlint-disable -->
 <search>
 <form id="search-form">
     <label for="text-search">Search this post: </label>
@@ -681,7 +682,9 @@ style="display: none; margin: 1rem; border: 1px solid #555; padding: 0.5rem;"
 <noscript>
     <p>This search functionality will only be interactive when JavaScript is enabled.</p>
 </noscript>
-<p>The <code>&lt;main&gt;</code> element was one of the initial curiosities that led me down the path of reading about and implementing every element, though it wasn’t until I read through the MDN list that I added a <code>&lt;nav&gt;</code> element around the menu at the top of this page. I’ve added <code>&lt;section&gt;</code> elements to this post, but I’m not sure how often I will use them elsewhere. One reason is that it makes it harder to mix and match HTML and markdown with visually clear nesting in the <a href="https://github.com/patrickweaver/pw20/blob/main/build/blog/a-blog-post-with-every-html-element.md">document where I am writing this post</a>.</p>
+<!-- markdownlint-enable -->
+<!-- markdownlint-disable MD033 MD013 -->
+The `<main>` element was one of the initial curiosities that led me down the path of reading about and implementing every element, though it wasn’t until I read through the MDN list that I added a `<nav>` element around the menu at the top of this page. I’ve added `<section>` elements to this post, but I’m not sure how often I will use them elsewhere. One reason is that it makes it harder to mix and match HTML and markdown with visually clear nesting in the [document where I am writing this post](https://github.com/patrickweaver/pw20/blob/main/build/blog/a-blog-post-with-every-html-element.md).
 </section>
 <section id="text-content">
 <h3>Text Content</h3>
@@ -710,7 +713,7 @@ style="display: none; margin: 1rem; border: 1px solid #555; padding: 0.5rem;"
     <figcaption><cite>MDN</cite> on <code>&lt;blockquote&gt;</code></figcaption>
 </figure>
 <p><code>&lt;dd&gt;</code>, <code>&lt;dl&gt;</code>, and <code>&lt;dt&gt;</code> are elements that, after finding out about them when first looking into more obscure HTML elements, I was very surprised to have not known about sooner. Although, it’s unclear from the documentation whether lists like the links on the current version of my <a href="https://web.archive.org/web/20220628123804/https://www.patrickweaver.net/portfolio/">portfolio page</a> should use <code>&lt;dl&gt;</code> (I’m currently using <code>&lt;ul&gt;</code>). I am curious how <code>&lt;ol&gt;</code> and <code>&lt;ul&gt;</code> became part of almost every “Intro to HTML” class, but <code>&lt;dl&gt;</code> is relatively obscure. It’s also strange that <code>&lt;ol&gt;</code> and <code>&lt;ul&gt;</code> have default margins, but for <code>&lt;dl&gt;</code> the margin is on <code>&lt;dd&gt;</code>.</p>
-<h4>HTML list elements:</h4>
+<h4>HTML list elements</h4>
 <dl>
     <dt><code>dl</code></dt><dd>Description list</dd>
     <dt><code>ol</code></dt><dd>Ordered list</dd>
@@ -766,7 +769,7 @@ style="display: none; margin: 1rem; border: 1px solid #555; padding: 0.5rem;"
                 }
                 e.remove();
             }
-        } 
+        }
     </script>
     <li><button onclick="balloons()">Balloons</button></li>
     <li><button onclick="sponges()">Sponges</button></li>
@@ -911,7 +914,7 @@ Hello, World
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track"><code>&lt;track&gt;</code></a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a></li>
 </ul>
-<p><code>&lt;area&gt;</code> and <code>&lt;map&gt;</code> are elements that I hadn’t been familiar with previously, even though I had made a few image map type websites in the days before CSS 3. It seems like an indication of how seldom they are used these days that the tools for debugging the boundries of <code>&lt;area&gt;</code> elements are hard to use. One <code>&lt;area&gt;</code> border at a time will display while using tab focus, but styling the elements does not work (unless there is a <code>display</code> hack I couldn’t figure out). It’s also somewhat strange that <code>&lt;area&gt;</code> is essentially an <code>&lt;a&gt;</code> with a shape.</p>
+<p><code>&lt;area&gt;</code> and <code>&lt;map&gt;</code> are elements that I hadn’t been familiar with previously, even though I had made a few image map type websites in the days before CSS 3. It seems like an indication of how seldom they are used these days that the tools for debugging the boundaries of <code>&lt;area&gt;</code> elements are hard to use. One <code>&lt;area&gt;</code> border at a time will display while using tab focus, but styling the elements does not work (unless there is a <code>display</code> hack I couldn’t figure out). It’s also somewhat strange that <code>&lt;area&gt;</code> is essentially an <code>&lt;a&gt;</code> with a shape.</p>
 <p>Here’s a <code>&lt;map&gt;</code> (with <code>&lt;area&gt;</code>s on each tag linking to MDN) of a handwritten HTML document I made for June 3rd’s <a href="https://html.energy/events.html">HTML Day Freewrite</a> in SF.</p>
 <figure>
 <map name="park-html-map">
@@ -1089,7 +1092,7 @@ A <code>&lt;portal&gt;</code> element that should display the <a href="https://w
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript"><code>&lt;noscript&gt;</code></a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script"><code>&lt;script&gt;</code></a></li>
 </ul>
-<p>I did a deep dive into <code>&lt;canvas&gt;</code>, specifically <a href="https://doodles.patrickweaver.net/canvas-lines/">drawing crisp lines</a> in 2020 while I was at <a href="https://www.recurse.com/">Recurse Center</a>. One thing I wasn’t familiar with before reading the MDN docs though, was that there is a maximum size for a <code>&lt;canvas&gt;</code> element in each browser (though all modern browsers it is about 32 thousand pixels in each dimension). Below is a reimplementation of <code>&lt;marquee&gt;</code> with <code>&lt;canvas&gt;</code> and <code>&lt;script&gt;</code> (and <code>&lt;noscript&gt;</code>).</p>
+<p>I did a deep dive into <code>&lt;canvas&gt;</code>, specifically <a href="https://doodles.patrickweaver.net/canvas-lines/">drawing crisp lines</a> in 2020 while I was at <a href="https://www.recurse.com/">Recurse Center</a>. One thing I wasn’t familiar with before reading the MDN docs though, was that there is a maximum size for a <code>&lt;canvas&gt;</code> element in each browser (though all modern browsers it is about 32 thousand pixels in each dimension). Below is a re-implementation of <code>&lt;marquee&gt;</code> with <code>&lt;canvas&gt;</code> and <code>&lt;script&gt;</code> (and <code>&lt;noscript&gt;</code>).</p>
 <p><canvas id="marquee-canvas" width="600" height="100"
 style="width: 300px; height: 50px;"></canvas></p>
 <p><label for="toggleMarqueeButton">Start or Stop the fake <code>&lt;marquee&gt;</code>:</label>
@@ -1119,7 +1122,6 @@ style="width: 300px; height: 50px;"></canvas></p>
         marqueeStatus = !marqueeStatus;
         if (marqueeStatus) draw();
     }
-
 
     function drawText(text, x, y) {
         context.fillText(text, x, y);
@@ -1513,7 +1515,7 @@ name="everything-output"
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog"><code>&lt;dialog&gt;</code></a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary"><code>&lt;summary&gt;</code></a></li>
 </ul>
-<p>The <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> combination is probably the most common, “You don’t need JavaScript to…” element (another <a href="https://catskull.net/html.html" target="_blank">popular blog</a> post making this point promted me to finally finish this one). Making this kind of expand/collapse interactive view was one of the first things I used JavaScript for (it was probably jQuery). I remember it being somewhat confusing at the time (2006?), so it’s funny to me to see it so easy with just a couple HTML tags.</p>
+<p>The <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> combination is probably the most common, “You don’t need JavaScript to…” element (another <a href="https://catskull.net/html.html" target="_blank">popular blog</a> post making this point prompted me to finally finish this one). Making this kind of expand/collapse interactive view was one of the first things I used JavaScript for (it was probably jQuery). I remember it being somewhat confusing at the time (2006?), so it’s funny to me to see it so easy with just a couple HTML tags.</p>
 <details>
   <summary>Speculation about <code>&lt;details&gt;</code></summary>
   <div>I do wonder if <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> were being considered for the HTML spec today, if they would be withdrawn in favor of a similar effect using CSS.</div>

@@ -16,7 +16,7 @@
       <link href="https://patrickweaver.net/blog/a-blog-post-with-every-html-element/"/>
       <updated>2023-08-03T00:00:00Z</updated>
       <id>https://patrickweaver.net/blog/a-blog-post-with-every-html-element/</id>
-      <content type="html">&lt;!-- markdownlint-disable MD033 --&gt;
+      <content type="html">&lt;!-- markdownlint-disable MD033 MD013 --&gt;
 &lt;style&gt;
     section &gt; ul {
         padding-left: 0;
@@ -549,6 +549,7 @@
 &lt;h6&gt;How I decided to handle it&lt;/h6&gt;
 &lt;p&gt;Before writing this post I had updated the site to use &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; for the name of the site (my name) at the top, &lt;code&gt;&amp;lt;h2&amp;gt;&lt;/code&gt; for the section name, for this page, “Blog”, and &lt;code&gt;&amp;lt;h3&amp;gt;&lt;/code&gt; for the title of what would be the &lt;code&gt;&amp;lt;article&amp;gt;&lt;/code&gt; on a page. However, after reading the documentation and the tip above, I decided to update the hierarchy and use &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; for different things on different pages, and use classes for styles, which is probably more in line with the separation of concerns of HTML and CSS (which means this paragraph is below an &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt;).&lt;/p&gt;
 &lt;p&gt;Sometime between when I started this experiment in early 2022 and when I published it in Summer 2023 &lt;code&gt;&amp;lt;hgroup&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;search&amp;gt;&lt;/code&gt; were added to the MDN documentation (which I realize is not the official spec). I’ve added an &lt;code&gt;&amp;lt;hgroup&amp;gt;&lt;/code&gt; around the heading of this section, with a subtitle &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; element. &lt;code&gt;&amp;lt;search&amp;gt;&lt;/code&gt; is a semantic element that indicates that an input can be used for search, not for search results (with the exception of quick results that populate within a form ). While a &lt;code&gt;&amp;lt;search&amp;gt;&lt;/code&gt; element that contains a &lt;code&gt;&amp;lt;form&amp;gt;&lt;/code&gt; works without HTML on a website that can generate search results on a server, because this website is statically generated the example below requires JavaScript. I haven’t seen a &lt;code&gt;&amp;lt;search&amp;gt;&lt;/code&gt; element anywhere else, neither MDN’s header search, or google.com use it in 2023.&lt;/p&gt;
+&lt;!-- markdownlint-disable --&gt;
 &lt;search&gt;
 &lt;form id=&quot;search-form&quot;&gt;
     &lt;label for=&quot;text-search&quot;&gt;Search this post: &lt;/label&gt;
@@ -607,7 +608,9 @@
 &lt;noscript&gt;
     &lt;p&gt;This search functionality will only be interactive when JavaScript is enabled.&lt;/p&gt;
 &lt;/noscript&gt;
-&lt;p&gt;The &lt;code&gt;&amp;lt;main&amp;gt;&lt;/code&gt; element was one of the initial curiosities that led me down the path of reading about and implementing every element, though it wasn’t until I read through the MDN list that I added a &lt;code&gt;&amp;lt;nav&amp;gt;&lt;/code&gt; element around the menu at the top of this page. I’ve added &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; elements to this post, but I’m not sure how often I will use them elsewhere. One reason is that it makes it harder to mix and match HTML and markdown with visually clear nesting in the &lt;a href=&quot;https://github.com/patrickweaver/pw20/blob/main/build/blog/a-blog-post-with-every-html-element.md&quot;&gt;document where I am writing this post&lt;/a&gt;.&lt;/p&gt;
+&lt;!-- markdownlint-enable --&gt;
+&lt;!-- markdownlint-disable MD033 MD013 --&gt;
+The `&lt;main&gt;` element was one of the initial curiosities that led me down the path of reading about and implementing every element, though it wasn’t until I read through the MDN list that I added a `&lt;nav&gt;` element around the menu at the top of this page. I’ve added `&lt;section&gt;` elements to this post, but I’m not sure how often I will use them elsewhere. One reason is that it makes it harder to mix and match HTML and markdown with visually clear nesting in the [document where I am writing this post](https://github.com/patrickweaver/pw20/blob/main/build/blog/a-blog-post-with-every-html-element.md).
 &lt;/section&gt;
 &lt;section id=&quot;text-content&quot;&gt;
 &lt;h3&gt;Text Content&lt;/h3&gt;
@@ -635,7 +638,7 @@
     &lt;figcaption&gt;&lt;cite&gt;MDN&lt;/cite&gt; on &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt;&lt;/figcaption&gt;
 &lt;/blockquote&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;code&gt;&amp;lt;dd&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;dl&amp;gt;&lt;/code&gt;, and &lt;code&gt;&amp;lt;dt&amp;gt;&lt;/code&gt; are elements that, after finding out about them when first looking into more obscure HTML elements, I was very surprised to have not known about sooner. Although, it’s unclear from the documentation whether lists like the links on the current version of my &lt;a href=&quot;https://web.archive.org/web/20220628123804/https://www.patrickweaver.net/portfolio/&quot;&gt;portfolio page&lt;/a&gt; should use &lt;code&gt;&amp;lt;dl&amp;gt;&lt;/code&gt; (I’m currently using &lt;code&gt;&amp;lt;ul&amp;gt;&lt;/code&gt;). I am curious how &lt;code&gt;&amp;lt;ol&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;ul&amp;gt;&lt;/code&gt; became part of almost every “Intro to HTML” class, but &lt;code&gt;&amp;lt;dl&amp;gt;&lt;/code&gt; is relatively obscure. It’s also strange that &lt;code&gt;&amp;lt;ol&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;ul&amp;gt;&lt;/code&gt; have default margins, but for &lt;code&gt;&amp;lt;dl&amp;gt;&lt;/code&gt; the margin is on &lt;code&gt;&amp;lt;dd&amp;gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;h4&gt;HTML list elements:&lt;/h4&gt;
+&lt;h4&gt;HTML list elements&lt;/h4&gt;
 &lt;dl&gt;
     &lt;dt&gt;&lt;code&gt;dl&lt;/code&gt;&lt;/dt&gt;&lt;dd&gt;Description list&lt;/dd&gt;
     &lt;dt&gt;&lt;code&gt;ol&lt;/code&gt;&lt;/dt&gt;&lt;dd&gt;Ordered list&lt;/dd&gt;
@@ -690,7 +693,7 @@
                 }
                 e.remove();
             }
-        } 
+        }
     &lt;/script&gt;
     &lt;li&gt;&lt;button onclick=&quot;balloons()&quot;&gt;Balloons&lt;/button&gt;&lt;/li&gt;
     &lt;li&gt;&lt;button onclick=&quot;sponges()&quot;&gt;Sponges&lt;/button&gt;&lt;/li&gt;
@@ -835,7 +838,7 @@ Hello, World
 &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track&quot;&gt;&lt;code&gt;&amp;lt;track&amp;gt;&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video&quot;&gt;&lt;code&gt;&amp;lt;video&amp;gt;&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;&amp;lt;area&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;map&amp;gt;&lt;/code&gt; are elements that I hadn’t been familiar with previously, even though I had made a few image map type websites in the days before CSS 3. It seems like an indication of how seldom they are used these days that the tools for debugging the boundries of &lt;code&gt;&amp;lt;area&amp;gt;&lt;/code&gt; elements are hard to use. One &lt;code&gt;&amp;lt;area&amp;gt;&lt;/code&gt; border at a time will display while using tab focus, but styling the elements does not work (unless there is a &lt;code&gt;display&lt;/code&gt; hack I couldn’t figure out). It’s also somewhat strange that &lt;code&gt;&amp;lt;area&amp;gt;&lt;/code&gt; is essentially an &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; with a shape.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;area&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;map&amp;gt;&lt;/code&gt; are elements that I hadn’t been familiar with previously, even though I had made a few image map type websites in the days before CSS 3. It seems like an indication of how seldom they are used these days that the tools for debugging the boundaries of &lt;code&gt;&amp;lt;area&amp;gt;&lt;/code&gt; elements are hard to use. One &lt;code&gt;&amp;lt;area&amp;gt;&lt;/code&gt; border at a time will display while using tab focus, but styling the elements does not work (unless there is a &lt;code&gt;display&lt;/code&gt; hack I couldn’t figure out). It’s also somewhat strange that &lt;code&gt;&amp;lt;area&amp;gt;&lt;/code&gt; is essentially an &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; with a shape.&lt;/p&gt;
 &lt;p&gt;Here’s a &lt;code&gt;&amp;lt;map&amp;gt;&lt;/code&gt; (with &lt;code&gt;&amp;lt;area&amp;gt;&lt;/code&gt;s on each tag linking to MDN) of a handwritten HTML document I made for June 3rd’s &lt;a href=&quot;https://html.energy/events.html&quot;&gt;HTML Day Freewrite&lt;/a&gt; in SF.&lt;/p&gt;
 &lt;figure&gt;
 &lt;map name=&quot;park-html-map&quot;&gt;
@@ -972,7 +975,7 @@ A &lt;code&gt;&amp;lt;portal&amp;gt;&lt;/code&gt; element that should display th
 &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript&quot;&gt;&lt;code&gt;&amp;lt;noscript&amp;gt;&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script&quot;&gt;&lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;I did a deep dive into &lt;code&gt;&amp;lt;canvas&amp;gt;&lt;/code&gt;, specifically &lt;a href=&quot;https://doodles.patrickweaver.net/canvas-lines/&quot;&gt;drawing crisp lines&lt;/a&gt; in 2020 while I was at &lt;a href=&quot;https://www.recurse.com/&quot;&gt;Recurse Center&lt;/a&gt;. One thing I wasn’t familiar with before reading the MDN docs though, was that there is a maximum size for a &lt;code&gt;&amp;lt;canvas&amp;gt;&lt;/code&gt; element in each browser (though all modern browsers it is about 32 thousand pixels in each dimension). Below is a reimplementation of &lt;code&gt;&amp;lt;marquee&amp;gt;&lt;/code&gt; with &lt;code&gt;&amp;lt;canvas&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; (and &lt;code&gt;&amp;lt;noscript&amp;gt;&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;I did a deep dive into &lt;code&gt;&amp;lt;canvas&amp;gt;&lt;/code&gt;, specifically &lt;a href=&quot;https://doodles.patrickweaver.net/canvas-lines/&quot;&gt;drawing crisp lines&lt;/a&gt; in 2020 while I was at &lt;a href=&quot;https://www.recurse.com/&quot;&gt;Recurse Center&lt;/a&gt;. One thing I wasn’t familiar with before reading the MDN docs though, was that there is a maximum size for a &lt;code&gt;&amp;lt;canvas&amp;gt;&lt;/code&gt; element in each browser (though all modern browsers it is about 32 thousand pixels in each dimension). Below is a re-implementation of &lt;code&gt;&amp;lt;marquee&amp;gt;&lt;/code&gt; with &lt;code&gt;&amp;lt;canvas&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; (and &lt;code&gt;&amp;lt;noscript&amp;gt;&lt;/code&gt;).&lt;/p&gt;
 &lt;p&gt;&lt;canvas id=&quot;marquee-canvas&quot; width=&quot;600&quot; height=&quot;100&quot; style=&quot;width: 300px; height: 50px;&quot;&gt;&lt;/canvas&gt;&lt;/p&gt;
 &lt;p&gt;&lt;label for=&quot;toggleMarqueeButton&quot;&gt;Start or Stop the fake &lt;code&gt;&amp;lt;marquee&amp;gt;&lt;/code&gt;:&lt;/label&gt;
 &lt;button onClick=&quot;toggleMarquee()&quot; id=&quot;toggleMarqueeButton&quot;&gt;Stop&lt;/button&gt;&lt;/p&gt;
@@ -1001,7 +1004,6 @@ A &lt;code&gt;&amp;lt;portal&amp;gt;&lt;/code&gt; element that should display th
         marqueeStatus = !marqueeStatus;
         if (marqueeStatus) draw();
     }
-
 
     function drawText(text, x, y) {
         context.fillText(text, x, y);
@@ -1385,7 +1387,7 @@ A &lt;code&gt;&amp;lt;portal&amp;gt;&lt;/code&gt; element that should display th
 &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog&quot;&gt;&lt;code&gt;&amp;lt;dialog&amp;gt;&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary&quot;&gt;&lt;code&gt;&amp;lt;summary&amp;gt;&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The &lt;code&gt;&amp;lt;details&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;summary&amp;gt;&lt;/code&gt; combination is probably the most common, “You don’t need JavaScript to…” element (another &lt;a href=&quot;https://catskull.net/html.html&quot; target=&quot;_blank&quot;&gt;popular blog&lt;/a&gt; post making this point promted me to finally finish this one). Making this kind of expand/collapse interactive view was one of the first things I used JavaScript for (it was probably jQuery). I remember it being somewhat confusing at the time (2006?), so it’s funny to me to see it so easy with just a couple HTML tags.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;&amp;lt;details&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;summary&amp;gt;&lt;/code&gt; combination is probably the most common, “You don’t need JavaScript to…” element (another &lt;a href=&quot;https://catskull.net/html.html&quot; target=&quot;_blank&quot;&gt;popular blog&lt;/a&gt; post making this point prompted me to finally finish this one). Making this kind of expand/collapse interactive view was one of the first things I used JavaScript for (it was probably jQuery). I remember it being somewhat confusing at the time (2006?), so it’s funny to me to see it so easy with just a couple HTML tags.&lt;/p&gt;
 &lt;details&gt;
   &lt;summary&gt;Speculation about &lt;code&gt;&amp;lt;details&amp;gt;&lt;/code&gt;&lt;/summary&gt;
   &lt;div&gt;I do wonder if &lt;code&gt;&amp;lt;details&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;summary&amp;gt;&lt;/code&gt; were being considered for the HTML spec today, if they would be withdrawn in favor of a similar effect using CSS.&lt;/div&gt;
@@ -1656,7 +1658,7 @@ so they can be used here for displaying source code
 &lt;footer role=&quot;contentinfo&quot;&gt;
     Written between &lt;time datetime=&quot;2022-02&quot;&gt;February 2022&lt;/time&gt; and &lt;time datetime=&quot;2023-08&quot;&gt;August 2023&lt;/time&gt;.
 &lt;/footer&gt;
-</content>
+&lt;/nav&gt;&lt;/main&gt;&lt;/section&gt;</content>
     </entry>
     
     <entry>
@@ -1869,10 +1871,12 @@ network={
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;sudo ln -s /etc/nginx/sites-available/[YOUR-SITE].conf /etc/nginx/sites-enabled/[YOUR-SITE].conf
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Test your Nginx config with &lt;code&gt;sudo nginx -t&lt;/code&gt;. You should see a success confirmation message:&lt;/p&gt;
+&lt;!-- markdownlint-disable no-inline-html --&gt;
 &lt;samp&gt;
 nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
 nginx: configuration file /etc/nginx/nginx.conf test is successful
 &lt;/samp&gt;
+&lt;!-- markdownlint-enable no-inline-html --&gt;
 &lt;p&gt;To enable the configuration reload the Nginx config:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;sudo systemctl reload nginx
 &lt;/code&gt;&lt;/pre&gt;
