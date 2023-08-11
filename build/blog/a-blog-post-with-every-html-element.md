@@ -530,7 +530,10 @@ Like the Document metadata tags, in the layout, though it was interesting to rea
 
 <section id="content-sectioning">
 
-### Content Sectioning
+<hgroup>
+<h3>Content Sectioning</h3>
+<p>Headers and Document Organization</p>
+</hgroup>
 
 - [`<address>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address)
 - [`<article>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article)
@@ -538,9 +541,11 @@ Like the Document metadata tags, in the layout, though it was interesting to rea
 - [`<footer>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer)
 - [`<header>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header)
 - [`<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements)
+- [`<hgroup>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hgroup)
 - [`<main>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main)
 - [`<nav>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav)
 - [`<section>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section)
+- [`<search>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/search)
 
 When I first looked at the list I assumed that `<address>` would be designed exclusively for mailing addresses, but was surprised to see that it can be used for email addresses, and even links. I updated the email address on the About page of site site, but I’ll add an `<address>` below also:
 
@@ -564,6 +569,71 @@ It is a little bit unclear how to use `<h1>` tags in a post like this from just 
 ###### How I decided to handle it
 
 Before writing this post I had updated the site to use `<h1>` for the name of the site (my name) at the top, `<h2>` for the section name, for this page, “Blog”, and `<h3>` for the title of what would be the `<article>` on a page. However, after reading the documentation and the tip above, I decided to update the hierarchy and use `<h1>` for different things on different pages, and use classes for styles, which is probably more in line with the separation of concerns of HTML and CSS (which means this paragraph is below an `<h6>`).
+
+Sometime between when I started this experiment in early 2022 and when I published it in Summer 2023 `<hgroup>` and `<search>` were added to the MDN documentation (which I realize is not the official spec). I’ve added an `<hgroup>` around the heading of this section, with a subtitle `<p>` element.
+
+<search>
+<form id="search-form">
+    <label for="text-search">Search this post</label>
+    <input type="search" id="text-search" />
+    <button id="search-button" type="button">Search</button>
+</form>
+</search>
+<output
+id="search-output"
+form="search-form"
+for="text-search"
+name="search-output"
+style="display: none; margin: 1rem; border: 1px solid #555; padding: 0.5rem;"
+>
+<ul id="search-output-list"></ul>
+</output>
+<script>
+    const searchInput = document.getElementById("text-search");
+    const searchButton = document.getElementById("search-button");
+    const searchOutput = document.getElementById("search-output");
+    const searchOutputList = document.getElementById("search-output-list");
+    searchButton.addEventListener('click', searchCb);
+    searchInput.addEventListener('keydown', searchCb);
+    function searchCb(event) {
+        const { keyCode } = event;
+        if (keyCode && keyCode !== 13) return;
+        const text = searchInput.value;
+        searchOutput.style.display = text ? "block" : "none";
+        if (!text) return;
+        const a = document.getElementsByTagName("article")[0].innerText;
+        let index = 0
+        let count = 0;
+        while (index !== -1 && count < 5) {
+            count++;
+            index = a.indexOf(text, index);
+            if (index !== -1) {
+                const newResult = findStringInArticle(index, text)
+                searchOutputList.innerHTML += `<li><code class="code-regular">${newResult}</code></li>`
+                index++;
+            }
+        }
+        function escapeHtml(unsafe) {
+            // https://stackoverflow.com/questions/6234773/can-i-escape-html-special-chars-in-javascript
+            return unsafe
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+        function findStringInArticle(index, text) {
+            if (index >= 0) {
+                let start = index - 100;
+                if (start < 0 ) start = 0;
+                let end = index + 100;
+                if (end > a.length) end = a.length;
+                return `${start > 0 ? '…' : ''}${escapeHtml(a.slice(start, index))}<mark>${escapeHtml(a.slice(index, index + text.length))}</mark>${escapeHtml(a.slice(index + text.length, end))}${end < a.length ? '…' : ''}`;
+            }
+        }
+    }
+
+</script>
 
 The `<main>` element was one of the initial curiosities that led me down the path of reading about and implementing every element, though it wasn’t until I read through the MDN list that I added a `<nav>` element around the menu at the top of this page. I’ve added `<section>` elements to this post, but I’m not sure how often I will use them elsewhere. One reason is that it makes it harder to mix and match HTML and markdown with visually clear nesting in the [document where I am writing this post](https://github.com/patrickweaver/pw20/blob/main/build/blog/a-blog-post-with-every-html-element.md).
 
@@ -795,7 +865,7 @@ Occasionally the MDN documentation examples are difficult to mentally translate 
 
 `<kbd>` is another tag that makes me wonder about the conceptual boundaries of the usage of the tag. It is intended for specifying keys on a computer keyboard, for example: to type the <code>&lt;</code> character used for (the non escaped) version of the tags in this post, I press <kbd>Shift</kbd> + <kbd>,</kbd> (the styles here on <code>&lt;kbd&gt;</code> are applied through custom CSS). But I’m curious if it would also be appropriate to put a `<kbd>` around something like <i>Right click</i> (in this case I used `<i>` instead).
 
-`<mark>` is interesting because it suggests a 2-way authoring web that was originally envisioned, but failed to come to fruition with usage notes like, <q>Think of this like using a <mark>highlighter pen</mark> in a book to mark passages that you find of interest.</q> The yellow here is the default style in all major browsers.
+`<mark>` is interesting because it suggests a 2-way authoring web that was originally envisioned, but failed to come to fruition, with usage notes like, <q>Think of this like using a <mark>highlighter pen</mark> in a book to mark passages that you find of interest.</q> The yellow here is the default style in all major browsers.
 
 `<rp>`, `<rt>`, and `<ruby>` all relate to rendering [“ruby” or “agate” fonts](<https://en.wikipedia.org/wiki/Agate_(typography)>), which are the smallest legible text used in print. They are used in HTML to, <q>provide pronunciation, translation, or transliteration information for East Asian typography.</q> Because I don’t read any East Asian languages, I’ll use the same example as the MDN docs do below. Interestingly, `<rp>` is used to hide parentheses characters, which are included in the source. It’s surprising to me that there is an element to hide these characters in a very rare instance, but we still rely on CSS to [hide content visually](https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html#hiding-content-visually) (but still show it to screen readers).
 
