@@ -637,8 +637,10 @@ style="display: none; margin: 1rem; border: 1px solid #555; padding: 0.5rem;"
 <noscript>
     <p>This search functionality will only be interactive when JavaScript is enabled.</p>
 </noscript>
+
 <!-- markdownlint-enable -->
 <!-- markdownlint-disable MD033 MD013 -->
+
 The `<main>` element was one of the initial curiosities that led me down the path of reading about and implementing every element, though it wasn’t until I read through the MDN list that I added a `<nav>` element around the menu at the top of this page. I’ve added `<section>` elements to this post, but I’m not sure how often I will use them elsewhere. One reason is that it makes it harder to mix and match HTML and markdown with visually clear nesting in the [document where I am writing this post](https://github.com/patrickweaver/pw20/blob/main/build/blog/a-blog-post-with-every-html-element.md).
 
 </section>
