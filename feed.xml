@@ -610,7 +610,7 @@
 &lt;/noscript&gt;
 &lt;!-- markdownlint-enable --&gt;
 &lt;!-- markdownlint-disable MD033 MD013 --&gt;
-The `&lt;main&gt;` element was one of the initial curiosities that led me down the path of reading about and implementing every element, though it wasn’t until I read through the MDN list that I added a `&lt;nav&gt;` element around the menu at the top of this page. I’ve added `&lt;section&gt;` elements to this post, but I’m not sure how often I will use them elsewhere. One reason is that it makes it harder to mix and match HTML and markdown with visually clear nesting in the [document where I am writing this post](https://github.com/patrickweaver/pw20/blob/main/build/blog/a-blog-post-with-every-html-element.md).
+&lt;p&gt;The &lt;code&gt;&amp;lt;main&amp;gt;&lt;/code&gt; element was one of the initial curiosities that led me down the path of reading about and implementing every element, though it wasn’t until I read through the MDN list that I added a &lt;code&gt;&amp;lt;nav&amp;gt;&lt;/code&gt; element around the menu at the top of this page. I’ve added &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; elements to this post, but I’m not sure how often I will use them elsewhere. One reason is that it makes it harder to mix and match HTML and markdown with visually clear nesting in the &lt;a href=&quot;https://github.com/patrickweaver/pw20/blob/main/build/blog/a-blog-post-with-every-html-element.md&quot;&gt;document where I am writing this post&lt;/a&gt;.&lt;/p&gt;
 &lt;/section&gt;
 &lt;section id=&quot;text-content&quot;&gt;
 &lt;h3&gt;Text Content&lt;/h3&gt;
@@ -1658,7 +1658,7 @@ so they can be used here for displaying source code
 &lt;footer role=&quot;contentinfo&quot;&gt;
     Written between &lt;time datetime=&quot;2022-02&quot;&gt;February 2022&lt;/time&gt; and &lt;time datetime=&quot;2023-08&quot;&gt;August 2023&lt;/time&gt;.
 &lt;/footer&gt;
-&lt;/nav&gt;&lt;/main&gt;&lt;/section&gt;</content>
+</content>
     </entry>
     
     <entry>
