@@ -518,7 +518,10 @@
 &lt;p&gt;Like the Document metadata tags, in the layout, though it was interesting to read the documentation and learn about attributes, like &lt;code&gt;onbeforeprint&lt;/code&gt; that provides functionality I’ve used more hacky methods to accomplish previously, and &lt;code&gt;onblur&lt;/code&gt;, whose primary utility seems to be annoying popups.&lt;/p&gt;
 &lt;/section&gt;
 &lt;section id=&quot;content-sectioning&quot;&gt;
+&lt;hgroup&gt;
 &lt;h3&gt;Content Sectioning&lt;/h3&gt;
+&lt;p&gt;Headers and Document Organization&lt;/p&gt;
+&lt;/hgroup&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address&quot;&gt;&lt;code&gt;&amp;lt;address&amp;gt;&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article&quot;&gt;&lt;code&gt;&amp;lt;article&amp;gt;&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
@@ -526,9 +529,11 @@
 &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer&quot;&gt;&lt;code&gt;&amp;lt;footer&amp;gt;&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header&quot;&gt;&lt;code&gt;&amp;lt;header&amp;gt;&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements&quot;&gt;&lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;h2&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;h3&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;h4&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;h5&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hgroup&quot;&gt;&lt;code&gt;&amp;lt;hgroup&amp;gt;&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main&quot;&gt;&lt;code&gt;&amp;lt;main&amp;gt;&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav&quot;&gt;&lt;code&gt;&amp;lt;nav&amp;gt;&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section&quot;&gt;&lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/search&quot;&gt;&lt;code&gt;&amp;lt;search&amp;gt;&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;When I first looked at the list I assumed that &lt;code&gt;&amp;lt;address&amp;gt;&lt;/code&gt; would be designed exclusively for mailing addresses, but was surprised to see that it can be used for email addresses, and even links. I updated the email address on the About page of site site, but I’ll add an &lt;code&gt;&amp;lt;address&amp;gt;&lt;/code&gt; below also:&lt;/p&gt;
 &lt;address&gt;
@@ -543,6 +548,65 @@
 &lt;p&gt;It is a little bit unclear how to use &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; tags in a post like this from just the MDN documentation. This &lt;a href=&quot;https://www.w3.org/QA/Tips/Use_h1_for_Title&quot;&gt;tip from the W3C&lt;/a&gt; suggests different implementations for pages with standalone, or collection content, which would make it difficult to use the same templates and styles for different pages on this site.&lt;/p&gt;
 &lt;h6&gt;How I decided to handle it&lt;/h6&gt;
 &lt;p&gt;Before writing this post I had updated the site to use &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; for the name of the site (my name) at the top, &lt;code&gt;&amp;lt;h2&amp;gt;&lt;/code&gt; for the section name, for this page, “Blog”, and &lt;code&gt;&amp;lt;h3&amp;gt;&lt;/code&gt; for the title of what would be the &lt;code&gt;&amp;lt;article&amp;gt;&lt;/code&gt; on a page. However, after reading the documentation and the tip above, I decided to update the hierarchy and use &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; for different things on different pages, and use classes for styles, which is probably more in line with the separation of concerns of HTML and CSS (which means this paragraph is below an &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;Sometime between when I started this experiment in early 2022 and when I published it in Summer 2023 &lt;code&gt;&amp;lt;hgroup&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;search&amp;gt;&lt;/code&gt; were added to the MDN documentation (which I realize is not the official spec). I’ve added an &lt;code&gt;&amp;lt;hgroup&amp;gt;&lt;/code&gt; around the heading of this section, with a subtitle &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; element. &lt;code&gt;&amp;lt;search&amp;gt;&lt;/code&gt; is a semantic element that indicates that an input can be used for search, not for search results (with the exception of quick results that populate within a form ). While a &lt;code&gt;&amp;lt;search&amp;gt;&lt;/code&gt; element that contains a &lt;code&gt;&amp;lt;form&amp;gt;&lt;/code&gt; works without HTML on a website that can generate search results on a server, because this website is statically generated the example below requires JavaScript. I haven’t seen a &lt;code&gt;&amp;lt;search&amp;gt;&lt;/code&gt; element anywhere else, neither MDN’s header search, or google.com use it in 2023.&lt;/p&gt;
+&lt;search&gt;
+&lt;form id=&quot;search-form&quot;&gt;
+    &lt;label for=&quot;text-search&quot;&gt;Search this post: &lt;/label&gt;
+    &lt;input type=&quot;search&quot; id=&quot;text-search&quot; /&gt;
+    &lt;button id=&quot;search-button&quot; type=&quot;button&quot;&gt;Search&lt;/button&gt;
+&lt;/form&gt;
+&lt;/search&gt;
+&lt;output id=&quot;search-output&quot; form=&quot;search-form&quot; for=&quot;text-search&quot; name=&quot;search-output&quot; style=&quot;display: none; margin: 1rem; border: 1px solid #555; padding: 0.5rem;&quot;&gt;
+&lt;ul id=&quot;search-output-list&quot;&gt;&lt;/ul&gt;
+&lt;/output&gt;
+&lt;script&gt;
+    const searchInput = document.getElementById(&quot;text-search&quot;);
+    const searchButton = document.getElementById(&quot;search-button&quot;);
+    const searchOutput = document.getElementById(&quot;search-output&quot;);
+    const searchOutputList = document.getElementById(&quot;search-output-list&quot;);
+    searchButton.addEventListener(&#39;click&#39;, searchCb);
+    searchInput.addEventListener(&#39;keydown&#39;, searchCb);
+    function searchCb(event) {
+        const { keyCode } = event;
+        if (keyCode &amp;&amp; keyCode !== 13) return;
+        const text = searchInput.value;
+        searchOutput.style.display = text ? &quot;block&quot; : &quot;none&quot;;
+        if (!text) return;
+        const a = document.getElementsByTagName(&quot;article&quot;)[0].innerText;
+        let index = 0
+        let count = 0;
+        while (index !== -1 &amp;&amp; count &lt; 5) {
+            count++;
+            index = a.indexOf(text, index);
+            if (index !== -1) {
+                const newResult = findStringInArticle(index, text)
+                searchOutputList.innerHTML += `&lt;li&gt;&lt;code class=&quot;code-regular&quot;&gt;${newResult}&lt;/code&gt;&lt;/li&gt;`
+                index++;
+            }
+        }
+        function escapeHtml(unsafe) {
+            // https://stackoverflow.com/questions/6234773/can-i-escape-html-special-chars-in-javascript
+            return unsafe
+                .replace(/&amp;/g, &quot;&amp;amp;&quot;)
+                .replace(/&lt;/g, &quot;&amp;lt;&quot;)
+                .replace(/&gt;/g, &quot;&amp;gt;&quot;)
+                .replace(/&quot;/g, &quot;&amp;quot;&quot;)
+                .replace(/&#39;/g, &quot;&amp;#039;&quot;);
+        }
+        function findStringInArticle(index, text) {
+            if (index &gt;= 0) {
+                let start = index - 100;
+                if (start &lt; 0 ) start = 0;
+                let end = index + 100;
+                if (end &gt; a.length) end = a.length;
+                return `${start &gt; 0 ? &#39;…&#39; : &#39;&#39;}${escapeHtml(a.slice(start, index))}&lt;mark&gt;${escapeHtml(a.slice(index, index + text.length))}&lt;/mark&gt;${escapeHtml(a.slice(index + text.length, end))}${end &lt; a.length ? &#39;…&#39; : &#39;&#39;}`;
+            }
+        }
+    }
+&lt;/script&gt;
+&lt;noscript&gt;
+    &lt;p&gt;This search functionality will only be interactive when JavaScript is enabled.&lt;/p&gt;
+&lt;/noscript&gt;
 &lt;p&gt;The &lt;code&gt;&amp;lt;main&amp;gt;&lt;/code&gt; element was one of the initial curiosities that led me down the path of reading about and implementing every element, though it wasn’t until I read through the MDN list that I added a &lt;code&gt;&amp;lt;nav&amp;gt;&lt;/code&gt; element around the menu at the top of this page. I’ve added &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; elements to this post, but I’m not sure how often I will use them elsewhere. One reason is that it makes it harder to mix and match HTML and markdown with visually clear nesting in the &lt;a href=&quot;https://github.com/patrickweaver/pw20/blob/main/build/blog/a-blog-post-with-every-html-element.md&quot;&gt;document where I am writing this post&lt;/a&gt;.&lt;/p&gt;
 &lt;/section&gt;
 &lt;section id=&quot;text-content&quot;&gt;
@@ -728,7 +792,7 @@ write semantic HTML
 &lt;p&gt;&lt;code&gt;&amp;lt;dfn&amp;gt;&lt;/code&gt; is another strange element because it seems like it is misnamed, as it wraps, not the definition of a term, but instead that term within the definition. It does &lt;a href=&quot;http://www.martinrinehart.com/frontend-engineering/engineers/html/html-tag-history.html&quot;&gt;only seem to have been part of the never officially adopted HTML 2.0 proposal&lt;/a&gt;, and it exemplifies the academic nature of the early web. The &lt;a href=&quot;http://www.martinrinehart.com/frontend-engineering/engineers/html/html-tag-history.html&quot;&gt;HTML Tags: Past, Present, Proposed&lt;/a&gt; page on martinrinehart.com defines &lt;dfn title=&quot;Hyper Text Markup Language 2.0&quot;&gt;HTML 2.0&lt;/dfn&gt; as &lt;q cite=&quot;http://www.martinrinehart.com/frontend-engineering/engineers/html/html-tag-history.html&quot;&gt;There never was an HTML 2.0 standard, but these all shaped browser development in the late 20th century&lt;/q&gt; with references to several RFC documents.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;i&amp;gt;&lt;/code&gt; bring up similar usage questions as &lt;code&gt;&amp;lt;b&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt;, but in my opinion with even more nuance, especially, as the documentation notes, with other more specific tags like &lt;code&gt;&amp;lt;cite&amp;gt;&lt;/code&gt; that also by default italicize text in most browsers. The rule of thumb from above also for the most part fits here, &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt; for single words, and &lt;code&gt;&amp;lt;i&amp;gt;&lt;/code&gt; for sentences or phrases, though the examples in the documentation seem to mostly use &lt;code&gt;&amp;lt;i&amp;gt;&lt;/code&gt; for drawing attention to potential confusion, as in, &lt;q cite=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em#i_vs._em&quot;&gt;The word &lt;i&gt;the&lt;/i&gt; is an article&lt;/q&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;&amp;lt;kbd&amp;gt;&lt;/code&gt; is another tag that makes me wonder about the conceptual boundaries of the usage of the tag. It is intended for specifying keys on a computer keyboard, for example: to type the &lt;code&gt;&amp;lt;&lt;/code&gt; character used for (the non escaped) version of the tags in this post, I press &lt;kbd&gt;Shift&lt;/kbd&gt; + &lt;kbd&gt;,&lt;/kbd&gt; (the styles here on &lt;code&gt;&amp;lt;kbd&amp;gt;&lt;/code&gt; are applied through custom CSS). But I’m curious if it would also be appropriate to put a &lt;code&gt;&amp;lt;kbd&amp;gt;&lt;/code&gt; around something like &lt;i&gt;Right click&lt;/i&gt; (in this case I used &lt;code&gt;&amp;lt;i&amp;gt;&lt;/code&gt; instead).&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;&amp;lt;mark&amp;gt;&lt;/code&gt; is interesting because it suggests a 2-way authoring web that was originally envisioned, but failed to come to fruition with usage notes like, &lt;q&gt;Think of this like using a &lt;mark&gt;highlighter pen&lt;/mark&gt; in a book to mark passages that you find of interest.&lt;/q&gt; The yellow here is the default style in all major browsers.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;mark&amp;gt;&lt;/code&gt; is interesting because it suggests a 2-way authoring web that was originally envisioned, but failed to come to fruition, with usage notes like, &lt;q&gt;Think of this like using a &lt;mark&gt;highlighter pen&lt;/mark&gt; in a book to mark passages that you find of interest.&lt;/q&gt; The yellow here is the default style in all major browsers.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;&amp;lt;rp&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;rt&amp;gt;&lt;/code&gt;, and &lt;code&gt;&amp;lt;ruby&amp;gt;&lt;/code&gt; all relate to rendering &lt;a href=&quot;https://en.wikipedia.org/wiki/Agate_(typography)&quot;&gt;“ruby” or “agate” fonts&lt;/a&gt;, which are the smallest legible text used in print. They are used in HTML to, &lt;q&gt;provide pronunciation, translation, or transliteration information for East Asian typography.&lt;/q&gt; Because I don’t read any East Asian languages, I’ll use the same example as the MDN docs do below. Interestingly, &lt;code&gt;&amp;lt;rp&amp;gt;&lt;/code&gt; is used to hide parentheses characters, which are included in the source. It’s surprising to me that there is an element to hide these characters in a very rare instance, but we still rely on CSS to &lt;a href=&quot;https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html#hiding-content-visually&quot;&gt;hide content visually&lt;/a&gt; (but still show it to screen readers).&lt;/p&gt;
 &lt;ruby&gt;
 漢 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;kan&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
@@ -1542,7 +1606,7 @@ A &lt;code&gt;&amp;lt;portal&amp;gt;&lt;/code&gt; element that should display th
 &lt;embed type=&quot;video/mp4&quot; src=&quot;https://patrickweaver.net/images/blog/html/audio-and-video-tags.mp4&quot; width=&quot;165&quot; height=&quot;100&quot; title=&quot;A screen recording of my dev setup while writing the paragraph above.&quot; id=&quot;audio-and-video-tags-embed-dep&quot; /&gt;&lt;noembed&gt;An embed of a screen recording of my dev setup while writing the paragraph above.&lt;/noembed&gt;
 &lt;figcaption&gt;An &lt;code&gt;&amp;lt;embed&amp;gt;&lt;/code&gt; with a &lt;code&gt;&amp;lt;noembed&amp;gt;&lt;/code&gt; tag child.&lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;p&gt;It’s unclear why &lt;code&gt;&amp;lt;param&amp;gt;&lt;/code&gt; ever existed instead of just using attributes on the &lt;code&gt;&amp;lt;object&amp;gt;&lt;/code&gt; element, but just in case, here is one below:&lt;/p&gt;
+&lt;p&gt;It’s unclear why &lt;code&gt;&amp;lt;param&amp;gt;&lt;/code&gt; ever existed instead of just using attributes on the &lt;code&gt;&amp;lt;object&amp;gt;&lt;/code&gt; element. When I started this blog post &lt;a href=&quot;https://web.archive.org/web/20220330125752/https://developer.mozilla.org/en-US/docs/Web/HTML/Element&quot;&gt;it was listed in the “Embedding Content” section&lt;/a&gt;, but by the time I finished it was deprecated. Here is one below:&lt;/p&gt;
 &lt;figure&gt;
 &lt;object type=&quot;video/mp4&quot; data=&quot;https://patrickweaver.net/images/blog/html/audio-and-video-tags.mp4&quot; width=&quot;165&quot; height=&quot;100&quot; id=&quot;audio-and-video-tags-object-dep&quot;&gt;
 &lt;img src=&quot;https://patrickweaver.net/images/blog/html/audio-and-video-tags-poster.jpg&quot; alt=&quot;a still of a screen recording&quot; /&gt;

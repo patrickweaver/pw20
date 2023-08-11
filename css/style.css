@@ -78,6 +78,19 @@ h6 {
   margin-block-end: 0.5rem;
 }
 
+hgroup > * {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+hgroup > *:first-child {
+  margin-top: 1em;
+}
+
+hgroup > *:last-child {
+  margin-bottom: 1em;
+}
+
 a {
   color: var(--text-link);
 }
