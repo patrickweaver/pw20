@@ -258,10 +258,12 @@ sudo ln -s /etc/nginx/sites-available/[YOUR-SITE].conf /etc/nginx/sites-enabled/
 
 Test your Nginx config with `sudo nginx -t`. You should see a success confirmation message:
 
+<!-- markdownlint-disable no-inline-html -->
 <samp>
 nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
 nginx: configuration file /etc/nginx/nginx.conf test is successful
 </samp>
+<!-- markdownlint-enable no-inline-html -->
 
 To enable the configuration reload the Nginx config:
 

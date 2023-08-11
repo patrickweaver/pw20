@@ -8,7 +8,7 @@ cover_image_alt: "A photograph of a handwritten HTML document on lined paper"
 tags:
 ---
 
-<!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD033 MD013 -->
 
 <style>
     section > ul {
@@ -572,6 +572,7 @@ Before writing this post I had updated the site to use `<h1>` for the name of th
 
 Sometime between when I started this experiment in early 2022 and when I published it in Summer 2023 `<hgroup>` and `<search>` were added to the MDN documentation (which I realize is not the official spec). I’ve added an `<hgroup>` around the heading of this section, with a subtitle `<p>` element. `<search>` is a semantic element that indicates that an input can be used for search, not for search results (with the exception of quick results that populate within a form ). While a `<search>` element that contains a `<form>` works without HTML on a website that can generate search results on a server, because this website is statically generated the example below requires JavaScript. I haven’t seen a `<search>` element anywhere else, neither MDN’s header search, or google.com use it in 2023.
 
+<!-- markdownlint-disable -->
 <search>
 <form id="search-form">
     <label for="text-search">Search this post: </label>
@@ -636,7 +637,8 @@ style="display: none; margin: 1rem; border: 1px solid #555; padding: 0.5rem;"
 <noscript>
     <p>This search functionality will only be interactive when JavaScript is enabled.</p>
 </noscript>
-
+<!-- markdownlint-enable -->
+<!-- markdownlint-disable MD033 MD013 -->
 The `<main>` element was one of the initial curiosities that led me down the path of reading about and implementing every element, though it wasn’t until I read through the MDN list that I added a `<nav>` element around the menu at the top of this page. I’ve added `<section>` elements to this post, but I’m not sure how often I will use them elsewhere. One reason is that it makes it harder to mix and match HTML and markdown with visually clear nesting in the [document where I am writing this post](https://github.com/patrickweaver/pw20/blob/main/build/blog/a-blog-post-with-every-html-element.md).
 
 </section>
@@ -672,7 +674,7 @@ I had previously used `<blockquote>` for embedding tweets into blog posts, but f
 
 `<dd>`, `<dl>`, and `<dt>` are elements that, after finding out about them when first looking into more obscure HTML elements, I was very surprised to have not known about sooner. Although, it’s unclear from the documentation whether lists like the links on the current version of my [portfolio page](https://web.archive.org/web/20220628123804/https://www.patrickweaver.net/portfolio/) should use `<dl>` (I’m currently using `<ul>`). I am curious how `<ol>` and `<ul>` became part of almost every “Intro to HTML” class, but `<dl>` is relatively obscure. It’s also strange that `<ol>` and `<ul>` have default margins, but for `<dl>` the margin is on `<dd>`.
 
-#### HTML list elements:
+#### HTML list elements
 
 <dl>
     <dt><code>dl</code></dt><dd>Description list</dd>
@@ -737,7 +739,7 @@ and now I don’t know what to think, but here’s a `<menu>`:
                 }
                 e.remove();
             }
-        } 
+        }
     </script>
     <li><button onclick="balloons()">Balloons</button></li>
     <li><button onclick="sponges()">Sponges</button></li>
@@ -929,7 +931,7 @@ Though including hyphen characters in the URL also creates clear breakpoints in 
 - [`<track>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track)
 - [`<video>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video)
 
-`<area>` and `<map>` are elements that I hadn’t been familiar with previously, even though I had made a few image map type websites in the days before CSS 3. It seems like an indication of how seldom they are used these days that the tools for debugging the boundries of `<area>` elements are hard to use. One `<area>` border at a time will display while using tab focus, but styling the elements does not work (unless there is a `display` hack I couldn’t figure out). It’s also somewhat strange that `<area>` is essentially an `<a>` with a shape.
+`<area>` and `<map>` are elements that I hadn’t been familiar with previously, even though I had made a few image map type websites in the days before CSS 3. It seems like an indication of how seldom they are used these days that the tools for debugging the boundaries of `<area>` elements are hard to use. One `<area>` border at a time will display while using tab focus, but styling the elements does not work (unless there is a `display` hack I couldn’t figure out). It’s also somewhat strange that `<area>` is essentially an `<a>` with a shape.
 
 Here’s a `<map>` (with `<area>`s on each tag linking to MDN) of a handwritten HTML document I made for June 3rd’s [HTML Day Freewrite](https://html.energy/events.html) in SF.
 
@@ -1136,7 +1138,7 @@ This section of the documentation because it pairs one of the most ubiquitous el
 - [`<noscript>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript)
 - [`<script>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
 
-I did a deep dive into `<canvas>`, specifically [drawing crisp lines](https://doodles.patrickweaver.net/canvas-lines/) in 2020 while I was at [Recurse Center](https://www.recurse.com/). One thing I wasn’t familiar with before reading the MDN docs though, was that there is a maximum size for a `<canvas>` element in each browser (though all modern browsers it is about 32 thousand pixels in each dimension). Below is a reimplementation of `<marquee>` with `<canvas>` and `<script>` (and `<noscript>`).
+I did a deep dive into `<canvas>`, specifically [drawing crisp lines](https://doodles.patrickweaver.net/canvas-lines/) in 2020 while I was at [Recurse Center](https://www.recurse.com/). One thing I wasn’t familiar with before reading the MDN docs though, was that there is a maximum size for a `<canvas>` element in each browser (though all modern browsers it is about 32 thousand pixels in each dimension). Below is a re-implementation of `<marquee>` with `<canvas>` and `<script>` (and `<noscript>`).
 
 <canvas id="marquee-canvas" width="600" height="100"
 style="width: 300px; height: 50px;"></canvas>
@@ -1169,7 +1171,6 @@ style="width: 300px; height: 50px;"></canvas>
         marqueeStatus = !marqueeStatus;
         if (marqueeStatus) draw();
     }
-
 
     function drawText(text, x, y) {
         context.fillText(text, x, y);
@@ -1583,7 +1584,7 @@ name="everything-output"
 - [`<dialog>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)
 - [`<summary>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary)
 
-The `<details>` and `<summary>` combination is probably the most common, “You don’t need JavaScript to…” element (another <a href="https://catskull.net/html.html" target="_blank">popular blog</a> post making this point promted me to finally finish this one). Making this kind of expand/collapse interactive view was one of the first things I used JavaScript for (it was probably jQuery). I remember it being somewhat confusing at the time (2006?), so it’s funny to me to see it so easy with just a couple HTML tags.
+The `<details>` and `<summary>` combination is probably the most common, “You don’t need JavaScript to…” element (another <a href="https://catskull.net/html.html" target="_blank">popular blog</a> post making this point prompted me to finally finish this one). Making this kind of expand/collapse interactive view was one of the first things I used JavaScript for (it was probably jQuery). I remember it being somewhat confusing at the time (2006?), so it’s funny to me to see it so easy with just a couple HTML tags.
 
 <details>
   <summary>Speculation about <code>&lt;details&gt;</code></summary>
