@@ -570,11 +570,11 @@ It is a little bit unclear how to use `<h1>` tags in a post like this from just 
 
 Before writing this post I had updated the site to use `<h1>` for the name of the site (my name) at the top, `<h2>` for the section name, for this page, “Blog”, and `<h3>` for the title of what would be the `<article>` on a page. However, after reading the documentation and the tip above, I decided to update the hierarchy and use `<h1>` for different things on different pages, and use classes for styles, which is probably more in line with the separation of concerns of HTML and CSS (which means this paragraph is below an `<h6>`).
 
-Sometime between when I started this experiment in early 2022 and when I published it in Summer 2023 `<hgroup>` and `<search>` were added to the MDN documentation (which I realize is not the official spec). I’ve added an `<hgroup>` around the heading of this section, with a subtitle `<p>` element.
+Sometime between when I started this experiment in early 2022 and when I published it in Summer 2023 `<hgroup>` and `<search>` were added to the MDN documentation (which I realize is not the official spec). I’ve added an `<hgroup>` around the heading of this section, with a subtitle `<p>` element. `<search>` is a semantic element that indicates that an input can be used for search, not for search results (with the exception of quick results that populate within a form ). While a `<search>` element that contains a `<form>` works without HTML on a website that can generate search results on a server, because this website is statically generated the example below requires JavaScript.
 
 <search>
 <form id="search-form">
-    <label for="text-search">Search this post</label>
+    <label for="text-search">Search this post: </label>
     <input type="search" id="text-search" />
     <button id="search-button" type="button">Search</button>
 </form>
@@ -632,8 +632,10 @@ style="display: none; margin: 1rem; border: 1px solid #555; padding: 0.5rem;"
             }
         }
     }
-
 </script>
+<noscript>
+    <p>This search functionality will only be interactive when JavaScript is enabled.</p>
+</noscript>
 
 The `<main>` element was one of the initial curiosities that led me down the path of reading about and implementing every element, though it wasn’t until I read through the MDN list that I added a `<nav>` element around the menu at the top of this page. I’ve added `<section>` elements to this post, but I’m not sure how often I will use them elsewhere. One reason is that it makes it harder to mix and match HTML and markdown with visually clear nesting in the [document where I am writing this post](https://github.com/patrickweaver/pw20/blob/main/build/blog/a-blog-post-with-every-html-element.md).
 
