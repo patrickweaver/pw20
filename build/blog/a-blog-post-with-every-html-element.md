@@ -1120,7 +1120,7 @@ A <code>&lt;portal&gt;</code> element that should display the <a href="https://w
 - [`<svg>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/svg)
 - [`<math>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/math)
 
-This section of the documentation because it pairs one of the most ubiquitous elements with one of the most obscure. `<svg>` elements are everywhere, especially that tools like Figma and Sketch have made them easy to prototype and export. Pairing them with `<math>` in the documentation evokes a more artisanal, hand-crafted `<svg>` that is relatively uncommon these days. I’ve gone hand-crafted here and drawn some `<svg>` circles.
+This is an interesting section of the documentation because it pairs one of the most ubiquitous elements with one of the most obscure. `<svg>` elements are everywhere, especially that tools like Figma and Sketch have made them easy to prototype and export. Pairing them with `<math>` in the documentation evokes a more artisanal, hand-crafted `<svg>` that is relatively uncommon these days. I’ve gone hand-crafted here and drawn some `<svg>` circles.
 
 <figure>
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" stroke="white" fill="white" width="200"><circle cx="50" cy="50" r="49" fill="red" /><circle cx="47" cy="50" r="42" fill="orange" /><circle cx="50" cy="53" r="35" fill="yellow" /><circle cx="55" cy="52" r="28" fill="green" /><circle cx="52" cy="48" r="21" fill="indigo" /><circle cx="54" cy="50" r="14" fill="blue" /><circle cx="52" cy="55" r="7" fill="violet" /></svg>
