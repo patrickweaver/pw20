@@ -1127,7 +1127,7 @@ This is an interesting section of the documentation because it pairs one of the 
 <figcaption>An svg that shows overlapping circles each with a different color of the rainbow.</figcaption>
 </figure>
 
-<p><code>&lt;math&gt;</code> is really a wrapper element for other non HTML elements from the [MathML](https://www.w3.org/TR/MathML3/) namespace, so I guess I don’t have to include every possible child element here. I’ll stick to something simple: <math xmlns='http://www.w3.org/1998/Math/MathML' display="inline"><mrow><mn>2</mn><mo>+</mo><mn>2</mn><mo>=</mo><mn>5</mn></mrow></math>
+<p><code>&lt;math&gt;</code> is really a wrapper element for other non HTML elements from the <a href="https://www.w3.org/TR/MathML3/">MathML</a> namespace, so I guess I don’t have to include every possible child element here. I’ll stick to something simple: <math xmlns='http://www.w3.org/1998/Math/MathML' display="inline"><mrow><mn>2</mn><mo>+</mo><mn>2</mn><mo>=</mo><mn>5</mn></mrow></math>
 </p>
 
 </section>
