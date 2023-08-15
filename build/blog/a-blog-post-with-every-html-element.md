@@ -599,6 +599,7 @@ style="display: none; margin: 1rem; border: 1px solid #555; padding: 0.5rem;"
     function searchCb(event) {
         const { keyCode } = event;
         if (keyCode && keyCode !== 13) return;
+        event.preventDefault()
         const text = searchInput.value;
         searchOutput.style.display = text ? "block" : "none";
         if (!text) return;
@@ -806,7 +807,7 @@ write semantic HTML
 
 As with other very common tags I was curious to get to the documentation for `<a>` to see if there was anything I was unaware of, or had been using incorrectly. I was surprised to discover that `<a href="#">link</a>` links to the top of the page after years as just using it as a placeholder when I didn’t know the URL yet.
 
-`<abbr>` seems likely to be the least used tag, especially because the MDN documentation doesn’t make a great case for it <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr#default_styling">the purpose of this element is purely for the convenience of the author.</q>
+`<abbr>` seems likely to be the least used tag, especially because the <abbr title="MDN Web Docs, previously Mozilla Developer Network and formerly Mozilla Developer Center">MDN</abbr> documentation doesn’t make a great case for it <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr#default_styling">the purpose of this element is purely for the convenience of the author.</q>
 
 The distinction between `<b>` and `<strong>`, as the docs have it, is not what I had previously thought (that `<strong>` was the HTML5 replacement for `<b>`). I think the distinction is more nuanced and overlapping than the technical nature of the documentation is really able to convey. The way I will probably explain it to other people in the future is that, for the most part, you should use `<b>` for <b>single words</b> (or compound words), <strong>and `<strong>` for whole sentences or phrases</strong>. This is more a rule of thumb and bypasses the actual distinction. The documentation reads:
 
@@ -863,7 +864,7 @@ I’ll probably think of `<b>` from now on as the HTML tag with a similar effect
 
 I’ve clearly used many `<code>` elements in this post so far, but reading the documentation made me wonder whether the recently released Markdown support in Google Docs uses `<code>` for text, but on inspecting the HTML of a Doc, I remembered that `<canvas>` is used to render the document now.
 
-Occasionally the MDN documentation examples are difficult to mentally translate to real-world use cases. `<data>` is one of these, where the ony examples show a `<data>` element with a `value` property with product IDs wrapped around product names In that case the IDs seem either, user facing, in which case it would probably be better to display them to the user, or non user facing, in which case, I’m not sure who the “data” is for. Interestingly, `<data>` doesn’t seem to appear in the [W3C HTML5 specification](https://www.w3.org/TR/2011/WD-html5-20110405/).
+Occasionally the MDN documentation examples are difficult to mentally translate to real-world use cases. `<data>` is one of these, where the only examples show a `<data>` element with a `value` property with product IDs wrapped around product names In that case the IDs seem either, user facing, in which case it would probably be better to display them to the user, or non user facing, in which case, I’m not sure who the “data” is for. Interestingly, `<data>` doesn’t seem to appear in the [W3C HTML5 specification](https://www.w3.org/TR/2011/WD-html5-20110405/).
 
 `<dfn>` is another strange element because it seems like it is misnamed, as it wraps, not the definition of a term, but instead that term within the definition. It does [only seem to have been part of the never officially adopted HTML 2.0 proposal](http://www.martinrinehart.com/frontend-engineering/engineers/html/html-tag-history.html), and it exemplifies the academic nature of the early web. The [HTML Tags: Past, Present, Proposed](http://www.martinrinehart.com/frontend-engineering/engineers/html/html-tag-history.html) page on martinrinehart.com defines <dfn title="Hyper Text Markup Language 2.0">HTML 2.0</dfn> as <q cite="http://www.martinrinehart.com/frontend-engineering/engineers/html/html-tag-history.html">There never was an HTML 2.0 standard, but these all shaped browser development in the late 20th century</q> with references to several RFC documents.
 
