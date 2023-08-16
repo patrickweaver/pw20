@@ -49,6 +49,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("shortUrl", portfolioHelpers.shortUrl);
   eleventyConfig.addShortcode("statusColor", portfolioHelpers.statusColor);
   eleventyConfig.addShortcode("isProject", portfolioHelpers.isProject);
+  eleventyConfig.addShortcode(
+    "linkWithLineBreaks",
+    portfolioHelpers.linkWithLineBreaks
+  );
 
   eleventyConfig.addShortcode("readMore", blogHelpers.readMore);
 

@@ -13,9 +13,13 @@
   
   <div class="index-item-header">
     <div class="cover">
+      {{#if this.index}}
       <a href="{{ this.url }}">
         <img src="{{this.cover_image_url}}" alt="{{this.cover_image_alt}}"/>
       </a>
+      {{else}}
+        <img src="{{this.cover_image_url}}" alt="{{this.cover_image_alt}}"/>
+      {{/if}}
     </div>
     
     <div>
@@ -66,8 +70,8 @@
               <div>
                 <dt>Project URL</dt>
                 <dd>
-                  <a href="{{project_url}}" target="_blank">
-                    {{ shortUrl project_url }}
+                  <a href="{{ project_url }}" target="_blank">
+                    {{{ shortUrl project_url }}}
                   </a>
                 </dd>
               </div>
@@ -77,7 +81,7 @@
               <dt>Source URL</dt>
               <dd>
                 <a href="{{source_url}}" target="_blank">
-                  {{ shortUrl source_url }}
+                  {{{ shortUrl source_url }}}
                 </a>
               </dd>
               </div>
