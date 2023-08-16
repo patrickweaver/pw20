@@ -85,7 +85,7 @@ In order to gauge the feasibility of the project I wanted to get started quickly
 
 <figure>
 
-![A screenshot of the first prototype of my subway map app](/images/blog/rc/nyc-subway-v1.png)
+![A screenshot of the first prototype of my subway map app](/images/blog/rc/nyc-subway-v1.jpg)
 
 <figcaption>The first prototype of the subway map app</figcaption>
 

@@ -1,7 +1,7 @@
 ---
 layout: layouts/portfolioProject.hbs
 name: Emoji Wallpaper
-cover_image_url: /images/portfolio/emoji-wallpaper/cover.png
+cover_image_url: /images/portfolio/emoji-wallpaper/cover.jpg
 cover_image_alt: A screenshot of the default wallpaper with all emojis on Windows
 short_description: A generative art project that creates a wallpaper style image from emojis.
 start_date: 2018-04-07
@@ -14,5 +14,5 @@ tags:
   - art
   - javascript
 images:
-  - /images/portfolio/emoji-wallpaper/cover.png
+  - /images/portfolio/emoji-wallpaper/cover.jpg
 ---

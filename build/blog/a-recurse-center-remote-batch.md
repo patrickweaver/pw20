@@ -3,7 +3,7 @@ layout: layouts/blogPost.hbs
 title: ! "Participating in a Remote Batch at the Recurse Center"
 description: "Refelctions on my Fall 1 '20 remote batch at RC"
 date: "2021-01-25T16:33:26.655Z"
-cover_image_url: "/images/blog/rc2/parallel-lines-curve.png"
+cover_image_url: "/images/blog/rc2/parallel-lines-curve.jpg"
 cover_image_alt: "A screenshot of a prototype of my real-time subway map"
 do_not_show_cover_at_top: true
 tags:
@@ -15,7 +15,7 @@ Participating in a batch at the [Recurse Center](https://www.recurse.com/) is so
 
 <div style="text-align: center;">
   <img
-    src="/images/blog/rc2/rc-website.png"
+    src="/images/blog/rc2/rc-website.jpg"
     alt="A screenshot from the Recurse Center website with a notice about operating remotely"
     style="max-width: 500px; margin: 0 auto;" />
 </div>
@@ -71,7 +71,7 @@ The crossword puzzle app was a fun mix of small challenges and interesting desig
 <figure>
 
 <div style="text-align: center;">
-  <img src="/images/blog/rc2/imessage.png" alt="A screenshot of a message in iMessage with a long stiring of seemingly random characters" style="max-width: 500px; margin: 0 auto;" />
+  <img src="/images/blog/rc2/imessage.jpg" alt="A screenshot of a message in iMessage with a long stiring of seemingly random characters" style="max-width: 500px; margin: 0 auto;" />
 </div>
 
 <figcaption>A failed attempt to send a crossword</figcaption>
@@ -85,7 +85,7 @@ When I first applied to RC I had been feeling nervous about committing such a lo
 <figure>
 
 <div style="text-align: center;">
-  <img src="/images/blog/rc2/parallel-lines-curve.png" alt="A screenshot of a prototype of my real-time subway map" style="max-width: 500px; margin: 0 auto;" />
+  <img src="/images/blog/rc2/parallel-lines-curve.jpg" alt="A screenshot of a prototype of my real-time subway map" style="max-width: 500px; margin: 0 auto;" />
 </div>
 
 <figcaption>An early attempt to draw MTA track geography data as parallel tracks on a map</figcaption>

@@ -3,7 +3,7 @@ layout: layouts/blogPost.hbs
 title: Making a Real-Time NYC Subway Map with Real Weird NYC Subway Data
 description: Data mysteries of the subway revealed!
 date: 2020-10-21
-cover_image_url: /images/blog/nyc-subway/nyc-subway.png
+cover_image_url: /images/blog/nyc-subway/nyc-subway.jpg
 cover_image_alt: A screenshot of the map
 tags:
 ---
@@ -99,7 +99,7 @@ G: {
 
 </figure>
 
-<figure>
+<figure style="overflow: scroll;">
 
 | Trip Id     | Trip Start Time | Trip Date | Route | Stop1 Arrival | Stop1 Id | Stop2 Arrival | Stop2 Id | Seconds |
 | ----------- | --------------- | --------- | ----- | ------------- | -------- | ------------- | -------- | ------- |
@@ -140,9 +140,9 @@ After trying to approach the parallel lines problem geometrically I was pointed 
 <figure>
 
 <div style="display: flex; max-width: 100%;">
-  <img src="/images/blog/nyc-subway/nyc-subway-f-g.png" alt="A screenshot of my map." style="max-height: 500px; max-width: 49%; margin: 0 auto;" />
+  <img src="/images/blog/nyc-subway/nyc-subway-f-g.jpg" alt="A screenshot of my map." style="max-height: 500px; max-width: 49%; margin: 0 auto;" />
   <span style="width: 5px;"></span>
-  <img src="/images/blog/nyc-subway/mta-f-g.png" alt="A screenshot of the MTA map." style="max-height: 500px; max-width: 49%; margin: 0 auto;" />
+  <img src="/images/blog/nyc-subway/mta-f-g.jpg" alt="A screenshot of the MTA map." style="max-height: 500px; max-width: 49%; margin: 0 auto;" />
 </div>
 
 <figcaption>Similar sections of my map and the MTA map</figcaption>

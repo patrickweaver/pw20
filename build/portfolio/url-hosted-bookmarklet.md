@@ -1,7 +1,7 @@
 ---
 layout: layouts/portfolioProject.hbs
 name: URL Hosted Bookmarklet
-cover_image_url: /images/portfolio/bookmarklet/bookmarklet-website-screenshot.jpeg
+cover_image_url: /images/portfolio/bookmarklet/bookmarklet-website-screenshot.jpg
 cover_image_alt: A screenshot of the app
 short_description: A website that encodes bookmarklet code into a URL hash so that it can be easily shared.
 start_date: 2022-03-17
@@ -13,7 +13,7 @@ tags:
   - Complete
   - javascript
 images:
-  - /images/portfolio/bookmarklet/bookmarklet-website-screenshot.jpeg
+  - /images/portfolio/bookmarklet/bookmarklet-website-screenshot.jpg
 ---
 
 This website can host a bookmarklet in the URL, which is handy for situations when you want to share a small code snippet to run locally.

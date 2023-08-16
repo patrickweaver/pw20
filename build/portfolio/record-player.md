@@ -1,7 +1,7 @@
 ---
 layout: layouts/portfolioProject.hbs
 name: Record Player
-cover_image_url: /images/portfolio/record-player/app-screenshot.png
+cover_image_url: /images/portfolio/record-player/app-screenshot.jpg
 cover_image_alt: A screenshot of the app
 short_description: Play your old records by taking a picture with this computer vision enabled record player that streams from Spotify.
 start_date: 2018-04-28
@@ -16,7 +16,7 @@ tags:
   - python
   - raspberry pi
 images:
-  - /images/portfolio/record-player/app-screenshot.png
+  - /images/portfolio/record-player/app-screenshot.jpg
 ---
 
 Record Player is a Rube Goldberg Machine of the Google Cloud Vision API and the Spotify API. After logging into Spotify, upload an image. The image will be sent to the Google Vision API, which will guess what it is. The app will then search Spotify for an album using Google’s guess, and give you the first result to play.

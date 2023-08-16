@@ -2,7 +2,7 @@
 layout: layouts/blogPost.hbs
 title: Building a futuristic Record Player with Glitch and Raspberry Pi
 date: 2018-10-23
-cover_image_url: /images/blog/record-player/cover.png
+cover_image_url: /images/blog/record-player/cover.jpg
 cover_image_alt: A screenshot of the app
 tags:
 ---

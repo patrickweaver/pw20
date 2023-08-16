@@ -2,7 +2,7 @@
 layout: layouts/blogPost.hbs
 title: Which Wearable Arduino Should I Use For My Sewable Tech Project?
 date: 2017-09-29
-cover_image_url: /images/blog/sewable/cover.jpeg
+cover_image_url: /images/blog/sewable/microcontrollers.jpg
 cover_image_alt: A picture of 7 different sewable microcontrollers and a Mouse sticker
 do_not_show_cover_at_top: true
 editors_note: Originally written for the Mouse blog
@@ -13,7 +13,7 @@ This fall [Mouse](http://mouse.org) launched our brand new [Sewable Tech Course]
 
  <figure>
 
-![An illustration of a sewable circuit](/images/blog/sewable/circuit.png)
+![An illustration of a sewable circuit](/images/blog/sewable/circuit.jpg)
 
 <figcaption>Sew-matic for DIY Wearable Goal Tracker from Mouse Create</figcaption>
 
@@ -23,7 +23,7 @@ The big question we ran into when I was helping my colleague [Kate](https://twit
 
  <figure>
 
-![A photo of the 7 microcontrollers](/images/blog/sewable/microcontrollers.jpeg)
+![A photo of the 7 microcontrollers](/images/blog/sewable/microcontrollers.jpg)
 
 <figcaption>Our collection of wearable arduinos</figcaption>
 
@@ -41,7 +41,7 @@ All of the boards work with the [Arduino IDE](https://www.arduino.cc/en/Main/Sof
 
 #### [1] &amp; [2] Sparkfun/Generic LilyPad Arduino USB
 
-![A photo of the LilyPad Arduino](/images/blog/sewable/lilypad.jpeg)
+![A photo of the LilyPad Arduino](/images/blog/sewable/lilypad.jpg)
 
 - [1] From [Sparkfun: $25](https://www.sparkfun.com/products/12049), [2] [Generic: $6 to $20](https://www.ebay.com/sch/i.html?_nkw=LilyPad+Arduino+USB+ATmega32U4)
 - 5 Digital Pins
@@ -60,7 +60,7 @@ Be careful when buying to get the LilyPad Arduino USB if you need a USB connecti
 
 #### [3] Adafruit FLORA
 
-![A photo of the Flora microcontroller](/images/blog/sewable/flora.jpeg)
+![A photo of the Flora microcontroller](/images/blog/sewable/flora.jpg)
 
 - From [Adafruit $15](https://www.adafruit.com/product/659)
 - 8 Digital Pins
@@ -75,7 +75,7 @@ The Adafruit Flora is a great board and can handle any project. It’s smaller t
 
 #### [4] Generic LilyTiny
 
-![A photo of the TinyLily board](/images/blog/sewable/tinylily.jpeg)
+![A photo of the TinyLily board](/images/blog/sewable/tinylily.jpg)
 
 - [Generic $2 to $5](https://www.ebay.com/sch/i.html?_nkw=LilyTiny)
 - 6 Digital Pins
@@ -92,7 +92,7 @@ If you have a lot of experience with Arduino or have a very small budget but a l
 
 #### [5] &amp; [6] Arduino GEMMA and Adafruit GEMMA v2
 
-![A photo of the two Gemma boards](/images/blog/sewable/gemmas.jpeg)
+![A photo of the two Gemma boards](/images/blog/sewable/gemmas.jpg)
 
 - [6] From [Adafruit $10](https://www.adafruit.com/product/1222), [5] From [Adafruit (Discontinued)](https://www.adafruit.com/product/2470)
 - 3 Digital Pins
@@ -110,7 +110,7 @@ If you already have a USB 2.0 hub or computers with USB 2.0 ports this board wil
 
 #### [7] Adafruit GEMMA M0
 
-![A photo of the Gemma M0 board](/images/blog/sewable/gemma-m0.jpeg)
+![A photo of the Gemma M0 board](/images/blog/sewable/gemma-m0.jpg)
 
 - From [Adafruit $10](https://www.adafruit.com/product/3501)
 - 3 Digital Pins
@@ -145,7 +145,7 @@ All the boards we tested worked great once we figured out the tricks of each and
 
  <figure>
 
-![A photo of a student making a fabric case](/images/blog/sewable/case.jpeg)
+![A photo of a student making a fabric case](/images/blog/sewable/case.jpg)
 
 <figcaption>
 

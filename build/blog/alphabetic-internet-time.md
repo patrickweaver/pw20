@@ -2,7 +2,7 @@
 layout: layouts/blogPost.hbs
 title: "Alphabetic Internet Time: A Time Zone for the Internet"
 date: 2022-08-18
-cover_image_url: /images/blog/ait/ait-clock-screenshot.png
+cover_image_url: /images/blog/ait/ait-clock-screenshot.jpg
 cover_image_alt: A screenshot of an AIT clock
 tags:
 ---
@@ -57,7 +57,7 @@ The military time zone names do seem useful, and are possibly too similar to AIT
 
 One interesting (and further confusing thing) about the military time zone names is that “Mike”, UTC+12 and “Yankee”, UTC-12 are the same time, but on different dates because the border straddles the international date line. It’s quirks like this that make me think that any improvement on time zone related communication is likely to fail.
 
-![A map of military time zones from the ACP 121(I) standard](/images/blog/ait/military-time-zones.png)
+![A map of military time zones from the ACP 121(I) standard](/images/blog/ait/military-time-zones.jpg)
 
 #### Reasons why AIT will never work
 

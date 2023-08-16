@@ -1,7 +1,7 @@
 ---
 layout: layouts/portfolioProject.hbs
 name: Vacation Planner
-cover_image_url: /images/portfolio/vacation-planner/cover.png
+cover_image_url: /images/portfolio/vacation-planner/cover.jpg
 cover_image_alt: A screenshot of the app
 short_description: A visual calendar that helps map out how to use vacation time.
 start_date: 2019-05-21
@@ -14,8 +14,8 @@ tags:
   - javascript
   - react
 images:
-  - /images/portfolio/vacation-planner/cover.png
-  - /images/portfolio/vacation-planner/summer-friday.png
+  - /images/portfolio/vacation-planner/cover.jpg
+  - /images/portfolio/vacation-planner/summer-friday.jpg
 ---
 
 A visual calendar that helps map out how to use vacation time. The calendar can be built to show a specific window, and have a set of default holidays and policies.

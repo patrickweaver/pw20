@@ -13,6 +13,6 @@ I’m currently working slowly on a few projects, more to come!
 
 Here is some recently unearthed childhood art:
 
-![A photograph of a child’s painting](/images/now/childhood-art.jpeg)
+![A photograph of a child’s painting](/images/now/childhood-art.jpg)
 
 </div>
