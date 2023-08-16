@@ -15,7 +15,7 @@
     <!-- Social -->
       <meta property="og:title" content="Which Wearable Arduino Should I Use For My Sewable Tech Project?" />
       <meta property="og:description" content="Patrick Weaver’s Website" />
-      <meta property="og:image" content="/images/blog/sewable/cover.jpeg" />
+      <meta property="og:image" content="/images/blog/sewable/microcontrollers.jpg" />
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
@@ -23,7 +23,7 @@
     <meta name="twitter:creator" content="@patrickweave_r" />
       <meta name="twitter:title" content="Which Wearable Arduino Should I Use For My Sewable Tech Project?" />
       <meta name="twitter:description" content="Patrick Weaver’s Website" />
-      <meta name="twitter:image" content="/images/blog/sewable/cover.jpeg" />
+      <meta name="twitter:image" content="/images/blog/sewable/microcontrollers.jpg" />
       <meta name="twitter:image:alt" content="A picture of 7 different sewable microcontrollers and a Mouse sticker" />
     
     <link rel="stylesheet" href="/css/style.css" />
@@ -80,12 +80,12 @@
         
           <p>This fall <a href="http://mouse.org">Mouse</a> launched our brand new <a href="https://mouse.org/mouse-courses">Sewable Tech Course</a>! The course introduces learners to circuitry and electronics without the abstraction of a breadboard. In the final two projects in the course we use a wearable Arduino to prototype a DIY activity tracker.</p>
  <figure>
-<p><img src="/images/blog/sewable/circuit.png" alt="An illustration of a sewable circuit"></p>
+<p><img src="/images/blog/sewable/circuit.jpg" alt="An illustration of a sewable circuit"></p>
 <figcaption>Sew-matic for DIY Wearable Goal Tracker from Mouse Create</figcaption>
 </figure>
 <p>The big question we ran into when I was helping my colleague <a href="https://twitter.com/katermouse">Kate</a> prototype the course was, which wearable Arduino to use. Along the way we tested 7 Arduino compatible microcontrollers and settled on recommending a <a href="https://www.sparkfun.com/products/12049">LilyPad Arduino USB</a>, but there are advantages to each of the Arduinos we tested and different kinds projects would benefit from including each of them.</p>
  <figure>
-<p><img src="/images/blog/sewable/microcontrollers.jpeg" alt="A photo of the 7 microcontrollers"></p>
+<p><img src="/images/blog/sewable/microcontrollers.jpg" alt="A photo of the 7 microcontrollers"></p>
 <figcaption>Our collection of wearable arduinos</figcaption>
 </figure>
 <ol>
@@ -99,7 +99,7 @@
 </ol>
 <p>All of the boards work with the <a href="https://www.arduino.cc/en/Main/Software">Arduino IDE</a> (most with some extra steps), are roughly circular, and most run on 3.3 Volts, but there are slight differences that make certain boards better for some types of projects.</p>
 <h4>[1] &amp; [2] Sparkfun/Generic LilyPad Arduino USB</h4>
-<p><img src="/images/blog/sewable/lilypad.jpeg" alt="A photo of the LilyPad Arduino"></p>
+<p><img src="/images/blog/sewable/lilypad.jpg" alt="A photo of the LilyPad Arduino"></p>
 <ul>
 <li>[1] From <a href="https://www.sparkfun.com/products/12049">Sparkfun: $25</a>, [2] <a href="https://www.ebay.com/sch/i.html?_nkw=LilyPad+Arduino+USB+ATmega32U4">Generic: $6 to $20</a></li>
 <li>5 Digital Pins</li>
@@ -114,7 +114,7 @@
 <p>The SparkFun model costs a bit more but a portion of the sales go to <a href="http://leahbuechley.com/">Leah Buechley</a> to support open source e-textiles and e-textiles education development.</p>
 <p>Be careful when buying to get the LilyPad Arduino USB if you need a USB connection. The original <a href="https://www.sparkfun.com/products/13342">LilyPad Arduino 328 Main Board</a> (not pictured), requires an FTDI connection to upload code (but that one has more pins!).</p>
 <h4>[3] Adafruit FLORA</h4>
-<p><img src="/images/blog/sewable/flora.jpeg" alt="A photo of the Flora microcontroller"></p>
+<p><img src="/images/blog/sewable/flora.jpg" alt="A photo of the Flora microcontroller"></p>
 <ul>
 <li>From <a href="https://www.adafruit.com/product/659">Adafruit $15</a></li>
 <li>8 Digital Pins</li>
@@ -127,7 +127,7 @@
 </ul>
 <p>The Adafruit Flora is a great board and can handle any project. It’s smaller than the LilyPad but has 3 more pins, and the onboard RGB LED is very useful as a Hello, World. The only drawback to this board is <a href="https://learn.adafruit.com/add-boards-arduino-v164/overview">adding the board in the Arduino IDE</a> and installing the <a href="https://learn.adafruit.com/adafruit-arduino-ide-setup/windows-driver-installation">Adafruit drivers on Windows</a>, but both of these are one-time steps and don’t take more than a few minutes. We did have some issues uploading code via a USB 3.0 port, but this can be avoided by using a USB 2.0 hub.</p>
 <h4>[4] Generic LilyTiny</h4>
-<p><img src="/images/blog/sewable/tinylily.jpeg" alt="A photo of the TinyLily board"></p>
+<p><img src="/images/blog/sewable/tinylily.jpg" alt="A photo of the TinyLily board"></p>
 <ul>
 <li><a href="https://www.ebay.com/sch/i.html?_nkw=LilyTiny">Generic $2 to $5</a></li>
 <li>6 Digital Pins</li>
@@ -139,7 +139,7 @@
 <p>The biggest disadvantage of this board is the upload process. <a href="https://digistump.com/wiki/digispark/tutorials/connecting">Following these instructions</a>, we had to add the board to the Arduino IDE, install Digistump drivers, and hit the plug in the board to USB at a specific point in the process. We also had issues with this board on USB 3.0 ports.</p>
 <p>If you have a lot of experience with Arduino or have a very small budget but a lot of patience this board might be for you.</p>
 <h4>[5] &amp; [6] Arduino GEMMA and Adafruit GEMMA v2</h4>
-<p><img src="/images/blog/sewable/gemmas.jpeg" alt="A photo of the two Gemma boards"></p>
+<p><img src="/images/blog/sewable/gemmas.jpg" alt="A photo of the two Gemma boards"></p>
 <ul>
 <li>[6] From <a href="https://www.adafruit.com/product/1222">Adafruit $10</a>, [5] From <a href="https://www.adafruit.com/product/2470">Adafruit (Discontinued)</a></li>
 <li>3 Digital Pins</li>
@@ -153,7 +153,7 @@
 <p>Both the Gemma boards are great small wearable Arduinos. The small number of pins and small size make this board very approachable for a beginner, and would make the perfect tool for a simple sewable tech project. We initially were going to recommend the Adafruit Gemma v2 on Mouse Create, but we had enough <a href="https://learn.adafruit.com/introducing-gemma/about-the-bootloader">issues with uploading via USB 3.0</a> that instead of shipping a USB 2.0 hub along with the boards we decided to opt for the LilyPad.</p>
 <p>If you already have a USB 2.0 hub or computers with USB 2.0 ports this board will work great. It does not have serial communication so it is best suited for simpler projects. Like the Adafruit Flora you will have to <a href="https://learn.adafruit.com/add-boards-arduino-v164/overview">add the board to the Arduino IDE</a> and <a href="https://learn.adafruit.com/adafruit-arduino-ide-setup/windows-driver-installation">install the Adafruit drivers on Windows</a> (for the Gemma V2).</p>
 <h4>[7] Adafruit GEMMA M0</h4>
-<p><img src="/images/blog/sewable/gemma-m0.jpeg" alt="A photo of the Gemma M0 board"></p>
+<p><img src="/images/blog/sewable/gemma-m0.jpg" alt="A photo of the Gemma M0 board"></p>
 <ul>
 <li>From <a href="https://www.adafruit.com/product/3501">Adafruit $10</a></li>
 <li>3 Digital Pins</li>
@@ -180,7 +180,7 @@ while True:
 <p>As with other Adafruit Boards if you are using the Arduino IDE instead of Python you will have to <a href="https://learn.adafruit.com/add-boards-arduino-v164/overview">add the board to the IDE</a> and <a href="https://learn.adafruit.com/adafruit-arduino-ide-setup/windows-driver-installation">install the Adafruit drivers on Windows</a>. You may also have to <a href="https://learn.adafruit.com/adafruit-gemma-m0/circuitpython">reinstall Circuit Python</a> if you go back and forth between the IDE and Circuit Python, but this is a simple drag and drop process. I’m also not sure how to control the RGB LED but I haven’t spent much time trying to figure it out.</p>
 <p>All the boards we tested worked great once we figured out the tricks of each and any will work for most sewable tech projects. Once you decide on a board, check out <a href="https://mouse.org/work">Mouse Create</a> to find some fun projects!</p>
  <figure>
-<p><img src="/images/blog/sewable/case.jpeg" alt="A photo of a student making a fabric case"></p>
+<p><img src="/images/blog/sewable/case.jpg" alt="A photo of a student making a fabric case"></p>
 <figcaption>
 <p>Making a light up phone case at <a href="https://medium.com/@mouse_org">Mouse</a> <a href="https://mouse.org/makernight">Maker Night</a></p>
 </figcaption>

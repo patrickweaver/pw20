@@ -1691,7 +1691,7 @@ so they can be used here for displaying source code
 &lt;p&gt;The closest thing to AIT that currently exists is the &lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_military_time_zones&quot;&gt;Military Time Zones&lt;/a&gt; which also use the alphabet to refer to time zones, but in a way that doesn’t make much sense. Like AIT the time zones move East from UTC with UTC+1 being “Alfa”, UTC+2 “Bravo”, and continuing through the NATO phonetic alphabet (though skipping “Juliett”) to UTC+12, “Mike”. However, rather than continue through the alphabet at UTC-11, “November” is back near where we started as UTC-1 (and continues moving West from there).&lt;/p&gt;
 &lt;p&gt;The military time zone names do seem useful, and are possibly too similar to AIT for my idea to catch on, but out of sequence order make the concept seem too confusing for anyone using it for much beyond just “time zone names.”&lt;/p&gt;
 &lt;p&gt;One interesting (and further confusing thing) about the military time zone names is that “Mike”, UTC+12 and “Yankee”, UTC-12 are the same time, but on different dates because the border straddles the international date line. It’s quirks like this that make me think that any improvement on time zone related communication is likely to fail.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/ait/military-time-zones.png&quot; alt=&quot;A map of military time zones from the ACP 121(I) standard&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/ait/military-time-zones.jpg&quot; alt=&quot;A map of military time zones from the ACP 121(I) standard&quot; /&gt;&lt;/p&gt;
 &lt;h4&gt;Reasons why AIT will never work&lt;/h4&gt;
 &lt;p&gt;As good an idea as I think this is, I have no hopes of AIT catching on mostly because I think that most people wouldn’t be able to get over the ridiculousness of saying “M:45” (and not being worried people would think they’re talking about a bus). But beyond the silliness, it’s still Daylight Saving Time that makes communicating across time zones unlikely to be improved on.&lt;/p&gt;
 &lt;p&gt;If your own time zone stayed the same relative to AIT year round I think there would be a chance that, with tools like an AIT display next to your local time, or calendar integrations, that it would work for a lot of people who frequently communicate with people in other time zones, but having to switch recurring times back and forth by one letter twice a year seems like friction that would dampen most people’s enthusiasm.&lt;/p&gt;
@@ -1913,7 +1913,7 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
       <content type="html">&lt;p&gt;Participating in a batch at the &lt;a href=&quot;https://www.recurse.com/&quot;&gt;Recurse Center&lt;/a&gt; is something that I’ve thought on-and-off about doing since I found out about it (then called Hacker School) sometime between 2013 and 2015, but it just never seemed like the right time to leave my job and its subsidized health insurance until I was laid off (what turned out to be) early on in the pandemic. I had as recently as January 2020 been thinking, “maybe now is the right time to finally quit and do it,” and though I’m relieved I was able to get a few more months of savings and health insurance into 2020, participating in RC was the perfect change of pace and a motivating bridge between employment and the job search.&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;text-align: center;&quot;&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/rc2/rc-website.png&quot; alt=&quot;A screenshot from the Recurse Center website with a notice about operating remotely&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot; /&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/rc2/rc-website.jpg&quot; alt=&quot;A screenshot from the Recurse Center website with a notice about operating remotely&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot; /&gt;
 &lt;/div&gt;
 &lt;figcaption&gt;Screenshot from recurse.com&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -1944,7 +1944,7 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 &lt;p&gt;The crossword puzzle app was a fun mix of small challenges and interesting design decisions. One of the first things that stood out to me was that I had never really thought about the algorithm that is used to number crossword puzzle answers on the board, the kind of thing that is immediately understandable, but more complex that you would expect it to be when represented with a programming language. React Hooks were immediately very useful since most of the components for the app needed a sprinkling of state, but not too much, and TypeScript was helpful, especially in the context of RC because I paired with a few people on certain self-contained parts of the app like the symmetry for square toggling, and the defined types help people quickly pick up what the code we were writing would do. My favorite part of the crossword puzzle app is that to store a composed puzzle without a backend, I encode the whole puzzle state into the URL (here is a &lt;a href=&quot;https://doodles.patrickweaver.net/crossword/play/#eyJzdGF0ZSI6W1tbWyJmIiwiIiwiZmYiLG51bGwsbnVsbCwwXSxbImYiLCIiLCJ-mZiIsbnVsbCxudWxsLDFdLFsidCIsIlIiLCJ0dCIsMSwxLDJdLFsidCIsIkMiLC-JmdCIsMSwyLDNdXSxbWyJ0IiwiRiIsInR0IiwzLDMsNF0sWyJ0IiwiSSIsImZ0I-iwzLDQsNV0sWyJ0IiwiRiIsImZmIiwzLDEsNl0sWyJ0IiwiTyIsImZmIiwzLDIs-N11dLFtbInQiLCJBIiwidGYiLDUsMyw4XSxbInQiLCJNIiwiZmYiLDUsNCw5XSx-bInQiLCJJIiwiZmYiLDUsMSwxMF0sWyJ0IiwiRCIsImZmIiw1LDIsMTFdXSxbWy-J0IiwiTiIsInRmIiw2LDMsMTJdLFsidCIsIk8iLCJmZiIsNiw0LDEzXSxbInQiL-CJEIiwiZmYiLDYsMSwxNF0sWyJ0IiwiRSIsImZmIiw2LDIsMTVdXV0sW1tbImEi-LDEsIkZLQSBIYWNrZXIgU2NoLiIsIlJDIiwyXSxbImEiLDMsIk9yZGVyIGluIGE-gcXVldWUiLCJGSUZPIiw0XSxbImEiLDUsIkluIHRoZSBtaWRkbGUgb2YiLCJBTU-lEIiw4XSxbImEiLDYsIkphdmFTY3JpcHQgcnVudGltZSIsIk5PREUiLDEyXV0sW-1siZCIsMSwiV2lyZWxlc3MgdGVjaCB3aXRoIHRhZ3MiLCJSRklEIiwyXSxbImQi-LDIsIldoYXQgYSBwcm9ncmFtbWVyIHdyaXRlcyIsIkNPREUiLDNdLFsiZCIsMyw-iQ29tcHV0ZXIgYWlyIG1vdmVyIiwiRkFOIiw0XSxbImQiLDQsIlNob3J0aGFuZC-Bmb3Igb25lJ3MgcHJlZmVyZW5jZSIsIklNTyIsNV1dXV19&quot;&gt;small RC themed puzzle&lt;/a&gt;). I even discovered seemingly documented nowhere else bug in iMessage when prototyping this feature. When I first sent a friend a link to a puzzle as a test, iMessage wouldn’t parse it as a link, so they just got a wall of what looked like random characters. I looked around at other long tracking links I’d received in my emails and noticed they frequently had hyphen characters every so often. I added hyphens to my urls and all of a sudden iMessage could parse them as links!&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;text-align: center;&quot;&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/rc2/imessage.png&quot; alt=&quot;A screenshot of a message in iMessage with a long stiring of seemingly random characters&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot; /&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/rc2/imessage.jpg&quot; alt=&quot;A screenshot of a message in iMessage with a long stiring of seemingly random characters&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot; /&gt;
 &lt;/div&gt;
 &lt;figcaption&gt;A failed attempt to send a crossword&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -1952,7 +1952,7 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 &lt;p&gt;When I first applied to RC I had been feeling nervous about committing such a long period of time to not working before (hopefully!) starting a new job, I considered just doing a 1 week mini batch, or a 6 week half-batch, but the 12 weeks went by way more quikly than I had anticipated, and I was fortunately able to hit my idealistic goal of starting a new job in the new calendar year! The 12 weeks helped me feel free to dive into weird corners of the problems I wanted to work on like &lt;a href=&quot;https://doodles.patrickweaver.net/drawing-parallel-lines-on-a-map/&quot;&gt;drawing parallel lines on a map&lt;/a&gt; (lines were a big theme in my projects), without worrying that it would keep me from “finishing” my projects (author’s note: I still didn’t “finish” most of them). In the spirit of “never graduate” I hope to someday participate in another batch at the physical RC space, but in the meantime, anyone who like me has been sitting on the fence on applying to RC for years should take the opportunity to participate remotely and start the programming project you’ve always been meaning to get to!&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;text-align: center;&quot;&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/rc2/parallel-lines-curve.png&quot; alt=&quot;A screenshot of a prototype of my real-time subway map&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot; /&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/rc2/parallel-lines-curve.jpg&quot; alt=&quot;A screenshot of a prototype of my real-time subway map&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot; /&gt;
 &lt;/div&gt;
 &lt;figcaption&gt;An early attempt to draw MTA track geography data as parallel tracks on a map&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -2026,7 +2026,7 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 &lt;/div&gt;
 &lt;figcaption&gt;Average and max wait times in seconds for stops on the G line.&lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;figure&gt;
+&lt;figure style=&quot;overflow: scroll;&quot;&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -2153,9 +2153,9 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 &lt;p&gt;After trying to approach the parallel lines problem geometrically I was pointed in the right direction by a fellow RC participant and was able to draw great looking lines by treating the Latitude/Longitude points in the shape arrays as vectors (More on this in my &lt;a href=&quot;https://doodles.patrickweaver.net/drawing-parallel-lines-on-a-map/&quot;&gt;interactive slides on this problem&lt;/a&gt; and more on the &lt;a href=&quot;https://medium.com/transit-app/how-we-built-the-worlds-prettiest-auto-generated-transit-maps-12d0c6fa502f&quot;&gt;challenge of drawing nice train lines from the Transit app&lt;/a&gt;).&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;display: flex; max-width: 100%;&quot;&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/nyc-subway/nyc-subway-f-g.png&quot; alt=&quot;A screenshot of my map.&quot; style=&quot;max-height: 500px; max-width: 49%; margin: 0 auto;&quot; /&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/nyc-subway/nyc-subway-f-g.jpg&quot; alt=&quot;A screenshot of my map.&quot; style=&quot;max-height: 500px; max-width: 49%; margin: 0 auto;&quot; /&gt;
   &lt;span style=&quot;width: 5px;&quot;&gt;&lt;/span&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/nyc-subway/mta-f-g.png&quot; alt=&quot;A screenshot of the MTA map.&quot; style=&quot;max-height: 500px; max-width: 49%; margin: 0 auto;&quot; /&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/nyc-subway/mta-f-g.jpg&quot; alt=&quot;A screenshot of the MTA map.&quot; style=&quot;max-height: 500px; max-width: 49%; margin: 0 auto;&quot; /&gt;
 &lt;/div&gt;
 &lt;figcaption&gt;Similar sections of my map and the MTA map&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -2222,7 +2222,7 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 &lt;/figure&gt;
 &lt;p&gt;In order to gauge the feasibility of the project I wanted to get started quickly, throwing a map together and adding some markers for stations and individual trains at fixed times. Because I had limited experience working with transit data (which is provided in a &lt;a href=&quot;https://developers.google.com/transit/gtfs&quot;&gt;very complex format&lt;/a&gt;), or maps, this left me with both the sense that the project is possible, and a big spaghetti code mess.&lt;/p&gt;
 &lt;figure&gt;
-&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/rc/nyc-subway-v1.png&quot; alt=&quot;A screenshot of the first prototype of my subway map app&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/rc/nyc-subway-v1.jpg&quot; alt=&quot;A screenshot of the first prototype of my subway map app&quot; /&gt;&lt;/p&gt;
 &lt;figcaption&gt;The first prototype of the subway map app&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;I started looking into SwiftUI because I’m interested in making my own home screen widgets once I update my phone to iOS 14, and these widgets are built using the framework. Knowing I would have time to experiment during my batch at RC, and wanting to avoid my usual new tool mess phenomenon, I prioritized giving myself a good understanding of how SwiftUI works, what it can and can’t do, and a general review of Swift. Once my batch started I found it more and more difficult to keep going through the tutorials instead of jumping into an original idea, but throughout the week, spending time figuring out what I was even thinking reviewing the code for the subway map project re-motivated me to get through it.&lt;/p&gt;
@@ -2641,12 +2641,12 @@ async function getSignedUrl(key) {
       <id>https://patrickweaver.net/blog/which-wearable-arduino-should-i-use-for-my-sewable-tech-project/</id>
       <content type="html">&lt;p&gt;This fall &lt;a href=&quot;http://mouse.org/&quot;&gt;Mouse&lt;/a&gt; launched our brand new &lt;a href=&quot;https://mouse.org/mouse-courses&quot;&gt;Sewable Tech Course&lt;/a&gt;! The course introduces learners to circuitry and electronics without the abstraction of a breadboard. In the final two projects in the course we use a wearable Arduino to prototype a DIY activity tracker.&lt;/p&gt;
  &lt;figure&gt;
-&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/sewable/circuit.png&quot; alt=&quot;An illustration of a sewable circuit&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/sewable/circuit.jpg&quot; alt=&quot;An illustration of a sewable circuit&quot; /&gt;&lt;/p&gt;
 &lt;figcaption&gt;Sew-matic for DIY Wearable Goal Tracker from Mouse Create&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;The big question we ran into when I was helping my colleague &lt;a href=&quot;https://twitter.com/katermouse&quot;&gt;Kate&lt;/a&gt; prototype the course was, which wearable Arduino to use. Along the way we tested 7 Arduino compatible microcontrollers and settled on recommending a &lt;a href=&quot;https://www.sparkfun.com/products/12049&quot;&gt;LilyPad Arduino USB&lt;/a&gt;, but there are advantages to each of the Arduinos we tested and different kinds projects would benefit from including each of them.&lt;/p&gt;
  &lt;figure&gt;
-&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/sewable/microcontrollers.jpeg&quot; alt=&quot;A photo of the 7 microcontrollers&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/sewable/microcontrollers.jpg&quot; alt=&quot;A photo of the 7 microcontrollers&quot; /&gt;&lt;/p&gt;
 &lt;figcaption&gt;Our collection of wearable arduinos&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;ol&gt;
@@ -2660,7 +2660,7 @@ async function getSignedUrl(key) {
 &lt;/ol&gt;
 &lt;p&gt;All of the boards work with the &lt;a href=&quot;https://www.arduino.cc/en/Main/Software&quot;&gt;Arduino IDE&lt;/a&gt; (most with some extra steps), are roughly circular, and most run on 3.3 Volts, but there are slight differences that make certain boards better for some types of projects.&lt;/p&gt;
 &lt;h4&gt;[1] &amp;amp; [2] Sparkfun/Generic LilyPad Arduino USB&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/sewable/lilypad.jpeg&quot; alt=&quot;A photo of the LilyPad Arduino&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/sewable/lilypad.jpg&quot; alt=&quot;A photo of the LilyPad Arduino&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;[1] From &lt;a href=&quot;https://www.sparkfun.com/products/12049&quot;&gt;Sparkfun: $25&lt;/a&gt;, [2] &lt;a href=&quot;https://www.ebay.com/sch/i.html?_nkw=LilyPad+Arduino+USB+ATmega32U4&quot;&gt;Generic: $6 to $20&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;5 Digital Pins&lt;/li&gt;
@@ -2675,7 +2675,7 @@ async function getSignedUrl(key) {
 &lt;p&gt;The SparkFun model costs a bit more but a portion of the sales go to &lt;a href=&quot;http://leahbuechley.com/&quot;&gt;Leah Buechley&lt;/a&gt; to support open source e-textiles and e-textiles education development.&lt;/p&gt;
 &lt;p&gt;Be careful when buying to get the LilyPad Arduino USB if you need a USB connection. The original &lt;a href=&quot;https://www.sparkfun.com/products/13342&quot;&gt;LilyPad Arduino 328 Main Board&lt;/a&gt; (not pictured), requires an FTDI connection to upload code (but that one has more pins!).&lt;/p&gt;
 &lt;h4&gt;[3] Adafruit FLORA&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/sewable/flora.jpeg&quot; alt=&quot;A photo of the Flora microcontroller&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/sewable/flora.jpg&quot; alt=&quot;A photo of the Flora microcontroller&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;From &lt;a href=&quot;https://www.adafruit.com/product/659&quot;&gt;Adafruit $15&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;8 Digital Pins&lt;/li&gt;
@@ -2688,7 +2688,7 @@ async function getSignedUrl(key) {
 &lt;/ul&gt;
 &lt;p&gt;The Adafruit Flora is a great board and can handle any project. It’s smaller than the LilyPad but has 3 more pins, and the onboard RGB LED is very useful as a Hello, World. The only drawback to this board is &lt;a href=&quot;https://learn.adafruit.com/add-boards-arduino-v164/overview&quot;&gt;adding the board in the Arduino IDE&lt;/a&gt; and installing the &lt;a href=&quot;https://learn.adafruit.com/adafruit-arduino-ide-setup/windows-driver-installation&quot;&gt;Adafruit drivers on Windows&lt;/a&gt;, but both of these are one-time steps and don’t take more than a few minutes. We did have some issues uploading code via a USB 3.0 port, but this can be avoided by using a USB 2.0 hub.&lt;/p&gt;
 &lt;h4&gt;[4] Generic LilyTiny&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/sewable/tinylily.jpeg&quot; alt=&quot;A photo of the TinyLily board&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/sewable/tinylily.jpg&quot; alt=&quot;A photo of the TinyLily board&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.ebay.com/sch/i.html?_nkw=LilyTiny&quot;&gt;Generic $2 to $5&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;6 Digital Pins&lt;/li&gt;
@@ -2700,7 +2700,7 @@ async function getSignedUrl(key) {
 &lt;p&gt;The biggest disadvantage of this board is the upload process. &lt;a href=&quot;https://digistump.com/wiki/digispark/tutorials/connecting&quot;&gt;Following these instructions&lt;/a&gt;, we had to add the board to the Arduino IDE, install Digistump drivers, and hit the plug in the board to USB at a specific point in the process. We also had issues with this board on USB 3.0 ports.&lt;/p&gt;
 &lt;p&gt;If you have a lot of experience with Arduino or have a very small budget but a lot of patience this board might be for you.&lt;/p&gt;
 &lt;h4&gt;[5] &amp;amp; [6] Arduino GEMMA and Adafruit GEMMA v2&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/sewable/gemmas.jpeg&quot; alt=&quot;A photo of the two Gemma boards&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/sewable/gemmas.jpg&quot; alt=&quot;A photo of the two Gemma boards&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;[6] From &lt;a href=&quot;https://www.adafruit.com/product/1222&quot;&gt;Adafruit $10&lt;/a&gt;, [5] From &lt;a href=&quot;https://www.adafruit.com/product/2470&quot;&gt;Adafruit (Discontinued)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;3 Digital Pins&lt;/li&gt;
@@ -2714,7 +2714,7 @@ async function getSignedUrl(key) {
 &lt;p&gt;Both the Gemma boards are great small wearable Arduinos. The small number of pins and small size make this board very approachable for a beginner, and would make the perfect tool for a simple sewable tech project. We initially were going to recommend the Adafruit Gemma v2 on Mouse Create, but we had enough &lt;a href=&quot;https://learn.adafruit.com/introducing-gemma/about-the-bootloader&quot;&gt;issues with uploading via USB 3.0&lt;/a&gt; that instead of shipping a USB 2.0 hub along with the boards we decided to opt for the LilyPad.&lt;/p&gt;
 &lt;p&gt;If you already have a USB 2.0 hub or computers with USB 2.0 ports this board will work great. It does not have serial communication so it is best suited for simpler projects. Like the Adafruit Flora you will have to &lt;a href=&quot;https://learn.adafruit.com/add-boards-arduino-v164/overview&quot;&gt;add the board to the Arduino IDE&lt;/a&gt; and &lt;a href=&quot;https://learn.adafruit.com/adafruit-arduino-ide-setup/windows-driver-installation&quot;&gt;install the Adafruit drivers on Windows&lt;/a&gt; (for the Gemma V2).&lt;/p&gt;
 &lt;h4&gt;[7] Adafruit GEMMA M0&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/sewable/gemma-m0.jpeg&quot; alt=&quot;A photo of the Gemma M0 board&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/sewable/gemma-m0.jpg&quot; alt=&quot;A photo of the Gemma M0 board&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;From &lt;a href=&quot;https://www.adafruit.com/product/3501&quot;&gt;Adafruit $10&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;3 Digital Pins&lt;/li&gt;
@@ -2741,7 +2741,7 @@ while True:
 &lt;p&gt;As with other Adafruit Boards if you are using the Arduino IDE instead of Python you will have to &lt;a href=&quot;https://learn.adafruit.com/add-boards-arduino-v164/overview&quot;&gt;add the board to the IDE&lt;/a&gt; and &lt;a href=&quot;https://learn.adafruit.com/adafruit-arduino-ide-setup/windows-driver-installation&quot;&gt;install the Adafruit drivers on Windows&lt;/a&gt;. You may also have to &lt;a href=&quot;https://learn.adafruit.com/adafruit-gemma-m0/circuitpython&quot;&gt;reinstall Circuit Python&lt;/a&gt; if you go back and forth between the IDE and Circuit Python, but this is a simple drag and drop process. I’m also not sure how to control the RGB LED but I haven’t spent much time trying to figure it out.&lt;/p&gt;
 &lt;p&gt;All the boards we tested worked great once we figured out the tricks of each and any will work for most sewable tech projects. Once you decide on a board, check out &lt;a href=&quot;https://mouse.org/work&quot;&gt;Mouse Create&lt;/a&gt; to find some fun projects!&lt;/p&gt;
  &lt;figure&gt;
-&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/sewable/case.jpeg&quot; alt=&quot;A photo of a student making a fabric case&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/sewable/case.jpg&quot; alt=&quot;A photo of a student making a fabric case&quot; /&gt;&lt;/p&gt;
 &lt;figcaption&gt;
 &lt;p&gt;Making a light up phone case at &lt;a href=&quot;https://medium.com/@mouse_org&quot;&gt;Mouse&lt;/a&gt; &lt;a href=&quot;https://mouse.org/makernight&quot;&gt;Maker Night&lt;/a&gt;&lt;/p&gt;
 &lt;/figcaption&gt;
