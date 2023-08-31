@@ -1251,33 +1251,33 @@ A &lt;code&gt;&amp;lt;portal&amp;gt;&lt;/code&gt; element that should display th
         if (type === &quot;Fruit&quot;) {
             if (color === &quot;Orange&quot;) {
                 if (size === &quot;small&quot;) {
-                    return { emoji: &quot;&quot;, name: &quot;&quot; }
+                    return { emoji: &quot;🍊&quot;, name: &quot;tangerine&quot; }
                 } else if (size === &quot;large&quot;) {
-                    return { emoji: &quot;&quot;, name: &quot;&quot; }
+                    return { emoji: &quot;🍑&quot;, name: &quot;peach&quot; }
                 }
             } else if (color === &quot;Red&quot;) {
                 if (size === &quot;small&quot;) {
-                    return { emoji: &quot;&quot;, name: &quot;&quot; }
+                    return { emoji: &quot;🍓&quot;, name: &quot;Strawberry&quot; }
                 } else if (size === &quot;large&quot;) {
-                    return { emoji: &quot;&quot;, name: &quot;&quot; }
+                    return { emoji: &quot;🍎&quot;, name: &quot;Apple&quot; }
                 }
             } else if (color === &quot;Yellow&quot;) {
                 if (size === &quot;small&quot;) {
-                    return { emoji: &quot;&quot;, name: &quot;&quot; }
+                    return { emoji: &quot;🍋&quot;, name: &quot;Lemon&quot; }
                 } else if (size === &quot;large&quot;) {
-                    return { emoji: &quot;&quot;, name: &quot;&quot; }
+                    return { emoji: &quot;🍌&quot;, name: &quot;Banana&quot; }
                 }
             } else if (color === &quot;Blue&quot;) {
                 if (size === &quot;small&quot;) {
-                    return { emoji: &quot;&quot;, name: &quot;&quot; }
+                    return { emoji: &quot;🫐&quot;, name: &quot;Blueberry&quot; }
                 } else if (size === &quot;large&quot;) {
-                    return { emoji: &quot;&quot;, name: &quot;&quot; }
+                    return { emoji: &quot;🥥&quot;, name: &quot;Coconut&quot; }
                 }
             } else if (color === &quot;Green&quot;) {
                 if (size === &quot;small&quot;) {
-                    return { emoji: &quot;&quot;, name: &quot;&quot; }
+                    return { emoji: &quot;🥝&quot;, name: &quot;Kiwi&quot; }
                 } else if (size === &quot;large&quot;) {
-                    return { emoji: &quot;&quot;, name: &quot;&quot; }
+                    return { emoji: &quot;🍐&quot;, name: &quot;Pear&quot; }
                 }
             }
         } else if (type === &quot;Dessert&quot;) {
