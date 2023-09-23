@@ -1874,9 +1874,9 @@ id="audio-and-video-tags-object-dep">
 <figcaption>An embed of a <a href="/pages/plaintext-element/" target="_blank">page</a> with a <code>&lt;plaintext&gt;</code> element.
 </figure>
 
-However, `<xmp>` and `<tt>`, used in a similar way, have closing tags <xmp><span id="xmp-element">
+However, `<xmp>` and `<tt>`, used in a similar way, have closing tags <xmp style="max-width: 100%; overflow: scroll; padding: 0.5rem 0; border: 1px solid #aaa; background-color: #eee;">
 so they can be used here for displaying source code
-</span></xmp> or text in a monospace font<tt>
+</xmp> or text in a monospace font<tt>
 <span id="tt-element">as it would be shown on a teletype</span>
 </tt> without an `<iframe>`.
 
