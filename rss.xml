@@ -1622,9 +1622,9 @@ A &lt;code&gt;&amp;lt;portal&amp;gt;&lt;/code&gt; element that should display th
 &lt;iframe width=&quot;350&quot; height=&quot;400&quot; src=&quot;https://patrickweaver.net/pages/plaintext-element&quot;&gt;&lt;/iframe&gt;
 &lt;figcaption&gt;An embed of a &lt;a href=&quot;https://patrickweaver.net/pages/plaintext-element/&quot; target=&quot;_blank&quot;&gt;page&lt;/a&gt; with a &lt;code&gt;&amp;lt;plaintext&amp;gt;&lt;/code&gt; element.
 &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;However, &lt;code&gt;&amp;lt;xmp&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;tt&amp;gt;&lt;/code&gt;, used in a similar way, have closing tags &lt;xmp&gt;&lt;span id=&quot;xmp-element&quot;&gt;
+&lt;p&gt;However, &lt;code&gt;&amp;lt;xmp&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;tt&amp;gt;&lt;/code&gt;, used in a similar way, have closing tags &lt;xmp style=&quot;max-width: 100%; overflow: scroll; padding: 0.5rem 0; border: 1px solid #aaa; background-color: #eee;&quot;&gt;
 so they can be used here for displaying source code
-&lt;/span&gt;&lt;/xmp&gt; or text in a monospace font&lt;tt&gt;
+&lt;/xmp&gt; or text in a monospace font&lt;tt&gt;
 &lt;span id=&quot;tt-element&quot;&gt;as it would be shown on a teletype&lt;/span&gt;
 &lt;/tt&gt; without an &lt;code&gt;&amp;lt;iframe&amp;gt;&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;A few of the deprecated elements have just been replaced by newer additions to the spec. &lt;code&gt;&amp;lt;rb&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;rtc&amp;gt;&lt;/code&gt; were used for displaying pronunciation of East Asian characters, but it seems like the spec was simplified. Here is the example from MDN:&lt;/p&gt;
