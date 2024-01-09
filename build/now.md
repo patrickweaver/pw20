@@ -7,12 +7,10 @@ pageId: now
 
 <div class="section">
 
-### Aug 18, 2022: Simmering
+### Jan 8, 2024: Walking
 
-I’m currently working slowly on a few projects, more to come!
+I recently went on a low tide walk from Marshall’s beach in the Presidio to Fort Point at the base of the Golden Gate Bridge. The walk can only be completed at low tide because at other times the ocean reaches the cliffs along the edge of the beach.
 
-Here is some recently unearthed childhood art:
-
-![A photograph of a child’s painting](/images/now/childhood-art.jpg)
+![A photograph from under the Golden Gate Bridge](/images/now/bridge-dec-2023.jpg)
 
 </div>
