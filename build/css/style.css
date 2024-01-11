@@ -615,6 +615,77 @@ s::after {
   content: " [end of stricken text] ";
 }
 
+.tweet {
+  font-family: "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: rgb(15, 20, 25);
+}
+
+.tweet .tweet-kebob {
+  width: 34.75px;
+  height: 34.75px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 18.75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tweet .tweet-kebob:hover {
+  background-color: rgb(233, 245, 253);
+}
+
+.tweet .tweet-kebob svg {
+  width: 18.75px;
+  fill: rgb(83, 100, 113);
+}
+
+.tweet .tweet-header-container {
+  position: relative;
+}
+
+.tweet .tweet-header {
+  display: flex;
+}
+
+.tweet img {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  margin-right: 12px;
+  margin-top: 5px;
+}
+
+.tweet .display-name,
+.tweet .user-name {
+  text-decoration: none;
+  display: block;
+}
+
+.tweet .display-name {
+  font-weight: bold;
+  color: rgb(15, 20, 25);
+}
+
+.tweet .user-name {
+  margin-bottom: 2px;
+  line-height: 20px;
+  color: rgb(83, 100, 113);
+}
+
+.tweet .tweet-body {
+  color: rgb(15, 20, 25);
+  font-size: 17px;
+  margin: 12px 0 0;
+}
+
+.tweet time {
+  margin: 16px 0;
+  display: block;
+}
+
 @media (min-width: 800px) {
   .index-item-header {
     display: flex;
