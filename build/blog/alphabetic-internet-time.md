@@ -34,7 +34,7 @@ If AIT were to work it wouldn’t rely on people manually calculating the curren
 <figure style="text-align: center; width: 100%;">
   <iframe
       id="ait-clock"
-      style="border: 1px solid black; margin: 1rem auto;"
+      style="border: 1px solid black; margin: 1rem auto; height: 400px;"
       title="Alphabetic Internet Time Clock"
       width="400"
       height="400"
