@@ -20,7 +20,7 @@ Hello, I’m Patrick Weaver, this is my website. I’m an artist, programmer, wr
 I grew up in San Francisco, have a degree in Literature and Language Studies from the University of California, Santa Cruz, and lived in NYC on and off from 2009 to 2022 before moving back to SF.
 
 <address class="no-decoration-address">
-  You can reach me via email at <a href="mailto:hello.patrickw@gmail.com" target="_blank">hello.patrickw@gmail.com</a> or on Mastodon at <a href="https://mastodon.social/@patrickweaver" target="_blank">@patrickweaver@mastodon.social</a> and Twitter at <a href="https://twitter.com/patrickweave_r" target="_blank">@patrickweave_r</a>.
+  You can reach me via email at <a href="mailto:hello.patrickw@gmail.com" target="_blank">hello.patrickw@gmail.com</a> or on Mastodon at <a href="https://mastodon.social/@patrickweaver" target="_blank">@patrickweaver@mastodon.social</a>.
 </address>
 
 Here is a drawing of some shapes:
