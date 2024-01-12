@@ -619,6 +619,7 @@ s::after {
   font-family: "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 15px;
   color: rgb(15, 20, 25);
+  border: 1px solid var(--shadow);
 }
 
 .tweet .tweet-kebob {
@@ -650,23 +651,44 @@ s::after {
   display: flex;
 }
 
+.tweet .tweet-avatar-link {
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin-right: 12px;
+  position: relative;
+  top: 2px;
+}
+
 .tweet img {
   width: 40px;
   height: 40px;
   border-radius: 40px;
-  margin-right: 12px;
   margin-top: 5px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.03) inset;
+  position: relative;
+  top: -6px;
+}
+
+.tweet img:hover {
+  opacity: 0.55;
 }
 
 .tweet .display-name,
 .tweet .user-name {
   text-decoration: none;
   display: block;
+  line-height: 20px;
 }
 
 .tweet .display-name {
   font-weight: bold;
   color: rgb(15, 20, 25);
+}
+
+.tweet .display-name:hover {
+  text-decoration: underline;
 }
 
 .tweet .user-name {
@@ -682,7 +704,8 @@ s::after {
 }
 
 .tweet time {
-  margin: 16px 0;
+  color: rgb(83, 100, 113);
+  margin: 16px 0 0;
   display: block;
 }
 

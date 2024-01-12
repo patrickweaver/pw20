@@ -9,10 +9,11 @@ tags:
 
 <!-- markdownlint-disable MD033 MD013 -->
 <blockquote class="tweet">
-  
   <div class="tweet-header-container">
   <div class="tweet-header">
-    <img src="/images/twitter-avatar.jpg" alt="A picture of my face in front of a blue sky" />
+    <a href="" class="tweet-avatar-link">
+      <img src="/images/twitter-avatar.jpg" alt="A picture of my face in front of a blue sky" />
+    </a>
     <div class="user-info">
       <a href="" class="display-name">Patrick Weaver</a>
       <a href="" class="user-name">@patrickweave_r</a>
@@ -24,6 +25,22 @@ tags:
   </div>
   <p class="tweet-body">A website with a “dark mode” toggle that just switches all the adjectives to more sinister synonyms.</p>
   <time>8:51 PM · Jan 6, 2022</time>
+</blockquote>
+
+<blockquote class="tweet">
+  <div class="tweet-header-container">
+  <div class="tweet-header">
+    <a href="" class="tweet-avatar-link">
+      <img src="/images/twitter-avatar.jpg" alt="A picture of my face in front of a blue sky" />
+    </a>
+    <div class="user-info">
+      <a href="" class="display-name">Patrick Weaver</a>
+      <a href="" class="user-name">@patweaver</a>
+    </a>
+  </div>
+  </div>
+  <p class="tweet-body">Bike trip mini blog: twitter.com/patweaver</p>
+  <time>1:52 PM · Mar 9, 2009</time>
 </blockquote>
 
 <!-- markdownlint-enable -->
