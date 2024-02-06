@@ -535,6 +535,8 @@ blockquote.editors-note {
 
 .long-link {
   word-break: break-all;
+  font-size: 1rem;
+  line-height: 1.1rem;
 }
 
 .tag {
