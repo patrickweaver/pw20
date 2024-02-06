@@ -529,6 +529,14 @@ blockquote.editors-note {
   margin-top: 0;
 }
 
+.social-post {
+  font-style: italic;
+}
+
+.long-link {
+  word-break: break-all;
+}
+
 .tag {
   padding: 0.5rem;
   border-radius: 3px;
