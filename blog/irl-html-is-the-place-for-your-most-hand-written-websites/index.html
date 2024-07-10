@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Patrick Weaver</title>
+    
+    <base href="/blog/irl-html-is-the-place-for-your-most-hand-written-websites/" />
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <meta name="description" content="Patrick Weaver’s Website" />
+    <link id="favicon" rel="icon" href="/images/favicon.png" type="image/png" />
+    
+    <!-- Social -->
+      <meta property="og:title" content="IRL HTML Is the Place For Your Most Hand-Written Websites" />
+      <meta property="og:description" content="Patrick Weaver’s Website" />
+      <meta property="og:image" content="/images/blog/irl-html/irl-html-screenshot.png" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@patrickweave_r" />
+    <meta name="twitter:creator" content="@patrickweave_r" />
+      <meta name="twitter:title" content="IRL HTML Is the Place For Your Most Hand-Written Websites" />
+      <meta name="twitter:description" content="Patrick Weaver’s Website" />
+      <meta name="twitter:image" content="/images/blog/irl-html/irl-html-screenshot.png" />
+      <meta name="twitter:image:alt" content="A screenshot of the IRL HTML website" />
+    
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body onhashchange="footnoteScroll()">
+    <header>
+      <h1 id="site-title">
+        <a href="/">Patrick Weaver</a>
+      </h1>
+      
+      <nav>
+        <ul class="menu">
+          <li class="menu-about"><a href="/">About</a></li>
+          <li class="menu-blog"><a href="/blog">Blog</a></li>
+          <li class="menu-portfolio"><a href="/portfolio">Portfolio</a></li>
+          <li class="menu-now"><a href="/now">Now</a></li>
+          <li class="menu-links"><a href="/links">Links</a></li>
+        </ul>
+      </nav>
+      
+    </header>
+    <main>
+      <h2 class="page-header">
+        <a href="/blog">Blog</a>
+      </h2>
+      
+      <div class="post">
+        <article>
+          <header>
+            
+            <div class="post-date">
+              <time datetime="2024-02-5">
+                February 5, 2024
+              </time>
+            </div>
+            
+            <h3 class="post-title">
+              <a href="">
+                  IRL HTML Is the Place For Your Most Hand-Written Websites
+              </a>
+            </h3>
+            
+            
+            <div class="index-item-header">
+                  <div
+                    class="post-header-image full-width"
+                  >
+                    <a href="">
+                      <img
+                        class="index-item-header-image"
+                        src="/images/blog/irl-html/irl-html-screenshot.png"
+                        alt="A screenshot of the IRL HTML website"
+                        aria-label="Link to post for IRL HTML Is the Place For Your Most Hand-Written Websites"
+                      />
+                    </a>
+                  </div>
+            
+            </div>
+          </header>
+        
+          <p>Last year before <a href="https://html.energy">HTML Energy</a>'s <abbr title="HyperText Markup Language">HTML</abbr> Day in <a href="https://www.are.na/bay-area-95sssqibasq/w-s-www-gathering">San Francisco</a> I had the idea to iterate on some of my previous projects like <a href="https://www.patrickweaver.net/portfolio/whiteboard-email/">Whiteboard Email</a>, and make both an app that would do <abbr title="Optical character recognition">OCR</abbr> on HTML, and a website to host truly “hand-written” HTML. That became <a href="https://irlhtml.glitch.me/">IRL HTML</a> and it was good enough to make some <a href="https://irlhtml.glitch.me/pages/acc8607c-a5fc-4809-ad06-b048d6311fb2">very simple</a> websites!</p>
+<figure>
+<div style="display: flex; max-width: 100%; align-items: center;">
+  <img src="/images/blog/irl-html/simple-website.png" alt="A screenshot of a website made with IRL HTML. It says Park, With Grass" style="max-width: 50%; margin-right: 2.5px;" />
+  <img src="/images/blog/irl-html/notebook-park.jpg" alt="A photograph of the hand-written code for the website above in a notebook laying in grass." style="max-width: 50%; margin-left: 2.5px;" />
+</div>
+<figcaption>The published website and the hand written source code, we realized that some letters were more recognizable as upper case, some as lower case.</figcaption>
+</figure>
+<p>The first prototype of IRL HTML used <a href="https://tesseract.projectnaptha.com/">Tesseract.js</a> which is only reliable for typewritten text. Given my success with <a href="http://localhost:3000/portfolio/record-player/">album covers</a> I tried the Google Vision API, which worked well enough for <em>some</em> (carefully) hand-written HTML, but still made a lot of errors, which might prevent the page from rendering at all.</p>
+<p>A lot of the projects I’ve done over the years have used computer vision in creative ways, and I’ve always been searching for more reliable ways to have computers read hand-written text. At a <a href="https://www.recurse.com/">Recurse Center</a> meetup in SF in January 2024 someone suggested that the ChatGPT API might be capable of it. We made a <a href="https://irlhtml.glitch.me/pages/0e98570e-1c74-45b6-a8c4-664007fe8ba5">simple website on IRL HTML</a> to commemorate the occasion.</p>
+<p>To get ready for the <a href="https://html.energy/events.html">2024 HTML Day</a> I decided to update IRL HTML using both the ChatGPT and Anthropic Claude APIs. Both were able to read my hand-written HTML code surprisingly well! They do sometimes output text that isn’t really there (notice the <code>&lt;ul&gt;</code> tags were turned into <code>&lt;p&gt;</code> tags in the example below), and sometimes it adds some description of the output, which for this case isn’t useful. One benefit of the multi-modal nature of the LLMs is that I can inform the model that the output is supposed to be HTML, I can add instructions to fix any minor syntax errors. I could probably improve the accuracy even more by combining OCR methods, or making multiple requests to the LLMs.</p>
+<p>The prompt I’m using for both LLM APIs is:</p>
+<blockquote>
+<p><em>This is an image of a piece of paper with HTML code on it. If there are any syntax errors, fix them with the most likely valid HTML. Respond with just the HTML code property formatted, not wrapped in markdown or any description of what is in the response.</em></p>
+</blockquote>
+<p>There is probably some room to iterate on the prompt for better output, but the cycle of testing (especially with different hand-written code) is long and not free, so I may stick with what is working reasonably well.</p>
+<figure>
+<div style="display: flex; max-width: 100%; align-items: center;">
+  <img src="/images/blog/irl-html/about-irl-html-notebook.jpg" alt="A photograph of a notebook with hand-written HTML code for an “About IRL HTML” website"  style="max-width: 50%; margin-right: 2.5px;" />
+  <img src="/images/blog/irl-html/about-irl-html-website.png" alt="A screenshot of the website generated from the hand-written code above" style="max-width: 50%; margin-left: 2.5px;" />
+</div>
+<figcaption>More complex hand-written source code, and the webiste (with a picture of itself)</figcaption>
+</figure>
+<p>Overall, though I’m skeptical of the utility of LLMs more generally, it’s exciting to more easily and reliably make the kinds of quirky computer vision projects I’ve been dreaming of for a long time. I’d be interested in smaller handwriting OCR specific models that I might be able to run locally someday!</p>
+
+        </article>
+      </div>
+    </main>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-9178162-8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-9178162-8');
+    </script>
+    <script>
+      function footnoteScroll() {
+        const { hash } = window.location;
+        const id = hash.slice(1, hash.length);
+        const isFootnote = hash.includes("footnote");
+        const isReturnLink = isFootnote && hash.includes("link");
+        if (isFootnote && !isReturnLink) {
+          const footnote = document.getElementById(id);
+          console.log({ footnote })
+          if (!footnote) return;
+          footnote.style.borderColor = 'red';
+          setTimeout(() => {
+            footnote.style.transition = 'border-color 4s ease-in-out';
+            footnote.style.borderColor = '#00000000';
+          }, 1000);
+        }
+        scrollBy(0, -20);
+      }
+    </script>
+  </body>
+</html>
