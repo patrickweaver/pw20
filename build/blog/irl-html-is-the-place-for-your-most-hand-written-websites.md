@@ -1,7 +1,7 @@
 ---
 layout: layouts/blogPost.hbs
 title: "IRL HTML Is the Place For Your Most Hand-Written Websites"
-date: 2024-02-05
+date: 2024-07-10
 cover_image_url: /images/blog/irl-html/irl-html-screenshot.png
 cover_image_alt: A screenshot of the IRL HTML website
 tags:
