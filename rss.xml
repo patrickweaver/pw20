@@ -4,7 +4,7 @@
   <subtitle></subtitle>
   <link href="https://patrickweaver.net/feed.xml" rel="self"/>
   <link href="https://patrickweaver.net/blog/"/>
-  <updated>2024-02-05T00:00:00Z</updated>
+  <updated>2024-07-10T00:00:00Z</updated>
   <id>https://patrickweaver.net/</id>
   <author>
     <name>Patrick Weaver</name>
@@ -14,7 +14,7 @@
     <entry>
       <title>IRL HTML Is the Place For Your Most Hand-Written Websites</title>
       <link href="https://patrickweaver.net/blog/irl-html-is-the-place-for-your-most-hand-written-websites/"/>
-      <updated>2024-02-05T00:00:00Z</updated>
+      <updated>2024-07-10T00:00:00Z</updated>
       <id>https://patrickweaver.net/blog/irl-html-is-the-place-for-your-most-hand-written-websites/</id>
       <content type="html">&lt;p&gt;Last year before &lt;a href=&quot;https://html.energy/&quot;&gt;HTML Energy&lt;/a&gt;&#39;s &lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt; Day in &lt;a href=&quot;https://www.are.na/bay-area-95sssqibasq/w-s-www-gathering&quot;&gt;San Francisco&lt;/a&gt; I had the idea to iterate on some of my previous projects like &lt;a href=&quot;https://www.patrickweaver.net/portfolio/whiteboard-email/&quot;&gt;Whiteboard Email&lt;/a&gt;, and make both an app that would do &lt;abbr title=&quot;Optical character recognition&quot;&gt;OCR&lt;/abbr&gt; on HTML, and a website to host truly “hand-written” HTML. That became &lt;a href=&quot;https://irlhtml.glitch.me/&quot;&gt;IRL HTML&lt;/a&gt; and it was good enough to make some &lt;a href=&quot;https://irlhtml.glitch.me/pages/acc8607c-a5fc-4809-ad06-b048d6311fb2&quot;&gt;very simple&lt;/a&gt; websites!&lt;/p&gt;
 &lt;figure&gt;
