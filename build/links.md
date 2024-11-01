@@ -36,8 +36,8 @@ pageId: links
   <dl class="links">
     <dt>Bluesky:</dt>
     <dd>
-      <a href="https://bsky.app/profile/patrickweaver.bsky.social" target="_blank">
-        @patrickweaver.bsky.social
+      <a href="https://bsky.app/profile/patrickweaver.net" target="_blank">
+        @patrickweaver.net
       </a>
     </dd>
     <dt>DEV:</dt>
