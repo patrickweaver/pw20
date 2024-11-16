@@ -1,4 +1,5 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const handlebarsPlugin = require("@11ty/eleventy-plugin-handlebars");
 
 // Helpers:
 const generalHelpers = require("./helpers/general");
@@ -10,6 +11,7 @@ const embedHelpers = require("./helpers/embed");
 module.exports = function (eleventyConfig) {
   // Rss
   eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(handlebarsPlugin);
 
   // Merge data in .json files in directories with data in each file
   eleventyConfig.setDataDeepMerge(true);
@@ -48,7 +50,6 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addShortcode("shortUrl", portfolioHelpers.shortUrl);
   eleventyConfig.addShortcode("statusColor", portfolioHelpers.statusColor);
-  eleventyConfig.addShortcode("isProject", portfolioHelpers.isProject);
   eleventyConfig.addShortcode(
     "linkWithLineBreaks",
     portfolioHelpers.linkWithLineBreaks
