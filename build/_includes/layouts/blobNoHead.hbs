@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{>boilerplate/head}}
+  </head>
+  <body>
+    <main id="{{pageId}}">
+      <h2 class="page-header">
+        <a href="{{page.url}}">{{pageHeader}}</a>
+      </h2>
+      
+      <div class="blob">
+        {{{content}}}
+      </div>
+    </main>
+    {{>boilerplate/analytics}}
+  </body>
+</html>
