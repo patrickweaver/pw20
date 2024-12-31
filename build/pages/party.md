@@ -7,7 +7,7 @@ pageId: party
 
 <div style="height: 100vh; width: 100vw; background-image: url('/images/pages/party/sparklebackground.gif'); background-repeat: reapeat-y; color: white; position: absolute; left: 0; top: 0; padding: 2rem;">
 
-<h1 style="color: yellow">🕺 All 4s; 1964-2024 Top Hits</h1>
+<h1 style="color: yellow">🕺 All 4s: 1964-2024 Top Hits</h1>
 
 <marquee style="color: white">✨ ✨ Party ✨ ✨</marquee>
 
@@ -26,7 +26,7 @@ pageId: party
 
 <audio controls src="/files/All_4s_1964-2024-top-hits-merry-christmizzle_V2.mp3"></audio>
 
-<figcaption>🕺 All 4s; 1964-2024 Top Hits</figcaption>
+<figcaption>🕺 All 4s: 1964-2024 Top Hits</figcaption>
 </figure>
 </div>
 </div>
@@ -41,4 +41,4 @@ pageId: party
 
 <marquee style="color: pink">✨ ✨ Party ✨ ✨</marquee>
 
-</div>
+`</div>
