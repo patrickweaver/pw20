@@ -15,7 +15,7 @@ I’ve been working on a similar concept, starting in February 2020, on which pr
 <figure>
 
 <div style="text-align: center;">
-  <img src="/images/blog/nyc-subway/tv-screen-map.jpg" alt="A photograph of a TV in a subway station with the “paper” map displayed." style="max-height: 400px; margin: 0 auto;" />
+  <img src="/images/blog/nyc-subway/tv-screen-map.jpg" alt="A photograph of a TV in a subway station with the “paper” map displayed." style="width: auto; max-height: 400px; margin: 0 auto;" />
 </div>
 
 <figcaption>Subway station TV (This is not a good photo, but it’s hard to take a picture of a screen underground)</figcaption>
@@ -52,7 +52,7 @@ The subway real-time API doesn’t have latitude and longitude data because it i
 <figure>
 
 <div style="text-align: center;">
-  <img src="/images/blog/nyc-subway/prototype-diagram.png" alt="An early prototype diagram of G train positions." style="max-height: 400px; margin: 0 auto;" />
+  <img src="/images/blog/nyc-subway/prototype-diagram.png" alt="An early prototype diagram of G train positions." style="width: auto; max-height: 400px; margin: 0 auto;" />
 </div>
 
 <figcaption>A first prototype, still available at: <a href="https://nyc-subway-g.glitch.me/">nyc-subway-g.glitch.me</a></figcaption>
@@ -140,9 +140,9 @@ After trying to approach the parallel lines problem geometrically I was pointed 
 <figure>
 
 <div style="display: flex; max-width: 100%;">
-  <img src="/images/blog/nyc-subway/nyc-subway-f-g.jpg" alt="A screenshot of my map." style="max-height: 500px; max-width: 49%; margin: 0 auto;" />
+  <img src="/images/blog/nyc-subway/nyc-subway-f-g.jpg" alt="A screenshot of my map." style="width: auto; max-height: 500px; max-width: 49%; margin: 0 auto;" />
   <span style="width: 5px;"></span>
-  <img src="/images/blog/nyc-subway/mta-f-g.jpg" alt="A screenshot of the MTA map." style="max-height: 500px; max-width: 49%; margin: 0 auto;" />
+  <img src="/images/blog/nyc-subway/mta-f-g.jpg" alt="A screenshot of the MTA map." style="width: auto; max-height: 500px; max-width: 49%; margin: 0 auto;" />
 </div>
 
 <figcaption>Similar sections of my map and the MTA map</figcaption>
