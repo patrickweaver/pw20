@@ -2052,7 +2052,7 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 &lt;p&gt;I’ve been working on a similar concept, starting in February 2020, on which progress stalled once I stopped riding the subway regularly in March. But, when I started my batch at &lt;a href=&quot;https://www.recurse.com/&quot;&gt;Recurse Center&lt;/a&gt; I decided to pick up the project again. My inspiration for the map was the large TV screens that the MTA has installed in stations over the last few years, which frustratingly display the “paper” version of the map.&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;text-align: center;&quot;&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/nyc-subway/tv-screen-map.jpg&quot; alt=&quot;A photograph of a TV in a subway station with the “paper” map displayed.&quot; style=&quot;max-height: 400px; margin: 0 auto;&quot; /&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/nyc-subway/tv-screen-map.jpg&quot; alt=&quot;A photograph of a TV in a subway station with the “paper” map displayed.&quot; style=&quot;width: auto; max-height: 400px; margin: 0 auto;&quot; /&gt;
 &lt;/div&gt;
 &lt;figcaption&gt;Subway station TV (This is not a good photo, but it’s hard to take a picture of a screen underground)&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -2075,7 +2075,7 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 &lt;p&gt;The subway real-time API doesn’t have latitude and longitude data because it is designed to feed data to countdown clock style applications that show when the train will be at a specific station. One of the earliest features that I built into the real-time map was a way to translate these station-by-station countdown clocks into an approximation of the location of each train. My first attempt at this was to just show a list of stations and display an icon for a train between the names of the station it had been at previously and the station it was approaching.&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;text-align: center;&quot;&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/nyc-subway/prototype-diagram.png&quot; alt=&quot;An early prototype diagram of G train positions.&quot; style=&quot;max-height: 400px; margin: 0 auto;&quot; /&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/nyc-subway/prototype-diagram.png&quot; alt=&quot;An early prototype diagram of G train positions.&quot; style=&quot;width: auto; max-height: 400px; margin: 0 auto;&quot; /&gt;
 &lt;/div&gt;
 &lt;figcaption&gt;A first prototype, still available at: &lt;a href=&quot;https://nyc-subway-g.glitch.me/&quot;&gt;nyc-subway-g.glitch.me&lt;/a&gt;&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -2237,9 +2237,9 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 &lt;p&gt;After trying to approach the parallel lines problem geometrically I was pointed in the right direction by a fellow RC participant and was able to draw great looking lines by treating the Latitude/Longitude points in the shape arrays as vectors (More on this in my &lt;a href=&quot;https://doodles.patrickweaver.net/drawing-parallel-lines-on-a-map/&quot;&gt;interactive slides on this problem&lt;/a&gt; and more on the &lt;a href=&quot;https://medium.com/transit-app/how-we-built-the-worlds-prettiest-auto-generated-transit-maps-12d0c6fa502f&quot;&gt;challenge of drawing nice train lines from the Transit app&lt;/a&gt;).&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;display: flex; max-width: 100%;&quot;&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/nyc-subway/nyc-subway-f-g.jpg&quot; alt=&quot;A screenshot of my map.&quot; style=&quot;max-height: 500px; max-width: 49%; margin: 0 auto;&quot; /&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/nyc-subway/nyc-subway-f-g.jpg&quot; alt=&quot;A screenshot of my map.&quot; style=&quot;width: auto; max-height: 500px; max-width: 49%; margin: 0 auto;&quot; /&gt;
   &lt;span style=&quot;width: 5px;&quot;&gt;&lt;/span&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/nyc-subway/mta-f-g.jpg&quot; alt=&quot;A screenshot of the MTA map.&quot; style=&quot;max-height: 500px; max-width: 49%; margin: 0 auto;&quot; /&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/nyc-subway/mta-f-g.jpg&quot; alt=&quot;A screenshot of the MTA map.&quot; style=&quot;width: auto; max-height: 500px; max-width: 49%; margin: 0 auto;&quot; /&gt;
 &lt;/div&gt;
 &lt;figcaption&gt;Similar sections of my map and the MTA map&lt;/figcaption&gt;
 &lt;/figure&gt;
