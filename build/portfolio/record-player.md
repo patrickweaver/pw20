@@ -27,7 +27,7 @@ Record Player is a Rube Goldberg Machine of the Google Cloud Vision API and the 
 
 - [Pitchfork: 'New App Is Basically Shazam for Album Covers'](https://pitchfork.com/news/new-app-is-basically-shazam-for-album-covers/)
 
-- [Paste Magazine: 'New App Automatically Recognizes Album Covers'](https://www.pastemagazine.com/articles/2018/05/new-app-automatically-recognizes-album-covers.html)
+- [Paste Magazine: 'New App Automatically Recognizes Album Covers'](https://web.archive.org/web/20190701181704/https://www.pastemagazine.com/articles/2018/05/new-app-automatically-recognizes-album-covers.html)
 
 <figure>
 <video controls width=540>
