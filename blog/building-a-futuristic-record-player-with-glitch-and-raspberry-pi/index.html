@@ -130,7 +130,8 @@
 <p>For the second time I was pleasantly surprised that by finding the right tools, a proof of concept was much easier than I expected. Using a Raspberry Pi with a camera module attached made a simple way to capture images. This left only the challenge of identifying when to start playing music. At first I thought that this might be easy to do by taking advantage of Google’s advanced image processing again, but I realized that the cost of the Google Vision API queries (you only get a certain amount free per month) would be prohibitive if I wanted the device to respond automatically.</p>
 <p>I decided to see if a simple algorithm running on the Raspberry Pi could identify when something new was placed in front of the camera, which seemed to work well enough. Connecting this to a slightly modified version of the Node.js server that runs the original Record Player Glitch app created exactly the machine I had imagined. The video below shows my “Record Player” automatically starting playback when it sees a record cover. This prototype has screens, but they’re only used to start the app and troubleshoot.</p>
 <figure>
-  <iframe src="https://player.vimeo.com/video/288443309" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <video controls width=540>
+  <source src="/images/portfolio/record-player/record-player-rpi-540p.mp4" type="video/mp4"></video>
   <figcaption>A video of the Record Player machine running on a Raspberry Pi</figcaption>
 </figure>
 <p>Anil’s suggestion for using “Record Player” when he shared the Glitch app, was to see what song came up when you take a selfie, or “Shazam for your face” as he put it. Of course this was hilarious, and this is the kind of play and dynamic interactions that can happen when we start to break down the strict parameters and physical barriers that currently constrain our interactions with technology.</p>
