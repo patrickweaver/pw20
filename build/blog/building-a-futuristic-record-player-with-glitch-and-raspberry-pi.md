@@ -77,7 +77,8 @@ For the second time I was pleasantly surprised that by finding the right tools, 
 I decided to see if a simple algorithm running on the Raspberry Pi could identify when something new was placed in front of the camera, which seemed to work well enough. Connecting this to a slightly modified version of the Node.js server that runs the original Record Player Glitch app created exactly the machine I had imagined. The video below shows my “Record Player” automatically starting playback when it sees a record cover. This prototype has screens, but they’re only used to start the app and troubleshoot.
 
 <figure>
-  <iframe src="https://player.vimeo.com/video/288443309" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <video controls width=540>
+  <source src="/images/portfolio/record-player/record-player-rpi-540p.mp4" type="video/mp4"></video>
   <figcaption>A video of the Record Player machine running on a Raspberry Pi</figcaption>
 </figure>
 

@@ -29,4 +29,8 @@ Record Player is a Rube Goldberg Machine of the Google Cloud Vision API and the 
 
 - [Paste Magazine: 'New App Automatically Recognizes Album Covers'](https://www.pastemagazine.com/articles/2018/05/new-app-automatically-recognizes-album-covers.html)
 
-<iframe src="https://player.vimeo.com/video/288443309" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<figure>
+<video controls width=540>
+<source src="/images/portfolio/record-player/record-player-rpi-540p.mp4" type="video/mp4"></video>
+<figcaption>A video demoing the project on a Raspberry Pi</figcaption>
+</figure>
