@@ -43,9 +43,7 @@ I decided that the best way to do this was a [bookmarklet](https://support.mozil
 
 #### Great! Tell me how to do it!
 
-To get started you’ll have to "install" the bookmarklet. This is easy to do, and just means dragging a button into your bookmarks toolbar. [I’ve hosted it on Glitch here](https://gdoc-image-dl.glitch.me/). You can even drag it straight from one of the buttons on the embed below:
-
-{% glitch 'gdoc-image-dl' 'app' %}
+To get started you’ll have to "install" the bookmarklet. This is easy to do, and just means dragging a button into your bookmarks toolbar. [I’ve hosted it here](https://doodles.patrickweaver.net/gdoc-image-dl).
 
 The instructions are simple!
 

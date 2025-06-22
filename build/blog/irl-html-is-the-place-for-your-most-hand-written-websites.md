@@ -7,7 +7,7 @@ cover_image_alt: A screenshot of the IRL HTML website
 tags:
 ---
 
-Last year before [HTML Energy](https://html.energy)'s <abbr title="HyperText Markup Language">HTML</abbr> Day in [San Francisco](https://www.are.na/bay-area-95sssqibasq/w-s-www-gathering) I had the idea to iterate on some of my previous projects like [Whiteboard Email](https://www.patrickweaver.net/portfolio/whiteboard-email/), and make both an app that would do <abbr title="Optical character recognition">OCR</abbr> on HTML, and a website to host truly “hand-written” HTML. That became [IRL HTML](https://irlhtml.glitch.me/) and it was good enough to make some [very simple](https://irlhtml.glitch.me/pages/acc8607c-a5fc-4809-ad06-b048d6311fb2) websites!
+Last year before [HTML Energy](https://html.energy)'s <abbr title="HyperText Markup Language">HTML</abbr> Day in [San Francisco](https://www.are.na/bay-area-95sssqibasq/w-s-www-gathering) I had the idea to iterate on some of my previous projects like [Whiteboard Email](https://www.patrickweaver.net/portfolio/whiteboard-email/), and make both an app that would do <abbr title="Optical character recognition">OCR</abbr> on HTML, and a website to host truly “hand-written” HTML. That became [IRL HTML](https://doodles.patrickweaver.net/irl-html/) and it was good enough to make some [very simple](https://doodles.patrickweaver.net/irl-html/pages/acc8/) websites!
 
 <figure>
 
@@ -20,9 +20,9 @@ Last year before [HTML Energy](https://html.energy)'s <abbr title="HyperText Mar
 
 </figure>
 
-The first prototype of IRL HTML used [Tesseract.js](https://tesseract.projectnaptha.com/) which is only reliable for typewritten text. Given my success with [album covers](http://localhost:3000/portfolio/record-player/) I tried the Google Vision API, which worked well enough for _some_ (carefully) hand-written HTML, but still made a lot of errors, which might prevent the page from rendering at all.
+The first prototype of IRL HTML used [Tesseract.js](https://tesseract.projectnaptha.com/) which is only reliable for typewritten text. Given my success with [album covers](https://www.patrickweaver.net/portfolio/record-player/) I tried the Google Vision API, which worked well enough for _some_ (carefully) hand-written HTML, but still made a lot of errors, which might prevent the page from rendering at all.
 
-A lot of the projects I’ve done over the years have used computer vision in creative ways, and I’ve always been searching for more reliable ways to have computers read hand-written text. At a [Recurse Center](https://www.recurse.com/) meetup in SF in January 2024 someone suggested that the ChatGPT API might be capable of it. We made a [simple website on IRL HTML](https://irlhtml.glitch.me/pages/0e98570e-1c74-45b6-a8c4-664007fe8ba5) to commemorate the occasion.
+A lot of the projects I’ve done over the years have used computer vision in creative ways, and I’ve always been searching for more reliable ways to have computers read hand-written text. At a [Recurse Center](https://www.recurse.com/) meetup in SF in January 2024 someone suggested that the ChatGPT API might be capable of it. We made a [simple website on IRL HTML](https://doodles.patrickweaver.net/irl-html/pages/0e98/) to commemorate the occasion.
 
 To get ready for the [2024 HTML Day](https://html.energy/events.html) I decided to update IRL HTML using both the ChatGPT and Anthropic Claude APIs. Both were able to read my hand-written HTML code surprisingly well! They do sometimes output text that isn’t really there (notice the `<ul>` tags were turned into `<p>` tags in the example below), and sometimes it adds some description of the output, which for this case isn’t useful. One benefit of the multi-modal nature of the LLMs is that I can inform the model that the output is supposed to be HTML, I can add instructions to fix any minor syntax errors. I could probably improve the accuracy even more by combining OCR methods, or making multiple requests to the LLMs.
 

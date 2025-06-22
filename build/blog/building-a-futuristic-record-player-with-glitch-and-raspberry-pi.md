@@ -7,20 +7,13 @@ cover_image_alt: A screenshot of the app
 tags:
 ---
 
-Earlier this year I wanted to explore the new [async/await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/async_function) functionality in Javascript so I started playing around with [a project](https://async-await-machine.glitch.me/) on Glitch ([glitch.com](https://glitch.com/)) that would call one API after another, then generate new API call options from each cycle. I compiled a long list of potential APIs to use, but didn’t get past chaining together an [API that will respond with a picture of a specific breed of dog](https://dog.ceo/dog-api/), and the [Wikipedia API](https://www.mediawiki.org/wiki/API:Main_page) which could respond with the pages that came up in a search for the name of the breed.
+Earlier this year I wanted to explore the new [async/await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/async_function) functionality in Javascript so I started playing around with a project on Glitch ([glitch.com](https://web.archive.org/web/20180329051834/https://glitch.com/)) that would call one API after another, then generate new API call options from each cycle. I compiled a long list of potential APIs to use, but didn’t get past chaining together an [API that will respond with a picture of a specific breed of dog](https://dog.ceo/dog-api/), and the [Wikipedia API](https://www.mediawiki.org/wiki/API:Main_page) which could respond with the pages that came up in a search for the name of the breed.
 
 <figure>
 
-<div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
-  <iframe
-    allow="geolocation; microphone; camera; midi; encrypted-media"
-    src="https://glitch.com/embed/#!/embed/async-await-machine?path=README.md&previewSize=100"
-    alt="async-await-machine on Glitch"
-    style="height: 100%; width: 100%; border: 0;">
-  </iframe>
-</div>
+<img src="/images/blog/record-player/async-await-machine.png" alt="A screenshot of the app.">
 
-<figcaption>A Glitch embed of my Dog → Wikipedia API prototype: click on the name of a dog and you will get a picture of that dog, and a list of pages linked from that dog’s Wikipedia page.</figcaption>
+<figcaption>A screenshot of my Dog → Wikipedia API prototype: click on the name of a dog and you will get a picture of that dog, and a list of pages linked from that dog’s Wikipedia page.</figcaption>
 
 </figure>
 
@@ -32,37 +25,33 @@ While thinking through this an idea jumped out at me. I could connect the Google
 
 I decided that this spark of an idea was already a lot more interesting than my infinite API art project, but it still had the Rube Goldberg-esque quality I was going for. Even so, I still might have abandoned it without a tool like Glitch, which to me says, “your wacky idea is worth making (and it won’t take very long).” Using the skeleton of my previous project, I was able to put together (in about an hour) an app that bounced an image off of the Google Vision API then brought up search results from Spotify. I sent it to a friend who works at Spotify, and when she confirmed that it didn’t already exist I decided to spend a few hours putting together a more polished version (the hardest part turned out to be drag and drop file upload).
 
-Thanks to Glitch’s embed feature you can take a look at the app (and the code!) below:
-
 <figure>
 
-<div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
-  <iframe
-    allow="geolocation; microphone; camera; midi; encrypted-media"
-    src="https://glitch.com/embed/#!/embed/record-player?path=README.md&previewSize=100"
-    alt="record-player on Glitch"
-    style="height: 100%; width: 100%; border: 0;">
-  </iframe>
-</div>
+<img src="/images/blog/record-player/app-screenshot.png">
 
-<figcaption>A Glitch embed of the Record Player app</figcaption>
+<figcaption>A screenshot of the Record Player app</figcaption>
 
 </figure>
 
-The ‘final’ version of the project, “[Record Player](http://record-player.glitch.me/)” was surprisingly simple. When given a reasonably well lit image of an even somewhat popular album the Google Vision API is able to identify the name of the album (occasionally just the artist). There were a few words I hard coded to ignore (things like “vinyl”, “cd”, or “import”), but other than that I was able to send Google Vision’s “best guess” to Spotify, and play the first result. I designed a goofy front end (with every music related emoji) and shared it on Twitter thinking that a few people would try it.
+The ‘final’ version of the project, “[Record Player](https://github.com/patrickweaver/record-player)” was surprisingly simple. When given a reasonably well lit image of an even somewhat popular album the Google Vision API is able to identify the name of the album (occasionally just the artist). There were a few words I hard coded to ignore (things like “vinyl”, “cd”, or “import”), but other than that I was able to send Google Vision’s “best guess” to Spotify, and play the first result. I designed a goofy front end (with every music related emoji) and shared it on Twitter thinking that a few people would try it.
 
 <figure>
 
-<div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
-  <iframe
-    allow="geolocation; microphone; camera; midi; encrypted-media"
-    src="https://glitch.com/embed/#!/embed/record-player?path=censoredWords.js&previewSize=0"
-    alt="record-player on Glitch"
-    style="height: 100%; width: 100%; border: 0;">
-  </iframe>
-</div>
+<pre>
+  const censoredWords = [
+    "album",
+    "cover",
+    "vinyl",
+    "usa",
+    "import",
+    "lp",
+    "cd",
+    "soundtrack",
+    "german import",
+  ];
+</pre>
 
-<figcaption>A Glitch embed with my surprisingly short list of censored words</figcaption>
+<figcaption>A code snippet with the censored words array</figcaption>
 
 </figure>
 
@@ -94,8 +83,8 @@ Throw a song at Google Maps to see where it was recorded? Pass a Yelp page to th
 
 Products like [Glitch](https://glitch.com/), [Raspberry Pi](https://www.raspberrypi.org/), [IFTTT](https://ifttt.com/), [Shortcuts](https://support.apple.com/guide/shortcuts/welcome/ios), and the inspiration for the Raspberry Pi Record Player, [Dynamicland](https://dynamicland.org/) make a more interesting and open future seem possible, now we just need to build the rest of it.
 
-Start now by remixing Record Player on Glitch:
-[https://glitch.com/~record-player](https://glitch.com/~record-player)
+Start now by trying out Record Player on GitHub:
+[github.com/patrickweaver/record-player](https://github.com/patrickweaver/record-player)
 
 Or make your own Raspberry Pi powered version:
 [https://github.com/patrickweaver/record-player-rpi](https://github.com/patrickweaver/record-player-rpi)

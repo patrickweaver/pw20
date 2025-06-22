@@ -6,9 +6,8 @@ cover_image_alt: A screenshot of a prototype interface for the game
 short_description: A multiplayer online version of the card game spades with bot players.
 start_date: 2017-03-09
 end_date:
-project_url: http://spades.glitch.me/
 source_url: https://github.com/patrickweaver/spades
-status: Paused
+status: Archived
 tags:
   - Paused
   - flask
