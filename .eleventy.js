@@ -58,7 +58,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("readMore", blogHelpers.readMore);
 
   eleventyConfig.addShortcode("twitter", embedHelpers.twitter);
-  eleventyConfig.addShortcode("glitch", embedHelpers.glitch);
 
   // In progress, create custom start_date, end_date filter
   eleventyConfig.addCollection(

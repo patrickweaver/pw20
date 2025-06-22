@@ -91,17 +91,15 @@ I’ve also found it’s a best practice to create a new bucket for each of the 
 
 #### A simple example app
 
-Congratulations! You are done with the AWS setup, now you can work on your app. I have a simple and heavily commented [example app](https://aws-s3-example.glitch.me) I use to add this functionality to new projects:
+Congratulations! You are done with the AWS setup, now you can work on your app. I have a simple and heavily commented [example app](https://github.com/patrickweaver/aws-s3-example) I use to add this functionality to new projects:
 
-<!-- Copy and Paste Me -->
-<div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
-  <iframe
-    src="https://glitch.com/embed/#!/embed/aws-s3-example?path=package.json&previewSize=100"
-    title="aws-s3-example on Glitch"
-    allow="geolocation; microphone; camera; midi; vr; encrypted-media"
-    style="height: 100%; width: 100%; border: 0;">
-  </iframe>
-</div>
+<figure>
+
+<img src="/images/blog/aws/app-screenshot.png" alt="A screenshot of the app">
+
+<figcaption>A screenshot of the app</figcaption>
+
+</figure>
 
 The app is a Node.js app using Express. It uses 3 additional packages. [https://www.npmjs.com/package/aws-sdk](aws-sdk) adds functionality to communicate with S3, [https://www.npmjs.com/package/uuid](uuid) is used for object names in S3, and [https://www.npmjs.com/package/multer]multer is used to process file upload to the server before passing it to S3.
 
@@ -347,4 +345,4 @@ async function getSignedUrl(key) {
 
 <!-- markdownlint-enable no-duplicate-heading -->
 
-That’s it! Try out the app (in this example uploads are limited in size to 4KB for safety). You can [remix the app on Glitch](https://glitch.com/edit/#!/aws-s3-example) or [fork it on GitHub](https://github.com/patrickweaver/aws-s3-example)
+That’s it! Try out the app (in this example uploads are limited in size to 4KB for safety). You can [fork the app on GitHub](https://github.com/patrickweaver/aws-s3-example)

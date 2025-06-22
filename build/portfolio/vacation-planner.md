@@ -6,7 +6,7 @@ cover_image_alt: A screenshot of the app
 short_description: A visual calendar that helps map out how to use vacation time.
 start_date: 2019-05-21
 end_date: 2019-10-16
-project_url: https://wintercal.glitch.me
+project_url: https://doodles.patrickweaver.net/vacation-planner
 source_url: https://github.com/patrickweaver/vacation-planner
 status: Complete
 tags:

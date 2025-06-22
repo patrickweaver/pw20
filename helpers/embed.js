@@ -6,23 +6,6 @@ function twitter(tweetId) {
   );
 }
 
-function glitch(glitchId, type) {
-  if (type === "app") {
-    return `
-          <div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
-            <iframe
-              src="https://glitch.com/embed/#!/embed/${glitchId}?path=README.md&previewSize=100"
-              title="An App on Glitch"
-              allow="geolocation; microphone; camera; midi; encrypted-media; xr-spatial-tracking; fullscreen"
-              allowFullScreen
-              style="height: 100%; width: 100%; border: 0;">
-            </iframe>
-          </div>
-        `;
-  }
-}
-
 module.exports = {
   twitter,
-  glitch,
 };

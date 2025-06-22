@@ -52,10 +52,10 @@ The subway real-time API doesn’t have latitude and longitude data because it i
 <figure>
 
 <div style="text-align: center;">
-  <img src="/images/blog/nyc-subway/prototype-diagram.png" alt="An early prototype diagram of G train positions." style="width: auto; max-height: 400px; margin: 0 auto;" />
+  <img src="/images/blog/nyc-subway/g-line.png" alt="An early prototype diagram of G train positions." style="width: auto; max-height: 400px; margin: 0 auto;" />
 </div>
 
-<figcaption>A first prototype, still available at: <a href="https://nyc-subway-g.glitch.me/">nyc-subway-g.glitch.me</a></figcaption>
+<figcaption>A first prototype</figcaption>
 
 </figure>
 
@@ -151,7 +151,7 @@ After trying to approach the parallel lines problem geometrically I was pointed 
 
 #### A Prototype
 
-My map is online at [nyc-subway.glitch.me](https://nyc-subway.glitch.me/), bugs and all. I did most of the work on the map using only the G train API endpoint. This was a helpful limitation when I was first experimenting with what was possible using the data, but may have led to more bugs because of the slight differences in the data available for each set of lines.
+My map project is available on [GitHub](https://github.com/patrickweaver/nyc-subway/tree/971c538eb5de9ac524fa1db8656ddd9febd6f0e5), bugs and all. I did most of the work on the map using only the G train API endpoint. This was a helpful limitation when I was first experimenting with what was possible using the data, but may have led to more bugs because of the slight differences in the data available for each set of lines.
 
 A common complaint about the new official real-time map is that it seems to use as much computer power as it can. My map isn’t much better because it is doing all of the geographic calculations in the user’s browser, my guess is that the MTA’s map is also. One update I might take on over the next week and a half as my time at RC winds down is moving these calculations to a server, and sending only train position changes to the map visualization. This may also help with the bug my current prototype exhibits where leaving and coming back to the tab a few minutes later will cause trains to fly around the map without regard for the lines or stations.
 

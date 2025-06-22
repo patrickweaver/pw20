@@ -6,8 +6,8 @@ cover_image_alt: A screenshot of the game
 short_description: A beach themed minesweeper clone made with React.
 start_date: 2018-03-28
 end_date: 2018-03-30
-project_url: https://beachcomber.glitch.me
-source_url: https://glitch.com/edit/#!/beachcomber
+project_url: https://doodles.patrickweaver.net/beachcomber/
+source_url: https://github.com/patrickweaver/beachcomber
 status: Complete
 tags:
   - Complete

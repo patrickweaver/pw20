@@ -6,9 +6,8 @@ cover_image_alt: A screenshot of the app
 short_description: A collaborative web app to document closed and shut down small businesses in NYC.
 start_date: 2019-11-12
 end_date: 2019-12-04
-project_url: https://lostnyc-staging.glitch.me
 source_url: https://github.com/patrickweaver/lostnyc
-status: Paused
+status: Archived
 tags:
   - Paused
   - javascript

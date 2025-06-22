@@ -6,9 +6,8 @@ cover_image_alt: A screenshot of the app
 short_description: An experiment with the Trello API that will create boards for your existing Glitch projects.
 start_date: 2018-04-01
 end_date: 2018-04-02
-project_url: https://glitch-to-trello.glitch.me
 source_url: https://github.com/patrickweaver/glitch-to-trello
-status: Complete
+status: Archived
 tags:
   - Complete
   - coffeescript
