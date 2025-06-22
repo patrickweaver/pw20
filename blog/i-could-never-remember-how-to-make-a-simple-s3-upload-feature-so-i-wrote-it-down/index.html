@@ -162,16 +162,11 @@
 <p><img src="https://dev-to-uploads.s3.amazonaws.com/i/3rqbznl2dlvif555eorn.png" alt="A screenshot of the attach policy section of the create user screen"></p>
 <!-- markdownlint-enable ol-prefix -->
 <h4>A simple example app</h4>
-<p>Congratulations! You are done with the AWS setup, now you can work on your app. I have a simple and heavily commented <a href="https://aws-s3-example.glitch.me">example app</a> I use to add this functionality to new projects:</p>
-<!-- Copy and Paste Me -->
-<div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
-  <iframe
-    src="https://glitch.com/embed/#!/embed/aws-s3-example?path=package.json&previewSize=100"
-    title="aws-s3-example on Glitch"
-    allow="geolocation; microphone; camera; midi; vr; encrypted-media"
-    style="height: 100%; width: 100%; border: 0;">
-  </iframe>
-</div>
+<p>Congratulations! You are done with the AWS setup, now you can work on your app. I have a simple and heavily commented <a href="https://github.com/patrickweaver/aws-s3-example">example app</a> I use to add this functionality to new projects:</p>
+<figure>
+<img src="/images/blog/aws/app-screenshot.png" alt="A screenshot of the app">
+<figcaption>A screenshot of the app</figcaption>
+</figure>
 <p>The app is a Node.js app using Express. It uses 3 additional packages. <a href="aws-sdk">https://www.npmjs.com/package/aws-sdk</a> adds functionality to communicate with S3, <a href="uuid">https://www.npmjs.com/package/uuid</a> is used for object names in S3, and [https://www.npmjs.com/package/multer]multer is used to process file upload to the server before passing it to S3.</p>
 <p>The index page is a plain HTML file, but there are two POST routes in server.js: <code>/upload-image-form</code> and <code>/upload-image-async</code>. The two routes are mostly the same, but are repeated for easy copying.</p>
 <p>Lines 1 through 24 of server.js are setting up the dependencies:</p>
@@ -376,7 +371,7 @@ async function getSignedUrl(key) {
 }
 </code></pre>
 <!-- markdownlint-enable no-duplicate-heading -->
-<p>That’s it! Try out the app (in this example uploads are limited in size to 4KB for safety). You can <a href="https://glitch.com/edit/#!/aws-s3-example">remix the app on Glitch</a> or <a href="https://github.com/patrickweaver/aws-s3-example">fork it on GitHub</a></p>
+<p>That’s it! Try out the app (in this example uploads are limited in size to 4KB for safety). You can <a href="https://github.com/patrickweaver/aws-s3-example">fork the app on GitHub</a></p>
 
         </article>
       </div>

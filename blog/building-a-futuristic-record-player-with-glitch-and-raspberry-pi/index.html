@@ -84,45 +84,35 @@
             </div>
           </header>
         
-          <p>Earlier this year I wanted to explore the new <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/async_function">async/await</a> functionality in Javascript so I started playing around with <a href="https://async-await-machine.glitch.me/">a project</a> on Glitch (<a href="https://glitch.com/">glitch.com</a>) that would call one API after another, then generate new API call options from each cycle. I compiled a long list of potential APIs to use, but didn’t get past chaining together an <a href="https://dog.ceo/dog-api/">API that will respond with a picture of a specific breed of dog</a>, and the <a href="https://www.mediawiki.org/wiki/API:Main_page">Wikipedia API</a> which could respond with the pages that came up in a search for the name of the breed.</p>
+          <p>Earlier this year I wanted to explore the new <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/async_function">async/await</a> functionality in Javascript so I started playing around with a project on Glitch (<a href="https://web.archive.org/web/20180329051834/https://glitch.com/">glitch.com</a>) that would call one API after another, then generate new API call options from each cycle. I compiled a long list of potential APIs to use, but didn’t get past chaining together an <a href="https://dog.ceo/dog-api/">API that will respond with a picture of a specific breed of dog</a>, and the <a href="https://www.mediawiki.org/wiki/API:Main_page">Wikipedia API</a> which could respond with the pages that came up in a search for the name of the breed.</p>
 <figure>
-<div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
-  <iframe
-    allow="geolocation; microphone; camera; midi; encrypted-media"
-    src="https://glitch.com/embed/#!/embed/async-await-machine?path=README.md&previewSize=100"
-    alt="async-await-machine on Glitch"
-    style="height: 100%; width: 100%; border: 0;">
-  </iframe>
-</div>
-<figcaption>A Glitch embed of my Dog → Wikipedia API prototype: click on the name of a dog and you will get a picture of that dog, and a list of pages linked from that dog’s Wikipedia page.</figcaption>
+<img src="/images/blog/record-player/async-await-machine.png" alt="A screenshot of the app.">
+<figcaption>A screenshot of my Dog → Wikipedia API prototype: click on the name of a dog and you will get a picture of that dog, and a list of pages linked from that dog’s Wikipedia page.</figcaption>
 </figure>
 <p>I started exploring what other APIs I could connect and realized that most of them seemed to enforce a relatively strict internal type system. Even from the many connections Wikipedia could provide it was hard to think of a potential next link that would always match up with the mishmash Wikipedia returned. While it might be easy to match up the Google Maps API to a weather API, connecting more abstract concepts was much more difficult.</p>
 <h4>The ‘Record Player’ app</h4>
 <p>While thinking through this an idea jumped out at me. I could connect the Google Vision API to Spotify to find albums based on pictures of a record cover. The idea seemed so obvious that I figured someone else had already done it (with more thorough research later I found a few similar projects but none that were fully implemented).</p>
 <p>I decided that this spark of an idea was already a lot more interesting than my infinite API art project, but it still had the Rube Goldberg-esque quality I was going for. Even so, I still might have abandoned it without a tool like Glitch, which to me says, “your wacky idea is worth making (and it won’t take very long).” Using the skeleton of my previous project, I was able to put together (in about an hour) an app that bounced an image off of the Google Vision API then brought up search results from Spotify. I sent it to a friend who works at Spotify, and when she confirmed that it didn’t already exist I decided to spend a few hours putting together a more polished version (the hardest part turned out to be drag and drop file upload).</p>
-<p>Thanks to Glitch’s embed feature you can take a look at the app (and the code!) below:</p>
 <figure>
-<div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
-  <iframe
-    allow="geolocation; microphone; camera; midi; encrypted-media"
-    src="https://glitch.com/embed/#!/embed/record-player?path=README.md&previewSize=100"
-    alt="record-player on Glitch"
-    style="height: 100%; width: 100%; border: 0;">
-  </iframe>
-</div>
-<figcaption>A Glitch embed of the Record Player app</figcaption>
+<img src="/images/blog/record-player/app-screenshot.png">
+<figcaption>A screenshot of the Record Player app</figcaption>
 </figure>
-<p>The ‘final’ version of the project, “<a href="http://record-player.glitch.me/">Record Player</a>” was surprisingly simple. When given a reasonably well lit image of an even somewhat popular album the Google Vision API is able to identify the name of the album (occasionally just the artist). There were a few words I hard coded to ignore (things like “vinyl”, “cd”, or “import”), but other than that I was able to send Google Vision’s “best guess” to Spotify, and play the first result. I designed a goofy front end (with every music related emoji) and shared it on Twitter thinking that a few people would try it.</p>
+<p>The ‘final’ version of the project, “<a href="https://github.com/patrickweaver/record-player">Record Player</a>” was surprisingly simple. When given a reasonably well lit image of an even somewhat popular album the Google Vision API is able to identify the name of the album (occasionally just the artist). There were a few words I hard coded to ignore (things like “vinyl”, “cd”, or “import”), but other than that I was able to send Google Vision’s “best guess” to Spotify, and play the first result. I designed a goofy front end (with every music related emoji) and shared it on Twitter thinking that a few people would try it.</p>
 <figure>
-<div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
-  <iframe
-    allow="geolocation; microphone; camera; midi; encrypted-media"
-    src="https://glitch.com/embed/#!/embed/record-player?path=censoredWords.js&previewSize=0"
-    alt="record-player on Glitch"
-    style="height: 100%; width: 100%; border: 0;">
-  </iframe>
-</div>
-<figcaption>A Glitch embed with my surprisingly short list of censored words</figcaption>
+<pre>
+  const censoredWords = [
+    "album",
+    "cover",
+    "vinyl",
+    "usa",
+    "import",
+    "lp",
+    "cd",
+    "soundtrack",
+    "german import",
+  ];
+</pre>
+<figcaption>A code snippet with the censored words array</figcaption>
 </figure>
 <p><a href="https://twitter.com/anildash/">Anil Dash</a> unexpectedly shared, and quickly it it started showing up <a href="https://pitchfork.com/news/new-app-is-basically-shazam-for-album-covers/">in</a> <a href="https://www.pastemagazine.com/articles/2018/05/new-app-automatically-recognizes-album-covers.html">a</a> <a href="https://www.nme.com/news/music/app-album-cover-shazam-2306795">lot</a> <a href="https://www.engadget.com/2018/05/04/record-player-app-image-based-spotify-search/">of</a> <a href="https://www.altpress.com/news/app_matches_album_covers_spotify/">strange</a> <a href="https://www.androidauthority.com/record-player-spotify-google-861977/">corners</a> <a href="https://www.rollingstone.it/musica/news-musica/ora-esiste-uno-shazam-per-le-copertine-degli-album/410773/">of</a> <a href="https://lifehacker.com/stream-a-vinyl-album-by-snapping-a-pic-of-its-cover-art-1825800020">the</a> <a href="https://www.thecurrent.org/feature/2018/05/02/app-album-covers">internet</a>. I was flattered by the coverage, but a few people were pointing out, “why would you take a picture instead of just typing in the name of the album?” First of all, it’s fun, which should be reason enough. But beyond that, there’s really no reason to right now, there are too many barriers and restrictions in place in the tools we use every day like Spotify and Google, that making a mashup like this will usually require an engineer instead of just an imagination.</p>
 <h4>Getting Record Player working on a Raspberry Pi</h4>
@@ -140,8 +130,8 @@
 <p>The idea for “Record Player” only seemed obvious to me after a few hours of sifting through documentation for dozens of APIs. As users we can’t see the “shape” of the internet, but these shapes determine what we can and can’t do, what we can and can’t imagine is possible. Surely every search on a weather or maps app is a city or address, almost all searches on Google Images are for nouns, and every search on Spotify or Genius is for an artist or song. But try connecting these services and APIs along unusual angles and you will start running into walls.</p>
 <p>Throw a song at Google Maps to see where it was recorded? Pass a Yelp page to the New York Times API to find any news about the neighborhood? These queries might be possible, but they almost always require diving into the nitty gritty of several APIs, and massaging the data to make the connection. In today’s world ideas like “Record Player” have to be a million dollar business to be worth doing. Many articles written about the Record Player app implied that Spotify had made it. The way that we experience modern technology tells us that only huge corporations are able to create new ways of experiencing the world.</p>
 <p>Products like <a href="https://glitch.com/">Glitch</a>, <a href="https://www.raspberrypi.org/">Raspberry Pi</a>, <a href="https://ifttt.com/">IFTTT</a>, <a href="https://support.apple.com/guide/shortcuts/welcome/ios">Shortcuts</a>, and the inspiration for the Raspberry Pi Record Player, <a href="https://dynamicland.org/">Dynamicland</a> make a more interesting and open future seem possible, now we just need to build the rest of it.</p>
-<p>Start now by remixing Record Player on Glitch:
-<a href="https://glitch.com/~record-player">https://glitch.com/~record-player</a></p>
+<p>Start now by trying out Record Player on GitHub:
+<a href="https://github.com/patrickweaver/record-player">github.com/patrickweaver/record-player</a></p>
 <p>Or make your own Raspberry Pi powered version:
 <a href="https://github.com/patrickweaver/record-player-rpi">https://github.com/patrickweaver/record-player-rpi</a></p>
 

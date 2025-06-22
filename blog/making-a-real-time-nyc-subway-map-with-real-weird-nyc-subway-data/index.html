@@ -111,9 +111,9 @@
 <p>The subway real-time API doesn’t have latitude and longitude data because it is designed to feed data to countdown clock style applications that show when the train will be at a specific station. One of the earliest features that I built into the real-time map was a way to translate these station-by-station countdown clocks into an approximation of the location of each train. My first attempt at this was to just show a list of stations and display an icon for a train between the names of the station it had been at previously and the station it was approaching.</p>
 <figure>
 <div style="text-align: center;">
-  <img src="/images/blog/nyc-subway/prototype-diagram.png" alt="An early prototype diagram of G train positions." style="width: auto; max-height: 400px; margin: 0 auto;" />
+  <img src="/images/blog/nyc-subway/g-line.png" alt="An early prototype diagram of G train positions." style="width: auto; max-height: 400px; margin: 0 auto;" />
 </div>
-<figcaption>A first prototype, still available at: <a href="https://nyc-subway-g.glitch.me/">nyc-subway-g.glitch.me</a></figcaption>
+<figcaption>A first prototype</figcaption>
 </figure>
 <p>The next step was plotting the stations on a map. To start off, as with the diagram version, I just placed each train at the midpoint between the station it was traveling from and the station it was traveling towards.</p>
 <p>A goal I had for the project was not just to show real-time train locations, but to animate them as they moved around the map. To determine how long I should expect a train to take to travel between each station I logged updates from the MTA API for a few hours and noted both the average time for a pair of stations, and the longest time I had seen for the pair. I’m still experimenting a little bit with what values to use as the baseline, but from looking at the logged numbers there does seem to be an expected amount of time for most stations.</p>
@@ -280,7 +280,7 @@
 <figcaption>Similar sections of my map and the MTA map</figcaption>
 </figure>
 <h4>A Prototype</h4>
-<p>My map is online at <a href="https://nyc-subway.glitch.me/">nyc-subway.glitch.me</a>, bugs and all. I did most of the work on the map using only the G train API endpoint. This was a helpful limitation when I was first experimenting with what was possible using the data, but may have led to more bugs because of the slight differences in the data available for each set of lines.</p>
+<p>My map project is available on <a href="https://github.com/patrickweaver/nyc-subway/tree/971c538eb5de9ac524fa1db8656ddd9febd6f0e5">GitHub</a>, bugs and all. I did most of the work on the map using only the G train API endpoint. This was a helpful limitation when I was first experimenting with what was possible using the data, but may have led to more bugs because of the slight differences in the data available for each set of lines.</p>
 <p>A common complaint about the new official real-time map is that it seems to use as much computer power as it can. My map isn’t much better because it is doing all of the geographic calculations in the user’s browser, my guess is that the MTA’s map is also. One update I might take on over the next week and a half as my time at RC winds down is moving these calculations to a server, and sending only train position changes to the map visualization. This may also help with the bug my current prototype exhibits where leaving and coming back to the tab a few minutes later will cause trains to fly around the map without regard for the lines or stations.</p>
 <p>The MTA data is weird because it’s created by a system that could never have anticipated the kind of systems that now try to contain it. Overall, working with and working around the weirdness in the data has been challenging, but a great reminder that the most interesting real-world problems are often hard to jam into our brittle computer systems, and that’s probably a good thing.</p>
 
