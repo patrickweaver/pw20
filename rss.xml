@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Patrick Weaver: Blog</title>
-  <subtitle></subtitle>
-  <link href="https://patrickweaver.net/feed.xml" rel="self"/>
-  <link href="https://patrickweaver.net/blog/"/>
-  <updated>2024-07-10T00:00:00Z</updated>
-  <id>https://patrickweaver.net/</id>
-  <author>
-    <name>Patrick Weaver</name>
-    <email>hello.patrickw@gmail.com</email>
-  </author>
-    
-    <entry>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="https://patrickweaver.net/blog/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Patrick Weaver: Blog</title>
+    <link>https://patrickweaver.net/blog/</link>
+    <atom:link href="https://patrickweaver.net/rss.xml" rel="self" type="application/rss+xml" />
+    <description></description>
+    <language>en</language>
+    <item>
       <title>IRL HTML Is the Place For Your Most Hand-Written Websites</title>
-      <link href="https://patrickweaver.net/blog/irl-html-is-the-place-for-your-most-hand-written-websites/"/>
-      <updated>2024-07-10T00:00:00Z</updated>
-      <id>https://patrickweaver.net/blog/irl-html-is-the-place-for-your-most-hand-written-websites/</id>
-      <content type="html">&lt;p&gt;Last year before &lt;a href=&quot;https://html.energy/&quot;&gt;HTML Energy&lt;/a&gt;&#39;s &lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt; Day in &lt;a href=&quot;https://www.are.na/bay-area-95sssqibasq/w-s-www-gathering&quot;&gt;San Francisco&lt;/a&gt; I had the idea to iterate on some of my previous projects like &lt;a href=&quot;https://www.patrickweaver.net/portfolio/whiteboard-email/&quot;&gt;Whiteboard Email&lt;/a&gt;, and make both an app that would do &lt;abbr title=&quot;Optical character recognition&quot;&gt;OCR&lt;/abbr&gt; on HTML, and a website to host truly “hand-written” HTML. That became &lt;a href=&quot;https://doodles.patrickweaver.net/irl-html/&quot;&gt;IRL HTML&lt;/a&gt; and it was good enough to make some &lt;a href=&quot;https://doodles.patrickweaver.net/irl-html/pages/acc8/&quot;&gt;very simple&lt;/a&gt; websites!&lt;/p&gt;
+      <link>https://patrickweaver.net/blog/irl-html-is-the-place-for-your-most-hand-written-websites/</link>
+      <description>&lt;p&gt;Last year before &lt;a href=&quot;https://html.energy&quot;&gt;HTML Energy&lt;/a&gt;&#39;s &lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt; Day in &lt;a href=&quot;https://www.are.na/bay-area-95sssqibasq/w-s-www-gathering&quot;&gt;San Francisco&lt;/a&gt; I had the idea to iterate on some of my previous projects like &lt;a href=&quot;https://www.patrickweaver.net/portfolio/whiteboard-email/&quot;&gt;Whiteboard Email&lt;/a&gt;, and make both an app that would do &lt;abbr title=&quot;Optical character recognition&quot;&gt;OCR&lt;/abbr&gt; on HTML, and a website to host truly “hand-written” HTML. That became &lt;a href=&quot;https://doodles.patrickweaver.net/irl-html/&quot;&gt;IRL HTML&lt;/a&gt; and it was good enough to make some &lt;a href=&quot;https://doodles.patrickweaver.net/irl-html/pages/acc8/&quot;&gt;very simple&lt;/a&gt; websites!&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;display: flex; max-width: 100%; align-items: center;&quot;&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/irl-html/simple-website.png&quot; alt=&quot;A screenshot of a website made with IRL HTML. It says Park, With Grass&quot; style=&quot;max-width: 50%; margin-right: 2.5px;&quot; /&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/irl-html/notebook-park.jpg&quot; alt=&quot;A photograph of the hand-written code for the website above in a notebook laying in grass.&quot; style=&quot;max-width: 50%; margin-left: 2.5px;&quot; /&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/irl-html/simple-website.png&quot; alt=&quot;A screenshot of a website made with IRL HTML. It says Park, With Grass&quot; style=&quot;max-width: 50%; margin-right: 2.5px;&quot;&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/irl-html/notebook-park.jpg&quot; alt=&quot;A photograph of the hand-written code for the website above in a notebook laying in grass.&quot; style=&quot;max-width: 50%; margin-left: 2.5px;&quot;&gt;
 &lt;/div&gt;
 &lt;figcaption&gt;The published website and the hand written source code, we realized that some letters were more recognizable as upper case, some as lower case.&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -34,32 +27,32 @@
 &lt;p&gt;There is probably some room to iterate on the prompt for better output, but the cycle of testing (especially with different hand-written code) is long and not free, so I may stick with what is working reasonably well.&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;display: flex; max-width: 100%; align-items: center;&quot;&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/irl-html/about-irl-html-notebook.jpg&quot; alt=&quot;A photograph of a notebook with hand-written HTML code for an “About IRL HTML” website&quot; style=&quot;max-width: 50%; margin-right: 2.5px;&quot; /&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/irl-html/about-irl-html-website.png&quot; alt=&quot;A screenshot of the website generated from the hand-written code above&quot; style=&quot;max-width: 50%; margin-left: 2.5px;&quot; /&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/irl-html/about-irl-html-notebook.jpg&quot; alt=&quot;A photograph of a notebook with hand-written HTML code for an “About IRL HTML” website&quot; style=&quot;max-width: 50%; margin-right: 2.5px;&quot;&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/irl-html/about-irl-html-website.png&quot; alt=&quot;A screenshot of the website generated from the hand-written code above&quot; style=&quot;max-width: 50%; margin-left: 2.5px;&quot;&gt;
 &lt;/div&gt;
 &lt;figcaption&gt;More complex hand-written source code, and the webiste (with a picture of itself)&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;Overall, though I’m skeptical of the utility of LLMs more generally, it’s exciting to more easily and reliably make the kinds of quirky computer vision projects I’ve been dreaming of for a long time. I’d be interested in smaller handwriting OCR specific models that I might be able to run locally someday!&lt;/p&gt;
-</content>
-    </entry>
-    
-    <entry>
+</description>
+      <pubDate>Wed, 10 Jul 2024 00:00:00 GMT</pubDate>
+      <dc:creator>Patrick Weaver</dc:creator>
+      <guid>https://patrickweaver.net/blog/irl-html-is-the-place-for-your-most-hand-written-websites/</guid>
+    </item>
+    <item>
       <title>Unravelling an iMessage URL Parsing Mystery</title>
-      <link href="https://patrickweaver.net/blog/imessage-mystery/"/>
-      <updated>2024-02-05T00:00:00Z</updated>
-      <id>https://patrickweaver.net/blog/imessage-mystery/</id>
-      <content type="html">&lt;p&gt;I have long been a fan of frontend-only websites, usually single-page apps, that are able to persist state in sharable URLs despite not having a database or a backend. One of the more complex projects I used this technique for was my &lt;a href=&quot;https://doodles.patrickweaver.net/crossword/editor&quot;&gt;Crossword Puzzle Editor&lt;/a&gt;, which stores an entire puzzle, both clues and correct answers in the URL hash.&lt;/p&gt;
+      <link>https://patrickweaver.net/blog/imessage-mystery/</link>
+      <description>&lt;p&gt;I have long been a fan of frontend-only websites, usually single-page apps, that are able to persist state in sharable URLs despite not having a database or a backend. One of the more complex projects I used this technique for was my &lt;a href=&quot;https://doodles.patrickweaver.net/crossword/editor&quot;&gt;Crossword Puzzle Editor&lt;/a&gt;, which stores an entire puzzle, both clues and correct answers in the URL hash.&lt;/p&gt;
 &lt;p&gt;However, when I composed a small puzzle and shared it with a friend via iMessage I was greeted with a link to the app with empty state above a long string of random characters in a blue bubble:&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;text-align: center;&quot;&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/imessage/broken-link.png&quot; alt=&quot;A screenshot of an iMessage conversation with a broken link in it&quot; style=&quot;max-width: 300px; margin: 0 auto;&quot; /&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/imessage/broken-link.png&quot; alt=&quot;A screenshot of an iMessage conversation with a broken link in it&quot; style=&quot;max-width: 300px; margin: 0 auto;&quot;&gt;
 &lt;/div&gt;
 &lt;/figure&gt;
 &lt;p&gt;I tried again with a smaller puzzle and got the same kind of broken link, but it couldn’t just be the length of the URL because surely all of the tracking URLs used in every marketing email wouldn’t break like this. I tried one of a similar length, it sent flawlessly and rendered as a clean link preview, not the jumble of query string params it really was. I looked closer and noticed that the tracking URL had one visible difference from my crossword URL: it had “-” characters every so often.&lt;/p&gt;
 &lt;p&gt;I wrote a quick function to insert intermittent “-”s in the URLs, and remove them on parsing the state from the URL, then tried sending the original crossword. It worked!&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;text-align: center;&quot;&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/imessage/fixed-link.png&quot; alt=&quot;A screenshot of an iMessage conversation with a not broken link in it&quot; style=&quot;max-width: 300px; margin: 0 auto;&quot; /&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/imessage/fixed-link.png&quot; alt=&quot;A screenshot of an iMessage conversation with a not broken link in it&quot; style=&quot;max-width: 300px; margin: 0 auto;&quot;&gt;
 &lt;/div&gt;
 &lt;/figure&gt;
 &lt;p&gt;At the time I couldn’t find anyone else discussing the issue online, but my guess is that this quirk of iMessage URL parsing is due to security concerns with parsing text. A significant proportion of the zero day vulnerabilities in iOS are exploited through iMessage, and I would guess that a lot of the techniques used to create them are encoding malicious code in Base64 strings, just like I am with non malicious data.&lt;/p&gt;
@@ -70,7 +63,7 @@
 &lt;p&gt;After being reminded about the technique I was curious to figure out some of the details like, how long exactly could the sections be, and what other characters would work as separators. Using the technique I built &lt;a target=&quot;_blank&quot; href=&quot;https://doodles.patrickweaver.net/imessage-url-state-example/#eyIxIjp7InIiOiIyMjMiLCJnIjoiMjIiLCJiIjoi-MTU3In0sIjIiOnsiciI6MjEwLCJnIjoiMzEiLCJi-IjoiODcifSwiMyI6eyJyIjoiMjA1IiwiZyI6NzMs-ImIiOiIzNiJ9LCI0Ijp7InIiOiIyNTUiLCJnIjoi-MTk3IiwiYiI6MzZ9LCI1Ijp7InIiOiIyNTIiLCJn-IjoiMjQwIiwiYiI6IjExOSJ9LCI2Ijp7InIiOiI2-OSIsImciOiIxNzkiLCJiIjowfSwiNyI6eyJyIjoi-NjEiLCJnIjoiMjAzIiwiYiI6MjMyfSwiOCI6eyJy-IjoiNjEiLCJnIjoiMTA5IiwiYiI6IjI0MiJ9LCI5-Ijp7InIiOiIxOTAiLCJnIjoiMTQ4IiwiYiI6IjIy-OCJ9LCIxMCI6eyJyIjoiMjE0IiwiZyI6IjgxIiwi-YiI6IjE5NCJ9fQ==&quot;&gt;a small app that would store 10 RGB values in the URL&lt;/a&gt; (this example has a rainbow), but would also let the user control how frequent the “-” characters were, or replace them with other characters not used in Base64.&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;text-align: center;&quot;&gt;
-  &lt;a target=&quot;_blank&quot; href=&quot;https://doodles.patrickweaver.net/imessage-url-state-example/#eyIxIjp7InIiOiIyMjMiLCJnIjoiMjIiLCJiIjoi-MTU3In0sIjIiOnsiciI6MjEwLCJnIjoiMzEiLCJi-IjoiODcifSwiMyI6eyJyIjoiMjA1IiwiZyI6NzMs-ImIiOiIzNiJ9LCI0Ijp7InIiOiIyNTUiLCJnIjoi-MTk3IiwiYiI6MzZ9LCI1Ijp7InIiOiIyNTIiLCJn-IjoiMjQwIiwiYiI6IjExOSJ9LCI2Ijp7InIiOiI2-OSIsImciOiIxNzkiLCJiIjowfSwiNyI6eyJyIjoi-NjEiLCJnIjoiMjAzIiwiYiI6MjMyfSwiOCI6eyJy-IjoiNjEiLCJnIjoiMTA5IiwiYiI6IjI0MiJ9LCI5-Ijp7InIiOiIxOTAiLCJnIjoiMTQ4IiwiYiI6IjIy-OCJ9LCIxMCI6eyJyIjoiMjE0IiwiZyI6IjgxIiwi-YiI6IjE5NCJ9fQ==&quot;&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/imessage/colors-app.png&quot; alt=&quot;A screenshot of the web app to test long URLs&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot; /&gt;&lt;/a&gt;
+  &lt;a target=&quot;_blank&quot; href=&quot;https://doodles.patrickweaver.net/imessage-url-state-example/#eyIxIjp7InIiOiIyMjMiLCJnIjoiMjIiLCJiIjoi-MTU3In0sIjIiOnsiciI6MjEwLCJnIjoiMzEiLCJi-IjoiODcifSwiMyI6eyJyIjoiMjA1IiwiZyI6NzMs-ImIiOiIzNiJ9LCI0Ijp7InIiOiIyNTUiLCJnIjoi-MTk3IiwiYiI6MzZ9LCI1Ijp7InIiOiIyNTIiLCJn-IjoiMjQwIiwiYiI6IjExOSJ9LCI2Ijp7InIiOiI2-OSIsImciOiIxNzkiLCJiIjowfSwiNyI6eyJyIjoi-NjEiLCJnIjoiMjAzIiwiYiI6MjMyfSwiOCI6eyJy-IjoiNjEiLCJnIjoiMTA5IiwiYiI6IjI0MiJ9LCI5-Ijp7InIiOiIxOTAiLCJnIjoiMTQ4IiwiYiI6IjIy-OCJ9LCIxMCI6eyJyIjoiMjE0IiwiZyI6IjgxIiwi-YiI6IjE5NCJ9fQ==&quot;&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/imessage/colors-app.png&quot; alt=&quot;A screenshot of the web app to test long URLs&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot;&gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;/figure&gt;
 &lt;p&gt;Here is an example with the same 10 colors as the link above, but with a “+” every 10th character:&lt;/p&gt;
@@ -80,27 +73,27 @@
 &lt;p&gt;300 character long sections of Base64 was longer that I expected would work, but as soon as I increased the “distance” between the separator characters to 302, which is a “-” (or “+”...) every 303rd character the links started to break.&lt;/p&gt;
 &lt;figure&gt;
   &lt;div style=&quot;text-align: center;&quot;&gt;
-    &lt;img src=&quot;https://patrickweaver.net/images/blog/imessage/broken-link-colors.png&quot; alt=&quot;A screenshot of an iMessage conversation with a broken link because the separator is the 303rd character&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot; /&gt;
+    &lt;img src=&quot;https://patrickweaver.net/images/blog/imessage/broken-link-colors.png&quot; alt=&quot;A screenshot of an iMessage conversation with a broken link because the separator is the 303rd character&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot;&gt;
   &lt;/div&gt;
 &lt;/figure&gt;
 &lt;p&gt;Interestingly, the limit was 301 character long sections of Base64 on both iMessage and Signal!&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;text-align: center;&quot;&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/imessage/signal.jpg&quot; alt=&quot;A screenshot of a signal conversation with a workign link and a broken link&quot; style=&quot;max-width: 300px; margin: 0 auto;&quot; /&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/imessage/signal.jpg&quot; alt=&quot;A screenshot of a signal conversation with a workign link and a broken link&quot; style=&quot;max-width: 300px; margin: 0 auto;&quot;&gt;
 &lt;/div&gt;
 &lt;figcaption&gt;A working link (301 distance) above a broken link (302 distance) in Signal&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;Now that I know the exact cut off of 301 characters I’ve been able to find &lt;a href=&quot;https://blog.jonschneider.com/2023/06/the-mystery-of-broken-jwt-magic-link.html&quot;&gt;one other blog post&lt;/a&gt;, but I’m still surprised that this isn’t more widely known.&lt;/p&gt;
 &lt;p&gt;Try out the app yourself or experiment with other platforms, I would love to learn more about the details behind this! This link without a hash will randomly generate 10 colors (and then store them in the URL hash): &lt;a target=&quot;_blank&quot; href=&quot;https://doodles.patrickweaver.net/imessage-url-state-example&quot;&gt;doodles.patrickweaver.net/imessage-url-state-example&lt;/a&gt;.&lt;/p&gt;
-</content>
-    </entry>
-    
-    <entry>
+</description>
+      <pubDate>Mon, 05 Feb 2024 00:00:00 GMT</pubDate>
+      <dc:creator>Patrick Weaver</dc:creator>
+      <guid>https://patrickweaver.net/blog/imessage-mystery/</guid>
+    </item>
+    <item>
       <title>A Blog Post With Every HTML Element</title>
-      <link href="https://patrickweaver.net/blog/a-blog-post-with-every-html-element/"/>
-      <updated>2023-08-03T00:00:00Z</updated>
-      <id>https://patrickweaver.net/blog/a-blog-post-with-every-html-element/</id>
-      <content type="html">&lt;!-- markdownlint-disable MD033 MD013 --&gt;
+      <link>https://patrickweaver.net/blog/a-blog-post-with-every-html-element/</link>
+      <description>&lt;!-- markdownlint-disable MD033 MD013 --&gt;
 &lt;style&gt;
     section &gt; ul {
         padding-left: 0;
@@ -571,9 +564,9 @@
 &lt;p&gt;After learning a little bit more about web accessibility last year I had been exploring some of the less common &lt;abbr title=&quot;Hyper Text Markup Language&quot;&gt;HTML&lt;/abbr&gt; elements, and making changes to this website, like wrapping the text of the posts on this blog in &lt;code&gt;&amp;lt;article&amp;gt;&lt;/code&gt; tags and adding a &lt;code&gt;&amp;lt;main&amp;gt;&lt;/code&gt; tag in the website’s layout templates (this website is built using &lt;a href=&quot;https://www.11ty.dev/&quot; target=&quot;_blank&quot;&gt;Eleventy&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;I had previously done some work to make sure that &lt;code&gt;&amp;lt;figure&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;figcaption&amp;gt;&lt;/code&gt; elements were layed out nicely for images with associated captions, and I had been impressed with various &lt;a href=&quot;https://www.recurse.com/&quot; target=&quot;_blank&quot;&gt;Recurser’s&lt;/a&gt; implementation of footnotes or sidenotes&lt;sub id=&quot;footnote-1-link&quot;&gt;&lt;a href=&quot;https://patrickweaver.net/blog/a-blog-post-with-every-html-element/#footnote-1&quot;&gt;1&lt;/a&gt;&lt;/sub&gt;, and have been thinking it would be interesting to see what other interesting layouts were possible with just HTML.&lt;/p&gt;
 &lt;p&gt;I could, element by element, continue to add support (mostly by making &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt; updates for each element to fit in with the rest of my style choices) as I came across specific needs for them, but not one to shy away from an exhaustive exploration, I decided to write this post and attempt to use every element.&lt;/p&gt;
-&lt;p&gt;A goal of the post, was to avoid delaying other future posts with CSS updates on a previously unused element, but in reality it took a year and a half to make all the updates for just this post! I am using the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element&quot; target=&quot;_blank&quot;&gt;MDN Web Docs list of HTML elements&lt;/a&gt; as a reference which has more than 100 tags divided into a few categories, which I will also use in this post. Many of the tags like &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt; don’t make sense to include in the text of a blog post, but if you’re viewing this post on &lt;a href=&quot;https://www.patrickweaver.net/&quot;&gt;patrickweaver.net&lt;/a&gt;, then every one of the elements is used somewhere on this page.&lt;/p&gt;
+&lt;p&gt;A goal of the post, was to avoid delaying other future posts with CSS updates on a previously unused element, but in reality it took a year and a half to make all the updates for just this post! I am using the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element&quot; target=&quot;_blank&quot;&gt;MDN Web Docs list of HTML elements&lt;/a&gt; as a reference which has more than 100 tags divided into a few categories, which I will also use in this post. Many of the tags like &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt; don’t make sense to include in the text of a blog post, but if you’re viewing this post on &lt;a href=&quot;https://www.patrickweaver.net&quot;&gt;patrickweaver.net&lt;/a&gt;, then every one of the elements is used somewhere on this page.&lt;/p&gt;
 &lt;/section&gt;
-&lt;hr /&gt;
+&lt;hr&gt;
 &lt;h2&gt;The Elements&lt;/h2&gt;
 &lt;section id=&quot;main-root&quot;&gt;
 &lt;h3&gt;Main Root&lt;/h3&gt;
@@ -637,7 +630,7 @@
 &lt;search&gt;
 &lt;form id=&quot;search-form&quot;&gt;
     &lt;label for=&quot;text-search&quot;&gt;Search this post: &lt;/label&gt;
-    &lt;input type=&quot;search&quot; id=&quot;text-search&quot; /&gt;
+    &lt;input type=&quot;search&quot; id=&quot;text-search&quot;&gt;
     &lt;button id=&quot;search-button&quot; type=&quot;button&quot;&gt;Search&lt;/button&gt;
 &lt;/form&gt;
 &lt;/search&gt;
@@ -850,7 +843,7 @@ write semantic HTML
 &lt;p&gt;&lt;code&gt;&amp;lt;bdi&amp;gt;&lt;/code&gt; is a tag for a concept that I hadn’t considered until now, text whose direction might (or might not) differ from the direction of the surrounding text. The examples on the documentation are all names, but could stand in for any user inputted text. In the future I will probably try to wrap any tags, like the ones controlled by the input below, that might contain arbitrary user inputted unicode characters in a &lt;code&gt;&amp;lt;bdi&amp;gt;&lt;/code&gt; tag just to be safe.&lt;/p&gt;
 &lt;form&gt;
 &lt;p&gt;&lt;label for=&quot;bdi-name-input&quot;&gt;What is your name?
-&lt;input type=&quot;text&quot; id=&quot;bdi-name-input&quot; /&gt;&lt;/label&gt;&lt;/p&gt;
+&lt;input type=&quot;text&quot; id=&quot;bdi-name-input&quot;&gt;&lt;/label&gt;&lt;/p&gt;
 &lt;/form&gt;
 &lt;p&gt;Hello, &lt;bdi id=&quot;bdi-name-display&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/bdi&gt;, thanks for reading!&lt;/p&gt;
 &lt;div&gt;
@@ -897,7 +890,7 @@ write semantic HTML
 &lt;code&gt;
 console.log(&quot;Hello, World&quot;)
 &lt;/code&gt;
-&lt;br /&gt;&lt;br /&gt;
+&lt;br&gt;&lt;br&gt;
 &lt;samp&gt;
 Hello, World
 &lt;/samp&gt;
@@ -909,7 +902,7 @@ Hello, World
 &lt;p&gt;&lt;code&gt;&amp;lt;time&amp;gt;&lt;/code&gt; seems like a helpful element for creating semantic HTML, but even Google doesn’t seem to use it in &lt;a href=&quot;https://www.google.com/search?q=%22Patrick+Weaver%22+%22HTML%22&quot;&gt;search results&lt;/a&gt;. I’ve updated the dates on my blog posts to use it.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;&amp;lt;u&amp;gt;&lt;/code&gt; has probably my favorite quote from the MDN docs, &lt;q&gt;Most of the time, you actually don’t want to use &lt;code&gt;&amp;lt;u&amp;gt;&lt;/code&gt;.&lt;/q&gt; Their strongest recommendation seems to be indicating &lt;u class=&quot;u-sp&quot;&gt;spellling&lt;/u&gt; errors.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;&amp;lt;var&amp;gt;&lt;/code&gt; is a way to indicate semantically that a string is a variable for either math or programming. For example, rendering the pythagorean theorem uses both &lt;code&gt;&amp;lt;var&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;sup&amp;gt;&lt;/code&gt;: &lt;var&gt;a&lt;/var&gt;&lt;sup&gt;2&lt;/sup&gt; + &lt;var&gt;b&lt;/var&gt;&lt;sup&gt;2&lt;/sup&gt; = &lt;var&gt;c&lt;/var&gt;&lt;sup&gt;2&lt;/sup&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;&amp;lt;wbr&amp;gt;&lt;/code&gt; was also a new element until now, but it solves a problem I have hit many times before, breaking long “words” at certain points, specifically URLs. If I put a &lt;code&gt;&amp;lt;wbr&amp;gt;&lt;/code&gt; element at clear break points in this URL: &lt;a href=&quot;https://www.patrickweaver.net/pages/averylongurlwithoutanypunctuationbutstillmadeupofwords/&quot;&gt;https://www.patrickweaver.net&lt;wbr /&gt;/pages&lt;wbr /&gt;/a&lt;wbr /&gt;very&lt;wbr /&gt;long&lt;wbr /&gt;url&lt;wbr /&gt;without&lt;wbr /&gt;any&lt;wbr /&gt;punctuation&lt;wbr /&gt;but&lt;wbr /&gt;still&lt;wbr /&gt;made&lt;wbr /&gt;up&lt;wbr /&gt;of&lt;wbr /&gt;words/&lt;/a&gt; then it will break at clear points at different screen widths, which is is more readable compared to the same link without the &lt;code&gt;&amp;lt;wbr&amp;gt;&lt;/code&gt; elements:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;wbr&amp;gt;&lt;/code&gt; was also a new element until now, but it solves a problem I have hit many times before, breaking long “words” at certain points, specifically URLs. If I put a &lt;code&gt;&amp;lt;wbr&amp;gt;&lt;/code&gt; element at clear break points in this URL: &lt;a href=&quot;https://www.patrickweaver.net/pages/averylongurlwithoutanypunctuationbutstillmadeupofwords/&quot;&gt;https://www.patrickweaver.net&lt;wbr&gt;/pages&lt;wbr&gt;/a&lt;wbr&gt;very&lt;wbr&gt;long&lt;wbr&gt;url&lt;wbr&gt;without&lt;wbr&gt;any&lt;wbr&gt;punctuation&lt;wbr&gt;but&lt;wbr&gt;still&lt;wbr&gt;made&lt;wbr&gt;up&lt;wbr&gt;of&lt;wbr&gt;words/&lt;/a&gt; then it will break at clear points at different screen widths, which is is more readable compared to the same link without the &lt;code&gt;&amp;lt;wbr&amp;gt;&lt;/code&gt; elements:&lt;/p&gt;
 &lt;p class=&quot;very-long-url-wrapper&quot;&gt;&lt;a href=&quot;https://www.patrickweaver.net/pages/averylongurlwithoutanypunctuationbutstillmadeupofwords/&quot;&gt;https://www.patrickweaver.net/pages/averylongurlwithoutanypunctuationbutstillmadeupofwords/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Though including hyphen characters in the URL also creates clear breakpoints in modern browsers. I did have to wrap the URL above in a special scrollable &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; to prevent it from breaking the layout of the rest of the page.&lt;/p&gt;
 &lt;/section&gt;
@@ -927,18 +920,18 @@ Hello, World
 &lt;p&gt;Here’s a &lt;code&gt;&amp;lt;map&amp;gt;&lt;/code&gt; (with &lt;code&gt;&amp;lt;area&amp;gt;&lt;/code&gt;s on each tag linking to MDN) of a handwritten HTML document I made for June 3rd’s &lt;a href=&quot;https://html.energy/events.html&quot;&gt;HTML Day Freewrite&lt;/a&gt; in SF.&lt;/p&gt;
 &lt;figure&gt;
 &lt;map name=&quot;park-html-map&quot;&gt;
-    &lt;area shape=&quot;rect&quot; coords=&quot;38 20 150 55&quot; alt=&quot;HTML tag&quot; href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html&quot; /&gt;
-    &lt;area shape=&quot;rect&quot; coords=&quot;32 62 143 98&quot; alt=&quot;head tag&quot; href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head&quot; /&gt;
-    &lt;area shape=&quot;rect&quot; coords=&quot;32 107 170 140&quot; alt=&quot;title tag&quot; href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title&quot; /&gt;
-    &lt;area shape=&quot;rect&quot; coords=&quot;28 195 195 230&quot; alt=&quot;title closing tag&quot; href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title&quot; /&gt;
-    &lt;area shape=&quot;rect&quot; coords=&quot;25 240 178 275&quot; alt=&quot;head closing tag&quot; href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head&quot; /&gt;
-    &lt;area shape=&quot;rect&quot; coords=&quot;22 287 130 325&quot; alt=&quot;body tag&quot; href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body&quot; /&gt;
-    &lt;area shape=&quot;rect&quot; coords=&quot;201 285 297 320&quot; alt=&quot;body closing tag&quot; href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body&quot; /&gt;
-    &lt;area shape=&quot;rect&quot; coords=&quot;30 334 160 374&quot; alt=&quot;html tag&quot; href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html&quot; /&gt;
+    &lt;area shape=&quot;rect&quot; coords=&quot;38 20 150 55&quot; alt=&quot;HTML tag&quot; href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html&quot;&gt;
+    &lt;area shape=&quot;rect&quot; coords=&quot;32 62 143 98&quot; alt=&quot;head tag&quot; href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head&quot;&gt;
+    &lt;area shape=&quot;rect&quot; coords=&quot;32 107 170 140&quot; alt=&quot;title tag&quot; href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title&quot;&gt;
+    &lt;area shape=&quot;rect&quot; coords=&quot;28 195 195 230&quot; alt=&quot;title closing tag&quot; href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title&quot;&gt;
+    &lt;area shape=&quot;rect&quot; coords=&quot;25 240 178 275&quot; alt=&quot;head closing tag&quot; href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head&quot;&gt;
+    &lt;area shape=&quot;rect&quot; coords=&quot;22 287 130 325&quot; alt=&quot;body tag&quot; href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body&quot;&gt;
+    &lt;area shape=&quot;rect&quot; coords=&quot;201 285 297 320&quot; alt=&quot;body closing tag&quot; href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body&quot;&gt;
+    &lt;area shape=&quot;rect&quot; coords=&quot;30 334 160 374&quot; alt=&quot;html tag&quot; href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html&quot;&gt;
 &lt;/map&gt;
-&lt;img usemap=&quot;#park-html-map&quot; src=&quot;https://patrickweaver.net/images/blog/html/park-html.jpg&quot; alt=&quot;A processed photograph of handwritten HTML in a notebook&quot; style=&quot;width: 300px;&quot; /&gt;
+&lt;img usemap=&quot;#park-html-map&quot; src=&quot;https://patrickweaver.net/images/blog/html/park-html.jpg&quot; alt=&quot;A processed photograph of handwritten HTML in a notebook&quot; style=&quot;width: 300px;&quot;&gt;
 &lt;/figure&gt;
-&lt;p&gt;&lt;code&gt;&amp;lt;audio&amp;gt;&lt;/code&gt; is one of the classic multimedia HTML 5 tags so I’ve used it before, but thinking about it now, it’s surprising I don’t see them more often in the 2020s. I would guess that there are more in use than I thought, for example, the &lt;a href=&quot;https://bandcamp.com/&quot;&gt;Bandcamp&lt;/a&gt; player uses a hidden &lt;code&gt;&amp;lt;audio&amp;gt;&lt;/code&gt; element even though the UI is a custom mix of &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt;s inside a &lt;code&gt;&amp;lt;table&amp;gt;&lt;/code&gt; oddly enough.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;audio&amp;gt;&lt;/code&gt; is one of the classic multimedia HTML 5 tags so I’ve used it before, but thinking about it now, it’s surprising I don’t see them more often in the 2020s. I would guess that there are more in use than I thought, for example, the &lt;a href=&quot;https://bandcamp.com&quot;&gt;Bandcamp&lt;/a&gt; player uses a hidden &lt;code&gt;&amp;lt;audio&amp;gt;&lt;/code&gt; element even though the UI is a custom mix of &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt;s inside a &lt;code&gt;&amp;lt;table&amp;gt;&lt;/code&gt; oddly enough.&lt;/p&gt;
 &lt;figure&gt;
 &lt;p&gt;&lt;audio controls=&quot;&quot; src=&quot;https://patrickweaver.net/images/blog/html/audio-element.m4a&quot;&gt;&lt;/audio&gt;&lt;/p&gt;
 &lt;figcaption&gt;A recording of me reading the paragraph above. (Excuse my scratchy late night voice)&lt;/figcaption&gt;
@@ -950,32 +943,32 @@ Hello, World
 &lt;li&gt;A blue background and a serifed font that should render when the page is between 520 and 800 pixels wide&lt;/li&gt;
 &lt;li&gt;A green background and a script font that should render when the page is greater than 800 pixels wide.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/html/srcset-700.png&quot; srcset=&quot;https://patrickweaver.net/images/blog/html/srcset-300.png 300w, https://patrickweaver.net/images/blog/html/srcset-500.png 500w, https://patrickweaver.net/images/blog/html/srcset-700.png 700w&quot; sizes=&quot;(max-width: 520px) 300px, (max-width: 800px) 500px, 700px&quot; style=&quot;max-width: 700px; width: 100%;&quot; alt=&quot;A demo of the srcset property of the HTML &lt;img&gt; tag that loads different images at different sizes&quot; id=&quot;image-with-srcset&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/html/srcset-700.png&quot; srcset=&quot;https://patrickweaver.net/images/blog/html/srcset-300.png 300w, https://patrickweaver.net/images/blog/html/srcset-500.png 500w, https://patrickweaver.net/images/blog/html/srcset-700.png 700w&quot; sizes=&quot;(max-width: 520px) 300px, (max-width: 800px) 500px, 700px&quot; style=&quot;max-width: 700px; width: 100%;&quot; alt=&quot;A demo of the srcset property of the HTML &lt;img&gt; tag that loads different images at different sizes&quot; id=&quot;image-with-srcset&quot;&gt;&lt;/p&gt;
 &lt;p&gt;I have tested it, and it does work, but it takes a lot of forethought to make sure that you will be able to load the correct image. Things like the browser’s cache, and scaled displays will change the behavior. If you want to see the effect you will probably need to load the page in a private window on a non scaled or “retina” display.&lt;/p&gt;
 &lt;p&gt;It’s interesting that while both &lt;code&gt;&amp;lt;audio&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;video&amp;gt;&lt;/code&gt; are less widely used than &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; even after their introduction in HTML 5, the distribution of videos online seems to be centralized, mostly on YouTube, while audio is more decentralized, with people serving individual files when distributing things like podcasts, even though the audio player that is often used is not on the web.&lt;/p&gt;
 &lt;figure&gt;
 &lt;video controls=&quot;&quot; height=&quot;300&quot; muted=&quot;&quot; poster=&quot;https://patrickweaver.net/images/blog/html/audio-and-video-tags-poster.jpg&quot; preload=&quot;metadata&quot; width=&quot;495&quot; id=&quot;audio-and-video-tags-video&quot;&gt;
-    &lt;source src=&quot;https://patrickweaver.net/images/blog/html/audio-and-video-tags.mp4&quot; type=&quot;video/mp4&quot; /&gt;
-    &lt;track default=&quot;&quot; kind=&quot;captions&quot; srclang=&quot;en&quot; src=&quot;https://patrickweaver.net/images/blog/html/audio-and-video-tags.vtt&quot; /&gt;
+    &lt;source src=&quot;https://patrickweaver.net/images/blog/html/audio-and-video-tags.mp4&quot; type=&quot;video/mp4&quot;&gt;
+    &lt;track default=&quot;&quot; kind=&quot;captions&quot; srclang=&quot;en&quot; src=&quot;https://patrickweaver.net/images/blog/html/audio-and-video-tags.vtt&quot;&gt;
     &lt;a href=&quot;https://patrickweaver.net/images/blog/html/audio-and-video-tags.mp4&quot;&gt; Download the video&lt;/a&gt;
 &lt;/video&gt;
-&lt;embed type=&quot;video/mp4&quot; src=&quot;https://patrickweaver.net/images/blog/html/audio-and-video-tags.mp4&quot; width=&quot;495&quot; height=&quot;300&quot; title=&quot;A screen recording of my dev setup while writing the paragraph above.&quot; style=&quot;display: none&quot; id=&quot;audio-and-video-tags-embed&quot; /&gt;
+&lt;embed type=&quot;video/mp4&quot; src=&quot;https://patrickweaver.net/images/blog/html/audio-and-video-tags.mp4&quot; width=&quot;495&quot; height=&quot;300&quot; title=&quot;A screen recording of my dev setup while writing the paragraph above.&quot; style=&quot;display: none&quot; id=&quot;audio-and-video-tags-embed&quot;&gt;
 &lt;object type=&quot;video/mp4&quot; data=&quot;https://patrickweaver.net/images/blog/html/audio-and-video-tags.mp4&quot; width=&quot;495&quot; height=&quot;300&quot; style=&quot;display: none;&quot; id=&quot;audio-and-video-tags-object&quot;&gt;
-&lt;img src=&quot;https://patrickweaver.net/images/blog/html/audio-and-video-tags-poster.jpg&quot; alt=&quot;a still of a screen recording&quot; /&gt;
+&lt;img src=&quot;https://patrickweaver.net/images/blog/html/audio-and-video-tags-poster.jpg&quot; alt=&quot;a still of a screen recording&quot;&gt;
 &lt;/object&gt;
 &lt;figcaption&gt;A screen recording of my dev setup while writing the paragraph above. &lt;/figcaption&gt;
 &lt;fieldset&gt;
     &lt;legend&gt;Select below to control if the video above is shown in a &lt;code&gt;&amp;lt;video&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;embed&amp;gt;&lt;/code&gt;, or &lt;code&gt;&amp;lt;object&amp;gt;&lt;/code&gt; element:&lt;/legend&gt;
     &lt;div&gt;
-        &lt;input type=&quot;radio&quot; id=&quot;audio-and-video-tags-video-option&quot; name=&quot;audio-and-video-tags&quot; value=&quot;video&quot; checked=&quot;&quot; /&gt;
+        &lt;input type=&quot;radio&quot; id=&quot;audio-and-video-tags-video-option&quot; name=&quot;audio-and-video-tags&quot; value=&quot;video&quot; checked=&quot;&quot;&gt;
         &lt;label for=&quot;audio-and-video-tags-video-option&quot;&gt;&lt;code class=&quot;code-regular&quot;&gt;&amp;lt;video&amp;gt;&lt;/code&gt;&lt;/label&gt;
     &lt;/div&gt;
     &lt;div&gt;
-        &lt;input type=&quot;radio&quot; id=&quot;audio-and-video-tags-embed-option&quot; name=&quot;audio-and-video-tags&quot; value=&quot;embed&quot; /&gt;
+        &lt;input type=&quot;radio&quot; id=&quot;audio-and-video-tags-embed-option&quot; name=&quot;audio-and-video-tags&quot; value=&quot;embed&quot;&gt;
         &lt;label for=&quot;audio-and-video-tags-embed-option&quot;&gt;&lt;code class=&quot;code-regular&quot;&gt;&amp;lt;embed&amp;gt;&lt;/code&gt;&lt;/label&gt;
     &lt;/div&gt;
     &lt;div&gt;
-        &lt;input type=&quot;radio&quot; id=&quot;audio-and-video-tags-object-option&quot; name=&quot;audio-and-video-tags&quot; value=&quot;object&quot; /&gt;
+        &lt;input type=&quot;radio&quot; id=&quot;audio-and-video-tags-object-option&quot; name=&quot;audio-and-video-tags&quot; value=&quot;object&quot;&gt;
         &lt;label for=&quot;audio-and-video-tags-object-option&quot;&gt;&lt;code class=&quot;code-regular&quot;&gt;&amp;lt;object&amp;gt;&lt;/code&gt;&lt;/label&gt;
     &lt;/div&gt;
 &lt;/fieldset&gt;
@@ -1026,10 +1019,10 @@ Hello, World
 &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;code&gt;&amp;lt;picture&amp;gt;&lt;/code&gt; is a tag that is, with &lt;code&gt;&amp;lt;source&amp;gt;&lt;/code&gt; actually intended for layout tricks like the &lt;code&gt;srcset&lt;/code&gt; experiment I tried above, rendering different versions of an image in different situations. The image below should show an icon of a computer when used with a mouse/trackpad, or an icon of a phone when used with a touch screen (using the &lt;code&gt;pointer&lt;/code&gt; media query to determine), and should fall back to an image of a red circle with a line through it when neither media query is appropriate. The responsive design developer tools in your browser should trick it, though interestingly, not when inspecting an element.&lt;/p&gt;
 &lt;picture&gt;
-    &lt;source srcset=&quot;https://patrickweaver.net/images/blog/html/no.png&quot; media=&quot;(pointer:none)&quot; type=&quot;image/png&quot; /&gt;
-    &lt;source srcset=&quot;https://patrickweaver.net/images/blog/html/phone.png&quot; media=&quot;(pointer:coarse)&quot; type=&quot;image/png&quot; /&gt;
-    &lt;source srcset=&quot;https://patrickweaver.net/images/blog/html/computer.png&quot; media=&quot;(pointer:fine)&quot; type=&quot;image/png&quot; /&gt;
-    &lt;img src=&quot;https://patrickweaver.net/images/blog/html/no.png&quot; alt=&quot;an icon of a computer when used with a mouse/trackpad, an icon of a phone when used with a touch screen, or an image of a red circle with a line through otherwise&quot; /&gt;
+    &lt;source srcset=&quot;https://patrickweaver.net/images/blog/html/no.png&quot; media=&quot;(pointer:none)&quot; type=&quot;image/png&quot;&gt;
+    &lt;source srcset=&quot;https://patrickweaver.net/images/blog/html/phone.png&quot; media=&quot;(pointer:coarse)&quot; type=&quot;image/png&quot;&gt;
+    &lt;source srcset=&quot;https://patrickweaver.net/images/blog/html/computer.png&quot; media=&quot;(pointer:fine)&quot; type=&quot;image/png&quot;&gt;
+    &lt;img src=&quot;https://patrickweaver.net/images/blog/html/no.png&quot; alt=&quot;an icon of a computer when used with a mouse/trackpad, an icon of a phone when used with a touch screen, or an image of a red circle with a line through otherwise&quot;&gt;
 &lt;/picture&gt;
 &lt;p&gt;&lt;code&gt;&amp;lt;portal&amp;gt;&lt;/code&gt; is one of the more mysterious sounding elements, and seems intended for the iPad-style link previews that I’ve seen implemented on some websites on hover, &lt;a href=&quot;https://web.dev/hands-on-portals/&quot;&gt;but also come with SPA-like performance benefits&lt;/a&gt;. It unfortunately is still an experimental feature and isn’t (as of 2023) enabled by default in any browsers. It seems that it &lt;a href=&quot;https://medium.com/swlh/portals-in-chrome-going-on-a-test-drive-66b16971fb19&quot;&gt;used to be an available experimental flag in Chrome&lt;/a&gt;, but today in 2023 it is not available at &lt;a href=&quot;chrome://flags&quot;&gt;chrome://flags&lt;/a&gt;. I’ll include one below in case it works for future readers! I did try it in an very old Chromium version I still had installed. &lt;code&gt;&amp;lt;portal&amp;gt;&lt;/code&gt; doesn’t seem to be part of the &lt;a href=&quot;https://www.w3.org/TR/2011/WD-html5-20110405/&quot;&gt;HTML 5 Spec&lt;/a&gt;, I’m not sure why it’s included in the MDN documentation.&lt;/p&gt;
 &lt;figure&gt;
@@ -1142,10 +1135,10 @@ A &lt;code&gt;&amp;lt;portal&amp;gt;&lt;/code&gt; element that should display th
         A table with a custom CSS
     &lt;/caption&gt;
     &lt;colgroup&gt;
-        &lt;col /&gt;
-        &lt;col span=&quot;2&quot; class=&quot;low-numbers&quot; /&gt;
-        &lt;col span=&quot;2&quot; /&gt;
-        &lt;col span=&quot;2&quot; class=&quot;high-numbers&quot; /&gt;
+        &lt;col&gt;
+        &lt;col span=&quot;2&quot; class=&quot;low-numbers&quot;&gt;
+        &lt;col span=&quot;2&quot;&gt;
+        &lt;col span=&quot;2&quot; class=&quot;high-numbers&quot;&gt;
     &lt;/colgroup&gt;
     &lt;thead&gt;
         &lt;tr&gt;
@@ -1232,7 +1225,7 @@ A &lt;code&gt;&amp;lt;portal&amp;gt;&lt;/code&gt; element that should display th
 &lt;form id=&quot;everything-form&quot;&gt;
 &lt;div id=&quot;eform-type&quot;&gt;
 &lt;label for=&quot;type-choice&quot;&gt;Choose an emoji type:&lt;/label&gt;
-&lt;input list=&quot;emoji-types&quot; id=&quot;type-choice&quot; name=&quot;type-choice&quot; /&gt;
+&lt;input list=&quot;emoji-types&quot; id=&quot;type-choice&quot; name=&quot;type-choice&quot;&gt;
 &lt;datalist id=&quot;emoji-types&quot;&gt;
 &lt;option value=&quot;Fruit&quot;&gt;
 &lt;/option&gt;&lt;option value=&quot;Dessert&quot;&gt;
@@ -1243,9 +1236,9 @@ A &lt;code&gt;&amp;lt;portal&amp;gt;&lt;/code&gt; element that should display th
 &lt;div id=&quot;eform-size&quot;&gt;
 &lt;fieldset id=&quot;size-choice&quot;&gt;
 &lt;legend&gt;Select a size:&lt;/legend&gt;
-&lt;input type=&quot;radio&quot; name=&quot;size-choice&quot; id=&quot;small-size-choice&quot; value=&quot;small&quot; /&gt;
+&lt;input type=&quot;radio&quot; name=&quot;size-choice&quot; id=&quot;small-size-choice&quot; value=&quot;small&quot;&gt;
 &lt;label for=&quot;small-size-choice&quot;&gt;Small&lt;/label&gt;
-&lt;input type=&quot;radio&quot; name=&quot;size-choice&quot; id=&quot;large-size-choice&quot; value=&quot;large&quot; /&gt;
+&lt;input type=&quot;radio&quot; name=&quot;size-choice&quot; id=&quot;large-size-choice&quot; value=&quot;large&quot;&gt;
 &lt;label for=&quot;large-size-choice&quot;&gt;Large&lt;/label&gt;
 &lt;/fieldset&gt;
 &lt;label for=&quot;eform-size-meter&quot;&gt;Size Meter:&lt;/label&gt;
@@ -1271,12 +1264,12 @@ A &lt;code&gt;&amp;lt;portal&amp;gt;&lt;/code&gt; element that should display th
 &lt;label for=&quot;dream-input&quot;&gt;Share a dream &lt;span id=&quot;dream-secret&quot;&gt;(secret!)&lt;/span&gt;&lt;/label&gt;
 &lt;textarea id=&quot;dream-input&quot; cols=&quot;1&quot; rows=&quot;10&quot; wrap=&quot;hard&quot; name=&quot;dream-input&quot; placeholder=&quot;😶‍🌫️&quot;&gt;&lt;/textarea&gt;
 &lt;/div&gt;
-&lt;br /&gt;
+&lt;br&gt;
 &lt;label for=&quot;form-completion&quot; id=&quot;form-completion-label&quot;&gt;Form completion:&lt;/label&gt;
 &lt;progress id=&quot;form-completion&quot; max=&quot;4&quot; value=&quot;0&quot;&gt;
        0/4
 &lt;/progress&gt;
-&lt;br /&gt;
+&lt;br&gt;
 &lt;button id=&quot;eform-submit-button&quot; type=&quot;submit&quot; disabled=&quot;&quot;&gt;submit&lt;/button&gt;
 &lt;/form&gt;
 &lt;h4&gt;Your emoji:&lt;/h4&gt;
@@ -1590,7 +1583,7 @@ A &lt;code&gt;&amp;lt;portal&amp;gt;&lt;/code&gt; element that should display th
             &lt;/table-of-contents-item&gt;
             &lt;table-of-contents-item&gt;
                 &lt;span slot=&quot;emoji&quot;&gt;📠&lt;/span&gt;
-                &lt;a slot=&quot;table-of-contents-link&quot; href=&quot;https://patrickweaver.net/blog/a-blog-post-with-every-html-element/#&quot;&gt;&lt;/a&gt;
+                &lt;a slot=&quot;table-of-contents-link&quot; href=&quot;https://patrickweaver.net/blog/a-blog-post-with-every-html-element/&quot;&gt;&lt;/a&gt;
             &lt;/table-of-contents-item&gt;
             &lt;table-of-contents-item&gt;
             &lt;/table-of-contents-item&gt;
@@ -1685,19 +1678,19 @@ A &lt;code&gt;&amp;lt;portal&amp;gt;&lt;/code&gt; element that should display th
 &lt;p&gt;One of the more interesting browser compatibility stories of the deprecated elements is &lt;code&gt;&amp;lt;menuitem&amp;gt;&lt;/code&gt;, which supposedly was &lt;a href=&quot;https://caniuse.com/?search=menuitem&quot;&gt;partially supported in Firefox versions 8 - 84&lt;/a&gt;, but I couldn’t get &lt;a href=&quot;https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_menuitem&quot;&gt;an example&lt;/a&gt; to work in any of the older versions I installed locally (even with editing &lt;code&gt;about:config&lt;/code&gt;). The examples imply that the &lt;code&gt;&amp;lt;menu&amp;gt;&lt;/code&gt; (of &lt;code&gt;type=context&lt;/code&gt;) and child &lt;code&gt;&amp;lt;menuitem&amp;gt;&lt;/code&gt; elements shouldn’t render until the element whose &lt;code&gt;contextmenu&lt;/code&gt; property is right clicked, but as you can see below, the items always render:&lt;/p&gt;
 &lt;div id=&quot;menu-button&quot; contextmenu=&quot;menuitem-example&quot;&gt;Open Menu&lt;/div&gt;
 &lt;menu type=&quot;context&quot; id=&quot;menuitem-example&quot;&gt;
-    &lt;menuitem type=&quot;radio&quot; radiogroup=&quot;group1&quot; /&gt;Radio Button 1
-    &lt;menuitem type=&quot;radio&quot; radiogroup=&quot;group1&quot; /&gt;Radio Button 2
+    &lt;menuitem type=&quot;radio&quot; radiogroup=&quot;group1&quot;&gt;Radio Button 1
+    &lt;menuitem type=&quot;radio&quot; radiogroup=&quot;group1&quot;&gt;Radio Button 2
 &lt;/menu&gt;
 &lt;p&gt;It’s surprising that &lt;code&gt;&amp;lt;noembed&amp;gt;&lt;/code&gt;, essentially a &lt;code&gt;&amp;lt;noscript&amp;gt;&lt;/code&gt; style fallback, was deprecated while &lt;code&gt;&amp;lt;embed&amp;gt;&lt;/code&gt; was kept in the spec. Here’s my &lt;code&gt;&amp;lt;embed&amp;gt;&lt;/code&gt; from above, but this time with a &lt;code&gt;&amp;lt;noembed&amp;gt;&lt;/code&gt; child. There is also &lt;code&gt;&amp;lt;noframes&amp;gt;&lt;/code&gt; which I included above with the &lt;code&gt;&amp;lt;frame&amp;gt;&lt;/code&gt; element.&lt;/p&gt;
 &lt;figure&gt;
-&lt;embed type=&quot;video/mp4&quot; src=&quot;https://patrickweaver.net/images/blog/html/audio-and-video-tags.mp4&quot; width=&quot;165&quot; height=&quot;100&quot; title=&quot;A screen recording of my dev setup while writing the paragraph above.&quot; id=&quot;audio-and-video-tags-embed-dep&quot; /&gt;&lt;noembed&gt;An embed of a screen recording of my dev setup while writing the paragraph above.&lt;/noembed&gt;
+&lt;embed type=&quot;video/mp4&quot; src=&quot;https://patrickweaver.net/images/blog/html/audio-and-video-tags.mp4&quot; width=&quot;165&quot; height=&quot;100&quot; title=&quot;A screen recording of my dev setup while writing the paragraph above.&quot; id=&quot;audio-and-video-tags-embed-dep&quot;&gt;&lt;noembed&gt;An embed of a screen recording of my dev setup while writing the paragraph above.&lt;/noembed&gt;
 &lt;figcaption&gt;An &lt;code&gt;&amp;lt;embed&amp;gt;&lt;/code&gt; with a &lt;code&gt;&amp;lt;noembed&amp;gt;&lt;/code&gt; tag child.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;It’s unclear why &lt;code&gt;&amp;lt;param&amp;gt;&lt;/code&gt; ever existed instead of just using attributes on the &lt;code&gt;&amp;lt;object&amp;gt;&lt;/code&gt; element. When I started this blog post &lt;a href=&quot;https://web.archive.org/web/20220330125752/https://developer.mozilla.org/en-US/docs/Web/HTML/Element&quot;&gt;it was listed in the “Embedding Content” section&lt;/a&gt;, but by the time I finished it was deprecated. Here is one below:&lt;/p&gt;
 &lt;figure&gt;
 &lt;object type=&quot;video/mp4&quot; data=&quot;https://patrickweaver.net/images/blog/html/audio-and-video-tags.mp4&quot; width=&quot;165&quot; height=&quot;100&quot; id=&quot;audio-and-video-tags-object-dep&quot;&gt;
-&lt;img src=&quot;https://patrickweaver.net/images/blog/html/audio-and-video-tags-poster.jpg&quot; alt=&quot;a still of a screen recording&quot; /&gt;
-&lt;param name=&quot;cool-param&quot; /&gt;
+&lt;img src=&quot;https://patrickweaver.net/images/blog/html/audio-and-video-tags-poster.jpg&quot; alt=&quot;a still of a screen recording&quot;&gt;
+&lt;param name=&quot;cool-param&quot;&gt;
 &lt;/object&gt;
 &lt;figcaption&gt;An &lt;code&gt;&amp;lt;object&amp;gt;&lt;/code&gt; with a &lt;code&gt;&amp;lt;param&amp;gt;&lt;/code&gt; tag child.&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -1743,15 +1736,15 @@ so they can be used here for displaying source code
 &lt;footer role=&quot;contentinfo&quot;&gt;
     Written between &lt;time datetime=&quot;2022-02&quot;&gt;February 2022&lt;/time&gt; and &lt;time datetime=&quot;2023-08&quot;&gt;August 2023&lt;/time&gt;.
 &lt;/footer&gt;
-</content>
-    </entry>
-    
-    <entry>
+</description>
+      <pubDate>Thu, 03 Aug 2023 00:00:00 GMT</pubDate>
+      <dc:creator>Patrick Weaver</dc:creator>
+      <guid>https://patrickweaver.net/blog/a-blog-post-with-every-html-element/</guid>
+    </item>
+    <item>
       <title>Alphabetic Internet Time: A Time Zone for the Internet</title>
-      <link href="https://patrickweaver.net/blog/alphabetic-internet-time/"/>
-      <updated>2022-08-18T00:00:00Z</updated>
-      <id>https://patrickweaver.net/blog/alphabetic-internet-time/</id>
-      <content type="html">&lt;p&gt;In the Fall of 2020 I &lt;a href=&quot;https://www.patrickweaver.net/blog/a-recurse-center-remote-batch/&quot;&gt;participated in a 12 week batch&lt;/a&gt; at the &lt;a href=&quot;https://recurse.com/&quot;&gt;Recurse Center&lt;/a&gt;. While I had a lot of previous experience &lt;em&gt;working&lt;/em&gt; remotely, both before and during the pandemic, RC was the first time where I was communicating with people in more than 1 or 2 other time zones. I now work at a fully remote company, mostly spread over the 4(ish) U.S. time zones, but with a few people permanently or temporarily in other places.&lt;/p&gt;
+      <link>https://patrickweaver.net/blog/alphabetic-internet-time/</link>
+      <description>&lt;p&gt;In the Fall of 2020 I &lt;a href=&quot;https://www.patrickweaver.net/blog/a-recurse-center-remote-batch/&quot;&gt;participated in a 12 week batch&lt;/a&gt; at the &lt;a href=&quot;https://recurse.com&quot;&gt;Recurse Center&lt;/a&gt;. While I had a lot of previous experience &lt;em&gt;working&lt;/em&gt; remotely, both before and during the pandemic, RC was the first time where I was communicating with people in more than 1 or 2 other time zones. I now work at a fully remote company, mostly spread over the 4(ish) U.S. time zones, but with a few people permanently or temporarily in other places.&lt;/p&gt;
 &lt;h4&gt;Communicating across time zones&lt;/h4&gt;
 &lt;p&gt;RC when I was there (mostly I would guess because their software was designed and configured for in person retreats in NYC) operated for the most part in Eastern Time, although I see from my limited participation in the community as an alum that this may have shifted, especially thanks to &lt;a href=&quot;https://zulip.com/help/format-your-message-using-markdown#global-times&quot;&gt;Zulip’s time-zone-relative timestamp support&lt;/a&gt;. RC had transitioned to hosting Recursers remotely a few months before my batch, which is how they continue to operate now in Summer 2022. At my current job we often default to either Eastern Time or Pacific Time, but some people will also just use their local time and let others figure it out.&lt;/p&gt;
 &lt;p&gt;Out of politeness and miscalculation-anxiety reducing redundancy I often will use multiple time zones, for example when proposing a meeting I might say, &lt;em&gt;“Let’s meet at 🗽 12:30 PM ET / 🏔 10:30 AM MT / 🌁 9:30 AM PT,”&lt;/em&gt; (I’m still searching for a good Central Time emoji, 🛣 🌽 🌪 are the best I’ve got), but time zone based confusion often takes more thinking than it should.&lt;/p&gt;
@@ -1775,23 +1768,23 @@ so they can be used here for displaying source code
 &lt;p&gt;The closest thing to AIT that currently exists is the &lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_military_time_zones&quot;&gt;Military Time Zones&lt;/a&gt; which also use the alphabet to refer to time zones, but in a way that doesn’t make much sense. Like AIT the time zones move East from UTC with UTC+1 being “Alfa”, UTC+2 “Bravo”, and continuing through the NATO phonetic alphabet (though skipping “Juliett”) to UTC+12, “Mike”. However, rather than continue through the alphabet at UTC-11, “November” is back near where we started as UTC-1 (and continues moving West from there).&lt;/p&gt;
 &lt;p&gt;The military time zone names do seem useful, and are possibly too similar to AIT for my idea to catch on, but out of sequence order make the concept seem too confusing for anyone using it for much beyond just “time zone names.”&lt;/p&gt;
 &lt;p&gt;One interesting (and further confusing thing) about the military time zone names is that “Mike”, UTC+12 and “Yankee”, UTC-12 are the same time, but on different dates because the border straddles the international date line. It’s quirks like this that make me think that any improvement on time zone related communication is likely to fail.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/ait/military-time-zones.jpg&quot; alt=&quot;A map of military time zones from the ACP 121(I) standard&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/ait/military-time-zones.jpg&quot; alt=&quot;A map of military time zones from the ACP 121(I) standard&quot;&gt;&lt;/p&gt;
 &lt;h4&gt;Reasons why AIT will never work&lt;/h4&gt;
 &lt;p&gt;As good an idea as I think this is, I have no hopes of AIT catching on mostly because I think that most people wouldn’t be able to get over the ridiculousness of saying “M:45” (and not being worried people would think they’re talking about a bus). But beyond the silliness, it’s still Daylight Saving Time that makes communicating across time zones unlikely to be improved on.&lt;/p&gt;
 &lt;p&gt;If your own time zone stayed the same relative to AIT year round I think there would be a chance that, with tools like an AIT display next to your local time, or calendar integrations, that it would work for a lot of people who frequently communicate with people in other time zones, but having to switch recurring times back and forth by one letter twice a year seems like friction that would dampen most people’s enthusiasm.&lt;/p&gt;
 &lt;p&gt;Bringing dates into the picture also seems like it would complicate things. Even though A:15 is 5:15 PM PDT in San Francisco, if we put a date on it, it would have to be “tomorrow” for the person in SF to match UTC. I don’t think that this would add any additional confusion to communicating with people whose time zone is in the next day relative to your own, but a new system like AIT would likely get blamed for the inherent awkwardness of time zones.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/ait/sf-ny-sunset.jpg&quot; alt=&quot;Photographs of the sunset in San Francisco, CA, and New York, NY&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/ait/sf-ny-sunset.jpg&quot; alt=&quot;Photographs of the sunset in San Francisco, CA, and New York, NY&quot;&gt;&lt;/p&gt;
 &lt;p&gt;But who knows! Weirder ideas have caught on in the past, like Daylight Saving Time! Or, maybe we can all just join the UTC+8 “Hotel” time zone since almost 25% of the world population already lives in it!&lt;/p&gt;
 &lt;p&gt;Aug 18, 2022 B:14, Brooklyn, NY&lt;/p&gt;
-</content>
-    </entry>
-    
-    <entry>
+</description>
+      <pubDate>Thu, 18 Aug 2022 00:00:00 GMT</pubDate>
+      <dc:creator>Patrick Weaver</dc:creator>
+      <guid>https://patrickweaver.net/blog/alphabetic-internet-time/</guid>
+    </item>
+    <item>
       <title>How to Set Up a Raspberry Pi as a Home Web Server</title>
-      <link href="https://patrickweaver.net/blog/how-to-raspberry-pi-server/"/>
-      <updated>2021-05-03T00:00:00Z</updated>
-      <id>https://patrickweaver.net/blog/how-to-raspberry-pi-server/</id>
-      <content type="html">&lt;p&gt;Like most of the world, I’ve been spending a lot of time at home lately. Over the winter I was experimenting with building my own web-based digital tools, like an app to track articles and books I was reading. I initially thought I would need to buy hosting space to have the app accessible, but realized I mostly needed to use it when I was at home anyway, so a URL that only existed on my local network work also work.&lt;/p&gt;
+      <link>https://patrickweaver.net/blog/how-to-raspberry-pi-server/</link>
+      <description>&lt;p&gt;Like most of the world, I’ve been spending a lot of time at home lately. Over the winter I was experimenting with building my own web-based digital tools, like an app to track articles and books I was reading. I initially thought I would need to buy hosting space to have the app accessible, but realized I mostly needed to use it when I was at home anyway, so a URL that only existed on my local network work also work.&lt;/p&gt;
 &lt;p&gt;I have done a few projects with Raspberry Pis before, most notably a &lt;a href=&quot;https://www.patrickweaver.net/blog/building-a-futuristic-record-player-with-glitch-and-raspberry-pi/&quot;&gt;computer vision “record player”&lt;/a&gt;, but always found myself looking up the same things like how to set up Wi-Fi and SSH access. I seemed to need to do the same handful of things every time, but they were spread across various documentation and how-tos. This time while setting up the Pi web server I took notes so I would have it all in one place.&lt;/p&gt;
 &lt;p&gt;To follow along with these steps you will need a second computer to set up the SD card (though you could probably start with a &lt;a href=&quot;https://www.adafruit.com/product/4266&quot;&gt;preformatted SD card also&lt;/a&gt;), and any kind of Raspberry Pi. I have run web servers on Pi Zeros before, though it can be a challenge to install newer versions of Node.js on ARMv6 based Pis (Zero and the original Raspberry Pi), and sometimes when building a large client app I’ve had to move to a faster Pi from a Pi Zero.&lt;/p&gt;
 &lt;h4&gt;SD Card Setup&lt;/h4&gt;
@@ -1801,7 +1794,7 @@ so they can be used here for displaying source code
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;1. Install the OS:&lt;/strong&gt; Use Raspberry Pi Imager tool to write the OS to the SD card &lt;a href=&quot;https://www.raspberrypi.org/software/&quot;&gt;source&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/how-to-raspberry-pi-server/raspberry-pi-imager.png&quot; alt=&quot;A screenshot of the Raspberry Pi Imager Tool&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/how-to-raspberry-pi-server/raspberry-pi-imager.png&quot; alt=&quot;A screenshot of the Raspberry Pi Imager Tool&quot;&gt;&lt;/p&gt;
 &lt;h4&gt;2. Set up Wi-Fi&lt;/h4&gt;
 &lt;p&gt;The RPi Imager tool will likely eject the SD card for you when it’s finished writing, but you want to do two more things before booting up the Pi. You may need to remove the SD card and re-insert it into your computer to see the “Boot” filesystem. First, to enable Wi-Fi you will need to create a file with your network credentials. If you will be plugging the Pi into an ethernet cable you can skip this step.&lt;/p&gt;
 &lt;p&gt;Create a file called &lt;code&gt;wpa_supplicant.conf&lt;/code&gt; in the root directory of the SD card. Open the file in a text editor and paste in the following:&lt;/p&gt;
@@ -1884,9 +1877,9 @@ network={
 &lt;p&gt;I like the following prompt which adds colors that are different than the ones that I use locally, and a pie emoji:&lt;/p&gt;
 &lt;!-- markdownlint-disable no-inline-html --&gt;
 &lt;div class=&quot;fake-code&quot;&gt;
-&lt;span style=&quot;color: white; background-color: silver;&quot;&gt;&amp;nbsp;Mon May &amp;nbsp;03 23:41:09&amp;nbsp;&lt;/span&gt;&lt;br /&gt;
-&lt;span style=&quot;color: black; background-color: cyan;&quot;&gt;&amp;nbsp;pi@b:&amp;nbsp;&lt;/span&gt; &lt;span style=&quot;color: white; background-color: lightGrey;&quot;&gt;&amp;nbsp;~&amp;nbsp;&lt;/span&gt;&lt;br /&gt;
-🥧 $&lt;br /&gt;
+&lt;span style=&quot;color: white; background-color: silver;&quot;&gt;&amp;nbsp;Mon May &amp;nbsp;03 23:41:09&amp;nbsp;&lt;/span&gt;&lt;br&gt;
+&lt;span style=&quot;color: black; background-color: cyan;&quot;&gt;&amp;nbsp;pi@b:&amp;nbsp;&lt;/span&gt; &lt;span style=&quot;color: white; background-color: lightGrey;&quot;&gt;&amp;nbsp;~&amp;nbsp;&lt;/span&gt;&lt;br&gt;
+🥧 $&lt;br&gt;
 &lt;/div&gt;
 &lt;!-- markdownlint-enable no-inline-html --&gt;
 &lt;p&gt;Update your prompt by editing your &lt;code&gt;~/.bashrc&lt;/code&gt; file with &lt;code&gt;sudo nano ~/.bashrc&lt;/code&gt;. The bash prompt is set with the &lt;code&gt;PS1&lt;/code&gt; variable, which has two versions in the default Raspberry Pi &lt;code&gt;~/.bashrc&lt;/code&gt;, one for when &lt;code&gt;color_prompt&lt;/code&gt; is set to &lt;code&gt;yes&lt;/code&gt;, another for otherwise. The default in Raspberry Pi OS is that &lt;code&gt;color_prompt&lt;/code&gt; is set to yes, so feel free to overwrite only the first &lt;code&gt;PS1&lt;/code&gt; variable.&lt;/p&gt;
@@ -1913,7 +1906,7 @@ network={
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;sudo apt install nginx
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Once Nginx is installed you should be able to access the default Nginx webpage at your Raspberry Pi’s IP Address or &lt;code&gt;[YOUR_HOSTNAME].local&lt;/code&gt;. Make sure to type in the &lt;code&gt;http://&lt;/code&gt; the first time if you are using the &lt;code&gt;.local&lt;/code&gt; TLD to avoid triggering search in your browser.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/how-to-raspberry-pi-server/nginx-default.png&quot; alt=&quot;A screenshot of the default Nginx page&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/how-to-raspberry-pi-server/nginx-default.png&quot; alt=&quot;A screenshot of the default Nginx page&quot;&gt;&lt;/p&gt;
 &lt;p&gt;You can now serve any static website from &lt;code&gt;/var/www/html&lt;/code&gt;, if you look there you will see an &lt;code&gt;index.html&lt;/code&gt; or &lt;code&gt;index.nginx-debian.html&lt;/code&gt; file that is generating the current page.&lt;/p&gt;
 &lt;h4&gt;Step 9 Summary&lt;/h4&gt;
 &lt;blockquote&gt;
@@ -1970,8 +1963,8 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;11. Set Up Reverse Proxy:&lt;/strong&gt; Remove default: &lt;code&gt;sudo rm /etc/nginx/sites-enabled/default&lt;/code&gt;, Create config file: &lt;code&gt;sudo touch /etc/nginx/sites-available/[YOUR SITE].conf&lt;/code&gt;, Edit config file (see above): &lt;code&gt;sudo nano /etc/nginx/sites-available/[YOUR SITE].conf&lt;/code&gt;, Link to sites-enabled: &lt;code&gt;sudo ln -s /etc/nginx/sites-available/[YOUR-SITE].conf /etc/nginx/sites-enabled/[YOUR-SITE].conf&lt;/code&gt;, Reload Nginx: &lt;code&gt;sudo systemctl reload nginx&lt;/code&gt;. &lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-debian-10&quot;&gt;source&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/how-to-raspberry-pi-server/hello-world.png&quot; alt=&quot;A screenshot of a “Hello, World” page hosted on a Raspberry Pi&quot; /&gt;&lt;/p&gt;
-&lt;hr /&gt;
+&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/how-to-raspberry-pi-server/hello-world.png&quot; alt=&quot;A screenshot of a “Hello, World” page hosted on a Raspberry Pi&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
 &lt;h4&gt;All Steps:&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Install the OS:&lt;/strong&gt; Use Raspberry Pi Imager tool to write the OS to the SD card &lt;a href=&quot;https://www.raspberrypi.org/software/&quot;&gt;source&lt;/a&gt;&lt;/li&gt;
@@ -1986,18 +1979,18 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 &lt;li&gt;&lt;strong&gt;Install nvm and npm:&lt;/strong&gt; &lt;code&gt;curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash&lt;/code&gt;, &lt;code&gt;. ~/.bashrc&lt;/code&gt;, &lt;code&gt;nvm install lts&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Set Up Reverse Proxy:&lt;/strong&gt; Remove default: &lt;code&gt;sudo rm /etc/nginx/sites-enabled/default&lt;/code&gt;, Create config file: &lt;code&gt;sudo touch /etc/nginx/sites-available/[YOUR SITE].conf&lt;/code&gt;, Edit config file (see above): &lt;code&gt;sudo nano /etc/nginx/sites-available/[YOUR SITE].conf&lt;/code&gt;, Link to sites-enabled: &lt;code&gt;sudo ln -s /etc/nginx/sites-available/[YOUR-SITE].conf /etc/nginx/sites-enabled/[YOUR-SITE].conf&lt;/code&gt;, Reload Nginx: &lt;code&gt;sudo systemctl reload nginx&lt;/code&gt;. &lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-debian-10&quot;&gt;source&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
-</content>
-    </entry>
-    
-    <entry>
+</description>
+      <pubDate>Mon, 03 May 2021 00:00:00 GMT</pubDate>
+      <dc:creator>Patrick Weaver</dc:creator>
+      <guid>https://patrickweaver.net/blog/how-to-raspberry-pi-server/</guid>
+    </item>
+    <item>
       <title>Participating in a Remote Batch at the Recurse Center</title>
-      <link href="https://patrickweaver.net/blog/a-recurse-center-remote-batch/"/>
-      <updated>2021-01-25T16:33:26Z</updated>
-      <id>https://patrickweaver.net/blog/a-recurse-center-remote-batch/</id>
-      <content type="html">&lt;p&gt;Participating in a batch at the &lt;a href=&quot;https://www.recurse.com/&quot;&gt;Recurse Center&lt;/a&gt; is something that I’ve thought on-and-off about doing since I found out about it (then called Hacker School) sometime between 2013 and 2015, but it just never seemed like the right time to leave my job and its subsidized health insurance until I was laid off (what turned out to be) early on in the pandemic. I had as recently as January 2020 been thinking, “maybe now is the right time to finally quit and do it,” and though I’m relieved I was able to get a few more months of savings and health insurance into 2020, participating in RC was the perfect change of pace and a motivating bridge between employment and the job search.&lt;/p&gt;
+      <link>https://patrickweaver.net/blog/a-recurse-center-remote-batch/</link>
+      <description>&lt;p&gt;Participating in a batch at the &lt;a href=&quot;https://www.recurse.com/&quot;&gt;Recurse Center&lt;/a&gt; is something that I’ve thought on-and-off about doing since I found out about it (then called Hacker School) sometime between 2013 and 2015, but it just never seemed like the right time to leave my job and its subsidized health insurance until I was laid off (what turned out to be) early on in the pandemic. I had as recently as January 2020 been thinking, “maybe now is the right time to finally quit and do it,” and though I’m relieved I was able to get a few more months of savings and health insurance into 2020, participating in RC was the perfect change of pace and a motivating bridge between employment and the job search.&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;text-align: center;&quot;&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/rc2/rc-website.jpg&quot; alt=&quot;A screenshot from the Recurse Center website with a notice about operating remotely&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot; /&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/rc2/rc-website.jpg&quot; alt=&quot;A screenshot from the Recurse Center website with a notice about operating remotely&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot;&gt;
 &lt;/div&gt;
 &lt;figcaption&gt;Screenshot from recurse.com&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -2005,7 +1998,7 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 &lt;p&gt;There are a few different pieces to the experience of a remote batch at RC. &lt;a href=&quot;https://www.recurse.com/virtual-rc&quot;&gt;Virtual RC&lt;/a&gt; is a fun game-like experience where each participant (and visiting alumni) has an avatar on the map. One corner of the map is more organized, and designed with a layout intended to mimic the physical RC space in Brooklyn, but the rest of the map is open for creative world building or experiments (there is even a Virual RC API now!). Each of the “rooms” in the structured corner of the map has a persistant video call link in it, and you can see which other participants are in the room on a call. Since I’ve started my new job I’ve missed being able to see who is already in a zoom call before deciding to join an optional meeting! Participants are encouaged to create a desk, where you can set an emoji status and leave a short note describing what you are up to that day. There are also audio rooms, which are great for more informal, or group conversations, and I’m only realizing now how much easier it is to start a call when you don’t have to open a new link and wait for a video call service to connect. A lot of the day-to-day conversation at remote RC happens via text on &lt;a href=&quot;https://zulip.com/&quot;&gt;Zulip&lt;/a&gt; (though this was the case for in-person RC also). It’s easy to reach out for help or to look for a pairing buddy on Zuip, and one of the most active streams (like channels in other chat apps) is Checkins where in-batch Recursers regularly post about what they’re working on.&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;text-align: center;&quot;&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/rc2/virtual-rc.png&quot; alt=&quot;A screenshot from Virtual RC with my avatar on top of the RC logo drawn with wall blocks&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot; /&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/rc2/virtual-rc.png&quot; alt=&quot;A screenshot from Virtual RC with my avatar on top of the RC logo drawn with wall blocks&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot;&gt;
 &lt;/div&gt;
 &lt;figcaption&gt;Hanging out on top of the RC logo in Virutal RC&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -2014,21 +2007,21 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 &lt;p&gt;After speeding through the SwiftUI tutorials in my first week (and getting kind of tired of working in an unfamiliar language), I decided to spend most of my time working on my &lt;a href=&quot;https://patrickweaver.net/blog/making-a-real-time-nyc-subway-map-with-real-weird-nyc-subway-data/&quot;&gt;real-time NYC subway map project&lt;/a&gt; that I had first prototyped in early 2020. I eventually was able to get a mostly working prototype of the full system, coincidentally on almost the exact day that the MTA &lt;a href=&quot;https://www.curbed.com/2020/10/first-look-new-yorks-digital-subway-map-comes-alive-today.html&quot;&gt;released&lt;/a&gt; their own version. I thought that the subway map would be one of a few medium sized projects that I would be able to spend 2 to 3 weeks on during my RC time, but I had already spent more than half of my 12 week batch on it. I had done a few other one-off projects like an &lt;a href=&quot;https://doodles.patrickweaver.net/10-print-video-game/&quot;&gt;abstract “video game”&lt;/a&gt; based on the 10 Print pattern and a few explorations into techincal topics like &lt;a href=&quot;https://doodles.patrickweaver.net/canvas-lines/&quot;&gt;the browser JavaScript canvas API&lt;/a&gt;, but I decided that I should try to find a real medium-sized project for my last few weeks at RC.&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;text-align: center;&quot;&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/rc2/canvas-lines.png&quot; alt=&quot;A screenshot from my slides on drawing pixel perfect lines on the JS canvas&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot; /&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/rc2/canvas-lines.png&quot; alt=&quot;A screenshot from my slides on drawing pixel perfect lines on the JS canvas&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot;&gt;
 &lt;/div&gt;
 &lt;figcaption&gt;It’s hard to draw crisp lines on the JS canvas!&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;I felt like I had mostly been working though a big challenge with technologies that were pretty familiar so far (JavaScript and the &lt;a href=&quot;https://leafletjs.com/&quot;&gt;Leaflet.js mapping library&lt;/a&gt;), so I wanted to find a project that I could use to learn something new, but not spend all my time on implementation details like I had been doing learning SwiftUI. I had created a static website on the &lt;a href=&quot;https://doodles.patrickweaver.net/&quot;&gt;doodles subdomain&lt;/a&gt; of my website that I wanted to keep filling out, so a useful constraint was to make something on the web that wouldn’t need a backend (the doodles website is static and built with &lt;a href=&quot;https://www.11ty.dev/&quot;&gt;Eleventy&lt;/a&gt; , as are this website, and most of the doodles)). In the last year at my job, and through collaborating with other RC participants during my batch I had gotten pretty quick with prototyping things with React, but I hadn’t used either &lt;a href=&quot;https://reactjs.org/docs/hooks-intro.html&quot;&gt;React Hooks&lt;/a&gt;, or &lt;a href=&quot;https://www.typescriptlang.org/&quot;&gt;TypeScript&lt;/a&gt; for anything. I decided to try learning both and created a &lt;a href=&quot;https://doodles.patrickweaver.net/crossword/editor&quot;&gt;web-based Crossword Puzzle composer&lt;/a&gt;.&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;text-align: center;&quot;&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/rc2/crossword.png&quot; alt=&quot;A screenshot of the crossword puzzle app with symmetrical squares blacked out&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot; /&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/rc2/crossword.png&quot; alt=&quot;A screenshot of the crossword puzzle app with symmetrical squares blacked out&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot;&gt;
 &lt;/div&gt;
 &lt;figcaption&gt;A crossword puzzle with multiple kids of symmetries&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;The crossword puzzle app was a fun mix of small challenges and interesting design decisions. One of the first things that stood out to me was that I had never really thought about the algorithm that is used to number crossword puzzle answers on the board, the kind of thing that is immediately understandable, but more complex that you would expect it to be when represented with a programming language. React Hooks were immediately very useful since most of the components for the app needed a sprinkling of state, but not too much, and TypeScript was helpful, especially in the context of RC because I paired with a few people on certain self-contained parts of the app like the symmetry for square toggling, and the defined types help people quickly pick up what the code we were writing would do. My favorite part of the crossword puzzle app is that to store a composed puzzle without a backend, I encode the whole puzzle state into the URL (here is a &lt;a href=&quot;https://doodles.patrickweaver.net/crossword/play/#eyJzdGF0ZSI6W1tbWyJmIiwiIiwiZmYiLG51bGwsbnVsbCwwXSxbImYiLCIiLCJ-mZiIsbnVsbCxudWxsLDFdLFsidCIsIlIiLCJ0dCIsMSwxLDJdLFsidCIsIkMiLC-JmdCIsMSwyLDNdXSxbWyJ0IiwiRiIsInR0IiwzLDMsNF0sWyJ0IiwiSSIsImZ0I-iwzLDQsNV0sWyJ0IiwiRiIsImZmIiwzLDEsNl0sWyJ0IiwiTyIsImZmIiwzLDIs-N11dLFtbInQiLCJBIiwidGYiLDUsMyw4XSxbInQiLCJNIiwiZmYiLDUsNCw5XSx-bInQiLCJJIiwiZmYiLDUsMSwxMF0sWyJ0IiwiRCIsImZmIiw1LDIsMTFdXSxbWy-J0IiwiTiIsInRmIiw2LDMsMTJdLFsidCIsIk8iLCJmZiIsNiw0LDEzXSxbInQiL-CJEIiwiZmYiLDYsMSwxNF0sWyJ0IiwiRSIsImZmIiw2LDIsMTVdXV0sW1tbImEi-LDEsIkZLQSBIYWNrZXIgU2NoLiIsIlJDIiwyXSxbImEiLDMsIk9yZGVyIGluIGE-gcXVldWUiLCJGSUZPIiw0XSxbImEiLDUsIkluIHRoZSBtaWRkbGUgb2YiLCJBTU-lEIiw4XSxbImEiLDYsIkphdmFTY3JpcHQgcnVudGltZSIsIk5PREUiLDEyXV0sW-1siZCIsMSwiV2lyZWxlc3MgdGVjaCB3aXRoIHRhZ3MiLCJSRklEIiwyXSxbImQi-LDIsIldoYXQgYSBwcm9ncmFtbWVyIHdyaXRlcyIsIkNPREUiLDNdLFsiZCIsMyw-iQ29tcHV0ZXIgYWlyIG1vdmVyIiwiRkFOIiw0XSxbImQiLDQsIlNob3J0aGFuZC-Bmb3Igb25lJ3MgcHJlZmVyZW5jZSIsIklNTyIsNV1dXV19&quot;&gt;small RC themed puzzle&lt;/a&gt;). I even discovered seemingly documented nowhere else bug in iMessage when prototyping this feature. When I first sent a friend a link to a puzzle as a test, iMessage wouldn’t parse it as a link, so they just got a wall of what looked like random characters. I looked around at other long tracking links I’d received in my emails and noticed they frequently had hyphen characters every so often. I added hyphens to my urls and all of a sudden iMessage could parse them as links!&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;text-align: center;&quot;&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/rc2/imessage.jpg&quot; alt=&quot;A screenshot of a message in iMessage with a long stiring of seemingly random characters&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot; /&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/rc2/imessage.jpg&quot; alt=&quot;A screenshot of a message in iMessage with a long stiring of seemingly random characters&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot;&gt;
 &lt;/div&gt;
 &lt;figcaption&gt;A failed attempt to send a crossword&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -2036,23 +2029,23 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 &lt;p&gt;When I first applied to RC I had been feeling nervous about committing such a long period of time to not working before (hopefully!) starting a new job, I considered just doing a 1 week mini batch, or a 6 week half-batch, but the 12 weeks went by way more quikly than I had anticipated, and I was fortunately able to hit my idealistic goal of starting a new job in the new calendar year! The 12 weeks helped me feel free to dive into weird corners of the problems I wanted to work on like &lt;a href=&quot;https://doodles.patrickweaver.net/drawing-parallel-lines-on-a-map/&quot;&gt;drawing parallel lines on a map&lt;/a&gt; (lines were a big theme in my projects), without worrying that it would keep me from “finishing” my projects (author’s note: I still didn’t “finish” most of them). In the spirit of “never graduate” I hope to someday participate in another batch at the physical RC space, but in the meantime, anyone who like me has been sitting on the fence on applying to RC for years should take the opportunity to participate remotely and start the programming project you’ve always been meaning to get to!&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;text-align: center;&quot;&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/rc2/parallel-lines-curve.jpg&quot; alt=&quot;A screenshot of a prototype of my real-time subway map&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot; /&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/rc2/parallel-lines-curve.jpg&quot; alt=&quot;A screenshot of a prototype of my real-time subway map&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot;&gt;
 &lt;/div&gt;
 &lt;figcaption&gt;An early attempt to draw MTA track geography data as parallel tracks on a map&lt;/figcaption&gt;
 &lt;/figure&gt;
-</content>
-    </entry>
-    
-    <entry>
+</description>
+      <pubDate>Mon, 25 Jan 2021 16:33:26 GMT</pubDate>
+      <dc:creator>Patrick Weaver</dc:creator>
+      <guid>https://patrickweaver.net/blog/a-recurse-center-remote-batch/</guid>
+    </item>
+    <item>
       <title>Making a Real-Time NYC Subway Map with Real Weird NYC Subway Data</title>
-      <link href="https://patrickweaver.net/blog/making-a-real-time-nyc-subway-map-with-real-weird-nyc-subway-data/"/>
-      <updated>2020-10-21T00:00:00Z</updated>
-      <id>https://patrickweaver.net/blog/making-a-real-time-nyc-subway-map-with-real-weird-nyc-subway-data/</id>
-      <content type="html">&lt;p&gt;Earlier this week the NYC MTA released a new &lt;a href=&quot;https://map.mta.info/&quot;&gt;digital-first map&lt;/a&gt;. The &lt;a href=&quot;https://www.curbed.com/2020/10/first-look-new-yorks-digital-subway-map-comes-alive-today.html&quot;&gt;Curbed exclusive&lt;/a&gt; that announced its release accurately portrays it as a strange child of both the 1972 map design by Massimo Vignelli and the current &lt;a href=&quot;https://new.mta.info/map/5256&quot;&gt;“paper” map&lt;/a&gt;. One feature of the new map (though it’s harder than it should be to notice at first) is real-time visualizations of each train in the system.&lt;/p&gt;
+      <link>https://patrickweaver.net/blog/making-a-real-time-nyc-subway-map-with-real-weird-nyc-subway-data/</link>
+      <description>&lt;p&gt;Earlier this week the NYC MTA released a new &lt;a href=&quot;https://map.mta.info/&quot;&gt;digital-first map&lt;/a&gt;. The &lt;a href=&quot;https://www.curbed.com/2020/10/first-look-new-yorks-digital-subway-map-comes-alive-today.html&quot;&gt;Curbed exclusive&lt;/a&gt; that announced its release accurately portrays it as a strange child of both the 1972 map design by Massimo Vignelli and the current &lt;a href=&quot;https://new.mta.info/map/5256&quot;&gt;“paper” map&lt;/a&gt;. One feature of the new map (though it’s harder than it should be to notice at first) is real-time visualizations of each train in the system.&lt;/p&gt;
 &lt;p&gt;I’ve been working on a similar concept, starting in February 2020, on which progress stalled once I stopped riding the subway regularly in March. But, when I started my batch at &lt;a href=&quot;https://www.recurse.com/&quot;&gt;Recurse Center&lt;/a&gt; I decided to pick up the project again. My inspiration for the map was the large TV screens that the MTA has installed in stations over the last few years, which frustratingly display the “paper” version of the map.&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;text-align: center;&quot;&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/nyc-subway/tv-screen-map.jpg&quot; alt=&quot;A photograph of a TV in a subway station with the “paper” map displayed.&quot; style=&quot;width: auto; max-height: 400px; margin: 0 auto;&quot; /&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/nyc-subway/tv-screen-map.jpg&quot; alt=&quot;A photograph of a TV in a subway station with the “paper” map displayed.&quot; style=&quot;width: auto; max-height: 400px; margin: 0 auto;&quot;&gt;
 &lt;/div&gt;
 &lt;figcaption&gt;Subway station TV (This is not a good photo, but it’s hard to take a picture of a screen underground)&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -2070,12 +2063,12 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 &lt;li&gt;The data mixes together HH:MM:SS timestamps for data about when a train’s trip started, and &lt;a href=&quot;https://en.wikipedia.org/wiki/Unix_time&quot;&gt;Unix timestamps&lt;/a&gt; for data about the current time (according to the API) and when a train will arrive at a station (the API provides both arrival and departure times but as far as I have seen they are always identical).&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;tripUpdate&lt;/code&gt; items show information about the stops a train will make in the future (stopTimeUpdates) and vehicle items show information about the current status of the train, but the first &lt;code&gt;stopTimeUpdate&lt;/code&gt; is usually in the past.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;I had never heard of Protocol Buffers before starting this project, so I was excited to learn more about them while reading through &lt;a href=&quot;https://dataintensive.net/&quot;&gt;Designing Data Intensive Applications&lt;/a&gt; with fellow Recursers. In the book Martin Kleppmann notes that a, &amp;quot;curious detail of Protocol Buffers is that it does not have a list or array datatype, but instead has a repeated marker for fields (which is a third option alongside required and optional).&amp;quot; This could be the reason for the strange organization of the &lt;code&gt;tripUpdate&lt;/code&gt; and &lt;code&gt;vehicle&lt;/code&gt; properties.&lt;/p&gt;
+&lt;p&gt;I had never heard of Protocol Buffers before starting this project, so I was excited to learn more about them while reading through &lt;a href=&quot;https://dataintensive.net&quot;&gt;Designing Data Intensive Applications&lt;/a&gt; with fellow Recursers. In the book Martin Kleppmann notes that a, &amp;quot;curious detail of Protocol Buffers is that it does not have a list or array datatype, but instead has a repeated marker for fields (which is a third option alongside required and optional).&amp;quot; This could be the reason for the strange organization of the &lt;code&gt;tripUpdate&lt;/code&gt; and &lt;code&gt;vehicle&lt;/code&gt; properties.&lt;/p&gt;
 &lt;h4&gt;Calculating Train Locations&lt;/h4&gt;
 &lt;p&gt;The subway real-time API doesn’t have latitude and longitude data because it is designed to feed data to countdown clock style applications that show when the train will be at a specific station. One of the earliest features that I built into the real-time map was a way to translate these station-by-station countdown clocks into an approximation of the location of each train. My first attempt at this was to just show a list of stations and display an icon for a train between the names of the station it had been at previously and the station it was approaching.&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;text-align: center;&quot;&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/nyc-subway/g-line.png&quot; alt=&quot;An early prototype diagram of G train positions.&quot; style=&quot;width: auto; max-height: 400px; margin: 0 auto;&quot; /&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/nyc-subway/g-line.png&quot; alt=&quot;An early prototype diagram of G train positions.&quot; style=&quot;width: auto; max-height: 400px; margin: 0 auto;&quot;&gt;
 &lt;/div&gt;
 &lt;figcaption&gt;A first prototype&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -2237,9 +2230,9 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 &lt;p&gt;After trying to approach the parallel lines problem geometrically I was pointed in the right direction by a fellow RC participant and was able to draw great looking lines by treating the Latitude/Longitude points in the shape arrays as vectors (More on this in my &lt;a href=&quot;https://doodles.patrickweaver.net/drawing-parallel-lines-on-a-map/&quot;&gt;interactive slides on this problem&lt;/a&gt; and more on the &lt;a href=&quot;https://medium.com/transit-app/how-we-built-the-worlds-prettiest-auto-generated-transit-maps-12d0c6fa502f&quot;&gt;challenge of drawing nice train lines from the Transit app&lt;/a&gt;).&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;display: flex; max-width: 100%;&quot;&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/nyc-subway/nyc-subway-f-g.jpg&quot; alt=&quot;A screenshot of my map.&quot; style=&quot;width: auto; max-height: 500px; max-width: 49%; margin: 0 auto;&quot; /&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/nyc-subway/nyc-subway-f-g.jpg&quot; alt=&quot;A screenshot of my map.&quot; style=&quot;width: auto; max-height: 500px; max-width: 49%; margin: 0 auto;&quot;&gt;
   &lt;span style=&quot;width: 5px;&quot;&gt;&lt;/span&gt;
-  &lt;img src=&quot;https://patrickweaver.net/images/blog/nyc-subway/mta-f-g.jpg&quot; alt=&quot;A screenshot of the MTA map.&quot; style=&quot;width: auto; max-height: 500px; max-width: 49%; margin: 0 auto;&quot; /&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/nyc-subway/mta-f-g.jpg&quot; alt=&quot;A screenshot of the MTA map.&quot; style=&quot;width: auto; max-height: 500px; max-width: 49%; margin: 0 auto;&quot;&gt;
 &lt;/div&gt;
 &lt;figcaption&gt;Similar sections of my map and the MTA map&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -2247,18 +2240,18 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 &lt;p&gt;My map project is available on &lt;a href=&quot;https://github.com/patrickweaver/nyc-subway/tree/971c538eb5de9ac524fa1db8656ddd9febd6f0e5&quot;&gt;GitHub&lt;/a&gt;, bugs and all. I did most of the work on the map using only the G train API endpoint. This was a helpful limitation when I was first experimenting with what was possible using the data, but may have led to more bugs because of the slight differences in the data available for each set of lines.&lt;/p&gt;
 &lt;p&gt;A common complaint about the new official real-time map is that it seems to use as much computer power as it can. My map isn’t much better because it is doing all of the geographic calculations in the user’s browser, my guess is that the MTA’s map is also. One update I might take on over the next week and a half as my time at RC winds down is moving these calculations to a server, and sending only train position changes to the map visualization. This may also help with the bug my current prototype exhibits where leaving and coming back to the tab a few minutes later will cause trains to fly around the map without regard for the lines or stations.&lt;/p&gt;
 &lt;p&gt;The MTA data is weird because it’s created by a system that could never have anticipated the kind of systems that now try to contain it. Overall, working with and working around the weirdness in the data has been challenging, but a great reminder that the most interesting real-world problems are often hard to jam into our brittle computer systems, and that’s probably a good thing.&lt;/p&gt;
-</content>
-    </entry>
-    
-    <entry>
+</description>
+      <pubDate>Wed, 21 Oct 2020 00:00:00 GMT</pubDate>
+      <dc:creator>Patrick Weaver</dc:creator>
+      <guid>https://patrickweaver.net/blog/making-a-real-time-nyc-subway-map-with-real-weird-nyc-subway-data/</guid>
+    </item>
+    <item>
       <title>Week 1 at Recurse Center: Two Approaches to Learning</title>
-      <link href="https://patrickweaver.net/blog/recurse-center-week-1/"/>
-      <updated>2020-08-16T22:22:13Z</updated>
-      <id>https://patrickweaver.net/blog/recurse-center-week-1/</id>
-      <content type="html">&lt;p&gt;I just finished my first week as part of the Fall 1 &#39;20 batch at &lt;a href=&quot;https://www.recurse.com/&quot;&gt;Recurse Center&lt;/a&gt;. I tried to split my time between being social and building skills that I want to use for future projects. The social aspect of RC is interesting because this batch is being conducted remotely.&lt;/p&gt;
+      <link>https://patrickweaver.net/blog/recurse-center-week-1/</link>
+      <description>&lt;p&gt;I just finished my first week as part of the Fall 1 &#39;20 batch at &lt;a href=&quot;https://www.recurse.com&quot;&gt;Recurse Center&lt;/a&gt;. I tried to split my time between being social and building skills that I want to use for future projects. The social aspect of RC is interesting because this batch is being conducted remotely.&lt;/p&gt;
 &lt;p&gt;My batch at RC started exactly 5 months after my last day in an office, and something I had been thinking about over the last few months, is that I haven’t met anyone new since early March when NYC shut down because of the pandemic. It’s been very refreshing to meet people again, even if it’s via video calls and chat. RC has created an online representation of their physical space we call &amp;quot;Virtual RC&amp;quot;. Each of us have avatars we can move around the space, and there are permanent links to video call rooms that we can pop into for events or impromptu conversations. The Virtual RC experience pairs well with group chat organized into streams on different topics.&lt;/p&gt;
 &lt;figure&gt;
-&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/rc/virtual-rc.png&quot; alt=&quot;A screenshot of Virtual RC&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/rc/virtual-rc.png&quot; alt=&quot;A screenshot of Virtual RC&quot;&gt;&lt;/p&gt;
 &lt;figcaption&gt;My avatar hanging out in the &quot;Shannon&quot; room at Virtual RC&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;Other than social events I spent my first week at RC focused on two projects. The first was going through the &lt;a href=&quot;https://www.hackingwithswift.com/100/swiftui&quot;&gt;100 Days of SwiftUI tutorials&lt;/a&gt; (at many more than one a day), which I had started before the batch. The second was reviewing the &lt;a href=&quot;https://github.com/patrickweaver/nyc-subway&quot;&gt;real time NYC Subway map&lt;/a&gt; project I first started in January.&lt;/p&gt;
@@ -2306,7 +2299,7 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 &lt;/figure&gt;
 &lt;p&gt;In order to gauge the feasibility of the project I wanted to get started quickly, throwing a map together and adding some markers for stations and individual trains at fixed times. Because I had limited experience working with transit data (which is provided in a &lt;a href=&quot;https://developers.google.com/transit/gtfs&quot;&gt;very complex format&lt;/a&gt;), or maps, this left me with both the sense that the project is possible, and a big spaghetti code mess.&lt;/p&gt;
 &lt;figure&gt;
-&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/rc/nyc-subway-v1.jpg&quot; alt=&quot;A screenshot of the first prototype of my subway map app&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/rc/nyc-subway-v1.jpg&quot; alt=&quot;A screenshot of the first prototype of my subway map app&quot;&gt;&lt;/p&gt;
 &lt;figcaption&gt;The first prototype of the subway map app&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;I started looking into SwiftUI because I’m interested in making my own home screen widgets once I update my phone to iOS 14, and these widgets are built using the framework. Knowing I would have time to experiment during my batch at RC, and wanting to avoid my usual new tool mess phenomenon, I prioritized giving myself a good understanding of how SwiftUI works, what it can and can’t do, and a general review of Swift. Once my batch started I found it more and more difficult to keep going through the tutorials instead of jumping into an original idea, but throughout the week, spending time figuring out what I was even thinking reviewing the code for the subway map project re-motivated me to get through it.&lt;/p&gt;
@@ -2321,15 +2314,15 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 &lt;li&gt;Something that takes ideas similar to Dynamicland (or the &lt;a href=&quot;https://www.recurse.com/blog/132-living-room-making-rc-programmable&quot;&gt;Living Room&lt;/a&gt; project at RC) into the remote world we’re living in.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Overall I’m very excited to be spending time at RC, and I hope that it gives me time to explore ideas with weird corners and not settle for solving small simple problems quickly.&lt;/p&gt;
-</content>
-    </entry>
-    
-    <entry>
+</description>
+      <pubDate>Sun, 16 Aug 2020 22:22:13 GMT</pubDate>
+      <dc:creator>Patrick Weaver</dc:creator>
+      <guid>https://patrickweaver.net/blog/recurse-center-week-1/</guid>
+    </item>
+    <item>
       <title>How to Download an Image from a Google Doc</title>
-      <link href="https://patrickweaver.net/blog/how-to-download-an-image-from-a-google-doc/"/>
-      <updated>2020-07-16T00:00:00Z</updated>
-      <id>https://patrickweaver.net/blog/how-to-download-an-image-from-a-google-doc/</id>
-      <content type="html">&lt;p&gt;For some reason Google hasn’t built in a way for you to download images in Google docs! There are workarounds to get those image files like &lt;a href=&quot;https://twitter.com/corduroy/status/1184758335934849025&quot;&gt;using Google Keep&lt;/a&gt;, or &lt;a href=&quot;https://twitter.com/tonyvincent/status/1021726699178708993&quot;&gt;downloading your whole doc as a .zip file&lt;/a&gt;, but these have always felt like too many steps.&lt;/p&gt;
+      <link>https://patrickweaver.net/blog/how-to-download-an-image-from-a-google-doc/</link>
+      <description>&lt;p&gt;For some reason Google hasn’t built in a way for you to download images in Google docs! There are workarounds to get those image files like &lt;a href=&quot;https://twitter.com/corduroy/status/1184758335934849025&quot;&gt;using Google Keep&lt;/a&gt;, or &lt;a href=&quot;https://twitter.com/tonyvincent/status/1021726699178708993&quot;&gt;downloading your whole doc as a .zip file&lt;/a&gt;, but these have always felt like too many steps.&lt;/p&gt;
 &lt;p&gt;And this is something that people really want!&lt;/p&gt;
 &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;a href=&quot;https://twitter.com/user/status/1190182191520788480&quot;&gt;&lt;/a&gt;&lt;/blockquote&gt; &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;a href=&quot;https://twitter.com/user/status/1277776054380265478&quot;&gt;&lt;/a&gt;&lt;/blockquote&gt; &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
@@ -2359,15 +2352,15 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 &lt;h4&gt;Great my problems are solved forever!&lt;/h4&gt;
 &lt;p&gt;No guarantees that this will work long term, a quick look at the source code for any Google Doc will show that they’re very complex! I wouldn’t be surprised if Google changes the way these URLs work in the future, but this tool has worked for 6 months so maybe not!&lt;/p&gt;
 &lt;p&gt;Long term I hope that they build in a way for people to download their images, but for now I hope this is helpful!&lt;/p&gt;
-</content>
-    </entry>
-    
-    <entry>
+</description>
+      <pubDate>Thu, 16 Jul 2020 00:00:00 GMT</pubDate>
+      <dc:creator>Patrick Weaver</dc:creator>
+      <guid>https://patrickweaver.net/blog/how-to-download-an-image-from-a-google-doc/</guid>
+    </item>
+    <item>
       <title>I Could Never Remember How to Make a Simple S3 Upload Feature So I Wrote It Down</title>
-      <link href="https://patrickweaver.net/blog/i-could-never-remember-how-to-make-a-simple-s3-upload-feature-so-i-wrote-it-down/"/>
-      <updated>2020-04-21T00:00:00Z</updated>
-      <id>https://patrickweaver.net/blog/i-could-never-remember-how-to-make-a-simple-s3-upload-feature-so-i-wrote-it-down/</id>
-      <content type="html">&lt;p&gt;Whenever I start a new web project there is an ominous, literal, figurative, &amp;quot;cloud&amp;quot; lurking on the horizon: Will this project get complicated enough to need to be connected to S3 for file upload?&lt;/p&gt;
+      <link>https://patrickweaver.net/blog/i-could-never-remember-how-to-make-a-simple-s3-upload-feature-so-i-wrote-it-down/</link>
+      <description>&lt;p&gt;Whenever I start a new web project there is an ominous, literal, figurative, &amp;quot;cloud&amp;quot; lurking on the horizon: Will this project get complicated enough to need to be connected to S3 for file upload?&lt;/p&gt;
 &lt;p&gt;More often than I’d like the answer is yes, and at this point I’ve re-learned how to connect a Node.js app to S3 more times than I’d like. Rather than keep learning just enough S3 to get a project working, and then instantly forgetting it, I decided to write the process down so I can follow my own instructions.&lt;/p&gt;
 &lt;p&gt;I’m sure this will also find its way to people who know more than I do and might be able to alert me to anything I’m doing wrong. If this is you, &lt;a href=&quot;https://twitter.com/patrickweave_r&quot;&gt;please reach out&lt;/a&gt;!&lt;/p&gt;
 &lt;h4&gt;Setting Up AWS Authentication&lt;/h4&gt;
@@ -2379,11 +2372,11 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 &lt;ol&gt;
 &lt;li&gt;Log into AWS and click on &amp;quot;Services&amp;quot; in the top left. Select &amp;quot;S3&amp;quot; in the &amp;quot;Storage&amp;quot; section, then click on &amp;quot;Create Bucket&amp;quot; on the main S3 screen.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/i/wzb11or02x3fgsdlobl1.png&quot; alt=&quot;A screenshot of the main S3 screen&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/i/wzb11or02x3fgsdlobl1.png&quot; alt=&quot;A screenshot of the main S3 screen&quot;&gt;&lt;/p&gt;
 &lt;ol start=&quot;2&quot;&gt;
 &lt;li&gt;Give your bucket a name (this will be visible to users so something related to your app is best), and select a region (probably whichever is closest to your users), leave &amp;quot;Block all public access&amp;quot; checked, then click &amp;quot;Create bucket&amp;quot;.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/i/jqobhso6ba8idwecff7l.png&quot; alt=&quot;A screenshot of the Create bucket screen&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/i/jqobhso6ba8idwecff7l.png&quot; alt=&quot;A screenshot of the Create bucket screen&quot;&gt;&lt;/p&gt;
 &lt;ol start=&quot;3&quot;&gt;
 &lt;li&gt;Note your bucket name (probably in an ENV variable), it’s now ready to receive uploads!&lt;/li&gt;
 &lt;/ol&gt;
@@ -2404,11 +2397,11 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 &lt;p&gt;You want to add 3 specific actions: &amp;quot;PutObject&amp;quot; which allows uploading files, &amp;quot;GetObject&amp;quot; which allows reading files, and &amp;quot;DeleteObject&amp;quot; (I think you can figure this one out). &amp;quot;GetObject&amp;quot; is in the &amp;quot;Read&amp;quot; section, check the checkbox there. &amp;quot;PutObject&amp;quot; and &amp;quot;DeleteObject&amp;quot; are both in the &amp;quot;Write&amp;quot; section. At the end you should have 3 objects selected:&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/i/xq9fza7qlzaxb9s2uwxx.png&quot; alt=&quot;A screenshot of the Create Policy actions selection&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/i/xq9fza7qlzaxb9s2uwxx.png&quot; alt=&quot;A screenshot of the Create Policy actions selection&quot;&gt;&lt;/p&gt;
 &lt;ol start=&quot;5&quot;&gt;
 &lt;li&gt;In the Resources section click on &amp;quot;Add ARN&amp;quot;, then fill in your Bucket Name, and click on &amp;quot;Any&amp;quot; for Object name. This means that users with this policy can only perform the actions above on one bucket, but can perform those actions on any of the objects in that bucket.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/i/n99mhoauau96yg2fp6j2.png&quot; alt=&quot;A screenshot of the Add ARN screen when creating a policy&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/i/n99mhoauau96yg2fp6j2.png&quot; alt=&quot;A screenshot of the Add ARN screen when creating a policy&quot;&gt;&lt;/p&gt;
 &lt;ol start=&quot;6&quot;&gt;
 &lt;li&gt;If you click over to the JSON editor you should see the code below. You can also just copy this in. Note that you should edit the &amp;quot;Resource&amp;quot; property to have your actual bucket name:&lt;/li&gt;
 &lt;/ol&gt;
@@ -2433,7 +2426,7 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 &lt;ol&gt;
 &lt;li&gt;Click on Users in the left sidebar, then the &amp;quot;Add user&amp;quot; button at the top of the screen, give your user a name and select the checkbox for &amp;quot;Programmatic Access&amp;quot;.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/i/gi90azo1auvxzjdbamyz.png&quot; alt=&quot;A screenshot of the Add User screen&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/i/gi90azo1auvxzjdbamyz.png&quot; alt=&quot;A screenshot of the Add User screen&quot;&gt;&lt;/p&gt;
 &lt;ol start=&quot;2&quot;&gt;
 &lt;li&gt;
 &lt;p&gt;In the &amp;quot;Set permissions&amp;quot; section at the top of the page, click on &amp;quot;Attach existing policies directly&amp;quot;. Search for the policy you just created, then select it and click &amp;quot;Next: Tags&amp;quot;. You can skip Tags, and click &amp;quot;Next: Review&amp;quot;, then click &amp;quot;Create user&amp;quot;.&lt;/p&gt;
@@ -2442,12 +2435,12 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 &lt;p&gt;You will now save your user’s credentials. This is the only time you will be able to do this, so make sure you save them somewhere safe. You will also need to add the credentials as ENV variables in your app. I recommend clicking the &amp;quot;Download .csv&amp;quot; button and saving the file, at least until you get your app set up.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/i/3rqbznl2dlvif555eorn.png&quot; alt=&quot;A screenshot of the attach policy section of the create user screen&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/i/3rqbznl2dlvif555eorn.png&quot; alt=&quot;A screenshot of the attach policy section of the create user screen&quot;&gt;&lt;/p&gt;
 &lt;!-- markdownlint-enable ol-prefix --&gt;
 &lt;h4&gt;A simple example app&lt;/h4&gt;
 &lt;p&gt;Congratulations! You are done with the AWS setup, now you can work on your app. I have a simple and heavily commented &lt;a href=&quot;https://github.com/patrickweaver/aws-s3-example&quot;&gt;example app&lt;/a&gt; I use to add this functionality to new projects:&lt;/p&gt;
 &lt;figure&gt;
-&lt;img src=&quot;https://patrickweaver.net/images/blog/aws/app-screenshot.png&quot; alt=&quot;A screenshot of the app&quot; /&gt;
+&lt;img src=&quot;https://patrickweaver.net/images/blog/aws/app-screenshot.png&quot; alt=&quot;A screenshot of the app&quot;&gt;
 &lt;figcaption&gt;A screenshot of the app&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;The app is a Node.js app using Express. It uses 3 additional packages. &lt;a href=&quot;https://patrickweaver.net/blog/i-could-never-remember-how-to-make-a-simple-s3-upload-feature-so-i-wrote-it-down/aws-sdk&quot;&gt;https://www.npmjs.com/package/aws-sdk&lt;/a&gt; adds functionality to communicate with S3, &lt;a href=&quot;https://patrickweaver.net/blog/i-could-never-remember-how-to-make-a-simple-s3-upload-feature-so-i-wrote-it-down/uuid&quot;&gt;https://www.npmjs.com/package/uuid&lt;/a&gt; is used for object names in S3, and [https://www.npmjs.com/package/multer]multer is used to process file upload to the server before passing it to S3.&lt;/p&gt;
@@ -2655,205 +2648,10 @@ async function getSignedUrl(key) {
 &lt;/code&gt;&lt;/pre&gt;
 &lt;!-- markdownlint-enable no-duplicate-heading --&gt;
 &lt;p&gt;That’s it! Try out the app (in this example uploads are limited in size to 4KB for safety). You can &lt;a href=&quot;https://github.com/patrickweaver/aws-s3-example&quot;&gt;fork the app on GitHub&lt;/a&gt;&lt;/p&gt;
-</content>
-    </entry>
-    
-    <entry>
-      <title>Building a futuristic Record Player with Glitch and Raspberry Pi</title>
-      <link href="https://patrickweaver.net/blog/building-a-futuristic-record-player-with-glitch-and-raspberry-pi/"/>
-      <updated>2018-10-23T00:00:00Z</updated>
-      <id>https://patrickweaver.net/blog/building-a-futuristic-record-player-with-glitch-and-raspberry-pi/</id>
-      <content type="html">&lt;p&gt;Earlier this year I wanted to explore the new &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/async_function&quot;&gt;async/await&lt;/a&gt; functionality in Javascript so I started playing around with a project on Glitch (&lt;a href=&quot;https://web.archive.org/web/20180329051834/https://glitch.com/&quot;&gt;glitch.com&lt;/a&gt;) that would call one API after another, then generate new API call options from each cycle. I compiled a long list of potential APIs to use, but didn’t get past chaining together an &lt;a href=&quot;https://dog.ceo/dog-api/&quot;&gt;API that will respond with a picture of a specific breed of dog&lt;/a&gt;, and the &lt;a href=&quot;https://www.mediawiki.org/wiki/API:Main_page&quot;&gt;Wikipedia API&lt;/a&gt; which could respond with the pages that came up in a search for the name of the breed.&lt;/p&gt;
-&lt;figure&gt;
-&lt;img src=&quot;https://patrickweaver.net/images/blog/record-player/async-await-machine.png&quot; alt=&quot;A screenshot of the app.&quot; /&gt;
-&lt;figcaption&gt;A screenshot of my Dog → Wikipedia API prototype: click on the name of a dog and you will get a picture of that dog, and a list of pages linked from that dog’s Wikipedia page.&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;I started exploring what other APIs I could connect and realized that most of them seemed to enforce a relatively strict internal type system. Even from the many connections Wikipedia could provide it was hard to think of a potential next link that would always match up with the mishmash Wikipedia returned. While it might be easy to match up the Google Maps API to a weather API, connecting more abstract concepts was much more difficult.&lt;/p&gt;
-&lt;h4&gt;The ‘Record Player’ app&lt;/h4&gt;
-&lt;p&gt;While thinking through this an idea jumped out at me. I could connect the Google Vision API to Spotify to find albums based on pictures of a record cover. The idea seemed so obvious that I figured someone else had already done it (with more thorough research later I found a few similar projects but none that were fully implemented).&lt;/p&gt;
-&lt;p&gt;I decided that this spark of an idea was already a lot more interesting than my infinite API art project, but it still had the Rube Goldberg-esque quality I was going for. Even so, I still might have abandoned it without a tool like Glitch, which to me says, “your wacky idea is worth making (and it won’t take very long).” Using the skeleton of my previous project, I was able to put together (in about an hour) an app that bounced an image off of the Google Vision API then brought up search results from Spotify. I sent it to a friend who works at Spotify, and when she confirmed that it didn’t already exist I decided to spend a few hours putting together a more polished version (the hardest part turned out to be drag and drop file upload).&lt;/p&gt;
-&lt;figure&gt;
-&lt;img src=&quot;https://patrickweaver.net/images/blog/record-player/app-screenshot.png&quot; /&gt;
-&lt;figcaption&gt;A screenshot of the Record Player app&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;The ‘final’ version of the project, “&lt;a href=&quot;https://github.com/patrickweaver/record-player&quot;&gt;Record Player&lt;/a&gt;” was surprisingly simple. When given a reasonably well lit image of an even somewhat popular album the Google Vision API is able to identify the name of the album (occasionally just the artist). There were a few words I hard coded to ignore (things like “vinyl”, “cd”, or “import”), but other than that I was able to send Google Vision’s “best guess” to Spotify, and play the first result. I designed a goofy front end (with every music related emoji) and shared it on Twitter thinking that a few people would try it.&lt;/p&gt;
-&lt;figure&gt;
-&lt;pre&gt;
-  const censoredWords = [
-    &quot;album&quot;,
-    &quot;cover&quot;,
-    &quot;vinyl&quot;,
-    &quot;usa&quot;,
-    &quot;import&quot;,
-    &quot;lp&quot;,
-    &quot;cd&quot;,
-    &quot;soundtrack&quot;,
-    &quot;german import&quot;,
-  ];
-&lt;/pre&gt;
-&lt;figcaption&gt;A code snippet with the censored words array&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;&lt;a href=&quot;https://twitter.com/anildash/&quot;&gt;Anil Dash&lt;/a&gt; unexpectedly shared, and quickly it it started showing up &lt;a href=&quot;https://pitchfork.com/news/new-app-is-basically-shazam-for-album-covers/&quot;&gt;in&lt;/a&gt; &lt;a href=&quot;https://www.pastemagazine.com/articles/2018/05/new-app-automatically-recognizes-album-covers.html&quot;&gt;a&lt;/a&gt; &lt;a href=&quot;https://www.nme.com/news/music/app-album-cover-shazam-2306795&quot;&gt;lot&lt;/a&gt; &lt;a href=&quot;https://www.engadget.com/2018/05/04/record-player-app-image-based-spotify-search/&quot;&gt;of&lt;/a&gt; &lt;a href=&quot;https://www.altpress.com/news/app_matches_album_covers_spotify/&quot;&gt;strange&lt;/a&gt; &lt;a href=&quot;https://www.androidauthority.com/record-player-spotify-google-861977/&quot;&gt;corners&lt;/a&gt; &lt;a href=&quot;https://www.rollingstone.it/musica/news-musica/ora-esiste-uno-shazam-per-le-copertine-degli-album/410773/&quot;&gt;of&lt;/a&gt; &lt;a href=&quot;https://lifehacker.com/stream-a-vinyl-album-by-snapping-a-pic-of-its-cover-art-1825800020&quot;&gt;the&lt;/a&gt; &lt;a href=&quot;https://www.thecurrent.org/feature/2018/05/02/app-album-covers&quot;&gt;internet&lt;/a&gt;. I was flattered by the coverage, but a few people were pointing out, “why would you take a picture instead of just typing in the name of the album?” First of all, it’s fun, which should be reason enough. But beyond that, there’s really no reason to right now, there are too many barriers and restrictions in place in the tools we use every day like Spotify and Google, that making a mashup like this will usually require an engineer instead of just an imagination.&lt;/p&gt;
-&lt;h4&gt;Getting Record Player working on a Raspberry Pi&lt;/h4&gt;
-&lt;p&gt;From the beginning I wanted to create a physical version of Record Player (inspired by the amazing things they seem to be doing at &lt;a href=&quot;https://dynamicland.org/&quot;&gt;Dynamicland&lt;/a&gt; without “traditional” input and output devices). It would be a machine that could detect when you put a record cover in front of it, and automatically start playing the first song. No screens, no searching, no curated playlist to distract from the physical thing in my hands.&lt;/p&gt;
-&lt;p&gt;For the second time I was pleasantly surprised that by finding the right tools, a proof of concept was much easier than I expected. Using a Raspberry Pi with a camera module attached made a simple way to capture images. This left only the challenge of identifying when to start playing music. At first I thought that this might be easy to do by taking advantage of Google’s advanced image processing again, but I realized that the cost of the Google Vision API queries (you only get a certain amount free per month) would be prohibitive if I wanted the device to respond automatically.&lt;/p&gt;
-&lt;p&gt;I decided to see if a simple algorithm running on the Raspberry Pi could identify when something new was placed in front of the camera, which seemed to work well enough. Connecting this to a slightly modified version of the Node.js server that runs the original Record Player Glitch app created exactly the machine I had imagined. The video below shows my “Record Player” automatically starting playback when it sees a record cover. This prototype has screens, but they’re only used to start the app and troubleshoot.&lt;/p&gt;
-&lt;figure&gt;
-  &lt;video controls=&quot;&quot; width=&quot;540&quot;&gt;
-  &lt;source src=&quot;https://patrickweaver.net/images/portfolio/record-player/record-player-rpi-540p.mp4&quot; type=&quot;video/mp4&quot; /&gt;&lt;/video&gt;
-  &lt;figcaption&gt;A video of the Record Player machine running on a Raspberry Pi&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;Anil’s suggestion for using “Record Player” when he shared the Glitch app, was to see what song came up when you take a selfie, or “Shazam for your face” as he put it. Of course this was hilarious, and this is the kind of play and dynamic interactions that can happen when we start to break down the strict parameters and physical barriers that currently constrain our interactions with technology.&lt;/p&gt;
-&lt;p&gt;Browsing Spotify is infinitely less interesting than browsing a friend’s record collection, but the convenience of any song ever recorded will usually win over the joy of discovering something unexpected. If we want this kind of ‘magic’ to bring technology like Google Vision out of prepackaged apps in our phones and laptops we need to allow for new ways of communicating with computers, and each other, that allow for experimentation, weirdness and imagination.&lt;/p&gt;
-&lt;p&gt;When we start to join the interesting parts of the real world (for example: everything created before 1997) with the conveniences that smartphones have brought we can start to imagine dynamic digital experiences like the analog ones we have thought up for hundreds of years. Vinyl records themselves were designed as a static medium, but creative musicians saw a way to interact and started sampling and scratching them to create hip-hop.&lt;/p&gt;
-&lt;p&gt;The idea for “Record Player” only seemed obvious to me after a few hours of sifting through documentation for dozens of APIs. As users we can’t see the “shape” of the internet, but these shapes determine what we can and can’t do, what we can and can’t imagine is possible. Surely every search on a weather or maps app is a city or address, almost all searches on Google Images are for nouns, and every search on Spotify or Genius is for an artist or song. But try connecting these services and APIs along unusual angles and you will start running into walls.&lt;/p&gt;
-&lt;p&gt;Throw a song at Google Maps to see where it was recorded? Pass a Yelp page to the New York Times API to find any news about the neighborhood? These queries might be possible, but they almost always require diving into the nitty gritty of several APIs, and massaging the data to make the connection. In today’s world ideas like “Record Player” have to be a million dollar business to be worth doing. Many articles written about the Record Player app implied that Spotify had made it. The way that we experience modern technology tells us that only huge corporations are able to create new ways of experiencing the world.&lt;/p&gt;
-&lt;p&gt;Products like &lt;a href=&quot;https://glitch.com/&quot;&gt;Glitch&lt;/a&gt;, &lt;a href=&quot;https://www.raspberrypi.org/&quot;&gt;Raspberry Pi&lt;/a&gt;, &lt;a href=&quot;https://ifttt.com/&quot;&gt;IFTTT&lt;/a&gt;, &lt;a href=&quot;https://support.apple.com/guide/shortcuts/welcome/ios&quot;&gt;Shortcuts&lt;/a&gt;, and the inspiration for the Raspberry Pi Record Player, &lt;a href=&quot;https://dynamicland.org/&quot;&gt;Dynamicland&lt;/a&gt; make a more interesting and open future seem possible, now we just need to build the rest of it.&lt;/p&gt;
-&lt;p&gt;Start now by trying out Record Player on GitHub:
-&lt;a href=&quot;https://github.com/patrickweaver/record-player&quot;&gt;github.com/patrickweaver/record-player&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Or make your own Raspberry Pi powered version:
-&lt;a href=&quot;https://github.com/patrickweaver/record-player-rpi&quot;&gt;https://github.com/patrickweaver/record-player-rpi&lt;/a&gt;&lt;/p&gt;
-</content>
-    </entry>
-    
-    <entry>
-      <title>Which Wearable Arduino Should I Use For My Sewable Tech Project?</title>
-      <link href="https://patrickweaver.net/blog/which-wearable-arduino-should-i-use-for-my-sewable-tech-project/"/>
-      <updated>2017-09-29T00:00:00Z</updated>
-      <id>https://patrickweaver.net/blog/which-wearable-arduino-should-i-use-for-my-sewable-tech-project/</id>
-      <content type="html">&lt;p&gt;This fall &lt;a href=&quot;http://mouse.org/&quot;&gt;Mouse&lt;/a&gt; launched our brand new &lt;a href=&quot;https://mouse.org/mouse-courses&quot;&gt;Sewable Tech Course&lt;/a&gt;! The course introduces learners to circuitry and electronics without the abstraction of a breadboard. In the final two projects in the course we use a wearable Arduino to prototype a DIY activity tracker.&lt;/p&gt;
- &lt;figure&gt;
-&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/sewable/circuit.jpg&quot; alt=&quot;An illustration of a sewable circuit&quot; /&gt;&lt;/p&gt;
-&lt;figcaption&gt;Sew-matic for DIY Wearable Goal Tracker from Mouse Create&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;The big question we ran into when I was helping my colleague &lt;a href=&quot;https://twitter.com/katermouse&quot;&gt;Kate&lt;/a&gt; prototype the course was, which wearable Arduino to use. Along the way we tested 7 Arduino compatible microcontrollers and settled on recommending a &lt;a href=&quot;https://www.sparkfun.com/products/12049&quot;&gt;LilyPad Arduino USB&lt;/a&gt;, but there are advantages to each of the Arduinos we tested and different kinds projects would benefit from including each of them.&lt;/p&gt;
- &lt;figure&gt;
-&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/sewable/microcontrollers.jpg&quot; alt=&quot;A photo of the 7 microcontrollers&quot; /&gt;&lt;/p&gt;
-&lt;figcaption&gt;Our collection of wearable arduinos&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.sparkfun.com/products/12049&quot;&gt;Sparkfun LilyPad Arduino USB&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.ebay.com/sch/i.html?_nkw=LilyPad+Arduino+USB+ATmega32U4&quot;&gt;Generic LilyPad Arduino USB&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.adafruit.com/product/659&quot;&gt;Adafruit FLORA&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.ebay.com/sch/i.html?_nkw=LilyTiny&quot;&gt;Generic LilyTiny&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.adafruit.com/product/2470&quot;&gt;Arduino GEMMA&lt;/a&gt; (Discontinued)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.adafruit.com/product/1222&quot;&gt;Adafruit GEMMA v2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.adafruit.com/product/3501&quot;&gt;Adafruit GEMMA M0&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;All of the boards work with the &lt;a href=&quot;https://www.arduino.cc/en/Main/Software&quot;&gt;Arduino IDE&lt;/a&gt; (most with some extra steps), are roughly circular, and most run on 3.3 Volts, but there are slight differences that make certain boards better for some types of projects.&lt;/p&gt;
-&lt;h4&gt;[1] &amp;amp; [2] Sparkfun/Generic LilyPad Arduino USB&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/sewable/lilypad.jpg&quot; alt=&quot;A photo of the LilyPad Arduino&quot; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;[1] From &lt;a href=&quot;https://www.sparkfun.com/products/12049&quot;&gt;Sparkfun: $25&lt;/a&gt;, [2] &lt;a href=&quot;https://www.ebay.com/sch/i.html?_nkw=LilyPad+Arduino+USB+ATmega32U4&quot;&gt;Generic: $6 to $20&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;5 Digital Pins&lt;/li&gt;
-&lt;li&gt;4 Analog Pins&lt;/li&gt;
-&lt;li&gt;Onboard LED (D13)&lt;/li&gt;
-&lt;li&gt;On/Charge Switch and Reset Button&lt;/li&gt;
-&lt;li&gt;JST battery connector&lt;/li&gt;
-&lt;li&gt;2&amp;quot;/5 cm&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.arduino.cc/en/Reference/Serial&quot;&gt;Supports Serial Communication&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The LilyPad Arduinos are the only boards on this list that work with the Arduino IDE without any extra steps, this is the main reason why we recommend this board on Mouse Create. If this board will be your first experience with Arduino or you will need a few analog pins the LilyPad would be a great choice.&lt;/p&gt;
-&lt;p&gt;The SparkFun model costs a bit more but a portion of the sales go to &lt;a href=&quot;http://leahbuechley.com/&quot;&gt;Leah Buechley&lt;/a&gt; to support open source e-textiles and e-textiles education development.&lt;/p&gt;
-&lt;p&gt;Be careful when buying to get the LilyPad Arduino USB if you need a USB connection. The original &lt;a href=&quot;https://www.sparkfun.com/products/13342&quot;&gt;LilyPad Arduino 328 Main Board&lt;/a&gt; (not pictured), requires an FTDI connection to upload code (but that one has more pins!).&lt;/p&gt;
-&lt;h4&gt;[3] Adafruit FLORA&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/sewable/flora.jpg&quot; alt=&quot;A photo of the Flora microcontroller&quot; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;From &lt;a href=&quot;https://www.adafruit.com/product/659&quot;&gt;Adafruit $15&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;8 Digital Pins&lt;/li&gt;
-&lt;li&gt;4 Analog Pins (D6, D9, D10, D12)&lt;/li&gt;
-&lt;li&gt;Onboard LED (D7), Onboard RGB LED (D8)&lt;/li&gt;
-&lt;li&gt;On/Off Switch and Reset Button&lt;/li&gt;
-&lt;li&gt;JST battery connector&lt;/li&gt;
-&lt;li&gt;1.75&amp;quot;/4.5 cm&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.arduino.cc/en/Reference/Serial&quot;&gt;Supports Serial Communication&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The Adafruit Flora is a great board and can handle any project. It’s smaller than the LilyPad but has 3 more pins, and the onboard RGB LED is very useful as a Hello, World. The only drawback to this board is &lt;a href=&quot;https://learn.adafruit.com/add-boards-arduino-v164/overview&quot;&gt;adding the board in the Arduino IDE&lt;/a&gt; and installing the &lt;a href=&quot;https://learn.adafruit.com/adafruit-arduino-ide-setup/windows-driver-installation&quot;&gt;Adafruit drivers on Windows&lt;/a&gt;, but both of these are one-time steps and don’t take more than a few minutes. We did have some issues uploading code via a USB 3.0 port, but this can be avoided by using a USB 2.0 hub.&lt;/p&gt;
-&lt;h4&gt;[4] Generic LilyTiny&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/sewable/tinylily.jpg&quot; alt=&quot;A photo of the TinyLily board&quot; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.ebay.com/sch/i.html?_nkw=LilyTiny&quot;&gt;Generic $2 to $5&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;6 Digital Pins&lt;/li&gt;
-&lt;li&gt;Onboard LED (D1)&lt;/li&gt;
-&lt;li&gt;1&amp;quot;/2.5 cm&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;We found this board when researching and thought it might be useful for large groups with a limited budget to give every learner a board. This board has two easy to recognize advantages, it is both the smallest and the least expensive board on this list. The disadvantages are a little bit harder to spot so if you are thinking of using this board with a large group I would buy one to test with first.&lt;/p&gt;
-&lt;p&gt;This board is the only one on this list that does not have alligator clip friendly pins. When testing we were still able to attach alligator clips, but it is easy to accidentally clip two pins and create a short circuit. This board also lacks both an on/off switch and a JST battery connector which means it has to be powered via USB or the 5V pin (this is the only board on this list that runs on 5V).&lt;/p&gt;
-&lt;p&gt;The biggest disadvantage of this board is the upload process. &lt;a href=&quot;https://digistump.com/wiki/digispark/tutorials/connecting&quot;&gt;Following these instructions&lt;/a&gt;, we had to add the board to the Arduino IDE, install Digistump drivers, and hit the plug in the board to USB at a specific point in the process. We also had issues with this board on USB 3.0 ports.&lt;/p&gt;
-&lt;p&gt;If you have a lot of experience with Arduino or have a very small budget but a lot of patience this board might be for you.&lt;/p&gt;
-&lt;h4&gt;[5] &amp;amp; [6] Arduino GEMMA and Adafruit GEMMA v2&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/sewable/gemmas.jpg&quot; alt=&quot;A photo of the two Gemma boards&quot; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;[6] From &lt;a href=&quot;https://www.adafruit.com/product/1222&quot;&gt;Adafruit $10&lt;/a&gt;, [5] From &lt;a href=&quot;https://www.adafruit.com/product/2470&quot;&gt;Adafruit (Discontinued)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;3 Digital Pins&lt;/li&gt;
-&lt;li&gt;1 Analog Pin (D2)&lt;/li&gt;
-&lt;li&gt;Onboard LED (D1)&lt;/li&gt;
-&lt;li&gt;On/Off Switch and Reset Button&lt;/li&gt;
-&lt;li&gt;JST battery connector&lt;/li&gt;
-&lt;li&gt;1.25&amp;quot;/2.75 cm&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Both of these boards (along with the Gemma M0) are manufactured by Adafruit, and are visually and functionally very similar. The Arduino Gemma is teal and has the Adafruit logo on the back, the Adafruit Gemma v2 is black and has the Adafruit logo on the front. Both have an ATtiny85 chip that does not support serial communication.&lt;/p&gt;
-&lt;p&gt;Both the Gemma boards are great small wearable Arduinos. The small number of pins and small size make this board very approachable for a beginner, and would make the perfect tool for a simple sewable tech project. We initially were going to recommend the Adafruit Gemma v2 on Mouse Create, but we had enough &lt;a href=&quot;https://learn.adafruit.com/introducing-gemma/about-the-bootloader&quot;&gt;issues with uploading via USB 3.0&lt;/a&gt; that instead of shipping a USB 2.0 hub along with the boards we decided to opt for the LilyPad.&lt;/p&gt;
-&lt;p&gt;If you already have a USB 2.0 hub or computers with USB 2.0 ports this board will work great. It does not have serial communication so it is best suited for simpler projects. Like the Adafruit Flora you will have to &lt;a href=&quot;https://learn.adafruit.com/add-boards-arduino-v164/overview&quot;&gt;add the board to the Arduino IDE&lt;/a&gt; and &lt;a href=&quot;https://learn.adafruit.com/adafruit-arduino-ide-setup/windows-driver-installation&quot;&gt;install the Adafruit drivers on Windows&lt;/a&gt; (for the Gemma V2).&lt;/p&gt;
-&lt;h4&gt;[7] Adafruit GEMMA M0&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/sewable/gemma-m0.jpg&quot; alt=&quot;A photo of the Gemma M0 board&quot; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;From &lt;a href=&quot;https://www.adafruit.com/product/3501&quot;&gt;Adafruit $10&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;3 Digital Pins&lt;/li&gt;
-&lt;li&gt;3 Analog Pins (D0, D1, D2)&lt;/li&gt;
-&lt;li&gt;Onboard LED (D13), Onboard RGB LED (D?)&lt;/li&gt;
-&lt;li&gt;On/Off Switch and Reset Button&lt;/li&gt;
-&lt;li&gt;JST battery connector&lt;/li&gt;
-&lt;li&gt;1.25&amp;quot;/2.75 cm&lt;/li&gt;
-&lt;li&gt;Supports &lt;a href=&quot;https://www.arduino.cc/en/Reference/Serial&quot;&gt;Serial Communication&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Supports &lt;a href=&quot;https://blog.adafruit.com/2017/01/09/welcome-to-the-adafruit-circuitpython-beta/&quot;&gt;Circuit Python&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The Adafruit GEMMA M0 was released just as we were finishing up our Sewable Tech course, a little too late to include in the kits we were putting together, but I still highly recommend this board. The Gemma M0 does everything the older Gemmas can and a lot more. I haven’t had any issues with USB 3.0 using this board, and the ATSAMD21E18 chip supports serial communication.&lt;/p&gt;
-&lt;p&gt;The big step forward with the Gemma M0 and the reason Mouse might include this board in future kits is &lt;a href=&quot;https://blog.adafruit.com/2017/01/09/welcome-to-the-adafruit-circuitpython-beta/&quot;&gt;Circuit Python&lt;/a&gt;. A frequent question from schools interested in circuitry and electronics and sewable tech is “Will this Arduino work with my Chromebook?” Until now the answer has always been no (though the &lt;a href=&quot;https://www.arduino.cc/en/Main/Software&quot;&gt;online Arduino IDE&lt;/a&gt; now works with Arduino Uno).&lt;/p&gt;
-&lt;p&gt;Circuit Python allows you to use the Gemma M0 to bypass the Arduino IDE completely (but still works with the IDE if you prefer that). The board will show up as a drive when you plug it in to your computer (yes, even a Chromebook), and adding the following code to a file called &lt;code&gt;code.py&lt;/code&gt; will produce the familiar “Blink” Hello, World example.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;import digitalio
-import board
-import time
-led = digitalio.DigitalInOut(board.D13)
-led.direction = digitalio.Direction.OUTPUT
-while True:
-    led.value = not led.value
-    time.sleep(0.5)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;As with other Adafruit Boards if you are using the Arduino IDE instead of Python you will have to &lt;a href=&quot;https://learn.adafruit.com/add-boards-arduino-v164/overview&quot;&gt;add the board to the IDE&lt;/a&gt; and &lt;a href=&quot;https://learn.adafruit.com/adafruit-arduino-ide-setup/windows-driver-installation&quot;&gt;install the Adafruit drivers on Windows&lt;/a&gt;. You may also have to &lt;a href=&quot;https://learn.adafruit.com/adafruit-gemma-m0/circuitpython&quot;&gt;reinstall Circuit Python&lt;/a&gt; if you go back and forth between the IDE and Circuit Python, but this is a simple drag and drop process. I’m also not sure how to control the RGB LED but I haven’t spent much time trying to figure it out.&lt;/p&gt;
-&lt;p&gt;All the boards we tested worked great once we figured out the tricks of each and any will work for most sewable tech projects. Once you decide on a board, check out &lt;a href=&quot;https://mouse.org/work&quot;&gt;Mouse Create&lt;/a&gt; to find some fun projects!&lt;/p&gt;
- &lt;figure&gt;
-&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/sewable/case.jpg&quot; alt=&quot;A photo of a student making a fabric case&quot; /&gt;&lt;/p&gt;
-&lt;figcaption&gt;
-&lt;p&gt;Making a light up phone case at &lt;a href=&quot;https://medium.com/@mouse_org&quot;&gt;Mouse&lt;/a&gt; &lt;a href=&quot;https://mouse.org/makernight&quot;&gt;Maker Night&lt;/a&gt;&lt;/p&gt;
-&lt;/figcaption&gt;
-&lt;/figure&gt;
-</content>
-    </entry>
-    
-    <entry>
-      <title>How we used a chatbot to teach writing and coding!</title>
-      <link href="https://patrickweaver.net/blog/how-we-used-a-chatbot-to-teach-writing-and-coding/"/>
-      <updated>2016-06-15T00:00:00Z</updated>
-      <id>https://patrickweaver.net/blog/how-we-used-a-chatbot-to-teach-writing-and-coding/</id>
-      <content type="html">&lt;p&gt;When &lt;a href=&quot;https://mouse.org/&quot;&gt;Mouse&lt;/a&gt; moved into our new office in early 2015, we were excited to have space for our high school &lt;a href=&quot;https://mouse.org/mouse-design-league&quot;&gt;Design League&lt;/a&gt; program to spread out and work on assistive technology projects like &lt;a href=&quot;https://www.instagram.com/p/BGiUJ8awRJp/&quot;&gt;1derphone&lt;/a&gt;, a motorized headphone for a DJ with limited mobility. We also quickly realized we had the chance to reach more students in more ways by hosting flexible open events that any NYC students could attend.&lt;/p&gt;
-&lt;p&gt;We hosted our first open &lt;a href=&quot;https://mouse.org/makernight&quot;&gt;Maker Night&lt;/a&gt; in March 2015 and it quickly became a space where students showed up and could work on anything creative and innovative. Every month, we saw new projects emerge from crafting, coding, and anything in between:&lt;/p&gt;
-&lt;figure&gt;
-&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/chatbot/chatbot-1.jpg&quot; alt=&quot;A photo of two girls working at a laptop&quot; /&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/chatbot/chatbot-2.jpg&quot; alt=&quot;A photo of a boy making a paper prototype&quot; /&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/chatbot/chatbot-3.jpg&quot; alt=&quot;A photo of a boy using a Makey Makey&quot; /&gt;&lt;/p&gt;
-&lt;figcaption&gt;
-&lt;p&gt;Pictures from Maker Night at &lt;a href=&quot;http://mouse.org/&quot;&gt;Mouse&lt;/a&gt;&lt;/p&gt;
-&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;We often test ideas for new creative activities at Maker Nights and one new project I had been playing around with was &lt;a href=&quot;https://patrickweaver.net/images/blog/chatbot/forest-noodle.png&quot;&gt;a simple chatbot&lt;/a&gt; that students could remix. We love teaching any new tech skill through activities that are quick and easy to jump into and have created a few introduction to &lt;a href=&quot;https://patrickweaver.net/images/blog/chatbot/zircon-porch.png&quot;&gt;coding&lt;/a&gt; &lt;a href=&quot;https://images/blog/chatbot/distinct-zoo.png&quot;&gt;activities&lt;/a&gt; using remixable JavaScript arrays (Check out a few of &lt;a href=&quot;https://patrickweaver.net/images/blog/chatbot/automatic-triangle.png&quot;&gt;Mouse’s Web Making activities&lt;/a&gt; created through our partnership with Mozilla).&lt;/p&gt;
-&lt;p&gt;We usually have students start out by quickly &lt;a href=&quot;https://patrickweaver.net/images/blog/chatbot/efficacious-hook.png&quot;&gt;remixing the chatbot’s script&lt;/a&gt;: have the bot ask about your day, or give the chatbot a unique personality. Then they can move on to second level challenges: &lt;a href=&quot;https://patrickweaver.net/images/blog/chatbot/smart-raincoat.png&quot;&gt;remix the interface CSS&lt;/a&gt;, &lt;a href=&quot;https://patrickweaver.net/images/blog/chatbot/possible-boot.png&quot;&gt;teach the bot to repeat a user’s name back to them&lt;/a&gt;, or &lt;a href=&quot;https://patrickweaver.net/images/blog/chatbot/obtainable-mosquito.png&quot;&gt;teach the bot to respond to yes or no questions&lt;/a&gt;. All the linked examples are real student work, created between pizza slices at a Mouse Maker Night!&lt;/p&gt;
-&lt;figure&gt;
-&lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/chatbot/chatbot-4.png&quot; alt=&quot;A screenshot of a chatbot with a short conversation&quot; /&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/chatbot/chatbot-5.png&quot; alt=&quot;A screenshot of the chatbot start page&quot; /&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/chatbot/chatbot-6.png&quot; alt=&quot;A screenshot of a chatbot that has incorporated user input into its responses&quot; /&gt;&lt;/p&gt;
-&lt;figcaption&gt;3 remixes of the chatbot&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;I tried out the chatbot at our March Maker Night with a few students from &lt;a href=&quot;http://lespnyc.com/&quot;&gt;Lower East Side Prep&lt;/a&gt;. Many LESP students are recent immigrants and as their principal notes on their website, their “student body represents more than 50 countries including the United States.” I sat down with a few LESP students, showed them the basics of editing the script and they instantly started creating.&lt;/p&gt;
-&lt;p&gt;Students who were shy to get started or were nervous that they had never coded before were able to get familiar by creating linear scripts that anticipated a user’s responses or building in simple logic. One student who had recently moved to the U.S. created a bot that &lt;a href=&quot;https://patrickweaver.net/images/blog/chatbot/lucky-bassoon.png&quot;&gt;empathized with people who miss faraway friends&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Something about the narrative and engaging interface of a bot made students want to iterate on their designs. Two students would write a bot script, then switch and play each other’s bots. They would start by focusing on writing a friendly personality, then dive into a challenge like the bot learning a user’s name or a place name.&lt;/p&gt;
-&lt;p&gt;Moments like these are exactly what Mouse strives to create with technology focused youth development curriculum. We love seeing language arts students publish writing online and code their own websites, history students create a &lt;a href=&quot;https://www.youtube.com/watch?v=5D1iIEb49lE&quot;&gt;Serious Game&lt;/a&gt; about the civil rights movement, or science students make DIY Batteries to learn &lt;a href=&quot;https://www.youtube.com/watch?v=nofdW8nARTg&quot;&gt;Green Tech&lt;/a&gt;.&lt;/p&gt;
-</content>
-    </entry>
-</feed>
+</description>
+      <pubDate>Tue, 21 Apr 2020 00:00:00 GMT</pubDate>
+      <dc:creator>Patrick Weaver</dc:creator>
+      <guid>https://patrickweaver.net/blog/i-could-never-remember-how-to-make-a-simple-s3-upload-feature-so-i-wrote-it-down/</guid>
+    </item>
+  </channel>
+</rss>
