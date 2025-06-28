@@ -12,7 +12,9 @@ pageId: links
 
   <ul class="links">
     <dt><a href="/resume">Resume</a></dt>
+    <dt><a href="/feed.xml" target="blank">Blog Atom Feed</a></dt>
     <dt><a href="/rss.xml" target="blank">Blog RSS Feed</a></dt>
+    <dt><a href="/feed.json" target="blank">Blog JSON Feed</a></dt>
   </ul>
 </div>
 
