@@ -43,7 +43,7 @@ Record Player is a Rube Goldberg Machine of the Google Cloud Vision API and the 
   }
 </script>
 
-<div id="alert" style="border: 4px solid red; background-color: #feb; padding: 2rem; margin: 2rem; border-radius: 10px; position: absolute; top: 2rem; left: 0; display: none;">
+<div id="alert" style="border: 4px solid red; background-color: #feb; padding: 2rem; margin: 2rem; border-radius: 10px; max-width: 800px; position: absolute; top: 2rem; left: 0; display: none;">
   <h2>Record Player is now closed</h2>
   <p>Record Player was designed and hosted on Glitch.com from its first day in 2018, until July 2025. Glitch.com closed web hosting in 2025, and I decided not to move the project to a new host. The old url <a href="https://record-player.glitch.me">record-player.glitch.me</a> now redirects to my portfolio (this page).</p>
   <p>Thanks for using Record Player, if you have any questions, thoughts, or comments, feel free to email me: <a href="mailto:hello.patrickw@gmail.com" target="_blank">hello.patrickw@gmail.com</a>, or contact me through one of the websites listed on the <a href="/links">Links</a> page.</p>
