@@ -8,17 +8,15 @@ jobs:
   build_deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: "18.x"
-      - run: npm install
+      - uses: actions/checkout@v4
       - name: Build
-        uses: TartanLlama/actions-eleventy@v1.3
+        uses: patrickweaver/actions-eleventy@master
+        with:
+          install_dependencies: true
       - name: CNAME
         run: echo 'www.patrickweaver.net' | sudo tee dist/CNAME
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           publish_dir: dist

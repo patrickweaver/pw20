@@ -1,4 +1,5 @@
-const pluginRss = require("@11ty/eleventy-plugin-rss");
+const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
+const handlebarsPlugin = require("@11ty/eleventy-plugin-handlebars");
 
 // Helpers:
 const generalHelpers = require("./helpers/general");
@@ -7,9 +8,38 @@ const portfolioHelpers = require("./helpers/portfolio");
 const blogHelpers = require("./helpers/blog");
 const embedHelpers = require("./helpers/embed");
 
+const feedOptions = {
+  type: "atom", // or "rss", "json"
+  outputPath: "/feed.xml",
+  collection: {
+    name: "posts", // iterate over `collections.posts`
+    limit: 10, // 0 means no limit
+  },
+  metadata: {
+    language: "en",
+    title: "Patrick Weaver: Blog",
+    subtitle: "",
+    base: "https://patrickweaver.net/blog/",
+    author: {
+      name: "Patrick Weaver",
+    },
+  },
+};
+
 module.exports = function (eleventyConfig) {
-  // Rss
-  eleventyConfig.addPlugin(pluginRss);
+  // Atom feed
+  eleventyConfig.addPlugin(feedPlugin, feedOptions);
+  eleventyConfig.addPlugin(feedPlugin, {
+    ...feedOptions,
+    type: "rss",
+    outputPath: "/rss.xml",
+  });
+  eleventyConfig.addPlugin(feedPlugin, {
+    ...feedOptions,
+    type: "json",
+    outputPath: "/feed.json",
+  });
+  eleventyConfig.addPlugin(handlebarsPlugin);
 
   // Merge data in .json files in directories with data in each file
   eleventyConfig.setDataDeepMerge(true);
@@ -48,7 +78,6 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addShortcode("shortUrl", portfolioHelpers.shortUrl);
   eleventyConfig.addShortcode("statusColor", portfolioHelpers.statusColor);
-  eleventyConfig.addShortcode("isProject", portfolioHelpers.isProject);
   eleventyConfig.addShortcode(
     "linkWithLineBreaks",
     portfolioHelpers.linkWithLineBreaks
@@ -57,7 +86,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("readMore", blogHelpers.readMore);
 
   eleventyConfig.addShortcode("twitter", embedHelpers.twitter);
-  eleventyConfig.addShortcode("glitch", embedHelpers.glitch);
 
   // In progress, create custom start_date, end_date filter
   eleventyConfig.addCollection(

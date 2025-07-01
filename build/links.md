@@ -12,7 +12,9 @@ pageId: links
 
   <ul class="links">
     <dt><a href="/resume">Resume</a></dt>
+    <dt><a href="/feed.xml" target="blank">Blog Atom Feed</a></dt>
     <dt><a href="/rss.xml" target="blank">Blog RSS Feed</a></dt>
+    <dt><a href="/feed.json" target="blank">Blog JSON Feed</a></dt>
   </ul>
 </div>
 
@@ -36,8 +38,8 @@ pageId: links
   <dl class="links">
     <dt>Bluesky:</dt>
     <dd>
-      <a href="https://bsky.app/profile/patrickweaver.bsky.social" target="_blank">
-        @patrickweaver.bsky.social
+      <a href="https://bsky.app/profile/patrickweaver.net" target="_blank">
+        @patrickweaver.net
       </a>
     </dd>
     <dt>DEV:</dt>
