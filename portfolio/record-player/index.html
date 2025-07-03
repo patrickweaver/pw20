@@ -121,7 +121,7 @@
         <div aria-labelledby="project-description">
           <script>
   const hash = location.hash;
-  if (hash === '#glitch-redirect') {
+  if (hash.includes('glitch-redirect')) {
     setTimeout(() => document.getElementById('alert').style.display = 'flex', 500);
   } else {
     console.log('no', hash);
