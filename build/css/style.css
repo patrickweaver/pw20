@@ -108,6 +108,21 @@ a {
   font-family: "Helvetica", Arial, sans-serif;
 }
 
+.blob img,
+.post img,
+.project img,
+.blob figure,
+.post figure,
+.project figure,
+.post iframe,
+.post video,
+.post embed,
+.post object,
+.post portal {
+  max-width: 100%;
+  height: auto;
+}
+
 .post hr {
   border: none;
   border-top: 3px double var(--acc-2);
@@ -424,21 +439,6 @@ h2.page-header a:hover {
   max-width: 100%;
 }
 
-.blob img,
-.post img,
-.project img,
-.blob figure,
-.post figure,
-.project figure,
-.post iframe,
-.post video,
-.post embed,
-.post object,
-.post portal {
-  max-width: 100%;
-  height: auto;
-}
-
 .post .footnotes li {
   padding: 3px;
   border: 2px solid #00000000;
@@ -629,80 +629,129 @@ s::after {
   content: " [end of stricken text] ";
 }
 
+.tweet-screenshot {
+  max-width: 600px !important;
+  margin: 0 40px;
+}
+
 .tweet {
   font-family: sans-serif;
+  font-size: 1rem;
+  line-height: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-color: #000;
 }
 
 .tweet .tweet-kebob {
   display: none;
 }
 
-.tweet-2006 {
+.tweet-2006, .tweet-2007 {
     font-family: 'Times', serif;
     vertical-align: middle;
     padding: 18px;
     background-color: #9ae4e8;
-    color: #333333;
+    color: #000;
+    flex-direction: column-reverse;
+    width: Calc(555px + 38px);
 }
 
-.tweet-2006 .tweet-header {
+.tweet-2006 .tweet-header-container {
+  background: url("/images/blog/twitter/arr.gif") no-repeat 335px 0;
+  padding: 16px 0 5px 321px;
+  font-size: 2em;
+}
+
+.tweet-2006 .tweet-header, .tweet-2007 .tweet-header {
   margin-bottom: 10px;
-  font-size: 2.8em;
 }
 
-.tweet-2006 .tweet-avatar-link {
+.tweet-2006 .tweet-avatar-link, .tweet-2007 .tweet-avatar-link {
   text-decoration: none;
 }
 
-.tweet-2006 .user-info {
+.tweet-2006 .tweet-avatar-link img,
+.tweet-2007 .tweet-avatar-link img {
+  height: 48px;
+  width: 48px;
+  vertical-align: middle;
+  border: 1px solid #999;
+  margin-right: 10px;
+}
+
+.tweet-2006 .user-info, .tweet-2007 .user-info {
     display: inline-block;
 }
 
 
-.tweet-2006 .user-info a {
-  color: #333333;
-  text-decoration: none;
+.tweet-2006 .user-info a, .tweet-2007 .user-info a {
+  color: #000000;
 }
 
-.tweet-2006 .user-name {
+.tweet-2006 .user-name, .tweet-2007 .user-name {
   display: none;
 }
 
-.tweet-2006 .tweet-main {
-  background: url("/images/blog/twitter/arr2.gif") no-repeat 14px 0px;
+.tweet-2006 .tweet-main, .tweet-2007 .tweet-main {
   padding-top: 11px;
   margin-top: 6px;
 }
 
-.tweet-2006 .tweet-body {
+.tweet-2007 .tweet-main {
+  font-size: 0.75em;
+}
+
+.tweet-2006 .tweet-body, .tweet-2007 .tweet-body {
   color: #000;
   font-weight: bold;
   background-color: #fff;
   font-size: 2.12em;
   line-height: 1.2em;
-  display: inline-block;
+  display: block;
   padding: 7px;
   margin: 0;
 }
 
-.tweet-2006 .tweet-meta {
+.tweet-2007 .tweet-body {
+    font-family: Helvetica, Arial, sans-serif
+}
+
+.tweet-2006 .tweet-meta, .tweet-2007 .tweet-meta {
   display: block;
-  font-size: 0.83em;
+  font-size: 0.98em;
   background-color: #fff;
   padding: 2px 7px;
   text-align: right;
 }
 
-.tweet-2006 .tweet-meta a {
-  color: #0000ff;
+.tweet-2007 .tweet-meta {
+  display: block;
+  font-size: 0.98em;
+  background-color: #fff;
+  padding: 2px 7px;
+  text-align: right;
 }
 
-.tweet-2006 time {
+.tweet-2006 .tweet-meta a,
+.tweet-2007 .tweet-meta a {
+  padding: 2px 7px;
+}
+
+.tweet-2006 .tweet-meta a,
+.tweet-2007 .tweet-meta a,
+.tweet-2006 .tweet-meta a *,
+.tweet-2007 .tweet-meta a * {
+  color: #000;
+  text-decoration: none;
+}
+
+.tweet-2006 time, .tweet-2007 time {
   display: inline-block;
-  color: #0000ff;
 }
 
-.tweet-2006 .tweet-source {
+.tweet-2006 .tweet-source, .tweet-2007 .tweet-source  {
   display: inline-block;
 }
 
