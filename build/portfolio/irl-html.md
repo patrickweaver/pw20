@@ -8,9 +8,9 @@ start_date: 2023-06-03
 end_date: 2024-07-13
 project_url: https://doodles.patrickweaver.net/irl-html/
 source_url: https://github.com/patrickweaver/irlhtml
-status: Complete
+status: Archived
 tags:
-  - Complete
+  - Archived
   - html
   - reality
   - experiments
