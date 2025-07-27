@@ -170,7 +170,7 @@
 <img src="/images/blog/aws/app-screenshot.png" alt="A screenshot of the app">
 <figcaption>A screenshot of the app</figcaption>
 </figure>
-<p>The app is a Node.js app using Express. It uses 3 additional packages. <a href="aws-sdk">https://www.npmjs.com/package/aws-sdk</a> adds functionality to communicate with S3, <a href="uuid">https://www.npmjs.com/package/uuid</a> is used for object names in S3, and [https://www.npmjs.com/package/multer]multer is used to process file upload to the server before passing it to S3.</p>
+<p>The app is a Node.js app using Express. It uses 3 additional packages. <a href="https://www.npmjs.com/package/aws-sdk">aws-sdk</a> adds functionality to communicate with S3, <a href="https://www.npmjs.com/package/uuid">uuid</a> is used for object names in S3, and <a href="https://www.npmjs.com/package/multer">multer</a> is used to process file upload to the server before passing it to S3.</p>
 <p>The index page is a plain HTML file, but there are two POST routes in server.js: <code>/upload-image-form</code> and <code>/upload-image-async</code>. The two routes are mostly the same, but are repeated for easy copying.</p>
 <p>Lines 1 through 24 of server.js are setting up the dependencies:</p>
 <h5>server.js</h5>
