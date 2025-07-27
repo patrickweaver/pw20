@@ -4,6 +4,8 @@ title: I Could Never Remember How to Make a Simple S3 Upload Feature So I Wrote 
 date: 2020-04-21
 cover_image_url: /images/blog/aws/cover.png
 cover_image_alt: A screenshot of the app
+editors_note_header: 2025 Update
+editors_note: "As of Sep 8, 2025, the `aws-sdk` npm package is no longer supported, so I do not recommend following this guide."
 tags:
 ---
 
