@@ -101,7 +101,7 @@ Congratulations! You are done with the AWS setup, now you can work on your app. 
 
 </figure>
 
-The app is a Node.js app using Express. It uses 3 additional packages. [https://www.npmjs.com/package/aws-sdk](aws-sdk) adds functionality to communicate with S3, [https://www.npmjs.com/package/uuid](uuid) is used for object names in S3, and [https://www.npmjs.com/package/multer]multer is used to process file upload to the server before passing it to S3.
+The app is a Node.js app using Express. It uses 3 additional packages. [aws-sdk](https://www.npmjs.com/package/aws-sdk) adds functionality to communicate with S3, [uuid](https://www.npmjs.com/package/uuid) is used for object names in S3, and [multer](https://www.npmjs.com/package/multer) is used to process file upload to the server before passing it to S3.
 
 The index page is a plain HTML file, but there are two POST routes in server.js: `/upload-image-form` and `/upload-image-async`. The two routes are mostly the same, but are repeated for easy copying.
 
