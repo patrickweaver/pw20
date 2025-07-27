@@ -4,6 +4,8 @@ title: How to Set Up a Raspberry Pi as a Home Web Server
 date: 2021-05-03
 cover_image_url: /images/blog/how-to-raspberry-pi-server/pi-on-ipad.jpg
 cover_image_alt: A photo of a Raspberry Pi on an iPad
+editors_note_header: 2025 Update
+editors_note: "The Raspberry Pi Imager app now has many of the setup features that required additional steps when this guide was written."
 tags:
 ---
 

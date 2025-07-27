@@ -128,7 +128,16 @@ a {
   display: inline-block;
 }
 
+.post figure {
+  text-align: center;
+}
+
 .post figure img {
+  max-width: 100%;
+  
+}
+
+.post figure figcaption {
   width: 100%;
 }
 

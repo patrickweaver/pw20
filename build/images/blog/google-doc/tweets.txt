@@ -1,0 +1,46 @@
+Ben Tossell
+@bentossell
+Seriously how do you download an image from a google doc
+1:22 AM · Nov 1, 2019
+https://x.com/bentossell/status/1190182191520788480
+
+Ben Garvey
+@bengarvey
+I felt dumb because I couldn't figure out how to download an image from a google doc, but the after googling the answer you're supposed to export it as a zipped web page to get it.
+6:28 PM · Jun 29, 2020
+https://x.com/bengarvey/status/1277776054380265478
+
+Tamar Weinberg
+@tamar
+it would be really nice if one could download an image from a google doc instead of having to save it locally and then extract.
+10:22 AM · Mar 17, 2016
+https://x.com/tamar/status/710516705303384068
+
+𝔻𝕦𝕤𝕥𝕚𝕟 𝕂𝕚𝕣𝕜𝕝𝕒𝕟𝕕
+@DustinKirkland
+Hey @googledocs, what's thinking behind making it so hard to download an image, out of a Google Doc?  I mean, sure I can work around the obtuseness.  But why isn't "download image" one of the options in the right-click menu?
+5:17 AM · Feb 12, 2020
+https://x.com/DustinKirkland/status/1227582581350240257
+
+Dan has left this place for bluer skies
+@DanHigbie
+Google docs still has no way of letting you download or expand an embedded image.
+11:09 AM · Apr 13, 2020
+https://x.com/DanHigbie/status/1249761603559378945
+
+Sam Jarman
+@samjarman
+Things that are not easy #4721 - downloading images from Google Docs. 
+
+The only way: File > Download As...> html, zipped> Unzip, get image.
+6:00 PM · Apr 28, 2018
+https://x.com/samjarman/status/990395429383622656
+
+
+Steve Krouse
+@stevekrouse
+Right-click, inspect element, and grab the url from the href
+
+This only works if you are not selecting the image in the Google doc
+1:01 PM · Nov 1, 2019
+https://x.com/stevekrouse/status/1190358282877186050

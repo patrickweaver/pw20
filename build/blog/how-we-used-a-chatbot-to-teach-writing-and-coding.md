@@ -14,15 +14,10 @@ When [Mouse](https://mouse.org/) moved into our new office in early 2015, we wer
 We hosted our first open [Maker Night](https://mouse.org/makernight) in March 2015 and it quickly became a space where students showed up and could work on anything creative and innovative. Every month, we saw new projects emerge from crafting, coding, and anything in between:
 
 <figure>
-
-![A photo of two girls working at a laptop](/images/blog/chatbot/chatbot-1.jpg)![A photo of a boy making a paper prototype](/images/blog/chatbot/chatbot-2.jpg)![A photo of a boy using a Makey Makey](/images/blog/chatbot/chatbot-3.jpg)
-
-<figcaption>
-
-Pictures from Maker Night at [Mouse](http://mouse.org)
-
-</figcaption>
-
+<img src="/images/blog/chatbot/chatbot-1.jpg" alt="A photo of two girls working at a laptop" />
+<img src="/images/blog/chatbot/chatbot-2.jpg" alt="A photo of a boy making a paper prototype" />
+<img src="/images/blog/chatbot/chatbot-3.jpg" alt="A photo of a boy using a Makey Makey" />
+<figcaption>Pictures from Maker Night at <a href="http://mouse.org">Mouse</a></figcaption>
 </figure>
 
 We often test ideas for new creative activities at Maker Nights and one new project I had been playing around with was [a simple chatbot](/images/blog/chatbot/forest-noodle.png) that students could remix. We love teaching any new tech skill through activities that are quick and easy to jump into and have created a few introduction to [coding](/images/blog/chatbot/zircon-porch.png) [activities](https:///images/blog/chatbot/distinct-zoo.png) using remixable JavaScript arrays (Check out a few of [Mouse’s Web Making activities](/images/blog/chatbot/automatic-triangle.png) created through our partnership with Mozilla).
