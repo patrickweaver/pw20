@@ -8,9 +8,9 @@ start_date: 2018-09-05
 end_date: 2018-10-17
 project_url: https://doodles.patrickweaver.net/please-confirm-you-are-a-robot/
 source_url: https://github.com/patrickweaver/please-confirm-you-are-a-robot
-status: Complete
+status: Archived
 tags:
-  - Complete
+  - Archived
   - art
   - javascript
   - node
