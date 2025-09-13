@@ -111,6 +111,7 @@ module.exports = function (eleventyConfig) {
       "m4a",
       "mp3",
       "mp4",
+      "otf",
       "pdf",
       "vtt",
       "txt",
