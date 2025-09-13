@@ -2,6 +2,9 @@
 layout: layouts/blobNoHead.hbs
 title: 20s Kids Know
 pageId: 20s-kids-1
+description: A 24 hour playlist of kid-friendly songs compiled by JP and Patrick.
+cover_image_url: https://www.patrickweaver.net/images/pages/20s-kids/c.jpg
+cover_image_alt: A pixelated image of a CD on a yellow background
 ---
 
 <style>
