@@ -21,6 +21,16 @@
   --acc-5: #a6ff9e;
 }
 
+@font-face {
+  font-family: 'CooperHewittOTF-Bold';
+  src: url('/fonts/CooperHewitt-OTF-public/CooperHewitt-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'CooperHewittOTF-Medium';
+  src: url('/fonts/CooperHewitt-OTF-public/CooperHewitt-Medium.otf') format('opentype');
+}
+
 * {
   box-sizing: border-box;
 }
@@ -50,14 +60,17 @@ h6 {
 
 h1 {
   line-height: 3rem;
+  line-height: 3.6rem;
 }
 
 h2 {
   font-size: 1.6rem;
+  line-height: 1.8rem;
 }
 
 h3 {
   font-size: 1.4rem;
+  line-height: 1.8rem;
 }
 
 h4 {
@@ -146,18 +159,18 @@ dialog {
   border-color: var(--text-1);
 }
 
-details {
+.post details {
   border: 1px solid var(--text-2);
   margin: 1rem 0;
 
   border-radius: 2px;
 }
 
-summary {
+.post summary {
   background-color: var(--bg-4);
 }
 
-details > * {
+.post details > * {
   padding: 2px 5px 0px;
 }
 
@@ -430,7 +443,7 @@ h2.page-header a:hover {
 .blob,
 .post,
 .project {
-  margin: 1em 0 f;
+  margin: 1em 0;
   max-width: 100%;
 }
 
@@ -669,11 +682,12 @@ s::after {
 
   h1 {
     font-size: 2.5rem;
-    line-height: 2.5rem;
+    line-height: 3rem;
   }
 
   h2 {
     font-size: 2rem;
+    line-height: 2.2rem;
   }
 
   .project-header .cover,
