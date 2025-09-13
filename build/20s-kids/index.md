@@ -658,6 +658,6 @@ cover_image_alt: A pixelated image of a CD on a yellow background
 
 ### Cover art
 
-This is the cover art, it took some hacking to get a color 300 x 300 pixel image that would fit in the 4kb of space I had left for each track!
+This is the cover art, it took some hacking to get a color 300 x 300 pixel image that would fit in the 4kb of space per track that I had left on the CD!
 
 <img src="/images/pages/20s-kids/c.jpg" />
