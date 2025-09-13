@@ -102,8 +102,8 @@ pageId: 20s-kids-1
 ### Links
 
 <ul style="line-height: 2.5rem;">
-    <li><a href="https://drive.google.com/file/d/1idvBnr2tyPFlK5fr9_83A2SkDd5H8IiP/view?usp=drive_link" target="_blank">Download mp3s for mp3 CD (700mb)</a></li>
-    <li><a href="https://drive.google.com/file/d/1NbnnYs_H9Yo-1jA1pIPNbdTAGYLOvo83/view?usp=sharing" target="_blank">Download High Quality mp3s (3gb)</a></li>
+    <li><a href="https://drive.google.com/file/d/1idvBnr2tyPFlK5fr9_83A2SkDd5H8IiP/view" target="_blank">Download mp3s for mp3 CD (700mb)</a></li>
+    <li><a href="https://drive.google.com/file/d/1NbnnYs_H9Yo-1jA1pIPNbdTAGYLOvo83/view" target="_blank">Download High Quality mp3s (3gb)</a></li>
     <li><a href="https://open.spotify.com/playlist/7MIohSL17Dv94PAefraLq5?si=07549ee88d354f59" target="_blank">Spotify</a></li>
 </ul>
 
