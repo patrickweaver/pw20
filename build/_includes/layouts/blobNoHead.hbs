@@ -5,9 +5,11 @@
   </head>
   <body>
     <main id="{{pageId}}">
-      <h1 class="page-header">
-        <a href="{{page.url}}">{{pageHeader}}</a>
-      </h1>
+      {{#if pageHeader}}
+        <h1 class="page-header">
+          <a href="{{page.url}}">{{pageHeader}}</a>
+        </h1>
+      {{/if}}
       
       <div class="blob">
         {{{content}}}
