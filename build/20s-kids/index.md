@@ -109,8 +109,8 @@ cover_image_alt: A pixelated image of a CD on a yellow background
 ### Links
 
 <ul style="line-height: 2.5rem;">
-    <li><a href="https://drive.google.com/file/d/1idvBnr2tyPFlK5fr9_83A2SkDd5H8IiP/view" target="_blank">Download mp3s for mp3 CD (700mb)</a></li>
-    <li><a href="https://drive.google.com/file/d/1NbnnYs_H9Yo-1jA1pIPNbdTAGYLOvo83/view" target="_blank">Download High Quality mp3s (3.4gb)</a></li>
+    <li><a href="https://drive.google.com/file/d/1BTZ6Q_duv4O6TyDYqawv6dvPTGduaRnf/view" target="_blank">Download mp3s for mp3 CD (700mb)</a></li>
+    <li><a href="https://drive.google.com/file/d/1XtfC02IHoTR-dph2FacDTbozawg1GIeE/view" target="_blank">Download High Quality mp3s (3.4gb)</a></li>
     <li><a href="https://open.spotify.com/playlist/7MIohSL17Dv94PAefraLq5?si=07549ee88d354f59" target="_blank">Spotify</a></li>
 </ul>
 
@@ -125,10 +125,12 @@ cover_image_alt: A pixelated image of a CD on a yellow background
 <dd>If you download the 700 mb version and unzip the file, using a computer with a CD drive you can burn it as a “data disk”, you do not need to do anything special to make it an “mp3 CD”.</dd>
 <dt>I can’t burn a CD, it’s 2025!</dt>
 <dd>Email me I will mail you one.</dd>
+<dt>What about songs in other languages?</dt>
+<dd>Songs in languages I don't speak (not English or Spanish) have not been minimally reviewed with machine translation.</dd>
 <dt>Fun fact!</dt>
 <dd>The song from part 8 by “Isaac and his Orchestra” is from a cassette that JP’s family had in their car in the 90s! (not on spotify)</dt>
 <dt>How do I submit a complaint via email?</dt>
-<dd><a href="mailto:playlist20skids@fastmail.com">playlist20skids@fastmail.com</a>
+<dd><a href="mailto:playlist20skids@fastmail.com">playlist20skids@fastmail.com</a> (also song suggestions for future playlists!)</dd>
 </dl>
 
 <h3 style="display: inline-block;">Track List</h3>
@@ -220,7 +222,7 @@ cover_image_alt: A pixelated image of a CD on a yellow background
                 <li>Belle and Sebastian - Funny Little Frog</li>
                 <li>Cyndi Lauper - Girls Just Want to Have Fun</li>
                 <li>Chairlift - I Belong in Your Arms</li>
-                <li>The Clash - Rudie can't fail</li>
+                <li>David Bowie - Starman</li>
                 <li>Heart - Straight On</li>
                 <li>Grace Jones - La Vie en rose</li>
             </ol>
