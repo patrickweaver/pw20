@@ -109,8 +109,8 @@ cover_image_alt: A pixelated image of a CD on a yellow background
 ### Links
 
 <ul style="line-height: 2.5rem;">
-    <li><a href="https://drive.google.com/file/d/1BTZ6Q_duv4O6TyDYqawv6dvPTGduaRnf/view" target="_blank">Download mp3s for mp3 CD (700mb)</a></li>
-    <li><a href="https://drive.google.com/file/d/1XtfC02IHoTR-dph2FacDTbozawg1GIeE/view" target="_blank">Download High Quality mp3s (3.4gb)</a></li>
+    <li><a href="https://drive.google.com/file/d/1yZdzr-t-vHEKeqR68OHv_SMYQii4sWh8/view" target="_blank">Download mp3s for mp3 CD (700mb)</a></li>
+    <li><a href="https://drive.google.com/file/d/1YK4kGDUS5Pk6sSq4-PWbxJiAWzhEAgkD/view" target="_blank">Download High Quality mp3s (3.4gb)</a></li>
     <li><a href="https://open.spotify.com/playlist/7MIohSL17Dv94PAefraLq5?si=07549ee88d354f59" target="_blank">Spotify</a></li>
 </ul>
 
