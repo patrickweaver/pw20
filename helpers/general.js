@@ -1,4 +1,4 @@
-const htmlToText = require("html-to-text");
+const { convert } = require("html-to-text");
 const { marked } = require("marked");
 
 function isSameString(stringA, stringB) {
@@ -25,11 +25,15 @@ function not(a) {
 function previewText(body) {
   if (body) {
     const options = {
-      ignoreHref: true,
-      ignoreImage: true,
-      uppercaseHeadings: false,
+      selectors: [
+        { selector: "a", options: { ignoreHref: true } },
+        { selector: "img", format: "skip" },
+        { selector: "h1", options: { uppercase: false } },
+        { selector: "h2", options: { uppercase: false } },
+        { selector: "h3", options: { uppercase: false } },
+      ],
     };
-    const plainText = htmlToText.fromString(marked.parse(body), options);
+    const plainText = convert(marked.parse(body), options);
     let previewText = plainText.substring(0, 349);
     // Make this more general
     weirdCharIndex = previewText.indexOf(">");
