@@ -24,7 +24,7 @@ pageId: party
 <div style="border: 2px solid pink; width: 408px; margin: 2px; border-radius: 96px;">
 <figure style="width: 400px; padding: 1rem; border: 2px solid yellow; margin: 2px; border-radius: 128px; color: black;">
 
-<audio controls src="https://storage.patrickweaver.net/files/All_4s_1964-2024-top-hits-merry-christmizzle_V2.mp3"></audio>
+<audio controls src="https://storage.patrickweaver.net/p/All_4s_1964-2024-top-hits-merry-christmizzle_V2.mp3"></audio>
 
 <figcaption>🕺 All 4s: 1964-2024 Top Hits</figcaption>
 </figure>
@@ -35,7 +35,7 @@ pageId: party
 
 <h4 style="color: white">Download</h4>
 
-<a href="https://storage.patrickweaver.net/files/All_4s_1964-2024-top-hits-merry-christmizzle_V2.mp3" download>
+<a href="https://storage.patrickweaver.net/p/All_4s_1964-2024-top-hits-merry-christmizzle_V2.mp3" download>
   <img src="/images/pages/party/download.gif" alt="Download">
 </a>
 
