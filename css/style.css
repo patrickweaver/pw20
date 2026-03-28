@@ -22,13 +22,15 @@
 }
 
 @font-face {
-  font-family: 'CooperHewittOTF-Bold';
-  src: url('/fonts/CooperHewitt-OTF-public/CooperHewitt-Bold.otf') format('opentype');
+  font-family: "CooperHewittOTF-Bold";
+  src: url("/fonts/CooperHewitt-OTF-public/CooperHewitt-Bold.otf")
+    format("opentype");
 }
 
 @font-face {
-  font-family: 'CooperHewittOTF-Medium';
-  src: url('/fonts/CooperHewitt-OTF-public/CooperHewitt-Medium.otf') format('opentype');
+  font-family: "CooperHewittOTF-Medium";
+  src: url("/fonts/CooperHewitt-OTF-public/CooperHewitt-Medium.otf")
+    format("opentype");
 }
 
 * {
@@ -147,7 +149,6 @@ a {
 
 .post figure img {
   max-width: 100%;
-  
 }
 
 .post figure figcaption {
@@ -579,6 +580,16 @@ blockquote.editors-note {
 
 dl.links div:first-child {
   margin-bottom: 0.5rem;
+}
+
+.flex-image-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.flex-image-container img {
+  padding: 0.5rem;
 }
 
 kbd {

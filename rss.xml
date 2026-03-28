@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="https://patrickweaver.net/blog/" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
+    
     <title>Patrick Weaver: Blog</title>
     <link>https://patrickweaver.net/blog/</link>
     <atom:link href="https://patrickweaver.net/rss.xml" rel="self" type="application/rss+xml" />
@@ -8,8 +9,7 @@
     <language>en</language>
     <item>
       <title>IRL HTML Is the Place For Your Most Hand-Written Websites</title>
-      <link>https://patrickweaver.net/blog/irl-html-is-the-place-for-your-most-hand-written-websites/</link>
-      <description>&lt;p&gt;Last year before &lt;a href=&quot;https://html.energy&quot;&gt;HTML Energy&lt;/a&gt;&#39;s &lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt; Day in &lt;a href=&quot;https://www.are.na/bay-area-95sssqibasq/w-s-www-gathering&quot;&gt;San Francisco&lt;/a&gt; I had the idea to iterate on some of my previous projects like &lt;a href=&quot;https://www.patrickweaver.net/portfolio/whiteboard-email/&quot;&gt;Whiteboard Email&lt;/a&gt;, and make both an app that would do &lt;abbr title=&quot;Optical character recognition&quot;&gt;OCR&lt;/abbr&gt; on HTML, and a website to host truly “hand-written” HTML. That became &lt;a href=&quot;https://doodles.patrickweaver.net/irl-html/&quot;&gt;IRL HTML&lt;/a&gt; and it was good enough to make some &lt;a href=&quot;https://doodles.patrickweaver.net/irl-html/pages/acc8/&quot;&gt;very simple&lt;/a&gt; websites!&lt;/p&gt;
+      <link>https://patrickweaver.net/blog/irl-html-is-the-place-for-your-most-hand-written-websites/</link><description>&lt;p&gt;Last year before &lt;a href=&quot;https://html.energy&quot;&gt;HTML Energy&lt;/a&gt;&#39;s &lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt; Day in &lt;a href=&quot;https://www.are.na/bay-area-95sssqibasq/w-s-www-gathering&quot;&gt;San Francisco&lt;/a&gt; I had the idea to iterate on some of my previous projects like &lt;a href=&quot;https://www.patrickweaver.net/portfolio/whiteboard-email/&quot;&gt;Whiteboard Email&lt;/a&gt;, and make both an app that would do &lt;abbr title=&quot;Optical character recognition&quot;&gt;OCR&lt;/abbr&gt; on HTML, and a website to host truly “hand-written” HTML. That became &lt;a href=&quot;https://doodles.patrickweaver.net/irl-html/&quot;&gt;IRL HTML&lt;/a&gt; and it was good enough to make some &lt;a href=&quot;https://doodles.patrickweaver.net/irl-html/pages/acc8/&quot;&gt;very simple&lt;/a&gt; websites!&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;display: flex; max-width: 100%; align-items: center;&quot;&gt;
   &lt;img src=&quot;https://patrickweaver.net/images/blog/irl-html/simple-website.png&quot; alt=&quot;A screenshot of a website made with IRL HTML. It says Park, With Grass&quot; style=&quot;max-width: 50%; margin-right: 2.5px;&quot;&gt;
@@ -33,15 +33,13 @@
 &lt;figcaption&gt;More complex hand-written source code, and the webiste (with a picture of itself)&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;Overall, though I’m skeptical of the utility of LLMs more generally, it’s exciting to more easily and reliably make the kinds of quirky computer vision projects I’ve been dreaming of for a long time. I’d be interested in smaller handwriting OCR specific models that I might be able to run locally someday!&lt;/p&gt;
-</description>
-      <pubDate>Wed, 10 Jul 2024 00:00:00 GMT</pubDate>
+</description><pubDate>Wed, 10 Jul 2024 00:00:00 +0000</pubDate>
       <dc:creator>Patrick Weaver</dc:creator>
       <guid>https://patrickweaver.net/blog/irl-html-is-the-place-for-your-most-hand-written-websites/</guid>
     </item>
     <item>
       <title>Unravelling an iMessage URL Parsing Mystery</title>
-      <link>https://patrickweaver.net/blog/imessage-mystery/</link>
-      <description>&lt;p&gt;I have long been a fan of frontend-only websites, usually single-page apps, that are able to persist state in sharable URLs despite not having a database or a backend. One of the more complex projects I used this technique for was my &lt;a href=&quot;https://doodles.patrickweaver.net/crossword/editor&quot;&gt;Crossword Puzzle Editor&lt;/a&gt;, which stores an entire puzzle, both clues and correct answers in the URL hash.&lt;/p&gt;
+      <link>https://patrickweaver.net/blog/imessage-mystery/</link><description>&lt;p&gt;I have long been a fan of frontend-only websites, usually single-page apps, that are able to persist state in sharable URLs despite not having a database or a backend. One of the more complex projects I used this technique for was my &lt;a href=&quot;https://doodles.patrickweaver.net/crossword/editor&quot;&gt;Crossword Puzzle Editor&lt;/a&gt;, which stores an entire puzzle, both clues and correct answers in the URL hash.&lt;/p&gt;
 &lt;p&gt;However, when I composed a small puzzle and shared it with a friend via iMessage I was greeted with a link to the app with empty state above a long string of random characters in a blue bubble:&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;text-align: center;&quot;&gt;
@@ -87,15 +85,13 @@
 &lt;/figure&gt;
 &lt;p&gt;Now that I know the exact cut off of 301 characters I’ve been able to find &lt;a href=&quot;https://blog.jonschneider.com/2023/06/the-mystery-of-broken-jwt-magic-link.html&quot;&gt;one other blog post&lt;/a&gt;, but I’m still surprised that this isn’t more widely known.&lt;/p&gt;
 &lt;p&gt;Try out the app yourself or experiment with other platforms, I would love to learn more about the details behind this! This link without a hash will randomly generate 10 colors (and then store them in the URL hash): &lt;a target=&quot;_blank&quot; href=&quot;https://doodles.patrickweaver.net/imessage-url-state-example&quot;&gt;doodles.patrickweaver.net/imessage-url-state-example&lt;/a&gt;.&lt;/p&gt;
-</description>
-      <pubDate>Mon, 05 Feb 2024 00:00:00 GMT</pubDate>
+</description><pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate>
       <dc:creator>Patrick Weaver</dc:creator>
       <guid>https://patrickweaver.net/blog/imessage-mystery/</guid>
     </item>
     <item>
       <title>A Blog Post With Every HTML Element</title>
-      <link>https://patrickweaver.net/blog/a-blog-post-with-every-html-element/</link>
-      <description>&lt;!-- markdownlint-disable MD033 MD013 --&gt;
+      <link>https://patrickweaver.net/blog/a-blog-post-with-every-html-element/</link><description>&lt;!-- markdownlint-disable MD033 MD013 --&gt;
 &lt;style&gt;
     section &gt; ul {
         padding-left: 0;
@@ -1738,15 +1734,13 @@ so they can be used here for displaying source code
 &lt;footer role=&quot;contentinfo&quot;&gt;
     Written between &lt;time datetime=&quot;2022-02&quot;&gt;February 2022&lt;/time&gt; and &lt;time datetime=&quot;2023-08&quot;&gt;August 2023&lt;/time&gt;.
 &lt;/footer&gt;
-</description>
-      <pubDate>Thu, 03 Aug 2023 00:00:00 GMT</pubDate>
+</description><pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate>
       <dc:creator>Patrick Weaver</dc:creator>
       <guid>https://patrickweaver.net/blog/a-blog-post-with-every-html-element/</guid>
     </item>
     <item>
       <title>Alphabetic Internet Time: A Time Zone for the Internet</title>
-      <link>https://patrickweaver.net/blog/alphabetic-internet-time/</link>
-      <description>&lt;p&gt;In the Fall of 2020 I &lt;a href=&quot;https://www.patrickweaver.net/blog/a-recurse-center-remote-batch/&quot;&gt;participated in a 12 week batch&lt;/a&gt; at the &lt;a href=&quot;https://recurse.com&quot;&gt;Recurse Center&lt;/a&gt;. While I had a lot of previous experience &lt;em&gt;working&lt;/em&gt; remotely, both before and during the pandemic, RC was the first time where I was communicating with people in more than 1 or 2 other time zones. I now work at a fully remote company, mostly spread over the 4(ish) U.S. time zones, but with a few people permanently or temporarily in other places.&lt;/p&gt;
+      <link>https://patrickweaver.net/blog/alphabetic-internet-time/</link><description>&lt;p&gt;In the Fall of 2020 I &lt;a href=&quot;https://www.patrickweaver.net/blog/a-recurse-center-remote-batch/&quot;&gt;participated in a 12 week batch&lt;/a&gt; at the &lt;a href=&quot;https://recurse.com&quot;&gt;Recurse Center&lt;/a&gt;. While I had a lot of previous experience &lt;em&gt;working&lt;/em&gt; remotely, both before and during the pandemic, RC was the first time where I was communicating with people in more than 1 or 2 other time zones. I now work at a fully remote company, mostly spread over the 4(ish) U.S. time zones, but with a few people permanently or temporarily in other places.&lt;/p&gt;
 &lt;h4&gt;Communicating across time zones&lt;/h4&gt;
 &lt;p&gt;RC when I was there (mostly I would guess because their software was designed and configured for in person retreats in NYC) operated for the most part in Eastern Time, although I see from my limited participation in the community as an alum that this may have shifted, especially thanks to &lt;a href=&quot;https://zulip.com/help/format-your-message-using-markdown#global-times&quot;&gt;Zulip’s time-zone-relative timestamp support&lt;/a&gt;. RC had transitioned to hosting Recursers remotely a few months before my batch, which is how they continue to operate now in Summer 2022. At my current job we often default to either Eastern Time or Pacific Time, but some people will also just use their local time and let others figure it out.&lt;/p&gt;
 &lt;p&gt;Out of politeness and miscalculation-anxiety reducing redundancy I often will use multiple time zones, for example when proposing a meeting I might say, &lt;em&gt;“Let’s meet at 🗽 12:30 PM ET / 🏔 10:30 AM MT / 🌁 9:30 AM PT,”&lt;/em&gt; (I’m still searching for a good Central Time emoji, 🛣 🌽 🌪 are the best I’ve got), but time zone based confusion often takes more thinking than it should.&lt;/p&gt;
@@ -1778,15 +1772,13 @@ so they can be used here for displaying source code
 &lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/ait/sf-ny-sunset.jpg&quot; alt=&quot;Photographs of the sunset in San Francisco, CA, and New York, NY&quot;&gt;&lt;/p&gt;
 &lt;p&gt;But who knows! Weirder ideas have caught on in the past, like Daylight Saving Time! Or, maybe we can all just join the UTC+8 “Hotel” time zone since almost 25% of the world population already lives in it!&lt;/p&gt;
 &lt;p&gt;Aug 18, 2022 B:14, Brooklyn, NY&lt;/p&gt;
-</description>
-      <pubDate>Thu, 18 Aug 2022 00:00:00 GMT</pubDate>
+</description><pubDate>Thu, 18 Aug 2022 00:00:00 +0000</pubDate>
       <dc:creator>Patrick Weaver</dc:creator>
       <guid>https://patrickweaver.net/blog/alphabetic-internet-time/</guid>
     </item>
     <item>
       <title>How to Set Up a Raspberry Pi as a Home Web Server</title>
-      <link>https://patrickweaver.net/blog/how-to-raspberry-pi-server/</link>
-      <description>&lt;p&gt;Like most of the world, I’ve been spending a lot of time at home lately. Over the winter I was experimenting with building my own web-based digital tools, like an app to track articles and books I was reading. I initially thought I would need to buy hosting space to have the app accessible, but realized I mostly needed to use it when I was at home anyway, so a URL that only existed on my local network work also work.&lt;/p&gt;
+      <link>https://patrickweaver.net/blog/how-to-raspberry-pi-server/</link><description>&lt;p&gt;Like most of the world, I’ve been spending a lot of time at home lately. Over the winter I was experimenting with building my own web-based digital tools, like an app to track articles and books I was reading. I initially thought I would need to buy hosting space to have the app accessible, but realized I mostly needed to use it when I was at home anyway, so a URL that only existed on my local network work also work.&lt;/p&gt;
 &lt;p&gt;I have done a few projects with Raspberry Pis before, most notably a &lt;a href=&quot;https://www.patrickweaver.net/blog/building-a-futuristic-record-player-with-glitch-and-raspberry-pi/&quot;&gt;computer vision “record player”&lt;/a&gt;, but always found myself looking up the same things like how to set up Wi-Fi and SSH access. I seemed to need to do the same handful of things every time, but they were spread across various documentation and how-tos. This time while setting up the Pi web server I took notes so I would have it all in one place.&lt;/p&gt;
 &lt;p&gt;To follow along with these steps you will need a second computer to set up the SD card (though you could probably start with a &lt;a href=&quot;https://www.adafruit.com/product/4266&quot;&gt;preformatted SD card also&lt;/a&gt;), and any kind of Raspberry Pi. I have run web servers on Pi Zeros before, though it can be a challenge to install newer versions of Node.js on ARMv6 based Pis (Zero and the original Raspberry Pi), and sometimes when building a large client app I’ve had to move to a faster Pi from a Pi Zero.&lt;/p&gt;
 &lt;h4&gt;SD Card Setup&lt;/h4&gt;
@@ -1981,15 +1973,13 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 &lt;li&gt;&lt;strong&gt;Install nvm and npm:&lt;/strong&gt; &lt;code&gt;curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash&lt;/code&gt;, &lt;code&gt;. ~/.bashrc&lt;/code&gt;, &lt;code&gt;nvm install lts&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Set Up Reverse Proxy:&lt;/strong&gt; Remove default: &lt;code&gt;sudo rm /etc/nginx/sites-enabled/default&lt;/code&gt;, Create config file: &lt;code&gt;sudo touch /etc/nginx/sites-available/[YOUR SITE].conf&lt;/code&gt;, Edit config file (see above): &lt;code&gt;sudo nano /etc/nginx/sites-available/[YOUR SITE].conf&lt;/code&gt;, Link to sites-enabled: &lt;code&gt;sudo ln -s /etc/nginx/sites-available/[YOUR-SITE].conf /etc/nginx/sites-enabled/[YOUR-SITE].conf&lt;/code&gt;, Reload Nginx: &lt;code&gt;sudo systemctl reload nginx&lt;/code&gt;. &lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-debian-10&quot;&gt;source&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
-</description>
-      <pubDate>Mon, 03 May 2021 00:00:00 GMT</pubDate>
+</description><pubDate>Mon, 03 May 2021 00:00:00 +0000</pubDate>
       <dc:creator>Patrick Weaver</dc:creator>
       <guid>https://patrickweaver.net/blog/how-to-raspberry-pi-server/</guid>
     </item>
     <item>
       <title>Participating in a Remote Batch at the Recurse Center</title>
-      <link>https://patrickweaver.net/blog/a-recurse-center-remote-batch/</link>
-      <description>&lt;p&gt;Participating in a batch at the &lt;a href=&quot;https://www.recurse.com/&quot;&gt;Recurse Center&lt;/a&gt; is something that I’ve thought on-and-off about doing since I found out about it (then called Hacker School) sometime between 2013 and 2015, but it just never seemed like the right time to leave my job and its subsidized health insurance until I was laid off (what turned out to be) early on in the pandemic. I had as recently as January 2020 been thinking, “maybe now is the right time to finally quit and do it,” and though I’m relieved I was able to get a few more months of savings and health insurance into 2020, participating in RC was the perfect change of pace and a motivating bridge between employment and the job search.&lt;/p&gt;
+      <link>https://patrickweaver.net/blog/a-recurse-center-remote-batch/</link><description>&lt;p&gt;Participating in a batch at the &lt;a href=&quot;https://www.recurse.com/&quot;&gt;Recurse Center&lt;/a&gt; is something that I’ve thought on-and-off about doing since I found out about it (then called Hacker School) sometime between 2013 and 2015, but it just never seemed like the right time to leave my job and its subsidized health insurance until I was laid off (what turned out to be) early on in the pandemic. I had as recently as January 2020 been thinking, “maybe now is the right time to finally quit and do it,” and though I’m relieved I was able to get a few more months of savings and health insurance into 2020, participating in RC was the perfect change of pace and a motivating bridge between employment and the job search.&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;text-align: center;&quot;&gt;
   &lt;img src=&quot;https://patrickweaver.net/images/blog/rc2/rc-website.jpg&quot; alt=&quot;A screenshot from the Recurse Center website with a notice about operating remotely&quot; style=&quot;max-width: 500px; margin: 0 auto;&quot;&gt;
@@ -2035,15 +2025,13 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 &lt;/div&gt;
 &lt;figcaption&gt;An early attempt to draw MTA track geography data as parallel tracks on a map&lt;/figcaption&gt;
 &lt;/figure&gt;
-</description>
-      <pubDate>Mon, 25 Jan 2021 16:33:26 GMT</pubDate>
+</description><pubDate>Mon, 25 Jan 2021 16:33:26 +0000</pubDate>
       <dc:creator>Patrick Weaver</dc:creator>
       <guid>https://patrickweaver.net/blog/a-recurse-center-remote-batch/</guid>
     </item>
     <item>
       <title>Making a Real-Time NYC Subway Map with Real Weird NYC Subway Data</title>
-      <link>https://patrickweaver.net/blog/making-a-real-time-nyc-subway-map-with-real-weird-nyc-subway-data/</link>
-      <description>&lt;p&gt;Earlier this week the NYC MTA released a new &lt;a href=&quot;https://map.mta.info/&quot;&gt;digital-first map&lt;/a&gt;. The &lt;a href=&quot;https://www.curbed.com/2020/10/first-look-new-yorks-digital-subway-map-comes-alive-today.html&quot;&gt;Curbed exclusive&lt;/a&gt; that announced its release accurately portrays it as a strange child of both the 1972 map design by Massimo Vignelli and the current &lt;a href=&quot;https://new.mta.info/map/5256&quot;&gt;“paper” map&lt;/a&gt;. One feature of the new map (though it’s harder than it should be to notice at first) is real-time visualizations of each train in the system.&lt;/p&gt;
+      <link>https://patrickweaver.net/blog/making-a-real-time-nyc-subway-map-with-real-weird-nyc-subway-data/</link><description>&lt;p&gt;Earlier this week the NYC MTA released a new &lt;a href=&quot;https://map.mta.info/&quot;&gt;digital-first map&lt;/a&gt;. The &lt;a href=&quot;https://www.curbed.com/2020/10/first-look-new-yorks-digital-subway-map-comes-alive-today.html&quot;&gt;Curbed exclusive&lt;/a&gt; that announced its release accurately portrays it as a strange child of both the 1972 map design by Massimo Vignelli and the current &lt;a href=&quot;https://new.mta.info/map/5256&quot;&gt;“paper” map&lt;/a&gt;. One feature of the new map (though it’s harder than it should be to notice at first) is real-time visualizations of each train in the system.&lt;/p&gt;
 &lt;p&gt;I’ve been working on a similar concept, starting in February 2020, on which progress stalled once I stopped riding the subway regularly in March. But, when I started my batch at &lt;a href=&quot;https://www.recurse.com/&quot;&gt;Recurse Center&lt;/a&gt; I decided to pick up the project again. My inspiration for the map was the large TV screens that the MTA has installed in stations over the last few years, which frustratingly display the “paper” version of the map.&lt;/p&gt;
 &lt;figure&gt;
 &lt;div style=&quot;text-align: center;&quot;&gt;
@@ -2242,15 +2230,13 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 &lt;p&gt;My map project is available on &lt;a href=&quot;https://github.com/patrickweaver/nyc-subway/tree/971c538eb5de9ac524fa1db8656ddd9febd6f0e5&quot;&gt;GitHub&lt;/a&gt;, bugs and all. I did most of the work on the map using only the G train API endpoint. This was a helpful limitation when I was first experimenting with what was possible using the data, but may have led to more bugs because of the slight differences in the data available for each set of lines.&lt;/p&gt;
 &lt;p&gt;A common complaint about the new official real-time map is that it seems to use as much computer power as it can. My map isn’t much better because it is doing all of the geographic calculations in the user’s browser, my guess is that the MTA’s map is also. One update I might take on over the next week and a half as my time at RC winds down is moving these calculations to a server, and sending only train position changes to the map visualization. This may also help with the bug my current prototype exhibits where leaving and coming back to the tab a few minutes later will cause trains to fly around the map without regard for the lines or stations.&lt;/p&gt;
 &lt;p&gt;The MTA data is weird because it’s created by a system that could never have anticipated the kind of systems that now try to contain it. Overall, working with and working around the weirdness in the data has been challenging, but a great reminder that the most interesting real-world problems are often hard to jam into our brittle computer systems, and that’s probably a good thing.&lt;/p&gt;
-</description>
-      <pubDate>Wed, 21 Oct 2020 00:00:00 GMT</pubDate>
+</description><pubDate>Wed, 21 Oct 2020 00:00:00 +0000</pubDate>
       <dc:creator>Patrick Weaver</dc:creator>
       <guid>https://patrickweaver.net/blog/making-a-real-time-nyc-subway-map-with-real-weird-nyc-subway-data/</guid>
     </item>
     <item>
       <title>Week 1 at Recurse Center: Two Approaches to Learning</title>
-      <link>https://patrickweaver.net/blog/recurse-center-week-1/</link>
-      <description>&lt;p&gt;I just finished my first week as part of the Fall 1 &#39;20 batch at &lt;a href=&quot;https://www.recurse.com&quot;&gt;Recurse Center&lt;/a&gt;. I tried to split my time between being social and building skills that I want to use for future projects. The social aspect of RC is interesting because this batch is being conducted remotely.&lt;/p&gt;
+      <link>https://patrickweaver.net/blog/recurse-center-week-1/</link><description>&lt;p&gt;I just finished my first week as part of the Fall 1 &#39;20 batch at &lt;a href=&quot;https://www.recurse.com&quot;&gt;Recurse Center&lt;/a&gt;. I tried to split my time between being social and building skills that I want to use for future projects. The social aspect of RC is interesting because this batch is being conducted remotely.&lt;/p&gt;
 &lt;p&gt;My batch at RC started exactly 5 months after my last day in an office, and something I had been thinking about over the last few months, is that I haven’t met anyone new since early March when NYC shut down because of the pandemic. It’s been very refreshing to meet people again, even if it’s via video calls and chat. RC has created an online representation of their physical space we call &amp;quot;Virtual RC&amp;quot;. Each of us have avatars we can move around the space, and there are permanent links to video call rooms that we can pop into for events or impromptu conversations. The Virtual RC experience pairs well with group chat organized into streams on different topics.&lt;/p&gt;
 &lt;figure&gt;
 &lt;p&gt;&lt;img src=&quot;https://patrickweaver.net/images/blog/rc/virtual-rc.png&quot; alt=&quot;A screenshot of Virtual RC&quot;&gt;&lt;/p&gt;
@@ -2316,15 +2302,13 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 &lt;li&gt;Something that takes ideas similar to Dynamicland (or the &lt;a href=&quot;https://www.recurse.com/blog/132-living-room-making-rc-programmable&quot;&gt;Living Room&lt;/a&gt; project at RC) into the remote world we’re living in.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Overall I’m very excited to be spending time at RC, and I hope that it gives me time to explore ideas with weird corners and not settle for solving small simple problems quickly.&lt;/p&gt;
-</description>
-      <pubDate>Sun, 16 Aug 2020 22:22:13 GMT</pubDate>
+</description><pubDate>Sun, 16 Aug 2020 22:22:13 +0000</pubDate>
       <dc:creator>Patrick Weaver</dc:creator>
       <guid>https://patrickweaver.net/blog/recurse-center-week-1/</guid>
     </item>
     <item>
       <title>How to Download an Image from a Google Doc</title>
-      <link>https://patrickweaver.net/blog/how-to-download-an-image-from-a-google-doc/</link>
-      <description>&lt;p&gt;For some reason Google hasn’t built in a way for you to download images in Google docs! There are workarounds to get those image files like &lt;a href=&quot;https://twitter.com/corduroy/status/1184758335934849025&quot;&gt;using Google Keep&lt;/a&gt;, or &lt;a href=&quot;https://twitter.com/tonyvincent/status/1021726699178708993&quot;&gt;downloading your whole doc as a .zip file&lt;/a&gt;, but these have always felt like too many steps.&lt;/p&gt;
+      <link>https://patrickweaver.net/blog/how-to-download-an-image-from-a-google-doc/</link><description>&lt;p&gt;For some reason Google hasn’t built in a way for you to download images in Google docs! There are workarounds to get those image files like &lt;a href=&quot;https://twitter.com/corduroy/status/1184758335934849025&quot;&gt;using Google Keep&lt;/a&gt;, or &lt;a href=&quot;https://twitter.com/tonyvincent/status/1021726699178708993&quot;&gt;downloading your whole doc as a .zip file&lt;/a&gt;, but these have always felt like too many steps.&lt;/p&gt;
 &lt;p&gt;And this is something that people really want!&lt;/p&gt;
 &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;a href=&quot;https://twitter.com/user/status/1190182191520788480&quot;&gt;&lt;/a&gt;&lt;/blockquote&gt; &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;a href=&quot;https://twitter.com/user/status/1277776054380265478&quot;&gt;&lt;/a&gt;&lt;/blockquote&gt; &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
@@ -2354,15 +2338,13 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 &lt;h4&gt;Great my problems are solved forever!&lt;/h4&gt;
 &lt;p&gt;No guarantees that this will work long term, a quick look at the source code for any Google Doc will show that they’re very complex! I wouldn’t be surprised if Google changes the way these URLs work in the future, but this tool has worked for 6 months so maybe not!&lt;/p&gt;
 &lt;p&gt;Long term I hope that they build in a way for people to download their images, but for now I hope this is helpful!&lt;/p&gt;
-</description>
-      <pubDate>Thu, 16 Jul 2020 00:00:00 GMT</pubDate>
+</description><pubDate>Thu, 16 Jul 2020 00:00:00 +0000</pubDate>
       <dc:creator>Patrick Weaver</dc:creator>
       <guid>https://patrickweaver.net/blog/how-to-download-an-image-from-a-google-doc/</guid>
     </item>
     <item>
       <title>I Could Never Remember How to Make a Simple S3 Upload Feature So I Wrote It Down</title>
-      <link>https://patrickweaver.net/blog/i-could-never-remember-how-to-make-a-simple-s3-upload-feature-so-i-wrote-it-down/</link>
-      <description>&lt;p&gt;Whenever I start a new web project there is an ominous, literal, figurative, &amp;quot;cloud&amp;quot; lurking on the horizon: Will this project get complicated enough to need to be connected to S3 for file upload?&lt;/p&gt;
+      <link>https://patrickweaver.net/blog/i-could-never-remember-how-to-make-a-simple-s3-upload-feature-so-i-wrote-it-down/</link><description>&lt;p&gt;Whenever I start a new web project there is an ominous, literal, figurative, &amp;quot;cloud&amp;quot; lurking on the horizon: Will this project get complicated enough to need to be connected to S3 for file upload?&lt;/p&gt;
 &lt;p&gt;More often than I’d like the answer is yes, and at this point I’ve re-learned how to connect a Node.js app to S3 more times than I’d like. Rather than keep learning just enough S3 to get a project working, and then instantly forgetting it, I decided to write the process down so I can follow my own instructions.&lt;/p&gt;
 &lt;p&gt;I’m sure this will also find its way to people who know more than I do and might be able to alert me to anything I’m doing wrong. If this is you, &lt;a href=&quot;https://twitter.com/patrickweave_r&quot;&gt;please reach out&lt;/a&gt;!&lt;/p&gt;
 &lt;h4&gt;Setting Up AWS Authentication&lt;/h4&gt;
@@ -2650,8 +2632,7 @@ async function getSignedUrl(key) {
 &lt;/code&gt;&lt;/pre&gt;
 &lt;!-- markdownlint-enable no-duplicate-heading --&gt;
 &lt;p&gt;That’s it! Try out the app (in this example uploads are limited in size to 4KB for safety). You can &lt;a href=&quot;https://github.com/patrickweaver/aws-s3-example&quot;&gt;fork the app on GitHub&lt;/a&gt;&lt;/p&gt;
-</description>
-      <pubDate>Tue, 21 Apr 2020 00:00:00 GMT</pubDate>
+</description><pubDate>Tue, 21 Apr 2020 00:00:00 +0000</pubDate>
       <dc:creator>Patrick Weaver</dc:creator>
       <guid>https://patrickweaver.net/blog/i-could-never-remember-how-to-make-a-simple-s3-upload-feature-so-i-wrote-it-down/</guid>
     </item>
