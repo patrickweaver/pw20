@@ -19,6 +19,8 @@ Hello, I’m Patrick Weaver, this is my website. I’m an artist, programmer, wr
 
 I grew up in San Francisco, have a degree in Literature and Language Studies from the University of California, Santa Cruz, and lived in NYC on and off from 2009 to 2022 before moving back to SF.
 
+<strong>I'm currently looking for my next job as a software engineer! Connect with me on [LinkedIn](https://www.linkedin.com/in/patrickjweaver/) or review my [resume](https://www.patrickweaver.net/resume/) if you are hiring or know of any interesting software jobs.</strong>
+
 <address class="no-decoration-address">
   You can reach me via email at <a href="mailto:hello.patrickw@gmail.com" target="_blank">hello.patrickw@gmail.com</a> or on Mastodon at <a href="https://mastodon.social/@patrickweaver" target="_blank">@patrickweaver@mastodon.social</a>. Send me a message about working on interesting projects!
 </address>
