@@ -5,11 +5,76 @@
   <subtitle></subtitle>
   <link href="https://patrickweaver.net/feed.xml" rel="self" />
   <link href="https://patrickweaver.net/blog/" />
-  <updated>2024-07-10T00:00:00Z</updated>
+  <updated>2026-04-13T00:00:00Z</updated>
   <id>https://patrickweaver.net/blog/</id>
   <author>
     <name>Patrick Weaver</name>
   </author>
+  <entry>
+    <title>Building a Web Page That Edits Itself</title>
+    <link href="https://patrickweaver.net/blog/one-pager-self-editing-html/" />
+    <updated>2026-04-13T00:00:00Z</updated>
+    <id>https://patrickweaver.net/blog/one-pager-self-editing-html/</id>
+    <content type="html">&lt;p&gt;The original vision for the world wide web was a read/write medium. A few years ago I thought, “what if an HTML file could update itself?”&lt;/p&gt;
+&lt;figure&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/one-pager/demo.gif&quot; alt=&quot;An animated screen capture of using One Pager to make a web page about a birthday party.&quot; style=&quot;max-width: 100%; width: 403px; margin: 0 auto;&quot;&gt;
+&lt;/div&gt;
+&lt;/figure&gt;
+&lt;p&gt;When I first started making goofy web pages many years ago, the &lt;code&gt;index.html&lt;/code&gt; file felt magical. It felt like the file &lt;strong&gt;&lt;em&gt;was&lt;/em&gt;&lt;/strong&gt; the website, and a few &lt;code&gt;.html&lt;/code&gt; files in a directory were a little community of pages. Over time, working with things like PHP and WordPress, then Django, Rails, and Node.js, “web pages” faded into the background, even my small personal websites felt like systems that just generated ephemeral files by necessity.&lt;/p&gt;
+&lt;p&gt;After moving my personal website (this one!) to &lt;a href=&quot;https://www.11ty.dev/&quot;&gt;11ty&lt;/a&gt; in 2020, and inspired by ideas like the “file-first” approach of Omar Rizwan’s &lt;a href=&quot;https://omar.website/tabfs/&quot;&gt;TabFS&lt;/a&gt; and the “read/write web” revitalization of &lt;a href=&quot;https://x.com/xhfloz&quot;&gt;XH’s&lt;/a&gt; &lt;a href=&quot;https://mmm.page/&quot;&gt;mmm.page&lt;/a&gt; and &lt;a href=&quot;https://github.com/beakerbrowser&quot;&gt;Beaker Browser&lt;/a&gt;, I had the idea: &lt;em&gt;“A web page that can update itself!”&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I quickly threw together a few &lt;code&gt;getElementById()&lt;/code&gt; and &lt;code&gt;.innerHTML&lt;/code&gt;s and had a &lt;a href=&quot;https://github.com/patrickweaver/one-pager/tree/7b9491c4c00ba90933f7e460c298d3404b6e4baf&quot;&gt;working prototype&lt;/a&gt; of an &lt;code&gt;index.html&lt;/code&gt; file that could update its own DOM via the UI, and then save a copy of itself to a local file.&lt;/p&gt;
+&lt;figure&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/one-pager/prototype-1.gif&quot; alt=&quot;An animated screen capture of using an early prototype of the web page.&quot; style=&quot;max-width: 100%; width: 450px; margin: 0 auto;&quot;&gt;
+&lt;/div&gt;
+&lt;/figure&gt;
+&lt;p&gt;Next, realizing that I needed a way to reach beyond the UI in the browser to update things like the page title, or global styles, I added a control panel to update metadata.&lt;/p&gt;
+&lt;figure&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/one-pager/prototype-2.png&quot; alt=&quot;A screenshot of an early prototype with a control panel to update page metadata.&quot; style=&quot;max-width: 100%; width: 450px; margin: 0 auto;&quot;&gt;
+&lt;/div&gt;
+&lt;/figure&gt;
+&lt;p&gt;After adding controls for global styles like the &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt; width I realized I needed to rethink the UX if I wanted the project to be easy to use. For example, shrinking the &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt; width also squished the control panel to the same width, after all, it was just another element in the &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;figure&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/one-pager/prototype-3.png&quot; alt=&quot;A screenshot of a prototype where the metadata control panel is very narrow because the &lt;body&gt; width has been set to 200px.&quot; style=&quot;max-width: 100%; width: 450px; margin: 0 auto;&quot;&gt;
+&lt;/div&gt;
+&lt;/figure&gt;
+&lt;p&gt;I had started the prototype with the classic trio of &lt;code&gt;index.html&lt;/code&gt;, &lt;code&gt;script.js&lt;/code&gt; and &lt;code&gt;style.css&lt;/code&gt;, but after a few commits switched to a single file with &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; tags within the HTML. Coming back to the project a few months after that initial prototype, the code was getting to be quite repetitive and hard to follow. It was hard to keep track of logic, there were &lt;em&gt;a lot&lt;/em&gt; of event listeners. I decided to refactor all of the JavaScript into modules using Vite as a bundler, and followed that with another refactor in TypeScript.&lt;/p&gt;
+&lt;p&gt;One early design choice was that when switching an element like an &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; or &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; into editing mode, I would hide the original element and insert a &lt;code&gt;&amp;lt;textarea&amp;gt;&lt;/code&gt; with the original element’s content. At first this made things like canceling the edit easier because I could just un-hide the “real” element, but I needed lots of custom logic for saving the change for different types of elements.&lt;/p&gt;
+&lt;figure&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/one-pager/prototype-4.png&quot; alt=&quot;A screenshot of the UI for editing a single element.&quot; style=&quot;max-width: 100%; width: 450px; margin: 0 auto;&quot;&gt;
+&lt;/div&gt;
+&lt;/figure&gt;
+&lt;p&gt;The TypeScript refactor had helped me finally pin down some of these bugs and I realized that it would be easier to use &lt;code&gt;contenteditable=&amp;quot;true&amp;quot;&lt;/code&gt; to edit the “real” element in-place. With this change, I was able to avoid any synchronization on save, and simplify the editing UI to just a set of buttons that I inserted below the element in the DOM. I was still able to restore the original content after a “cancel” action by storing it in &lt;code&gt;data-&lt;/code&gt; attributes.&lt;/p&gt;
+&lt;figure&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/one-pager/prototype-5.png&quot; alt=&quot;A screenshot of improved single element editing UI.&quot; style=&quot;max-width: 100%; width: 450px; margin: 0 auto;&quot;&gt;
+&lt;/div&gt;
+&lt;/figure&gt;
+&lt;p&gt;My original intention was to add a few more element types, things like &lt;code&gt;&amp;lt;ul&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt;, but I decided it had been long enough and I should finish up with my current feature set of:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Text elements: &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; through &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt;, and &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Images: &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; (these are stored as Data URLs to avoid breaking out of the one file)&lt;/li&gt;
+&lt;li&gt;Links: Selections of text, or images can be wrapped in &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I cleaned up my prototype CSS, added some fun early-2000s button styling, made a quick attempt to make the concept work on mobile (it’s not great), and at the suggestion of an early &lt;a href=&quot;https://www.recurse.com/&quot;&gt;Recurse Center&lt;/a&gt; playtester, moved the control panel to the right-hand side on desktop.&lt;/p&gt;
+&lt;figure&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/one-pager/prototype-6.png&quot; alt=&quot;A screenshot of the final prototype.&quot; style=&quot;max-width: 100%; width: 450px; margin: 0 auto;&quot;&gt;
+&lt;/div&gt;
+&lt;/figure&gt;
+&lt;p&gt;You can try it out now at &lt;a href=&quot;https://doodles.patrickweaver.net/one-pager/&quot;&gt;doodles.patrickweaver.net/one-pager&lt;/a&gt;. The editing UI only displays under two conditions, the file is opened locally with a &lt;code&gt;file:///&lt;/code&gt; protocol, or being viewed at the specific URL above on my “Doodles” subdomain. Anywhere else a web page made with One Pager will not be editable, until you download the &lt;code&gt;index.html&lt;/code&gt;! Below is an example web page I made about my &lt;a href=&quot;https://doodles.patrickweaver.net/one-pager/examples/20s-kids/&quot;&gt;24 Hour kid-appropriate-non-kids-songs playlist&lt;/a&gt;.&lt;/p&gt;
+&lt;figure&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+  &lt;img src=&quot;https://patrickweaver.net/images/blog/one-pager/20s-kids-example.png&quot; alt=&quot;A screenshot of a web page about a 24 hour playlist.&quot; style=&quot;max-width: 100%; width: 450px; margin: 0 auto;&quot;&gt;
+&lt;/div&gt;
+&lt;/figure&gt;
+&lt;p&gt;If you make any web pages with One Pager, let me know, and I will add it to the &lt;a href=&quot;https://doodles.patrickweaver.net/one-pager/examples/&quot;&gt;Example Gallery&lt;/a&gt;. Good luck building some HTML!&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>IRL HTML Is the Place For Your Most Hand-Written Websites</title>
     <link href="https://patrickweaver.net/blog/irl-html-is-the-place-for-your-most-hand-written-websites/" />
@@ -2352,301 +2417,6 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 &lt;h4&gt;Great my problems are solved forever!&lt;/h4&gt;
 &lt;p&gt;No guarantees that this will work long term, a quick look at the source code for any Google Doc will show that they’re very complex! I wouldn’t be surprised if Google changes the way these URLs work in the future, but this tool has worked for 6 months so maybe not!&lt;/p&gt;
 &lt;p&gt;Long term I hope that they build in a way for people to download their images, but for now I hope this is helpful!&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>I Could Never Remember How to Make a Simple S3 Upload Feature So I Wrote It Down</title>
-    <link href="https://patrickweaver.net/blog/i-could-never-remember-how-to-make-a-simple-s3-upload-feature-so-i-wrote-it-down/" />
-    <updated>2020-04-21T00:00:00Z</updated>
-    <id>https://patrickweaver.net/blog/i-could-never-remember-how-to-make-a-simple-s3-upload-feature-so-i-wrote-it-down/</id>
-    <content type="html">&lt;p&gt;Whenever I start a new web project there is an ominous, literal, figurative, &amp;quot;cloud&amp;quot; lurking on the horizon: Will this project get complicated enough to need to be connected to S3 for file upload?&lt;/p&gt;
-&lt;p&gt;More often than I’d like the answer is yes, and at this point I’ve re-learned how to connect a Node.js app to S3 more times than I’d like. Rather than keep learning just enough S3 to get a project working, and then instantly forgetting it, I decided to write the process down so I can follow my own instructions.&lt;/p&gt;
-&lt;p&gt;I’m sure this will also find its way to people who know more than I do and might be able to alert me to anything I’m doing wrong. If this is you, &lt;a href=&quot;https://twitter.com/patrickweave_r&quot;&gt;please reach out&lt;/a&gt;!&lt;/p&gt;
-&lt;h4&gt;Setting Up AWS Authentication&lt;/h4&gt;
-&lt;p&gt;Connecting an app isn’t usually the most difficult part of setting up S3. Where I always have to go back to documentation is setting up user and bucket permissions correctly. When I first started using S3 around 2013 a common recommendation was to just set buckets to public and link to objects directly. More recently though, many people (including Amazon), recommend not making buckets public.&lt;/p&gt;
-&lt;p&gt;In my experience, it’s best to create both a user and a policy when setting up AWS permissions. The keys you will use in your app will be associated with the user, and the permissions you want your user to have will be associated with the policy. This way, if your credentials are compromised you can create a new user, and all you have to do is add the policy to the new user.&lt;/p&gt;
-&lt;p&gt;I’ve also found it’s a best practice to create a new bucket for each of the small apps that I make. If you’re working on a bigger project or want to set up a general purpose place to upload you may want to do this differently, but creating a unique bucket and user for each project helps me keep an eye on things, and not worry too much about credentials getting compromised. Because I only need one bucket for my app it’s easier to create it in the AWS web interface than to build functionality to create buckets into my app.&lt;/p&gt;
-&lt;h4&gt;Creating a Bucket&lt;/h4&gt;
-&lt;!-- markdownlint-disable ol-prefix --&gt;
-&lt;ol&gt;
-&lt;li&gt;Log into AWS and click on &amp;quot;Services&amp;quot; in the top left. Select &amp;quot;S3&amp;quot; in the &amp;quot;Storage&amp;quot; section, then click on &amp;quot;Create Bucket&amp;quot; on the main S3 screen.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/i/wzb11or02x3fgsdlobl1.png&quot; alt=&quot;A screenshot of the main S3 screen&quot;&gt;&lt;/p&gt;
-&lt;ol start=&quot;2&quot;&gt;
-&lt;li&gt;Give your bucket a name (this will be visible to users so something related to your app is best), and select a region (probably whichever is closest to your users), leave &amp;quot;Block all public access&amp;quot; checked, then click &amp;quot;Create bucket&amp;quot;.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/i/jqobhso6ba8idwecff7l.png&quot; alt=&quot;A screenshot of the Create bucket screen&quot;&gt;&lt;/p&gt;
-&lt;ol start=&quot;3&quot;&gt;
-&lt;li&gt;Note your bucket name (probably in an ENV variable), it’s now ready to receive uploads!&lt;/li&gt;
-&lt;/ol&gt;
-&lt;!-- markdownlint-enable ol-prefix --&gt;
-&lt;h4&gt;Creating a Policy&lt;/h4&gt;
-&lt;!-- markdownlint-disable ol-prefix --&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Click on your name in the top right. In the dropdown select &amp;quot;My Security Credentials&amp;quot;, then in the &amp;quot;Identity and Access Management (IAM)&amp;quot; sidebar on the left, click on &amp;quot;Policies&amp;quot;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Click on the &amp;quot;Create policy&amp;quot; button. There are 2 ways to give your policy permissions, with the Visual Editor, and with JSON. We’ll use the Visual Editor here, but you can probably just pate the JSON at the end with minor edits.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;The Visual Editor has 4 sections: Service, Actions, Resources, and Request Conditions. Start in Service and click on S3.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;You want to add 3 specific actions: &amp;quot;PutObject&amp;quot; which allows uploading files, &amp;quot;GetObject&amp;quot; which allows reading files, and &amp;quot;DeleteObject&amp;quot; (I think you can figure this one out). &amp;quot;GetObject&amp;quot; is in the &amp;quot;Read&amp;quot; section, check the checkbox there. &amp;quot;PutObject&amp;quot; and &amp;quot;DeleteObject&amp;quot; are both in the &amp;quot;Write&amp;quot; section. At the end you should have 3 objects selected:&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/i/xq9fza7qlzaxb9s2uwxx.png&quot; alt=&quot;A screenshot of the Create Policy actions selection&quot;&gt;&lt;/p&gt;
-&lt;ol start=&quot;5&quot;&gt;
-&lt;li&gt;In the Resources section click on &amp;quot;Add ARN&amp;quot;, then fill in your Bucket Name, and click on &amp;quot;Any&amp;quot; for Object name. This means that users with this policy can only perform the actions above on one bucket, but can perform those actions on any of the objects in that bucket.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/i/n99mhoauau96yg2fp6j2.png&quot; alt=&quot;A screenshot of the Add ARN screen when creating a policy&quot;&gt;&lt;/p&gt;
-&lt;ol start=&quot;6&quot;&gt;
-&lt;li&gt;If you click over to the JSON editor you should see the code below. You can also just copy this in. Note that you should edit the &amp;quot;Resource&amp;quot; property to have your actual bucket name:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code class=&quot;language-json&quot;&gt;{
-  &amp;quot;Version&amp;quot;: &amp;quot;2012-10-17&amp;quot;,
-  &amp;quot;Statement&amp;quot;: [
-    {
-      &amp;quot;Sid&amp;quot;: &amp;quot;VisualEditor0&amp;quot;,
-      &amp;quot;Effect&amp;quot;: &amp;quot;Allow&amp;quot;,
-      &amp;quot;Action&amp;quot;: [&amp;quot;s3:PutObject&amp;quot;, &amp;quot;s3:GetObject&amp;quot;, &amp;quot;s3:DeleteObject&amp;quot;],
-      &amp;quot;Resource&amp;quot;: &amp;quot;arn:aws:s3:::YOUR_BUCKET_NAME/*&amp;quot;
-    }
-  ]
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&quot;7&quot;&gt;
-&lt;li&gt;Click on &amp;quot;Review policy&amp;quot;, then give your policy a name and a description. Then click &amp;quot;Create policy&amp;quot;.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;!-- markdownlint-enable ol-prefix --&gt;
-&lt;h4&gt;Creating a User&lt;/h4&gt;
-&lt;!-- markdownlint-disable ol-prefix --&gt;
-&lt;ol&gt;
-&lt;li&gt;Click on Users in the left sidebar, then the &amp;quot;Add user&amp;quot; button at the top of the screen, give your user a name and select the checkbox for &amp;quot;Programmatic Access&amp;quot;.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/i/gi90azo1auvxzjdbamyz.png&quot; alt=&quot;A screenshot of the Add User screen&quot;&gt;&lt;/p&gt;
-&lt;ol start=&quot;2&quot;&gt;
-&lt;li&gt;
-&lt;p&gt;In the &amp;quot;Set permissions&amp;quot; section at the top of the page, click on &amp;quot;Attach existing policies directly&amp;quot;. Search for the policy you just created, then select it and click &amp;quot;Next: Tags&amp;quot;. You can skip Tags, and click &amp;quot;Next: Review&amp;quot;, then click &amp;quot;Create user&amp;quot;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;You will now save your user’s credentials. This is the only time you will be able to do this, so make sure you save them somewhere safe. You will also need to add the credentials as ENV variables in your app. I recommend clicking the &amp;quot;Download .csv&amp;quot; button and saving the file, at least until you get your app set up.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/i/3rqbznl2dlvif555eorn.png&quot; alt=&quot;A screenshot of the attach policy section of the create user screen&quot;&gt;&lt;/p&gt;
-&lt;!-- markdownlint-enable ol-prefix --&gt;
-&lt;h4&gt;A simple example app&lt;/h4&gt;
-&lt;p&gt;Congratulations! You are done with the AWS setup, now you can work on your app. I have a simple and heavily commented &lt;a href=&quot;https://github.com/patrickweaver/aws-s3-example&quot;&gt;example app&lt;/a&gt; I use to add this functionality to new projects:&lt;/p&gt;
-&lt;figure&gt;
-&lt;img src=&quot;https://patrickweaver.net/images/blog/aws/app-screenshot.png&quot; alt=&quot;A screenshot of the app&quot;&gt;
-&lt;figcaption&gt;A screenshot of the app&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;The app is a Node.js app using Express. It uses 3 additional packages. &lt;a href=&quot;https://www.npmjs.com/package/aws-sdk&quot;&gt;aws-sdk&lt;/a&gt; adds functionality to communicate with S3, &lt;a href=&quot;https://www.npmjs.com/package/uuid&quot;&gt;uuid&lt;/a&gt; is used for object names in S3, and &lt;a href=&quot;https://www.npmjs.com/package/multer&quot;&gt;multer&lt;/a&gt; is used to process file upload to the server before passing it to S3.&lt;/p&gt;
-&lt;p&gt;The index page is a plain HTML file, but there are two POST routes in server.js: &lt;code&gt;/upload-image-form&lt;/code&gt; and &lt;code&gt;/upload-image-async&lt;/code&gt;. The two routes are mostly the same, but are repeated for easy copying.&lt;/p&gt;
-&lt;p&gt;Lines 1 through 24 of server.js are setting up the dependencies:&lt;/p&gt;
-&lt;h5&gt;server.js&lt;/h5&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;// The regular Node/Express stuff:
-const express = require(&amp;quot;express&amp;quot;);
-const app = express();
-app.use(express.static(&amp;quot;public&amp;quot;));
-
-// I will use the UUID package for s3 file names
-const { v4: uuidv4 } = require(&amp;quot;uuid&amp;quot;);
-
-// The AWS functionality is isolated for clarity:
-const aws = require(&amp;quot;./aws.js&amp;quot;);
-
-// Multer processes the file in the request body
-// This allows one file to be uploaded at a time.
-var multer = require(&amp;quot;multer&amp;quot;);
-
-var memoryStorage = multer.memoryStorage();
-var memoryUpload = multer({
-  storage: memoryStorage,
-  limits: {
-    fileSize: 4 * 1024, // 4KB file size limit
-    //fileSize: 10*1024*1024, // 10 Mb file size limit
-    files: 1,
-  },
-}).single(&amp;quot;file&amp;quot;);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The uploading to S3 happens in the two POST routes, and in an isolated &lt;code&gt;aws&lt;/code&gt; module. I will go through the regular HTML form route here, but the JS API endpoint route is mostly the same.&lt;/p&gt;
-&lt;p&gt;The route uses the previously defined &lt;code&gt;memoryUpload&lt;/code&gt; to capture a file object in req.body.&lt;/p&gt;
-&lt;!-- markdownlint-disable no-duplicate-heading --&gt;
-&lt;h5&gt;server.js&lt;/h5&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;app.post(&#39;/upload-image-form&#39;, memoryUpload, async function(req, res) {
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Then, we create an object to send to the &lt;code&gt;aws&lt;/code&gt; module (this is custom to this app, not the &lt;code&gt;aws-sdk&lt;/code&gt; npm package) with req.file. Most of the code below is comments, but the short version of what we need to send to the aws is an object with the properties &lt;code&gt;file&lt;/code&gt; and &lt;code&gt;id&lt;/code&gt;. &lt;code&gt;file&lt;/code&gt; is the contents of the file, &lt;code&gt;id&lt;/code&gt; is what the file will be called in our AWS bucket:&lt;/p&gt;
-&lt;h5&gt;server.js&lt;/h5&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;const file = req.file;
-
-/*
-    The file object has the following fields:
-    
-    fieldname: &#39;file&#39; // This was specified in the file input field in the HTML
-    originalname:     // The original name of the file
-    encoding:         // The encoding of the file, don’t worry about
-                         this unless you want to look at the bytes.
-    mimetype:         // This will tell you what the filetype is, even if there
-                         is no extension, or if it’s wrong.
-    buffer:           // This is the actual data from the file
-    size:             // Only some files will have this, the file’s size in bytes
-    */
-
-// This is optional, but a way to find the extension
-// of an image file.
-//const fileExt = file.mimetype.split(&amp;quot;/&amp;quot;);
-
-// These
-const upload = {
-  file: file,
-
-  /* You may want to store this metadata in S3, but it’s optional */
-  filetype: file.mimetype,
-
-  /* You may want to add this to the filename */
-  //fileExt: fileExt[fileExt.length - 1],
-
-  /* You may want to use the original filename */
-  //filename: file.originalname,
-
-  /* We’re going to use a random UUID file name in this example.
-         One thing that this does is makes sure it is unique.
-         If you upload a file with the same name it will overwrite the
-         existing file! */
-  id: uuidv4(),
-};
-
-// Upload the file, see ./helpers/aws.js
-const response = await aws.upload(upload);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;In the &lt;code&gt;aws.js&lt;/code&gt; module first there is some general configuration. This is where we will access our &lt;code&gt;AWS_ACCESS_KEY_ID&lt;/code&gt;, &lt;code&gt;AWS_SECRET_ACCESS_KEY&lt;/code&gt;, and &lt;code&gt;S3BUCKET&lt;/code&gt; ENV variables.&lt;/p&gt;
-&lt;h5&gt;aws.js&lt;/h5&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;// The AWS package is used for all AWS services,
-// we only need the S3 part:
-var AWS = require(&amp;quot;aws-sdk&amp;quot;);
-var s3 = new AWS.S3({
-  signatureVersion: &amp;quot;v4&amp;quot;,
-});
-
-// Store your AWS creds in ENV variables:
-AWS.config.update({
-  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-});
-
-// Your bucket isn’t secret, but you may want to use
-// different buckets for dev and production so it’s
-// helpful to store in an ENV variable.
-var bucketName = process.env.S3BUCKET;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;There are also 2 functions: &lt;code&gt;upload()&lt;/code&gt;, which takes one &lt;code&gt;uploadObject()&lt;/code&gt; parameter, uploads a file to S3, and returns confirmation and the S3 object’s key, and &lt;code&gt;getSignedUrl&lt;/code&gt;, which takes an S3 key, and returns the file (more on this later).&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;upload()&lt;/code&gt; is what we passed our &lt;code&gt;file&lt;/code&gt; object from &lt;code&gt;server.js&lt;/code&gt; to. This function is essentially a wrapper around the &lt;code&gt;aws-sdk&lt;/code&gt;’s &lt;code&gt;S3.putObject()&lt;/code&gt; method. We collect the necessary parameters in an object, then pass that object to the method which we’ve defined as &lt;code&gt;s3.putObject()&lt;/code&gt;:&lt;/p&gt;
-&lt;h5&gt;aws.js&lt;/h5&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;// AWS S3 Upload params:
-var params = {
-  // S3 stores files in buckets, each bucket
-  // has a globally unique name.
-  Bucket: bucketName,
-
-  // This will be the filename in AWS
-  Key: uploadObject.id,
-
-  // This is the contents of the file.
-  Body: uploadObject.file.buffer,
-
-  // This is optional, but your file in S3 won’t have Content-Type
-  // metadata unless you include it.
-  ContentType: uploadObject.filetype,
-};
-
-const responseData = await s3.putObject(params).promise();
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This is all wrapped in a &lt;code&gt;try&lt;/code&gt; / &lt;code&gt;catch&lt;/code&gt; block so if there aren’t any errors we can pass the key back to &lt;code&gt;server.js&lt;/code&gt;:&lt;/p&gt;
-&lt;h5&gt;aws.js&lt;/h5&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;// Likely this won’t happen because an error will be thrown,
-// but it’s good to check just in case. ¯&#92;_(ツ)_/¯
-if (!responseData) {
-  throw &amp;quot;Upload failed&amp;quot;;
-}
-
-// The response data has a single property, &amp;quot;ETag&amp;quot;,
-// you probably won’t need to do anything with it.
-
-const s3Data = {
-  success: true,
-
-  // This key is what you would store in a DB, we didn’t
-  // get this back from S3, but since there wasn’t an error
-  // we trust that it is saved.
-  key: params.Key,
-
-  // Or, the url below could be stored if the permissions on the bucket
-  // or the upload are publicly viewable.
-  //url: &amp;quot;https://&amp;quot; + bucketName + &amp;quot;.s3.amazonaws.com/&amp;quot; + params.Key
-};
-
-// Send the object with success and the key back to server.js
-return s3Data;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;It’s important to note that the &lt;code&gt;id&lt;/code&gt; we pass back to &lt;code&gt;server.js&lt;/code&gt; isn’t returned to us from the &lt;code&gt;s3.putObject()&lt;/code&gt; method. &lt;code&gt;s3()&lt;/code&gt; returns an &lt;code&gt;ETag&lt;/code&gt;, which isn’t of much use for what we’re doing, but it’s enough to confirm that the upload completed successfully (What are ETags? &lt;a href=&quot;https://teppen.io/2018/06/23/aws_s3_etags/&quot;&gt;teppen.io/2018/06/23/aws_s3_etags/&lt;/a&gt;).&lt;/p&gt;
-&lt;p&gt;Going back to server.js, this is where we would want to store our &lt;code&gt;id&lt;/code&gt; somewhere. This string is what we will need to retrieve the file from s3. In this app we’re just demoing the upload functionality so we don’t store it anywhere. We access it once though to show the user that it worked. This is where we will use the other function in the &lt;code&gt;aws&lt;/code&gt; module, &lt;code&gt;getSignedUrl&lt;/code&gt;. Because our S3 bucket permissions only let our AWS user access objects, and otherwise our bucket permissions are &amp;quot;No public access&amp;quot;, we need to create a temporary signed URL to access the file.&lt;/p&gt;
-&lt;p&gt;Using the id returned from the &lt;code&gt;upload()&lt;/code&gt; function we call the &lt;code&gt;getSignedUrl()&lt;/code&gt; function. When we get the signed url, we put it into some simple HTML to display it to the user (this is the main difference between the two &lt;code&gt;server.js&lt;/code&gt; routes):&lt;/p&gt;
-&lt;h5&gt;server.js&lt;/h5&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;// Confirm upload succeeded:
-if (!response.success || response.error) {
-  throw &amp;quot;Response Error: &amp;quot; + response.error;
-}
-
-/* - - - - -
-      You might want to do something with the response.key or
-      response.url here.
-    - - - - - */
-
-// Because our bucket is not publicly viewable we need to
-// get a signed URL to view the uploaded file. You DO NOT want
-// to store this signed URL in a DB, it will expire. You will
-// want to store either the key or url from the AWS response
-// above.
-
-// Get a new signed URL now that the file is uploaded:
-// Getting a signed URL requires the Bucket Name and the
-// file id, but we are using the same bucket name for everything
-// in this example. See ./helpers/aws.js for how this works.
-const url = await aws.getSignedUrl(upload.id);
-
-// Very simple HTML response containing the URL and it rendered
-// as an image (if the file is not an image this will look like
-// a broken image).
-res.status(200).send(`
-      &amp;lt;p&amp;gt;
-        &amp;lt;strong&amp;gt;Signed URL:&amp;lt;/strong&amp;gt; &amp;lt;a href=&amp;quot;${url}&amp;quot;&amp;gt;${url}&amp;lt;/a&amp;gt;
-      &amp;lt;/p&amp;gt;
-      &amp;lt;h4&amp;gt;If it’s an image:&amp;lt;/h4&amp;gt;
-      &amp;lt;img src=&amp;quot;${url}&amp;quot; width=&amp;quot;400&amp;quot; /&amp;gt;
-    `);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The &lt;code&gt;getSignedUrl()&lt;/code&gt; function in &lt;code&gt;aws&lt;/code&gt; is a wrapper around the &lt;code&gt;S3.getSignedUrl&lt;/code&gt; method (mostly putting it in our &lt;code&gt;aws&lt;/code&gt; module allows us to avoid passing the Bucket Name from our routes:&lt;/p&gt;
-&lt;h5&gt;aws.js&lt;/h5&gt;
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;// This function will get a signed URL which allows
-// access to non public objects, and objects in non
-// public buckets for a limited time.
-async function getSignedUrl(key) {
-  // We are already authenticated so we just need the
-  // bucket name and the object’s key.
-  var params = {
-    Bucket: bucketName,
-    Key: key,
-  };
-
-  // The getSignedUrl method returns the url.
-  const url = await s3.getSignedUrl(&amp;quot;getObject&amp;quot;, params);
-  return url;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;!-- markdownlint-enable no-duplicate-heading --&gt;
-&lt;p&gt;That’s it! Try out the app (in this example uploads are limited in size to 4KB for safety). You can &lt;a href=&quot;https://github.com/patrickweaver/aws-s3-example&quot;&gt;fork the app on GitHub&lt;/a&gt;&lt;/p&gt;
 </content>
   </entry>
 </feed>
