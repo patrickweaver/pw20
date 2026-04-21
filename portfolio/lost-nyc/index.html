@@ -127,13 +127,27 @@
 
           <h3 id="project-images">Images</h3>
           <ul class="project-images" aria-labelledby="project-images">
-            <li><img src="/images/portfolio/lost-nyc/map.jpg" /></li>
-            <li><img src="/images/portfolio/lost-nyc/new-place.jpg" /></li>
-            <li><img src="/images/portfolio/lost-nyc/pearl-paint.jpg" /></li>
+            <li><img src="/images/portfolio/lost-nyc/map.jpg" data-image-index="0" /></li>
+            <li><img src="/images/portfolio/lost-nyc/new-place.jpg" data-image-index="1" /></li>
+            <li><img src="/images/portfolio/lost-nyc/pearl-paint.jpg" data-image-index="2" /></li>
           </ul>
         
       </div>
     </main>
+
+    <dialog id="gallery-modal">
+      <div class="modal-image-container">
+        <img src="" alt="" />
+      </div>
+      <div class="modal-controls">
+        <button class="modal-nav-btn modal-prev">← Previous</button>
+        <span class="modal-counter"></span>
+        <button class="modal-nav-btn modal-next">Next →</button>
+        <button class="modal-close">Close</button>
+      </div>
+    </dialog>
+
+    <script src="/js/gallery-modal.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-9178162-8"></script>
     <script>

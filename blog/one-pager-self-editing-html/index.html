@@ -15,7 +15,7 @@
     <!-- Social -->
       <meta property="og:title" content="Building a Web Page That Edits Itself" />
       <meta property="og:description" content="Patrick Weaver’s Website" />
-      <meta property="og:image" content="/images/blog/one-pager/thumbnail.png" />
+      <meta property="og:image" content="/images/portfolio/one-pager/thumbnail.png" />
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -23,7 +23,7 @@
     <meta name="twitter:creator" content="@patrickweave_r" />
       <meta name="twitter:title" content="Building a Web Page That Edits Itself" />
       <meta name="twitter:description" content="Patrick Weaver’s Website" />
-      <meta name="twitter:image" content="/images/blog/one-pager/thumbnail.png" />
+      <meta name="twitter:image" content="/images/portfolio/one-pager/thumbnail.png" />
       <meta name="twitter:image:alt" content="A screenshot of the One Pager app" />
     
     <link rel="stylesheet" href="/css/style.css" />
@@ -77,7 +77,7 @@
                     <a href="">
                       <img
                         class="index-item-header-image"
-                        src="/images/blog/one-pager/thumbnail.png"
+                        src="/images/portfolio/one-pager/thumbnail.png"
                         alt="A screenshot of the One Pager app"
                         aria-label="Link to post for Building a Web Page That Edits Itself"
                       />
@@ -90,7 +90,7 @@
           <p>The original vision for the world wide web was a read/write medium. A few years ago I thought, “what if an HTML file could update itself?”</p>
 <figure>
 <div style="text-align: center;">
-  <img src="/images/blog/one-pager/demo.gif" alt="An animated screen capture of using One Pager to make a web page about a birthday party." style="max-width: 100%; width: 403px; margin: 0 auto;" />
+  <img src="/images/portfolio/one-pager/demo.gif" alt="An animated screen capture of using One Pager to make a web page about a birthday party." style="max-width: 100%; width: 403px; margin: 0 auto;" />
 </div>
 </figure>
 <p>When I first started making goofy web pages many years ago, the <code>index.html</code> file felt magical. It felt like the file <strong><em>was</em></strong> the website, and a few <code>.html</code> files in a directory were a little community of pages. Over time, working with things like PHP and WordPress, then Django, Rails, and Node.js, “web pages” faded into the background, even my small personal websites felt like systems that just generated ephemeral files by necessity.</p>
@@ -98,32 +98,32 @@
 <p>I quickly threw together a few <code>getElementById()</code> and <code>.innerHTML</code>s and had a <a href="https://github.com/patrickweaver/one-pager/tree/7b9491c4c00ba90933f7e460c298d3404b6e4baf">working prototype</a> of an <code>index.html</code> file that could update its own DOM via the UI, and then save a copy of itself to a local file.</p>
 <figure>
 <div style="text-align: center;">
-  <img src="/images/blog/one-pager/prototype-1.gif" alt="An animated screen capture of using an early prototype of the web page." style="max-width: 100%; width: 450px; margin: 0 auto;" />
+  <img src="/images/portfolio/one-pager/prototype-1.gif" alt="An animated screen capture of using an early prototype of the web page." style="max-width: 100%; width: 450px; margin: 0 auto;" />
 </div>
 </figure>
 <p>Next, realizing that I needed a way to reach beyond the UI in the browser to update things like the page title, or global styles, I added a control panel to update metadata.</p>
 <figure>
 <div style="text-align: center;">
-  <img src="/images/blog/one-pager/prototype-2.png" alt="A screenshot of an early prototype with a control panel to update page metadata." style="max-width: 100%; width: 450px; margin: 0 auto;" />
+  <img src="/images/portfolio/one-pager/prototype-2.png" alt="A screenshot of an early prototype with a control panel to update page metadata." style="max-width: 100%; width: 450px; margin: 0 auto;" />
 </div>
 </figure>
 <p>After adding controls for global styles like the <code>&lt;body&gt;</code> width I realized I needed to rethink the UX if I wanted the project to be easy to use. For example, shrinking the <code>&lt;body&gt;</code> width also squished the control panel to the same width, after all, it was just another element in the <code>&lt;body&gt;</code>.</p>
 <figure>
 <div style="text-align: center;">
-  <img src="/images/blog/one-pager/prototype-3.png" alt="A screenshot of a prototype where the metadata control panel is very narrow because the <body> width has been set to 200px." style="max-width: 100%; width: 450px; margin: 0 auto;" />
+  <img src="/images/portfolio/one-pager/prototype-3.png" alt="A screenshot of a prototype where the metadata control panel is very narrow because the <body> width has been set to 200px." style="max-width: 100%; width: 450px; margin: 0 auto;" />
 </div>
 </figure>
 <p>I had started the prototype with the classic trio of <code>index.html</code>, <code>script.js</code> and <code>style.css</code>, but after a few commits switched to a single file with <code>&lt;script&gt;</code> and <code>&lt;style&gt;</code> tags within the HTML. Coming back to the project a few months after that initial prototype, the code was getting to be quite repetitive and hard to follow. It was hard to keep track of logic, there were <em>a lot</em> of event listeners. I decided to refactor all of the JavaScript into modules using Vite as a bundler, and followed that with another refactor in TypeScript.</p>
 <p>One early design choice was that when switching an element like an <code>&lt;h1&gt;</code> or <code>&lt;p&gt;</code> into editing mode, I would hide the original element and insert a <code>&lt;textarea&gt;</code> with the original element’s content. At first this made things like canceling the edit easier because I could just un-hide the “real” element, but I needed lots of custom logic for saving the change for different types of elements.</p>
 <figure>
 <div style="text-align: center;">
-  <img src="/images/blog/one-pager/prototype-4.png" alt="A screenshot of the UI for editing a single element." style="max-width: 100%; width: 450px; margin: 0 auto;" />
+  <img src="/images/portfolio/one-pager/prototype-4.png" alt="A screenshot of the UI for editing a single element." style="max-width: 100%; width: 450px; margin: 0 auto;" />
 </div>
 </figure>
 <p>The TypeScript refactor had helped me finally pin down some of these bugs and I realized that it would be easier to use <code>contenteditable=&quot;true&quot;</code> to edit the “real” element in-place. With this change, I was able to avoid any synchronization on save, and simplify the editing UI to just a set of buttons that I inserted below the element in the DOM. I was still able to restore the original content after a “cancel” action by storing it in <code>data-</code> attributes.</p>
 <figure>
 <div style="text-align: center;">
-  <img src="/images/blog/one-pager/prototype-5.png" alt="A screenshot of improved single element editing UI." style="max-width: 100%; width: 450px; margin: 0 auto;" />
+  <img src="/images/portfolio/one-pager/prototype-5.png" alt="A screenshot of improved single element editing UI." style="max-width: 100%; width: 450px; margin: 0 auto;" />
 </div>
 </figure>
 <p>My original intention was to add a few more element types, things like <code>&lt;ul&gt;</code> and <code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code>, but I decided it had been long enough and I should finish up with my current feature set of:</p>
@@ -135,7 +135,7 @@
 <p>I cleaned up my prototype CSS, added some fun early-2000s button styling, made a quick attempt to make the concept work on mobile (it’s not great), and at the suggestion of an early <a href="https://www.recurse.com/">Recurse Center</a> playtester, moved the control panel to the right-hand side on desktop.</p>
 <figure>
 <div style="text-align: center;">
-  <img src="/images/blog/one-pager/prototype-6.png" alt="A screenshot of the final prototype." style="max-width: 100%; width: 450px; margin: 0 auto;" />
+  <img src="/images/portfolio/one-pager/prototype-6.png" alt="A screenshot of the final prototype." style="max-width: 100%; width: 450px; margin: 0 auto;" />
 </div>
 </figure>
 <p>You can try it out now at <a href="https://doodles.patrickweaver.net/one-pager/">doodles.patrickweaver.net/one-pager</a>. The editing UI only displays under two conditions, the file is opened locally with a <code>file:///</code> protocol, or being viewed at the specific URL above on my “Doodles” subdomain. Anywhere else a web page made with One Pager will not be editable, until you download the <code>index.html</code>! Below is an example web page I made about my <a href="https://doodles.patrickweaver.net/one-pager/examples/20s-kids/">24 Hour kid-appropriate-non-kids-songs playlist</a>.</p>
