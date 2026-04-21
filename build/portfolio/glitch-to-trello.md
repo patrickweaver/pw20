@@ -9,7 +9,6 @@ end_date: 2018-04-02
 source_url: https://github.com/patrickweaver/glitch-to-trello
 status: Archived
 tags:
-  - Complete
   - coffeescript
   - experiments
   - node

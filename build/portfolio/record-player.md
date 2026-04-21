@@ -9,7 +9,6 @@ end_date: 2018-05-03
 source_url: https://github.com/PatrickWeaver/record-player
 status: Archived
 tags:
-  - Complete
   - javascript
   - node
   - python
