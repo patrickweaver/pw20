@@ -47,10 +47,47 @@ module.exports = function (eleventyConfig) {
   // Collections
 
   // List of Tags
-  eleventyConfig.addCollection(
-    "portfolioTagList",
-    require("./_11ty/getPortfolioTagList")
-  );
+  const portfolioTagList = require("./_11ty/getPortfolioTagList");
+  eleventyConfig.addCollection("portfolioTagList", portfolioTagList);
+
+  // Create filtered collections for each portfolio tag
+  eleventyConfig.addCollection("portfolioTagCollections", function (collection) {
+    const portfolioItems = collection.getFilteredByTag("projects");
+    const tagCollections = {};
+
+    portfolioItems.forEach(item => {
+      if (item.data.tags) {
+        item.data.tags.forEach(tag => {
+          if (!["all", "posts", "projects"].includes(tag)) {
+            if (!tagCollections[tag]) {
+              tagCollections[tag] = [];
+            }
+            tagCollections[tag].push(item);
+          }
+        });
+      }
+    });
+
+    return tagCollections;
+  });
+
+  // Create pagination data for portfolio tags
+  eleventyConfig.addCollection("portfolio_pagination_tags", function (collection) {
+    let allTags = new Set();
+    let projects = collection.getAll();
+
+    projects.forEach(item => {
+      if (item.data.tags) {
+        item.data.tags.forEach(tag => {
+          if (!["all", "posts", "projects"].includes(tag)) {
+            allTags.add(tag);
+          }
+        });
+      }
+    });
+
+    return Array.from(allTags).sort();
+  });
 
   // Create postsReversed tag with posts tag in reverse order
   eleventyConfig.addCollection("postsReversed", function (collection) {
