@@ -1,11 +1,12 @@
-module.exports = function(collection) {
+module.exports = function (collection) {
+  let statusTagSet = new Set();
   let tagSet = new Set();
-  collection.getAll().forEach(function(item) {
-    if( "tags" in item.data ) {
+  collection.getAll().forEach(function (item) {
+    if ("tags" in item.data) {
       let tags = item.data.tags;
 
-      tags = tags.filter(function(item) {
-        switch(item) {
+      tags = tags.filter(function (item) {
+        switch (item) {
           // this list should match the `filter` list in tags.njk
           case "all":
           case "posts":
@@ -16,11 +17,15 @@ module.exports = function(collection) {
       });
 
       for (const tag of tags) {
-        tagSet.add(tag);
+        const initChar = tag?.[0];
+        if (initChar.toUpperCase() === initChar) {
+          statusTagSet.add(tag);
+        } else {
+          tagSet.add(tag);
+        }
       }
     }
   });
 
-  // returning an array in addCollection works in Eleventy 0.5.3
-  return [...tagSet];
+  return [...statusTagSet, ...tagSet];
 };

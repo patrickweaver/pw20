@@ -5,8 +5,8 @@ pageHeader: Portfolio Tags
 permalink: /portfolio/tags/
 ---
 
-<ul>
+<ul class="tags project-tag-list tag-container">
   {{#each collections.portfolioTagList}}
-    <li><a href="/portfolio/tags/{{this}}" class="tag">{{this}}</a></li>
+    <li><a href="/portfolio/tags/{{this}}">{{this}}</a></li>
   {{/each}}
 </ul>

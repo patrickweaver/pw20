@@ -2,7 +2,7 @@
 layout: layouts/blogPost.hbs
 title: "Building a Web Page That Edits Itself"
 date: 2026-04-13
-cover_image_url: /images/blog/one-pager/thumbnail.png
+cover_image_url: /images/portfolio/one-pager/thumbnail.png
 cover_image_alt: A screenshot of the One Pager app
 tags:
 ---
@@ -12,7 +12,7 @@ The original vision for the world wide web was a read/write medium. A few years 
 <figure>
 
 <div style="text-align: center;">
-  <img src="/images/blog/one-pager/demo.gif" alt="An animated screen capture of using One Pager to make a web page about a birthday party." style="max-width: 100%; width: 403px; margin: 0 auto;" />
+  <img src="/images/portfolio/one-pager/demo.gif" alt="An animated screen capture of using One Pager to make a web page about a birthday party." style="max-width: 100%; width: 403px; margin: 0 auto;" />
 </div>
 
 </figure>
@@ -26,7 +26,7 @@ I quickly threw together a few `getElementById()` and `.innerHTML`s and had a [w
 <figure>
 
 <div style="text-align: center;">
-  <img src="/images/blog/one-pager/prototype-1.gif" alt="An animated screen capture of using an early prototype of the web page." style="max-width: 100%; width: 450px; margin: 0 auto;" />
+  <img src="/images/portfolio/one-pager/prototype-1.gif" alt="An animated screen capture of using an early prototype of the web page." style="max-width: 100%; width: 450px; margin: 0 auto;" />
 </div>
 
 </figure>
@@ -36,7 +36,7 @@ Next, realizing that I needed a way to reach beyond the UI in the browser to upd
 <figure>
 
 <div style="text-align: center;">
-  <img src="/images/blog/one-pager/prototype-2.png" alt="A screenshot of an early prototype with a control panel to update page metadata." style="max-width: 100%; width: 450px; margin: 0 auto;" />
+  <img src="/images/portfolio/one-pager/prototype-2.png" alt="A screenshot of an early prototype with a control panel to update page metadata." style="max-width: 100%; width: 450px; margin: 0 auto;" />
 </div>
 
 </figure>
@@ -46,7 +46,7 @@ After adding controls for global styles like the `<body>` width I realized I nee
 <figure>
 
 <div style="text-align: center;">
-  <img src="/images/blog/one-pager/prototype-3.png" alt="A screenshot of a prototype where the metadata control panel is very narrow because the <body> width has been set to 200px." style="max-width: 100%; width: 450px; margin: 0 auto;" />
+  <img src="/images/portfolio/one-pager/prototype-3.png" alt="A screenshot of a prototype where the metadata control panel is very narrow because the <body> width has been set to 200px." style="max-width: 100%; width: 450px; margin: 0 auto;" />
 </div>
 
 </figure>
@@ -58,7 +58,7 @@ One early design choice was that when switching an element like an `<h1>` or `<p
 <figure>
 
 <div style="text-align: center;">
-  <img src="/images/blog/one-pager/prototype-4.png" alt="A screenshot of the UI for editing a single element." style="max-width: 100%; width: 450px; margin: 0 auto;" />
+  <img src="/images/portfolio/one-pager/prototype-4.png" alt="A screenshot of the UI for editing a single element." style="max-width: 100%; width: 450px; margin: 0 auto;" />
 </div>
 
 </figure>
@@ -68,7 +68,7 @@ The TypeScript refactor had helped me finally pin down some of these bugs and I 
 <figure>
 
 <div style="text-align: center;">
-  <img src="/images/blog/one-pager/prototype-5.png" alt="A screenshot of improved single element editing UI." style="max-width: 100%; width: 450px; margin: 0 auto;" />
+  <img src="/images/portfolio/one-pager/prototype-5.png" alt="A screenshot of improved single element editing UI." style="max-width: 100%; width: 450px; margin: 0 auto;" />
 </div>
 
 </figure>
@@ -84,7 +84,7 @@ I cleaned up my prototype CSS, added some fun early-2000s button styling, made a
 <figure>
 
 <div style="text-align: center;">
-  <img src="/images/blog/one-pager/prototype-6.png" alt="A screenshot of the final prototype." style="max-width: 100%; width: 450px; margin: 0 auto;" />
+  <img src="/images/portfolio/one-pager/prototype-6.png" alt="A screenshot of the final prototype." style="max-width: 100%; width: 450px; margin: 0 auto;" />
 </div>
 
 </figure>

@@ -274,10 +274,6 @@ address.no-decoration-address {
   margin: 0;
 }
 
-.projhrect dl div {
-  margin: 0.25rem;
-}
-
 .project dl.links dt::after {
   content: ": ";
 }
@@ -576,6 +572,11 @@ blockquote.editors-note {
 .tag a {
   color: var(--text-1);
   text-decoration: none;
+}
+
+.tag a:hover {
+  color: var(--text-3);
+  text-decoration: underline;
 }
 
 dl.links div:first-child {
