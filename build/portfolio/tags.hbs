@@ -7,7 +7,7 @@ layout: layouts/main.hbs
 permalink: /portfolio/tags/{{ tagData.tag }}/
 ---
 <div class="blob">
-  <h3>Projects tagged <span class="tag blob-tag">{{ tagData.tag }}</span></h3>
+  <h3>Projects tagged “{{ tagData.tag }}”</h3>
 </div>
 
 {{> portfolio/index collection=tagData.collection }}

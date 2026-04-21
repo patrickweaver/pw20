@@ -76,6 +76,16 @@ module.exports = function (eleventyConfig) {
     const projects = collection.getFilteredByTag("projects");
     const tagMap = {};
 
+    function portfolioCompare(a, b) {
+      const aSortDate = a.data?.end_date ?? a.data?.start_date ?? 0;
+      const aSort = new Date(aSortDate).getTime();
+      const bSortDate = b.data?.end_date ?? b.data?.start_date ?? 0;
+      const bSort = new Date(bSortDate).getTime();
+      if (aSort > bSort) return -1;
+      if (aSort < bSort) return 1;
+      return 0;
+    }
+
     projects.forEach(item => {
       if (item.data.tags) {
         item.data.tags.forEach(tag => {
@@ -89,10 +99,10 @@ module.exports = function (eleventyConfig) {
       }
     });
 
-    // Convert to array of tag objects
+    // Convert to array of tag objects with sorted items
     return Object.entries(tagMap).map(([tagName, items]) => ({
       tag: tagName,
-      collection: items
+      collection: items.sort(portfolioCompare)
     }));
   });
 
