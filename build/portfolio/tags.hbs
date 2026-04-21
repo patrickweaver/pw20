@@ -1,15 +1,15 @@
 ---
 pagination:
-  data: collections.portfolio_pagination_tags
+  data: collections.portfolio_by_tag
   size: 1
-  alias: tag
+  alias: tagData
 layout: layouts/main.hbs
-permalink: /portfolio/tags/{{ tag }}/
+permalink: /portfolio/tags/{{ tagData.tag }}/
 ---
 <div class="blob">
-  <h3>Projects tagged <span class="tag blob-tag">{{ tag }}</span></h3>
+  <h3>Projects tagged <span class="tag blob-tag">{{ tagData.tag }}</span></h3>
 </div>
 
-{{> portfolio/index tag=tag }}
+{{> portfolio/index collection=tagData.collection }}
 
 <p>See <a href="/portfolio/tags/">all tags</a>.</p>

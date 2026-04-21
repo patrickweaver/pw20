@@ -71,22 +71,29 @@ module.exports = function (eleventyConfig) {
     return tagCollections;
   });
 
-  // Create pagination data for portfolio tags
-  eleventyConfig.addCollection("portfolio_pagination_tags", function (collection) {
-    let allTags = new Set();
-    let projects = collection.getAll();
+  // Create individual tag collections for pagination
+  eleventyConfig.addCollection("portfolio_by_tag", function (collection) {
+    const projects = collection.getFilteredByTag("projects");
+    const tagMap = {};
 
     projects.forEach(item => {
       if (item.data.tags) {
         item.data.tags.forEach(tag => {
           if (!["all", "posts", "projects"].includes(tag)) {
-            allTags.add(tag);
+            if (!tagMap[tag]) {
+              tagMap[tag] = [];
+            }
+            tagMap[tag].push(item);
           }
         });
       }
     });
 
-    return Array.from(allTags).sort();
+    // Convert to array of tag objects
+    return Object.entries(tagMap).map(([tagName, items]) => ({
+      tag: tagName,
+      collection: items
+    }));
   });
 
   // Create postsReversed tag with posts tag in reverse order

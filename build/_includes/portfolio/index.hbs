@@ -1,11 +1,5 @@
 <ul class="post-list">
-  {{#if tag}}
-    {{#each (lookup collections.portfolioTagCollections tag)}}
-      {{> portfolio/projectListItem}}
-    {{/each}}
-  {{else}}
-    {{#each collection }}
-      {{> portfolio/projectListItem}}
-    {{/each}}
-  {{/if}}
+  {{#each collection }}
+    {{> portfolio/projectListItem}}
+  {{/each}}
 </ul>
