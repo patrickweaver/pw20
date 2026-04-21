@@ -86,7 +86,7 @@ module.exports = function (eleventyConfig) {
       return 0;
     }
 
-    projects.forEach(item => {
+    projects.filter((i) => !!i.data.name).forEach(item => {
       if (item.data.tags) {
         item.data.tags.forEach(tag => {
           if (!["all", "posts", "projects"].includes(tag)) {
