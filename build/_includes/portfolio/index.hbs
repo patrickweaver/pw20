@@ -1,8 +1,8 @@
 <ul class="post-list">
   {{#if tag}}
-    {{#each (lookup collections tag)}}
+    {{#each (lookup collections.portfolioTagCollections tag)}}
       {{> portfolio/projectListItem}}
-    {{/each}} 
+    {{/each}}
   {{else}}
     {{#each collection }}
       {{> portfolio/projectListItem}}
