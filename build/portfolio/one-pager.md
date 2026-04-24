@@ -13,14 +13,19 @@ tags:
   - html
   - experiments
   - typescript
+videos:
+  - {
+      src: /images/portfolio/one-pager/one-pager-demo-1080.mp4,
+      poster: /images/portfolio/one-pager/one-pager-demo-1080-poster.png,
+    }
 images:
-  - /images/portfolio/one-pager/demo.gif
   - /images/portfolio/one-pager/prototype-1.gif
   - /images/portfolio/one-pager/prototype-2.png
   - /images/portfolio/one-pager/prototype-3.png
   - /images/portfolio/one-pager/prototype-4.png
   - /images/portfolio/one-pager/prototype-5.png
   - /images/portfolio/one-pager/prototype-6.png
+  - /images/portfolio/one-pager/demo.gif
 ---
 
 One Pager is an `index.html` file that, when opened locally in a browser renders a JavaScript powered editing UI.

@@ -24,6 +24,26 @@
         </div>
         {{/if}}
 
+        {{#if videos}}
+          <h3 id="project-videos">Videos</h3>
+          <ul class="project-videos" aria-labelledby="project-videos">
+          {{#each videos}}
+            <li>
+              {{!-- <img src="{{this}}" data-image-index="{{@index}}" /> --}}
+              <video
+                controls height="300"
+                muted preload="metadata"
+                poster="{{this.poster}}"
+                width="495"
+                id="audio-and-video-tags-video
+              >
+                <source src="{{this.src}}" "type="video/mp4" />
+              </video>
+            </li>
+          {{/each}}
+          </ul>
+        {{/if}}
+
         {{#if images}}
           <h3 id="project-images">Images</h3>
           <ul class="project-images" aria-labelledby="project-images">
