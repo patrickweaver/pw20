@@ -307,10 +307,15 @@ blockquote.project-note {
   box-shadow: -3px -3px 9px 0px var(--shadow);
 }
 
-ul.project-images {
+ul.project-images,
+ul.project-videos {
   margin: 2rem 0;
   padding: 0;
   list-style-type: none;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 ul.menu a img {
@@ -465,18 +470,13 @@ h2.page-header a:hover {
 }
 
 .blob img,
-ul.project-images img {
+ul.project-images img,
+ul.project-videos video {
   max-height: 400px;
 }
 
-ul.project-images {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  align-items: flex-start;
-}
-
-ul.project-images li {
+ul.project-images li,
+ul.project-videos li {
   flex-basis: Calc(50% - 5px);
   padding: 0.75rem;
   box-shadow: -3px -3px 9px 0px var(--shadow);
