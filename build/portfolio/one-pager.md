@@ -7,7 +7,7 @@ short_description: A self-editing HTML page for the read/write web
 start_date: 2026-03-24
 end_date: 2026-02-01
 project_url: https://doodles.patrickweaver.net/one-pager/
-source_url: https://github.com/patrickweaver/onge-pager
+source_url: https://github.com/patrickweaver/one-pager
 status: Complete
 tags:
   - html
