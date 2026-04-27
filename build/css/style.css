@@ -123,6 +123,21 @@ a {
   font-family: "Helvetica", Arial, sans-serif;
 }
 
+.blob img,
+.post img,
+.project img,
+.blob figure,
+.post figure,
+.project figure,
+.post iframe,
+.post video,
+.post embed,
+.post object,
+.post portal {
+  max-width: 100%;
+  height: auto;
+}
+
 .post hr {
   border: none;
   border-top: 3px double var(--acc-2);
@@ -449,21 +464,6 @@ h2.page-header a:hover {
   max-width: 100%;
 }
 
-.blob img,
-.post img,
-.project img,
-.blob figure,
-.post figure,
-.project figure,
-.post iframe,
-.post video,
-.post embed,
-.post object,
-.post portal {
-  max-width: 100%;
-  height: auto;
-}
-
 .post .footnotes li {
   padding: 3px;
   border: 2px solid #00000000;
@@ -662,6 +662,259 @@ s::before {
 
 s::after {
   content: " [end of stricken text] ";
+}
+
+.tweet-screenshot {
+  max-width: 600px !important;
+  margin: 0 40px;
+}
+
+.tweet {
+  font-family: sans-serif;
+  font-size: 1rem;
+  line-height: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-color: #000;
+}
+
+.tweet .tweet-kebob {
+  display: none;
+}
+
+.tweet-2006,
+.tweet-2007 {
+  font-family: 'Times', serif;
+  vertical-align: middle;
+  padding: 18px;
+  background-color: #9ae4e8;
+  color: #000;
+  flex-direction: column-reverse;
+  width: Calc(555px + 38px);
+}
+
+.tweet-2006 .tweet-header-container {
+  background: url("/images/blog/twitter/arr.gif") no-repeat 335px 0;
+  padding: 16px 0 5px 321px;
+  font-size: 2em;
+}
+
+.tweet-2006 .tweet-header,
+.tweet-2007 .tweet-header {
+  margin-bottom: 10px;
+}
+
+.tweet-2006 .tweet-avatar-link,
+.tweet-2007 .tweet-avatar-link {
+  text-decoration: none;
+}
+
+.tweet-2006 .tweet-avatar-link img,
+.tweet-2007 .tweet-avatar-link img {
+  height: 48px;
+  width: 48px;
+  vertical-align: middle;
+  border: 1px solid #999;
+  margin-right: 10px;
+}
+
+.tweet-2006 .user-info,
+.tweet-2007 .user-info {
+  display: inline-block;
+}
+
+
+.tweet-2006 .user-info a,
+.tweet-2007 .user-info a {
+  color: #000000;
+}
+
+.tweet-2006 .user-name,
+.tweet-2007 .user-name {
+  display: none;
+}
+
+.tweet-2006 .tweet-main,
+.tweet-2007 .tweet-main {
+  padding-top: 11px;
+  margin-top: 6px;
+}
+
+.tweet-2007 .tweet-main {
+  font-size: 0.75em;
+}
+
+.tweet-2006 .tweet-body,
+.tweet-2007 .tweet-body {
+  color: #000;
+  font-weight: bold;
+  background-color: #fff;
+  font-size: 2.12em;
+  line-height: 1.2em;
+  display: block;
+  padding: 7px;
+  margin: 0;
+}
+
+.tweet-2007 .tweet-body {
+  font-family: Helvetica, Arial, sans-serif
+}
+
+.tweet-2006 .tweet-meta,
+.tweet-2007 .tweet-meta {
+  display: block;
+  font-size: 0.98em;
+  background-color: #fff;
+  padding: 2px 7px;
+  text-align: right;
+}
+
+.tweet-2007 .tweet-meta {
+  display: block;
+  font-size: 0.98em;
+  background-color: #fff;
+  padding: 2px 7px;
+  text-align: right;
+}
+
+.tweet-2006 .tweet-meta a,
+.tweet-2007 .tweet-meta a {
+  padding: 2px 7px;
+}
+
+.tweet-2006 .tweet-meta a,
+.tweet-2007 .tweet-meta a,
+.tweet-2006 .tweet-meta a *,
+.tweet-2007 .tweet-meta a * {
+  color: #000;
+  text-decoration: none;
+}
+
+.tweet-2006 time,
+.tweet-2007 time {
+  display: inline-block;
+}
+
+.tweet-2006 .tweet-source,
+.tweet-2007 .tweet-source {
+  display: inline-block;
+}
+
+.tweet-2023 {
+  font-family: "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: rgb(15, 20, 25);
+  border: 1px solid var(--shadow);
+}
+
+.tweet-2023 .tweet-kebob {
+  display: block;
+  width: 34.75px;
+  height: 34.75px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 18.75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tweet-2023 .tweet-kebob:hover {
+  background-color: rgb(233, 245, 253);
+}
+
+.tweet-2023 .tweet-kebob svg {
+  width: 18.75px;
+  fill: rgb(83, 100, 113);
+}
+
+.tweet-2023 .tweet-header-container {
+  position: relative;
+}
+
+.tweet-2023 .tweet-header {
+  display: flex;
+}
+
+.tweet-2023 .tweet-avatar-link {
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin-right: 12px;
+  position: relative;
+  top: 2px;
+}
+
+.tweet-2023 img {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  margin-top: 5px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.03) inset;
+  position: relative;
+  top: -6px;
+}
+
+.tweet-2023 img:hover {
+  opacity: 0.55;
+}
+
+.tweet-2023 .display-name,
+.tweet-2023 .user-name {
+  text-decoration: none;
+  display: block;
+  line-height: 20px;
+}
+
+.tweet-2023 .display-name {
+  font-weight: bold;
+  color: rgb(15, 20, 25);
+}
+
+.tweet-2023 .display-name:hover {
+  text-decoration: underline;
+}
+
+.tweet-2023 .user-name {
+  margin-bottom: 2px;
+  line-height: 20px;
+  color: rgb(83, 100, 113);
+}
+
+.tweet-2023 .tweet-body {
+  color: rgb(15, 20, 25);
+  font-size: 17px;
+  margin: 12px 0 0;
+}
+
+.tweet-2023 time {
+  color: rgb(83, 100, 113);
+  margin: 16px 0 0;
+  display: block;
+}
+
+.tweet-2023 .tweet-meta a {
+  text-decoration: none;
+  color: rgb(83, 100, 113);
+}
+
+.tweet-2023 .tweet-meta a:hover {
+  text-decoration: underline;
+}
+
+.tweet-2023 .tweet-date::before {
+  content: "· "
+}
+
+.tweet-2023 .tweet-date {
+  font-weight: normal;
+}
+
+.tweet-2023 .tweet-source {
+  display: none;
 }
 
 @media (min-width: 800px) {
