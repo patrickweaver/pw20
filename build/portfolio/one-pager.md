@@ -4,8 +4,8 @@ name: One Pager
 cover_image_url: /images/portfolio/one-pager/thumbnail.png
 cover_image_alt: A screenshot of the One Pager app
 short_description: A self-editing HTML page for the read/write web
-start_date: 2026-03-24
-end_date: 2026-02-01
+start_date: 2026-02-01
+end_date: 2026-03-24
 project_url: https://doodles.patrickweaver.net/one-pager/
 source_url: https://github.com/patrickweaver/one-pager
 status: Complete
