@@ -16,7 +16,7 @@ There was always my reliable `todo.txt` files, but I wondered if there could be 
 <figure>
 
 <div style="text-align: center;">
-  <img src="/images/portfolio/cranban/kanban-txt.png" alt="A screenshot of Text Edit with the following text visible: # txt.kanban  ## To Do  1. Load file in web app 2. Write to file from web app 3. Allow editing .txt file directly  ## In Progress   ## Done" style="max-width: 700px; margin: 0 auto;" />
+  <img src="/images/portfolio/cranban/kanban-txt.png" alt="A screenshot of Text Edit with the following text visible: # txt.kanban  ## To Do  1. Load file in web app 2. Write to file from web app 3. Allow editing .txt file directly  ## In Progress   ## Done" style="max-width: min(700px, 100%); margin: 0 auto;" />
 </div>
 
 <figcaption>The first `.txt` file I created</figcaption>
@@ -30,7 +30,7 @@ It figured out moving cards to “Done” as it completed them, and it continued
 <figure>
 
 <div style="text-align: center;">
-  <img src="/images/portfolio/cranban/first-design.png" alt="A prototype of Cranban with a white background and minimal styles. There is one card in To Do and 4 in Done." style="max-width: 700px; margin: 0 auto;" />
+  <img src="/images/portfolio/cranban/first-design.png" alt="A prototype of Cranban with a white background and minimal styles. There is one card in To Do and 4 in Done." style="max-width: min(700px, 100%); margin: 0 auto;" />
 </div>
 
 <figcaption>An early prototype of Cranban, before it was renamed</figcaption>
@@ -44,7 +44,7 @@ Along the way I looked into if anyone else had had the same idea, but didn’t f
 <figure>
 
 <div style="text-align: center;">
-  <img src="/images/portfolio/cranban/start-page.png" alt="A screenshot of the Cranban app's start page with 4 recent files listed." style="max-width: 700px; margin: 0 auto;" />
+  <img src="/images/portfolio/cranban/start-page.png" alt="A screenshot of the Cranban app's start page with 4 recent files listed." style="max-width: min(700px, 100%); margin: 0 auto;" />
 </div>
 
 <figcaption>The Cranban start page showing recently opened boards.</figcaption>
