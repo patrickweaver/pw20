@@ -92,7 +92,7 @@
 <p>There was always my reliable <code>todo.txt</code> files, but I wondered if there could be a better tool that would give me the high-level project view of a kanban board, while keeping the simplicity and robot-accessibility of a <code>.txt</code> file, and decided to build one, and use it to iterate on itself.</p>
 <figure>
 <div style="text-align: center;">
-  <img src="/images/portfolio/cranban/kanban-txt.png" alt="A screenshot of Text Edit with the following text visible: # txt.kanban  ## To Do  1. Load file in web app 2. Write to file from web app 3. Allow editing .txt file directly  ## In Progress   ## Done" style="max-width: 700px; margin: 0 auto;" />
+  <img src="/images/portfolio/cranban/kanban-txt.png" alt="A screenshot of Text Edit with the following text visible: # txt.kanban  ## To Do  1. Load file in web app 2. Write to file from web app 3. Allow editing .txt file directly  ## In Progress   ## Done" style="max-width: min(700px, 100%); margin: 0 auto;" />
 </div>
 <figcaption>The first `.txt` file I created</figcaption>
 </figure>
@@ -100,7 +100,7 @@
 <p>It figured out moving cards to “Done” as it completed them, and it continued to work on features as I moved them into the “To Do” column (this almost feels not worth including in this post, because of course it did). You can see the completed cards now in <a href="https://github.com/patrickweaver/cranban/blob/main/cranban.md"><code>cranban.md</code> on GitHub</a> (I decided a <code>.md</code> file would be better than <code>.txt</code> so that it was viewable in Markdown preview utilities).</p>
 <figure>
 <div style="text-align: center;">
-  <img src="/images/portfolio/cranban/first-design.png" alt="A prototype of Cranban with a white background and minimal styles. There is one card in To Do and 4 in Done." style="max-width: 700px; margin: 0 auto;" />
+  <img src="/images/portfolio/cranban/first-design.png" alt="A prototype of Cranban with a white background and minimal styles. There is one card in To Do and 4 in Done." style="max-width: min(700px, 100%); margin: 0 auto;" />
 </div>
 <figcaption>An early prototype of Cranban, before it was renamed</figcaption>
 </figure>
@@ -108,7 +108,7 @@
 <p>Along the way I looked into if anyone else had had the same idea, but didn’t find anything with the same mix of human-centered UI, robot-centered plaintext files, and local-first setup that would gracefully become something useful, even with just the datastore itself. The most similar seem to be Colin Devroe’s <a href="https://github.com/cdevroe/signboard">Signboard</a>, and Alex Gavrilescu’s <a href="https://github.com/MrLesk/Backlog.md">Backlog.md</a> but they store each card in a separate markdown file, and have other features like MCP connections or a TUI. These seem much less approachable in a human-editing-a-file way, but probably more scalable for larger projects. There is Cline’s <a href="https://github.com/cline/kanban">Kanban</a> that is designed to replace your IDE or agent to be your control panel for the project, which, given how fast tools change these days, seems like it could become outdated quickly.</p>
 <figure>
 <div style="text-align: center;">
-  <img src="/images/portfolio/cranban/start-page.png" alt="A screenshot of the Cranban app's start page with 4 recent files listed." style="max-width: 700px; margin: 0 auto;" />
+  <img src="/images/portfolio/cranban/start-page.png" alt="A screenshot of the Cranban app's start page with 4 recent files listed." style="max-width: min(700px, 100%); margin: 0 auto;" />
 </div>
 <figcaption>The Cranban start page showing recently opened boards.</figcaption>
 </figure>
