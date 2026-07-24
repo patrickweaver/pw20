@@ -2,10 +2,12 @@
 layout: layouts/blogPost.hbs
 title: Cranban is a tool for collaborating with robots
 date: 2026-07-24
-cover_image_url: /images/blog/cranban/cranban.png
+cover_image_url: /images/portfolio/cranban/cranban.png
 cover_image_alt: A screenshot of the Cranban app
 tags:
 ---
+
+I recently created [Cranban](https://doodles.patrickweaver.net/cranban/), a local-first kanban board that stores the board’s data in a markdown file on your computer. Its got the drag and drop simplicity of your favorite project management tools, but a very simple backend (just text!) that is easy to keep in source control, and update by hand when you want to. Because all of the data is on your computer in a simple format, it’s a great tool to use with coding agents. A coding robot can see the current state of the project in a format that works well for a coding robot, and you can see and move around lists and cards, a format that works well for humans.
 
 Over the years I’ve tried using various project management tools for personal projects. For smaller projects that was often a `todo.txt` file saved with the codebase, and for bigger projects I usually set up a simple kanban board, usually Trello until the Free plan became more limited. Recently when working with coding agents, a web-based kanban board seemed counterproductive, it would be just another layer I would have to translate to the robot. Of course there are tools like MCP, but for personal projects it seemed like unnecessary complexity.
 
@@ -14,7 +16,7 @@ There was always my reliable `todo.txt` files, but I wondered if there could be 
 <figure>
 
 <div style="text-align: center;">
-  <img src="/images/blog/cranban/kanban-txt.png" alt="A screenshot of Text Edit with the following text visible: # txt.kanban  ## To Do  1. Load file in web app 2. Write to file from web app 3. Allow editing .txt file directly  ## In Progress   ## Done" style="max-width: 700px; margin: 0 auto;" />
+  <img src="/images/portfolio/cranban/kanban-txt.png" alt="A screenshot of Text Edit with the following text visible: # txt.kanban  ## To Do  1. Load file in web app 2. Write to file from web app 3. Allow editing .txt file directly  ## In Progress   ## Done" style="max-width: 700px; margin: 0 auto;" />
 </div>
 
 <figcaption>The first `.txt` file I created</figcaption>
@@ -28,7 +30,7 @@ It figured out moving cards to “Done” as it completed them, and it continued
 <figure>
 
 <div style="text-align: center;">
-  <img src="/images/blog/cranban/first-design.png" alt="A prototype of Cranban with a white background and minimal styles. There is one card in To Do and 4 in Done." style="max-width: 700px; margin: 0 auto;" />
+  <img src="/images/portfolio/cranban/first-design.png" alt="A prototype of Cranban with a white background and minimal styles. There is one card in To Do and 4 in Done." style="max-width: 700px; margin: 0 auto;" />
 </div>
 
 <figcaption>An early prototype of Cranban, before it was renamed</figcaption>
@@ -42,7 +44,7 @@ Along the way I looked into if anyone else had had the same idea, but didn’t f
 <figure>
 
 <div style="text-align: center;">
-  <img src="/images/blog/cranban/start-page.png" alt="A screenshot of the Cranban app's start page with 4 recent files listed." style="max-width: 700px; margin: 0 auto;" />
+  <img src="/images/portfolio/cranban/start-page.png" alt="A screenshot of the Cranban app's start page with 4 recent files listed." style="max-width: 700px; margin: 0 auto;" />
 </div>
 
 <figcaption>The Cranban start page showing recently opened boards.</figcaption>
@@ -55,9 +57,9 @@ Because the datastore is local, the UI can run anywhere, try it out now on my [D
 
 <figure>
 
-<div style="display: flex;">
-  <img src="/images/blog/cranban/demo-board.png" alt="The Cranban demo board with one card in To Do, one card in In Progress, and one card in Done." style="max-width: 300px; margin: 0 auto;" />
-  <img src="/images/blog/cranban/demo-board-md.png" alt="The Cranban demo board as Markdown." style="max-width: 300px; margin: 0 auto;" />
+<div style="display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: center; gap: 1rem;">
+  <img src="/images/portfolio/cranban/demo-board.png" alt="The Cranban demo board with one card in To Do, one card in In Progress, and one card in Done." style="max-width: 300px; min-width: 0;" />
+  <img src="/images/portfolio/cranban/demo-board-md.png" alt="The Cranban demo board as Markdown." style="max-width: 300px; min-width: 0;" />
 </div>
 
 <figcaption>The Cranban demo board shown in the UI and a Markdown file</figcaption>
