@@ -24,17 +24,51 @@
         </div>
         {{/if}}
 
+        {{#if videos}}
+          <h3 id="project-videos">Videos</h3>
+          <ul class="project-videos" aria-labelledby="project-videos">
+          {{#each videos}}
+            <li>
+              {{!-- <img src="{{this}}" data-image-index="{{@index}}" /> --}}
+              <video
+                controls height="300"
+                muted preload="metadata"
+                poster="{{this.poster}}"
+                width="495"
+                id="audio-and-video-tags-video
+              >
+                <source src="{{this.src}}" "type="video/mp4" />
+              </video>
+            </li>
+          {{/each}}
+          </ul>
+        {{/if}}
+
         {{#if images}}
           <h3 id="project-images">Images</h3>
           <ul class="project-images" aria-labelledby="project-images">
           {{#each images}}
-            <li><img src="{{this}}" /></li>
+            <li><img src="{{this}}" data-image-index="{{@index}}" /></li>
           {{/each}}
           </ul>
         {{/if}}
         
       </div>
     </main>
+
+    <dialog id="gallery-modal">
+      <div class="modal-image-container">
+        <img src="" alt="" />
+      </div>
+      <div class="modal-controls">
+        <button class="modal-nav-btn modal-prev">← Previous</button>
+        <span class="modal-counter"></span>
+        <button class="modal-nav-btn modal-next">Next →</button>
+        <button class="modal-close">Close</button>
+      </div>
+    </dialog>
+
+    <script src="/js/gallery-modal.js"></script>
     {{> boilerplate/analytics }}
   </body>
 </html>

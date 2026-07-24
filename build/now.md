@@ -7,10 +7,16 @@ pageId: now
 
 <div class="section">
 
-### Jan 8, 2024: Walking
+### March 28, 2026: Golden Gate Park
 
-I recently went on a low tide walk from Marshall’s beach in the Presidio to Fort Point at the base of the Golden Gate Bridge. The walk can only be completed at low tide because at other times the ocean reaches the cliffs along the edge of the beach.
+I’ve been spending a lot of time walking in Golden Gate Park, somehow it’s always sunny when I’m out there!
 
-![A photograph from under the Golden Gate Bridge](/images/now/bridge-dec-2023.jpg)
+<div class="flex-image-container">
+
+![A photograph of a Bison in Golden Gate Park](/images/now/bison.jpeg)
+
+![A photogrpah of a tree with a broken branch in Golden Gate Park](/images/now/tree.jpeg)
+
+</div>
 
 </div>

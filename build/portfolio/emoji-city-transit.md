@@ -9,7 +9,6 @@ end_date: 2019-07-21
 source_url: https://github.com/patrickweaver/emoji-city-transit/
 status: Archived
 tags:
-  - Complete
   - experiments
   - javascript
   - node

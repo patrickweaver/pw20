@@ -14,7 +14,7 @@ However, when I composed a small puzzle and shared it with a friend via iMessage
 <figure>
 
 <div style="text-align: center;">
-  <img src="/images/blog/imessage/broken-link.png" alt="A screenshot of an iMessage conversation with a broken link in it" style="max-width: 300px; margin: 0 auto;" />
+  <img src="/images/blog/imessage/broken-link.png" alt="A screenshot of an iMessage conversation with a broken link in it" style="max-width: 100%; width: 300px; margin: 0 auto;" />
 </div>
 
 </figure>
@@ -26,7 +26,7 @@ I wrote a quick function to insert intermittent “-”s in the URLs, and remove
 <figure>
 
 <div style="text-align: center;">
-  <img src="/images/blog/imessage/fixed-link.png" alt="A screenshot of an iMessage conversation with a not broken link in it" style="max-width: 300px; margin: 0 auto;" />
+  <img src="/images/blog/imessage/fixed-link.png" alt="A screenshot of an iMessage conversation with a not broken link in it" style="max-width: 100%; width: 300px; margin: 0 auto;" />
 </div>
 
 </figure>
@@ -45,9 +45,11 @@ After being reminded about the technique I was curious to figure out some of the
 
 <figure>
 
-<div style="text-align: center;">
-  <a target="_blank" href="https://doodles.patrickweaver.net/imessage-url-state-example/#eyIxIjp7InIiOiIyMjMiLCJnIjoiMjIiLCJiIjoi-MTU3In0sIjIiOnsiciI6MjEwLCJnIjoiMzEiLCJi-IjoiODcifSwiMyI6eyJyIjoiMjA1IiwiZyI6NzMs-ImIiOiIzNiJ9LCI0Ijp7InIiOiIyNTUiLCJnIjoi-MTk3IiwiYiI6MzZ9LCI1Ijp7InIiOiIyNTIiLCJn-IjoiMjQwIiwiYiI6IjExOSJ9LCI2Ijp7InIiOiI2-OSIsImciOiIxNzkiLCJiIjowfSwiNyI6eyJyIjoi-NjEiLCJnIjoiMjAzIiwiYiI6MjMyfSwiOCI6eyJy-IjoiNjEiLCJnIjoiMTA5IiwiYiI6IjI0MiJ9LCI5-Ijp7InIiOiIxOTAiLCJnIjoiMTQ4IiwiYiI6IjIy-OCJ9LCIxMCI6eyJyIjoiMjE0IiwiZyI6IjgxIiwi-YiI6IjE5NCJ9fQ=="><img src="/images/blog/imessage/colors-app.png" alt="A screenshot of the web app to test long URLs" style="max-width: 500px; margin: 0 auto;" /></a>
-</div>
+  <div style="text-align: center;">
+    <a target="_blank" href="https://doodles.patrickweaver.net/imessage-url-state-example/#eyIxIjp7InIiOiIyMjMiLCJnIjoiMjIiLCJiIjoi-MTU3In0sIjIiOnsiciI6MjEwLCJnIjoiMzEiLCJi-IjoiODcifSwiMyI6eyJyIjoiMjA1IiwiZyI6NzMs-ImIiOiIzNiJ9LCI0Ijp7InIiOiIyNTUiLCJnIjoi-MTk3IiwiYiI6MzZ9LCI1Ijp7InIiOiIyNTIiLCJn-IjoiMjQwIiwiYiI6IjExOSJ9LCI2Ijp7InIiOiI2-OSIsImciOiIxNzkiLCJiIjowfSwiNyI6eyJyIjoi-NjEiLCJnIjoiMjAzIiwiYiI6MjMyfSwiOCI6eyJy-IjoiNjEiLCJnIjoiMTA5IiwiYiI6IjI0MiJ9LCI5-Ijp7InIiOiIxOTAiLCJnIjoiMTQ4IiwiYiI6IjIy-OCJ9LCIxMCI6eyJyIjoiMjE0IiwiZyI6IjgxIiwi-YiI6IjE5NCJ9fQ==">
+      <img src="/images/blog/imessage/colors-app.png" alt="A screenshot of the web app to test long URLs" style="max-width: 100%; margin: 0 auto;" />
+    </a>
+  </div>
 
 </figure>
 
@@ -63,7 +65,7 @@ Or one with a “\*” every 300th character (there is only one):
 
 <figure>
   <div style="text-align: center;">
-    <img src="/images/blog/imessage/broken-link-colors.png" alt="A screenshot of an iMessage conversation with a broken link because the separator is the 303rd character" style="max-width: 500px; margin: 0 auto;" />
+    <img src="/images/blog/imessage/broken-link-colors.png" alt="A screenshot of an iMessage conversation with a broken link because the separator is the 303rd character" style="max-width: 100%; margin: 0 auto;" />
   </div>
 </figure>
 
@@ -72,7 +74,7 @@ Interestingly, the limit was 301 character long sections of Base64 on both iMess
 <figure>
 
 <div style="text-align: center;">
-  <img src="/images/blog/imessage/signal.jpg" alt="A screenshot of a signal conversation with a workign link and a broken link" style="max-width: 300px; margin: 0 auto;" />
+  <img src="/images/blog/imessage/signal.jpg" alt="A screenshot of a signal conversation with a workign link and a broken link" style="max-width: 100%; width: 300px; margin: 0 auto;" />
 </div>
 <figcaption>A working link (301 distance) above a broken link (302 distance) in Signal</figcaption>
 

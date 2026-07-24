@@ -9,7 +9,6 @@ end_date: 2017-10-25
 source_url: https://github.com/patrickweaver/diy-encryption
 status: Archived
 tags:
-  - Complete
   - education
   - flask
   - python

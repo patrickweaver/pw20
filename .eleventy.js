@@ -47,10 +47,64 @@ module.exports = function (eleventyConfig) {
   // Collections
 
   // List of Tags
-  eleventyConfig.addCollection(
-    "portfolioTagList",
-    require("./_11ty/getPortfolioTagList")
-  );
+  const portfolioTagList = require("./_11ty/getPortfolioTagList");
+  eleventyConfig.addCollection("portfolioTagList", portfolioTagList);
+
+  // Create filtered collections for each portfolio tag
+  eleventyConfig.addCollection("portfolioTagCollections", function (collection) {
+    const portfolioItems = collection.getFilteredByTag("projects");
+    const tagCollections = {};
+
+    portfolioItems.forEach(item => {
+      if (item.data.tags) {
+        item.data.tags.forEach(tag => {
+          if (!["all", "posts", "projects"].includes(tag)) {
+            if (!tagCollections[tag]) {
+              tagCollections[tag] = [];
+            }
+            tagCollections[tag].push(item);
+          }
+        });
+      }
+    });
+
+    return tagCollections;
+  });
+
+  // Create individual tag collections for pagination
+  eleventyConfig.addCollection("portfolio_by_tag", function (collection) {
+    const projects = collection.getFilteredByTag("projects");
+    const tagMap = {};
+
+    function portfolioCompare(a, b) {
+      const aSortDate = a.data?.end_date ?? a.data?.start_date ?? 0;
+      const aSort = new Date(aSortDate).getTime();
+      const bSortDate = b.data?.end_date ?? b.data?.start_date ?? 0;
+      const bSort = new Date(bSortDate).getTime();
+      if (aSort > bSort) return -1;
+      if (aSort < bSort) return 1;
+      return 0;
+    }
+
+    projects.filter((i) => !!i.data.name).forEach(item => {
+      if (item.data.tags) {
+        item.data.tags.forEach(tag => {
+          if (!["all", "posts", "projects"].includes(tag)) {
+            if (!tagMap[tag]) {
+              tagMap[tag] = [];
+            }
+            tagMap[tag].push(item);
+          }
+        });
+      }
+    });
+
+    // Convert to array of tag objects with sorted items
+    return Object.entries(tagMap).map(([tagName, items]) => ({
+      tag: tagName,
+      collection: items.sort(portfolioCompare)
+    }));
+  });
 
   // Create postsReversed tag with posts tag in reverse order
   eleventyConfig.addCollection("postsReversed", function (collection) {
