@@ -1,6 +1,6 @@
 ---
 layout: layouts/blogPost.hbs
-title: Cranban is a tool for collaborating with robots
+title: Cranban is kanban for humans collaborating with robots
 date: 2026-07-24
 cover_image_url: /images/portfolio/cranban/cranban.png
 cover_image_alt: A screenshot of the Cranban app
