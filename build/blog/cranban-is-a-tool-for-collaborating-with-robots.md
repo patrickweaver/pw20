@@ -4,6 +4,8 @@ title: Cranban is a tool for collaborating with robots
 date: 2026-07-24
 cover_image_url: /images/portfolio/cranban/cranban.png
 cover_image_alt: A screenshot of the Cranban app
+social_image_url: https://www.patrickweaver.net/images/portfolio/cranban/cranban.png
+social_image_alt: A screenshot of the Cranban app
 tags:
 ---
 

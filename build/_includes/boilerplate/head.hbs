@@ -20,7 +20,9 @@
 {{else}}
   <meta property="og:description" content="Patrick Weaver’s Website" />
 {{/if}}
-{{#if this.cover_image_url}}
+{{#if this.social_image_url}}
+  <meta property="og:image" content="{{this.social_image_url}}" />
+{{else if this.cover_image_url}}
   <meta property="og:image" content="{{this.cover_image_url}}" />
 {{else}}
   <meta
@@ -43,7 +45,9 @@
 {{else}}
   <meta name="twitter:description" content="Patrick Weaver’s Website" />
 {{/if}}
-{{#if this.cover_image_url}}
+{{#if this.social_image_url}}
+  <meta name="twitter:image" content="{{this.social_image_url}}" />
+{{else if this.cover_image_url}}
   <meta name="twitter:image" content="{{this.cover_image_url}}" />
 {{else}}
   <meta
@@ -51,8 +55,10 @@
     content="https://patrickweaver.net/images/favicon-full.png"
   />
 {{/if}}
-{{#if this.cover_image_alt}}
-  <meta name="twitter:image:alt" content="{{this.cover_image_alt}}" />
+{{#if this.social_image_alt}}
+  <meta name="twitter:image:alt" content="{{this.social_image_alt}}" />
+{{else if this.cover_image_alt}}
+<meta name="twitter:image:alt" content="{{this.cover_image_alt}}" />
 {{else}}
   <meta name="twitter:image:alt" content="An icon with 10 lines in 5 colors" />
 {{/if}}
