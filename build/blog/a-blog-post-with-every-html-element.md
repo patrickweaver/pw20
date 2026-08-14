@@ -909,7 +909,7 @@ Hello, World
 
 `<sub>` (used for footnotes here) and `<sup>` (used in the equation below) are more elements I probably have used the CSS implementations of previously (though it is appropriate for presentation only super or subscript.)
 
-`<time>` seems like a helpful element for creating semantic HTML, but even Google doesn’t seem to use it in [search results](https://www.google.com/search?q=%22Patrick+Weaver%22+%22HTML%22). I’ve updated the dates on my blog posts to use it.
+`<time>` seems like a helpful element for creating semantic HTML, but even Google doesn’t seem to use it in [search results](https://www.google.com/search?q=%22Patrick+Weaver%22+%22HTML%22). I’ve updated the dates on my blog posts to use it. [Update from 2024, FKA Twitter uses it!]
 
 `<u>` has probably my favorite quote from the MDN docs, <q>Most of the time, you actually don’t want to use <code>&lt;u&gt;</code>.</q> Their strongest recommendation seems to be indicating <u class="u-sp">spellling</u> errors.
 
